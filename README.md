@@ -1,5 +1,5 @@
 ## Lone Star
-Based and maintained onn Citadel Station by way of Desert Rose and Fortuna.
+Based and maintained on Citadel Station by way of Desert Rose and Fortuna.
 
 [![CI Suite](https://isitmaintained.com/project/LoneStarF13/LoneStar/actions/workflows/ci_suite.yml/badge.svg?branch=master&event=push)](https://isitmaintained.com/project/LoneStarF13/LoneStar/actions/workflows/ci_suite.yml)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/FortunaSS13/Fortuna.svg)](https://isitmaintained.com/project/LoneStarF13/LoneStar "Percentage of issues still open")
