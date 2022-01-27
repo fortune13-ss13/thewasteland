@@ -1,9 +1,9 @@
 /proc/job_is_whitelist_locked(jobtitle)
-    if(!CONFIG_GET(flag/use_role_whitelist) && (jobtitle in GLOB.command_positions))
-        return FALSE
-    if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in GLOB.command_positions))
-        return FALSE
-    return TRUE
+	if(!CONFIG_GET(flag/use_role_whitelist) && (jobtitle in GLOB.command_positions))
+		return FALSE
+	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in GLOB.command_positions))
+		return FALSE
+	return TRUE
 
 /datum/job/proc/whitelist_locked(client/C, jobname)
 	if((C.prefs.job_whitelists[jobname]) || (!CONFIG_GET(flag/use_role_whitelist)))
