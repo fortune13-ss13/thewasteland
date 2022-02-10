@@ -42,7 +42,7 @@
 		src.zoom_out_amt = 19
 		src.zoom_amt = 10
 		to_chat(user,"You see the horizon more clearly from this elevation.")
-	else
+	else if(!is_above_level(T.z))
 		src.zoom_out_amt = 6
 		src.zoom_amt = 10
 
