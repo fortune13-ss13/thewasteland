@@ -4,7 +4,7 @@
 	say_mod = "yells"
 	limbs_id = "smutant"
 	species_traits = list(NOTRANSSTING,NOGENITALS,NOAROUSAL)
-	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_SMUTANT,TRAIT_BIG_LEAGUES)
+	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_SMUTANT,)
 	inherent_biotypes = list(MOB_INORGANIC, MOB_HUMANOID)
 	speedmod = 0.75
 	armor = 25
