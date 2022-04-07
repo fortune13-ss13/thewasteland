@@ -218,6 +218,9 @@
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
+		//power armor laugh track.... spooky
+		if(istype(human_user.get_item_by_slot(ITEM_SLOT_OCLOTHING), /obj/item/clothing/suit/armor/f13/power_armor))
+			return 'sound/voice/robolaugh.ogg'
 		if(iscatperson(human_user))	//we ask for is cat first because they're a subtype that tests true for ishumanbasic because HERESY
 			return pick('sound/voice/catpeople/nyahaha1.ogg',
 						'sound/voice/catpeople/nyahaha2.ogg',
