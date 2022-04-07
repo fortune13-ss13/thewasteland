@@ -83,7 +83,7 @@
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	head =			/obj/item/clothing/head/helmet/f13/power_armor/advanced
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/advanced
-	right_hand =    /obj/item/minigunpack
+	r_hand =    /obj/item/minigunpack
 
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ecp = 3,
