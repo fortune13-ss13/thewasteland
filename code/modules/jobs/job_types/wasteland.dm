@@ -56,7 +56,7 @@
 	faction = FACTION_ENCLAVE
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the main force of the remnants of the Enclave in this area, become the fist that will destroy all your opponents, or die because of a homeless man with a power fist "
+	description = "You are one of the remnants of the Enclave in this area who were issued Advanced Power Armor, become the fist that will destroy all your opponents with your army-issued equipment."
 	forbids = "You are not allowed to have overly-friendly interactions with those outside of the Enclave."
 	enforces = "You must maintain the secrecy of the bunker location."
 	supervisors = "Enclave Department of the Army."
@@ -81,9 +81,9 @@
 	gloves = 		/obj/item/clothing/gloves/f13/military
 	belt = 			/obj/item/storage/belt/military/assault/enclave
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
-	head =			/obj/item/clothing/head/helmet/f13/tesla
-	suit = 			/obj/item/clothing/suit/armor/tesla
-	suit_store = 	/obj/item/minigunpack
+	head =			/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/x02
+	r_hand =        /obj/item/minigunpack
 
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ecp = 3,
@@ -94,14 +94,12 @@
 		/obj/item/flashlight/seclite = 1
 		)
 
-/datum/outfit/job/wasteland/f13gysergeant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/wasteland/f13heavytrooper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-
-
-
 
 
 
