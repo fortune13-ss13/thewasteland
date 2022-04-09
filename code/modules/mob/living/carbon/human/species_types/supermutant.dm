@@ -14,7 +14,7 @@
 	use_skintones = 0
 	sexes = 0
 	liked_food = JUNKFOOD | FRIED | RAW
-
+	
 /datum/species/smutant/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	for(var/obj/item/bodypart/b in C.bodyparts)
@@ -23,7 +23,7 @@
 	..()
 	for(var/obj/item/bodypart/b in C.bodyparts)
 		b.max_damage = initial(b.max_damage)
-
+		
 /datum/species/smutant/qualifies_for_rank(rank, list/features)
 	if(rank in GLOB.legion_positions) /* Legion isn't a fan of muties */
 		return 0
