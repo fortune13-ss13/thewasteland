@@ -6,6 +6,19 @@
 ///Electronics//
 ////////////////
 
+
+/datum/design/diskplantgene
+	name = "Plant Data Disk"
+	desc = "A disk for storing plant genetic data."
+	id = "diskplantgene"
+	build_type = PROTOLATHE | AUTOLATHE
+	materials = list(/datum/material/iron=200, /datum/material/glass=100)
+	build_path = /obj/item/disk/plantgene
+	category = list("Electronics","Imported")
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
+
+
+
 /datum/design/apc_board
 	name = "APC Module"
 	id = "power control"
