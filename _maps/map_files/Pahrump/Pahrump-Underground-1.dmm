@@ -3009,10 +3009,6 @@
 "bIa" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/lattice/catwalk,
-/obj/structure/handrail/g_central{
-	dir = 4;
-	pixel_x = 20
-	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "bIh" = (
@@ -5151,13 +5147,14 @@
 	},
 /area/f13/bunker)
 "cLR" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/handrail/g_central{
-	dir = 4;
-	pixel_x = 20
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/tunnel)
+/obj/machinery/porta_turret/syndicate{
+	faction = list("china")
+	},
+/turf/open/floor/plating/tunnel,
+/area/f13/caves)
 "cLS" = (
 /obj/structure/rack,
 /obj/machinery/light/small{
@@ -8675,8 +8672,8 @@
 /area/f13/bunker)
 "eGs" = (
 /obj/structure/table/wood,
-/obj/item/melee/transforming/cleaving_saw,
 /obj/item/clothing/neck/mantle/gecko,
+/obj/item/twohanded/spear/bonespear,
 /turf/open/floor/wood/f13/oak,
 /area/f13/caves)
 "eGM" = (
@@ -10462,7 +10459,7 @@
 /area/f13/caves)
 "fBE" = (
 /obj/machinery/door/airlock/grunge{
-	name = "store airlock";
+	name = "Store Storage";
 	req_one_access_txt = "34"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -11879,7 +11876,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/door/airlock/wood/glass,
+/obj/structure/simple_door/room/dirty,
 /turf/open/floor/f13/wood,
 /area/f13/caves)
 "gtS" = (
@@ -14652,7 +14649,9 @@
 /area/f13/brotherhood/reactor)
 "iel" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/simple_door/metal/barred,
+/obj/structure/barricade/bars{
+	layer = 5
+	},
 /turf/open/floor/f13/wood,
 /area/f13/caves)
 "iem" = (
@@ -16525,6 +16524,7 @@
 /area/f13/caves)
 "joN" = (
 /obj/machinery/door/airlock/grunge{
+	name = "Police Department Armory";
 	req_one_access_txt = "62"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark{
@@ -16595,7 +16595,7 @@
 	pixel_x = -6;
 	pixel_y = 4
 	},
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high,
 /turf/open/floor/f13{
 	icon_state = "greendirtyfull"
 	},
@@ -19909,7 +19909,8 @@
 /turf/open/floor/plating/dirt,
 /area/f13/caves)
 "lsw" = (
-/obj/machinery/door/airlock/wood{
+/obj/machinery/door/unpowered/securedoor{
+	name = "Sheriff's Quarters";
 	req_one_access_txt = "62"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -24357,7 +24358,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
 /area/f13/enclave)
 "ojv" = (
-/obj/machinery/ore_silo,
+/obj/effect/turf_decal/bot_white,
+/obj/item/circuitboard/machine/ore_silo,
+/obj/structure/frame/machine,
+/obj/item/stack/cable_coil/random/five,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "engine"
 	},
@@ -25933,11 +25940,12 @@
 	},
 /area/f13/bunker)
 "pqu" = (
-/obj/machinery/door/airlock/wood{
-	req_one_access_txt = "48"
-	},
 /obj/machinery/door/poddoor/shutters{
 	id = "prospector1open"
+	},
+/obj/machinery/door/unpowered/securedoor{
+	name = "Prospector Entrance";
+	req_one_access_txt = "48"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
@@ -25979,6 +25987,10 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/clinic)
+"pra" = (
+/obj/machinery/vending/clothing,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/enclave)
 "prd" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -27741,6 +27753,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
+"quD" = (
+/obj/structure/simple_door/brokenglass,
+/turf/open/floor/f13/wood,
+/area/f13/caves)
 "qvn" = (
 /turf/closed/indestructible/rock,
 /area/space)
@@ -30531,7 +30547,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "rRX" = (
-/obj/machinery/door/airlock/wood/glass,
+/obj/structure/simple_door/dirtyglass,
 /turf/open/floor/f13/wood,
 /area/f13/caves)
 "rSv" = (
@@ -33638,6 +33654,10 @@
 /obj/structure/flora/wasteplant/wild_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"tUy" = (
+/obj/structure/simple_door/repaired,
+/turf/open/floor/f13/wood,
+/area/f13/caves)
 "tUT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt{
@@ -34682,6 +34702,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/sink/kitchen{
+	desc = "Strictly for filling up mop buckets.";
+	name = "Mop Sink";
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/enclave)
 "uGX" = (
@@ -35424,7 +35449,9 @@
 /area/f13/caves)
 "vfC" = (
 /obj/effect/turf_decal/bot_white,
-/obj/machinery/ore_silo,
+/obj/item/circuitboard/machine/ore_silo,
+/obj/structure/frame/machine,
+/obj/item/stack/cable_coil/random/five,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/enclave)
 "vfU" = (
@@ -36171,6 +36198,10 @@
 	icon_state = "2-i"
 	},
 /area/f13/bunker)
+"vHM" = (
+/obj/machinery/vending/autodrobe,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/enclave)
 "vHN" = (
 /obj/structure/chair{
 	dir = 4
@@ -38665,11 +38696,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/brotherhood/leisure)
 "xic" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
 /obj/structure/sign/poster/prewar/poster73{
 	pixel_y = 31
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "engine"
@@ -41242,7 +41273,7 @@ duY
 cSY
 cSY
 cSY
-cSY
+cRW
 vPg
 vPg
 vPg
@@ -43549,7 +43580,7 @@ vPg
 vPg
 eLE
 vPg
-xVz
+cRW
 rRo
 cSY
 cSY
@@ -45861,7 +45892,7 @@ xVz
 ovo
 ovo
 iXe
-xVz
+cRW
 vPg
 vPg
 vPg
@@ -46371,9 +46402,9 @@ vPg
 eLE
 vPg
 vPg
-cRW
+uPr
 agq
-bjI
+cLR
 vPg
 eLE
 vPg
@@ -53978,7 +54009,7 @@ vPg
 vPg
 tur
 aUb
-cLR
+nuA
 bIa
 tur
 jPC
@@ -64830,9 +64861,9 @@ aoj
 aoj
 aoj
 vPg
-vPg
-vPg
-vPg
+eLE
+eLE
+eLE
 xVz
 xVz
 xVz
@@ -65087,7 +65118,7 @@ aoj
 aoj
 aoj
 vPg
-vPg
+eLE
 jPC
 jPC
 jPC
@@ -65344,7 +65375,7 @@ aoj
 aoj
 vPg
 vPg
-vPg
+eLE
 jPC
 pYF
 wAO
@@ -65601,7 +65632,7 @@ vPg
 vPg
 vPg
 vPg
-vPg
+eLE
 jPC
 ujj
 wAO
@@ -65858,7 +65889,7 @@ vPg
 vPg
 vPg
 vPg
-vPg
+eLE
 jPC
 pwc
 bUW
@@ -66115,7 +66146,7 @@ aoj
 aoj
 vPg
 vPg
-aoj
+eLE
 vPg
 wAO
 bUW
@@ -66372,7 +66403,7 @@ aoj
 aoj
 vPg
 vPg
-vPg
+eLE
 vPg
 vPg
 oHz
@@ -66629,7 +66660,7 @@ vPg
 vPg
 vPg
 vPg
-vPg
+eLE
 vPg
 wAO
 vPg
@@ -66886,7 +66917,7 @@ vPg
 vPg
 vPg
 vPg
-aoj
+eLE
 jPC
 qUd
 lez
@@ -66896,12 +66927,12 @@ wAO
 bZj
 wAO
 vPg
-vPg
-vPg
-vPg
-vPg
-vPg
-vPg
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
 vPg
 vPg
 vPg
@@ -67143,7 +67174,7 @@ vPg
 vPg
 vPg
 vPg
-vPg
+eLE
 jPC
 jPC
 jPC
@@ -67158,7 +67189,7 @@ jPC
 vPg
 vPg
 jPC
-vPg
+eLE
 vPg
 vPg
 vPg
@@ -67400,7 +67431,7 @@ wZU
 aoj
 aoj
 aoj
-vPg
+eLE
 jPC
 wAO
 bUW
@@ -67415,7 +67446,7 @@ wAO
 vPg
 wAO
 jPC
-vPg
+eLE
 vPg
 aoj
 vPg
@@ -67657,7 +67688,7 @@ piQ
 vPg
 vPg
 aoj
-vPg
+eLE
 jPC
 gbI
 xzp
@@ -67672,7 +67703,7 @@ bUW
 wAO
 cdQ
 jPC
-vPg
+eLE
 vPg
 vPg
 vPg
@@ -67914,7 +67945,7 @@ vPg
 vPg
 aoj
 vPg
-aoj
+eLE
 jPC
 ntN
 hsJ
@@ -67929,7 +67960,7 @@ ett
 uqh
 bXM
 jPC
-vPg
+eLE
 vPg
 vPg
 vPg
@@ -68171,7 +68202,7 @@ dXE
 vPg
 aoj
 vPg
-vPg
+eLE
 jPC
 wAO
 bUW
@@ -68186,7 +68217,7 @@ bUW
 fIh
 czF
 jPC
-vPg
+eLE
 vPg
 vPg
 vPg
@@ -68428,7 +68459,7 @@ dXE
 vPg
 aoj
 aoj
-vPg
+eLE
 jPC
 lbH
 mCA
@@ -68443,7 +68474,7 @@ rpw
 rpw
 oXW
 jPC
-vPg
+eLE
 vPg
 vPg
 aoj
@@ -68685,7 +68716,7 @@ dXE
 vPg
 vPg
 aoj
-vPg
+eLE
 jPC
 jPC
 jPC
@@ -68700,7 +68731,7 @@ jPC
 jPC
 jPC
 jPC
-vPg
+eLE
 vPg
 vPg
 aoj
@@ -68942,22 +68973,22 @@ dXE
 vPg
 vPg
 vPg
-vPg
-vPg
-vPg
-vPg
-vPg
-vPg
-vPg
-vPg
-aoj
-vPg
-vPg
-vPg
-vPg
-vPg
-vPg
-vPg
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
 vPg
 vPg
 vPg
@@ -69425,7 +69456,7 @@ ejQ
 ejQ
 ejQ
 vkj
-mQi
+ryY
 weW
 weW
 weW
@@ -72318,8 +72349,8 @@ gey
 ihM
 gey
 ihM
-xEd
-xEd
+vHM
+pra
 xEd
 iVM
 sZq
@@ -76407,7 +76438,7 @@ slw
 sJm
 nAj
 nAj
-rRX
+tUy
 nAj
 vLK
 rjz
@@ -77944,7 +77975,7 @@ vLK
 yhT
 yhT
 jPC
-rRX
+quD
 jPC
 qgz
 nAj
