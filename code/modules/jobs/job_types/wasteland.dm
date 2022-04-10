@@ -177,7 +177,7 @@
 	)
 
 //Light Duty
-/datum/job/wasteland/f13USLDUTY
+/datum/job/wasteland/f13LDUTY
 	title = "Enclave Light Duty"
 	flag = F13USLDUTY
 	faction = FACTION_ENCLAVE
@@ -194,9 +194,18 @@
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
-/datum/outfit/job/wasteland/F13USLDUTY
+
+	loadout_options = list(
+		/datum/outfit/loadout/pharma,
+		/datum/outfit/loadout/janny,
+		/datum/outfit/loadout/chaplain,
+		/datum/outfit/loadout/cook,
+		)
+
+
+/datum/outfit/job/wasteland/f13REARSPT
 	name = "Enclave Rear Support"
-	jobtype = /datum/outfit/job/wasteland/F13USLDUTY
+	jobtype = /datum/outfit/job/wasteland/f13REARSPT
 	backpack = 		/obj/item/storage/backpack/enclave
 	id = 			/obj/item/card/id/dogtag/enclave/trooper
 	accessory = 	/obj/item/clothing/accessory/ncr/REC
@@ -212,7 +221,8 @@
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/flashlight/seclite = 1,
 		)
-	/datum/outfit/loadout/pharma
+
+/datum/outfit/loadout/pharma
 	name = "Pharmaceutical Technician"
 	mask = /obj/item/clothing/mask/surgical
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
@@ -222,7 +232,8 @@
 		/obj/item/healthanalyzer = 1,
 		/obj/item/modular_computer/laptop = 1
 		)
-	/datum/outfit/loadout/janny
+
+/datum/outfit/loadout/janny
 	name = "Sanitation Technician"
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
@@ -231,7 +242,8 @@
 		/obj/item/grenade/chem_grenade/cleaner = 3
 		
 		)
-	/datum/outfit/loadout/chaplain
+
+/datum/outfit/loadout/chaplain
 	name = "Spiritual Technician"
 	mask = /obj/item/clothing/mask/surgical
 	suit = /obj/item/clothing/suit/f13/autumn
@@ -242,8 +254,8 @@
 		/obj/item/folder = 1,
 		/obj/item/modular_computer/laptop = 1
 		)
-		
-	/datum/outfit/loadout/cook
+
+/datum/outfit/loadout/cook
 	name = "Culinary Technician"
 	mask = /obj/item/clothing/mask/surgical
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
