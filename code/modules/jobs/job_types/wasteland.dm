@@ -177,7 +177,7 @@
 	)
 
 //Light Duty
-/datum/job/wasteland/f13LDUTY
+/datum/job/wasteland/f13USLDUTY
 	title = "Enclave Light Duty"
 	flag = F13USLDUTY
 	faction = FACTION_ENCLAVE
@@ -194,9 +194,9 @@
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
-/datum/outfit/job/wasteland/f13REARSP
+/datum/outfit/job/wasteland/F13USLDUTY
 	name = "Enclave Rear Support"
-	jobtype = /datum/outfit/job/wasteland/f13REARSPT
+	jobtype = /datum/outfit/job/wasteland/F13USLDUTY
 	backpack = 		/obj/item/storage/backpack/enclave
 	id = 			/obj/item/card/id/dogtag/enclave/trooper
 	accessory = 	/obj/item/clothing/accessory/ncr/REC
