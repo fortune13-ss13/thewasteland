@@ -612,14 +612,13 @@
 	item_state = "m90"
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
-	burst_size = 1
-	slowdown = 0.45
+	burst_size = 1	
+	slowdown = 0.3
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
 	autofire_shot_delay = 2.25
 	extra_penetration = 0.2
-	slowdown = 0.3
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_HEAVY
 	spread = 3 //foregrip
