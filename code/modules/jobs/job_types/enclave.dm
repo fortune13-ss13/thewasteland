@@ -346,34 +346,3 @@
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
-
-
-//Off-Duty
-/datum/job/enclave/f13LDUTY
-	title = "Enclave Off-Duty"
-	flag = F13USLDUTY
-	total_positions = 2
-	spawn_positions = 2
-	description = "You were for once in this forsaken hellhole given off-duty time by the Lieutenant, spend it wisely and don't join any raids or battles from your fellow Americans, after all it's none of your concern this week is it."
-	enforces = "You are not permited to leave the base. You are a non-combatant. You must matrix if the bunker is raided. You cannot join any raids or battles on the surface."
-	supervisors = "Everyone else."
-	outfit = /datum/outfit/job/enclave/noncombat/f13REARSPT
-	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 100
-
-
-/datum/outfit/job/enclave/noncombat/f13REARSPT
-	name = "Enclave Off-Duty"
-	jobtype = /datum/job/enclave/f13LDUTY
-	id = 			/obj/item/card/id/dogtag/enclave/trooper
-	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	uniform =		/obj/item/clothing/under/f13/enclave/peacekeeper
-
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/storage/bag/money/small/wastelander = 1,
-		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/reagent_containers/food/snacks/f13/mre = 1,
-		/obj/item/reagent_containers/food/snacks/f13/galette = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1,
-		)
