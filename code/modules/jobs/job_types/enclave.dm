@@ -81,7 +81,7 @@
 /datum/outfit/job/enclave/peacekeeper/enclavelt
 	name = "Enclave Lieutenant"
 	jobtype = /datum/job/enclave/enclavelt
-	head = 		/obj/item/clothing/head/soft/f13/enclave
+	head = 		/obj/item/clothing/head/f13/enclave
 	uniform = 	/obj/item/clothing/under/f13/enclave/officer
 	suit = 		/obj/item/clothing/suit/armor/f13/enclavetrenchcoat
 	accessory = /obj/item/clothing/accessory/ncr/LT1
@@ -208,7 +208,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
-		/obj/item/clothing/head/soft/f13/enclave/peacekeeper = 1,
+		/obj/item/clothing/head/f13/enclave/peacekeeper = 1,
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavesgt/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

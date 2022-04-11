@@ -190,24 +190,22 @@
 ///////////
 
 
-/obj/item/clothing/head/soft/f13/enclave
+/obj/item/clothing/head/f13/enclave
 	name = "officer hat"
 	desc = "A standard-issue Enclave officer's cap."
 	icon_state = "enclave"
 	item_color = "enclave"
-	soft_type = "enclave"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
 
 /obj/item/clothing/head/helmet/soft/f13/enclave/Initialize() 
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/head/soft/f13/enclave/peacekeeper
+/obj/item/clothing/head/f13/enclave/peacekeeper
 	name = "peacekeeper cap"
 	desc = "Reinforced field cap issued to the soldiers of the Enclave."
 	icon_state = "hat_enclave_peacekeeper"
 	item_state = "hat_enclave_peacekeeper"
-	soft_type = "peacekeeper"
 
 /obj/item/clothing/head/beret/enclave/science
 	name = "science beret"
@@ -216,7 +214,7 @@
 	item_state = "hat_enclave_science"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
 
 /obj/item/clothing/head/beret/enclave/intel
 	name = "intel beret"
@@ -225,7 +223,7 @@
 	item_state = "hat_enclave_intel"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
 
 /obj/item/clothing/head/helmet/f13/envirosuit
 	name = "enclave envirosuit hood"
