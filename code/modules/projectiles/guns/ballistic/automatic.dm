@@ -607,21 +607,22 @@
 
 //WT-550								4.7mm, 20 round magazine
 /obj/item/gun/ballistic/automatic/wt550
-	name = "WT-550"
-	desc = "A compact PDW derived from the G11, firing the same 4.73mm rounds."
+	name = "4.73mm carbine"
+	desc = "A WT-550 Personal Defense Weapon, manufactured by West Tek. It fires 4.73mm caseless rounds."
 	item_state = "m90"
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
 	burst_size = 1
+	slowdown = 0.45
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
-	autofire_shot_delay = 1.75
+	autofire_shot_delay = 2.25
 	extra_penetration = 0.2
 	slowdown = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_HEAVY
-	spread = 0
+	spread = 3
 	fire_delay = 1
 	can_bayonet = TRUE
 	knife_x_offset = 25
@@ -1218,8 +1219,8 @@
 	burst_shot_delay = 2.0
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.2
-	extra_damage = 20
+	autofire_shot_delay = 2
+	extra_damage = 19
 	extra_penetration = 0.25
 	spread = 10 //high-velocity
 	can_attachments = TRUE
@@ -1247,7 +1248,8 @@
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "rifle-police"
 	autofire_shot_delay = 3.5 //not a real auto-gun
-	spread = 12 //makeshift longer barrel
+	extra_damage = 20
+	spread = 8 //makeshift longer barrel
 	can_scope = TRUE
 	
 /obj/item/gun/ballistic/automatic/assault_carbine/worn	
