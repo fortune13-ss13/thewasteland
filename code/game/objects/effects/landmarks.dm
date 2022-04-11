@@ -832,9 +832,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/usspy
 	name = "Enclave Private"
 
-/obj/effect/landmark/start/f13/infantry2
-	name = "Enclave Armored Infantry"
-
 /obj/effect/landmark/start/f13/uslt
 	name = "Enclave Lieutenant"
 
@@ -857,7 +854,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Enclave Gunnery Sergeant"
 	
 /obj/effect/landmark/start/f13/uslightduty
-    name = "Enclave Light Duty"
+    name = "Enclave Off-Duty"
 	
 /obj/effect/landmark/start/f13/uscolonist
 	name = "US Colonist"
