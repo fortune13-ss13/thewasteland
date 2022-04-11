@@ -620,7 +620,7 @@
 	autofire_shot_delay = 2.25
 	extra_penetration = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_MEDIUM
 	spread = 3 //foregrip
 	fire_delay = 1
 	can_bayonet = TRUE
