@@ -619,10 +619,10 @@
 	extra_damage = 20
 	autofire_shot_delay = 2.25
 	extra_penetration = 0.2
-	slowdown = 0.2
+	slowdown = 0.3
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_HEAVY
-	spread = 3
+	spread = 3 //foregrip
 	fire_delay = 1
 	can_bayonet = TRUE
 	knife_x_offset = 25
@@ -1247,9 +1247,9 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "rifle-police"
-	autofire_shot_delay = 3.5 //not a real auto-gun
-	extra_damage = 20
-	spread = 8 //makeshift longer barrel
+	autofire_shot_delay = 3.5 //not a real auto-gun, a lot slower than the assault carbine
+	extra_damage = 20 //longer barrel
+	spread = 8 //more accurate than the assault carbine, its a rifle
 	can_scope = TRUE
 	
 /obj/item/gun/ballistic/automatic/assault_carbine/worn	
