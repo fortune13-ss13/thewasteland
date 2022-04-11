@@ -4,7 +4,6 @@
 	selection_color = "#323232"
 	faction = FACTION_ENCLAVE
 	exp_type = EXP_TYPE_ENCLAVE
-	minimal_player_age = 70
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
