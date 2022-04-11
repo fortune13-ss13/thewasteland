@@ -613,7 +613,7 @@
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
 	burst_size = 1	
-	slowdown = 0.3
+	slowdown = 0.2
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
