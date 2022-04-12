@@ -60,7 +60,7 @@
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
 	armor = list("melee" = 60, "bullet" = 65, "laser" = 50, "energy" = 40, "bomb" = 40, "bio" = 55, "rad" = 25, "fire" = 55, "acid" = 15, "wound" = 25)
-	slowdown = 0.8
+	slowdown = 0.35
 
 /obj/item/clothing/suit/armored/heavy/salvaged_t45
 	name = "salvaged T-45b power armor"
@@ -68,7 +68,7 @@
 	icon_state = "t45b_salvaged"
 	item_state = "t45b_salvaged"
 	armor = list("melee" = 65, "bullet" = 70, "laser" = 55, "energy" = 45, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 30)
-	slowdown = 1
+	slowdown = 0.4
 
 
 //Recipe bone armor + metal and leather
@@ -91,7 +91,7 @@
 	icon_state = "ncr_salvaged"
 	item_state = "ncr_salvaged"
 	armor = list("melee" = 65, "bullet" = 70, "laser" = 55, "energy" = 45, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 30)
-	slowdown = 1
+	slowdown = 0.4
 
 
 

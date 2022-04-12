@@ -461,7 +461,6 @@
 	automatic = 1
 	autofire_shot_delay = 2
 	burst_shot_delay = 2.5
-	extra_damage = 1
 	recoil = 0.25
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
@@ -612,7 +611,7 @@
 	item_state = "m90"
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
-	burst_size = 1	
+	burst_size = 1
 	slowdown = 0.2
 	is_automatic = TRUE
 	automatic = TRUE
@@ -1250,8 +1249,8 @@
 	extra_damage = 20 //longer barrel
 	spread = 8 //more accurate than the assault carbine, its a rifle
 	can_scope = TRUE
-	
-/obj/item/gun/ballistic/automatic/assault_carbine/worn	
+
+/obj/item/gun/ballistic/automatic/assault_carbine/worn
 	name = "worn assault carbine"
 	desc = "The U.S. army carbine version of the R91, made by Colt and issued to special forces. This one is beat-up and falling apart."
 	icon_state = "assault_carbine"
@@ -1427,8 +1426,8 @@
 	burst_shot_delay = 1.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 3.25
-	fire_delay = 4
+	autofire_shot_delay = 3
+	fire_delay = 3.5
 	extra_damage = 28
 	spread = 8
 	can_attachments = FALSE

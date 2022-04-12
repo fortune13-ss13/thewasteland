@@ -186,7 +186,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	
+
 /////////////////
 //// Officers ///
 /////////////////
@@ -211,9 +211,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// M1919, Spatha
+		/datum/outfit/loadout/palacent,		// RCW, Spatha, Golith
 		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, AMR, Spatha
-		/datum/outfit/loadout/centurion,	// Riot Shotgun, Military Ripper
+		/datum/outfit/loadout/centurion,	// M1919, Military Ripper
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -253,11 +253,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Paladin-Slayer Centurion"
 	suit = /obj/item/clothing/suit/armor/f13/legion/palacent
 	head = /obj/item/clothing/head/helmet/f13/legion/palacent
-	suit_store = /obj/item/gun/ballistic/automatic/m1919
+	suit_store = /obj/item/gun/energy/laser/rcw
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/melee/powerfist/f13/goliath = 1,
-		/obj/item/ammo_box/magazine/mm762 = 1,
+		/obj/item/stock_parts/cell/ammo/ecp = 3,
 		)
 
 /datum/outfit/loadout/rangerhunter
@@ -276,10 +275,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Frontline Centurion"
 	suit = /obj/item/clothing/suit/armor/f13/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
-	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
+	suit_store = /obj/item/gun/ballistic/automatic/m1919
 	backpack_contents = list(
-		/obj/item/melee/powered/ripper/prewar = 1,
-		/obj/item/ammo_box/magazine/d12g = 3,
+		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/ammo_box/magazine/mm762 = 1,
 		)
 
 /* /datum/outfit/loadout/berserkercenturion
@@ -1115,7 +1114,7 @@ commented out pending rework*/
 		/obj/item/stack/sheet/prewar/twenty = 1,
 		/obj/item/weldingtool = 1,
 		/obj/item/book/granter/trait/explosives = 1
-		)	
+		)
 
 // LEGION SLAVES - Servant cook, and assist with medical, low surgery. Worker farm and mine.
 // Both get Mars teachings to help out when normal work is done.
@@ -1300,7 +1299,7 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	shoes =	/obj/item/clothing/shoes/roman
 	suit_store = /obj/item/gun/ballistic/automatic/smg/greasegun
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, 
+		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/flashlight/lantern=1,
 		/obj/item/electropack/shockcollar = 3,
 		/obj/item/assembly/signaler/advanced = 3,
