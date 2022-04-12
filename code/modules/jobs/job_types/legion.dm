@@ -1226,14 +1226,10 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	exp_requirements = 1500
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	loadout_options = list(
+		/datum/outfit/loadout/meleexpert,
+		/datum/outfit/loadout/rangedbitch,
+		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	name = "Legion Venator"
@@ -1246,13 +1242,39 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	ears = /obj/item/radio/headset/headset_legion
 	r_pocket = /obj/item/binoculars
-	r_hand = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/gladius = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
 		/obj/item/ammo_box/c45rev = 3,
 		)
+
+
+/datum/outfit/loadout/meleexpert
+	name = "Melee Expert"
+	suit_store = /obj/item/twohanded/sledgehammer/supersledge
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		)
+
+
+/datum/outfit/loadout/rangedbitch
+	name = "The Very Thing You Swore To Destroy"
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/w308 = 2,
+		)
+
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_TRIBAL, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+
 
 // Legion Citizen
 // Really only used for ID console
