@@ -295,7 +295,7 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/datum/outfit/job/den/f13deputy
+/datum/job/oasis/f13deputy
 	name = "Officer"
 	jobtype = /datum/job/oasis/f13deputy
 
