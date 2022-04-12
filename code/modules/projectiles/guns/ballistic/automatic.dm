@@ -704,7 +704,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	can_unsuppress = FALSE
 	suppressor_state = "none"
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
@@ -721,7 +720,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 //Combat Rifle		Keywords: .45 Caliber Rifle, No Attachments (!)
