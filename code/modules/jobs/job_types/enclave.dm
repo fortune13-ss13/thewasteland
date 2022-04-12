@@ -240,7 +240,7 @@
 	jobtype = /datum/job/enclave/f13specialist
 	suit = 			/obj/item/clothing/suit/armor/bulletproof
 	accessory = 	/obj/item/clothing/accessory/ncr/SPC
-	suit_store = 	/obj/item/gun/ballistic/automatic/smg/mp5
+	suit_store = 	/obj/item/gun/ballistic/automatic/smg/mini_uzi
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
