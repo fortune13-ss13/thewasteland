@@ -1375,6 +1375,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			to_chat(user, "<span class='danger'>[target] doesn't have any eyes to gouge!</span>")
 			return FALSE
 		target.visible_message("<span class='danger'>[user] begins to gouge [target]'s eyes out!</span>", "<span class='userdanger'>[user] begins to gouge your eyes out!</span>")
+		playsound(target.loc, pick('sound/misc/desceration-01.ogg','sound/misc/desceration-02.ogg','sound/misc/desceration-01.ogg'),50, TRUE, -1)
 		if(do_after(user,100,1,target))
 			var/turf/T = get_turf(user)
 			eyes.Remove()
