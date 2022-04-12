@@ -1363,6 +1363,28 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(IS_STAMCRIT(user)) //CITADEL CHANGE - makes it impossible to punch while in stamina softcrit
 		to_chat(user, "<span class='warning'>You're too exhausted.</span>") //CITADEL CHANGE - ditto
 		return FALSE //CITADEL CHANGE - ditto
+	if((user.grab_state == GRAB_NECK) && (user.zone_selected == "eyes") && (target == user.pulling))
+		var/obj/item/organ/eyes/eyes = target.getorganslot(ORGAN_SLOT_EYES)
+		if((target.head && target.head.flags_cover & HEADCOVERSEYES) || \
+			(target.wear_mask && target.wear_mask.flags_cover & MASKCOVERSEYES) || \
+			(target.glasses && target.glasses.flags_cover & GLASSESCOVERSEYES))
+			// you can't stab someone in the eyes wearing a mask!
+			to_chat(user, "<span class='danger'>[target]'s eyes are covered!</span>")
+			return FALSE
+		if(!eyes) //no eyes!
+			to_chat(user, "<span class='danger'>[target] doesn't have any eyes to gouge!</span>")
+			return FALSE
+		target.visible_message("<span class='danger'>[user] begins to gouge [target]'s eyes out!</span>", "<span class='userdanger'>[user] begins to gouge your eyes out!</span>")
+		if(do_after(user,50,1,target))
+			var/turf/T = get_turf(user)
+			eyes.Remove()
+			eyes.forceMove(T)
+			var/atom/throw_target = get_edge_target_turf(eyes, user.dir)
+			eyes.throw_at(throw_target, 2, 4, user)
+			target.visible_message("<span class='danger'>[user] gouges [target]'s eyes out!</span>", \
+					"<span class='userdanger'>[user] gouges your eyes out!</span>")
+			playsound(target.loc, pick('sound/misc/desceration-01.ogg','sound/misc/desceration-02.ogg','sound/misc/desceration-01.ogg'),50, TRUE, -1)
+			return FALSE
 	if(target.check_martial_melee_block())
 		target.visible_message("<span class='warning'>[target] blocks [user]'s attack!</span>", target = user, \
 			target_message = "<span class='warning'>[target] blocks your attack!</span>")
