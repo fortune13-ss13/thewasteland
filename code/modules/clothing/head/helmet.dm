@@ -115,7 +115,7 @@
 	desc = "A reliable, blue tinted helmet reminding you that you <i>still</i> owe that engineer a beer."
 	icon_state = "blueshift"
 	item_state = "blueshift"
-	armor = list("melee" = 30, "bullet" = 35, "laser" = 45, "energy" = 25, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 70, "acid" = 10, "wound" = 50)
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 45, "energy" = 25, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 70, "acid" = 10, "wound" = 50)
 
 /obj/item/clothing/head/helmet/riot
 	name = "riot helmet"
