@@ -659,6 +659,7 @@
 	suppressor_x_offset = 27
 	suppressor_y_offset = 31
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	can_scope = TRUE
 
 //De Lisle carbine							Keywords: Pre-war, 9mm, Long barrel, Suppressed
 /obj/item/gun/ballistic/automatic/delisle
