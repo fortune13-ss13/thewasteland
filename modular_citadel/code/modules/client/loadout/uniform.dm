@@ -200,11 +200,6 @@
 	path = /obj/item/clothing/under/suit/white
 	cost = 2
 
-/datum/gear/uniform/suit/blueshift
-	name = "security suit and tie"
-	path = /obj/item/clothing/under/rank/security/officer/blueshirt
-	cost = 2
-
 /datum/gear/uniform/mailmanuniform
 	name = "mailman's jumpsuit"
 	path = /obj/item/clothing/under/misc/mailman
@@ -634,6 +629,27 @@
 /datum/gear/uniform/ranger/vet
 	name = "ranger flannel outfit"
 	path = /obj/item/clothing/under/f13/ranger/vet
+
+//Oasis
+
+/datum/gear/uniform/suit/blueshift
+	name = "security suit and tie"
+	path = /obj/item/clothing/under/rank/security/officer/blueshirt
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	restricted_desc = "Oasis"
+	restricted_roles = list("Mayor",
+							"Secretary",
+							"Sheriff",
+							"Doctor",
+							"Citizen",
+							"Deputy",
+							"Shopkeeper",
+							"Farmer",
+							"Prospector",
+							"Detective",
+							"Barkeep",
+							)
 		
 /datum/gear/uniform/skirt/white
 	name = "white suitskirt"
