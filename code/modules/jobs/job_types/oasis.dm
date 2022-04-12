@@ -253,9 +253,9 @@ Mayor
 
 /datum/outfit/loadout/thelaw
 	name = "The Law Man"
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	suit_store = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m5mm = 2,
+		/obj/item/ammo_box/tube/c4570 = 3,
 		/obj/item/ammo_box/m44 = 2,
 		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1,
 		)
@@ -265,8 +265,8 @@ Mayor
 	suit_store = /obj/item/gun/energy/laser/aer9/oasis
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/ammo_box/magazine/m45exp= 2,
-		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/gun/ballistic/automatic/pistol/sig = 1,
+		/obj/item/ammo_box/magazine/m9mm = 3,
 		)
 
 /datum/outfit/job/den/f13sheriff/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -313,8 +313,6 @@ Mayor
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 2,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/gun/ballistic/revolver/police = 1,
-		/obj/item/ammo_box/a357 = 3,
 		)
 
 /datum/outfit/loadout/standardpd
@@ -324,7 +322,9 @@ Mayor
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/ammo_box/a357 = 3,
 		/obj/item/flashlight/seclite = 1,
+		/obj/item/gun/ballistic/revolver/police = 1,
 		)
 
 /datum/outfit/loadout/police
@@ -336,6 +336,8 @@ Mayor
 		/obj/item/attachments/scope = 1,
 		/obj/item/ammo_box/a762 = 3,
 		/obj/item/flashlight/seclite = 1,
+		/obj/item/gun/ballistic/revolver/police = 1,
+		/obj/item/ammo_box/a357 = 3,
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
 
@@ -350,6 +352,8 @@ Mayor
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
 	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m45exp= 2,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
 		/obj/item/ammo_box/magazine/m5mm = 1,
 		/obj/item/flashlight/seclite = 1,
 		)
