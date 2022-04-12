@@ -1534,6 +1534,62 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		user.do_attack_animation(target, ATTACK_EFFECT_FACE_SLAP)
 		user.adjustStaminaLossBuffered(3)
 		return FALSE
+//MY EYES - Basically eyestab() code but deals less damage
+	else if(aim_for_eyes && ( target_on_help || target_restrained || target_aiming_for_eyes))
+		if(HAS_TRAIT(user, TRAIT_PACIFISM))
+			to_chat(user, "<span class='warning'>You don't want to poke any eyes!</span>")
+			return FALSE
+		if(IS_STAMCRIT(user))//makes eyestabbing impossible if you're in stamina softcrit
+			to_chat(user, "<span class='danger'>You're too exhausted for that.</span>")
+			return
+		var/obj/item/bodypart/affecting = target.get_bodypart(BODY_ZONE_HEAD)
+		if(!affecting) //no head!
+			to_chat(user, "<span class='danger'>[target] doesn't have a head!</span>")
+			return
+		var/obj/item/organ/eyes/eyes = target.getorganslot(ORGAN_SLOT_EYES)
+		if(!eyes) //no eyes!
+			to_chat(user, "<span class='danger'>[target] doesn't have any eyes!</span>")
+			return
+		if((target.head && target.head.flags_cover & HEADCOVERSEYES) || \
+			(target.wear_mask && target.wear_mask.flags_cover & MASKCOVERSEYES) || \
+			(target.glasses && target.glasses.flags_cover & GLASSESCOVERSEYES) || (!eyes))
+			// you can't stab someone in the eyes wearing a mask!
+			target.visible_message(\
+				"<span class='danger'>\The [user] fails to poke [user == target ? "[user.p_them()]self" : "\the [target]"] in the eyes!</span>",\
+				"<span class='notice'>[user] fails to poke you in the eyes! </span>",\
+				"You hear a squish.", target = user, target_message = "<span class='notice'>You fail to poke [user == target ? "yourself" : "\the [target]"] in the eyes! </span>")
+			user.do_attack_animation(target, ATTACK_EFFECT_BOOP)
+			user.adjustStaminaLossBuffered(15)
+			return FALSE
+		playsound(target.loc, 'sound/effects/splat.ogg', 50, 1, -1)
+		target.visible_message(\
+			"<span class='danger'>\The [user] pokes [user == target ? "[user.p_them()]self" : "\the [target]"] in the eyes!</span>",\
+			"<span class='notice'>[user] pokes you in the eyes! </span>",\
+			"You hear a squish.", target = user, target_message = "<span class='notice'>You poke [user == target ? "yourself" : "\the [target]"] in the eyes! </span>")
+		user.do_attack_animation(target, ATTACK_EFFECT_BOOP)
+		user.adjustStaminaLossBuffered(15)
+		eyes.applyOrganDamage(3)
+		target.adjust_blurriness(3)
+		SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "eye_stab", /datum/mood_event/eye_stab)
+		target.apply_damage(3, BRUTE, affecting)
+		if(eyes.damage >= 10)
+			target.adjust_blurriness(15)
+			if(target.stat != DEAD)
+				to_chat(target, "<span class='danger'>Your eyes start to bleed profusely!</span>")
+			if(!(HAS_TRAIT(target, TRAIT_BLIND) || HAS_TRAIT(target, TRAIT_NEARSIGHT)))
+				to_chat(target, "<span class='danger'>You become nearsighted!</span>")
+			target.become_nearsighted(EYE_DAMAGE)
+			if(prob(50))
+				if(target.stat != DEAD)
+					if(target.drop_all_held_items())
+						to_chat(target, "<span class='danger'>You drop what you're holding and clutch at your eyes!</span>")
+				target.adjust_blurriness(10)
+				target.Unconscious(20)
+				target.DefaultCombatKnockdown(40)
+			if (prob(eyes.damage - 10 + 1))
+				target.become_blind(EYE_DAMAGE)
+				to_chat(target, "<span class='danger'>You go blind!</span>")
+			return FALSE
 
 	else
 		user.do_attack_animation(target, ATTACK_EFFECT_DISARM)
