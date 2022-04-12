@@ -478,8 +478,7 @@
 	flags_cover = HEADCOVERSEYES
 	visor_flags_cover = HEADCOVERSEYES
 	dog_fashion = null
-	unique_reskin = list("M1" = "ncr_googles_helmet",
-					)
+
 
 /obj/item/clothing/head/f13/ncr/steelpot_goggles/attack_self(mob/user)
 	if(can_toggle && !user.incapacitated())
