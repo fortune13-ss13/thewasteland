@@ -849,7 +849,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/uslightduty
     name = "Enclave Bunker Duty"
-
+	
 //Tribal
 
 /obj/effect/landmark/start/f13/tribal
