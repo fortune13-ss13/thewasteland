@@ -736,11 +736,7 @@
 	armor = list("melee" = 15, "bullet" = 45, "laser" = 15,  "energy" = 30, "bomb" = 40, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 50)
 	icon_state = "blueshift"
 	item_state = "blueshift"
-	slowdown = 0.075
-
-/obj/item/clothing/suit/armor/vest/oasis/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
+	slowdown = 0.02
 
 /obj/item/clothing/suit/armor/f13/metalarmor/steelbib/oasis
 	name = "heavy steel breastplate"
