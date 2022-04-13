@@ -461,7 +461,6 @@
 	automatic = 1
 	autofire_shot_delay = 2
 	burst_shot_delay = 2.5
-	extra_damage = 1
 	recoil = 0.25
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
@@ -607,21 +606,21 @@
 
 //WT-550								4.7mm, 20 round magazine
 /obj/item/gun/ballistic/automatic/wt550
-	name = "WT-550"
-	desc = "A compact PDW derived from the G11, firing the same 4.73mm rounds."
+	name = "4.73mm carbine"
+	desc = "A WT-550 Personal Defense Weapon, manufactured by West Tek. It fires 4.73mm caseless rounds."
 	item_state = "m90"
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
-	burst_size = 1
+	burst_size = 1	
+	slowdown = 0.2
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
-	autofire_shot_delay = 1.75
+	autofire_shot_delay = 2.25
 	extra_penetration = 0.2
-	slowdown = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_HEAVY
-	spread = 0
+	weapon_weight = WEAPON_MEDIUM
+	spread = 3 //foregrip
 	fire_delay = 1
 	can_bayonet = TRUE
 	knife_x_offset = 25
@@ -659,6 +658,7 @@
 	suppressor_x_offset = 27
 	suppressor_y_offset = 31
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	can_scope = TRUE
 
 //De Lisle carbine							Keywords: Pre-war, 9mm, Long barrel, Suppressed
 /obj/item/gun/ballistic/automatic/delisle
@@ -703,7 +703,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	can_unsuppress = FALSE
 	suppressor_state = "none"
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
@@ -720,7 +719,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 //Combat Rifle		Keywords: .45 Caliber Rifle, No Attachments (!)
@@ -1218,8 +1216,8 @@
 	burst_shot_delay = 2.0
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.2
-	extra_damage = 20
+	autofire_shot_delay = 2
+	extra_damage = 19
 	extra_penetration = 0.25
 	spread = 10 //high-velocity
 	can_attachments = TRUE
@@ -1246,8 +1244,9 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "rifle-police"
-	autofire_shot_delay = 3.5 //not a real auto-gun
-	spread = 12 //makeshift longer barrel
+	autofire_shot_delay = 3.5 //not a real auto-gun, a lot slower than the assault carbine
+	extra_damage = 20 //longer barrel
+	spread = 8 //more accurate than the assault carbine, its a rifle
 	can_scope = TRUE
 	
 /obj/item/gun/ballistic/automatic/assault_carbine/worn	
@@ -1526,19 +1525,3 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
-
-// BETA STUFF // =Obsolete
-/obj/item/gun/ballistic/automatic/smgtesting
-	name = "SMG"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 20
-
-/obj/item/gun/ballistic/automatic/snipertesting
-	name = "sniper rifle"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 25
-
-/obj/item/gun/ballistic/automatic/rifletesting
-	name = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 22
