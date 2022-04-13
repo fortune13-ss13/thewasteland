@@ -338,16 +338,16 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/throwing_star
 	name = "throwing star"
-	desc = "An ancient weapon still used to this day, due to its ease of lodging itself into its victim's body parts."
+	desc = "A serrated metal disk. Useless against armor, but looks painful if you chucked it at someone's face. "
 	icon_state = "throwingstar"
 	item_state = "eshield0"
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	force = 2
-	throwforce = 10 //This is never used on mobs since this has a 100% embed chance.
+	throwforce = 15 
 	throw_speed = 4
-	embedding = list("pain_mult" = 4, "embed_chance" = 100, "fall_chance" = 0, "embed_chance_turf_mod" = 15)
-	armour_penetration = 0.65
+	embedding = list("pain_mult" = 1, "embed_chance" = 10, "fall_chance" = 0, "embed_chance_turf_mod" = 50)
+	armour_penetration = 0
 
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
