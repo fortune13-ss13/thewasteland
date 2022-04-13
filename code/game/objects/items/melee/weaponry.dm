@@ -338,7 +338,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/throwing_star
 	name = "throwing star"
-	desc = "A serrated metal disk. Useless against armor, but looks painful if chucked it at someone's face."
+	desc = "A serrated metal disk. Useless against armor, but looks painful if chucked into someone's face."
 	icon_state = "throwingstar"
 	item_state = "eshield0"
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
