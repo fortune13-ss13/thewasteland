@@ -344,10 +344,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	force = 2
-	throwforce = 15 
+	throwforce = 12
 	throw_speed = 4
-	embedding = list("pain_mult" = 1.5, "embed_chance" = 15, "fall_chance" = 0, "embed_chance_turf_mod" = 75)
-	armour_penetration = 0.10
+	embedding = list("pain_mult" = 2, "embed_chance" = 100, "fall_chance" = 0, "embed_chance_turf_mod" = 75)
+	armour_penetration = 0.15
 
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
