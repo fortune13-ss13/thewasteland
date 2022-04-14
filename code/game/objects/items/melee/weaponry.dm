@@ -346,8 +346,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 2
 	throwforce = 15 
 	throw_speed = 4
-	embedding = list("pain_mult" = 1, "embed_chance" = 10, "fall_chance" = 0, "embed_chance_turf_mod" = 50)
-	armour_penetration = 0
+	embedding = list("pain_mult" = 1, "embed_chance" = 10, "fall_chance" = 0, "embed_chance_turf_mod" = 75)
+	armour_penetration = 0.10
 
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
