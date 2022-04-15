@@ -700,7 +700,7 @@
 	else
 		to_chat(H, "<span class='danger'>The pain vanishes suddenly. You feel no different.</span>")
 
-/* Fortuna edit: Mutation toxin disabled
+
 /datum/reagent/mutationtoxin/classic //The one from plasma on green slimes
 	name = "Mutation Toxin"
 	description = "A corruptive toxin."
@@ -881,7 +881,7 @@
 			H.set_species(species_type)
 			H.reagents.del_reagent(type)
 			to_chat(H, "<span class='warning'>You've become \a jellyperson!</span>")
-*/
+
 
 /datum/reagent/mulligan
 	name = "Mulligan Toxin"
@@ -899,7 +899,6 @@
 	H.visible_message("<b>[H]</b> suddenly transforms!")
 	randomize_human(H)
 
-/* Fortuna edit: disabled slime mutation toxins
 /datum/reagent/aslimetoxin
 	name = "Advanced Mutation Toxin"
 	description = "An advanced corruptive toxin produced by slimes."
@@ -910,13 +909,12 @@
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(method != TOUCH)
 		L.ForceContractDisease(new /datum/disease/transformation/slime(), FALSE, TRUE)
-*/
+
 
 /datum/reagent/gluttonytoxin
 	name = "Gluttony's Blessing"
 	description = "An advanced corruptive toxin produced by something terrible."
 	color = "#5EFF3B" //RGB: 94, 255, 59
-	can_synth = FALSE
 	taste_description = "decay"
 	value = REAGENT_VALUE_GLORIOUS
 
