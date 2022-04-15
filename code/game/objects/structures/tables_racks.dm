@@ -426,6 +426,7 @@
 	name = "makeshift bar table"
 	desc = "An improvised table made from a wooden plank and as barrel. Try not to lean on it."
 	icon = 'icons/fallout/objects/structures/junk_table.dmi'
+	icon_state = "bar"
 	canSmoothWith = list(/obj/structure/table/wood/junk)
 	buildstack = null 
 	
