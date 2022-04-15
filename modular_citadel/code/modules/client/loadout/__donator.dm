@@ -19,7 +19,6 @@
 /datum/gear/donator/kits
 	slot = SLOT_IN_BACKPACK
 
-
 /*example
 /datum/gear/donator/kits/averyamadeus
 	name = "Avery Amadeus' belongings"
@@ -28,3 +27,27 @@
 
 
 */
+
+/obj/item/storage/box/large/custom_kit/cayce/PopulateContents()
+	new /obj/item/clothing/suit/armored/medium/steelbib(src)
+	new /obj/item/clothing/head/helmet/armyhelmet/heavy(src)
+	new /obj/item/twohanded/sledgehammer(src)
+	new /obj/item/pda(src)
+
+/datum/gear/donator/kits/cayce
+	name = "Jett Lowes belongings"
+	path = /obj/item/storage/box/large/custom_kit/cayce
+	ckeywhitelist = list("cayce")
+
+/obj/item/storage/box/large/custom_kit/sugga/PopulateContents()
+	new /obj/item/clothing/suit/armor/f13/combat(src)
+	new /obj/item/clothing/head/helmet/f13/combat(src)
+	new /obj/item/gun/ballistic/revolver/police(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+
+/datum/gear/donator/kits/sugga
+	name = "Suggas box"
+	path = /obj/item/storage/box/large/custom_kit/sugga
+	ckeywhitelist = list("sugga")
