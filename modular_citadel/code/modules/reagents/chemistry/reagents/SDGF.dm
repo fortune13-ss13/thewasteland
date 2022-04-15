@@ -1,4 +1,4 @@
-/*SDGF
+
 ////////////////////////////////////////////////////
 // 		synthetic-derived growth factor			 //
 //////////////////////////////////////////////////
@@ -396,4 +396,4 @@ IMPORTANT FACTORS TO CONSIDER WHILE BALANCING
 			M.adjustToxLoss(2, 0)
 			M.reagents.remove_reagent(type, 1)
 	..()
-*/
+

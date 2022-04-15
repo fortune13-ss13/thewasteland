@@ -899,7 +899,6 @@
 	H.visible_message("<b>[H]</b> suddenly transforms!")
 	randomize_human(H)
 
-/* Fortuna edit: disabled slime mutation toxins
 /datum/reagent/aslimetoxin
 	name = "Advanced Mutation Toxin"
 	description = "An advanced corruptive toxin produced by slimes."
@@ -910,13 +909,12 @@
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(method != TOUCH)
 		L.ForceContractDisease(new /datum/disease/transformation/slime(), FALSE, TRUE)
-*/
+
 
 /datum/reagent/gluttonytoxin
 	name = "Gluttony's Blessing"
 	description = "An advanced corruptive toxin produced by something terrible."
 	color = "#5EFF3B" //RGB: 94, 255, 59
-	can_synth = FALSE
 	taste_description = "decay"
 	value = REAGENT_VALUE_GLORIOUS
 
