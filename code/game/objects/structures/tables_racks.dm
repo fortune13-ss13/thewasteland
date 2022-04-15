@@ -422,6 +422,13 @@
 	if(!total_override)
 		..()
 
+/obj/structure/table/wood/junk
+	name = "makeshift bar table"
+	desc = "An improvised table made from a wooden plank and as barrel. Try not to lean on it."
+	icon = 'icons/fallout/objects/structures/junk_table.dmi'
+	canSmoothWith = list(/obj/structure/table/wood/junk)
+	buildstack = null 
+	
 /obj/structure/table/wood/poker //No specialties, Just a mapping object.
 	name = "gambling table"
 	desc = "A seedy table for seedy dealings in seedy places."
