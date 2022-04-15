@@ -429,6 +429,7 @@
 	icon_state = "bar"
 	canSmoothWith = list(/obj/structure/table/wood/junk)
 	buildstack = null 
+	max_integrity = 100
 	
 /obj/structure/table/wood/poker //No specialties, Just a mapping object.
 	name = "gambling table"
