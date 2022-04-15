@@ -423,8 +423,7 @@
 	new /obj/item/slimepotion/genderchange(get_turf(holder.my_atom))
 	..()
 
-//Black
-/* Fortuna edit: Mutation toxins disabled
+
 /datum/chemical_reaction/slime/slimemutate2
 	name = "Advanced Mutation Toxin"
 	id = /datum/reagent/aslimetoxin
@@ -432,7 +431,7 @@
 	required_reagents = list(/datum/reagent/toxin/plasma = 1)
 	required_other = TRUE
 	required_container = /obj/item/slime_extract/black
-*/
+
 
 //Oil
 /datum/chemical_reaction/slime/slimeexplosion
