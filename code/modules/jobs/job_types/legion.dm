@@ -158,7 +158,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 	exp_requirements = 1500
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator	// Automag, Spatha
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator	// .357 Revolver, Spatha
 	name = "Orator"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13orator
 	neck = /obj/item/storage/belt/holster
@@ -168,12 +169,14 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	id = /obj/item/card/id/dogtag/legorator
 	gloves = null
 	backpack = /obj/item/storage/backpack/legionr
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/automag
+	shoes = /obj/item/clothing/shoes/roman
+	suit_store = /obj/item/gun/ballistic/revolver/colt357
 	r_pocket = /obj/item/storage/bag/money/small/legofficers
 	l_pocket = /obj/item/flashlight/lantern
 	l_hand = /obj/item/melee/onehanded/machete/spatha
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/automag = 2,
+		/obj/item/binoculars = 1,
+		/obj/item/ammo_box/a357 = 2,
 		/obj/item/reagent_containers/pill/patch/bitterdrink = 2,
 		)
 
@@ -210,9 +213,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// M1919, Spatha
+		/datum/outfit/loadout/palacent,		// M1919, Spatha, Goliath
 		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, AMR, Spatha
-		/datum/outfit/loadout/centurion,	// Riot Shotgun, Military Ripper
+		/datum/outfit/loadout/centurion,	// CQC
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -275,10 +278,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Frontline Centurion"
 	suit = /obj/item/clothing/suit/armor/f13/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
-	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
-		/obj/item/melee/powered/ripper/prewar = 1,
-		/obj/item/ammo_box/magazine/d12g = 3,
+		/obj/item/book/granter/martial/cqc = 1,
+		/obj/item/gun/ballistic/revolver/hunting = 1,
+		/obj/item/ammo_box/c4570 = 3,
 		)
 
 /* /datum/outfit/loadout/berserkercenturion
@@ -309,8 +312,8 @@ commented out pending rework*/
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/decvetfront,	// Carl Gustaf, Fireaxe, Smoke bomb, slightly better helmet
-		/datum/outfit/loadout/decvetrear,	// SKS, Spatha
+		/datum/outfit/loadout/decvetfront,	// 9mm SMG, Super Sledge, Smoke bomb, slightly better helmet
+		/datum/outfit/loadout/decvetrear,	// Brush Gun, Spatha
 		)
 
 
@@ -378,10 +381,10 @@ commented out pending rework*/
 	minimal_access = list(ACCESS_LEGION,  ACCESS_LEGION_COMMAND)
 	exp_requirements = 720
 
-	loadout_options = list(
-		/datum/outfit/loadout/decprimfront,	// Grease Gun, Gladius, Smoke bomb
-		/datum/outfit/loadout/decprimrear,	// Trail carbine, 10mm Revolver, Gladius, Smoke bomb
-		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver, Gladius
+	loadout_options = list(	//ALL: Gladius
+		/datum/outfit/loadout/decprimfront,	// 10mm SMG, .357 Revolver
+		/datum/outfit/loadout/decprimrear,	// Trail carbine, .357 Revolver
+		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver
 		)
 
 	matchmaking_allowed = list(
@@ -410,7 +413,7 @@ commented out pending rework*/
 	head = /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	mask = /obj/item/clothing/mask/bandana/legion/legdecan
 	neck = /obj/item/storage/belt/holster
-	glasses = /obj/item/clothing/glasses/sunglasses
+	glasses = /obj/item/clothing/glasses/legiongoggles
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/flashlight/lantern
 	l_pocket = /obj/item/restraints/handcuffs
@@ -547,7 +550,7 @@ commented out pending rework*/
 
 	loadout_options = list(
 		/datum/outfit/loadout/vexbear,	//	Classic FO13 Vex with his ripper: .223 pistol, Ripper
-		/datum/outfit/loadout/vexfox,	// 	Classic New Vegas Vex with his sniper: DKS sniper, Gladius
+		/datum/outfit/loadout/vexfox,	//	Classic New Vegas Vex with his 10mm SMG: 10mm SMG, Spartha
 		)
 
 	matchmaking_allowed = list(
@@ -617,9 +620,9 @@ commented out pending rework*/
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	exp_requirements = 300
 
-	loadout_options = list(
-		/datum/outfit/loadout/expsniper,	// sniper rifle, .45 Revolver, Machete, Smokebomb
-		/datum/outfit/loadout/expambusher,	// mp5, .45 revolver, Bottlecap mine, Machete
+	loadout_options = list(	// ALL: .45 Revolver, Machete
+		/datum/outfit/loadout/expsniper,	// Lee-Enfield, Smokebomb
+		/datum/outfit/loadout/expambusher,	// Ballistic Fist, Bottlecap mine
 		)
 
 	matchmaking_allowed = list(
@@ -658,10 +661,10 @@ commented out pending rework*/
 
 /datum/outfit/loadout/expambusher
 	name = "Ambusher"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
+	suit_store = /obj/item/gun/ballistic/revolver/ballisticfist
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/bottlecap_mine = 1,
 		)
 
@@ -695,11 +698,11 @@ commented out pending rework*/
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	exp_requirements = 600
 
-	loadout_options = list(
-		/datum/outfit/loadout/vetshielder,	// .44 DA Revolver, Shield, Gladius, Armor plate
-		/datum/outfit/loadout/vetrifle,		// Trail gun, Gladius
-		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Fireaxe, Bola
-		/datum/outfit/loadout/vetsmg, // Carl Gustaf
+	loadout_options = list(	//ALL: Gladius
+		/datum/outfit/loadout/vetshielder,	// .44 DA Revolver, Shield, Armor plate
+		/datum/outfit/loadout/vetrifle,		// Trail gun, .357 Revolver
+		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
+		/datum/outfit/loadout/vetsmg, 		// Carl Gustaf, .357 Revolver
 		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -786,10 +789,10 @@ commented out pending rework*/
 	exp_requirements = 120
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
-	loadout_options = list(
-		/datum/outfit/loadout/primelancer,	// .45 Revolver, Buckler, Forged machete, Bola
-		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Machete, Firebomb
-		/datum/outfit/loadout/primebrave,	// Trench shotgun, Throwing spears, Machete
+	loadout_options = list(	//ALL: Forged Machete
+		/datum/outfit/loadout/primelancer,	// .357 Revolver, Buckler, Bola. Trekking
+		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Firebomb
+		/datum/outfit/loadout/primebrave,	// Trench shotgun, Throwing spears
 		)
 
 	matchmaking_allowed = list(
@@ -864,9 +867,9 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_RECRUITLEG
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 
-	loadout_options = list(
-		/datum/outfit/loadout/recruittribal,	// Lance, Bola, Big Leagues (Fresh tribal, meant to go melee)
-		/datum/outfit/loadout/recruitlegion,	// .357 Revolver, Machete, 2 x prefilled Molotovs
+	loadout_options = list(	//ALL: Machete
+		/datum/outfit/loadout/recruittribal,	// Fire Axe, Bola, Trekking
+		/datum/outfit/loadout/recruitlegion,	// .357 Revolver, 2 x prefilled Molotovs
 		)
 
 	matchmaking_allowed = list(
@@ -931,7 +934,7 @@ commented out pending rework*/
 	flag = F13IMMUNE
 	total_positions = 5
 	spawn_positions = 1
-	description = " An Immune is a legionnaire temporarily assigned to keeping the camp in order, according to their tasking on any given week."
+	description = "An Immune is a legionnaire temporarily assigned to keeping the camp in order, according to their tasking on any given week."
 	supervisors = "the Centurion."
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
@@ -946,10 +949,9 @@ commented out pending rework*/
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	l_pocket = /obj/item/flashlight/lantern
-	suit_store = /obj/item/gun/ballistic/revolver/caravan_shotgun
+	suit_store = /obj/item/melee/onehanded/machete/forgedmachete
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/melee/onehanded/machete/forgedmachete = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 		)
 
@@ -961,7 +963,7 @@ commented out pending rework*/
 
 // FORGE MASTER
 
-/datum/job/CaesarsLegion/Legionnaire/f13campfollower	// Chainsaw, Extra materials, Blueprints
+/datum/job/CaesarsLegion/Legionnaire/f13campfollower	// Extra materials, Blueprints
 	title = "Legion Forgemaster"
 	flag = F13CAMPFOLLOWER
 	total_positions = 2
@@ -1210,7 +1212,7 @@ commented out pending rework*/
 
 /*
 Post Scriptum
-Plans: Add recipes/traits to keep refining support roles, Forgemaster close to done, just missing armor, others will need some minor tweaking. Planned is making the medicus more of a improvised surgery master, using primitive tools to good effect, because its interesting and unique.
+Plans: Add recipes/traits to keep refining support roles, Forgemaster done, others will need some minor tweaking. Planned is making the medicus more of a improvised surgery master, using primitive tools to good effect, because its interesting and unique.
 Venator  - Zero slots, role built on cloning vet ranger, linear just vastly better than all but the Cent, snowflakey in command when it suits them, messes up the chain of command thats already messy for Legion. FUCK IT ENABLE IT
 */
 /datum/job/CaesarsLegion/Legionnaire/f13venator
@@ -1254,6 +1256,46 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 		/obj/item/ammo_box/c45rev = 3,
 		)
 
+// Slavemaster
+
+datum/job/CaesarsLegion/Legionnaire/f13slavemaster
+	title = "Legion Slavemaster"
+	flag = F13SLAVEMASTER
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
+	supervisors = "the Decani and Centurion"
+	exp_requirements = 300
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
+	name = "Legion Slavemaster"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
+	id =			/obj/item/card/id/dogtag/legslavemaster
+	uniform =		/obj/item/clothing/under/gladiator
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/prime/slavemaster
+	belt = 			/obj/item/melee/onehanded/slavewhip
+	head = 			/obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
+	shoes =			/obj/item/clothing/shoes/roman
+	suit_store = 	/obj/item/melee/onehanded/machete/forgedmachete
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2, 
+		/obj/item/flashlight/lantern = 1,
+		/obj/item/electropack/shockcollar = 3,
+		/obj/item/assembly/signaler/advanced = 3,
+		)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_TRIBAL, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+
+
 // Legion Citizen
 // Really only used for ID console
 /datum/job/ncr/f13legioncitizen
@@ -1273,44 +1315,3 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1,
 		)
-
-
-// Slave master
-
-datum/job/CaesarsLegion/Legionnaire/f13slavemaster
-	title = "Legion Slavemaster"
-	flag = F13SLAVEMASTER
-	total_positions = 1
-	spawn_positions = 1
-	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
-	supervisors = "the Decani and Centurion"
-	exp_requirements = 300
-
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
-	name = "Legion Slavemaster"
-	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
-	id =			/obj/item/card/id/dogtag/legslavemaster
-	uniform =		/obj/item/clothing/under/gladiator
-	suit = /obj/item/clothing/suit/armor/f13/legion/prime/slavemaster
-	belt = 			/obj/item/melee/onehanded/slavewhip
-	head = 			/obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
-	shoes =	/obj/item/clothing/shoes/roman
-	suit_store = /obj/item/gun/ballistic/automatic/smg/greasegun
-	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder=2,
-		/obj/item/flashlight/lantern=1,
-		/obj/item/electropack/shockcollar = 3,
-		/obj/item/assembly/signaler/advanced = 3,
-		/obj/item/ammo_box/magazine/greasegun = 2
-		)
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)

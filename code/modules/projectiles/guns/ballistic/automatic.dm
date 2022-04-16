@@ -876,7 +876,8 @@
 	mag_type = /obj/item/ammo_box/magazine/m762
 	extra_damage = 40
 	burst_size = 1
-	fire_delay = 5
+	fire_delay = 4
+	slowdown = 0.4
 	spread = 1
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -1496,7 +1497,7 @@
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m2mm
-	extra_damage = 30
+	extra_damage = 40
 	burst_size = 1
 	fire_delay = 10
 	zoomable = TRUE
