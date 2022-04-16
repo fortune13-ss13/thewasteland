@@ -700,10 +700,10 @@ commented out pending rework*/
 
 /datum/outfit/loadout/expambusher
 	name = "Ambusher"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/tommygun
+	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/tommygunm45 = 2,
+		/obj/item/ammo_box/magazine/uzim9mm = 2,
 		/obj/item/bottlecap_mine = 1,
 		/obj/item/restraints/legcuffs/bola = 1,
 		)
