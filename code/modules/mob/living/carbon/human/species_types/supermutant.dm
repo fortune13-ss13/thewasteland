@@ -6,10 +6,8 @@
 	species_traits = list(NOTRANSSTING,NOAROUSAL)
 	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_SMUTANT,)
 	inherent_biotypes = list(MOB_INORGANIC, MOB_HUMANOID)
-	speedmod = 0.90
+	speedmod = 1
 	siemens_coeff = 0
-	punchdamagelow = 25
-	punchdamagehigh = 30
 	use_skintones = 0
 	sexes = 0
 	liked_food = JUNKFOOD | FRIED | RAW

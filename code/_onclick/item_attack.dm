@@ -91,7 +91,7 @@
 
 	var/bigleagues = force*0.25
 	var/buffout = force*0.25
-	var/smutant = force*0.25
+	var/smutant = force*0.10
 
 	//var/regular = force*(user.special_s/100)//SPECIAL integration
 
