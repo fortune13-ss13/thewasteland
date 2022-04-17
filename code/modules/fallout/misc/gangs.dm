@@ -4,8 +4,8 @@
 GLOBAL_LIST_INIT(gang_names, list ( \
 "raider", \
 "raiders", \
-"great khan", \
-"great khans", \
+"powder ganger", \
+"powder gangers", \
 "den mob", \
 "gang", \
 "gangs", \
@@ -20,8 +20,8 @@ GLOBAL_LIST_INIT(allowed_gang_factions, list ( \
 // List of all existing gangs
 GLOBAL_LIST_EMPTY(all_gangs)
 
-//Great Khans
-GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
+//Powder Gangers
+GLOBAL_DATUM_INIT(powdergangers, /datum/gang/powdergangers, new)
 
 GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 
@@ -66,8 +66,8 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 	)
 
 //Round-start gangs
-/datum/gang/greatkhans
-	name = "Great Khans"
+/datum/gang/powdergangers
+	name = "Powder Gangers"
 	color = "#b07f43"
 	round_start = TRUE
 	boss_items = list(
@@ -76,22 +76,22 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 
 		/datum/gang_item/weapon/spikedbaseball,
 		/datum/gang_item/weapon/greasegun,
+		/datum/gang_item/weapon/shuriken,
+		/datum/gang_item/weapon/switchblade,
 
-		/datum/gang_item/clothing/khan_boots,
-		/datum/gang_item/clothing/khan_peltboots,
-		/datum/gang_item/clothing/khan_bandana,
-		/datum/gang_item/clothing/khan_helmet,
-		/datum/gang_item/clothing/khan_fullhelmet,
-		/datum/gang_item/clothing/khan_uniform,
-		/datum/gang_item/clothing/khan_jacket_armored,
-		/datum/gang_item/clothing/khan_battlecoat,
+		/datum/gang_item/clothing/ganger_boots,
+		/datum/gang_item/clothing/ganger_peltboots,
+		/datum/gang_item/clothing/red_bandana,
+		/datum/gang_item/clothing/bandit_helmet,
+		/datum/gang_item/clothing/jorts,
 
+		/datum/gang_item/equipment/bundleanarchist,
 		/datum/gang_item/equipment/c4,
 		/datum/gang_item/equipment/emp,
 		/datum/gang_item/equipment/stinger,
 		/datum/gang_item/equipment/he,
 
-		/datum/gang_item/weapon/shuriken,
+		/datum/gang_item/equipment/spraycan,
 		/datum/gang_item/equipment/necklace,
 		/datum/gang_item/clothing/prostitute_dress,
 		/datum/gang_item/clothing/hat,

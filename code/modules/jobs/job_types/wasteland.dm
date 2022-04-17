@@ -1,19 +1,19 @@
 /datum/job/wasteland
 	department_flag = WASTELAND
 
-////////////////
-// GREAT KHAN //
-////////////////
+///////////////////
+// POWDER GANGER //
+///////////////////
 
 /datum/job/wasteland/f13pusher
-	title = "Great Khan"
-	flag = F13USPRIVATE
+	title = "Powder Ganger"
+	flag = F13PUSHER
 	department_head = list("Captain")
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
 	total_positions = 8
 	spawn_positions = 8
-	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Yuma."
+	description = "Under the leadership of Samuel Cooke, you and your fellow inmates gathered weapons and explosives and rebelled against the NCR staffing the Correctional Facility in the Mojave, now you and a couple of others decided to take your chances robbing and stealing down south, this is where you found a prime spot full of folks to rob, Yuma, but there's plenty of folks that hate you for what you and your fella's did at the Mojave, so try not bump into them."
 	supervisors = "your gang leadership"
 	selection_color = "#ff915e"
 	exp_requirements = 1000
@@ -21,13 +21,13 @@
 
 	outfit = /datum/outfit/job/wasteland/f13pusher
 
-	access = list(ACCESS_KHAN)
-	minimal_access = list(ACCESS_KHAN)
+	access = list(ACCESS_GANGER)
+	minimal_access = list(ACCESS_GANGER)
 
 	loadout_options = list(
 		/datum/outfit/loadout/enforcer,
-		/datum/outfit/loadout/khanskirmisher,
-		/datum/outfit/loadout/khandrug,
+		/datum/outfit/loadout/skirmisher,
+		/datum/outfit/loadout/explosive,
 		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -41,24 +41,23 @@
 	)
 
 /datum/outfit/job/wasteland/f13pusher
-	name = "Great Khan"
+	name = "Powder Ganger"
 	jobtype = /datum/job/wasteland/f13pusher
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
-	id = /obj/item/card/id/khantattoo
-	ears = /obj/item/radio/headset/headset_khans
-	head = /obj/item/clothing/head/helmet/f13/khan
-	shoes = /obj/item/clothing/shoes/f13/military/khan
+	id = /obj/item/card/id/gangertattoo
+	ears = /obj/item/radio/headset/headset_powdergangers
+	head = /obj/item/clothing/head/f13/bandit
+	shoes = /obj/item/clothing/shoes/f13/military/ganger
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/old
-	uniform = /obj/item/clothing/under/f13/khan
+	uniform = /obj/item/clothing/under/f13/ncrcf
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
-	l_pocket = /obj/item/storage/survivalkit_khan
+	l_pocket = /obj/item/storage/survivalkit_ganger
 	gloves = /obj/item/melee/unarmed/brass/spiked
 	box = null
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/jet = 2,
-		/obj/item/storage/bag/money/small/khan = 1
+		/obj/item/grenade/f13/dynamite = 2,
+		/obj/item/storage/bag/money/small/ganger = 1
 		)
 
 
@@ -68,7 +67,7 @@
 		return
 
 	if(!H.gang)
-		var/datum/gang/greatkhans/GK = GLOB.greatkhans
+		var/datum/gang/powdergangers/GK = GLOB.powdergangers
 		GLOB.all_gangs |= GK
 		GK.add_member(H)
 		H.gang = GK
@@ -92,32 +91,35 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_powderganger)
 
 /datum/outfit/loadout/enforcer
 	name = "Enforcer"
+	suit = /obj/item/clothing/suit/armor/vest/big
 	r_hand = /obj/item/twohanded/baseball/spiked
-	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola/tactical=1,
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
+		)
 
-/datum/outfit/loadout/khanskirmisher
+/datum/outfit/loadout/skirmisher
 	name = "Skirmisher"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
+	suit = /obj/item/clothing/suit/armor/f13/raider/ncrcfjacket
+	r_hand = /obj/item/gun/ballistic/automatic/smg/greasegun/worn
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm=3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/storage/belt/holster=1)
+		/obj/item/ammo_box/magazine/greasegun = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1
+		)
 
-/datum/outfit/loadout/khandrug
-	name = "Drug Pusher"
+/datum/outfit/loadout/explosive
+	name = "Explosive's Expert"
+	uniform = /obj/item/clothing/under/f13/jorts
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(,
-		/obj/item/book/granter/trait/midsurgery = 1,
-		/obj/item/book/granter/trait/chemistry = 1,
-		/obj/item/reagent_containers/pill/patch/turbo = 2,
+		/obj/item/grenade/f13/dynamite = 3,
+		/obj/item/grenade/f13/frag = 2,
+		/obj/item/grenade/f13/stinger = 1,
 		)
 
 /*

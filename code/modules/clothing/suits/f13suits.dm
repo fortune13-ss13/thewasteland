@@ -262,57 +262,6 @@
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 30, "energy" = 25, "bomb" = 16, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0)
 
 
-///////////////////////
-// GREAT KHANS ARMOR //
-///////////////////////
-
-//Basic Jacket
-/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
-	name = "Great Khan jacket"
-	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
-	icon = 'icons/fallout/clothing/khans.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
-	icon_state = "khan_jacket"
-	item_state = "khan_jacket"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 20, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 0, "wound" = 30)
-	slowdown = 0.05
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets
-
-/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
-//Armored jacket
-/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored
-	name = "Great Khan armored jacket"
-	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
-	icon_state = "khan_jacket_armored"
-	item_state = "khan_jacket_armored"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
-	armor = list("melee" = 37, "bullet" = 37, "laser" = 40, "energy" = 25, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 0, "wound" = 30)
-	slowdown = 0.08
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
-
-/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
-//Battlecoat
-/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat
-	name = "Great Khan battle coat"
-	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
-	icon_state = "khan_heavy"
-	item_state = "khan_heavy"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 47, "energy" = 25, "bomb" = 35, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 0, "wound" = 40)
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
-	slowdown = 0.2
-
-/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
 // --------------------------------------------------------------------------
 
 /obj/item/clothing/suit/toggle/labcoat/f13/followers

@@ -102,8 +102,8 @@
 	new /obj/item/stack/f13Cash/random/denarius/low(src)
 	new /obj/item/stack/f13Cash/random/ncr/low(src)
 
-// Standard Great Khan money bag. They have a little more caps than common raiders. Average 75.
-/obj/item/storage/bag/money/small/khan/PopulateContents()
+// Standard Great Powder Ganger money bag. They have a little more caps than common raiders. Average 75.
+/obj/item/storage/bag/money/small/ganger/PopulateContents()
 	new /obj/item/stack/f13Cash/random/high(src)
 
 // Standard Settler money bag. They are pretty wealthy, with NCR bucks and caps, no Legion money.

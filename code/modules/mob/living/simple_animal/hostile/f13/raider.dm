@@ -164,7 +164,7 @@
 	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/f13/combatrusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet)
 
 /obj/effect/mob_spawn/human/corpse/raider/ranged/biker
-	uniform = /obj/item/clothing/under/f13/ncrcf
+	uniform = /obj/item/clothing/under/f13/raider_leather
 	suit = /obj/item/clothing/suit/armor/f13/combatrusted
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless

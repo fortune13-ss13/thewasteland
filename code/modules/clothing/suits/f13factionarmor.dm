@@ -703,19 +703,14 @@
 	slowdown = 0.1
 	strip_delay = 5
 
-//Great Khan
-/obj/item/clothing/suit/armor/khan_jacket
-	name = "khan armored jacket"
-	desc = "The symbol of the greatest pushers."
-	icon_state = "khan_jacket"
-	item_state = "khan_jacket"
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 25,  "energy" = 25, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 37)
-	slowdown = 0.05
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets
+//Powder Gangers
 
-/obj/item/clothing/suit/armor/khan_jacket/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
+/obj/item/clothing/suit/armor/f13/raider/ncrcfjacket
+	name = "Faded NCRCF jacket"
+	icon_state = "ncrcfjacket"
+	item_state = "ncrcfjacket"
+	desc = "A cheap, standard issue teal canvas jacket issued to poor suckers who find themselves at the butt-end of the NCR's judiciary system, this one is slightly faded and has some armor plates installed."
+
 
 //Wayfarer
 /obj/item/clothing/suit/armor/f13/lightcloak
@@ -956,3 +951,18 @@
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+
+
+//Great Khan
+/obj/item/clothing/suit/armor/khan_jacket
+	name = "khan armored jacket"
+	desc = "The symbol of the greatest pushers."
+	icon_state = "khan_jacket"
+	item_state = "khan_jacket"
+	armor = list("melee" = 30, "bullet" = 25, "laser" = 25,  "energy" = 25, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 37)
+	slowdown = 0.05
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets
+
+/obj/item/clothing/suit/armor/khan_jacket/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)

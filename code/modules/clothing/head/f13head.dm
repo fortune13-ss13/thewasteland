@@ -445,13 +445,13 @@
 
 /obj/item/clothing/head/f13/beaver
 	name = "beaverkin"
-	desc = "(I) A hat made from felted beaver fur which makes the wearer feel both comfortable and elegant."
+	desc = "A hat made from felted beaver fur which makes the wearer feel both comfortable and elegant."
 	icon_state = "beaver"
 	item_state = "that"
 
 /obj/item/clothing/head/f13/purple
 	name = "purple top hat"
-	desc = "(I) You may not own the best jail in the observed Universe, or the best chocolate factory in the entire world, but at least you can try to have that purple top hat."
+	desc = "You may not own the best jail in the observed Universe, or the best chocolate factory in the entire world, but at least you can try to have that purple top hat."
 	icon_state = "ptophat"
 	item_state = "that"
 
@@ -508,7 +508,7 @@
 	icon_state = "bandit"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
-	armor = list("melee" = 20, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
+	armor = list("melee" = 30, "bullet" = 20, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
 
 /obj/item/clothing/head/f13/bandit/Initialize()
 	. = ..()

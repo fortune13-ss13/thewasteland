@@ -56,55 +56,37 @@
 	category = "Purchase Clothes:"
 
 // ---------------------------
-//Great Khans
+//Powder Gangers
 
-/datum/gang_item/clothing/khan_boots
-	name = "Great Khan boots"
+/datum/gang_item/clothing/ganger_boots
+	name = "Powder Ganger boots"
 	id = "khan_boots"
 	cost = 15
-	item_path = /obj/item/clothing/shoes/f13/military/khan
+	item_path = /obj/item/clothing/shoes/f13/military/ganger
 
-/datum/gang_item/clothing/khan_peltboots
-	name = "Great Khan pelt boots"
+/datum/gang_item/clothing/ganger_peltboots
+	name = "Powder Ganger pelt boots"
 	id = "khan_peltboots"
 	cost = 20
-	item_path = /obj/item/clothing/shoes/f13/military/khan_pelt
+	item_path = /obj/item/clothing/shoes/f13/military/ganger_pelt
 
-/datum/gang_item/clothing/khan_helmet
-	name = "Great Khan fur-trimmed helmet"
-	id = "khan_helmet"
+/datum/gang_item/clothing/bandit_helmet
+	name = "Bandit Hat"
+	id = "bandit"
 	cost = 20
-	item_path = /obj/item/clothing/head/helmet/f13/khan/pelt
+	item_path = /obj/item/clothing/head/f13/bandit
 
-/datum/gang_item/clothing/khan_bandana
-	name = "Great Khan bandana"
+/datum/gang_item/clothing/red_bandana
+	name = "Strong red bandana"
 	id = "khan_bandana"
 	cost = 25
 	item_path = /obj/item/clothing/head/helmet/f13/khan/bandana
 
-/datum/gang_item/clothing/khan_fullhelmet
-	name = "Great Khan full helmet"
-	id = "khan_fullhelmet"
-	cost = 100
-	item_path = /obj/item/clothing/head/helmet/f13/khan/fullhelm
-
-/datum/gang_item/clothing/khan_uniform
-	name = "Great Khan uniform"
+/datum/gang_item/clothing/jorts
+	name = "Jorts"
 	id = "khan_uniform"
 	cost = 40
-	item_path = /obj/item/clothing/under/f13/khan
-
-/datum/gang_item/clothing/khan_jacket_armored
-	name = "Great Khan armored jacket"
-	id = "khan_jacket_armored"
-	cost = 100
-	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored
-
-/datum/gang_item/clothing/khan_battlecoat
-	name = "Great Khan battlecoat"
-	id = "khan_battlecoat"
-	cost = 300
-	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat
+	item_path = /obj/item/clothing/under/f13/jorts
 
 // ---------------------------
 
@@ -330,13 +312,13 @@
 	desc = "Come on feel the noise. The noise of explosions, specifically."
 
 /obj/item/storage/box/bundleanarchist/PopulateContents()
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
+	new /obj/item/grenade/f13/frag(src)
+	new /obj/item/grenade/f13/frag(src)
+	new /obj/item/grenade/f13/frag(src)
 	new /obj/item/grenade/plastic/c4(src)
 	new /obj/item/grenade/plastic/c4(src)
-	new /obj/item/grenade/syndieminibomb/concussion(src)
-	new /obj/item/clothing/suit/bomb_suit(src)
+	new /obj/item/grenade/f13/dynamite(src)
+	new /obj/item/grenade/f13/stinger(src)
 	
 /datum/gang_item/equipment/bundlegunner
 	name = "Old Soldier Bundle"

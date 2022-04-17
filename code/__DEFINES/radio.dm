@@ -73,9 +73,9 @@
 #define RADIO_KEY_LEGION "l"
 #define RADIO_TOKEN_LEGION ":l"
 
-#define RADIO_CHANNEL_KHANS "Khans"
-#define RADIO_KEY_KHANS "a"
-#define RADIO_TOKEN_KHANS ":a"
+#define RADIO_CHANNEL_GANGERS "Powder Gangers"
+#define RADIO_KEY_GANGERS "a"
+#define RADIO_TOKEN_GANGERS ":a"
 
 #define RADIO_CHANNEL_DEN "Den"
 #define RADIO_KEY_DEN "j"
@@ -106,7 +106,7 @@
 #define FREQ_LEGION 1371 //LEGION
 #define FREQ_RANGER 1373 //Ranger
 #define FREQ_DEN 1375 //Den
-#define FREQ_KHANS 1376 //Khans
+#define FREQ_GANGERS 1376 //Powder Gangers
 
 #define FREQ_HOLOGRID_SOLUTION 1433
 #define FREQ_STATUS_DISPLAYS 1435

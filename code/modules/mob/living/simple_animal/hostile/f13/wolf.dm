@@ -84,7 +84,7 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 35
 
-//Unique Dogs - Guerilla for Khans is a Rottweiler, Brutus and Lupa german shepherds, Sniffs-the-Earth a sheepdog.
+//Unique Dogs - Guerilla for Powder Gangers is a Rottweiler, Brutus and Lupa german shepherds, Sniffs-the-Earth a sheepdog.
 //Feel free to move or add code for different behaviours like sleep, some unused sprites prepped for that sort of thing.
 
 /mob/living/simple_animal/hostile/wolf/playable/rottweiler

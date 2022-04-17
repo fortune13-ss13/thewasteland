@@ -855,41 +855,12 @@
 	armor = list("melee" = 30, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 15, "rad" = 10, "fire" = 15, "acid" = 5)
 
 
-////////////////////////
-// GREAT KHAN HELMETS //
-////////////////////////
-
-/obj/item/clothing/head/helmet/f13/khan
-	name = "Great Khan helmet"
-	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
-	icon = 'icons/fallout/clothing/khans.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
-	icon_state = "khan_helmet"
-	item_state = "khan_helmet"
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 25,  "energy" = 25, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 30)
-	flags_inv = null
-	flags_cover = null
-	strip_delay = 20
-	dynamic_hair_suffix = "+generic"
-	dynamic_fhair_suffix = null
-
-/obj/item/clothing/head/helmet/f13/khan/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
-
-/obj/item/clothing/head/helmet/f13/khan/pelt
-	desc = "A helmet with traditional horns, but wasteland-chique fur trimming instead of the classic leather cover. For the Khan who wants to show off their hair."
-	icon_state = "khan_helmetpelt"
-	item_state = "khan_helmetpelt"
-
-/obj/item/clothing/head/helmet/f13/khan/pelt/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
+///////////////////////////
+// POWDER GANGER HELMETS //
+///////////////////////////
 
 /obj/item/clothing/head/helmet/f13/khan/bandana
-	name = "Great Khan bandana"
+	name = "strong red bandana"
 	desc = "A bandana. Tougher than it looks. One side of the cloth is dark, the other red, so it can be reversed."
 	icon_state = "khan_bandana"
 	item_state = "khan_bandana"
@@ -931,20 +902,6 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
-
-/obj/item/clothing/head/helmet/f13/khan/fullhelm
-	name = "Great Khan full helmet"
-	desc = " A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
-	icon_state = "khan_fullhelmet"
-	item_state = "khan_fullhelmet"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 45, "energy" = 25, "bomb" = 35, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 0, "wound" = 40)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	strip_delay = 20
-
-/obj/item/clothing/head/helmet/f13/khan/fullhelm/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
 
 //Wayfarer
 /obj/item/clothing/head/helmet/f13/deathskull
@@ -1320,3 +1277,49 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+
+
+//Great Khan
+
+/obj/item/clothing/head/helmet/f13/khan
+	name = "Great Khan helmet"
+	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_helmet"
+	item_state = "khan_helmet"
+	armor = list("melee" = 30, "bullet" = 25, "laser" = 25,  "energy" = 25, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 30)
+	flags_inv = null
+	flags_cover = null
+	strip_delay = 20
+	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
+
+/obj/item/clothing/head/helmet/f13/khan/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+
+/obj/item/clothing/head/helmet/f13/khan/pelt
+	desc = "A helmet with traditional horns, but wasteland-chique fur trimming instead of the classic leather cover. For the Khan who wants to show off their hair."
+	icon_state = "khan_helmetpelt"
+	item_state = "khan_helmetpelt"
+
+/obj/item/clothing/head/helmet/f13/khan/pelt/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+
+/obj/item/clothing/head/helmet/f13/khan/fullhelm
+	name = "Great Khan full helmet"
+	desc = " A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
+	icon_state = "khan_fullhelmet"
+	item_state = "khan_fullhelmet"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 45, "energy" = 25, "bomb" = 35, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 0, "wound" = 40)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	strip_delay = 20
+
+/obj/item/clothing/head/helmet/f13/khan/fullhelm/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)

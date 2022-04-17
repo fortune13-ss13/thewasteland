@@ -65,7 +65,7 @@ em						{font-style: normal;	font-weight: bold;}
 .denradio				{color: #a8732b;}
 .legionradio			{color: #c24d44;}
 .rangerradio			{color: #83733c;}
-.khansradio				{color: #f0420d;}
+.gangersradio			{color: #dd3535;}
 
 .yell					{					font-weight: bold;}
 
