@@ -685,7 +685,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	head = /obj/item/clothing/head/f13/ranger
 	uniform	= /obj/item/clothing/under/f13/ranger/patrol
 	belt = /obj/item/storage/belt/military/assault/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
+	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv = 2,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
@@ -837,15 +837,15 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/grenade/plastic/x4 = 1,
 		/obj/item/stack/sheet/metal/fifty = 1,
 		/obj/item/stack/sheet/glass/fifty = 1,
-		/obj/item/stack/sheet/blackpowder/twenty = 1,
+		/obj/item/stack/ore/blackpowder/twenty = 1,
 		/obj/item/stack/crafting/armor_plate = 3
 		)
 
 /datum/outfit/loadout/combatengineertrapper
 	name = "Minelayer"
-	head = head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
+	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
 	belt = /obj/item/storage/belt/military/assault/ncr/engineer
-	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm = 1
+	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
@@ -866,10 +866,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/stack/crafting/armor_plate = 3
 		)
 
-/datum/outfit/loadout/rocketht
+/datum/outfit/loadout/combatengineerrocketeer
 	name = "Rocket Engineer"
-	suit_store = /obj/item/gun/ballistic/rocketlauncher = 1
-		backpack_contents = list(
+	suit_store = /obj/item/gun/ballistic/rocketlauncher
+	backpack_contents = list(
 		/obj/item/ammo_casing/caseless/rocket = 4,
 		/obj/item/ammo_casing/caseless/rocket/big = 1,
 		/obj/item/book/granter/trait/explosives = 1,
