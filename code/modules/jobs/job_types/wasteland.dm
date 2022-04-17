@@ -11,8 +11,8 @@
 	department_head = list("Captain")
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
-	total_positions = 8
-	spawn_positions = 8
+	total_positions = 6
+	spawn_positions = 6
 	description = "Under the leadership of Samuel Cooke, you and your fellow inmates gathered weapons and explosives and rebelled against the NCR staffing the Correctional Facility in the Mojave, now you and a couple of others decided to take your chances robbing and stealing down south, this is where you found a prime spot full of folks to rob, Yuma, but there's plenty of folks that hate you for what you and your fella's did at the Mojave, so try not bump into them."
 	supervisors = "your gang leadership"
 	selection_color = "#ff915e"
