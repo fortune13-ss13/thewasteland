@@ -49,7 +49,6 @@
 	item_state = "blastmaster"
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	armor = list("melee" = 40, "bullet" = 15, "laser" = 40, "bio" = 0, "bomb" = 90, "rad" = 0, "fire" = 25, "acid" = 25, "wound" = 40)
-	flash_protect = 2
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster/Initialize()
 	. = ..()
@@ -75,6 +74,18 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bulletbelt
 
 /obj/item/clothing/suit/armor/f13/raider/badlands/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/suit/armor/f13/raider/khan_jacket
+	name = "khan armored jacket"
+	desc = "The symbol of the greatest pushers."
+	icon_state = "khan_jacket"
+	item_state = "khan_jacket"
+	armor = list("melee" = 30, "bullet" = 25, "laser" = 25,  "energy" = 25, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 37)
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets
+
+/obj/item/clothing/suit/armor/f13/raider/khan_jacket/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
@@ -703,17 +714,17 @@
 	slowdown = 0.1
 	strip_delay = 5
 
-//Great Khan
-/obj/item/clothing/suit/armor/khan_jacket
-	name = "khan armored jacket"
-	desc = "The symbol of the greatest pushers."
-	icon_state = "khan_jacket"
-	item_state = "khan_jacket"
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 25,  "energy" = 25, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 37)
-	slowdown = 0.05
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets
+//Fiends
 
-/obj/item/clothing/suit/armor/khan_jacket/Initialize()
+/obj/item/clothing/suit/armor/f13/raider/fiend
+	name = "reinforced badlands raider armor"
+	desc = "The reinforced version of the badlands armor, commonly used by the Fiends."
+	icon_state = "badlands"
+	item_state = "badlands"
+	armor = list("melee" = 37, "bullet" = 37, "laser" = 40, "energy" = 25, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 0, "wound" = 30)
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bulletbelt
+
+/obj/item/clothing/suit/armor/f13/raider/fiend/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 

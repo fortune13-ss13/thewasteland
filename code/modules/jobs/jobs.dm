@@ -221,7 +221,7 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Den Mob Enforcer",
 	"Den Doctor",
 	"Outlaw",
-	"Great Khan",
+	"Fiend",
 	"Faithful",
 	"Vigilante",
 	"Preacher",

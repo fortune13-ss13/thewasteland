@@ -1,33 +1,33 @@
 /datum/job/wasteland
 	department_flag = WASTELAND
 
-////////////////
-// GREAT KHAN //
-////////////////
+////////////
+// FIEND ///
+////////////
 
 /datum/job/wasteland/f13pusher
-	title = "Great Khan"
-	flag = F13USPRIVATE
+	title = "Fiend"
+	flag = F13PUSHER
 	department_head = list("Captain")
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
-	total_positions = 8
-	spawn_positions = 8
-	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Yuma."
+	total_positions = 6
+	spawn_positions = 6
+	description = "You're the most feared and troublesome raiders of the Mojave Wasteland and beyond, you decided to take your chances away from Motor-Runner and his goons to pillage some new lands for chems and caps, thankfully Yuma is full of people, with a bunch of drugs and plenty of caps! Time to get to work proving once again that the Fiends should be feared by the common man."
 	supervisors = "your gang leadership"
 	selection_color = "#ff915e"
-	exp_requirements = 1000
+	exp_requirements = 1500
 	exp_type = EXP_TYPE_WASTELAND
 
 	outfit = /datum/outfit/job/wasteland/f13pusher
 
-	access = list(ACCESS_KHAN)
-	minimal_access = list(ACCESS_KHAN)
+	access = list(ACCESS_FIENDS)
+	minimal_access = list(ACCESS_FIENDS)
 
 	loadout_options = list(
 		/datum/outfit/loadout/enforcer,
-		/datum/outfit/loadout/khanskirmisher,
-		/datum/outfit/loadout/khandrug,
+		/datum/outfit/loadout/skirmisher,
+		/datum/outfit/loadout/drug,
 		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -41,24 +41,24 @@
 	)
 
 /datum/outfit/job/wasteland/f13pusher
-	name = "Great Khan"
+	name = "Fiend"
 	jobtype = /datum/job/wasteland/f13pusher
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
-	id = /obj/item/card/id/khantattoo
-	ears = /obj/item/radio/headset/headset_khans
-	head = /obj/item/clothing/head/helmet/f13/khan
-	shoes = /obj/item/clothing/shoes/f13/military/khan
+	suit = /obj/item/clothing/suit/armor/f13/raider/fiend
+	id = /obj/item/card/id/fiendtattoo
+	ears = /obj/item/radio/headset/headset_fiends
+	head = /obj/item/clothing/head/helmet/f13/fiend
+	shoes = /obj/item/clothing/shoes/f13/military/fiend
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/old
-	uniform = /obj/item/clothing/under/f13/khan
+	uniform = /obj/item/clothing/under/f13/raider_leather
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
-	l_pocket = /obj/item/storage/survivalkit_khan
+	l_pocket = /obj/item/storage/survivalkit_fiend
 	gloves = /obj/item/melee/unarmed/brass/spiked
 	box = null
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/jet = 2,
-		/obj/item/storage/bag/money/small/khan = 1
+		/obj/item/storage/bag/money/small/fiend = 1
 		)
 
 
@@ -68,7 +68,7 @@
 		return
 
 	if(!H.gang)
-		var/datum/gang/greatkhans/GK = GLOB.greatkhans
+		var/datum/gang/fiends/GK = GLOB.fiends
 		GLOB.all_gangs |= GK
 		GK.add_member(H)
 		H.gang = GK
@@ -92,32 +92,35 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_fiend)
 
 /datum/outfit/loadout/enforcer
 	name = "Enforcer"
-	r_hand = /obj/item/twohanded/baseball/spiked
+	r_hand = /obj/item/melee/powered/ripper
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola/tactical=1,
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
+		)
 
-/datum/outfit/loadout/khanskirmisher
+/datum/outfit/loadout/skirmisher
 	name = "Skirmisher"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
+	r_hand = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm=3,
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 3,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/storage/belt/holster=1)
+		/obj/item/storage/belt/holster = 1
+		)
 
-/datum/outfit/loadout/khandrug
-	name = "Drug Pusher"
+/datum/outfit/loadout/drug
+	name = "Drug Addict"
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(,
 		/obj/item/book/granter/trait/midsurgery = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/reagent_containers/pill/patch/turbo = 2,
+		/obj/item/reagent_containers/hypospray/medipen/psycho = 1
 		)
 
 /*
@@ -234,8 +237,7 @@ Raider
 		/obj/item/clothing/head/helmet/f13/raider/arclight,\
 		/obj/item/clothing/head/helmet/f13/raider/blastmaster,\
 		/obj/item/clothing/head/helmet/f13/raider/yankee,\
-		/obj/item/clothing/head/helmet/f13/raider/psychotic,\
-		/obj/item/clothing/head/helmet/f13/fiend)
+		/obj/item/clothing/head/helmet/f13/raider/psychotic)
 	shoes = pick(
 			/obj/item/clothing/shoes/jackboots,\
 			/obj/item/clothing/shoes/f13/raidertreads)
@@ -301,7 +303,7 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/throwing = 5,
-		/obj/item/clothing/mask/gas/explorer/folded=1,
+		/obj/item/clothing/mask/gas/explorer/folded = 1,
 		/obj/item/storage/belt = 1,
 		/obj/item/restraints/legcuffs/beartrap = 2,
 		/obj/item/reverse_bear_trap = 1,
@@ -309,13 +311,14 @@ Raider
 		/obj/item/book/granter/trait/trekking = 1)
 
 /datum/outfit/loadout/raider_badlands
-	name = "Fiend"
-	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
-	head = /obj/item/clothing/head/helmet/f13/fiend
+	name = "Great Khan"
+	uniform = /obj/item/clothing/under/f13/khan
+	suit = /obj/item/clothing/suit/armor/f13/raider/khan_jacket
+	head = /obj/item/clothing/head/helmet/f13/raider/khan
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/wattz/magneto = 1,
-		/obj/item/gun/energy/laser/wattz = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/twohanded/baseball/spiked = 1,
+		/obj/item/gun/ballistic/shotgun/hunting = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/reagent_containers/hypospray/medipen/psycho = 3,
 		/obj/item/reagent_containers/pill/patch/turbo = 2,
 		/obj/item/reagent_containers/hypospray/medipen/medx = 1,

@@ -1,6 +1,6 @@
 /*
 CONTAINS:
-BLANKETS - for low comfort beds like Legion/Khans
+BLANKETS - for low comfort beds like Legion/Fiends
 BEDSHEETS
 LINEN BINS
 */

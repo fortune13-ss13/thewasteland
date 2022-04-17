@@ -55,9 +55,9 @@
 	name = "Legion Castrum"
 	req_access_txt = "123"
 
-//khoor
-/obj/machinery/door/unpowered/securedoor/khandoor
-	name = "khan door"
+//Fiend Door
+/obj/machinery/door/unpowered/securedoor/fiendoor
+	name = "fiend door"
 	req_access_txt = "125"
 
 

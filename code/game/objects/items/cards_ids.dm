@@ -1163,17 +1163,16 @@
 	access = list(ACCESS_DEN)
 
 
-/obj/item/card/id/khantattoo
-	name = "Great Khan tattoo"
-	desc = "A tattoo of the symbol of the Great Khans."
-	icon = 'icons/fallout/clothing/khans.dmi'
-	icon_state = "khan_id"
-	item_state = null
+/obj/item/card/id/fiendtattoo
+	name = "Fiend tattoo"
+	desc = "A tattoo of the Fiends."
+	icon_state = "skin"
+	item_state = "skin"
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-	access = list(ACCESS_KHAN)
+	access = list(ACCESS_FIENDS)
 
-/obj/item/card/id/khantattoo/Initialize()
+/obj/item/card/id/fiendtattoo/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 

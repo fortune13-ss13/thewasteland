@@ -40,9 +40,9 @@
 	category = CAT_MISC
 	always_available = FALSE
 	
-/datum/crafting_recipe/gate_khanate
-	name = "Khans steel-reinforced wood door"
-	result = /obj/machinery/door/unpowered/securedoor/khandoor
+/datum/crafting_recipe/gate_fiend
+	name = "Fiends steel-reinforced wood door"
+	result = /obj/machinery/door/unpowered/securedoor/fiendoor
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 10,)
 	time = 60

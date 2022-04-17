@@ -157,9 +157,9 @@
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
 
 // ---------------------------------------------------------
-// Great Khan boots
+// Fiend boots
 
-/obj/item/clothing/shoes/f13/military/khan
+/obj/item/clothing/shoes/f13/military/fiend
 	name = "steel-tipped boots"
 	desc = "A pair of leather boots reinforced with metal toe caps. The shin guards can be removed easily (alt-click)."
 	icon = 'icons/fallout/clothing/khans.dmi'
@@ -169,17 +169,17 @@
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 	var/boottoggled = FALSE
 
-/obj/item/clothing/shoes/f13/military/khan/AltClick(mob/user)
+/obj/item/clothing/shoes/f13/military/fiend/AltClick(mob/user)
 	. = ..()
 	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	boot_toggle(user)
 	return TRUE
 
-/obj/item/clothing/shoes/f13/military/khan/ui_action_click()
+/obj/item/clothing/shoes/f13/military/fiend/ui_action_click()
 	boot_toggle()
 
-/obj/item/clothing/shoes/f13/military/khan/proc/boot_toggle()
+/obj/item/clothing/shoes/f13/military/fiend/proc/boot_toggle()
 	set src in usr
 
 	if(!can_use(usr))
@@ -200,7 +200,7 @@
 		A.UpdateButtonIcon()
 
 
-/obj/item/clothing/shoes/f13/military/khan_pelt
+/obj/item/clothing/shoes/f13/military/fiend_pelt
 	name = "tall pelt boots"
 	desc = "A pair of soft pelt boots with fur lining."
 	icon = 'icons/fallout/clothing/khans.dmi'

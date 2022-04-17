@@ -56,55 +56,49 @@
 	category = "Purchase Clothes:"
 
 // ---------------------------
-//Great Khans
+//Fiends
 
 /datum/gang_item/clothing/khan_boots
-	name = "Great Khan boots"
+	name = "Fiend boots"
 	id = "khan_boots"
 	cost = 15
-	item_path = /obj/item/clothing/shoes/f13/military/khan
+	item_path = /obj/item/clothing/shoes/f13/military/fiend
 
 /datum/gang_item/clothing/khan_peltboots
-	name = "Great Khan pelt boots"
+	name = "Fiend pelt boots"
 	id = "khan_peltboots"
 	cost = 20
-	item_path = /obj/item/clothing/shoes/f13/military/khan_pelt
+	item_path = /obj/item/clothing/shoes/f13/military/fiend_pelt
 
-/datum/gang_item/clothing/khan_helmet
-	name = "Great Khan fur-trimmed helmet"
-	id = "khan_helmet"
-	cost = 20
-	item_path = /obj/item/clothing/head/helmet/f13/khan/pelt
+/datum/gang_item/clothing/painspike
+	name = "painspike raider armor"
+	id = "painspike"
+	cost = 100
+	item_path = /obj/item/clothing/suit/armor/f13/raider/painspike
 
-/datum/gang_item/clothing/khan_bandana
-	name = "Great Khan bandana"
-	id = "khan_bandana"
+/datum/gang_item/clothing/iconoclast
+	name = "iconoclast raider armor"
+	id = "iconoclast"
 	cost = 25
-	item_path = /obj/item/clothing/head/helmet/f13/khan/bandana
+	item_path = /obj/item/clothing/suit/armor/f13/raider/iconoclast
 
-/datum/gang_item/clothing/khan_fullhelmet
-	name = "Great Khan full helmet"
-	id = "khan_fullhelmet"
+/datum/gang_item/clothing/yankee
+	name = "yankee raider armor"
+	id = "yankee"
+	cost = 20
+	item_path = /obj/item/clothing/suit/armor/f13/raider/yankee
+
+/datum/gang_item/clothing/blastmaster
+	name = "blastmaster raider armor"
+	id = "blastmaster"
 	cost = 100
-	item_path = /obj/item/clothing/head/helmet/f13/khan/fullhelm
+	item_path = /obj/item/clothing/suit/armor/f13/raider/blastmaster
 
-/datum/gang_item/clothing/khan_uniform
-	name = "Great Khan uniform"
-	id = "khan_uniform"
+/datum/gang_item/clothing/sadist
+	name = "sadist raider armor"
+	id = "sadist"
 	cost = 40
-	item_path = /obj/item/clothing/under/f13/khan
-
-/datum/gang_item/clothing/khan_jacket_armored
-	name = "Great Khan armored jacket"
-	id = "khan_jacket_armored"
-	cost = 100
-	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored
-
-/datum/gang_item/clothing/khan_battlecoat
-	name = "Great Khan battlecoat"
-	id = "khan_battlecoat"
-	cost = 300
-	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat
+	item_path = /obj/item/clothing/suit/armor/f13/raider/sadist
 
 // ---------------------------
 
@@ -288,7 +282,7 @@
 /datum/gang_item/equipment/he
 	name = "High Explosive Grenade"
 	cost = 100
-	item_path = /datum/crafting_recipe/concussion
+	item_path = /obj/item/grenade/syndieminibomb/concussion
 
 
 ///////////////////
@@ -317,7 +311,8 @@
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
-	new /obj/item/clothing/under/f13/densuit(src)
+	new /obj/item/reagent_containers/pill/patch/jet(src)
+	new /obj/item/reagent_containers/pill/patch/jet(src)
 	
 /datum/gang_item/equipment/bundleanarchist
 	name = "Mad Bomber Bundle"
@@ -330,13 +325,12 @@
 	desc = "Come on feel the noise. The noise of explosions, specifically."
 
 /obj/item/storage/box/bundleanarchist/PopulateContents()
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
-	new /obj/item/grenade/frag(src)
+	new /obj/item/grenade/f13/frag(src)
+	new /obj/item/grenade/f13/frag(src)
+	new /obj/item/grenade/f13/frag(src)
 	new /obj/item/grenade/plastic/c4(src)
 	new /obj/item/grenade/plastic/c4(src)
-	new /obj/item/grenade/syndieminibomb/concussion(src)
-	new /obj/item/clothing/suit/bomb_suit(src)
+	new /obj/item/grenade/f13/stinger(src)
 	
 /datum/gang_item/equipment/bundlegunner
 	name = "Old Soldier Bundle"

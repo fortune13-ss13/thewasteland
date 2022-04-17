@@ -802,7 +802,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Raider"
 
 /obj/effect/landmark/start/f13/pusher
-	name = "Great Khan"
+	name = "Fiend"
 	icon_state = "Pusher"
 
 /obj/effect/landmark/start/f13/enforcer
