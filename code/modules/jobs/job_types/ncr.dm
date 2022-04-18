@@ -372,7 +372,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	flag = F13DRILLSERGEANT
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the direct superior to the conscripts, you are to provide training exercises, maintain military discipline, and instill orderliness within the ranks. You may also manage the NCOs. You are the pinnacle of the NCR's enlisted ranks, and are to advise the commissioned officers."
+	description = "The direct superior to all enlisted, you are to provide training exercises, maintain military discipline, and instill orderliness within the ranks. You may also manage the NCOs. You are the pinnacle of the NCR's enlisted ranks, and are to advise the commissioned officers. You are not a frontline trooper, you are support."
 	supervisors = "Lieutenant and Above"
 	selection_color = "#fff5cc"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND)
