@@ -1040,7 +1040,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/box/ration/menu_two = 1,
 		)
 
-/datum/outfit/loadout/corporalrifleman
+/datum/outfit/loadout/corporalrifleman		//Name changed for better flavor
 	name = "Master Corporal"
 	head = /obj/item/clothing/head/f13/ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
@@ -1052,15 +1052,29 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/clothing/accessory/ncr/MCPL = 1 //Same rank, mostly for flavor and RP. - Kitsunemitsu
 		)
 
-/datum/outfit/loadout/corporalcqc
+/datum/outfit/loadout/corporalcqc		//I think this one sucks, personally.
 	name = "Squad Pointman"
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
-	suit_store = /obj/item/gun/ballistic/revolver/widowmaker
+	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/storage/box/ration/menu_one = 1,
 		/obj/item/book/granter/trait/trekking = 1,
+		)
+
+/datum/outfit/loadout/corporalcommand	//Has a fold out gun. It serves it's purpose in being a support role but
+	name = "Command Corporal"
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
+	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 3,
+		/obj/item/binoculars = 2,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
+		/obj/item/ammo_box/magazine/m9mmds = 1,
+		/obj/item/storage/box/ration/menu_one = 1,
+		/obj/item/clothing/accessory/ncr/MCPL = 1
 		)
 
 // TROOPER
