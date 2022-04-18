@@ -461,7 +461,6 @@
 	automatic = 1
 	autofire_shot_delay = 2
 	burst_shot_delay = 2.5
-	extra_damage = 1
 	recoil = 0.25
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
@@ -536,11 +535,11 @@
 	item_state = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	burst_size = 1
-	fire_delay = 5
+	fire_delay = 3
 	spread = 2
 	extra_damage = 20
 	extra_penetration = 0.1
-	slowdown = 0.4
+	slowdown = 0.35
 	automatic_burst_overlay = FALSE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
@@ -564,11 +563,10 @@
 /obj/item/gun/ballistic/automatic/m1carbine/m1n
 	name = "M1/N carbine"
 	desc = "An M1 Carbine with markings identifying it as issued to the NCR Mojave Expedtionary Force. Looks beat up but functional."
-	can_automatic = FALSE
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "ncr-m1carbine"
 	item_state = "rifle"
-	extra_damage = 21
+	extra_damage = 25
 
 
 //M1A1 Carbine				Keywords: 10mm, Semi-auto, 12/24 rounds, Long barrel, Folding stock.
@@ -607,21 +605,21 @@
 
 //WT-550								4.7mm, 20 round magazine
 /obj/item/gun/ballistic/automatic/wt550
-	name = "WT-550"
-	desc = "A compact PDW derived from the G11, firing the same 4.73mm rounds."
+	name = "4.73mm carbine"
+	desc = "A WT-550 Personal Defense Weapon, manufactured by West Tek. It fires 4.73mm caseless rounds."
 	item_state = "m90"
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
-	burst_size = 1
+	burst_size = 1	
+	slowdown = 0.2
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
-	autofire_shot_delay = 1.75
+	autofire_shot_delay = 2.25
 	extra_penetration = 0.2
-	slowdown = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_HEAVY
-	spread = 0
+	weapon_weight = WEAPON_MEDIUM
+	spread = 3 //foregrip
 	fire_delay = 1
 	can_bayonet = TRUE
 	knife_x_offset = 25
@@ -659,6 +657,7 @@
 	suppressor_x_offset = 27
 	suppressor_y_offset = 31
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	can_scope = TRUE
 
 //De Lisle carbine							Keywords: Pre-war, 9mm, Long barrel, Suppressed
 /obj/item/gun/ballistic/automatic/delisle
@@ -703,7 +702,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	can_unsuppress = FALSE
 	suppressor_state = "none"
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
@@ -720,7 +718,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 //Combat Rifle		Keywords: .45 Caliber Rifle, No Attachments (!)
@@ -749,7 +746,7 @@
 	item_state = "servicerifle"
 	icon_prefix = "servicerifle"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	slowdown = 0.45
+	slowdown = 0.3
 	fire_delay = 3
 	burst_size = 1
 	spread = 1
@@ -790,7 +787,7 @@
 	desc = "A cut down version of the standard-issue service rifle tapped with mounting holes for a scope. Shorter barrel, lower muzzle velocity."
 	icon_state = "scout_carbine"
 	spread = 1.2
-	slowdown = 0.3
+	slowdown = 0.15
 	extra_damage = 25
 	can_scope = TRUE
 	scope_state = "scope_short"
@@ -877,8 +874,11 @@
 	force = 20
 	mag_type = /obj/item/ammo_box/magazine/m762
 	extra_damage = 40
+	extra_penetration = 0.2
+	extra_speed = 500
 	burst_size = 1
-	fire_delay = 5
+	fire_delay = 4
+	slowdown = 0.4
 	spread = 1
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -973,7 +973,7 @@
 	icon_state = "republics_pride"
 	item_state = "scoped308"
 	extra_damage = 45
-	extra_penetration = 0.1
+	extra_penetration = 0.3
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -1044,6 +1044,12 @@
 	zoom_out_amt = 17
 	extra_penetration = 0.4
 	extra_damage = 45
+
+/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
+	name = "compact sniper rifle"
+	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert. This particular model is lighter and faster."
+	slowdown = 0.3
+	fire_delay = 6
 
 //////////////////
 //ASSAULT RIFLES//
@@ -1218,8 +1224,8 @@
 	burst_shot_delay = 2.0
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.2
-	extra_damage = 20
+	autofire_shot_delay = 2
+	extra_damage = 19
 	extra_penetration = 0.25
 	spread = 10 //high-velocity
 	can_attachments = TRUE
@@ -1246,8 +1252,9 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "rifle-police"
-	autofire_shot_delay = 3.5 //not a real auto-gun
-	spread = 12 //makeshift longer barrel
+	autofire_shot_delay = 3.5 //not a real auto-gun, a lot slower than the assault carbine
+	extra_damage = 20 //longer barrel
+	spread = 8 //more accurate than the assault carbine, its a rifle
 	can_scope = TRUE
 	
 /obj/item/gun/ballistic/automatic/assault_carbine/worn	
@@ -1497,7 +1504,7 @@
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m2mm
-	extra_damage = 30
+	extra_damage = 40
 	burst_size = 1
 	fire_delay = 10
 	zoomable = TRUE
@@ -1526,19 +1533,3 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
-
-// BETA STUFF // =Obsolete
-/obj/item/gun/ballistic/automatic/smgtesting
-	name = "SMG"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 20
-
-/obj/item/gun/ballistic/automatic/snipertesting
-	name = "sniper rifle"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 25
-
-/obj/item/gun/ballistic/automatic/rifletesting
-	name = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 22

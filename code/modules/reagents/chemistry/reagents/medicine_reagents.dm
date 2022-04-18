@@ -280,7 +280,13 @@
 
 /datum/reagent/medicine/silver_sulfadiazine/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
-		if(method in list(INGEST, VAPOR, INJECT))
+		if(method in list(INGEST, VAPOR, INJECT, TOUCH))
+			if (method == TOUCH)
+				if(show_message)
+					to_chat(M, "<span class='warning'>The pink mixture is clotting up, running down your body without effect! It stings and feels slimy!</span>")
+				M.emote("shiver")
+				SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "painful_medicine", /datum/mood_event/painful_medicine)
+				return
 			M.adjustToxLoss(0.5*reac_volume)
 			if(show_message)
 				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
@@ -926,7 +932,7 @@
 		M.losebreath++
 		. = 1
 	..()
-/* no. just no. the revive timer is 30 minutes(hopefully lowered soon); that is plenty of time. we do not need this.
+
 /datum/reagent/medicine/strange_reagent
 	name = "Strange Reagent"
 	description = "A miracle drug capable of bringing the dead back to life. Only functions when applied by patch or spray, if the target has less than 100 brute and burn damage (independent of one another) and hasn't been husked. Causes slight damage to the living."
@@ -986,7 +992,7 @@
 	M.adjustFireLoss(0.5*REM, 0)
 	..()
 	. = 1
-*/
+
 /datum/reagent/medicine/mannitol
 	name = "Mannitol"
 	description = "Efficiently restores brain damage."

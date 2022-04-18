@@ -19,7 +19,6 @@
 /datum/gear/donator/kits
 	slot = SLOT_IN_BACKPACK
 
-
 /*example
 /datum/gear/donator/kits/averyamadeus
 	name = "Avery Amadeus' belongings"
@@ -28,3 +27,74 @@
 
 
 */
+
+/obj/item/storage/box/large/custom_kit/cayce/PopulateContents()
+	new /obj/item/clothing/suit/armored/medium/steelbib(src)
+	new /obj/item/clothing/head/helmet/armyhelmet/heavy(src)
+	new /obj/item/twohanded/sledgehammer(src)
+	new /obj/item/pda(src)
+
+/datum/gear/donator/kits/cayce
+	name = "Jett Lowes belongings"
+	path = /obj/item/storage/box/large/custom_kit/cayce
+	ckeywhitelist = list("cayce")
+
+/obj/item/storage/box/large/custom_kit/sugga/PopulateContents()
+	new /obj/item/clothing/suit/armor/f13/combat(src)
+	new /obj/item/clothing/head/helmet/f13/combat(src)
+	new /obj/item/gun/ballistic/automatic/pistol/beretta(src)
+	new /obj/item/ammo_box/magazine/m9mmds(src)
+	new /obj/item/ammo_box/magazine/m9mmds(src)
+	new /obj/item/ammo_box/magazine/m9mmds(src)
+	new /obj/item/melee/rapier(src)
+
+/datum/gear/donator/kits/sugga
+	name = "Suggas box"
+	path = /obj/item/storage/box/large/custom_kit/sugga
+	ckeywhitelist = list("sugga")
+
+/obj/item/storage/box/large/custom_kit/klatue/PopulateContents()
+	new /obj/item/gun/ballistic/rifle/repeater/cowboy(src)
+	new /obj/item/ammo_box/tube/a357(src)
+	new /obj/item/ammo_box/tube/a357(src)
+	new /obj/item/ammo_box/tube/a357(src)
+	new /obj/item/storage/belt/holster(src)
+	new /obj/item/clothing/suit/armor/hos/trenchcoat(src)
+	new /obj/item/gun/energy/laser/wattz/magneto(src)
+	new /obj/item/stock_parts/cell/ammo/ec(src)
+	new /obj/item/clothing/head/helmet/riot(src)
+
+/datum/gear/donator/kits/klatue
+	name = "Klatue box"
+	path = /obj/item/storage/box/large/custom_kit/klatue
+	ckeywhitelist = list("klatue9")
+
+/obj/item/storage/box/large/custom_kit/riggy/PopulateContents()
+	new /obj/item/gun/ballistic/rifle/hobo/plasmacaster(src)
+	new /obj/item/ammo_casing/caseless/plasmacaster(src)
+	new /obj/item/ammo_casing/caseless/plasmacaster(src)
+	new /obj/item/ammo_casing/caseless/plasmacaster(src)
+	new /obj/item/storage/belt/holster(src)
+	new /obj/item/clothing/suit/armor/hos/trenchcoat(src)
+	new /obj/item/gun/energy/laser/wattz/magneto(src)
+	new /obj/item/stock_parts/cell/ammo/ec(src)
+	new /obj/item/clothing/head/helmet/riot(src)
+
+/datum/gear/donator/kits/riggy
+	name = "Items"
+	path = /obj/item/storage/box/large/custom_kit/riggy
+	ckeywhitelist = list("rigbe")
+
+/obj/item/storage/box/large/custom_kit/canadian/PopulateContents()
+	new /obj/item/clothing/suit/armor/f13/legion/vet/explorercanada(src)
+	new /obj/item/clothing/neck/mantle/umbo(src)
+	new /obj/item/gun/ballistic/automatic/service/carbine(src)
+	new /obj/item/ammo_box/magazine/m556/rifle/assault(src)
+	new /obj/item/ammo_box/magazine/m556/rifle/assault(src)
+	new /obj/item/toy/figure/dsquad(src)
+	
+
+/datum/gear/donator/kits/canadian
+	name = "Canadian"
+	path = /obj/item/storage/box/large/custom_kit/canadian
+	ckeywhitelist = list("comradesocks")
