@@ -54,6 +54,12 @@
 	icon_state = "paladin"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bos/paladin
 
+/obj/item/clothing/neck/mantle/legion
+	name = "Legion Cape"
+	desc = "A deep crimson cape woven by fine legionnaire craftsmanship. A shoulder holster is added beneath for utility."
+	icon_state = "legion"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bos/paladin
+
 /obj/item/clothing/neck/mantle/ranger
 	name = "NCR ranger cape"
 	desc = "Ranger cape made from what looks like old poncho fitted with star, stripes and a bear. Most likely has a holster hidden underneath."
@@ -113,3 +119,8 @@
 	desc = "Plain and rugged piece of clothing, put it over your suit and make sure your gear don't get soaked through when it rains."
 	icon_state = "poncho"
 	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/neck/mantle/umbo
+	name = "Roman mantle"
+	desc = "A decorated mantle created in the ancient roman era, this one appears to be hand made by an auxilia likely with a large bust."
+	icon_state = "umbo"
