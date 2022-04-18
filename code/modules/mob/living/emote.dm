@@ -221,7 +221,7 @@
 		//power armor laugh track.... spooky
 		if(istype(human_user.get_item_by_slot(ITEM_SLOT_OCLOTHING), /obj/item/clothing/suit/armor/f13/power_armor))
 			return 'sound/voice/robolaugh.ogg'
-		return human_user.dna.species.get_scream_sound()
+		return human_user.dna.species.get_laugh_sound()
 
 /datum/emote/living/audio_emote/chitter
 	key = "chitter"

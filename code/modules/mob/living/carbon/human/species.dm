@@ -119,9 +119,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	
 	// scream sound overrides
 	/// This is used for every gender other than female
-	var/scream_male = list('sound/voice/human/womanlaugh.ogg')
+	var/laugh_male = list('sound/voice/human/womanlaugh.ogg')
 	/// This is used exclusively by females
-	var/scream_female = list('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
+	var/laugh_female = list('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
 
 ///////////
 // PROCS //
@@ -2207,8 +2207,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				mutant_bodyparts -= "waggingspines"
 			H.update_body()
 
-/datum/species/proc/get_scream_sound(mob/living/carbon/human/H)
+/datum/species/proc/get_laugh_sound(mob/living/carbon/human/H)
 	if(H.gender != FEMALE)
-		return pick(scream_female)
+		return pick(laugh_male)
 	else
-		return pick(scream_female)
+		return pick(laugh_female)
