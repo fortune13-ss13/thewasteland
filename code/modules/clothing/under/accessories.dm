@@ -574,7 +574,7 @@
 
 /obj/item/clothing/accessory/ncr/REC
 	name = "(E-2) Private rank pins"
-	desc = "A recruit should wear this."
+	desc = "A conscript should wear this."
 	icon_state = "ncrenlisted"
 	item_color = "ncrenlisted"
 	minimize_when_attached = TRUE

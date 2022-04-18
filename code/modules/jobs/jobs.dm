@@ -195,7 +195,7 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Sergeant First Class",
 	"NCR Heavy Trooper",
 	"NCR Military Police",
-	"NCR Drill Sergeant",
+	"NCR Senior Enlisted Advisor",
 	"NCR Sergeant",
 	"NCR Corporal",
 	"NCR Combat Medic",
@@ -235,7 +235,7 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Sergeant",
 	"Enclave Specialist",
 	"Enclave Scientist",
-	"Enclave Private",  
+	"Enclave Private",
 	"Enclave Bunker Duty",
 ))
 
