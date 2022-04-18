@@ -1187,3 +1187,31 @@
 	req_components = list(
 		/obj/item/stock_parts/matter_bin = 3,
 		/obj/item/stock_parts/manipulator = 1)
+
+/obj/item/circuitboard/machine/pipedispenser
+	name = "Pipe Dispenser (Machine Board)"
+	build_path = /obj/machinery/pipedispenser
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 1,
+		/obj/item/stock_parts/manipulator = 1,
+		/obj/item/stack/cable_coil = 1,
+		/obj/item/stack/sheet/glass = 2)
+
+/obj/item/circuitboard/machine/transitdispenser
+	name = "Transit Tube (Machine Board)"
+	build_path = /obj/machinery/pipedispenser/disposal/transit_tube
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 1,
+		/obj/item/stock_parts/manipulator = 1,
+		/obj/item/stack/cable_coil = 1,
+		/obj/item/stack/sheet/glass = 2)
+
+/obj/item/circuitboard/machine/disposaldispenser
+	name = "Disposal Pipe Dispenser (Machine Board)"
+	build_path = /obj/machinery/pipedispenser/disposal
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 1,
+		/obj/item/stock_parts/manipulator = 1,
+		/obj/item/stack/cable_coil = 1,
+		/obj/item/stack/sheet/glass = 2)
+
