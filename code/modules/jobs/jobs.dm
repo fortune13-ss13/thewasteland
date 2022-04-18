@@ -50,6 +50,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 GLOBAL_LIST_INIT(command_positions, list(
 	"Head Paladin",
 	"Head Knight",
+	"Head Scribe", //Wasn't here before. Still technically command, I put it here - Kitsunemitsu
 
 	"NCR Captain",
 	"NCR Veteran Ranger",

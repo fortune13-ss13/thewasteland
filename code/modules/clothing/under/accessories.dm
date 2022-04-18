@@ -558,6 +558,13 @@
 	item_color = "ncrenlisted"
 	minimize_when_attached = TRUE
 
+/obj/item/clothing/accessory/ncr/MCPL
+	name = "(E-4E) Master Corporal rank pins"
+	desc = "A Master Corporal should wear this."
+	icon_state = "ncrenlisted"
+	item_color = "ncrenlisted"
+	minimize_when_attached = TRUE
+
 /obj/item/clothing/accessory/ncr/SPC
 	name = "(E-4) Specialist rank pins"
 	desc = "A Specialist should wear this."
