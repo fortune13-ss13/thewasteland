@@ -381,9 +381,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 2000
 
 	loadout_options = list( // ALL: Bayonet
-		/datum/outfit/loadout/seatechnical,		// Assault Carbine, 9mm sidearm
-		/datum/outfit/loadout/seacommand, 		// M1/n Carbine, Binoculars, 9mm sidearm
-		/datum/outfit/loadout/seastaff,			// Trench Shotgun, Gas mask, Smoke bombs, Trench knife, 9mm sidearm
+		/datum/outfit/loadout/seatechnical,
+		/datum/outfit/loadout/seacommand,
+		/datum/outfit/loadout/seastaff,
 		)
 
 	matchmaking_allowed = list(
