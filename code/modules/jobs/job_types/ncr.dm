@@ -994,8 +994,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 180
 
 	loadout_options = list(
-		/datum/outfit/loadout/corporaldesignatedmarksman, // Remington rife, 9mm sidearm, Bayonet
-		/datum/outfit/loadout/corporalrifleman, // Service rifle, Bayonet, Large magazines
+		/datum/outfit/loadout/corporaldesignatedmarksman,	 // Remington rife, 9mm sidearm, Bayonet
+		/datum/outfit/loadout/corporalrifleman,				 // Service rifle, Bayonet, Large magazines
+		/datum/outfit/loadout/corporalcqc,					 // Shotgun and trekking.
+		/datum/outfit/loadout/corporalcommand,				 // Intel and backline support
 		)
 
 	matchmaking_allowed = list(
@@ -1063,13 +1065,14 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/book/granter/trait/trekking = 1,
 		)
 
-/datum/outfit/loadout/corporalcommand	//Has a fold out gun. It serves it's purpose in being a support role but
+/datum/outfit/loadout/corporalcommand	//Has a fold out gun. It serves it's purpose in being a support role but it is primarily for RP.
 	name = "Command Corporal"
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
+	neck = /obj/item/storage/belt/holster/legholster
 	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_adv/ext = 3,
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/binoculars = 2,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/ammo_box/magazine/m9mmds = 1,
