@@ -364,7 +364,7 @@
 	automatic = 1
 	autofire_shot_delay = 2
 	spread = 16
-	extra_damage = 18
+	extra_damage = 17
 	can_suppress = TRUE
 	can_attachments = TRUE
 	spread = 10
