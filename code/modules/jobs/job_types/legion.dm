@@ -278,7 +278,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit = /obj/item/clothing/suit/armor/f13/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
 	backpack_contents = list(
-		/obj/item/book/granter/martial/cqc = 1,
+		/obj/item/melee/powerfist/f13/goliath = 1,
 		/obj/item/gun/ballistic/revolver/hunting = 1,
 		/obj/item/ammo_box/c4570 = 3,)
 	suit_store = /obj/item/gun/ballistic/revolver/widowmaker
@@ -657,11 +657,11 @@ commented out pending rework*/
 	supervisors = "the Veteran Decanus and Centurion must be obeyed, and as always, respect must be given to other Decanus. You are not a officer, but you are a specialist."
 	display_order = JOB_DISPLAY_ORDER_EXPLORER
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
-	exp_requirements = 300
+	exp_requirements = 600
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
 		/datum/outfit/loadout/expsniper,	// Lee-Enfield, Smokebomb
-		/datum/outfit/loadout/expambusher,	// Ballistic Fist, Bottlecap mine
+		/datum/outfit/loadout/expambusher,	// MP-5, Krav maga
 		)
 
 	matchmaking_allowed = list(
@@ -679,6 +679,7 @@ commented out pending rework*/
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	name = "Legion Explorer"
@@ -703,8 +704,8 @@ commented out pending rework*/
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
+		/obj/item/book/granter/martial/krav_maga = 1,
 		/obj/item/ammo_box/magazine/uzim9mm = 2,
-		/obj/item/bottlecap_mine = 1,
 		/obj/item/restraints/legcuffs/bola = 1,
 		)
 
@@ -744,7 +745,7 @@ commented out pending rework*/
 		/datum/outfit/loadout/vetshielder,	// .44 DA Revolver, Shield, Armor plate
 		/datum/outfit/loadout/vetrifle,		// Trail gun, .357 Revolver
 		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
-		/datum/outfit/loadout/vetsmg, 		// Carl Gustaf, .357 Revolver
+		/datum/outfit/loadout/vetsmg, 		// Carl Gustaf, .357 Revolver, Krav maga
 		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -801,6 +802,7 @@ commented out pending rework*/
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/ammo_box/a357 = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/book/granter/martial/krav_maga = 1,
 		)
 
 /datum/outfit/loadout/vetberserker
