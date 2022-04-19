@@ -180,7 +180,8 @@ Raider
 	/datum/outfit/loadout/raider_bos,
 	/datum/outfit/loadout/quack_doctor,
 	/datum/outfit/loadout/raider_mobster,
-	/datum/outfit/loadout/raider_tribal
+	/datum/outfit/loadout/raider_tribal,
+	/datum/outfit/loadout/raider_khan
 	)
 
 
@@ -280,8 +281,8 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
 	backpack_contents = list(
 		/obj/item/shishkebabpack = 1,
-		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
-		/obj/item/megaphone=1,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
+		/obj/item/megaphone = 1,
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1)
 
 /datum/outfit/loadout/raider_blast
@@ -303,7 +304,7 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/throwing = 5,
-		/obj/item/clothing/mask/gas/explorer/folded=1,
+		/obj/item/clothing/mask/gas/explorer/folded = 1,
 		/obj/item/storage/belt = 1,
 		/obj/item/restraints/legcuffs/beartrap = 2,
 		/obj/item/reverse_bear_trap = 1,
@@ -343,14 +344,14 @@ Raider
 	r_hand = /obj/item/book/granter/trait/midsurgery
 	suit_store = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec=1,
+		/obj/item/stock_parts/cell/ammo/ec = 1,
 		/obj/item/reagent_containers/pill/patch/jet = 3,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/storage/pill_bottle/aranesp = 1,
 		/obj/item/storage/pill_bottle/happy = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
-		/obj/item/stack/sheet/mineral/silver=2,
-		/obj/item/defibrillator/primitive=1,
+		/obj/item/stack/sheet/mineral/silver = 2,
+		/obj/item/defibrillator/primitive = 1,
 		)
 
 /datum/outfit/loadout/raider_ncr
@@ -360,7 +361,7 @@ Raider
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/service = 1,
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/box/ration/ranger_breakfast = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/r82 = 1)
@@ -383,7 +384,7 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
 		/obj/item/grenade/f13/frag = 2,
@@ -395,9 +396,9 @@ Raider
 	uniform = /obj/item/clothing/under/syndicate/tacticool
 	head = /obj/item/clothing/head/f13/town/big
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/m29/snub=2,
-		/obj/item/storage/belt/holster=1,
-		/obj/item/ammo_box/m44=3,
+		/obj/item/gun/ballistic/revolver/m29/snub = 2,
+		/obj/item/storage/belt/holster = 1,
+		/obj/item/ammo_box/m44 = 3,
 		/obj/item/book/granter/trait/gunslinger = 1)
 
 /datum/outfit/loadout/raider_smith
@@ -458,7 +459,20 @@ Raider
 		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
 		/obj/item/melee/onehanded/knife/switchblade = 1,
 		/obj/item/ammo_box/magazine/greasegun = 2,
-		/obj/item/card/id/dogtag/town/mafia=1,
+		/obj/item/card/id/dogtag/town/mafia = 1,
+		)
+
+/datum/outfit/loadout/raider_khan
+	name = "Great Khan"
+	shoes = /obj/item/clothing/shoes/f13/military/ganger_pelt
+	uniform = /obj/item/clothing/under/f13/jorts
+	suit = /obj/item/clothing/suit/armor/khan_jacket
+	head = /obj/item/clothing/head/helmet/f13/khan
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/smg/mini_uzi = 1,
+		/obj/item/reagent_containers/pill/patch/jet = 2,
+		/obj/item/melee/onehanded/knife/switchblade = 1,
+		/obj/item/ammo_box/magazine/uzim9mm = 2,
 		)
 
 /datum/job/wasteland/f13wastelander

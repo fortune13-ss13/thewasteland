@@ -115,3 +115,8 @@
 	ex_heavy = 2
 	ex_light = 3
 	ex_flame = 0
+
+/obj/item/grenade/f13/dynamite/prime(mob/living/lanced_by)
+	. = ..()
+	update_mob()
+	playsound(loc, 'sound/effects/fuse.ogg', 50, 1)
