@@ -49,7 +49,7 @@
 	..()
 
 //Green
-/* Fortuna edit: Disabled slime mutation toxins
+
 /datum/chemical_reaction/slime/slimemutate
 	name = "Mutation Toxin"
 	id = /datum/reagent/slime_toxin
@@ -81,7 +81,7 @@
 	required_reagents = list(/datum/reagent/water = 1)
 	required_other = TRUE
 	required_container = /obj/item/slime_extract/green
-*/
+
 
 //Metal
 /datum/chemical_reaction/slime/slimemetal
@@ -424,7 +424,7 @@
 	..()
 
 //Black
-/* Fortuna edit: Mutation toxins disabled
+
 /datum/chemical_reaction/slime/slimemutate2
 	name = "Advanced Mutation Toxin"
 	id = /datum/reagent/aslimetoxin
@@ -432,7 +432,7 @@
 	required_reagents = list(/datum/reagent/toxin/plasma = 1)
 	required_other = TRUE
 	required_container = /obj/item/slime_extract/black
-*/
+
 
 //Oil
 /datum/chemical_reaction/slime/slimeexplosion
@@ -653,9 +653,6 @@
 		S.active = TRUE
 		addtimer(CALLBACK(S, /obj/item/grenade.proc/prime), rand(15,60))
 		qdel(holder.my_atom) //deleto
-	else
-		var/mob/living/simple_animal/slime/random/S = new (get_turf(holder.my_atom))
-		S.visible_message("<span class='danger'>Infused with plasma, the core begins to quiver and grow, and a new baby slime emerges from it!</span>")
 	..()
 
 /datum/chemical_reaction/slime/slimebomb

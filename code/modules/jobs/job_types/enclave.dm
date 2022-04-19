@@ -7,7 +7,7 @@
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
-	forbids = "Enclave taboos: Female front line soldiers. Fraternizing with outsiders beyond what is absolutly necessary. Aiding Brotherhood members in any way no matter how small."
+	forbids = "Enclave taboos: Fraternizing with outsiders beyond what is absolutly necessary. Aiding Brotherhood members in any way no matter how small."
 	enforces = "Enclave rules: You must maintain the secrecy of the bunker location. Stay in uniform. Act mature and respectful. Obey orders and always remember you are fighting for the only true legitimate power in this land of savages. Wearing gasmasks outside the compound is encouraged but not required."
 	objectivesList = list("Department of Defense advisory: Collect resources and produce more Patribots, attrition is depleting our reserves.","Department of Defense advisory: Establish checkpoints to show presence, they must not forget who is the legitimate goverment.", "Science Divison advisory: Capture human subjects for experiments, alive. We have some new neurotoxin grenades we wish to do final tests with before field deployment.")
 
@@ -319,7 +319,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
 		/obj/item/pda = 1,
-		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/gun/energy/gammagun = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
@@ -403,7 +403,7 @@
 
 /datum/outfit/loadout/cook
     name = "Culinary Technician"
-    head = /obj/item/clothing/head/chefhat 
+    head = /obj/item/clothing/head/chefhat
     suit = /obj/item/clothing/neck/apron/housewife
     backpack_contents = list(
         /obj/item/storage/box/ingredients/wildcard = 4,
