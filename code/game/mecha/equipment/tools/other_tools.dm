@@ -142,7 +142,7 @@
 	name = "armor booster module (Close Combat Weaponry)"
 	desc = "Boosts exosuit armor against armed melee attacks. Requires energy to operate."
 	icon_state = "mecha_abooster_ccw"
-	equip_cooldown = 10
+	equip_cooldown = 5
 	energy_drain = 50
 	range = 0
 	var/deflect_coeff = 1.15
@@ -160,7 +160,7 @@
 	name = "armor booster module (Ranged Weaponry)"
 	desc = "Boosts exosuit armor against ranged attacks. Completely blocks taser shots. Requires energy to operate."
 	icon_state = "mecha_abooster_proj"
-	equip_cooldown = 10
+	equip_cooldown = 5
 	energy_drain = 50
 	range = 0
 	var/deflect_coeff = 1.15
@@ -180,9 +180,9 @@
 	name = "exosuit repair droid"
 	desc = "An automated repair droid for exosuits. Scans for damage and repairs it. Can fix almost all types of external or internal damage."
 	icon_state = "repair_droid"
-	energy_drain = 50
+	energy_drain = 125
 	range = 0
-	var/health_boost = 1
+	var/health_boost = 2
 	var/icon/droid_overlay
 	var/list/repairable_damage = list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH)
 	selectable = 0

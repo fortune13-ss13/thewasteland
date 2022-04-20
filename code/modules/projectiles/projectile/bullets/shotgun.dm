@@ -166,7 +166,8 @@
 // Mech Scattershots
 
 /obj/item/projectile/bullet/scattershot
-	damage = 20
+	damage = 25
+	armour_penetration = 0.15
 
 /obj/item/projectile/bullet/seed
 	damage = 4

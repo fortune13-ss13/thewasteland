@@ -10,8 +10,6 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	infra_luminosity = 3
 	wreckage = /obj/structure/mecha_wreckage/marauder
-	add_req_access = 0
-	internal_damage_threshold = 25
 	force = 45
 	max_equip = 4
 

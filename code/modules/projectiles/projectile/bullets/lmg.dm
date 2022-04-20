@@ -6,7 +6,8 @@
 // Mech LMG
 
 /obj/item/projectile/bullet/lmg
-	damage = 20
+	damage = 25
+	armour_penetration = 0.20
 
 // Mech FNX-99
 

@@ -71,7 +71,7 @@
 	var/internal_damage = 0 //contains bitflags
 
 	var/list/operation_req_access = list()//required access level for mecha operation
-	var/list/internals_req_access = list(ACCESS_ROBOTICS)//REQUIRED ACCESS LEVEL TO OPEN CELL COMPARTMENT
+	var/list/internals_req_access = list()//REQUIRED ACCESS LEVEL TO OPEN CELL COMPARTMENT
 
 	var/wreckage
 
@@ -116,6 +116,8 @@
 	var/phasing_energy_drain = 200
 	var/phase_state = "" //icon_state when phasing
 	var/strafe = FALSE //If we are strafing
+	var/canstrafe = FALSE //if we can turn on strafing
+	var/haslights = TRUE //if we can turn on lights
 
 	var/nextsmash = 0
 	var/smashcooldown = 3	//deciseconds

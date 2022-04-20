@@ -10,6 +10,7 @@
 	max_temperature = 30000
 	infra_luminosity = 8
 	force = 40
+	max_equip = 4
 	wreckage = /obj/structure/mecha_wreckage/durand
 
 /obj/mecha/combat/durand/GrantActions(mob/living/user, human_occupant = 0)
