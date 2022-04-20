@@ -77,7 +77,7 @@
 	desc = "A weapon for combat exosuits. Shoots basic lasers."
 	icon_state = "mecha_laser"
 	energy_drain = 30
-	projectile = /obj/item/projectile/beam/laser
+	projectile = /obj/item/projectile/beam/laser/lasgun/hitscan/mech
 	fire_sound = 'sound/weapons/laser.ogg'
 	harmful = TRUE
 
@@ -87,7 +87,7 @@
 	desc = "A weapon for combat exosuits. Shoots heavy lasers."
 	icon_state = "mecha_laser"
 	energy_drain = 60
-	projectile = /obj/item/projectile/beam/laser/heavylaser
+	projectile = /obj/item/projectile/beam/laser/lasgun/hitscan/mech/heavy
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion
@@ -114,13 +114,13 @@
 	name = "eZ-13 MK2 heavy pulse rifle"
 	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts capable of demolishing obstacles."
 	icon_state = "mecha_pulse"
-	energy_drain = 120
-	projectile = /obj/item/projectile/beam/pulse/heavy
+	energy_drain = 150
+	projectile = /obj/item/projectile/beam/laser/lasgun/hitscan/mech/pulse
 	fire_sound = 'sound/weapons/marauder.ogg'
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma
-	equip_cooldown = 10
+	equip_cooldown = 8
 	name = "217-D Heavy Plasma Cutter"
 	desc = "A device that shoots resonant plasma bursts at extreme velocity. The blasts are capable of crushing rock and demolishing solid obstacles."
 	icon_state = "mecha_plasmacutter"

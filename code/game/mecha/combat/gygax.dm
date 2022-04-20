@@ -11,8 +11,8 @@
 	max_temperature = 25000
 	infra_luminosity = 6
 	wreckage = /obj/structure/mecha_wreckage/gygax
-	internal_damage_threshold = 35
-	max_equip = 3
+	internal_damage_threshold = 20
+	max_equip = 4
 	step_energy_drain = 3
 	leg_overload_coeff = 300
 
