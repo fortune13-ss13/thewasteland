@@ -143,9 +143,39 @@
 	finalitem.desc = finaldesc
 	finalitem.name = pick("Delersibnir", "Nekolangrir", "Zanoreshik","Öntakrítin", "Nogzatan", "Vunomam", "Nazushagsaldôbar", "Sergeb", "Zafaldastot", "Vudnis", "Dostust", "Shotom", "Mugshith", "Angzak", "Oltud", "Deleratîs", "Nökornomal") //one of these is literally BLOOD POOL CREATE.iirc its Nazushagsaldôbar.
 
+
+//////////////////////
+//					//
+//  	HANDLES		//
+//					//
+//////////////////////
+
+
+/obj/item/stick
+	name = "wooden rod"
+	desc = "It's a rod, suitable for use of a handle of a tool. Also could serve as a weapon, in a pinch."
+	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon_state = "stick"
+	force = 7
+
+/obj/item/swordhandle
+	name = "sword handle"
+	desc = "It's a crudlely shaped wooden sword hilt."
+	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon_state = "shorthilt"
+
+
+//////////////////////
+//					//
+//  SMITHED TOOLS	//
+//	METAL PARTS		//
+//					//
+//////////////////////
+
 /obj/item/smithing/hammerhead
 	name = "smithed hammer head"
 	finalitem = /obj/item/melee/smith/hammer
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "hammer"
 
 /obj/item/smithing/hammerhead/startfinish()
@@ -155,22 +185,10 @@
 	finalitem = finalforreal
 	..()
 
-
-
-/obj/item/smithing/scytheblade
-	name = "smithed scythe head"
-	finalitem = /obj/item/scythe/smithed
-	icon_state = "scythe"
-
-/obj/item/smithing/scytheblade/startfinish()
-	finalitem = new /obj/item/scythe/smithed(src)
-	finalitem.force += quality*2.5
-	//finalitem.armour_penetration += quality*0.0375
-	..()
-
 /obj/item/smithing/shovelhead
 	name = "smithed shovel head"
 	finalitem = /obj/item/shovel/smithed
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "shovel"
 
 /obj/item/smithing/shovelhead/startfinish()
@@ -182,15 +200,45 @@
 		finalitem.toolspeed *= max(1, (quality * -1))
 	..()
 
-/obj/item/smithing/cogheadclubhead
-	name = "smithed coghead club head"
-	finalitem = /obj/item/melee/smith/cogheadclub
-	icon_state = "coghead"
+/obj/item/smithing/pickaxehead
+	name = "smithed pickaxe head"
+	finalitem = /obj/item/pickaxe/smithed
+	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon_state = "pickaxe"
 
-/obj/item/smithing/cogheadclubhead/startfinish()
-	finalitem = new /obj/item/melee/smith/cogheadclub(src)
-	finalitem.force += quality*3.4
+/obj/item/smithing/pickaxehead/startfinish()
+	var/obj/item/pickaxe/smithed/finalforreal = new /obj/item/pickaxe/smithed(src)
+	finalforreal.force += quality/2
+	if(quality > 0)
+		finalforreal.toolspeed = max(0.05,(1-(quality/10)))
+	else
+		finalforreal.toolspeed *= max(1, (quality * -1))
+	switch(quality)
+		if(10 to INFINITY)
+			finalforreal.digrange = 2
+		if(5 to 9)
+			finalforreal.digrange = 2
+		if(3,4)
+			finalforreal.digrange = 1
+		else
+			finalforreal.digrange = 1
+	finalitem = finalforreal
 	..()
+
+/obj/item/smithing/prospectingpickhead
+	name = "smithed prospector's pickaxe head"
+	finalitem = /obj/item/mining_scanner/prospector
+	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon_state = "minipick"
+
+/obj/item/smithing/prospectingpickhead/startfinish()
+	var/obj/item/mining_scanner/prospector/finalforreal = new /obj/item/mining_scanner/prospector(src)
+	finalforreal.range = 2 + quality
+	if(quality)
+		finalforreal.cooldown = 100/quality
+	finalitem = finalforreal
+	..()
+
 
 /obj/item/smithing/javelinhead
 	name = "smithed javelin head"
@@ -222,43 +270,7 @@
 	finalitem = finalforreal
 	..()
 
-/obj/item/smithing/pickaxehead
-	name = "smithed pickaxe head"
-	finalitem = /obj/item/pickaxe/smithed
-	icon_state = "pickaxe"
 
-/obj/item/smithing/pickaxehead/startfinish()
-	var/obj/item/pickaxe/smithed/finalforreal = new /obj/item/pickaxe/smithed(src)
-	finalforreal.force += quality/2
-	if(quality > 0)
-		finalforreal.toolspeed = max(0.05,(1-(quality/10)))
-	else
-		finalforreal.toolspeed *= max(1, (quality * -1))
-	switch(quality)
-		if(10 to INFINITY)
-			finalforreal.digrange = 2
-		if(5 to 9)
-			finalforreal.digrange = 2
-		if(3,4)
-			finalforreal.digrange = 1
-		else
-			finalforreal.digrange = 1
-	finalitem = finalforreal
-	..()
-
-
-/obj/item/smithing/prospectingpickhead
-	name = "smithed prospector's pickaxe head"
-	finalitem = /obj/item/mining_scanner/prospector
-	icon_state = "minipick"
-
-/obj/item/smithing/prospectingpickhead/startfinish()
-	var/obj/item/mining_scanner/prospector/finalforreal = new /obj/item/mining_scanner/prospector(src)
-	finalforreal.range = 2 + quality
-	if(quality)
-		finalforreal.cooldown = 100/quality
-	finalitem = finalforreal
-	..()
 
 
 /obj/item/smithing/shortswordblade
@@ -418,16 +430,3 @@
 	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
 	finalitem = finalforreal
 	..()
-
-/obj/item/stick
-	name = "wooden rod"
-	desc = "It's a rod, suitable for use of a handle of a tool. Also could serve as a weapon, in a pinch."
-	icon = 'icons/obj/smith.dmi'
-	icon_state = "stick"
-	force = 7
-
-/obj/item/swordhandle
-	name = "sword handle"
-	desc = "It's a crudlely shaped wooden sword hilt."
-	icon = 'icons/obj/smith.dmi'
-	icon_state = "shorthilt"

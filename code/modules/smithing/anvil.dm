@@ -8,7 +8,6 @@
 #define RECIPE_SHOVEL "dfup" //draw fold upset punch
 #define RECIPE_HAMMER "sfp" //shrink fold punch
 
-
 #define RECIPE_SMALLKNIFE "sdd" //shrink draw draw
 #define RECIPE_SHORTSWORD "dff" //draw fold fold
 #define RECIPE_WAKI "dfsf" //draw  fold shrink fold
@@ -18,11 +17,6 @@
 #define RECIPE_BROADSWORD "dfuf" //draw fold upset fold
 #define RECIPE_ZWEIHANDER "udfsf" //upset draw fold shrink fold
 #define RECIPE_KATANA "fffff" //fold fold fold fold fold
-
-
-#define RECIPE_SCYTHE "bdf" //bend draw fold
-#define RECIPE_COGHEAD "bsf" //bend shrink fold.
-
 
 #define RECIPE_JAVELIN "dbf" //draw bend fold
 #define RECIPE_HALBERD "duffp" //draw upset fold fold punch
@@ -49,24 +43,22 @@
 	var/artifactrolled = FALSE
 	var/itemqualitymax = 8
 	var/list/smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
-	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_COGHEAD = /obj/item/smithing/cogheadclubhead,
-	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
 	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_SHORTSWORD = /obj/item/smithing/shortswordblade,
 	RECIPE_SCIMITAR = /obj/item/smithing/scimitarblade,
-	RECIPE_WAKI = /obj/item/smithing/wakiblade,
 	RECIPE_RAPIER = /obj/item/smithing/rapierblade,
 	RECIPE_SABRE = /obj/item/smithing/sabreblade,
 	RECIPE_SMALLKNIFE = /obj/item/smithing/knifeblade,
 	RECIPE_BROADSWORD = /obj/item/smithing/broadblade,
 	RECIPE_ZWEIHANDER = /obj/item/smithing/zweiblade,
-	RECIPE_KATANA = /obj/item/smithing/katanablade,
 	RECIPE_HALBERD = /obj/item/smithing/halberdhead,
 	RECIPE_GLAIVE = /obj/item/smithing/glaivehead,
-	RECIPE_PIKE = /obj/item/smithing/pikehead)
+	RECIPE_PIKE = /obj/item/smithing/pikehead,
+	RECIPE_WAKI = /obj/item/smithing/wakiblade,
+	RECIPE_KATANA = /obj/item/smithing/katanablade,)
 
 /obj/structure/anvil/Initialize()
 	. = ..()
@@ -84,6 +76,8 @@
 			to_chat(user, "You place the [notsword] on the [src].")
 			currentquality = anvilquality
 			var/skillmod = 4
+			if(workpiece_state == WORKPIECE_PRESENT)
+				add_overlay(image(icon= 'icons/fallout/objects/blacksmith.dmi',icon_state="workpiece"))
 			if(user.mind.skill_holder)
 				skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/2
 			currentquality += skillmod
@@ -208,6 +202,7 @@
 		finalfailchance = max(0, finalfailchance / skillmod) //lv 2 gives 20% less to fail, 3 30%, etc
 	if((currentsteps > 10 || (rng && prob(finalfailchance))) && !artifact)
 		to_chat(user, "<span class='warning'>You overwork the metal, causing it to turn into useless slag!</span>")
+		cut_overlay(image(icon= 'icons/fallout/objects/blacksmith.dmi',icon_state="workpiece"))
 		var/turf/T = get_turf(user)
 		workpiece_state = FALSE
 		new /obj/item/stack/ore/slag(T)
@@ -224,6 +219,7 @@
 			var/obj/item/smithing/create = smithrecipes[stepsdone]
 			var/obj/item/smithing/finisheditem = new create(T)
 			to_chat(user, "You finish your [finisheditem]!")
+			cut_overlay(image(icon= 'icons/fallout/objects/blacksmith.dmi',icon_state="workpiece"))
 			if(artifact)
 				to_chat(user, "It is an artifact, a creation whose legacy shall live on forevermore.") //todo: SSblackbox
 				currentquality = max(currentquality, 2)
