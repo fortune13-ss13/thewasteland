@@ -9,7 +9,7 @@
 			playsound(src, 'sound/weapons/punch4.ogg', 50, TRUE)
 			mecha_attacker.visible_message("<span class='danger'>[mecha_attacker.name] hits [src]!</span>", \
 							"<span class='danger'>You hit [src]!</span>", null, COMBAT_MESSAGE_RANGE)
-			if(prob(hardness + mecha_attacker.force) && mecha_attacker.force > 20)
+			if(prob(hardness + mecha_attacker.force) && mecha_attacker.force > 20 && hardness <= 40)
 				dismantle_wall(1)
 				playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
 			else
