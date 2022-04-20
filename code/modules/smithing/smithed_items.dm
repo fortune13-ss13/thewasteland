@@ -1,10 +1,3 @@
-/obj/item/basaltblock
-	name = "basalt block"
-	desc = "A block of basalt."
-	icon = 'icons/obj/smith.dmi'
-	icon_state = "sandvilnoir"
-
-
 /obj/item/smithing
 	name = "base class /obj/item/smithing"
 	icon = 'icons/obj/smith.dmi'
@@ -150,7 +143,7 @@
 //					//
 //////////////////////
 
-
+// Stick can be made by using a sharp tool on a piece of wood, less time wasted in crafting menu
 /obj/item/stick
 	name = "wooden rod"
 	desc = "It's a rod, suitable for use of a handle of a tool. Also could serve as a weapon, in a pinch."
@@ -158,9 +151,34 @@
 	icon_state = "stick"
 	force = 7
 
+// Using leather strips on a stick to make a weapon handle
+/obj/item/stick/attackby/(obj/item/W, mob/user, params)
+	if (istype(W, /obj/item/stack/sheet/leatherstrips))
+		user.visible_message("[user] begins finishing the [src] into a handle.", \
+				"<span class='notice'>You begin wrapping the [src] with leather strips, and shaping the wood into a handle.</span>", \
+				"<span class='italics'>You hear faint sounds of handcrafting.</span>")
+		// 6 Second Timer
+		if(!do_after(user, 60, TRUE, src))
+			return
+		// Make stick
+		var/obj/item/swordhandle/new_item = new(user.loc)
+		user.visible_message("[user] finishes making a handle from the [src].", \
+				"<span class='notice'>You finish making a weapon handle from the [src].</span>")
+		// Prepare to Put xin Hands (if holding wood)
+		var/obj/item/stack/sheet/leatherstrips/N = src
+		var/replace = (user.get_inactive_held_item() == N)
+		// Use up the strips
+		N.use(1)
+		// If stack depleted, put item in that hand (if it had one)
+		if (!N && replace)
+			user.put_in_hands(new_item)
+	else
+		. = ..()
+
+
 /obj/item/swordhandle
-	name = "sword handle"
-	desc = "It's a crudlely shaped wooden sword hilt."
+	name = "weapon handle"
+	desc = "It's a wooden handle with leather strips, making it comfortable to hold."
 	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "shorthilt"
 
@@ -238,6 +256,43 @@
 		finalforreal.cooldown = 100/quality
 	finalitem = finalforreal
 	..()
+
+
+//////////////////////
+//					//
+//  	BLING		//
+//					//
+//////////////////////
+
+/obj/item/smithing/jewelry
+	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon_state = "ring"
+	mob_overlay_icon = 'icons/fallout/onmob/items/misc_righthand.dmi'
+	item_state = "ring"
+	gender = NEUTER
+	w_class = WEIGHT_CLASS_SMALL
+	strip_delay = 20
+	equip_delay_other = 40
+	var/strip_mod = 1 //how much they alter stripping items time by, higher is quicker
+	var/strip_silence = TRUE
+	var/mood_event_on_equip = /datum/mood_event/equipped_ring/gold
+
+/obj/item/smithing/jewelry/ring
+	name = "ring"
+	slot_flags = ITEM_SLOT_GLOVES
+	attack_verb = list("proposed")
+
+/obj/item/smithing/jewelry/ring/equipped(mob/user, slot)
+	. = ..()
+	if (slot == SLOT_GLOVES && istype(user))
+		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "ringbuff", mood_event_on_equip)
+	else
+		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
+
+/obj/item/smithing/jewelry/ring/dropped(mob/user)
+	. = ..()
+	SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
+
 
 
 /obj/item/smithing/javelinhead

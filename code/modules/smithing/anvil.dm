@@ -3,10 +3,12 @@
 #define WORKPIECE_FINISHED 3
 #define WORKPIECE_SLAG 5
 
-#define RECIPE_SMALLPICK "dbp" //draw bend punch
 #define RECIPE_LARGEPICK "ddbp" //draw draw bend punch
 #define RECIPE_SHOVEL "dfup" //draw fold upset punch
 #define RECIPE_HAMMER "sfp" //shrink fold punch
+#define RECIPE_SMALLPICK "ddbbp" //draw draw bend bend punch
+
+#define RECIPE_RING "sss" //shrink shrink shrink
 
 #define RECIPE_SMALLKNIFE "sdd" //shrink draw draw
 #define RECIPE_SHORTSWORD "dff" //draw fold fold
@@ -22,6 +24,7 @@
 #define RECIPE_HALBERD "duffp" //draw upset fold fold punch
 #define RECIPE_GLAIVE "usfp" //upset shrink fold punch
 #define RECIPE_PIKE "ddbf" //draw draw bend fold
+
 
 /obj/structure/anvil
 	name = "anvil"
@@ -46,6 +49,7 @@
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
 	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
 	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+	RECIPE_RING = /obj/item/smithing/jewelry/ring,
 	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_SHORTSWORD = /obj/item/smithing/shortswordblade,
 	RECIPE_SCIMITAR = /obj/item/smithing/scimitarblade,
@@ -120,7 +124,6 @@
 	..()
 	default_unfasten_wrench(user, I, 5)
 	return TRUE
-
 
 /obj/structure/anvil/proc/do_shaping(mob/user, qualitychange)
 	var/mob/living/carbon/human/F = user
@@ -203,7 +206,7 @@
 	if((currentsteps > 10 || (rng && prob(finalfailchance))) && !artifact)
 		to_chat(user, "<span class='warning'>You overwork the metal, causing it to turn into useless slag!</span>")
 		cut_overlay(image(icon= 'icons/fallout/objects/blacksmith.dmi',icon_state="workpiece"))
-		var/turf/T = get_turf(user)
+		var/turf/T = get_turf(src)
 		workpiece_state = FALSE
 		new /obj/item/stack/ore/slag(T)
 		currentquality = anvilquality
@@ -249,36 +252,54 @@
 				user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 100, 10000000, silent = FALSE)
 			break
 
-/obj/structure/anvil/debugsuper
-	name = "super ultra epic anvil of debugging."
-	desc = "WOW. A DEBUG <del>ITEM</DEL> STRUCTURE. EPIC."
-	icon_state = "anvil"
-	anvilquality = 10
-	itemqualitymax = 9001
-	outrightfailchance = 0
 
+//////////////////////
+//					//
+//		ANVILS		//
+//					//
+//////////////////////
+
+// Template
 /obj/structure/anvil/obtainable
-	name = "anvil"
-	desc = "Base class of anvil. This shouldn't exist, but is useable."
+	name = "anvil template. Punish those who makes this appear."
 	anvilquality = 0
 	outrightfailchance = 5
 	rng = TRUE
 
+// Best anvil, should be hard to find or make more
+/obj/structure/anvil/obtainable/basic
+	name = "anvil"
+	desc = "An anvil. It's got wheels bolted to the bottom."
+	anvilquality = 1
+	itemqualitymax = 8
+
+// Decent makeshift anvil, can break
 /obj/structure/anvil/obtainable/table
 	name = "table anvil"
 	desc = "A reinforced table. Usable as an anvil, but unequal weight distribution will impact the quality of your weapons."
 	icon_state = "tablevil"
 	anvilquality = 0
-	itemqualitymax = 4
-
+	itemqualitymax = 6
 
 /obj/structure/anvil/obtainable/table/do_shaping(mob/user, qualitychange)
-	if(prob(5))
+	if(prob(2))
 		to_chat(user, "The [src] breaks under the strain!")
 		take_damage(max_integrity)
 		return FALSE
 	else
 		..()
+
+// Worst craftable anvil, sturdy but limits the quality
+/obj/structure/anvil/obtainable/sandstone
+	name = "sandstone brick anvil"
+	desc = "A big block of sandstone. Useable as an anvil."
+	custom_materials = list(/datum/material/sandstone=8000)
+	icon_state = "sandvil"
+	anvilquality = -1
+	itemqualitymax = 5
+
+
+// Remnant trash
 
 /obj/structure/anvil/obtainable/bronze
 	name = "slab of bronze"
@@ -288,26 +309,13 @@
 	anvilquality = 0
 	itemqualitymax = 6
 
-/obj/structure/anvil/obtainable/sandstone
-	name = "sandstone brick anvil"
-	desc = "A big block of sandstone. Useable as an anvil."
-	custom_materials = list(/datum/material/sandstone=8000)
-	icon_state = "sandvil"
-	anvilquality = -1
-	itemqualitymax = 4
-
-/obj/structure/anvil/obtainable/basalt
-	name = "basalt brick anvil"
-	desc = "A big block of basalt. Useable as an anvil, better than sandstone. Igneous!"
-	icon_state = "sandvilnoir"
-	anvilquality = -1
-	itemqualitymax = 8
-
-/obj/structure/anvil/obtainable/basic
-	name = "anvil"
-	desc = "An anvil. It's got wheels bolted to the bottom."
-	anvilquality = 1
-	itemqualitymax = 8
+/obj/structure/anvil/debugsuper
+	name = "super ultra epic anvil of debugging."
+	desc = "WOW. A DEBUG <del>ITEM</DEL> STRUCTURE. EPIC."
+	icon_state = "anvil"
+	anvilquality = 10
+	itemqualitymax = 9001
+	outrightfailchance = 0
 
 /obj/structure/anvil/obtainable/ratvar
 	name = "brass anvil"
