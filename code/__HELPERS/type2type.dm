@@ -82,7 +82,7 @@
 			return "north"
 		if(SOUTH)
 			return "south"
-		if(EAST4)
+		if(EAST)
 			return "east"
 		if(WEST)
 			return "west"
