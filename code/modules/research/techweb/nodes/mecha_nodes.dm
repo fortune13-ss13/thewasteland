@@ -6,8 +6,8 @@
 	starting_node = TRUE
 	display_name = "Mechanical Exosuits"
 	description = "Mechanized exosuits that are several magnitudes stronger and more powerful than the average human."
-	design_ids = list("mecha_tracking", "mechacontrol", "mechapower", "mech_recharger", "ripley_chassis", "firefighter_chassis", "ripley_torso", "ripley_left_arm", "ripley_right_arm", "ripley_left_leg", "ripley_right_leg",
-	"ripley_main", "ripley_peri", "mech_hydraulic_clamp")
+	design_ids = list("mecha_tracking", "mechacontrol", "mechapower", "mech_recharger", /* "ripley_chassis", "firefighter_chassis", "ripley_torso", "ripley_left_arm", "ripley_right_arm", "ripley_left_leg", "ripley_right_leg",
+	"ripley_main", "ripley_peri",*/ "mech_hydraulic_clamp")
 
 /datum/techweb_node/mech_tools
 	id = "mech_tools"
@@ -23,6 +23,15 @@
 	prereq_ids = list("adv_robotics")
 	design_ids = list("mech_repair_droid")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+
+/datum/techweb_node/clarke
+	id = "mech_clarke"
+	display_name = "EXOSUIT: Clarke"
+	description = "Clarke exosuit designs"
+	prereq_ids = list("robotics")
+	design_ids = list("clarke_chassis", "clarke_torso", "clarke_head", "clarke_left_arm", "clarke_right_arm", "clarke_main", "clarke_peri")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+
 /*
 /datum/techweb_node/odysseus
 	id = "mecha_odysseus"
@@ -33,13 +42,6 @@
 	"odysseus_main", "odysseus_peri")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 */
-/datum/techweb_node/clarke
-	id = "mecha_clarke"
-	display_name = "EXOSUIT: Clarke"
-	description = "Clarke exosuit designs"
-	prereq_ids = list("mech")
-	design_ids = list("clarke_chassis", "clarke_torso", "clarke_head", "clarke_left_arm", "clarke_right_arm", "clarke_main", "clarke_peri")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /datum/techweb_node/gygax
 	id = "mech_gygax"
@@ -49,6 +51,7 @@
 	design_ids = list("gygax_chassis", "gygax_torso", "gygax_head", "gygax_left_arm", "gygax_right_arm", "gygax_left_leg", "gygax_right_leg", "gygax_main",
 	"gygax_peri", "gygax_targ", "gygax_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+
 /*
 /datum/techweb_node/medigax
 	id = "mech_medigax"
@@ -58,6 +61,7 @@
 	design_ids = list("medigax_chassis", "medigax_torso", "medigax_head", "medigax_left_arm", "medigax_right_arm", "medigax_left_leg", "medigax_right_leg", "medigax_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 */
+
 /datum/techweb_node/durand
 	id = "mech_durand"
 	display_name = "EXOSUIT: Durand"
@@ -86,6 +90,7 @@
 	"phazon_peri", "phazon_targ", "phazon_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
 */
+
 /datum/techweb_node/adv_mecha_tools
 	id = "adv_mecha_tools"
 	display_name = "Advanced Exosuit Equipment"
@@ -117,7 +122,7 @@
 	prereq_ids = list("weaponry")
 	design_ids = list("mech_scattershot", "mech_scattershot_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-/*
+
 /datum/techweb_node/mech_seedscatter
 	id = "mech_seedscatter"
 	display_name = "Exosuit Weapon (Melon Seed \"Scattershot\")"
@@ -125,7 +130,7 @@
 	prereq_ids = list("weaponry")
 	design_ids = list("mech_seedscatter")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
+
 /datum/techweb_node/mech_carbine
 	id = "mech_carbine"
 	display_name = "Exosuit Weapon (FNX-99 \"Hades\" Carbine)"
@@ -135,7 +140,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /datum/techweb_node/mech_ion
-	id = "mmech_ion"
+	id = "mech_ion"
 	display_name = "Exosuit Weapon (MKIV Ion Heavy Cannon)"
 	description = "An advanced piece of mech weaponry"
 	prereq_ids = list("electronic_weapons", "emp_adv")
@@ -154,7 +159,7 @@
 	id = "mech_laser"
 	display_name = "Exosuit Weapon (CH-PS \"Immolator\" Laser)"
 	description = "A basic piece of mech weaponry"
-	prereq_ids = list("beam_weapons")
+	prereq_ids = list("electronic_weapons")
 	design_ids = list("mech_laser")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
@@ -162,23 +167,23 @@
 	id = "mech_laser_heavy"
 	display_name = "Exosuit Weapon (CH-LC \"Solaris\" Laser Cannon)"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("beam_weapons")
+	prereq_ids = list("electronic_weapons")
 	design_ids = list("mech_laser_heavy")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/datum/techweb_node/mech_pulse
-	id = "mech_pulse"
+/datum/techweb_node/mech_pulse_rifle
+	id = "mech_pulse_rifle"
 	display_name = "eZ-13 MK2 heavy pulse rifle"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("beam_weapons")
-	design_ids = list("mech_pulse")
+	prereq_ids = list("electronic_weapons")
+	design_ids = list("mech_pulse_rifle")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /datum/techweb_node/mech_grenade_launcher
 	id = "mech_grenade_launcher"
 	display_name = "Exosuit Weapon (SGL-6 Grenade Launcher)"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("explosive_weapons")
+	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_grenade_launcher", "mech_grenade_launcher_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
@@ -186,18 +191,18 @@
 	id = "mech_missile_rack"
 	display_name = "Exosuit Weapon (BRM-6 Missile Rack)"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("explosive_weapons")
+	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_missile_rack", "mech_missile_rack_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-/*
+
 /datum/techweb_node/clusterbang_launcher
 	id = "clusterbang_launcher"
 	display_name = "Exosuit Module (SOB-3 Clusterbang Launcher)"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("explosive_weapons")
+	prereq_ids = list("adv_weaponry")
 	design_ids = list("clusterbang_launcher", "clusterbang_launcher_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
+
 /datum/techweb_node/mech_teleporter
 	id = "mech_teleporter"
 	display_name = "Exosuit Module (Teleporter Module)"
@@ -206,6 +211,7 @@
 	design_ids = list("mech_teleporter")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 /*
+
 /datum/techweb_node/mech_wormhole_gen
 	id = "mech_wormhole_gen"
 	display_name = "Exosuit Module (Localized Wormhole Generator)"
@@ -214,6 +220,7 @@
 	design_ids = list("mech_wormhole_gen")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 */
+
 /datum/techweb_node/mech_taser
 	id = "mech_taser"
 	display_name =  "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"
