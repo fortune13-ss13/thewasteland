@@ -220,6 +220,48 @@
 	desc = "A set of armor plates for the Durand. Built heavy to resist an incredible amount of brute force."
 	icon_state = "durand_armor"
 
+//////////// Marauder
+
+/obj/item/mecha_parts/chassis/marauder
+	name = "\improper Marauder chassis"
+	construct_type = /datum/component/construction/unordered/mecha_chassis/durand
+
+/obj/item/mecha_parts/part/marauder_torso
+	name = "\improper Marauder torso"
+	desc = "A torso part of Marauder. Contains power unit, processing core and life support systems within a robust protective frame."
+	icon_state = "marauder_harness"
+
+/obj/item/mecha_parts/part/marauder_head
+	name = "\improper Marauder head"
+	desc = "A Marauder head. Houses advanced surveillance and targeting sensors."
+	icon_state = "marauder_head"
+
+/obj/item/mecha_parts/part/marauder_left_arm
+	name = "\improper Marauder left arm"
+	desc = "A Marauder left arm. Data and power sockets are compatible with most exosuit tools and weapons. Packs a really mean punch as well."
+	icon_state = "marauder_l_arm"
+
+/obj/item/mecha_parts/part/marauder_right_arm
+	name = "\improper Marauder right arm"
+	desc = "A Marauder right arm. Data and power sockets are compatible with most exosuit tools and weapons. Packs a really mean punch as well."
+	icon_state = "marauder_r_arm"
+
+/obj/item/mecha_parts/part/marauder_left_leg
+	name = "\improper Marauder left leg"
+	desc = "A Marauder left leg. It's heavily armoured to ensure functionality in the most hostile warzones."
+	icon_state = "marauder_l_leg"
+
+/obj/item/mecha_parts/part/marauder_right_leg
+	name = "\improper Marauder right leg"
+	desc = "A Marauder right leg. It's heavily armoured to ensure functionality in the most hostile warzones."
+	icon_state = "marauder_r_leg"
+
+/obj/item/mecha_parts/part/marauder_armor
+	gender = PLURAL
+	name = "\improper Marauder armor plates"
+	desc = "A set of armor plates for the Marauder. An encompassing plasteel-DU alloy designed to withstand extreme shock at the cost of mobility."
+	icon_state = "marauder_armor"
+
 ////////// Firefighter
 
 /obj/item/mecha_parts/chassis/firefighter
@@ -342,6 +384,18 @@
 
 /obj/item/circuitboard/mecha/clarke/main
 	name = "Clarke Central Control module (Exosuit Board)"
+	icon_state = "mainboard"
+
+/obj/item/circuitboard/mecha/marauder/peripherals
+	name = "Marauder Peripherals Control module (Exosuit Board)"
+	icon_state = "mcontroller"
+
+/obj/item/circuitboard/mecha/marauder/targeting
+	name = "Marauder Weapon Control and Targeting module (Exosuit Board)"
+	icon_state = "mcontroller"
+
+/obj/item/circuitboard/mecha/marauder/main
+	name = "Marauder Central Control module (Exosuit Board)"
 	icon_state = "mainboard"
 
 /////// CLARKE
