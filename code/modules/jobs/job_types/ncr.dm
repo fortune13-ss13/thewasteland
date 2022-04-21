@@ -400,7 +400,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "NCR Senior Enlisted Advisor"
 	jobtype = /datum/job/ncr/f13drillsergeant
 	id = /obj/item/card/id/dogtag/ncrsergeant
-	accessory = /obj/item/clothing/accessory/ncr/FSGT
 	gloves = /obj/item/clothing/gloves/f13/leather
 	head = /obj/item/clothing/head/f13/ncr/ncr_campaign
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
