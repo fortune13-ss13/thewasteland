@@ -66,6 +66,16 @@
 	design_ids = list("durand_chassis", "durand_torso", "durand_head", "durand_left_arm", "durand_right_arm", "durand_left_leg", "durand_right_leg", "durand_main",
 	"durand_peri", "durand_targ", "durand_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2750)
+
+/datum/techweb_node/marauder
+	id = "mech_marauder"
+	display_name = "EXOSUIT: Marauder"
+	description = "Marauder exosuit designs"
+	prereq_ids = list("adv_mecha", "adv_weaponry")
+	design_ids = list("marauder_chassis", "marauder_torso", "marauder_head", "marauder_left_arm", "marauder_right_arm", "marauder_left_leg", "marauder_right_leg", "marauder_main",
+	"marauder_peri", "marauder_targ", "marauder_armor")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2750)
+
 /*
 /datum/techweb_node/phazon
 	id = "mecha_phazon"
@@ -154,6 +164,14 @@
 	description = "An advanced piece of mech weaponry"
 	prereq_ids = list("beam_weapons")
 	design_ids = list("mech_laser_heavy")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+
+/datum/techweb_node/mech_pulse
+	id = "mech_pulse"
+	display_name = "eZ-13 MK2 heavy pulse rifle"
+	description = "An advanced piece of mech weaponry"
+	prereq_ids = list("beam_weapons")
+	design_ids = list("mech_pulse")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /datum/techweb_node/mech_grenade_launcher

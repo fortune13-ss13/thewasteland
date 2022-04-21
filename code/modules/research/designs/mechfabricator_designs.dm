@@ -410,6 +410,79 @@
 	construction_time = 600
 	category = list("Durand")
 
+//Marauder
+/datum/design/marauder_chassis
+	name = "Exosuit Chassis (\"Marauder\")"
+	id = "marauder_chassis"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/chassis/marauder
+	materials = list(/datum/material/iron=25000)
+	construction_time = 100
+	category = list("Marauder")
+
+/datum/design/marauder_torso
+	name = "Exosuit Torso (\"Marauder\")"
+	id = "marauder_torso"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/marauder_torso
+	materials = list(/datum/material/iron=25000,/datum/material/plasma=10000,/datum/material/uranium=10000)
+	construction_time = 300
+	category = list("Marauder")
+
+/datum/design/marauder_head
+	name = "Exosuit Head (\"Marauder\")"
+	id = "marauder_head"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/marauder_head
+	materials = list(/datum/material/iron=10000,/datum/material/glass=15000,/datum/material/plasma=10000,/datum/material/uranium=4000)
+	construction_time = 200
+	category = list("Marauder")
+
+/datum/design/marauder_left_arm
+	name = "Exosuit Left Arm (\"Marauder\")"
+	id = "marauder_left_arm"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/marauder_left_arm
+	materials = list(/datum/material/iron=10000,/datum/material/uranium=6000)
+	construction_time = 200
+	category = list("Marauder")
+
+/datum/design/marauder_right_arm
+	name = "Exosuit Right Arm (\"Marauder\")"
+	id = "marauder_right_arm"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/marauder_right_arm
+	materials = list(/datum/material/iron=10000,/datum/material/uranium=6000)
+	construction_time = 200
+	category = list("Marauder")
+
+/datum/design/marauder_left_leg
+	name = "Exosuit Left Leg (\"Marauder\")"
+	id = "marauder_left_leg"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/marauder_left_leg
+	materials = list(/datum/material/iron=15000,/datum/material/uranium=6000)
+	construction_time = 200
+	category = list("Marauder")
+
+/datum/design/marauder_right_leg
+	name = "Exosuit Right Leg (\"Marauder\")"
+	id = "marauder_right_leg"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/marauder_right_leg
+	materials = list(/datum/material/iron=15000,/datum/material/uranium=6000)
+	construction_time = 200
+	category = list("Marauder")
+
+/datum/design/marauder_armor
+	name = "Exosuit Armor (\"Marauder\")"
+	id = "marauder_armor"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/marauder_armor
+	materials = list(/datum/material/iron=30000,/datum/material/uranium=25000,/datum/material/plasma=20000)
+	construction_time = 600
+	category = list("Marauder")
+
 //Phazon
 /datum/design/phazon_chassis
 	name = "Exosuit Chassis (\"Phazon\")"

@@ -72,21 +72,21 @@
 	addtimer(CALLBACK(src, .proc/set_ready_state, 1), equip_cooldown)
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
-	equip_cooldown = 8
+	equip_cooldown = 10
 	name = "\improper CH-PS \"Immolator\" laser"
 	desc = "A weapon for combat exosuits. Shoots basic lasers."
 	icon_state = "mecha_laser"
-	energy_drain = 30
+	energy_drain = 50
 	projectile = /obj/item/projectile/beam/laser/lasgun/hitscan/mech
 	fire_sound = 'sound/weapons/laser.ogg'
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
-	equip_cooldown = 15
+	equip_cooldown = 20
 	name = "\improper CH-LC \"Solaris\" laser cannon"
 	desc = "A weapon for combat exosuits. Shoots heavy lasers."
 	icon_state = "mecha_laser"
-	energy_drain = 60
+	energy_drain = 100
 	projectile = /obj/item/projectile/beam/laser/lasgun/hitscan/mech/heavy
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
@@ -100,7 +100,7 @@
 	fire_sound = 'sound/weapons/laser.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/tesla
-	equip_cooldown = 35
+	equip_cooldown = 30
 	name = "\improper MKI Tesla Cannon"
 	desc = "A weapon for combat exosuits. Fires bolts of electricity similar to the experimental tesla engine."
 	icon_state = "mecha_ion"
@@ -110,7 +110,7 @@
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
-	equip_cooldown = 30
+	equip_cooldown = 20
 	name = "eZ-13 MK2 heavy pulse rifle"
 	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts capable of demolishing obstacles."
 	icon_state = "mecha_pulse"
@@ -120,7 +120,7 @@
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma
-	equip_cooldown = 8
+	equip_cooldown = 5 // Does next to no damage
 	name = "217-D Heavy Plasma Cutter"
 	desc = "A device that shoots resonant plasma bursts at extreme velocity. The blasts are capable of crushing rock and demolishing solid obstacles."
 	icon_state = "mecha_plasmacutter"
