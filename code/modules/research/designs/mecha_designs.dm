@@ -216,10 +216,10 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/datum/design/mech_pulse
+/datum/design/mech_pulse_rifle
 	name = "eZ-13 MK2 heavy pulse rifle"
 	desc = "Allows for the construction of the eZ-13 MK2 heavy pulse rifle"
-	id = "mech_pulse"
+	id = "mech_pulse_rifle"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
 	materials = list(/datum/material/iron=15000,/datum/material/plasma=4000,/datum/material/uranium=4000)

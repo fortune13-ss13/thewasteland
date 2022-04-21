@@ -224,7 +224,7 @@
 
 /obj/item/mecha_parts/chassis/marauder
 	name = "\improper Marauder chassis"
-	construct_type = /datum/component/construction/unordered/mecha_chassis/durand
+	construct_type = /datum/component/construction/unordered/mecha_chassis/marauder
 
 /obj/item/mecha_parts/part/marauder_torso
 	name = "\improper Marauder torso"

@@ -2685,12 +2685,12 @@
 				user.visible_message("[user] cuts the internal armor layer from [parent].", "<span class='notice'>You cut the internal armor layer from [parent].</span>")
 		if(21)
 			if(diff==FORWARD)
-				user.visible_message("[user] secures Gygax Armor Plates.", "<span class='notice'>You secure Gygax Armor Plates.</span>")
+				user.visible_message("[user] secures Gygax Armor Plates.", "<span class='notice'>You secure Marauder Armor Plates.</span>")
 			else
-				user.visible_message("[user] pries Gygax Armor Plates from [parent].", "<span class='notice'>You pry Gygax Armor Plates from [parent].</span>")
+				user.visible_message("[user] pries Gygax Armor Plates from [parent].", "<span class='notice'>You pry Marauder Armor Plates from [parent].</span>")
 		if(22)
 			if(diff==FORWARD)
-				user.visible_message("[user] welds Gygax Armor Plates to [parent].", "<span class='notice'>You weld Gygax Armor Plates to [parent].</span>")
+				user.visible_message("[user] welds Gygax Armor Plates to [parent].", "<span class='notice'>You weld Marauder Armor Plates to [parent].</span>")
 			else
-				user.visible_message("[user] unfastens Gygax Armor Plates.", "<span class='notice'>You unfasten Gygax Armor Plates.</span>")
+				user.visible_message("[user] unfastens Gygax Armor Plates.", "<span class='notice'>You unfasten Marauder Armor Plates.</span>")
 	return TRUE
