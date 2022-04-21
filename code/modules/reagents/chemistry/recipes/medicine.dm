@@ -212,7 +212,7 @@ datum/chemical_reaction/rezadone
 	id = /datum/reagent/medicine/epinephrine
 	results = list(/datum/reagent/medicine/epinephrine = 6)
 	required_reagents = list(/datum/reagent/phenol = 1, /datum/reagent/acetone = 1, /datum/reagent/diethylamine = 1, /datum/reagent/oxygen = 1, /datum/reagent/chlorine = 1, /datum/reagent/hydrogen = 1)
-/* no. just no. the revive timer is 30 minutes(hopefully lowered soon); that is plenty of time. we do not need this.
+
 /datum/chemical_reaction/strange_reagent
 	name = "Strange Reagent"
 	id = /datum/reagent/medicine/strange_reagent
@@ -224,7 +224,7 @@ datum/chemical_reaction/rezadone
 	id = /datum/reagent/medicine/strange_reagent
 	results = list(/datum/reagent/medicine/strange_reagent = 2)
 	required_reagents = list(/datum/reagent/medicine/omnizine/protozine = 1, /datum/reagent/water/holywater = 1, /datum/reagent/toxin/mutagen = 1)
-*/
+
 /datum/chemical_reaction/mannitol
 	name = "Mannitol"
 	id = /datum/reagent/medicine/mannitol

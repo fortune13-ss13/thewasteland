@@ -69,11 +69,11 @@ Mayor
 	shoes = 		/obj/item/clothing/shoes/f13/tan
 	uniform = /obj/item/clothing/under/f13/gentlesuit
 	head = /obj/item/clothing/head/f13/town/big
-	backpack_contents = list( 
+	backpack_contents = list(
 		/obj/item/storage/box/citizenship_permits = 1, \
 		/obj/item/pen/fountain/captain = 1,
 		)
-		
+
 
 
 /datum/outfit/loadout/dictator
@@ -97,7 +97,7 @@ Mayor
 		/obj/item/clothing/shoes/f13/cowboy = 1,
 		/obj/item/clothing/mask/cigarette/cigar = 1,
 		)
-	
+
 /datum/outfit/loadout/firstcitizen
 	name = "First Citizen"
 	backpack_contents = list(
@@ -142,8 +142,8 @@ Mayor
 	/datum/outfit/loadout/pw,
 	)
 
-	access = list(ACCESS_BAR, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis,
@@ -738,7 +738,7 @@ Mayor
 	suit = /obj/item/clothing/under/f13/petrochico
 	belt = /obj/item/storage/belt/utility
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
-	backpack_contents = list(/obj/item/twohanded/sledgehammer = 1,
+	backpack_contents = list(/obj/item/twohanded/sledgehammer/simple = 1,
 	/obj/item/stack/sheet/metal/twenty = 1,
 	/obj/item/book/granter/crafting_recipe/ODF = 1,
 	)
@@ -985,7 +985,6 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 
 /datum/outfit/job/den/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

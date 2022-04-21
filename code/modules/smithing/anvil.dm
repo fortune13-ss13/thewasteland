@@ -32,7 +32,7 @@
 /obj/structure/anvil
 	name = "anvil"
 	desc = "Base class of anvil. This shouldn't exist, but is useable."
-	icon = 'icons/obj/smith.dmi'
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "anvil"
 	density = TRUE
 	anchored = TRUE
@@ -94,6 +94,20 @@
 		return
 	else if(istype(I, /obj/item/melee/smith/hammer))
 		var/obj/item/melee/smith/hammer/hammertime = I
+		if(!(workpiece_state == WORKPIECE_PRESENT || workpiece_state == WORKPIECE_INPROGRESS))
+			to_chat(user, "You can't work an empty anvil!")
+			return FALSE
+		var/mob/living/carbon/human/F = user
+		if(busy)
+			to_chat(user, "This anvil is already being worked!")
+			return FALSE
+		if(F.busy)
+			to_chat(user, "You are already working another anvil!")
+			return FALSE
+		do_shaping(user, hammertime.qualitymod)
+		return
+	else if(istype(I, /obj/item/twohanded/sledgehammer/simple))
+		var/obj/item/twohanded/sledgehammer/simple/hammertime = I
 		if(!(workpiece_state == WORKPIECE_PRESENT || workpiece_state == WORKPIECE_INPROGRESS))
 			to_chat(user, "You can't work an empty anvil!")
 			return FALSE
@@ -175,6 +189,7 @@
 	user.visible_message("<span class='notice'>[user] works the metal on the anvil with their hammer with a loud clang!</span>", \
 						"<span class='notice'>You [stepdone] the metal with a loud clang!</span>")
 	playsound(src, 'sound/effects/clang2.ogg',40, 2)
+	do_smithing_sparks(1, TRUE, src) 
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/effects/clang2.ogg', 40, 2), 15)
 	if(length(stepsdone) >= 3)
 		tryfinish(user)
