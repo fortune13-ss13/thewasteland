@@ -78,12 +78,14 @@
 
 	if(available_equipment.len == 0)
 		chassis.occupant_message("No equipment available.")
+		playsound(chassis,'sound/machines/terminal_error.ogg', 40, FALSE)
 		return
 	if(!chassis.selected)
 		chassis.selected = available_equipment[1]
 		chassis.occupant_message("You select [chassis.selected]")
 		send_byjax(chassis.occupant,"exosuit.browser","eq_list",chassis.get_equipment_list())
 		button_icon_state = "mech_cycle_equip_on"
+		playsound(chassis,'sound/machines/piston_raise.ogg', 40, TRUE)
 		UpdateButtonIcon()
 		return
 	var/number = 0
@@ -94,10 +96,12 @@
 				chassis.selected = null
 				chassis.occupant_message("You switch to no equipment")
 				button_icon_state = "mech_cycle_equip_off"
+				playsound(chassis,'sound/machines/piston_lower.ogg', 40, TRUE)
 			else
 				chassis.selected = available_equipment[number+1]
 				chassis.occupant_message("You switch to [chassis.selected]")
 				button_icon_state = "mech_cycle_equip_on"
+				playsound(chassis,'sound/machines/piston_raise.ogg', 40, TRUE)
 			send_byjax(chassis.occupant,"exosuit.browser","eq_list",chassis.get_equipment_list())
 			UpdateButtonIcon()
 			return
@@ -118,6 +122,7 @@
 		chassis.set_light(-chassis.lights_power)
 		button_icon_state = "mech_lights_off"
 	chassis.occupant_message("Toggled lights [chassis.lights?"on":"off"].")
+	playsound(chassis,'sound/machines/clockcult/brass_skewer.ogg', 40, TRUE)
 	chassis.mecha_log_message("Toggled lights [chassis.lights?"on":"off"].")
 	UpdateButtonIcon()
 
