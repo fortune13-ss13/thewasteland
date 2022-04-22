@@ -4,8 +4,7 @@
 	icon_state = "marauder"
 	step_in = 5
 	max_integrity = 500
-	deflect_chance = 25
-	armor = list("melee" = 60, "bullet" = 60, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 0, "rad" = 80, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 40, "energy" = 30, "bomb" = 30, "bio" = 0, "rad" = 80, "fire" = 100, "acid" = 100)
 	max_temperature = 60000
 	step_energy_drain = 30
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF

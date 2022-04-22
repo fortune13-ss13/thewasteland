@@ -1,5 +1,6 @@
 /obj/mecha/working
 	internal_damage_threshold = 40
+	exit_delay = 10
 
 /obj/mecha/working/Move()
 	. = ..()

@@ -11,6 +11,12 @@
 #define SIDE_ARMOUR 2
 #define BACK_ARMOUR 3
 
+// Defines for the durand's shield
+
+#define COMSIG_PROJECTILE_PREHIT "com_proj_prehit"				// sent to targets during the process_hit proc of projectiles
+
+// /obj/mecha signals
+#define COMSIG_MECHA_ACTION_ACTIVATE "mecha_action_activate"	//sent from mecha action buttons to the mecha they're linked to
 
 /obj/mecha
 	name = "mecha"
@@ -37,6 +43,8 @@
 	max_integrity = 300 //max_integrity is base health
 	move_force = MOVE_FORCE_VERY_STRONG
 	move_resist = MOVE_FORCE_EXTREMELY_STRONG
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
+	light_range = 9
 	var/deflect_chance = 10 //chance to deflect the incoming projectiles, hits, or lesser the effect of ex_act.
 	armor = list("melee" = 20, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
 	var/list/facing_modifiers = list(FRONT_ARMOUR = 1.5, SIDE_ARMOUR = 1, BACK_ARMOUR = 0.5)
@@ -64,6 +72,7 @@
 	var/obj/machinery/portable_atmospherics/canister/internal_tank
 	var/datum/gas_mixture/cabin_air
 	var/obj/machinery/atmospherics/components/unary/portables_connector/connected_port = null
+	var/allow_diagonal_movement = FALSE
 
 	var/obj/item/radio/mech/radio
 	var/list/trackers = list()
@@ -88,6 +97,12 @@
 	var/melee_cooldown = 10
 	var/melee_can_hit = 1
 
+	var/exit_delay = 20 //Time to exit mech
+	var/destruction_sleep_duration = 20 //Time that mech pilot is put to sleep for if mech is destroyed
+	var/enter_delay = 40 //Time taken to enter the mech
+
+	var/is_currently_ejecting = FALSE //Mech cannot use equiptment when true, set to true if pilot is trying to exit mech
+
 	//Action datums
 	var/datum/action/innate/mecha/mech_eject/eject_action = new
 	var/datum/action/innate/mecha/mech_toggle_internals/internals_action = new
@@ -95,7 +110,7 @@
 	var/datum/action/innate/mecha/mech_toggle_lights/lights_action = new
 	var/datum/action/innate/mecha/mech_view_stats/stats_action = new
 	var/datum/action/innate/mecha/mech_toggle_thrusters/thrusters_action = new
-	var/datum/action/innate/mecha/mech_defence_mode/defense_action = new
+	var/datum/action/innate/mecha/mech_defense_mode/defense_action = new
 	var/datum/action/innate/mecha/mech_overload_mode/overload_action = new
 	var/datum/effect_system/smoke_spread/smoke_system = new //not an action, but trigged by one
 	var/datum/action/innate/mecha/mech_smoke/smoke_action = new
@@ -106,8 +121,6 @@
 
 	//Action vars
 	var/thrusters_active = FALSE
-	var/defence_mode = FALSE
-	var/defence_mode_deflect_chance = 35
 	var/leg_overload_mode = FALSE
 	var/leg_overload_coeff = 100
 	var/zoom_mode = FALSE
@@ -118,8 +131,9 @@
 	var/phasing_energy_drain = 200
 	var/phase_state = "" //icon_state when phasing
 	var/strafe = FALSE //If we are strafing
-	var/canstrafe = FALSE //if we can turn on strafing
+//	var/canstrafe = FALSE //if we can turn on strafing
 	var/haslights = TRUE //if we can turn on lights
+	var/defense_mode = FALSE
 
 	var/nextsmash = 0
 	var/smashcooldown = 3	//deciseconds
@@ -161,6 +175,8 @@
 	take_damage(500,  BRUTE)
 
 /obj/mecha/Destroy()
+	if(occupant)
+		occupant.SetSleeping(destruction_sleep_duration)
 	go_out()
 	var/mob/living/silicon/ai/AI
 	for(var/mob/M in src) //Let's just be ultra sure
@@ -429,6 +445,8 @@
 		return
 	if(completely_disabled)
 		return
+	if(is_currently_ejecting)
+		return
 	if(phasing)
 		occupant_message("Unable to interact with objects while phasing")
 		return
@@ -448,6 +466,10 @@
 		target = safepick(view(3,target))
 		if(!target)
 			return
+
+	//only mechs with diagonal movement may move diagonally
+	if(!allow_diagonal_movement && ISDIAGONALDIR(dir))
+		return TRUE
 
 	var/mob/living/L = user
 	if(!Adjacent(target))
@@ -534,11 +556,6 @@
 	if(!Process_Spacemove(direction))
 		return 0
 	if(!has_charge(step_energy_drain))
-		return 0
-	if(defence_mode)
-		if(world.time - last_message > 20)
-			occupant_message("<span class='danger'>Unable to move while in defence mode</span>")
-			last_message = world.time
 		return 0
 	if(zoom_mode)
 		if(world.time - last_message > 20)
@@ -857,7 +874,7 @@
 
 	visible_message("[user] starts to climb into [name].")
 
-	if(do_after(user, 40, target = src))
+	if(do_after(user, enter_delay, target = src))
 		if(obj_integrity <= 0)
 			to_chat(user, "<span class='warning'>You cannot get in the [name], it has been destroyed!</span>")
 		else if(occupant)
@@ -1060,8 +1077,7 @@
 		return max(0, cell.charge)
 
 /obj/mecha/proc/use_power(amount)
-	if(get_charge())
-		cell.use(amount)
+	if(get_charge() && cell.use(amount))
 		return 1
 	return 0
 

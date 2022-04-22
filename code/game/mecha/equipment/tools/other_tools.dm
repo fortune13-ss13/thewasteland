@@ -142,11 +142,11 @@
 	name = "armor booster module (Close Combat Weaponry)"
 	desc = "Boosts exosuit armor against armed melee attacks. Requires energy to operate."
 	icon_state = "mecha_abooster_ccw"
-	equip_cooldown = 5
-	energy_drain = 50
+	equip_cooldown = 0
+	energy_drain = 75
 	range = 0
-	var/deflect_coeff = 1.15
-	var/damage_coeff = 0.8
+//	var/deflect_coeff = 1
+	var/damage_coeff = 0.7
 	selectable = 0
 
 /obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster/proc/attack_react()
@@ -160,11 +160,11 @@
 	name = "armor booster module (Ranged Weaponry)"
 	desc = "Boosts exosuit armor against ranged attacks. Completely blocks taser shots. Requires energy to operate."
 	icon_state = "mecha_abooster_proj"
-	equip_cooldown = 5
-	energy_drain = 50
+	equip_cooldown = 0
+	energy_drain = 75
 	range = 0
-	var/deflect_coeff = 1.15
-	var/damage_coeff = 0.8
+//	var/deflect_coeff = 1
+	var/damage_coeff = 0.7
 	selectable = 0
 
 /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster/proc/projectile_react()

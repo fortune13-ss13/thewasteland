@@ -2136,6 +2136,7 @@
 /datum/component/construction/unordered/mecha_chassis/clarke
 	result = /datum/component/construction/mecha/clarke
 	steps = list(
+		/obj/item/mecha_parts/part/clarke_head,
 		/obj/item/mecha_parts/part/clarke_torso,
 		/obj/item/mecha_parts/part/clarke_left_arm,
 		/obj/item/mecha_parts/part/clarke_right_arm,
@@ -2685,12 +2686,12 @@
 				user.visible_message("[user] cuts the internal armor layer from [parent].", "<span class='notice'>You cut the internal armor layer from [parent].</span>")
 		if(21)
 			if(diff==FORWARD)
-				user.visible_message("[user] secures Gygax Armor Plates.", "<span class='notice'>You secure Marauder Armor Plates.</span>")
+				user.visible_message("[user] secures Marauder Armor Plates.", "<span class='notice'>You secure Marauder Armor Plates.</span>")
 			else
-				user.visible_message("[user] pries Gygax Armor Plates from [parent].", "<span class='notice'>You pry Marauder Armor Plates from [parent].</span>")
+				user.visible_message("[user] pries Marauder Armor Plates from [parent].", "<span class='notice'>You pry Marauder Armor Plates from [parent].</span>")
 		if(22)
 			if(diff==FORWARD)
-				user.visible_message("[user] welds Gygax Armor Plates to [parent].", "<span class='notice'>You weld Marauder Armor Plates to [parent].</span>")
+				user.visible_message("[user] welds Marauder Armor Plates to [parent].", "<span class='notice'>You weld Marauder Armor Plates to [parent].</span>")
 			else
-				user.visible_message("[user] unfastens Gygax Armor Plates.", "<span class='notice'>You unfasten Marauder Armor Plates.</span>")
+				user.visible_message("[user] unfastens Marauder Armor Plates.", "<span class='notice'>You unfasten Marauder Armor Plates.</span>")
 	return TRUE
