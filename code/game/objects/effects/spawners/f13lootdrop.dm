@@ -682,7 +682,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	lootcount = 1
 
 	loot = list(/obj/item/twohanded/fireaxe,
-				/obj/item/twohanded/sledgehammer,
+				/obj/item/twohanded/sledgehammer/simple,
 				/obj/item/twohanded/fireaxe/bmprsword,
 				/obj/item/melee/unarmed/lacerator,
 				/obj/item/melee/unarmed/maceglove,
@@ -1271,7 +1271,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 				/obj/item/ammo_box/magazine/m556/rifle/
 				)
 
-/obj/effect/spawner/bundle/f13/combat_rifle
+obj/effect/spawner/bundle/f13/combat_rifle
 	name = "combat rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/combat,

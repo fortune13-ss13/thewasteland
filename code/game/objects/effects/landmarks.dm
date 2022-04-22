@@ -538,7 +538,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "NCR Sergeant"
 
 /obj/effect/landmark/start/f13/ncrdrillsergeant
-	name = "NCR Drill Sergeant"
+	name = "NCR Senior Enlisted Advisor"
 	icon_state = "NCR Drill Sergeant"
 
 /obj/effect/landmark/start/f13/ncrsergeant
@@ -832,23 +832,14 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/usspy
 	name = "Enclave Private"
 
-/obj/effect/landmark/start/f13/infantry2
-	name = "Enclave Armored Infantry"
-
 /obj/effect/landmark/start/f13/uslt
 	name = "Enclave Lieutenant"
 
 /obj/effect/landmark/start/f13/ussgt
 	name = "Enclave Sergeant"
 
-/obj/effect/landmark/start/f13/uscommander
-	name = "US Commander"
-
 /obj/effect/landmark/start/f13/usspecialist
 	name = "Enclave Specialist"
-
-/obj/effect/landmark/start/f13/usprivate
-	name = "US Private"
 
 /obj/effect/landmark/start/f13/usscientist
 	name = "Enclave Scientist"
@@ -856,8 +847,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/usgysgt
 	name = "Enclave Gunnery Sergeant"
 
-/obj/effect/landmark/start/f13/uscolonist
-	name = "US Colonist"
+/obj/effect/landmark/start/f13/uslightduty
+    name = "Enclave Bunker Duty"
 
 //Tribal
 

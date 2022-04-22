@@ -20,4 +20,3 @@
 	category = LOADOUT_CATEGORY_UNIFORM
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
 	ckeywhitelist = list("midgetdragon")
-	

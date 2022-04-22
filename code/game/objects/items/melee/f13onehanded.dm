@@ -55,7 +55,7 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, null, 0)
+	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
 
 /obj/item/melee/onehanded/machete/gladius
 	name = "gladius"
@@ -311,7 +311,7 @@ obj/item/melee/onehanded/knife/switchblade
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(10, STAMINA, null, 0)
+	M.apply_damage(10, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
 
 // War Club
 /obj/item/melee/onehanded/club/warclub
@@ -328,7 +328,7 @@ obj/item/melee/onehanded/knife/switchblade
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, null, 0)
+	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
 
 // Tire Iron
 /obj/item/melee/onehanded/club/tireiron
@@ -732,6 +732,13 @@ obj/item/melee/onehanded/knife/switchblade
 	sharpness = SHARP_POINTY
 	attack_verb = list("stabbed", "sliced", "pierced", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
+
+obj/item/melee/unarmed/punchdagger/cyborg
+	name = "assaultron claws"
+	desc = "Razor sharp blades embedded into the grippers of an assaultron. Sharp."
+	icon_state = "tiger_claw"
+	item_state = "tiger_claw"
+	force = 40 //Assaultron, so, makes sense.
 
 // Deathclaw Gauntlet	Keywords: Damage 28, AP 1
 /obj/item/melee/unarmed/deathclawgauntlet

@@ -342,23 +342,49 @@
 	name = "gilded leg wraps"
 	desc = "Ankle coverings. These ones have a golden design."
 	icon_state = "gildedcuffs"
-	body_parts_covered = FALSE
 	can_be_tied = FALSE
+	strip_delay = 50
+	equip_delay_other = 50
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	lace_time = 12 SECONDS
 
 /obj/item/clothing/shoes/wraps/silver
 	name = "silver leg wraps"
 	desc = "Ankle coverings. Not made of real silver."
 	icon_state = "silvergildedcuffs"
+	can_be_tied = FALSE
+	strip_delay = 50
+	equip_delay_other = 50
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	lace_time = 12 SECONDS
 
 /obj/item/clothing/shoes/wraps/red
 	name = "red leg wraps"
 	desc = "Ankle coverings. Show off your style with these shiny red ones!"
 	icon_state = "redcuffs"
+	can_be_tied = FALSE
+	strip_delay = 50
+	equip_delay_other = 50
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	lace_time = 12 SECONDS
 
 /obj/item/clothing/shoes/wraps/blue
 	name = "blue leg wraps"
 	desc = "Ankle coverings. Hang ten, brother."
 	icon_state = "bluecuffs"
+	can_be_tied = FALSE
+	strip_delay = 50
+	equip_delay_other = 50
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	lace_time = 12 SECONDS
 
 /obj/item/clothing/shoes/cowboyboots
 	name = "cowboy boots"

@@ -127,7 +127,10 @@
 	"Engineering" = /obj/item/robot_module/engineering, \
 	"Medical" = /obj/item/robot_module/medical, \
 	"Miner" = /obj/item/robot_module/miner, \
-	"Service" = /obj/item/robot_module/butler)
+	"Service" = /obj/item/robot_module/butler,
+	"Gutsy" = /obj/item/robot_module/gutsy
+	)
+
 	if(!CONFIG_GET(flag/disable_peaceborg))
 		modulelist["Peacekeeper"] = /obj/item/robot_module/peacekeeper
 	if(BORG_SEC_AVAILABLE)
@@ -701,6 +704,30 @@
 /mob/living/silicon/robot/modules/miner
 	set_module = /obj/item/robot_module/miner
 
+/mob/living/silicon/robot/modules/gutsy
+	set_module = /obj/item/robot_module/gutsy
+
+/mob/living/silicon/robot/modules/assaultron //F13 stuff, better Handy.
+	name = "Assaultron"
+	set_module = /obj/item/robot_module/assaultron
+	faction = list("wastebots") //Friendly to other assaultrons?
+
+/mob/living/silicon/robot/modules/assaultron/Initialize()
+	. = ..()
+	cell = new /obj/item/stock_parts/cell/hyper(src, 25000)
+
+/mob/living/silicon/robot/modules/assaultron/medical
+	name = "Medical Assaultron"
+	set_module = /obj/item/robot_module/assaultron/medical
+
+/mob/living/silicon/robot/modules/assaultron/medical/sase
+	name = "SA-S-E"
+	desc = "An assaultron modified for the medical field, SA-S-E forgoes the weaponry and deadliness of her military countarparts to save lives. \
+	Painted white with blue highlights, and a blue cross on the front of her visor, this robot comes equipped with what looks like modified medical gear. \
+	Her head has no eye-laser, instead a gently pulsing blue eye that scans people the analyze their health, a defibrilator on her back, and articulated hands to be able \
+	to use the myriad medical tools strapped to parts of her body under protective cases all show this model is meant to save lives. She's stockier than other assaultrons \
+	due to all the added gear, and her legs seem much thicker than normal due to reinforced servos and gears."
+
 /mob/living/silicon/robot/modules/syndicate
 	icon_state = "synd_sec"
 	faction = list(ROLE_SYNDICATE)
@@ -786,11 +813,6 @@
 				audible_message("<span class='warning'>[src] sounds an alarm! \"SYSTEM ERROR: Module 2 OFFLINE.\"</span>")
 				to_chat(src, "<span class='userdanger'>SYSTEM ERROR: Module 2 OFFLINE.</span>")
 				playsound(loc, 'sound/machines/warning-buzzer.ogg', 60, 1, 1)
-			if(health < -maxHealth*0.5)
-				if(uneq_module(held_items[1]))
-					audible_message("<span class='warning'>[src] sounds an alarm! \"CRITICAL ERROR: All modules OFFLINE.\"</span>")
-					to_chat(src, "<span class='userdanger'>CRITICAL ERROR: All modules OFFLINE.</span>")
-					playsound(loc, 'sound/machines/warning-buzzer.ogg', 75, 1, 1)
 
 /mob/living/silicon/robot/update_sight()
 	if(!client)

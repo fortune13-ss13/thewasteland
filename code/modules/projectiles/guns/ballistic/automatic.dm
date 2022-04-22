@@ -359,12 +359,12 @@
 	item_state = "uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	fire_delay = 3
-	burst_shot_delay = 2.5
+	burst_shot_delay = 2.2
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 2
 	spread = 16
-	extra_damage = 18
+	extra_damage = 17
 	can_suppress = TRUE
 	can_attachments = TRUE
 	spread = 10
@@ -461,7 +461,6 @@
 	automatic = 1
 	autofire_shot_delay = 2
 	burst_shot_delay = 2.5
-	extra_damage = 1
 	recoil = 0.25
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
@@ -484,15 +483,15 @@
 	icon_state = "mp5"
 	item_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	spread = 10
+	spread = 6
 	fire_delay = 3.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2
+	autofire_shot_delay = 2.25
 	burst_shot_delay = 2
-	extra_damage = 18
+	extra_damage = 15
 	suppressed = 1
-	recoil = 0.1
+	recoil = 0.05
 	can_attachments = TRUE
 	can_suppress = FALSE
 	can_unsuppress = FALSE
@@ -536,11 +535,11 @@
 	item_state = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	burst_size = 1
-	fire_delay = 5
+	fire_delay = 3
 	spread = 2
 	extra_damage = 20
 	extra_penetration = 0.1
-	slowdown = 0.4
+	slowdown = 0.35
 	automatic_burst_overlay = FALSE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
@@ -564,11 +563,10 @@
 /obj/item/gun/ballistic/automatic/m1carbine/m1n
 	name = "M1/N carbine"
 	desc = "An M1 Carbine with markings identifying it as issued to the NCR Mojave Expedtionary Force. Looks beat up but functional."
-	can_automatic = FALSE
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "ncr-m1carbine"
 	item_state = "rifle"
-	extra_damage = 21
+	extra_damage = 25
 
 
 //M1A1 Carbine				Keywords: 10mm, Semi-auto, 12/24 rounds, Long barrel, Folding stock.
@@ -607,21 +605,21 @@
 
 //WT-550								4.7mm, 20 round magazine
 /obj/item/gun/ballistic/automatic/wt550
-	name = "WT-550"
-	desc = "A compact PDW derived from the G11, firing the same 4.73mm rounds."
+	name = "4.73mm carbine"
+	desc = "A WT-550 Personal Defense Weapon, manufactured by West Tek. It fires 4.73mm caseless rounds."
 	item_state = "m90"
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
 	burst_size = 1
+	slowdown = 0.2
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
 	autofire_shot_delay = 1.75
 	extra_penetration = 0.2
-	slowdown = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_HEAVY
-	spread = 0
+	weapon_weight = WEAPON_MEDIUM
+	spread = 3 //foregrip
 	fire_delay = 1
 	can_bayonet = TRUE
 	knife_x_offset = 25
@@ -659,6 +657,7 @@
 	suppressor_x_offset = 27
 	suppressor_y_offset = 31
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	can_scope = TRUE
 
 //De Lisle carbine							Keywords: Pre-war, 9mm, Long barrel, Suppressed
 /obj/item/gun/ballistic/automatic/delisle
@@ -703,7 +702,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	can_unsuppress = FALSE
 	suppressor_state = "none"
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
@@ -720,7 +718,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 //Combat Rifle		Keywords: .45 Caliber Rifle, No Attachments (!)
@@ -735,7 +732,8 @@
 	burst_size = 1
 	spread = 1
 	extra_damage = 32
-	slowdown = 0.3
+	extra_penetration = 0.2
+	slowdown = 0.1
 	can_attachments = FALSE
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -749,7 +747,7 @@
 	item_state = "servicerifle"
 	icon_prefix = "servicerifle"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	slowdown = 0.45
+	slowdown = 0.3
 	fire_delay = 3
 	burst_size = 1
 	spread = 1
@@ -790,7 +788,7 @@
 	desc = "A cut down version of the standard-issue service rifle tapped with mounting holes for a scope. Shorter barrel, lower muzzle velocity."
 	icon_state = "scout_carbine"
 	spread = 1.2
-	slowdown = 0.3
+	slowdown = 0.15
 	extra_damage = 25
 	can_scope = TRUE
 	scope_state = "scope_short"
@@ -877,8 +875,11 @@
 	force = 20
 	mag_type = /obj/item/ammo_box/magazine/m762
 	extra_damage = 40
+	extra_penetration = 0.2
+	extra_speed = 500
 	burst_size = 1
-	fire_delay = 5
+	fire_delay = 4
+	slowdown = 0.4
 	spread = 1
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -973,7 +974,7 @@
 	icon_state = "republics_pride"
 	item_state = "scoped308"
 	extra_damage = 45
-	extra_penetration = 0.1
+	extra_penetration = 0.3
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -1044,6 +1045,12 @@
 	zoom_out_amt = 17
 	extra_penetration = 0.4
 	extra_damage = 45
+
+/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
+	name = "compact sniper rifle"
+	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert. This particular model is lighter and faster."
+	slowdown = 0.3
+	fire_delay = 6
 
 //////////////////
 //ASSAULT RIFLES//
@@ -1218,8 +1225,8 @@
 	burst_shot_delay = 2.0
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.2
-	extra_damage = 20
+	autofire_shot_delay = 2
+	extra_damage = 19
 	extra_penetration = 0.25
 	spread = 10 //high-velocity
 	can_attachments = TRUE
@@ -1246,11 +1253,12 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "rifle-police"
-	autofire_shot_delay = 3.5 //not a real auto-gun
-	spread = 12 //makeshift longer barrel
+	autofire_shot_delay = 3.5 //not a real auto-gun, a lot slower than the assault carbine
+	extra_damage = 20 //longer barrel
+	spread = 8 //more accurate than the assault carbine, its a rifle
 	can_scope = TRUE
-	
-/obj/item/gun/ballistic/automatic/assault_carbine/worn	
+
+/obj/item/gun/ballistic/automatic/assault_carbine/worn
 	name = "worn assault carbine"
 	desc = "The U.S. army carbine version of the R91, made by Colt and issued to special forces. This one is beat-up and falling apart."
 	icon_state = "assault_carbine"
@@ -1266,34 +1274,35 @@
 	icon_state = "fnfal"
 	item_state = "fnfal"
 	force = 20
-	extra_damage = 30
+	extra_damage = 28
 	fire_delay = 3.5
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 3
 	mag_type = /obj/item/ammo_box/magazine/m762
-	spread = 10
+	spread = 16 //infamously hard to control on full-auto
 	recoil = 0.25
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
-/obj/item/gun/ballistic/automatic/bar
-	name = "automatic rifle (debug)"
-	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle.(Debug)"
+obj/item/gun/ballistic/automatic/bar
+	name = "automatic rifle (.308)"
+	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
 	icon = 'icons/fallout/objects/guns/bar.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	icon_state = "BAR"
 	item_state = "BAR"
 	icon_prefix = "BAR"
 	automatic = 1
+	mag_type = /obj/item/ammo_box/magazine/m762/ext
 	force = 24 //club
 	slowdown = 1.25 //really goddamn big
-	autofire_shot_delay = 2.75
+	autofire_shot_delay = 2.5
 	extra_damage = 28
 	spread = 10
 	recoil = 0.3
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 
 //H&K G11				Keywords: 4.73mm, Automatic, 50 round magazine
 /obj/item/gun/ballistic/automatic/g11
@@ -1303,65 +1312,22 @@
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/m473
 	burst_size = 1
-	extra_damage = 22.5
+	extra_damage = 16
 	fire_delay = 2
 	is_automatic = TRUE
-	automatic = FALSE
-	extra_penetration = 0.1
-	autofire_shot_delay = 1.75
-	burst_shot_delay = 0.5
+	automatic = 1
+	autofire_shot_delay = 1.5
+	burst_shot_delay = 1.5
+	spread = 8
+	recoil = 0.1
 	can_attachments = TRUE
 	semi_auto = TRUE
 	can_scope = FALSE
-	spread = 0
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	select = 0
-
-/obj/item/gun/ballistic/automatic/g11/ui_action_click(mob/user, action)
-	if(istype(action, /datum/action/item_action/toggle_firemode))
-		burst_select()
-	else
-		return ..()
-
-/obj/item/gun/ballistic/automatic/g11/burst_select()
-	var/mob/living/carbon/human/user = usr
-	switch(select)
-		if(0)
-			select += 1
-			if(burst_improvement)
-				burst_size = 5
-			else
-				burst_size = 3
-			automatic = FALSE
-			if(recoil_decrease)
-				burst_spread = 5.5
-			else
-				burst_spread = 7.5
-			recoil = 0.25
-			to_chat(user, "<span class='notice'>You switch to burst fire.</span>")
-		if(1)
-			select += 1
-			burst_size = 1
-			automatic = TRUE
-			if(recoil_decrease)
-				burst_spread = 8.5
-			else
-				burst_spread = 12.5
-			recoil = 0.5
-			to_chat(user, "<span class='notice'>You switch to full-auto.</span>")
-		if(2)
-			select = 0
-			burst_size = 1
-			automatic = FALSE
-			spread = 0
-			recoil = 0
-			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
-	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
-	update_icon()
-	return
 
 ////////////////
 //MACHINE-GUNS//
@@ -1497,7 +1463,7 @@
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m2mm
-	extra_damage = 30
+	extra_damage = 40
 	burst_size = 1
 	fire_delay = 10
 	zoomable = TRUE
@@ -1526,19 +1492,3 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
-
-// BETA STUFF // =Obsolete
-/obj/item/gun/ballistic/automatic/smgtesting
-	name = "SMG"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 20
-
-/obj/item/gun/ballistic/automatic/snipertesting
-	name = "sniper rifle"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 25
-
-/obj/item/gun/ballistic/automatic/rifletesting
-	name = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 22

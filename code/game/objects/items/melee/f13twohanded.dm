@@ -299,7 +299,7 @@
 // HEAVY CLUBS //
 /////////////////		- Bonus damage to stamina, low damage
 
-// Baseball Bat			Keywords: Damage 20/30, Damage bonus Stamina
+// Baseball Bat			Keywords: Damage 20/30
 /obj/item/twohanded/baseball
 	name = "baseball bat"
 	desc = "There ain't a skull in the league that can withstand a swatter."
@@ -315,12 +315,6 @@
 /obj/item/twohanded/baseball/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded = 24, force_wielded = 30, icon_wielded="[icon_prefix]2")
-
-/obj/item/twohanded/baseball/attack(mob/living/M, mob/living/user)
-	. = ..()
-	if(!istype(M))
-		return
-	M.apply_damage(24, STAMINA, null, 0)
 
 // Spiked Baseball Bat		Keywords: Damage 24/33, Damage bonus Stamina, Sharp
 /obj/item/twohanded/baseball/spiked
@@ -341,30 +335,30 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(22, STAMINA, null, 0)
+	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
 
 // Louisville Slugger		Keywords: Damage 25/32, Damage bonus Stamina
 /obj/item/twohanded/baseball/louisville
 	name = "Louisville slugger"
-	desc = "Makes a satisfying thwack when hitting people."
+	desc = "Purification in progress."
 	icon_state = "louisville"
 	icon_prefix = "louisville"
-	attack_verb = list("thwacked", "bashed", "slugged", "hit", "bludgeoned", "whacked", "bonked")
+	attack_verb = list("thwacked", "bashed", "louisville slugged", "hit", "bludgeoned", "whacked", "bonked")
 
 /obj/item/twohanded/baseball/louisville/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 34, icon_wielded="[icon_prefix]2")
 
-/obj/item/twohanded/baseball/attack(mob/living/M, mob/living/user)
+/obj/item/twohanded/baseball/louisville/attack(mob/living/M, mob/living/user)
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(26, STAMINA, null, 0)
+	M.apply_damage(25, STAMINA, null, 0)
 
 // Golf Club		Keywords: Damage 22/32, Damage bonus Stamina
 /obj/item/twohanded/baseball/golfclub
 	name = "golf club"
-	desc = "This old and quite heavy 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
+	desc = "What's with all the Eyelander reskins?"
 	icon_state = "golfclub"
 	icon_prefix = "golfclub"
 	attack_verb = list("smashed", "bashed", "fored", "hit", "bludgeoned", "whacked")
@@ -377,14 +371,15 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(25, STAMINA, null, 0)
+	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
+
 
 
 ///////////////////
 // SLEDGEHAMMERS //
 ///////////////////			-Bonus damage to all structures, such as barricades
 
-// Sledgehammer			Keywords: Damage 25/45
+// Template hammer, can't be used for crafting/smithing and lacks the demolishing bonus so avoid using it
 /obj/item/twohanded/sledgehammer
 	name = "sledgehammer"
 	desc = "A heavy sledgehammer that lost most of its use besides caving in heads and barricades."
@@ -392,23 +387,26 @@
 	icon_prefix = "hammer-sledge"
 	attack_speed = CLICK_CD_MELEE * 1.2
 	force = 25
-	throwforce = 30
+	throwforce = 20 // Huge hammers aren't that great for throwing
 	sharpness = SHARP_NONE
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 
-/obj/item/twohanded/sledgehammer/ComponentInitialize()
+
+// Sledgehammer			Keywords: Damage 25/45, Blacksmithing
+/obj/item/twohanded/sledgehammer/simple
+	var/qualitymod = 0
+
+/obj/item/twohanded/sledgehammer/simple/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 45, icon_wielded="[icon_prefix]2")
 
-/obj/item/twohanded/sledgehammer/afterattack(atom/A, mob/living/user, proximity)
+/obj/item/twohanded/sledgehammer/simple/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
 	if(!proximity || !wielded || IS_STAMCRIT(user))
 		return
 	if(istype(A, /obj/structure))
 		var/obj/structure/W = A
 		W.take_damage(20, BRUTE, "melee", 0)
-
-
 
 /////////////////////////////////
 // ADVANCED TWO HANDED WEAPONS //
@@ -619,7 +617,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(25, STAMINA, null, 0)
+	M.apply_damage(25, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
 
 // Staff of Mars			Keywords: Damage 10/10, Damage bonus Burn + Stamina
 /obj/item/twohanded/sledgehammer/marsstaff
@@ -639,7 +637,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	if(!istype(M))
 		return
 	M.apply_damage(2, BURN, 0)
-	M.apply_damage(25, STAMINA, null, 0)
+	M.apply_damage(25, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
 
 /obj/item/twohanded/sledgehammer/marsstaff/pickup(mob/living/user, slot)
 	..()
