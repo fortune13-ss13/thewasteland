@@ -8,8 +8,8 @@
 	if(haslights)
 		lights_action.Remove(user)
 	stats_action.Grant(user, src)
-	if(canstrafe)
-		strafing_action.Remove(user)
+/*	if(canstrafe)
+		strafing_action.Remove(user)*/ #warn fix this!
 
 
 /obj/mecha/proc/RemoveActions(mob/living/user, human_occupant = 0)
@@ -20,8 +20,8 @@
 	if(haslights)
 		lights_action.Grant(user, src)
 	stats_action.Remove(user)
-	if(canstrafe)
-		strafing_action.Grant(user, src)
+/*	if(canstrafe)
+		strafing_action.Grant(user, src)*/ #warn fix this!
 
 
 /datum/action/innate/mecha
@@ -47,7 +47,14 @@
 		return
 	if(!chassis || chassis.occupant != owner)
 		return
-	chassis.go_out()
+	chassis.is_currently_ejecting = TRUE
+	to_chat(owner, "<span class='notice'>You begin the ejection procedure. Equipment is disabled during this process. Hold still to finish ejecting.<span>")
+	if(do_after(chassis.occupant,chassis.exit_delay, target = chassis))
+		to_chat(owner, "<span class='notice'>You exit the mech.<span>")
+		chassis.go_out()
+	else
+		to_chat(owner, "<span class='notice'>You stop exiting the mech. Weapons are enabled again.<span>")
+	chassis.is_currently_ejecting = FALSE
 
 
 /datum/action/innate/mecha/mech_toggle_internals
@@ -176,26 +183,14 @@
 		chassis.occupant_message("<font color='[chassis.thrusters_active ?"blue":"red"]'>Thrusters [chassis.thrusters_active ?"en":"dis"]abled.")
 
 
-/datum/action/innate/mecha/mech_defence_mode
-	name = "Toggle Defence Mode"
+/datum/action/innate/mecha/mech_defense_mode
+	name = "Toggle an energy shield that blocks all attacks from the faced direction at a heavy power cost."
 	button_icon_state = "mech_defense_mode_off"
+	var/image/def_overlay
 
-/datum/action/innate/mecha/mech_defence_mode/Activate(forced_state = null)
-	if(!owner || !chassis || chassis.occupant != owner)
-		return
-	if(!isnull(forced_state))
-		chassis.defence_mode = forced_state
-	else
-		chassis.defence_mode = !chassis.defence_mode
-	button_icon_state = "mech_defense_mode_[chassis.defence_mode ? "on" : "off"]"
-	if(chassis.defence_mode)
-		chassis.deflect_chance = chassis.defence_mode_deflect_chance
-		chassis.occupant_message("<span class='notice'>You enable [chassis] defence mode.</span>")
-	else
-		chassis.deflect_chance = initial(chassis.deflect_chance)
-		chassis.occupant_message("<span class='danger'>You disable [chassis] defence mode.</span>")
-	chassis.mecha_log_message("Toggled defence mode.")
-	UpdateButtonIcon()
+/datum/action/innate/mecha/mech_defense_mode/Activate(forced_state = FALSE)
+	SEND_SIGNAL(chassis, COMSIG_MECHA_ACTION_ACTIVATE, args) ///Signal sent to the mech, to be handed to the shield. See durand.dm for more details
+
 
 /datum/action/innate/mecha/mech_overload_mode
 	name = "Toggle leg actuators overload"

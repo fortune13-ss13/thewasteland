@@ -260,7 +260,7 @@
 	gender = PLURAL
 	name = "\improper Marauder armor plates"
 	desc = "A set of armor plates for the Marauder. An encompassing plasteel-DU alloy designed to withstand extreme shock at the cost of mobility."
-	icon_state = "marauder_armor"
+	icon_state = "marauder_armour"
 
 ////////// Firefighter
 

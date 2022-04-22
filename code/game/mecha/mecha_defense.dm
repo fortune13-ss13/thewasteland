@@ -30,13 +30,13 @@
 	if(damage_flag == "bullet" || damage_flag == "laser" || damage_flag == "energy")
 		for(var/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster/B in equipment)
 			if(B.projectile_react())
-				booster_deflection_modifier = B.deflect_coeff
+//				booster_deflection_modifier = B.deflect_coeff
 				booster_damage_modifier = B.damage_coeff
 				break
 	else if(damage_flag == "melee")
 		for(var/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster/B in equipment)
 			if(B.attack_react())
-				booster_deflection_modifier *= B.deflect_coeff
+//				booster_deflection_modifier *= B.deflect_coeff
 				booster_damage_modifier *= B.damage_coeff
 				break
 
@@ -82,8 +82,8 @@
 		if(user.obj_damage)
 			animal_damage = user.obj_damage
 		animal_damage = min(animal_damage, 20*user.environment_smash)
-		attack_generic(user, animal_damage, user.melee_damage_type, "melee", play_soundeffect)
 		log_combat(user, src, "attacked")
+		attack_generic(user, animal_damage, user.melee_damage_type, "melee", play_soundeffect)
 		return 1
 
 

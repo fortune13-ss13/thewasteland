@@ -5,17 +5,17 @@
 	step_in = 2.5
 	dir_in = 1 //Facing North.
 	max_integrity = 300
-	deflect_chance = 5
 	force = 25
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 40, "energy" = 15, "bomb" = 15, "bio" = 0, "rad" = 65, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 40, "energy" = 15, "bomb" = 15, "bio" = 0, "rad" = 65, "fire" = 100, "acid" = 100)
 	max_temperature = 25000
 	infra_luminosity = 6
 	wreckage = /obj/structure/mecha_wreckage/gygax
 	internal_damage_threshold = 20
 	max_equip = 4
 	step_energy_drain = 5
-	canstrafe = TRUE
+//	canstrafe = TRUE
 //	leg_overload_coeff = 300
+	allow_diagonal_movement = TRUE
 
 /obj/mecha/combat/gygax/dark // Adminbus.
 	desc = "A lightweight exosuit, painted in a dark scheme. This model appears to have some modifications."
@@ -24,7 +24,7 @@
 	max_integrity = 400
 	deflect_chance = 20
 	force = 30
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 60, "energy" = 40, "bomb" = 30, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 60, "energy" = 40, "bomb" = 30, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
 	max_temperature = 35000
 //	leg_overload_coeff = 100
 	wreckage = /obj/structure/mecha_wreckage/gygax/dark
