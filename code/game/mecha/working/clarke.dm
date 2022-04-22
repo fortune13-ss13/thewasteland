@@ -5,7 +5,7 @@
 	icon_state = "clarke"
 	max_temperature = 65000
 	max_integrity = 300
-	step_in = 2.5
+	step_in = 2
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	lights_power = 7
 	deflect_chance = 10
@@ -13,7 +13,7 @@
 	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 10, "bomb" = 60, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
 	max_equip = 5
 	wreckage = /obj/structure/mecha_wreckage/clarke
-	canstrafe = FALSE
+	canstrafe = TRUE
 	/// Handles an internal ore box for Clarke
 	var/obj/structure/ore_box/box
 

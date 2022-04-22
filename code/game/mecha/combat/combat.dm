@@ -9,3 +9,13 @@
 		if(istype(I, /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/))
 			var/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/gun = I
 			gun.projectiles_cache = gun.projectiles_cache_max
+
+/obj/mecha/combat/GrantActions(mob/living/user, human_occupant = 0)
+	..()
+	smoke_action.Grant(user, src)
+	zoom_action.Grant(user, src)
+
+/obj/mecha/combat/RemoveActions(mob/living/user, human_occupant = 0)
+	..()
+	smoke_action.Remove(user)
+	zoom_action.Remove(user)

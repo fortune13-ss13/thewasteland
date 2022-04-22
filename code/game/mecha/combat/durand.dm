@@ -6,11 +6,13 @@
 	dir_in = 1 //Facing North.
 	max_integrity = 400
 	deflect_chance = 20
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 20, "energy" = 15, "bomb" = 20, "bio" = 0, "rad" = 65, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 20, "energy" = 15, "bomb" = 20, "bio" = 0, "rad" = 65, "fire" = 100, "acid" = 100)
 	max_temperature = 30000
+	step_energy_drain = 20
 	infra_luminosity = 8
 	force = 40
 	max_equip = 4
+	canstrafe = TRUE
 	wreckage = /obj/structure/mecha_wreckage/durand
 
 /obj/mecha/combat/durand/GrantActions(mob/living/user, human_occupant = 0)
