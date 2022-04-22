@@ -45,7 +45,7 @@
 	if(!can_be_reached())
 		return
 	return ..()
-
+/*
 /mob/living/mech_melee_attack(obj/mecha/mecha_attacker, mob/user)
 	if(user.a_intent == INTENT_HARM)
 		if(HAS_TRAIT(user, TRAIT_PACIFISM))
@@ -77,7 +77,7 @@
 		visible_message("<span class='warning'>[mecha_attacker] pushes [src] out of the way.</span>", \
 						"<span class='warning'>[mecha_attacker] pushes you out of the way.</span>", "<span class='hear'>You hear aggressive shuffling!</span>", 5, list(mecha_attacker))
 		to_chat(mecha_attacker, "<span class='danger'>You push [src] out of the way.</span>")
-
+/**/
 /mob/living/carbon/human/mech_melee_attack(obj/mecha/mecha_attacker, mob/user)
 	if(user.a_intent == INTENT_HARM)
 		if(HAS_TRAIT(user, TRAIT_PACIFISM))
@@ -115,3 +115,4 @@
 		log_combat(user, src, "attacked", mecha_attacker, "(INTENT: [uppertext(user.a_intent)]) (DAMTYPE: [uppertext(mecha_attacker.damtype)])")
 	else
 		return ..()
+*/

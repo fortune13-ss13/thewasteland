@@ -18,6 +18,8 @@
 // /obj/mecha signals
 #define COMSIG_MECHA_ACTION_ACTIVATE "mecha_action_activate"	//sent from mecha action buttons to the mecha they're linked to
 
+// End shield
+
 /obj/mecha
 	name = "mecha"
 	desc = "Exosuit"
@@ -58,8 +60,8 @@
 	var/dna_lock //dna-locking the mech
 	var/list/proc_res = list() //stores proc owners, like proc_res["functionname"] = owner reference
 	var/datum/effect_system/spark_spread/spark_system = new
-	var/lights = TRUE
-	var/lights_power = 6
+	var/lights = FALSE
+	var/lights_power = 7
 	var/last_user_hud = 1 // used to show/hide the mecha hud while preserving previous preference
 	var/completely_disabled = FALSE //stops the mech from doing anything
 	var/breach_time = 0
@@ -97,8 +99,8 @@
 	var/melee_cooldown = 10
 	var/melee_can_hit = 1
 
-	var/exit_delay = 20 //Time to exit mech
-	var/destruction_sleep_duration = 20 //Time that mech pilot is put to sleep for if mech is destroyed
+	var/exit_delay = 40 //Time to exit mech
+	var/destruction_sleep_duration = 30 //Time that mech pilot is put to sleep for if mech is destroyed
 	var/enter_delay = 40 //Time taken to enter the mech
 
 	var/is_currently_ejecting = FALSE //Mech cannot use equiptment when true, set to true if pilot is trying to exit mech
@@ -131,9 +133,10 @@
 	var/phasing_energy_drain = 200
 	var/phase_state = "" //icon_state when phasing
 	var/strafe = FALSE //If we are strafing
-//	var/canstrafe = FALSE //if we can turn on strafing
-	var/haslights = TRUE //if we can turn on lights
 	var/defense_mode = FALSE
+
+	var/canstrafe = FALSE //if we can turn on strafing
+	var/haslights = TRUE //if we can turn on lights
 
 	var/nextsmash = 0
 	var/smashcooldown = 3	//deciseconds
@@ -412,6 +415,9 @@
 	if(lights)
 		var/lights_energy_drain = 2
 		use_power(lights_energy_drain)
+
+
+#warn fix this!!11
 
 //Diagnostic HUD updates
 	diag_hud_set_mechhealth()

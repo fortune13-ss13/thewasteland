@@ -1,6 +1,8 @@
 /obj/mecha/working
 	internal_damage_threshold = 40
 	exit_delay = 10
+	enter_delay = 20
+	deflect_chance = 0 // soft removal until someone reworks it properly
 
 /obj/mecha/working/Move()
 	. = ..()
