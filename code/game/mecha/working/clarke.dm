@@ -1,6 +1,6 @@
 ///Lavaproof, fireproof, fast mech with low armor and higher energy consumption, cannot strafe and has an internal ore box.
 /obj/mecha/working/clarke
-	desc = "Combining man and machine for a better, stronger engineer. Can even resist lava!"
+	desc = "A pre-War design by Vault-Tec to protect workers in hazardous post-War conditions. This model features an internal ore-box to minimize an operator's contact to the environment."
 	name = "\improper Clarke"
 	icon_state = "clarke"
 	max_temperature = 65000
@@ -9,7 +9,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	lights_power = 7
 	step_energy_drain = 15 //slightly higher energy drain since you movin those wheels FAST
-	armor = list("melee" = 30, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 35, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
 	max_equip = 5
 	wreckage = /obj/structure/mecha_wreckage/clarke
 //	canstrafe = TRUE

@@ -6,11 +6,10 @@
 	internals_action.Grant(user, src)
 	cycle_action.Grant(user, src)
 	if(haslights)
-		lights_action.Remove(user)
+		lights_action.Grant(user, src)
 	stats_action.Grant(user, src)
-/*	if(canstrafe)
-		strafing_action.Remove(user)*/ #warn fix this!
-
+	if(canstrafe)
+		strafing_action.Grant(user, src)
 
 /obj/mecha/proc/RemoveActions(mob/living/user, human_occupant = 0)
 	if(human_occupant)
@@ -18,11 +17,10 @@
 	internals_action.Remove(user)
 	cycle_action.Remove(user)
 	if(haslights)
-		lights_action.Grant(user, src)
+		lights_action.Remove(user)
 	stats_action.Remove(user)
-/*	if(canstrafe)
-		strafing_action.Grant(user, src)*/ #warn fix this!
-
+	if(canstrafe)
+		strafing_action.Remove(user)
 
 /datum/action/innate/mecha
 	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUN | AB_CHECK_CONSCIOUS
@@ -155,7 +153,7 @@
 
 /obj/mecha/AltClick(mob/living/user)
 	. = ..()
-	if((user == occupant) && user.canUseTopic(src))
+	if((user == occupant) && user.canUseTopic(src) && canstrafe == TRUE)
 		toggle_strafe()
 		return TRUE
 

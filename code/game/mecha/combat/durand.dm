@@ -1,5 +1,5 @@
 /obj/mecha/combat/durand
-	desc = "An aging combat exosuit utilized by the Nanotrasen corporation. Originally developed to combat hostile alien lifeforms."
+	desc = "An aging combat exosuit utilized by the Vault-Tec corporation. A pre-War design, developed by Vault-Tec to combat post-War threats. It seems to have an experimental shield projector installed to minimize damage to the exosuit."
 	name = "\improper Durand"
 	icon_state = "durand"
 	step_in = 4
@@ -11,7 +11,7 @@
 	infra_luminosity = 8
 	force = 40
 	max_equip = 4
-//	canstrafe = TRUE
+	canstrafe = TRUE
 	wreckage = /obj/structure/mecha_wreckage/durand
 
 	var/obj/durand_shield/shield
@@ -135,6 +135,7 @@ own integrity back to max. Shield is automatically dropped if we run out of powe
 	obj_integrity = 10000
 	var/obj/mecha/combat/durand/chassis ///Our link back to the durand
 	var/switching = FALSE ///To keep track of things during the animation
+	anchored = TRUE
 
 /obj/durand_shield/Initialize()
 	. = ..()
@@ -191,7 +192,7 @@ the shield is disabled by means other than the action button (like running out o
 		return
 	. = ..()
 	flick("shield_impact", src)
-	if(!chassis.use_power((max_integrity - obj_integrity) * 100))
+	if(!chassis.use_power((max_integrity - obj_integrity) * 35))
 		chassis.cell?.charge = 0
 		chassis.defense_action.Activate(forced_state = TRUE)
 	obj_integrity = 10000
