@@ -315,12 +315,12 @@
 
 /obj/item/projectile/beam/laser/lasgun/hitscan/mech/heavy
 	name = "heavy laser beam"
-	damage = 35
+	damage = 40
 	armour_penetration = 0.30
 
 /obj/item/projectile/beam/laser/lasgun/hitscan/mech/pulse
 	name = "charged pulse beam"
-	damage = 30
+	damage = 35
 	armour_penetration = 0.50
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
