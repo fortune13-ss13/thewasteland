@@ -310,17 +310,13 @@
 
 	switch (severity)
 		if (EXPLODE_DEVASTATE)
-			/*if(bomb_armor < EXPLODE_GIB_THRESHOLD) //gibs the mob if their bomb armor is lower than EXPLODE_GIB_THRESHOLD
-				for(var/I in contents)
-					var/atom/A = I
-					if(!QDELETED(A))
-						A.ex_act(severity)
-				gib()
-				return*/
-			brute_loss = 150
-			var/atom/throw_target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
-			throw_at(throw_target, 200, 4)
+			brute_loss = 120
+			burn_loss = 80
 			damage_clothes(400 - bomb_armor, BRUTE, "bomb")
+			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
+				adjustEarDamage(60, 120)
+			var/atom/throw_target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
+			throw_at(throw_target, 200, 5)
 
 		if (EXPLODE_HEAVY)
 			brute_loss = 60
@@ -330,18 +326,21 @@
 				burn_loss = 20*(2 - round(bomb_armor*0.01, 0.05))				//damage gets reduced from 120 to up to 60 combined brute+burn
 			damage_clothes(200 - bomb_armor, BRUTE, "bomb")
 			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
-				adjustEarDamage(30, 120)
+				adjustEarDamage(30, 60)
 			var/atom/throw_target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
 			throw_at(throw_target, 50, 4)
+			Knockdown((100 - (bomb_armor * 2)) / 4)
 			adjustStaminaLoss(brute_loss)
 
 		if(EXPLODE_LIGHT)
 			brute_loss = 30
+			burn_loss = 15
 			if(bomb_armor)
-				brute_loss = 11*(2 - round(bomb_armor*0.01, 0.05))
+				brute_loss = 15*(2 - round(bomb_armor*0.01, 0.05))
+				brute_loss = 7*(2 - round(bomb_armor*0.01, 0.05))
 			damage_clothes(max(50 - bomb_armor, 0), BRUTE, "bomb")
 			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
-				adjustEarDamage(15,60)
+				adjustEarDamage(15,30)
 			Knockdown((100 - (bomb_armor * 3)) / 4)		//30ish bomb armor prevents knockdown entirely
 			adjustStaminaLoss(brute_loss / 3)
 
