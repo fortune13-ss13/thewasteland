@@ -212,8 +212,8 @@ Mayor
 	outfit = /datum/outfit/job/den/f13sheriff
 
 	loadout_options = list(
-	/datum/outfit/loadout/thelaw,
-	/datum/outfit/loadout/thechief,
+	/datum/outfit/loadout/dakka,
+	/datum/outfit/loadout/pew,
 	)
 
 	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
@@ -251,8 +251,8 @@ Mayor
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		)
 
-/datum/outfit/loadout/thelaw
-	name = "The Law Man"
+/datum/outfit/loadout/dakka
+	name = "Door kicker"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m5mm = 2,
@@ -260,8 +260,8 @@ Mayor
 		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1,
 		)
 
-/datum/outfit/loadout/thechief
-	name = "The Chief"
+/datum/outfit/loadout/pew
+	name = "Tactical"
 	suit_store = /obj/item/gun/energy/laser/aer9/oasis
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
@@ -296,11 +296,11 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13deputy
-	name = "Officer"
+	title = "Officer"
 	flag = F13DEPUTY
 	department_flag = DEP_OASIS
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 5
+	spawn_positions = 5
 	supervisors = "Oasis Police Department"
 	description = "You've passed the training and tests to join the OPD, and your loyalty to the Chief is absolute - this is your new home, your family. This oasis of civilization will not fall as long as you breathe. Protect its citizens and property, for that is your new purpose."
 	selection_color = "#dcba97"
@@ -353,6 +353,7 @@ Mayor
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/ammo_box/shotgun/trainshot = 1,
 		/obj/item/flashlight/seclite = 1,
 		)
 
