@@ -425,7 +425,7 @@
 	id = "marauder_torso"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/part/marauder_torso
-	materials = list(/datum/material/iron=25000,/datum/material/plasma=10000,/datum/material/uranium=10000)
+	materials = list(/datum/material/iron=30000,/datum/material/plasma=10000,/datum/material/uranium=10000)
 	construction_time = 300
 	category = list("Marauder")
 
@@ -434,7 +434,7 @@
 	id = "marauder_head"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/part/marauder_head
-	materials = list(/datum/material/iron=10000,/datum/material/glass=15000,/datum/material/plasma=10000,/datum/material/uranium=4000)
+	materials = list(/datum/material/iron=15000,/datum/material/glass=15000,/datum/material/plasma=10000,/datum/material/uranium=4000)
 	construction_time = 200
 	category = list("Marauder")
 
@@ -443,7 +443,7 @@
 	id = "marauder_left_arm"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/part/marauder_left_arm
-	materials = list(/datum/material/iron=10000,/datum/material/uranium=6000)
+	materials = list(/datum/material/iron=15000,/datum/material/uranium=8000,/datum/material/plasma=6000)
 	construction_time = 200
 	category = list("Marauder")
 
@@ -452,7 +452,7 @@
 	id = "marauder_right_arm"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/part/marauder_right_arm
-	materials = list(/datum/material/iron=10000,/datum/material/uranium=6000)
+	materials = list(/datum/material/iron=15000,/datum/material/uranium=8000,/datum/material/plasma=6000)
 	construction_time = 200
 	category = list("Marauder")
 
@@ -461,7 +461,7 @@
 	id = "marauder_left_leg"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/part/marauder_left_leg
-	materials = list(/datum/material/iron=15000,/datum/material/uranium=6000)
+	materials = list(/datum/material/iron=15000,/datum/material/uranium=8000,/datum/material/plasma=6000)
 	construction_time = 200
 	category = list("Marauder")
 
@@ -470,7 +470,7 @@
 	id = "marauder_right_leg"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/part/marauder_right_leg
-	materials = list(/datum/material/iron=15000,/datum/material/uranium=6000)
+	materials = list(/datum/material/iron=15000,/datum/material/uranium=8000,/datum/material/plasma=6000)
 	construction_time = 200
 	category = list("Marauder")
 
@@ -479,7 +479,7 @@
 	id = "marauder_armor"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/part/marauder_armor
-	materials = list(/datum/material/iron=30000,/datum/material/uranium=25000,/datum/material/plasma=20000)
+	materials = list(/datum/material/iron=35000,/datum/material/uranium=25000,/datum/material/plasma=20000)
 	construction_time = 600
 	category = list("Marauder")
 
