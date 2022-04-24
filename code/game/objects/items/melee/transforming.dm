@@ -92,8 +92,8 @@
 /obj/item/melee/transforming/old_rusty
 	name = "Old Rusty"
 	desc = "A chosen weapon of a hunter made in the image of a cleaving saw but heavily improvised"
-	force = 15
-	force_on = 30 //force when active
+	force = 25
+	force_on = 45 //force when active
 	throwforce = 20
 	throwforce_on = 20
 	max_reach = 1
