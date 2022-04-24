@@ -297,7 +297,6 @@ Mayor
 
 /datum/job/oasis/f13deputy
 	name = "Officer"
-	jobtype = /datum/job/oasis/f13deputy
 	flag = F13DEPUTY
 	department_flag = DEP_OASIS
 	total_positions = 6
