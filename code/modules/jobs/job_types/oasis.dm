@@ -309,6 +309,26 @@ Mayor
 	exp_type = EXP_TYPE_OASIS
 	exp_requirements = 600
 
+	loadout_options = list(
+	/datum/outfit/loadout/standardpd,
+	/datum/outfit/loadout/police,
+	/datum/outfit/loadout/swat,)
+
+	outfit = /datum/outfit/job/oasis/f13deputy
+	access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+
+/datum/outfit/job/oasis/f13deputy
+	name = "Officer"
+	jobtype = /datum/job/oasis/f13deputy
 	ears = /obj/item/radio/headset/headset_town
 	id = /obj/item/card/id/dogtag/deputy
 	backpack = /obj/item/storage/backpack/satchel/explorer
