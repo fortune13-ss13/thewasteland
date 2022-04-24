@@ -20,7 +20,7 @@
 	flags = IGNORE_NOSLOW
 
 /datum/movespeed_modifier/ghoulhealone
-	multiplicative_slowdown = 0.4
+	multiplicative_slowdown = 0.5
 
 /datum/movespeed_modifier/ghoulhealtwo
 	multiplicative_slowdown = 0.8
