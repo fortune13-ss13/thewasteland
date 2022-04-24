@@ -242,7 +242,7 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 
 GLOBAL_LIST_INIT(security_positions, list(
 	"Vault-tec Security",
-	"Deputy",
+	"Officer",
 ))
 GLOBAL_LIST_INIT(silicon_positions, list(
 	"Mr. Handy",
