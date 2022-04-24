@@ -74,15 +74,10 @@
 		user.emote("custom", message = "[user.friendly_verb_continuous] [src].")
 		return 0
 	else
-		var/play_soundeffect = 1
-		if(user.environment_smash)
-			play_soundeffect = 0
-			playsound(src, 'sound/effects/bang.ogg', 50, 1)
-//		var/animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
-//			animal_damage = user.obj_damage * 0.7
-//		animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
+		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 		log_combat(user, src, "attacked")
-		attack_generic(user, rand(user.melee_damage_lower, user.melee_damage_upper), "melee", play_soundeffect)
+		var/animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
+		attack_generic(user, animal_damage, user.melee_damage_type, "melee")
 		return 1
 
 
