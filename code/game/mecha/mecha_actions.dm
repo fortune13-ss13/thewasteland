@@ -111,7 +111,6 @@
 			UpdateButtonIcon()
 			return
 
-
 /datum/action/innate/mecha/mech_toggle_lights
 	name = "Toggle Lights"
 	button_icon_state = "mech_lights_off"

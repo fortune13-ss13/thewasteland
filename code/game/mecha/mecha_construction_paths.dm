@@ -2140,8 +2140,10 @@
 		/obj/item/mecha_parts/part/clarke_torso,
 		/obj/item/mecha_parts/part/clarke_left_arm,
 		/obj/item/mecha_parts/part/clarke_right_arm,
-		/obj/item/mecha_parts/part/ripley_left_leg
+		/obj/item/mecha_parts/part/clarke_left_tread,
+		/obj/item/mecha_parts/part/clarke_right_tread
 	)
+
 /datum/component/construction/mecha/clarke
 	result = /obj/mecha/working/clarke
 	base_icon = "clarke"

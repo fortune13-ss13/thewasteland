@@ -604,6 +604,24 @@
 	construction_time = 150
 	category = list("Clarke")
 
+/datum/design/clarke_left_tread
+	name = "Exosuit Left Tread (\"Clarke\")"
+	id = "clarke_left_tread"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/clarke_left_tread
+	materials = list(/datum/material/iron=15000)
+	construction_time = 150
+	category = list("Clarke")
+
+/datum/design/clarke_right_tread
+	name = "Exosuit Right Tread (\"Clarke\")"
+	id = "clarke_right_tread"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/clarke_right_tread
+	materials = list(/datum/material/iron=15000)
+	construction_time = 150
+	category = list("Clarke")
+
 //Exosuit Equipment
 /datum/design/mech_hydraulic_clamp
 	name = "Exosuit Engineering Equipment (Hydraulic Clamp)"

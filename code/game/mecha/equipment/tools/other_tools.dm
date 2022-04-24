@@ -146,7 +146,7 @@
 	energy_drain = 75
 	range = 0
 //	var/deflect_coeff = 1
-	var/damage_coeff = 0.7
+	var/damage_coeff = 0.75
 	selectable = 0
 
 /obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster/proc/attack_react()
@@ -162,7 +162,7 @@
 	energy_drain = 75
 	range = 0
 //	var/deflect_coeff = 1
-	var/damage_coeff = 0.7
+	var/damage_coeff = 0.75
 	selectable = 0
 
 /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster/proc/projectile_react()
