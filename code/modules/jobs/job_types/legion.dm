@@ -779,8 +779,8 @@ commented out pending rework*/
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		)
 
-/datum/outfit/loadout/vetshielder
-	name = "Enforcer"
+/datum/outfit/loadout/vetmchammer
+	name = "Hammertime"
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
 		/obj/item/melee/unarmed/maceglove = 1,
