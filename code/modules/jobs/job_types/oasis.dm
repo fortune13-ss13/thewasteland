@@ -335,23 +335,19 @@ Mayor
 	backpack_contents = list(
 		/obj/item/attachments/scope = 1,
 		/obj/item/ammo_box/a762 = 3,
-		/obj/item/flashlight/seclite = 1,
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
 
 /datum/outfit/loadout/swat
 	name = "S.W.A.T. Officer"
 	uniform = /obj/item/clothing/under/f13/police/swat
-	suit = /obj/item/clothing/suit/armor/bulletproof
 	head = /obj/item/clothing/head/helmet/alt
 	mask = /obj/item/clothing/mask/balaclava
 	neck = /obj/item/storage/belt/holster/legholster
 	gloves = /obj/item/clothing/gloves/f13/military
-	shoes = /obj/item/clothing/shoes/jackboots
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m5mm = 1,
-		/obj/item/flashlight/seclite = 1,
 		)
 
 /datum/outfit/job/den/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
