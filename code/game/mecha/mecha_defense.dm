@@ -78,12 +78,11 @@
 		if(user.environment_smash)
 			play_soundeffect = 0
 			playsound(src, 'sound/effects/bang.ogg', 50, 1)
-		var/animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
-		if(user.obj_damage)
-			animal_damage = user.obj_damage
-		animal_damage = min(animal_damage, 20*user.environment_smash)
+//		var/animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
+//			animal_damage = user.obj_damage * 0.7
+//		animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
 		log_combat(user, src, "attacked")
-		attack_generic(user, animal_damage, user.melee_damage_type, "melee", play_soundeffect)
+		attack_generic(user, rand(user.melee_damage_lower, user.melee_damage_upper), "melee", play_soundeffect)
 		return 1
 
 

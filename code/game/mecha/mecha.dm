@@ -45,7 +45,6 @@
 	max_integrity = 300 //max_integrity is base health
 	move_force = MOVE_FORCE_VERY_STRONG
 	move_resist = MOVE_FORCE_EXTREMELY_STRONG
-	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_range = 9
 	var/deflect_chance = 10 //chance to deflect the incoming projectiles, hits, or lesser the effect of ex_act.
 	armor = list("melee" = 20, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
@@ -415,9 +414,6 @@
 	if(lights)
 		var/lights_energy_drain = 2
 		use_power(lights_energy_drain)
-
-
-#warn fix this!!11
 
 //Diagnostic HUD updates
 	diag_hud_set_mechhealth()

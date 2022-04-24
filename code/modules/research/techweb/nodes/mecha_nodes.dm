@@ -29,7 +29,7 @@
 	display_name = "EXOSUIT: Clarke"
 	description = "Clarke exosuit designs"
 	prereq_ids = list("robotics")
-	design_ids = list("clarke_chassis", "clarke_torso", "clarke_head", "clarke_left_arm", "clarke_right_arm", "clarke_main", "clarke_peri")
+	design_ids = list("clarke_chassis", "clarke_torso", "clarke_head", "clarke_left_arm", "clarke_right_arm", "clarke_left_tread", "clarke_right_tread", "clarke_main", "clarke_peri")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /*
