@@ -298,6 +298,16 @@ Mayor
 /datum/job/oasis/f13deputy
 	name = "Officer"
 	jobtype = /datum/job/oasis/f13deputy
+	flag = F13DEPUTY
+	department_flag = DEP_OASIS
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "Oasis Police Department"
+	description = "You've passed the training and tests to join the OPD, and your loyalty to the Chief is absolute - this is your new home, your family. This oasis of civilization will not fall as long as you breathe. Protect its citizens and property, for that is your new purpose."
+	selection_color = "#dcba97"
+	exp_requirements = 12
+	exp_type = EXP_TYPE_OASIS
+	exp_requirements = 600
 
 	ears = /obj/item/radio/headset/headset_town
 	id = /obj/item/card/id/dogtag/deputy
