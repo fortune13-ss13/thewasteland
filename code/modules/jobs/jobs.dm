@@ -146,7 +146,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 GLOBAL_LIST_INIT(oasis_positions, list(
 	"Mayor",
 	"Secretary",
-	"Sheriff",
+	"Chief of Police",
 	"Doctor",
 	"Citizen",
 	"Officer",
