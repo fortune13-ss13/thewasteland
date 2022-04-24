@@ -427,9 +427,9 @@
 /obj/item/mecha_parts/part/clarke_left_tread
 	name = "\improper Clarke right arm"
 	desc = "A Clarke right arm. Data and power sockets are compatible with most exosuit tools."
-	icon_state = "clarke_r_arm"
+	icon_state = "clarke_l_tread"
 
 /obj/item/mecha_parts/part/clarke_right_tread
 	name = "\improper Clarke right arm"
 	desc = "A Clarke right arm. Data and power sockets are compatible with most exosuit tools."
-	icon_state = "clarke_r_arm"
+	icon_state = "clarke_r_tread"
