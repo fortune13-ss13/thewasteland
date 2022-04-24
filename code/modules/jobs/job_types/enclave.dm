@@ -188,7 +188,7 @@
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/enclavesgt
 	suit = /obj/item/clothing/suit/armor/f13/combat/mk2/remnant
-	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle
+	suit_store = /obj/item/gun/energy/laser/aer9
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 
@@ -198,7 +198,7 @@
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/clothing/head/f13/enclave/peacekeeper = 1,
 		)
 
@@ -281,14 +281,14 @@
 	jobtype = /datum/job/enclave/enclavespy
 	head = /obj/item/clothing/head/helmet/f13/combat/swat
 	suit = /obj/item/clothing/suit/armor/f13/combat/swat
-	suit_store =  /obj/item/gun/ballistic/automatic/assault_carbine/worn
+	suit_store =  /obj/item/gun/energy/laser/aer9
 	accessory = /obj/item/clothing/accessory/enclave/private_firstclass
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/pda = 1,
-		/obj/item/ammo_box/magazine/m5mm = 2,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
@@ -321,7 +321,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
 		/obj/item/pda = 1,
-		/obj/item/gun/energy/gammagun = 1,
+		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
@@ -429,13 +429,13 @@
 // Enclave Citizen
 // Really only used for ID console
 /datum/job/enclave/f13enclavecitizen
-	title = "American Citizen"
+	title = "U.S. Citizen"
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/enclave/f13enclavecitizen
 
 /datum/outfit/job/enclave/f13enclavecitizen
-	name = "American Citizen (Role)"
+	name = "U.S. Citizen (Role)"
 	uniform = /obj/item/clothing/under/f13/vault13
 	shoes = /obj/item/clothing/shoes/jackboots
 	id = /obj/item/card/id/dogtag/town/enclave
