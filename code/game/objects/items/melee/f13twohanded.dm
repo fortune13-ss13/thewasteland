@@ -38,7 +38,7 @@
 	name = "War Honed Axe"
 	desc = "Heavy fireman axe from the old world, Restored to working order by legion craftsmen. Excellent for smashing doors or heads."
 	icon_state = "legionaxe"
-	icon_prefix = "fireaxe"
+	icon_prefix = "legionaxe"
 	force = 30
 	throwforce = 15
 	wound_bonus = 20
