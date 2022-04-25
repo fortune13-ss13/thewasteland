@@ -99,7 +99,7 @@
 	var/melee_can_hit = 1
 
 	var/exit_delay = 40 //Time to exit mech
-	var/destruction_sleep_duration = 30 //Time that mech pilot is put to sleep for if mech is destroyed
+	var/destruction_sleep_duration = 40 //Time that mech pilot is put to sleep for if mech is destroyed
 	var/enter_delay = 40 //Time taken to enter the mech
 
 	var/is_currently_ejecting = FALSE //Mech cannot use equiptment when true, set to true if pilot is trying to exit mech
