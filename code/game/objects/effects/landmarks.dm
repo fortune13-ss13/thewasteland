@@ -754,10 +754,11 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/sheriff
 	name = "Chief of Police"
-	icon_state = "Sheriff"
+	icon_state = "Chief of Police"
 
 /obj/effect/landmark/start/f13/deputy
 	name = "Officer"
+	icon_state = "Officer"
 
 /obj/effect/landmark/start/f13/farmer
 	name = "Farmer"
