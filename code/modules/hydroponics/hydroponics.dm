@@ -65,12 +65,12 @@
 	if(in_range(user, src) || isobserver(user))
 		. += "<span class='notice'>The status display reads: Tray efficiency at <b>[rating*100]%</b>.</span>"
 
-
 /obj/machinery/hydroponics/Destroy()
 	if(myseed)
 		qdel(myseed)
 		myseed = null
 		STOP_PROCESSING(SSplants, src)
+	GLOB.plant_bins -= src
 	return ..()
 
 /obj/machinery/hydroponics/constructable/attackby(obj/item/I, mob/user, params)
