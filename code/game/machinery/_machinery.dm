@@ -141,15 +141,13 @@ Class Procs:
 	var/obj/machinery/hydroponics/T = src
 	if(!istype(T))
 		GLOB.machines += src
-
-		if(ispath(circuit, /obj/item/circuitboard))
-			circuit = new circuit
-			circuit.apply_default_parts(src)
 		if(!speed_process && init_process)
 			START_PROCESSING(SSmachines, src)
 		else
 			START_PROCESSING(SSfastprocess, src)
-
+	if(ispath(circuit, /obj/item/circuitboard))
+		circuit = new circuit
+		circuit.apply_default_parts(src)
 	power_change()
 	RegisterSignal(src, COMSIG_ENTER_AREA, .proc/power_change)
 
