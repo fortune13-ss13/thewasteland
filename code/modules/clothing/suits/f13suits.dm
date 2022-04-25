@@ -310,7 +310,7 @@
 	slowdown = 0.2
 
 //Battlecoat/Goji
-/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/Goji
+/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat/goji
 	name = "Golden Geckoskin jacket"
 	desc = "Heavy Geckoskin jacket lined with a bulletproof lining on the inside. On the back the symbol of the Great Khans is displayed proudly."
 	icon_state = "GojiSuit"
