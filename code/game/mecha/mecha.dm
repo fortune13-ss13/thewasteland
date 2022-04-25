@@ -125,7 +125,7 @@
 	var/leg_overload_mode = FALSE
 	var/leg_overload_coeff = 100
 	var/zoom_mode = FALSE
-	var/smoke
+	var/smoke = 1
 	var/smoke_ready = 1
 	var/smoke_cooldown = 100
 	var/phasing = FALSE
@@ -189,7 +189,7 @@
 			M.forceMove(loc)
 	if(wreckage)
 		if(prob(30))
-			explosion(get_turf(src), 0, 0, 1, 3)
+			explosion(get_turf(src), 0, 0, 2, 3)
 		var/obj/structure/mecha_wreckage/WR = new wreckage(loc, AI)
 		for(var/obj/item/mecha_parts/mecha_equipment/E in equipment)
 			if(E.salvageable && prob(30))

@@ -25,7 +25,6 @@
 /obj/structure/nest/Initialize()
 	. = ..()
 	GLOB.mob_nests += src
-
 /obj/structure/nest/Destroy()
 	GLOB.mob_nests -= src
 	visible_message("[src] collapses!")
@@ -59,7 +58,6 @@
 	if(spawn_once) //if the subtype has TRUE, call destroy() after we spawn our first mob
 		Destroy()
 		return
-
 
 /obj/structure/nest/proc/toggle_fire(fire = TRUE)
 	can_fire = fire

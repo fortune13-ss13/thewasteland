@@ -106,12 +106,11 @@
 		if(BRUTE)
 			playsound(src, 'sound/weapons/punch4.ogg', 50, 1)
 			visible_message("<span class='danger'>[M.name] has hit [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
-			if(M.force >= hardness/0.7)
+			if(M.force >= hardness*0.8)
 				dismantle_wall(1)
 				playsound(src, 'sound/effects/meteorimpact.ogg', 100, 1)
 			else
 				add_dent(WALL_DENT_HIT)
-				to_chat("<span class='warning'>The [src] is too durable to break through!</span>")
 		if(BURN)
 			playsound(src, 'sound/items/welder.ogg', 100, 1)
 		if(TOX)
