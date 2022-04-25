@@ -216,11 +216,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	loadout_options = list(
 		/datum/outfit/loadout/palacent,		// 10mm SMG, CQC, Goliath
 		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, AMR, Spatha
-<<<<<<< Updated upstream
 		/datum/outfit/loadout/centurion,	// CQC, hunting revolver
-=======
 		/datum/outfit/loadout/centurion,	// M1919
->>>>>>> Stashed changes
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -416,7 +413,7 @@ commented out pending rework*/
 
 	loadout_options = list(	//ALL: Gladius, smokebomb
 		/datum/outfit/loadout/decprimfront,	// 10mm SMG, .357 Revolver, lance, throwing kives
-		/datum/outfit/loadout/decprimrear,	// Trail carbine, Ballistic fist, 
+		/datum/outfit/loadout/decprimrear,	// Trail carbine, Ballistic fist,
 		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver, frags, coffepot bomb
 		)
 
@@ -744,7 +741,7 @@ commented out pending rework*/
 	exp_requirements = 600
 
 	loadout_options = list(	//ALL: Gladius
-		/datum/outfit/loadout/vetmchammer,	// SLEDGE AND FISTS AND NOTHING FUCKING ELSE
+		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
 		/datum/outfit/loadout/vetrifle,		// Trail gun, .357 Revolver
 		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
 		/datum/outfit/loadout/vetsmg, 		// Carl Gustaf, .357 Revolver
@@ -784,15 +781,10 @@ commented out pending rework*/
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		)
 
-<<<<<<< Updated upstream
-/datum/outfit/loadout/vetmchammer
-	name = "Hammertime"
-	suit_store = /obj/item/twohanded/sledgehammer/supersledge
-=======
-/datum/outfit/loadout/vetshielder
+
+/datum/outfit/loadout/vetaxe
 	name = "Enforcer"
 	suit_store = /obj/item/twohanded/legionaxe
->>>>>>> Stashed changes
 	backpack_contents = list(
 		/obj/item/melee/unarmed/maceglove = 1,
 		/obj/item/restraints/legcuffs/bola = 1,
