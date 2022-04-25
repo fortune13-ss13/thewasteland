@@ -24,8 +24,6 @@
 	name = "Avery Amadeus' belongings"
 	path = /obj/item/storage/box/large/custom_kit/averyamadeus
 	ckeywhitelist = list("topbirb")
-
-
 */
 
 /obj/item/storage/box/large/custom_kit/cayce/PopulateContents()
@@ -74,7 +72,7 @@
 	new /obj/item/ammo_box/magazine/m556/rifle/assault(src)
 	new /obj/item/ammo_box/magazine/m556/rifle/assault(src)
 	new /obj/item/toy/figure/dsquad(src)
-	
+
 
 /datum/gear/donator/kits/canadian
 	name = "Canadian"
@@ -86,7 +84,7 @@
 	new /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert(src)
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/melee/onehanded/knife/survival(src)
-	
+
 
 /datum/gear/donator/kits/vaktus
 	name = "Vaks goods"
@@ -96,7 +94,15 @@
 /obj/item/storage/box/large/custom_kit/pug/PopulateContents()
 	new /obj/item/melee/transforming/cleaving_saw/old_rusty(src)
 
+/obj/item/storage/box/large/custom_kit/pug2/PopulateContents()
+	new /obj/item/melee/onehanded/dragonfire(src)
+
 /datum/gear/donator/kits/pug
 	name = "I die to mobs"
 	path = /obj/item/storage/box/large/custom_kit/pug
+	ckeywhitelist = list("puglord777")
+
+/datum/gear/donator/kits/pug2
+	name = "I die to mobsx2"
+	path = /obj/item/storage/box/large/custom_kit/pug2
 	ckeywhitelist = list("puglord777")
