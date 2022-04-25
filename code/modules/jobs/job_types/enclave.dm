@@ -191,7 +191,6 @@
 	jobtype = /datum/job/enclave/enclavesgt
 	suit = /obj/item/clothing/suit/armor/f13/combat/mk2/remnant
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
-	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 
 	backpack_contents = list(
@@ -212,7 +211,7 @@
 
 /datum/outfit/loadout/sgt_laser
 	name = "Laser Support"
-	suit_store = /obj/item/gun/energy/laser/aer12
+	suit_store = /obj/item/gun/energy/laser/aer9
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
 		)
