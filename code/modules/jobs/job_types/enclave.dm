@@ -307,6 +307,11 @@
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
 	exp_requirements = 2000
 
+	loadout_options = list(
+		/datum/outfit/loadout/gammagun
+		/datum/outfit/loadout/laserpistol
+		)
+
 /datum/outfit/job/enclave/noncombat/enclavesci
 	name = "Enclave Scientist"
 	jobtype = /datum/job/enclave/enclavesci
@@ -328,6 +333,19 @@
 		/obj/item/storage/survivalkit_aid_adv = 1,
 		/obj/item/clothing/head/beret/enclave/science = 1,
 		)
+
+/datum/outfit/loadout/gammagun
+	name = "Gamma Gun"
+	backpack_contents = list(
+		/obj/item/gun/energy/gammagun = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		)
+
+/datum/outfit/loadout/laserpistol
+	name = "Laser Pistol"
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
 
 /datum/outfit/job/enclave/noncombat/enclavesci/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
