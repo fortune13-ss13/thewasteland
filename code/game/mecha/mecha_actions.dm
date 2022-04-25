@@ -217,15 +217,15 @@
 	UpdateButtonIcon()
 
 /datum/action/innate/mecha/mech_smoke
-	name = "Smoke"
+	name = "Regenerative Smoke-shot"
 	button_icon_state = "mech_smoke"
 
 /datum/action/innate/mecha/mech_smoke/Activate()
 	if(!owner || !chassis || chassis.occupant != owner)
 		return
-	if(chassis.smoke_ready && chassis.smoke>0)
+	if(chassis.smoke_ready && chassis.smoke)
 		chassis.smoke_system.start()
-		chassis.smoke--
+//		chassis.smoke--
 		chassis.smoke_ready = 0
 		spawn(chassis.smoke_cooldown)
 			chassis.smoke_ready = 1
