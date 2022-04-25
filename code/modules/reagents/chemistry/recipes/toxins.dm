@@ -80,7 +80,7 @@
 	name = "Zombie Powder"
 	id = /datum/reagent/toxin/zombiepowder
 	results = list(/datum/reagent/toxin/zombiepowder = 2)
-	//required_reagents = list(/datum/reagent/toxin/carpotoxin = 5, /datum/reagent/medicine/morphine = 5, /datum/reagent/copper = 5)
+	required_reagents = list(/datum/reagent/toxin/carpotoxin = 5, /datum/reagent/medicine/morphine = 5, /datum/reagent/copper = 5)
 
 /datum/chemical_reaction/ghoulpowder
 	name = "Ghoul Powder"
@@ -132,5 +132,12 @@
 	name = "Felinid Mutation Toxin"
 	id = /datum/reagent/mutationtoxin/felinid
 	results = list(/datum/reagent/mutationtoxin/felinid = 5)
-	required_reagents = list (/datum/reagent/toxin/mutagen = 1, /datum/reagent/moonsugar = 2, /datum/reagent/cosumable/milk = 1)
+	required_reagents = list (/datum/reagent/toxin/mutagen = 1, /datum/reagent/moonsugar = 2, /datum/reagent/consumable/milk = 1)
 	mix_message = "<span class='danger'>Cat Kitty Cat Cat Kitty Cat Cat.</span>"
+
+/datum/chemical_reaction/spewium
+	name = "Spewium"
+	id = /datum/reagent/toxin/spewium
+	results = list(/datum/reagent/toxin/spewium = 5)
+	required_reagents = list (/datum/reagent/toxin/skewium = 1, /datum/reagent/consumable/ethanol/buffalo = 2, /datum/reagent/consumable/ethanol/yellowpulque = 2)
+	mix_message = "<span class='danger'>The mixture gives off a nauseating odor.</span>"
