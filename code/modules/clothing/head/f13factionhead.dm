@@ -254,6 +254,14 @@
 	item_state = "remnant_helmet"
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 
+// Lieutenant's hat
+/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+	name = "enclave officer hat"
+	desc = "Wheeled hat with a cap made of light-weight armored alloys beneath."
+	icon_state = "hat_enclave_officer"
+	item_state = "hat_enclave_officer"
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 55)
+
 
 //////////
 //LEGION//
@@ -1298,13 +1306,6 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "remnant_helmet"
 	item_state = "remnant_helmet"
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
-
-/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
-	name = "enclave officer hat"
-	desc = "Wheeled hat with a cap made of light-weight armored alloys beneath."
-	icon_state = "hat_enclave_officer"
-	item_state = "hat_enclave_officer"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 55)
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/forgecap
 	name = "enclave forge cap"
