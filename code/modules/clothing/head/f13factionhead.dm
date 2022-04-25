@@ -197,11 +197,6 @@
 	item_color = "enclave"
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
 
-/obj/item/clothing/head/f13/enclave/officer
-	name = "armored officer hat"
-	desc = "A standard-issue Enclave officer's cap with additional armor platings."
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 55)
-
 /obj/item/clothing/head/helmet/soft/f13/enclave/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
@@ -1306,10 +1301,10 @@ obj/item/clothing/head/f13/army/beret
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/officer
 	name = "enclave officer hat"
-	desc = "Wheeled hat with a cap made of light-weight alloys beneath."
+	desc = "Wheeled hat with a cap made of light-weight armored alloys beneath."
 	icon_state = "hat_enclave_officer"
 	item_state = "hat_enclave_officer"
-	armor = list("melee" = 27, "bullet" = 12, "laser" = 12, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 40)
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 55)
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/forgecap
 	name = "enclave forge cap"
@@ -1317,7 +1312,6 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "enclave_cap"
 	item_state = "enclave_cap"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 40) // On par with BoS Initiate
-
 
 /obj/item/clothing/head/helmet/f13/combat/enclave
 	name = "enclave combat helmet"
