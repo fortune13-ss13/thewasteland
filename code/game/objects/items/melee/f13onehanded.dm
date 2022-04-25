@@ -26,6 +26,27 @@
 // SWORDS //
 ////////////		-block, 34-39 damage
 
+/obj/item/melee/onehanded/dragonfire
+	name = "Dragonfire Katana"
+	desc = "After the world ended, seppuku rates in Japan skyrocketed, the owner of this one however is crazy enough to keep going!"
+	icon_state = "DFkatana"
+	item_state = "DFkatana"
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	flags_1 = CONDUCT_1
+	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
+	force = 40
+	throwforce = 10
+	w_class = WEIGHT_CLASS_BULKY
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	sharpness = SHARP_EDGED
+	max_integrity = 200
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
+	resistance_flags = FIRE_PROOF
+	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
+	armour_penetration = 0.10
+
 /obj/item/melee/onehanded/machete
 	name = "simple machete"
 	desc = "A makeshift machete made of a lawn mower blade."
@@ -34,7 +55,6 @@
 	force = 34
 	block_chance = 7
 	throwforce = 20
-	wound_bonus = 10
 	sharpness = SHARP_EDGED
 
 /obj/item/melee/onehanded/machete/forgedmachete
@@ -42,7 +62,6 @@
 	desc = "A forged machete made of high quality steel."
 	icon_state = "machete"
 	force = 35
-	wound_bonus = 20
 	block_chance = 8
 
 /obj/item/melee/onehanded/machete/training
@@ -51,14 +70,13 @@
 	icon_state = "machete_training"
 	force = 1
 	throwforce = 5
-	wound_bonus = -20
 	block_chance = 8
 
 /obj/item/melee/onehanded/machete/training/attack(mob/living/M, mob/living/user)
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
+	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
 /obj/item/melee/onehanded/machete/gladius
 	name = "gladius"
@@ -66,7 +84,6 @@
 	icon_state = "gladius"
 	item_state = "gladius"
 	force = 36
-	wound_bonus = 30
 	block_chance = 10
 
 /obj/item/melee/onehanded/machete/spatha
@@ -75,7 +92,6 @@
 	icon_state = "spatha"
 	item_state = "spatha"
 	force = 38
-	wound_bonus = 30
 	block_chance = 18
 
 /obj/item/melee/onehanded/machete/spatha/longblade
@@ -105,6 +121,8 @@
 	throwforce = 35
 	armour_penetration = 0.10
 	max_reach = 2
+	item_flags = SLOWS_WHILE_IN_HAND
+	slowdown = 0.3
 	embedding = list("pain_mult" = 2, "embed_chance" = 60, "fall_chance" = 20)
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -314,7 +332,7 @@ obj/item/melee/onehanded/knife/switchblade
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(10, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
+	M.apply_damage(10, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
 // War Club
 /obj/item/melee/onehanded/club/warclub
@@ -331,7 +349,7 @@ obj/item/melee/onehanded/knife/switchblade
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee")) 
+	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
 // Tire Iron
 /obj/item/melee/onehanded/club/tireiron
