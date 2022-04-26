@@ -17,6 +17,11 @@
 	var/update_shield_icons = 0
 	var/stability = 100
 	var/exploding = 0
+	var/obj/item/radio/radio //our internal radio
+	var/radio_key = /obj/item/encryptionkey/headset_bos
+	var/bos_channel = "BOS"
+	var/common_channel = null
+
 
 	var/active = 0//On or not
 	var/fuel_injection = 2//How much fuel to inject
@@ -47,7 +52,14 @@
 
 /obj/machinery/power/am_control_unit/process()
 	if(exploding)
-		explosion(get_turf(src),8,12,18,12)
+		radio.talk_into(src, "REACTOR MELTDOWN IMMINENT. EVACUATE SURROUNDING AREA.", common_channel)
+		radiation_pulse(src, 3000, 50, TRUE)
+		playsound(src, 'sound/effects/neovgre_exploding.ogg', 100)
+		explosion(get_turf(src),30,40,50,60)
+		for(var/mob/M in GLOB.player_list)
+			if(!isnewplayer(M) && M.can_hear())
+				SEND_SOUND(M, 'sound/effects/explosion3.ogg') //everyone goan know bout this
+				to_chat(M, "<span class='boldannounce'>The ground shakes suddenly...</span>")
 		if(src)
 			qdel(src)
 
@@ -121,6 +133,7 @@
 
 /obj/machinery/power/am_control_unit/ex_act(severity, target)
 	stability -= (80 - (severity * 20))
+	playsound(src, 'sound/machines/engine_alert2.ogg', 100)
 	check_stability()
 	return
 
@@ -128,6 +141,7 @@
 	. = ..()
 	if(Proj.flag != "bullet")
 		stability -= Proj.force
+		playsound(src, 'sound/machines/engine_alert1.ogg', 100)
 		check_stability()
 
 /obj/machinery/power/am_control_unit/power_change()
@@ -198,6 +212,8 @@
 			return
 	if(damage >= 20)
 		stability -= damage/2
+		playsound(src, 'sound/machines/engine_alert1.ogg', 100)
+		message_admins("[src] is taking damage. [ADMIN_JMP(src)].")
 		check_stability()
 
 /obj/machinery/power/am_control_unit/proc/add_shielding(obj/machinery/am_shielding/AMS, AMS_linking = 0)

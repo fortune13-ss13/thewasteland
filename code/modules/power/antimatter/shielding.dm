@@ -34,6 +34,8 @@
 
 /obj/machinery/am_shielding/proc/overheat()
 	visible_message("<span class='danger'>[src] melts!</span>")
+	radiation_pulse(src, 3000, 50, TRUE)
+	explosion(get_turf(src),30,40,50,60)
 	new /obj/effect/hotspot(loc)
 	qdel(src)
 
