@@ -319,11 +319,10 @@
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
 	slowdown = 0.3
-	charge_sections = 1
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser) //7dmg, 0 AP, but essentially fires a pinpoint beam
 	automatic = 1
-	autofire_shot_delay = 1 //pew pew pew
+	autofire_shot_delay = 0.9 //pew pew pew
 	spread = 2
 	can_scope = FALSE
 
