@@ -831,25 +831,31 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 // Enclave
 /obj/effect/landmark/start/f13/usspy
 	name = "Enclave Private"
+	icon_state = "uspvt"
 
 /obj/effect/landmark/start/f13/uslt
 	name = "Enclave Lieutenant"
+	icon_state = "uslt"
 
 /obj/effect/landmark/start/f13/ussgt
 	name = "Enclave Sergeant"
+	icon_state = "ussgt"
 
 /obj/effect/landmark/start/f13/usspecialist
 	name = "Enclave Specialist"
+	icon_state = "usoffduty"
 
 /obj/effect/landmark/start/f13/usscientist
 	name = "Enclave Scientist"
+	icon_state = "usscientist"
 
 /obj/effect/landmark/start/f13/usgysgt
 	name = "Enclave Gunnery Sergeant"
 
+
 /obj/effect/landmark/start/f13/uslightduty
     name = "Enclave Bunker Duty"
-
+	icon_state = "usoffduty"
 //Tribal
 
 /obj/effect/landmark/start/f13/tribal
