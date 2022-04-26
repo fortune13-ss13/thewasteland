@@ -26,7 +26,7 @@
 
 /obj/mecha/combat/durand/Destroy()
 	if(shield)
-		qdel(shield)
+		QDEL_NULL(shield)
 	. = ..()
 
 /obj/mecha/combat/durand/process()
