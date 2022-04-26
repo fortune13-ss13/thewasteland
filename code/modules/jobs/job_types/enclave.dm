@@ -126,8 +126,9 @@
 	exp_requirements = 2800
 
 	loadout_options = list(
-		/datum/outfit/loadout/msgt_ballistics,	// LSW and MK23
-		/datum/outfit/loadout/msgt_laser, 	// AER12
+		/datum/outfit/loadout/msgt_ballistics, // LSW and MK23
+		/datum/outfit/loadout/msgt_laser, // AER12
+		/datum/outfit/loadout/msgt_minigun, // Laser gatling
 		)
 
 /datum/outfit/job/enclave/peacekeeper/f13msergeant
@@ -160,6 +161,13 @@
 		/obj/item/stock_parts/cell/ammo/mfc = 4,
 		)
 
+/datum/outfit/loadout/msgt_minigun
+	name = "Armored Infantry"
+	suit_store = 	/obj/item/minigunpack
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ecp = 2,
+		)
+
 /datum/outfit/job/enclave/peacekeeper/f13msergeant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -182,8 +190,8 @@
 	exp_requirements = 2400
 
 	loadout_options = list(
-		/datum/outfit/loadout/sgt_ballistics,	// Assault rifle
-		/datum/outfit/loadout/sgt_laser, 	// AER12
+		/datum/outfit/loadout/sgt_ballistics,	// R91 Rifle
+		/datum/outfit/loadout/sgt_laser, 	// AER9
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavesgt
