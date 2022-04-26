@@ -109,11 +109,9 @@ Head Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser + Hardened T-51
-	/datum/outfit/loadout/sentvet, //xl70e3
 	/datum/outfit/loadout/sentheavy, //Gauss + Glock + Hardened T-51
 	/datum/outfit/loadout/sentgat, // Gatling + Hardened T-51
 	/datum/outfit/loadout/sentmini, // Minigun + Hardened T-51
-	/datum/outfit/loadout/midwest, // AER14 + Laser Pistol + Midwest PA
 	)
 
 	outfit = /datum/outfit/job/bos/f13sentinel
@@ -132,7 +130,6 @@ Head Paladin
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	if(H.mind)
@@ -144,7 +141,7 @@ Head Paladin
 	jobtype = /datum/job/bos/f13sentinel
 	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
-	glasses =       /obj/item/clothing/glasses/night
+	glasses =       /obj/item/clothing/glasses/sunglasses
 	belt =			/obj/item/storage/belt/military/assault
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	ears =			/obj/item/radio/headset/headset_bos/command
@@ -165,15 +162,6 @@ Head Paladin
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
-	)
-
-/datum/outfit/loadout/sentvet
-	name = "Veteran Head Paladin"
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51green
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/g11 = 1,
-		/obj/item/ammo_box/magazine/m473 = 3,
 	)
 
 /datum/outfit/loadout/sentheavy
@@ -203,17 +191,6 @@ Head Paladin
 		/obj/item/minigunpackbal5mm=1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
-	)
-
-/datum/outfit/loadout/midwest
-    name = "Midwestern Head Paladin"
-    suit = /obj/item/clothing/suit/armor/f13/power_armor/hmidwest
-    head = /obj/item/clothing/head/helmet/f13/power_armor/midwest
-    l_hand = /obj/item/gun/energy/laser/aer14
-    backpack_contents = list(
-        /obj/item/stock_parts/cell/ammo/mfc = 3,
-        /obj/item/gun/energy/laser/pistol=1,
-        /obj/item/stock_parts/cell/ammo/ec=2,
 	)
 
 
@@ -262,7 +239,7 @@ Head Scribe
 	chemwhiz = TRUE
 	uniform = 		/obj/item/clothing/under/syndicate/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
-	glasses =       /obj/item/clothing/glasses/night
+	glasses =       /obj/item/clothing/glasses/sunglasses
 	suit = 			/obj/item/clothing/suit/armor/f13/headscribe
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	id = 			/obj/item/card/id/dogtag
@@ -323,10 +300,8 @@ Head Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lightplasmapistol)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribeam)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rcw)
 
 
 /datum/outfit/job/bos/f13knightcap
@@ -364,8 +339,8 @@ Head Knight
 /datum/outfit/loadout/capsap
 	name = "Close Support"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/service/alr = 1,
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 2,
+		/obj/effect/spawner/bundle/f13/rcw = 1,
+		/obj/item/stock_parts/cell/ammo/ecp = 2,
 	)
 
 /datum/outfit/loadout/capalt
@@ -382,8 +357,8 @@ Star Paladin
 /datum/job/bos/f13seniorpaladin
 	title = "Senior Paladin"
 	flag = F13SENIORPALADIN
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "As the Chapter's senior offensive warrior, you have proven your service and dedication to the Brotherhood over your time as a Paladin. As your skills gained, however, you were deigned to be more useful as a commander and trainer. Your job is to coordinate the Paladins and ensure they work as a team, instilling discipline as you go."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
@@ -421,12 +396,6 @@ Star Paladin
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
-
-/datum/outfit/job/bos/f13seniorpaladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
@@ -500,10 +469,10 @@ Paladin
 	exp_requirements = 2400
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladina, //R91
+	/datum/outfit/loadout/paladina, //Minigun
 	/datum/outfit/loadout/paladinb, //AER9
-	/datum/outfit/loadout/paladinc,
-	/datum/outfit/loadout/paladind
+	/datum/outfit/loadout/paladinc, //Wt-550
+	/datum/outfit/loadout/paladind //Sledge and fists
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -531,12 +500,6 @@ Paladin
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
-/datum/outfit/job/bos/f13paladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
@@ -547,28 +510,28 @@ Paladin
 	belt =	/obj/item/storage/belt/military/assault
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 1,
 
 	)
 
 /datum/outfit/loadout/paladina
-	name = "Firesupport Junior Paladin"
+	name = "Firesupport Paladin"
 	backpack_contents = list(
 		/obj/item/minigunpackbal5mm = 1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/juniorpaladin = 1,
+		/obj/item/clothing/accessory/bos/paladin=1,
 	)
 
 /datum/outfit/loadout/paladinb
-	name = "Frontline Junior Paladin"
+	name = "Tactical Paladin"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/gun/ballistic/automatic/pistol/mk23=1,
-		/obj/item/ammo_box/magazine/m45exp=2,
-		/obj/item/clothing/accessory/bos/juniorpaladin=1
+		/obj/item/gun/ballistic/automatic/wt550 = 1,
+		/obj/item/ammo_box/magazine/m473/small = 3,
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/paladin=1,
 		)
 
 /datum/outfit/loadout/paladinc
@@ -581,12 +544,12 @@ Paladin
 		)
 
 /datum/outfit/loadout/paladind
-	name = "Frontline Paladin"
+	name = "Melee Specialist"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/gun/ballistic/automatic/pistol/mk23=1,
-		/obj/item/ammo_box/magazine/m45exp=2,
+		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/twohanded/sledgehammer/supersledge =1,
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1
 		)
 
@@ -736,8 +699,8 @@ Senior Knight
 /datum/job/bos/f13seniorknight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You report directly to the Head Knight. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
@@ -749,7 +712,6 @@ Senior Knight
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Browning Auto-5
 	/datum/outfit/loadout/sknightc, //R93 PDW
-	/datum/outfit/loadout/sknightd, //Ripper, BPF
 	)
 
 	outfit = /datum/outfit/job/bos/f13seniorknight
@@ -828,9 +790,10 @@ Senior Knight
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		)
 
-/datum/outfit/loadout/sknightd
-	name = "Cavalry"
+/datum/outfit/loadout/knightd
+	name = "Senior Knight-Cavalry"
 	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/melee/powered/ripper/prewar=1,
 		/obj/item/shield/riot/bullet_proof=1,
 		)
@@ -841,8 +804,8 @@ Knight
 /datum/job/bos/f13knight
 	title = "Knight"
 	flag = F13KNIGHT
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
 	forbids = "TheBrotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
@@ -932,7 +895,7 @@ Knight
 	name = "Junior Knight-Cavalry"
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
-		/obj/item/melee/powered/ripper/prewar=1,
+		/obj/item/melee/powered/ripper=1,
 		/obj/item/shield/riot/bullet_proof=1,
 		)
 
@@ -961,7 +924,7 @@ Knight
 	name = "Knight-Cavalry"
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight=1,
-		/obj/item/melee/powered/ripper/prewar=1,
+		/obj/item/melee/powered/ripper=1,
 		/obj/item/shield/riot/bullet_proof=1,
 		)
 /*
