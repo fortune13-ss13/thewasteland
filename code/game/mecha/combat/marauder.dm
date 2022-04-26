@@ -6,7 +6,7 @@
 	max_integrity = 500
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 40, "energy" = 30, "bomb" = 30, "bio" = 0, "rad" = 80, "fire" = 100, "acid" = 100)
 	max_temperature = 60000
-	step_energy_drain = 30
+	step_energy_drain = 40
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	infra_luminosity = 3
 	wreckage = /obj/structure/mecha_wreckage/marauder

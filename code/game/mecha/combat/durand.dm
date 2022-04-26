@@ -7,7 +7,7 @@
 	max_integrity = 400
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 25, "energy" = 20, "bomb" = 20, "bio" = 0, "rad" = 65, "fire" = 100, "acid" = 100)
 	max_temperature = 30000
-	step_energy_drain = 20
+	step_energy_drain = 30
 	infra_luminosity = 8
 	force = 40
 	max_equip = 4
@@ -144,6 +144,7 @@ own integrity back to max. Shield is automatically dropped if we run out of powe
 /obj/durand_shield/Destroy()
 	if(chassis)
 		chassis.shield = null
+		chassis = null
 	. = ..()
 
 /**Handles activating and deactivating the shield. This proc is called by a signal sent from the mech's action button

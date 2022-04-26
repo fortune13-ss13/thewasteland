@@ -12,7 +12,7 @@
 	wreckage = /obj/structure/mecha_wreckage/gygax
 	internal_damage_threshold = 20
 	max_equip = 4
-	step_energy_drain = 5
+	step_energy_drain = 10
 	canstrafe = TRUE
 //	leg_overload_coeff = 300
 	allow_diagonal_movement = TRUE
