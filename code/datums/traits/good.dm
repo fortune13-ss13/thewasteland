@@ -64,7 +64,8 @@
 
 /datum/quirk/tribespeak/remove()
 	var/mob/living/carbon/human/H = quirk_holder
-	H.remove_language(/datum/language/tribal)
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/tribal)
 
 
 /datum/quirk/apathetic
