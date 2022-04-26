@@ -143,6 +143,7 @@
 		/obj/item/grenade/flashbang = 1,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
 /datum/outfit/loadout/msgt_ballistics
