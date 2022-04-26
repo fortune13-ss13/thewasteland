@@ -32,8 +32,8 @@
 	desc = "After the world ended, seppuku rates in Japan skyrocketed, the owner of this one however is crazy enough to keep going!"
 	icon_state = "DFkatana"
 	item_state = "DFkatana"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	force = 40
@@ -46,7 +46,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
 	resistance_flags = FIRE_PROOF
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
-	armour_penetration = 0.10
+	armour_penetration = 0.20
 
 
 
