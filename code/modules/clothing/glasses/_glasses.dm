@@ -145,12 +145,13 @@
 	desc = "Avast ye wasteys!"
 	icon_state = "eyepatch"
 	item_state = "eyepatch"
-	
+
 /obj/item/clothing/glasses/eyepatch/goji
 	name = "emblazoned eyepatch"
 	desc = "You have the eye of a mad dog!"
 	icon_state = "Gojipatch"
 	item_state = "Gojipatch"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	darkness_view = 24
 	flash_protect = -2
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT

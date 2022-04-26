@@ -174,6 +174,7 @@
 	desc = "A pair of Snakeskin Loafers reinforced with metal toe caps."
 	icon = 'icons/fallout/clothing/khans.dmi'
 	icon_state = "Gojishoes"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	item_state = "Gojishoes"
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 

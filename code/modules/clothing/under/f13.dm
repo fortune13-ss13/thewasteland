@@ -655,11 +655,12 @@
 	name = "Leather Pants"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants, but this is a pair of tight leather pants."
 	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "Gojipants"
 	item_state = "Gojipants"
 	item_color = "Gojipants"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40) 
-	
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
+
 // Testing fixed toggle uniform so icon updates properly
 /obj/item/clothing/under/f13/khan/AltClick(mob/user)
 	. = ..()
