@@ -857,8 +857,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/uslightduty
     name = "Enclave Bunker Duty"
-	icon_state = "usoffduty"
-
+    icon_state = "usoffduty"
 //Tribal
 
 /obj/effect/landmark/start/f13/tribal
