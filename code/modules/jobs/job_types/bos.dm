@@ -712,6 +712,7 @@ Senior Knight
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Browning Auto-5
 	/datum/outfit/loadout/sknightc, //R93 PDW
+	/datum/outfit/loadout/sknightd,
 	)
 
 	outfit = /datum/outfit/job/bos/f13seniorknight
