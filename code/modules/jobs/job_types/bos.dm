@@ -357,8 +357,8 @@ Star Paladin
 /datum/job/bos/f13seniorpaladin
 	title = "Senior Paladin"
 	flag = F13SENIORPALADIN
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "As the Chapter's senior offensive warrior, you have proven your service and dedication to the Brotherhood over your time as a Paladin. As your skills gained, however, you were deigned to be more useful as a commander and trainer. Your job is to coordinate the Paladins and ensure they work as a team, instilling discipline as you go."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
@@ -369,10 +369,10 @@ Star Paladin
 	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
-		/datum/outfit/loadout/spaladina, //R91 Assault Rifle
-		/datum/outfit/loadout/spaladinb, //AER12
-		/datum/outfit/loadout/spaladinc,  //Minigun
-		/datum/outfit/loadout/spaladintactical //WT-550
+		/datum/outfit/loadout/spaladina, //5mm minigun
+		/datum/outfit/loadout/spaladinb, //WT-550
+		/datum/outfit/loadout/spaladinc,  //Aer9
+		/datum/outfit/loadout/spaladintd //Sledge and fist
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -409,47 +409,44 @@ Star Paladin
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin
 
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/melee/powerfist/f13 = 1,
-		/obj/item/tank/internals/oxygen = 1,
 	)
 
 /datum/outfit/loadout/spaladina
-	name = "Firesupport Senior Paladin"
+	name = "Senior Firesupport Paladin"
 	backpack_contents = list(
 		/obj/item/minigunpackbal5mm = 1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/paladin=1,
 	)
 
 /datum/outfit/loadout/spaladinb
-	name = "Frontline Senior Paladin"
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer12 = 1,
-		/obj/item/attachments/scope = 1,
-		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
-		/obj/item/ammo_box/magazine/m45exp = 2,
-	)
-
-/datum/outfit/loadout/spaladinc
-	name = "Overwatch Senior Paladin"
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/m72 = 1,
-		/obj/item/ammo_box/magazine/m2mm = 3,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-	)
-
-/datum/outfit/loadout/spaladintactical
-	name = "Tactical Senior Paladin"
+	name = "Senior Tactical Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/wt550 = 1,
 		/obj/item/ammo_box/magazine/m473/small = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
-	)
+		)
+
+/datum/outfit/loadout/spaladinc
+	name = "Senior Frontline Paladin"
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/aer9 = 1,
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		)
+
+/datum/outfit/loadout/spaladind
+	name = "Senior Melee Specialist"
+	backpack_contents = list(
+		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/twohanded/sledgehammer/supersledge =1,
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		)
 
 
 /*
@@ -459,9 +456,9 @@ Paladin
 /datum/job/bos/f13paladin
 	title = "Paladin"
 	flag = F13PALADIN
-	total_positions = 2
-	spawn_positions = 2
-	description = "You answer directly to the Haead Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
+	total_positions = 1
+	spawn_positions = 1
+	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Head Paladin"
@@ -470,8 +467,8 @@ Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladina, //Minigun
-	/datum/outfit/loadout/paladinb, //AER9
-	/datum/outfit/loadout/paladinc, //Wt-550
+	/datum/outfit/loadout/paladinb, //WT-550
+	/datum/outfit/loadout/paladinc, //Aer9
 	/datum/outfit/loadout/paladind //Sledge and fists
 	)
 
@@ -520,7 +517,6 @@ Paladin
 		/obj/item/minigunpackbal5mm = 1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/clothing/accessory/bos/juniorpaladin = 1,
 		/obj/item/clothing/accessory/bos/paladin=1,
 	)
 
@@ -535,10 +531,11 @@ Paladin
 		)
 
 /datum/outfit/loadout/paladinc
-	name = "Firesupport Paladin"
+	name = "Frontline Paladin"
 	backpack_contents = list(
-		/obj/item/minigunpackbal5mm = 1,
+		/obj/item/gun/energy/laser/aer9 = 1,
 		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1
 		)
