@@ -598,6 +598,7 @@ Raider
 							/obj/item/paper_bin=1,
 							/obj/item/folder=1,
 							/obj/item/pen/fountain=1,
+							/obj/item/storage/firstaid/ancient = 1,
 							/obj/item/hatchet=1
 		)
 
