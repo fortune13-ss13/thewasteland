@@ -51,7 +51,7 @@
 	subcategory = CAT_FORGING
 
 /datum/crafting_recipe/furnace
-	name = "Sandstone Furnace"
+	name = "Furnace"
 	result = /obj/structure/furnace
 	time = 300
 	reqs = list(
@@ -70,6 +70,18 @@
 		/obj/item/stack/sheet/metal = 10,
 		)
 	time = 80
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
+/datum/crafting_recipe/tools/forged/sledge
+	name = "Sledgehammer"
+	result = /obj/item/twohanded/sledgehammer/simple
+	time = 700
+	reqs = list(
+		/obj/item/stack/sheet/metal = 15,
+		/obj/item/stack/sheet/mineral/wood = 5,
+		)
+	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
@@ -373,18 +385,6 @@
 ///////////
 // TOOLS //
 ///////////
-
-/datum/crafting_recipe/tools/forged/sledge
-	name = "Sledgehammer"
-	result = /obj/item/twohanded/sledgehammer/simple
-	time = 700
-	reqs = list(
-		/obj/item/stack/sheet/metal = 15,
-		/obj/item/stack/sheet/mineral/wood = 5,
-		)
-	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
 
 /datum/crafting_recipe/crusher
 	name = "Kinetic Crusher"

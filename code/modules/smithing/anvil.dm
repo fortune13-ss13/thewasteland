@@ -3,28 +3,35 @@
 #define WORKPIECE_FINISHED 3
 #define WORKPIECE_SLAG 5
 
-#define RECIPE_LARGEPICK "ddbp" //draw draw bend punch
-#define RECIPE_SHOVEL "dfup" //draw fold upset punch
-#define RECIPE_HAMMER "sfp" //shrink fold punch
-#define RECIPE_SMALLPICK "ddbbp" //draw draw bend bend punch
+#define RECIPE_LARGEPICK "bff" //bend fold fold
+#define RECIPE_SHOVEL "buu" //bend upset upset
+#define RECIPE_HAMMER "bpp" //bend punch punch
+#define RECIPE_SMALLPICK "bfs" //bend fold shrink
+#define RECIPE_KITCHENKNIFE "bsd" //bend shrink draw
+#define RECIPE_CROWBAR "bbb" //bend bend bend ISSUE
+#define RECIPE_CROWAXE "bbd"  //bend bend draw ISSUE
 
 #define RECIPE_RING "sss" //shrink shrink shrink
+#define RECIPE_BALLANDCHAIN "pbu" //punch bend upset
 
-#define RECIPE_SMALLKNIFE "sdd" //shrink draw draw
-#define RECIPE_SHORTSWORD "dff" //draw fold fold
-#define RECIPE_WAKI "dfsf" //draw  fold shrink fold
-#define RECIPE_SCIMITAR "dfb" //draw fold bend
-#define RECIPE_SABRE "ddsf" //draw draw shrink fold
-#define RECIPE_RAPIER "sdfd" //shrink draw  fold draw
-#define RECIPE_BROADSWORD "dfuf" //draw fold upset fold
-#define RECIPE_ZWEIHANDER "udfsf" //upset draw fold shrink fold
+#define RECIPE_MACHETE "fdf" //fold draw fold
+#define RECIPE_MACHREFORG "fpp" //fold punch punch
+#define RECIPE_SABRE "ffdd" //fold fold draw draw
+#define RECIPE_SWORD "ffdf" // fold fold draw fold
+#define RECIPE_WAKI "fffd" //fold fold fold draw
 #define RECIPE_KATANA "fffff" //fold fold fold fold fold
 
-#define RECIPE_JAVELIN "dbf" //draw bend fold
-#define RECIPE_HALBERD "duffp" //draw upset fold fold punch
-#define RECIPE_GLAIVE "usfp" //upset shrink fold punch
-#define RECIPE_PIKE "ddbf" //draw draw bend fold
+#define RECIPE_MACE "upu"  //upset punch upset
+#define RECIPE_AXE "udsp" //upset draw shrink punch
+#define RECIPE_SCRAP "uppp" //upset punch punch punch
 
+#define RECIPE_DAGGER "dfs" //draw fold shrink
+#define RECIPE_SPEAR "ddbf" //draw draw bend fold
+#define RECIPE_JAVELIN "dbf" //draw bend fold
+
+
+// Logic of smithing recipes: Tools start with bend and have 3 steps. 1h weapons have 3-4 steps. 2h weapons have 4-5 steps. Bigger bladed stuff start with a fold. Pointy stuff generally start with a draw. Unusual stuff migth start with upset.
+// Point of having a structure is obviously to help remember, not just keeping every recipe as pure rote memory with no internal logic. If you add more stuff and fuck this up and don't read comments I hope you get a prolapse. - Pebbles
 
 /obj/structure/anvil
 	name = "anvil"
@@ -49,20 +56,24 @@
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
 	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
 	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
-	RECIPE_RING = /obj/item/smithing/jewelry/ring,
-	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
-	RECIPE_SHORTSWORD = /obj/item/smithing/shortswordblade,
-	RECIPE_SCIMITAR = /obj/item/smithing/scimitarblade,
-	RECIPE_RAPIER = /obj/item/smithing/rapierblade,
-	RECIPE_SABRE = /obj/item/smithing/sabreblade,
-	RECIPE_SMALLKNIFE = /obj/item/smithing/knifeblade,
-	RECIPE_BROADSWORD = /obj/item/smithing/broadblade,
-	RECIPE_ZWEIHANDER = /obj/item/smithing/zweiblade,
-	RECIPE_HALBERD = /obj/item/smithing/halberdhead,
-	RECIPE_GLAIVE = /obj/item/smithing/glaivehead,
-	RECIPE_PIKE = /obj/item/smithing/pikehead,
+	RECIPE_KITCHENKNIFE = /obj/item/smithing/knifeblade,
+	RECIPE_CROWBAR = /obj/item/smithing/crowbar,
+	RECIPE_CROWAXE = /obj/item/smithing/crowaxe,
+	RECIPE_RING = /obj/item/smithing/special/jewelry/ring,
+	RECIPE_BALLANDCHAIN = /obj/item/smithing/special/ballandchain,
+	RECIPE_DAGGER = /obj/item/smithing/daggerblade,
+	RECIPE_MACHETE = /obj/item/smithing/macheteblade,
+	RECIPE_MACHREFORG = /obj/item/smithing/macheterblade,
 	RECIPE_WAKI = /obj/item/smithing/wakiblade,
-	RECIPE_KATANA = /obj/item/smithing/katanablade,)
+	RECIPE_KATANA = /obj/item/smithing/katanablade,
+	RECIPE_MACE = /obj/item/smithing/macehead,
+	RECIPE_AXE = /obj/item/smithing/axehead,
+	RECIPE_SPEAR = /obj/item/smithing/spearhead,
+	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
+	RECIPE_SWORD = /obj/item/smithing/swordblade,
+	RECIPE_SABRE = /obj/item/smithing/sabreblade,
+	RECIPE_SCRAP = /obj/item/smithing/scrapblade,
+)
 
 /obj/structure/anvil/Initialize()
 	. = ..()
@@ -298,17 +309,7 @@
 	anvilquality = -1
 	itemqualitymax = 5
 
-
-// Remnant trash
-
-/obj/structure/anvil/obtainable/bronze
-	name = "slab of bronze"
-	desc = "A big block of bronze. Useable as an anvil."
-	custom_materials = list(/datum/material/bronze=8000)
-	icon_state = "ratvaranvil"
-	anvilquality = 0
-	itemqualitymax = 6
-
+// Debug anvil for some reason
 /obj/structure/anvil/debugsuper
 	name = "super ultra epic anvil of debugging."
 	desc = "WOW. A DEBUG <del>ITEM</DEL> STRUCTURE. EPIC."
@@ -317,9 +318,20 @@
 	itemqualitymax = 9001
 	outrightfailchance = 0
 
+// Remnant trash
+/obj/structure/anvil/obtainable/bronze
+	name = "slab of bronze"
+	desc = "A big block of bronze. Useable as an anvil."
+	icon = 'icons/obj/smith.dmi'
+	custom_materials = list(/datum/material/bronze=8000)
+	icon_state = "ratvaranvil"
+	anvilquality = 0
+	itemqualitymax = 6
+
 /obj/structure/anvil/obtainable/ratvar
 	name = "brass anvil"
 	desc = "A big block of what appears to be brass. Useable as an anvil, if whatever's holding the brass together lets you."
+	icon = 'icons/obj/smith.dmi'
 	custom_materials = list(/datum/material/bronze=8000)
 	icon_state = "ratvaranvil"
 	anvilquality = 1

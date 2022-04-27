@@ -898,12 +898,13 @@
 	content_overlays = TRUE
 	onmob_overlays = TRUE
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_NECK
-	fitting_swords = list(/obj/item/melee/smith/shortsword,
+	fitting_swords = list(/obj/item/melee/smith/machete,
+	/obj/item/melee/smith/machete/reforged,
 	/obj/item/melee/smith/wakizashi,
-	/obj/item/melee/smith/twohand/broadsword,
-	/obj/item/melee/smith/twohand/zweihander,
+	/obj/item/melee/smith/sword,
+	/obj/item/melee/smith/twohand/axe,
 	/obj/item/melee/smith/twohand/katana,
-	/obj/item/melee/smith/sabre,
+	/obj/item/melee/smith/sword/sabre,
 	/obj/item/melee/onehanded/machete,
 	/obj/item/melee/onehanded/club,
 	/obj/item/melee/classic_baton,
