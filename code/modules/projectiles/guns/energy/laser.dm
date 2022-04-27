@@ -316,8 +316,8 @@
 	desc = "A beefed-up laser pistol manufactured by West Tek, reinforced to allow it to withstand the thermal load of sustained fire."
 	icon_state = "protolaser"
 	item_state = "laser"
-	weapon_weight = WEAPON_MEDIUM
-	weapon_weight =  = WEIGHT_CLASS_LIGHT //dual wielding
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT //dual wielding
 	slowdown = 0.3
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser) //7dmg, 0 AP, but essentially fires a pinpoint beam
@@ -332,7 +332,7 @@
 	desc = "This pistol has been unwisely modified by the OPD to fire bolts of electricty. And they beheld Satan as he fell from heaven like lightning."
 	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser/shock) //8dmg + 5 Stamina, flagged as "energy" so very few armors can reduce it below 5-6 dmg, has a very high bare wound bonus, so anyone with no armor on will be crippled
 	slowdown = 0.35
-	w_class = WEIGHT_CLASS_NORMAL //DO NOT DUAL WIELD
+	weapon_weight = WEAPON_MEDIUM //DO NOT DUAL WIELD
 
 //Ultracite Laser pistol
 /obj/item/gun/energy/laser/ultra_pistol
