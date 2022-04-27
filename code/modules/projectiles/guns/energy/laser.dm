@@ -326,11 +326,11 @@
 	spread = 2
 	can_scope = FALSE
 
-
+// OASIS autolaser
 /obj/item/gun/energy/laser/auto/oasis
 	name = "autoshock tesla pistol"
 	desc = "This pistol has been unwisely modified by the OPD to fire bolts of electricty. And they beheld Satan as he fell from heaven like lightning."
-	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser/shock) //8dmg, flagged as "energy" so very few armors can reduce it below 5-6 dmg, has a very high bare wound bonus, so anyone with no armor on will be crippled
+	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser/shock) //8dmg + 5 Stamina, flagged as "energy" so very few armors can reduce it below 5-6 dmg, has a very high bare wound bonus, so anyone with no armor on will be crippled
 	slowdown = 0.35
 	w_class = WEIGHT_CLASS_NORMAL //DO NOT DUAL WIELD
 
