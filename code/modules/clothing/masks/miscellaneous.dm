@@ -409,8 +409,7 @@
 	flags_inv = HIDEFACE
 	flags_cover = MASKCOVERSMOUTH
 	visor_flags_cover = MASKCOVERSMOUTH
-	gas_transfer_coefficient = 0.9
-	permeability_coefficient = 0.01
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -429,6 +428,7 @@
 	flags_inv = HIDEFACE
 	visor_flags_inv = HIDEFACE
 	adjusted_flags = null
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT
 	actions_types = list(/datum/action/item_action/adjust)
 
 /obj/item/clothing/mask/bandana/legion/camp
