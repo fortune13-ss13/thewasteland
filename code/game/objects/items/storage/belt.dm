@@ -904,13 +904,12 @@
 	/obj/item/melee/smith/twohand/zweihander,
 	/obj/item/melee/smith/twohand/katana,
 	/obj/item/melee/smith/sabre,
-	/obj/item/melee/smith/cogheadclub,
 	/obj/item/melee/onehanded/machete,
 	/obj/item/melee/onehanded/club,
 	/obj/item/melee/classic_baton,
 	/obj/item/twohanded/fireaxe,
 	/obj/item/twohanded/baseball,
-	/obj/item/twohanded/sledgehammer,
+	/obj/item/twohanded/sledgehammer/simple,
 	/obj/item/melee/transforming/energy/axe/protonaxe,
 	/obj/item/melee/powered/ripper)
 	starting_sword = null

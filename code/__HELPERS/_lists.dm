@@ -105,24 +105,25 @@
 
 //Returns a list in plain english as a string
 /proc/english_list(list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "")
-	var/total = input.len
-	if (!total)
-		return nothing_text
-	else if (total == 1)
-		return "[input[1]]"
-	else if (total == 2)
-		return "[input[1]][and_text][input[2]]"
-	else
-		var/output = ""
-		var/index = 1
-		while (index < total)
-			if (index == total - 1)
-				comma_text = final_comma_text
+	var/total = length(input)
+	switch(total)
+		if (0)
+			return "[nothing_text]"
+		if (1)
+			return "[input[1]]"
+		if (2)
+			return "[input[1]][and_text][input[2]]"
+		else
+			var/output = ""
+			var/index = 1
+			while (index < total)
+				if (index == total - 1)
+					comma_text = final_comma_text
 
-			output += "[input[index]][comma_text]"
-			index++
+				output += "[input[index]][comma_text]"
+				index++
 
-		return "[output][and_text][input[index]]"
+			return "[output][and_text][input[index]]"
 
 /**
 * English_list but associative supporting. Higher overhead.
@@ -752,3 +753,20 @@
 /proc/safe_json_decode(string, default = list())
 	. = default
 	return json_decode(string)
+
+/proc/bitfield_to_list(bitfield = 0, list/wordlist)
+	var/list/return_list = list()
+	if(islist(wordlist))
+		var/max = min(wordlist.len, 24)
+		var/bit = 1
+		for(var/i in 1 to max)
+			if(bitfield & bit)
+				return_list += wordlist[i]
+			bit = bit << 1
+	else
+		for(var/bit_number = 0 to 23)
+			var/bit = 1 << bit_number
+			if(bitfield & bit)
+				return_list += bit
+
+	return return_list

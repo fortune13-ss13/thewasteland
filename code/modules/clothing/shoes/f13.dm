@@ -75,7 +75,6 @@
 	icon_state = "military"
 	item_state = "military"
 	permeability_coefficient = 0.05
-	clothing_flags = NOSLIP
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 	strip_delay = 40
 	resistance_flags = NONE
@@ -130,7 +129,6 @@
 	item_state = "legion_pelt"
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
-	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/f13/military/legion
 	name = "rough leather boots"
@@ -170,6 +168,14 @@
 	item_state = "khan_boots"
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 	var/boottoggled = FALSE
+
+/obj/item/clothing/shoes/f13/military/khan/Goji
+	name = "steel-tipped Snakeskin Loafers"
+	desc = "A pair of Snakeskin Loafers reinforced with metal toe caps."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	icon_state = "Gojishoes"
+	item_state = "Gojishoes"
+	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/khan/AltClick(mob/user)
 	. = ..()

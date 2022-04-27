@@ -3,11 +3,12 @@
 #define WORKPIECE_FINISHED 3
 #define WORKPIECE_SLAG 5
 
-#define RECIPE_SMALLPICK "dbp" //draw bend punch
 #define RECIPE_LARGEPICK "ddbp" //draw draw bend punch
 #define RECIPE_SHOVEL "dfup" //draw fold upset punch
 #define RECIPE_HAMMER "sfp" //shrink fold punch
+#define RECIPE_SMALLPICK "ddbbp" //draw draw bend bend punch
 
+#define RECIPE_RING "sss" //shrink shrink shrink
 
 #define RECIPE_SMALLKNIFE "sdd" //shrink draw draw
 #define RECIPE_SHORTSWORD "dff" //draw fold fold
@@ -19,20 +20,16 @@
 #define RECIPE_ZWEIHANDER "udfsf" //upset draw fold shrink fold
 #define RECIPE_KATANA "fffff" //fold fold fold fold fold
 
-
-#define RECIPE_SCYTHE "bdf" //bend draw fold
-#define RECIPE_COGHEAD "bsf" //bend shrink fold.
-
-
 #define RECIPE_JAVELIN "dbf" //draw bend fold
 #define RECIPE_HALBERD "duffp" //draw upset fold fold punch
 #define RECIPE_GLAIVE "usfp" //upset shrink fold punch
 #define RECIPE_PIKE "ddbf" //draw draw bend fold
 
+
 /obj/structure/anvil
 	name = "anvil"
 	desc = "Base class of anvil. This shouldn't exist, but is useable."
-	icon = 'icons/obj/smith.dmi'
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "anvil"
 	density = TRUE
 	anchored = TRUE
@@ -49,24 +46,23 @@
 	var/artifactrolled = FALSE
 	var/itemqualitymax = 8
 	var/list/smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
-	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_COGHEAD = /obj/item/smithing/cogheadclubhead,
-	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
 	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+	RECIPE_RING = /obj/item/smithing/jewelry/ring,
+	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_SHORTSWORD = /obj/item/smithing/shortswordblade,
 	RECIPE_SCIMITAR = /obj/item/smithing/scimitarblade,
-	RECIPE_WAKI = /obj/item/smithing/wakiblade,
 	RECIPE_RAPIER = /obj/item/smithing/rapierblade,
 	RECIPE_SABRE = /obj/item/smithing/sabreblade,
 	RECIPE_SMALLKNIFE = /obj/item/smithing/knifeblade,
 	RECIPE_BROADSWORD = /obj/item/smithing/broadblade,
 	RECIPE_ZWEIHANDER = /obj/item/smithing/zweiblade,
-	RECIPE_KATANA = /obj/item/smithing/katanablade,
 	RECIPE_HALBERD = /obj/item/smithing/halberdhead,
 	RECIPE_GLAIVE = /obj/item/smithing/glaivehead,
-	RECIPE_PIKE = /obj/item/smithing/pikehead)
+	RECIPE_PIKE = /obj/item/smithing/pikehead,
+	RECIPE_WAKI = /obj/item/smithing/wakiblade,
+	RECIPE_KATANA = /obj/item/smithing/katanablade,)
 
 /obj/structure/anvil/Initialize()
 	. = ..()
@@ -84,6 +80,8 @@
 			to_chat(user, "You place the [notsword] on the [src].")
 			currentquality = anvilquality
 			var/skillmod = 4
+			if(workpiece_state == WORKPIECE_PRESENT)
+				add_overlay(image(icon= 'icons/fallout/objects/blacksmith.dmi',icon_state="workpiece"))
 			if(user.mind.skill_holder)
 				skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/2
 			currentquality += skillmod
@@ -106,13 +104,26 @@
 			return FALSE
 		do_shaping(user, hammertime.qualitymod)
 		return
+	else if(istype(I, /obj/item/twohanded/sledgehammer/simple))
+		var/obj/item/twohanded/sledgehammer/simple/hammertime = I
+		if(!(workpiece_state == WORKPIECE_PRESENT || workpiece_state == WORKPIECE_INPROGRESS))
+			to_chat(user, "You can't work an empty anvil!")
+			return FALSE
+		var/mob/living/carbon/human/F = user
+		if(busy)
+			to_chat(user, "This anvil is already being worked!")
+			return FALSE
+		if(F.busy)
+			to_chat(user, "You are already working another anvil!")
+			return FALSE
+		do_shaping(user, hammertime.qualitymod)
+		return
 	return ..()
 
 /obj/structure/anvil/wrench_act(mob/living/user, obj/item/I)
 	..()
 	default_unfasten_wrench(user, I, 5)
 	return TRUE
-
 
 /obj/structure/anvil/proc/do_shaping(mob/user, qualitychange)
 	var/mob/living/carbon/human/F = user
@@ -175,6 +186,7 @@
 	user.visible_message("<span class='notice'>[user] works the metal on the anvil with their hammer with a loud clang!</span>", \
 						"<span class='notice'>You [stepdone] the metal with a loud clang!</span>")
 	playsound(src, 'sound/effects/clang2.ogg',40, 2)
+	do_smithing_sparks(1, TRUE, src) 
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/effects/clang2.ogg', 40, 2), 15)
 	if(length(stepsdone) >= 3)
 		tryfinish(user)
@@ -193,7 +205,8 @@
 		finalfailchance = max(0, finalfailchance / skillmod) //lv 2 gives 20% less to fail, 3 30%, etc
 	if((currentsteps > 10 || (rng && prob(finalfailchance))) && !artifact)
 		to_chat(user, "<span class='warning'>You overwork the metal, causing it to turn into useless slag!</span>")
-		var/turf/T = get_turf(user)
+		cut_overlay(image(icon= 'icons/fallout/objects/blacksmith.dmi',icon_state="workpiece"))
+		var/turf/T = get_turf(src)
 		workpiece_state = FALSE
 		new /obj/item/stack/ore/slag(T)
 		currentquality = anvilquality
@@ -209,6 +222,7 @@
 			var/obj/item/smithing/create = smithrecipes[stepsdone]
 			var/obj/item/smithing/finisheditem = new create(T)
 			to_chat(user, "You finish your [finisheditem]!")
+			cut_overlay(image(icon= 'icons/fallout/objects/blacksmith.dmi',icon_state="workpiece"))
 			if(artifact)
 				to_chat(user, "It is an artifact, a creation whose legacy shall live on forevermore.") //todo: SSblackbox
 				currentquality = max(currentquality, 2)
@@ -238,36 +252,54 @@
 				user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 100, 10000000, silent = FALSE)
 			break
 
-/obj/structure/anvil/debugsuper
-	name = "super ultra epic anvil of debugging."
-	desc = "WOW. A DEBUG <del>ITEM</DEL> STRUCTURE. EPIC."
-	icon_state = "anvil"
-	anvilquality = 10
-	itemqualitymax = 9001
-	outrightfailchance = 0
 
+//////////////////////
+//					//
+//		ANVILS		//
+//					//
+//////////////////////
+
+// Template
 /obj/structure/anvil/obtainable
-	name = "anvil"
-	desc = "Base class of anvil. This shouldn't exist, but is useable."
+	name = "anvil template. Punish those who makes this appear."
 	anvilquality = 0
 	outrightfailchance = 5
 	rng = TRUE
 
+// Best anvil, should be hard to find or make more
+/obj/structure/anvil/obtainable/basic
+	name = "anvil"
+	desc = "An anvil. It's got wheels bolted to the bottom."
+	anvilquality = 1
+	itemqualitymax = 8
+
+// Decent makeshift anvil, can break
 /obj/structure/anvil/obtainable/table
 	name = "table anvil"
 	desc = "A reinforced table. Usable as an anvil, but unequal weight distribution will impact the quality of your weapons."
 	icon_state = "tablevil"
 	anvilquality = 0
-	itemqualitymax = 4
-
+	itemqualitymax = 6
 
 /obj/structure/anvil/obtainable/table/do_shaping(mob/user, qualitychange)
-	if(prob(5))
+	if(prob(2))
 		to_chat(user, "The [src] breaks under the strain!")
 		take_damage(max_integrity)
 		return FALSE
 	else
 		..()
+
+// Worst craftable anvil, sturdy but limits the quality
+/obj/structure/anvil/obtainable/sandstone
+	name = "sandstone brick anvil"
+	desc = "A big block of sandstone. Useable as an anvil."
+	custom_materials = list(/datum/material/sandstone=8000)
+	icon_state = "sandvil"
+	anvilquality = -1
+	itemqualitymax = 5
+
+
+// Remnant trash
 
 /obj/structure/anvil/obtainable/bronze
 	name = "slab of bronze"
@@ -277,26 +309,13 @@
 	anvilquality = 0
 	itemqualitymax = 6
 
-/obj/structure/anvil/obtainable/sandstone
-	name = "sandstone brick anvil"
-	desc = "A big block of sandstone. Useable as an anvil."
-	custom_materials = list(/datum/material/sandstone=8000)
-	icon_state = "sandvil"
-	anvilquality = -1
-	itemqualitymax = 4
-
-/obj/structure/anvil/obtainable/basalt
-	name = "basalt brick anvil"
-	desc = "A big block of basalt. Useable as an anvil, better than sandstone. Igneous!"
-	icon_state = "sandvilnoir"
-	anvilquality = -1
-	itemqualitymax = 8
-
-/obj/structure/anvil/obtainable/basic
-	name = "anvil"
-	desc = "An anvil. It's got wheels bolted to the bottom."
-	anvilquality = 1
-	itemqualitymax = 8
+/obj/structure/anvil/debugsuper
+	name = "super ultra epic anvil of debugging."
+	desc = "WOW. A DEBUG <del>ITEM</DEL> STRUCTURE. EPIC."
+	icon_state = "anvil"
+	anvilquality = 10
+	itemqualitymax = 9001
+	outrightfailchance = 0
 
 /obj/structure/anvil/obtainable/ratvar
 	name = "brass anvil"

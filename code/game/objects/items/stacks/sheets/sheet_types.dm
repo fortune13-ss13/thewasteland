@@ -335,16 +335,16 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 /obj/item/stack/sheet/mineral/wood/attackby(obj/item/W, mob/user, params) // NOTE: sheet_types.dm is where the WOOD stack lives. Maybe move this over there.
 	// Taken from /obj/item/stack/rods/attackby in [rods.dm]
 	if(W.get_sharpness())
-		user.visible_message("[user] begins whittling [src] into a pointy object.", \
-				"<span class='notice'>You begin whittling [src] into a sharp point at one end.</span>", \
+		user.visible_message("[user] begins whittling [src] into a rod.", \
+				"<span class='notice'>You begin whittling [src] into a rod, suitable as a weapon shaft.</span>", \
 				"<span class='italics'>You hear wood carving.</span>")
-		// 8 Second Timer
-		if(!do_after(user, 80, TRUE, src))
+		// 7 Second Timer
+		if(!do_after(user, 70, TRUE, src))
 			return
-		// Make Stake
-		var/obj/item/stake/basic/new_item = new(user.loc)
-		user.visible_message("[user] finishes carving a stake out of [src].", \
-				"<span class='notice'>You finish carving a stake out of [src].</span>")
+		// Make stick
+		var/obj/item/stick/new_item = new(user.loc)
+		user.visible_message("[user] finishes carving a rod from the [src].", \
+				"<span class='notice'>You finish carving a rod from the [src].</span>")
 		// Prepare to Put in Hands (if holding wood)
 		var/obj/item/stack/sheet/mineral/wood/N = src
 		var/replace = (user.get_inactive_held_item() == N)
@@ -425,6 +425,7 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	null, \
 	new/datum/stack_recipe("string", /obj/item/weaponcrafting/string, 1, time = 10), \
 	new/datum/stack_recipe("improvised gauze", /obj/item/stack/medical/gauze/improvised, 1, 2, 6), \
+	new/datum/stack_recipe("improvised suture", /obj/item/stack/medical/suture/emergency, 3), \
 	new/datum/stack_recipe("rag", /obj/item/reagent_containers/rag, 1), \
 	new/datum/stack_recipe("towel", /obj/item/reagent_containers/rag/towel, 3), \
 	new/datum/stack_recipe("bedsheet", /obj/item/bedsheet, 3), \
@@ -433,8 +434,6 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("mattress", /obj/structure/bed/mattress, 2, one_per_turf = TRUE, on_floor = TRUE), \
 	null, \
 	new/datum/stack_recipe("blindfold", /obj/item/clothing/glasses/sunglasses/blindfold, 2), \
-	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2), \
-	new/datum/stack_recipe("pet collar", /obj/item/clothing/neck/petcollar, 2), \
 	new/datum/stack_recipe("money pouch", /obj/item/storage/bag/money/small, 5), \
 	))
 
@@ -987,7 +986,7 @@ prewar alloys
 	desc = "This sheet was manufactured by using advanced smelting techniques before the war."
 	icon_state = "sheet-prewar"
 	item_state = "sheet-metal"
-	custom_materials = list()
+	custom_materials = list(/datum/material/iron = 10000)
 	throwforce = 10
 	flags_1 = CONDUCT_1
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 80)

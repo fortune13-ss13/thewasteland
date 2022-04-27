@@ -56,8 +56,7 @@
 	item_state = "combat_helmet"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 50
-	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
-	flags_cover = HEADCOVERSEYES
+	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
@@ -80,6 +79,8 @@
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
 
 /obj/item/clothing/head/helmet/f13/combat/mk2/dark
 	name = "reinforced combat helmet"
@@ -402,7 +403,7 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	slowdown = 0.1
-	armor = list("melee" = 85, "bullet" = 85, "laser" = 87, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 70)
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0, "wound" = 75)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 
 
@@ -618,7 +619,7 @@
 	desc = "The wasteland's finest."
 	icon_state = "retropolice"
 	item_state = "fedora"
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/simplekitty
 	name = "kitty headband"
