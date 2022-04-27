@@ -59,3 +59,8 @@
 	flag = "energy"
 	wound_bonus = 10
 	bare_wound_bonus = 30
+
+/obj/item/projectile/energy/teslacannon/oasis/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if(!ismob(target) || blocked >= 100) //Fully blocked by mob or collided with dense object - burst into sparks!
+		do_sparks(1, TRUE, src)
