@@ -55,6 +55,7 @@
 	name = "shock beam"
 	damage = 8
 	armour_penetration = 0
+	stamina = 5 
 	flag = "energy"
 	wound_bonus = 10
 	bare_wound_bonus = 30
