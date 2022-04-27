@@ -112,28 +112,28 @@
 		H.mind.AddSpell(S)
 
 
-// Master Sergeant
+// Gunnery Sergeant
 
-/datum/job/enclave/f13msergeant
-	title = "Enclave Master Sergeant"
-	flag = F13USMSGT
+/datum/job/enclave/f13gysergeant
+	title = "Enclave Gunnery Sergeant"
+	flag = F13USGYSGT
 	total_positions = 1
 	spawn_positions = 1
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
 	description = "Second in command after Lieutenant, your role is to direct their orders directly to the sergeants and regular troops."
 	supervisors = "The Lieutenant."
-	outfit = /datum/outfit/job/enclave/peacekeeper/f13msergeant
+	outfit = /datum/outfit/job/enclave/peacekeeper/f13gysergeant
 	exp_requirements = 2800
 
 	loadout_options = list(
-		/datum/outfit/loadout/msgt_ballistics, // LSW and MK23
-		/datum/outfit/loadout/msgt_laser, // AER12
-		/datum/outfit/loadout/msgt_minigun, // Laser gatling
+		/datum/outfit/loadout/gysgt_ballistics, // LSW and MK23
+		/datum/outfit/loadout/gysgt_laser, // AER12
+		/datum/outfit/loadout/gysgt_minigun, // Laser gatling
 		)
 
-/datum/outfit/job/enclave/peacekeeper/f13msergeant
-	name = "Enclave Master Sergeant"
-	jobtype = /datum/job/enclave/f13msergeant
+/datum/outfit/job/enclave/peacekeeper/f13gysergeant
+	name = "Enclave Gunnery Sergeant"
+	jobtype = /datum/job/enclave/f13gysergeant
 	head = /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/x02
 	accessory = /obj/item/clothing/accessory/enclave/master_sergeant
@@ -146,7 +146,7 @@
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
-/datum/outfit/loadout/msgt_ballistics
+/datum/outfit/loadout/gysgt_ballistics
 	name = "Assault Kit"
 	suit_store = /obj/item/gun/ballistic/automatic/lsw
 	backpack_contents = list(
@@ -155,21 +155,21 @@
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
 		)
 
-/datum/outfit/loadout/msgt_laser
+/datum/outfit/loadout/gysgt_laser
 	name = "Laser Weaponry"
 	suit_store = /obj/item/gun/energy/laser/aer12
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 4,
 		)
 
-/datum/outfit/loadout/msgt_minigun
+/datum/outfit/loadout/gysgt_minigun
 	name = "Armored Infantry"
 	suit_store = 	/obj/item/minigunpack
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ecp = 2,
 		)
 
-/datum/outfit/job/enclave/peacekeeper/f13msergeant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/enclave/peacekeeper/f13gysergeant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -185,7 +185,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	description = "Entrusted with the command of the squads assigned to the bunker, your job is to assist the Lieutenant alongside the scientists."
-	supervisors = "The Lieutenant and the Master Sergeant."
+	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	exp_requirements = 2400
 
