@@ -583,6 +583,7 @@ Raider
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/color/latex
 	neck = /obj/item/bedsheet/medical
+	belt = /obj/item/storage/belt/medical
 	backpack_contents =  list(/obj/item/reagent_containers/medspray/synthflesh=2,
 							/obj/item/stack/medical/suture/emergency/fifteen=1,
 							/obj/item/stack/medical/ointment/twelve=1,
@@ -593,6 +594,10 @@ Raider
 							/obj/item/lighter=1,
 							/obj/item/screwdriver=1,
 							/obj/item/wirecutters=1,
+							/obj/item/storage/backpack/duffelbag/med/surgery=1,
+							/obj/item/paper_bin=1,
+							/obj/item/folder=1,
+							/obj/item/pen/fountain=1,
 							/obj/item/hatchet=1
 		)
 
