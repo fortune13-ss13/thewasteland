@@ -1,7 +1,7 @@
 /obj/item/projectile/beam
 	name = "laser"
 	icon_state = "laser"
-	pass_flags = PASSTABLE
+	pass_flags = PASSTABLE| PASSGLASS
 	damage = 20
 	light_range = 2
 	damage_type = BURN
@@ -85,7 +85,9 @@
 	name = "gamma beam"
 	icon_state = "xray"
 	damage = 5
-	damage_type = "clone"
+	flag = "energy"
+	armour_penetration = 1 //it only does 5 damage.
+	damage_type = "toxin"
 	irradiate = 200
 	range = 15
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF
@@ -469,13 +471,13 @@
 		M.gets_drilled(firer)
 
 /obj/item/projectile/f13plasma/pistol //Plasma pistol
-	damage = 15
+	damage = 18
 
 /obj/item/projectile/f13plasma/pistol/worn
-	damage = 31
+	damage = 16
 
 /obj/item/projectile/f13plasma/pistol/glock //Glock (streamlined plasma pistol)
-	damage = 38
+	damage = 20
 
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 25
@@ -490,12 +492,15 @@
 /obj/item/projectile/beam/laser/rcw/hitscan //RCW
 	name = "rapidfire beam"
 	icon_state = "emitter"
-	damage = 15 //ALWAYS does 50, this is a burstfire hitscan weapon that fires in bursts of 2.
+	damage = 15
 	hitscan = TRUE
 	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
 	tracer_type = /obj/effect/projectile/tracer/laser/emitter
 	impact_type = /obj/effect/projectile/impact/laser/emitter
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+
+/obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
+	damage = 7
 
 /obj/item/projectile/f13plasma/pistol/alien
 	name = "alien projectile"

@@ -612,7 +612,7 @@
 	id = /datum/reagent/colorful_reagent
 	results = list(/datum/reagent/colorful_reagent = 5)
 	required_reagents = list(/datum/reagent/stable_plasma = 1, /datum/reagent/radium = 1, /datum/reagent/drug/space_drugs = 1, /datum/reagent/medicine/cryoxadone = 1, /datum/reagent/consumable/triple_citrus = 1)
-
+/*
 /datum/chemical_reaction/life
 	name = "Life"
 	id = "life"
@@ -620,7 +620,7 @@
 	required_temp = 374
 
 /datum/chemical_reaction/life/on_reaction(datum/reagents/holder, multiplier)
-	chemical_mob_spawn(holder, rand(1, round(multiplier, 1)), "Life (friendly)", FRIENDLY_SPAWN) // a certain person keep abusing this to spawn like 20 mobs infront of ncr base
+	chemical_mob_spawn(holder, rand(1, round(multiplier, 1)), "Life") // Defaults to HOSTILE SPAWN
 
 //This is missing, I'm adding it back (see tgwiki). Not sure why we don't have it.
 /datum/chemical_reaction/life_friendly
@@ -631,6 +631,7 @@
 
 /datum/chemical_reaction/life_friendly/on_reaction(datum/reagents/holder, multiplier)
 	chemical_mob_spawn(holder, rand(1, round(multiplier, 1)), "Life (friendly)", FRIENDLY_SPAWN) //Pray for cute cats
+*/
 
 /datum/chemical_reaction/corgium
 	name = "corgium"
@@ -707,13 +708,13 @@
 	var/location = get_turf(holder.my_atom)
 	for(var/i in 1 to multiplier)
 		new /obj/item/stack/sheet/plastic(location)
-/*
+
 /datum/chemical_reaction/pax
 	name = "pax"
 	id = /datum/reagent/pax
 	results = list(/datum/reagent/pax = 3)
 	required_reagents  = list(/datum/reagent/toxin/mindbreaker = 1, /datum/reagent/medicine/synaptizine = 1, /datum/reagent/water = 1)
-*/
+
 // TODO: Add some kind of ghoulification mutation toxin? Iunno.
 
 // Liquid Carpets
@@ -883,3 +884,31 @@
 	id = "nutracid_vit"
 	results = list(/datum/reagent/nutracid = 1)
 	required_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/nutracid = 1)
+
+/datum/chemical_reaction/breast_enlarger
+	name = "Succubus Milk"
+	id = "/datum/reagent/breast_enlarger"
+	results = list(/datum/reagent/breast_enlarger = 2)
+	required_reagents = list(/datum/reagent/medicine/salglu_solution = 2, /datum/reagent/consumable/milk = 1, /datum/reagent/medicine/synthflesh = 2, /datum/reagent/silicon = 3, /datum/reagent/drug/aphrodisiac = 3)
+	required_temp = 200
+	
+/datum/chemical_reaction/BEsmaller
+	name = "Modesty Milk"
+	id = "/datum/reagent/BEsmaller"
+	results = list(/datum/reagent/BEsmaller = 2)
+	required_reagents = list(/datum/reagent/medicine/salglu_solution = 2, /datum/reagent/consumable/milk = 1, /datum/reagent/medicine/synthflesh = 2, /datum/reagent/silicon = 3, /datum/reagent/drug/anaphrodisiac = 3)
+	required_temp = 200
+	
+/datum/chemical_reaction/penis_enlarger
+	name = "Incubus Draft"
+	id = "/datum/reagent/penis_enlarger"
+	results = list(/datum/reagent/penis_enlarger = 2)
+	required_reagents = list(/datum/reagent/medicine/salglu_solution = 2, /datum/reagent/blood = 5, /datum/reagent/medicine/synthflesh = 2, /datum/reagent/carbon = 2, /datum/reagent/drug/aphrodisiac = 2)
+	required_temp = 200
+	
+/datum/chemical_reaction/PEsmaller
+	name = "Chastity Draft"
+	id = "/datum/reagent/PEsmaller"
+	results = list(/datum/reagent/PEsmaller = 2)
+	required_reagents = list(/datum/reagent/medicine/salglu_solution = 2, /datum/reagent/blood = 5, /datum/reagent/medicine/synthflesh = 2, /datum/reagent/carbon = 2, /datum/reagent/drug/anaphrodisiac = 2)
+	required_temp = 200

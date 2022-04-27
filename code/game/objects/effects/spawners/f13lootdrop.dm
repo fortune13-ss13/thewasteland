@@ -682,7 +682,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	lootcount = 1
 
 	loot = list(/obj/item/twohanded/fireaxe,
-				/obj/item/twohanded/sledgehammer,
+				/obj/item/twohanded/sledgehammer/simple,
 				/obj/item/twohanded/fireaxe/bmprsword,
 				/obj/item/melee/unarmed/lacerator,
 				/obj/item/melee/unarmed/maceglove,
@@ -805,7 +805,6 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow
 	name = "very low tier non-hobo ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/ninemil,
-				/obj/effect/spawner/bundle/f13/sig,
 				/obj/effect/spawner/bundle/f13/caravan_shotgun,
 				/obj/effect/spawner/bundle/f13/mosin,
 				/obj/effect/spawner/bundle/f13/remington,
@@ -997,7 +996,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 				)
 
 /obj/effect/spawner/bundle/f13/sig
-	name = "sig p220 pistol and ammo spawner"
+	name = " p220 pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/sig,
 				/obj/item/ammo_box/magazine/m9mm/
@@ -1271,7 +1270,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 				/obj/item/ammo_box/magazine/m556/rifle/
 				)
 
-/obj/effect/spawner/bundle/f13/combat_rifle
+obj/effect/spawner/bundle/f13/combat_rifle
 	name = "combat rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/combat,
@@ -2014,7 +2013,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 				/obj/item/book/granter/trait/techno = 10,
 				/obj/item/book/granter/trait/pa_wear = 1,
 				/obj/item/book/granter/trait/explosives = 10,
-				/obj/item/book/granter/trait/explosives_advanced = 1,
+				/obj/item/book/granter/trait/explosives_advanced = 5,
 				/obj/item/book/granter/trait/rifleman = 5,
 				/obj/item/book/granter/crafting_recipe/gunsmith_two = 20,
 				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
@@ -2178,7 +2177,6 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	lootcount = 1
 	lootdoubles = FALSE
 	loot = list(
-		/obj/effect/spawner/bundle/f13/sig,
 		/obj/effect/spawner/bundle/f13/beretta,
 		/obj/effect/spawner/bundle/f13/ninemil
 	)

@@ -219,6 +219,27 @@
 	fire_sound = 'sound/f13weapons/american180.ogg'
 
 
+//14mm SMG Keywords: 14mm, Automatic, 21 rounds
+/obj/item/gun/ballistic/automatic/smg/smg14
+	name = "14mm SMG"
+	desc = "A heavy-duty SMG designed to tear through most forms of armor."
+	icon_state = "14smg"
+	item_state = "14toploader"
+	slowdown = 0.25
+	w_class = WEIGHT_CLASS_BULKY
+	mag_type = /obj/item/ammo_box/magazine/smg14
+	is_automatic = TRUE
+	automatic = 1
+	autofire_shot_delay = 3.25
+	spread = 9
+	extra_damage = 32
+	extra_penetration = 0.1
+	recoil = 0.35
+	can_attachments = TRUE
+	can_suppress = FALSE
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
+
 //Greasegun				Keywords: 9mm, Automatic, 30 rounds
 /obj/item/gun/ballistic/automatic/smg/greasegun
 	name = "9mm submachine gun"
@@ -610,12 +631,12 @@
 	item_state = "m90"
 	icon_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
-	burst_size = 1	
+	burst_size = 1
 	slowdown = 0.2
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
-	autofire_shot_delay = 2.25
+	autofire_shot_delay = 1.75
 	extra_penetration = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
@@ -732,7 +753,8 @@
 	burst_size = 1
 	spread = 1
 	extra_damage = 32
-	slowdown = 0.3
+	extra_penetration = 0.2
+	slowdown = 0.1
 	can_attachments = FALSE
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -1256,8 +1278,8 @@
 	extra_damage = 20 //longer barrel
 	spread = 8 //more accurate than the assault carbine, its a rifle
 	can_scope = TRUE
-	
-/obj/item/gun/ballistic/automatic/assault_carbine/worn	
+
+/obj/item/gun/ballistic/automatic/assault_carbine/worn
 	name = "worn assault carbine"
 	desc = "The U.S. army carbine version of the R91, made by Colt and issued to special forces. This one is beat-up and falling apart."
 	icon_state = "assault_carbine"
@@ -1265,7 +1287,7 @@
 	burst_shot_delay = 2.2
 	spread = 14
 	extra_damage = 18
-
+	extra_penetration = 0
 //FN-FAL				Keywords: 7.62mm, Automatic, 10/20 round magazine
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
@@ -1311,65 +1333,22 @@ obj/item/gun/ballistic/automatic/bar
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/m473
 	burst_size = 1
-	extra_damage = 22.5
+	extra_damage = 16
 	fire_delay = 2
 	is_automatic = TRUE
-	automatic = FALSE
-	extra_penetration = 0.1
-	autofire_shot_delay = 1.75
-	burst_shot_delay = 0.5
+	automatic = 1
+	autofire_shot_delay = 1.5
+	burst_shot_delay = 1.5
+	spread = 8
+	recoil = 0.1
 	can_attachments = TRUE
 	semi_auto = TRUE
 	can_scope = FALSE
-	spread = 0
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	select = 0
-
-/obj/item/gun/ballistic/automatic/g11/ui_action_click(mob/user, action)
-	if(istype(action, /datum/action/item_action/toggle_firemode))
-		burst_select()
-	else
-		return ..()
-
-/obj/item/gun/ballistic/automatic/g11/burst_select()
-	var/mob/living/carbon/human/user = usr
-	switch(select)
-		if(0)
-			select += 1
-			if(burst_improvement)
-				burst_size = 5
-			else
-				burst_size = 3
-			automatic = FALSE
-			if(recoil_decrease)
-				burst_spread = 5.5
-			else
-				burst_spread = 7.5
-			recoil = 0.25
-			to_chat(user, "<span class='notice'>You switch to burst fire.</span>")
-		if(1)
-			select += 1
-			burst_size = 1
-			automatic = TRUE
-			if(recoil_decrease)
-				burst_spread = 8.5
-			else
-				burst_spread = 12.5
-			recoil = 0.5
-			to_chat(user, "<span class='notice'>You switch to full-auto.</span>")
-		if(2)
-			select = 0
-			burst_size = 1
-			automatic = FALSE
-			spread = 0
-			recoil = 0
-			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
-	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
-	update_icon()
-	return
 
 ////////////////
 //MACHINE-GUNS//
@@ -1434,9 +1413,9 @@ obj/item/gun/ballistic/automatic/bar
 	burst_shot_delay = 1.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 3.25
+	autofire_shot_delay = 2.8
 	fire_delay = 4
-	extra_damage = 28
+	extra_damage = 25
 	spread = 8
 	can_attachments = FALSE
 	var/cover_open = FALSE

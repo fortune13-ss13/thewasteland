@@ -305,7 +305,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if (HAS_TRAIT(H, TRAIT_TAGGER))
-			cost *= 0.5
+			cost *= 0.25
 	var/charges_used = use_charges(user, cost)
 	if(!charges_used)
 		return
@@ -682,7 +682,6 @@
 		if(actually_paints)
 			if(istype(target, /obj/item/canvas))
 				return
-			var/list/hsl = rgb2hsl(hex2num(copytext(paint_color,2,4)),hex2num(copytext(paint_color,4,6)),hex2num(copytext(paint_color,6,8)))
 			var/static/whitelisted = typecacheof(list(/obj/structure/window,
 										/obj/effect/decal/cleanable/crayon,
 										/obj/machinery/door/window)

@@ -247,6 +247,13 @@
 	build_path = /obj/item/ammo_box/magazine/m45exp/empty
 	category = list("initial", "Basic Magazines")
 
+/datum/design/ammolathe/Thompsonstick
+	name = "empty thompson stick magazine (.45)"
+	id = "Thompsonstick"
+	materials = list(/datum/material/iron = 4000)
+	build_path = /obj/item/ammo_box/magazine/tommygunm45/stick/empty
+	category = list("initial", "Basic Magazines")
+
 //Tier 2 Ammo
 
 /datum/design/ammolathe/m44
@@ -412,6 +419,13 @@
 	build_path = /obj/item/ammo_box/magazine/m14mm/empty
 	category = list("initial", "Intermediate Magazines")
 
+/datum/design/ammolathe/smg14
+	name = "empty smg magazine (14mm)"
+	id = "m127smg"
+	materials = list(/datum/material/iron = 6000)
+	build_path = /obj/item/ammo_box/magazine/smg14/empty
+	category = list("initial", "Intermediate Magazines")
+
 /datum/design/ammolathe/m22smg
 	name = "empty toploader magazine (.22lr)"
 	id = "m22smg"
@@ -497,6 +511,13 @@
 	id = "m10mm_p90"
 	materials = list(/datum/material/iron = 6000)
 	build_path = /obj/item/ammo_box/magazine/m10mm_p90/empty
+	category = list("initial", "Advanced Magazines")
+
+/datum/design/ammolathe/smg14stacked
+	name = "empty smg stacked magazine (14mm)"
+	id = "m127ssmg"
+	materials = list(/datum/material/iron = 8000)
+	build_path = /obj/item/ammo_box/magazine/smg14/stacked/empty
 	category = list("initial", "Advanced Magazines")
 
 /datum/design/ammolathe/rifleassault556
@@ -620,13 +641,6 @@
 	build_path = /obj/item/ammo_box/m473/dumdum
 	category = list("initial", "Advanced Ammo")
 
-/datum/design/ammolathe/m473explosive
-	name = "4.73mm explosive caseless ammo box"
-	id = "m473explosive"
-	materials = list(/datum/material/iron = 24000, /datum/material/titanium = 10000, /datum/material/blackpowder = 10000)
-	build_path = /obj/item/ammo_box/m473/explosive
-	category = list("initial", "Advanced Ammo")
-
 /datum/design/ammolathe/m473esd
 	name = "4.73mm ESD caseless ammo box"
 	id = "m473esd"
@@ -637,7 +651,7 @@
 /datum/design/ammolathe/m473hv
 	name = "4.73mm high-velocity caseless ammo box"
 	id = "m473hv"
-	materials = list(/datum/material/iron = 12000, /datum/material/titanium = 8000, /datum/material/blackpowder = 3000)
+	materials = list(/datum/material/iron = 12000, /datum/material/titanium = 15000, /datum/material/blackpowder = 3000)
 	build_path = /obj/item/ammo_box/m473/hv
 	category = list("initial", "Advanced Ammo")
 
