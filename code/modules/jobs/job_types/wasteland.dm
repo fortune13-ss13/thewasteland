@@ -601,6 +601,15 @@ Raider
 							/obj/item/hatchet=1
 		)
 
+/datum/outfit/loadout/medic/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
+
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
 	uniform = /obj/item/clothing/under/f13/merchant
