@@ -1101,7 +1101,8 @@ Nothing else in the console has ID requirements.
 
 /obj/machinery/computer/rdconsole/proc/rescan_views()
 	var/compare
-	matching_design_ids.Cut()
+	if(!QDELETED(matching_design_ids))
+		matching_design_ids.Cut()
 	if(searchtype == "proto")
 		compare = PROTOLATHE
 	else if(searchtype == "imprint")
