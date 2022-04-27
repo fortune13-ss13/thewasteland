@@ -261,8 +261,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 3,
-		/obj/item/book/granter/martial/cqc = 1,
 		/obj/item/melee/powerfist/f13/goliath = 1,
+		/obj/item/book/granter/martial/cqc = 1,
 		)
 
 /datum/outfit/loadout/rangerhunter
