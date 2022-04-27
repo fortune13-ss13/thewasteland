@@ -1306,24 +1306,25 @@
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
-obj/item/gun/ballistic/automatic/bar
-	name = "automatic rifle (.308)"
-	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
+//BAR 1918			Keywords: 7.62, Automatic, 10-20 round mags, High damage - yet low fire rate and capacity. Larger burst is more spread.
+/obj/item/gun/ballistic/automatic/bar
+	name = "BAR 1918"
+	desc = "Old but still reliable machine gun chambered in 7.62; a rare find! These can be found in museums and national guard stockpiles as an old squad support training weapon."
 	icon = 'icons/fallout/objects/guns/bar.dmi'
-	slot_flags = ITEM_SLOT_BACK
 	icon_state = "BAR"
-	item_state = "BAR"
-	icon_prefix = "BAR"
-	automatic = 1
-	mag_type = /obj/item/ammo_box/magazine/m762/ext
-	force = 24 //club
-	slowdown = 1.25 //really goddamn big
-	autofire_shot_delay = 2.5
-	extra_damage = 28
-	spread = 10
-	recoil = 0.3
+	item_state = "R84"
+	slowdown = 1
+	mag_type = /obj/item/ammo_box/magazine/m762
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
+	fire_sound = 'sound/f13weapons/m1918a2.ogg'
+	can_suppress = FALSE
+	can_attachments = FALSE
+	burst_size = 2
+	fire_delay = 6
+	spread = 6
+	burst_shot_delay = 2.5
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 
 //H&K G11				Keywords: 4.73mm, Automatic, 50 round magazine
 /obj/item/gun/ballistic/automatic/g11

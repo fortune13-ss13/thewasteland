@@ -1050,6 +1050,13 @@
 	icon_state = "legionmedallionprime"
 	assignment = "slavemaster medallion"
 
+/obj/item/card/id/dogtag/leglibritor
+	name = "libritor medallion"
+	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to a libritor."
+	icon_state = "legionmedallionprime"
+	item_state = "card-id_leg"
+	assignment = "libritor medallion"
+
 /obj/item/card/id/dogtag/legauxilia
 	name = "auxilia medallion"
 	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a respected auxilia of the Legion."

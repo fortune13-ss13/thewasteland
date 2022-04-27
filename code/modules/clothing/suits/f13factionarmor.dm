@@ -275,6 +275,18 @@
 	item_state = "legion-venator"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 40)
 
+
+/obj/item/clothing/suit/armor/f13/power_armor/legion
+	name = "salvaged Legion power armor"
+	desc = "(VIII) It's a set of T-45b power armor with a air conditioning module installed, it however lacks servomotors to enhance the users strength. This one has a legion aquila engraved into the chestplate."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "libritor"
+	item_state = "libritor"
+	armor = list("tier" = 8, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 40)
+	requires_training = FALSE
+	slowdown = 1.5
+
 /obj/item/clothing/suit/armor/f13/legion/centurion //good all around
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."

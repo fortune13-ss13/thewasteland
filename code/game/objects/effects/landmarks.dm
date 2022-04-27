@@ -620,6 +620,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Legion Vexillarius"
 	icon_state = "Vexillarius"
 
+/obj/effect/landmark/start/f13/libritor
+	name = "Legion Libritor"
+	icon_state = "Veteran Legionnaire"
+
 /obj/effect/landmark/start/f13/vetlegionary
 	name = "Veteran Legionnaire"
 	icon_state = "Veteran Legionnaire"

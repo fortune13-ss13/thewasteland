@@ -759,6 +759,17 @@
 	icon_state = "diohelmet"
 	item_state = "diohelmet"
 
+/obj/item/clothing/head/helmet/f13/power_armor/legion
+	name = "salvaged Legion T-45b helmet"
+	desc = "(VIII) It's a salvaged T-45b power armor helmet, retrofitted in Dog City for the legion's front line."
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "libritor"
+	item_state = "libritor"
+	armor = list("energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 40)
+	requires_training = FALSE
+
+
+
 /obj/item/clothing/head/helmet/f13/herbertranger
 	name = "weathered desert ranger helmet"
 	icon_state = "modified_usmc_riot"

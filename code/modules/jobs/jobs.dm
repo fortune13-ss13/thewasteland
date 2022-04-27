@@ -87,6 +87,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Veteran Decanus",
 "Veteran Legionnaire",
 "Legion Prime Decanus",
+"Legion Libritor",
 "Prime Legionnaire",
 "Legion Recruit Decanus",
 "Legion Scout",
@@ -171,6 +172,8 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Prime Decanus",
 	"Legion Recruit Decanus",
 	"Legion Vexillarius",
+	"Legion Libritor",
+	"Legion Venator",
 	"Legion Explorer",
 	"Veteran Legionnaire",
 	"Prime Legionnaire",
@@ -179,7 +182,6 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Immune",
 	"Legion Auxilia",
 	"Legion Slave",
-	"Legion Venator",
 	"Legion Slavemaster"
 ))
 
