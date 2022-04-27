@@ -48,7 +48,7 @@
 
 /obj/item/clothing/suit/armor/vest/trench
 	name = "followers trenchcoat"
-	desc = "A grey and which trench coat with dark blue highlights, on the sides and back it has the unique symbol of the followers. Under said coat is an armor vest, perfect for light weight protection."
+	desc = "A grey and white trench coat with dark blue highlights, on the sides and back it has the unique symbol of the followers. Under said coat is an armor vest, perfect for light weight protection."
 	icon_state = "followerstrench"
 	item_state = "followerstrench"
 	armor = list("melee" = 15, "bullet" = 45, "laser" = 15, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 30)
