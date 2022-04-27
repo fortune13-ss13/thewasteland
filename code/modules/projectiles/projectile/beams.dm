@@ -308,9 +308,32 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
+/obj/item/projectile/beam/laser/lasgun/hitscan/mech
+	name = "laser beam"
+	damage = 25
+	armour_penetration = 0.10
+
+/obj/item/projectile/beam/laser/lasgun/hitscan/mech/heavy
+	name = "heavy laser beam"
+	damage = 40
+	armour_penetration = 0.30
+
+/obj/item/projectile/beam/laser/lasgun/hitscan/mech/pulse
+	name = "charged pulse beam"
+	damage = 35
+	armour_penetration = 0.50
+	tracer_type = /obj/effect/projectile/tracer/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/pulse
+	impact_type = /obj/effect/projectile/impact/pulse
+
+/obj/item/projectile/beam/laser/lasgun/hitscan/mech/pulse/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if (!QDELETED(target) && (isturf(target) || istype(target, /obj/structure/)))
+		target.ex_act(EXPLODE_HEAVY)
+
 /obj/item/projectile/beam/laser/lasgun/hitscan/focused
 	name = "overcharged laser beam"
-	damage = 30
+	damage = 34
 	armour_penetration = 0.6
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser

@@ -181,6 +181,8 @@
 				/obj/item/stack/ore/blackpowder/five
 				)
 
+
+
 /obj/item/salvage/crafting
 	name = "salvaged components"
 	desc = "Some salvaged components, it could contain some useful materials if dissasembled using a workbench..."
@@ -189,6 +191,7 @@
 				/obj/item/crafting/wonderglue,
 				/obj/item/crafting/abraxo,
 				/obj/item/crafting/lunchbox)
+
 
 /obj/item/salvage/tool
 	name = "Pre-war tool salvage"
@@ -213,3 +216,9 @@
 				/obj/item/advanced_crafting_components/lenses,
 				/obj/item/advanced_crafting_components/flux,
 				/obj/item/blueprint/research)
+
+/obj/item/salvage/Destroy()
+	QDEL_NULL(Loot)
+	..()
+	return QDEL_HINT_HARDDEL
+
