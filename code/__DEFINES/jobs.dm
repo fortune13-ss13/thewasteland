@@ -154,8 +154,7 @@
 #define F13PUNRAIDER	(1<<5)
 #define F13DETECTIVE	(1<<6)
 #define EVENTCOVEN		(1<<7)
-#define F13VIGILANTE	(1<<8)
-#define F13ADMINBOOS	(1<<9)
+#define F13ADMINBOOS	(1<<8)
 #define F13CULTLEADER	(1<<9)
 #define F13TRIBAL		(1<<10)
 

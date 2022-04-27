@@ -224,7 +224,6 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Outlaw",
 	"Great Khan",
 	"Faithful",
-	"Vigilante",
 	"Preacher",
 	"Tribal",
 	"Wastelander",
