@@ -243,7 +243,7 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	color ="#A9FBFB"
 	taste_description = "bitterness"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
-	overdose_threshold = 31
+	overdose_threshold = 20
 	var/heal_factor = -3 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -5.2 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE

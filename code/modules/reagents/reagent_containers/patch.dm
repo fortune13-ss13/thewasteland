@@ -107,10 +107,10 @@
 
 /obj/item/reagent_containers/pill/patch/bitterdrink
 	name = "Bitter drink"
-	desc = "A strong herbal healing concoction which enables wounded soldiers and travelers to tend to their wounds without stopping during journeys."
+	desc = "A strong herbal healing concoction which enables wounded soldiers and travelers to tend to their wounds without stopping during journeys. Getting this one down is going to be rough."
 	icon_state = "patch_bitterdrink"
 	list_reagents = list(/datum/reagent/medicine/bitter_drink = 15) 
-	self_delay = 0
+	self_delay = 15
 
 /* 
 // ---------------------------------

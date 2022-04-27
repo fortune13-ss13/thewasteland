@@ -659,7 +659,6 @@ commented out pending rework*/
 	exp_requirements = 300
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
-		/datum/outfit/loadout/expsniper,	// Rangemaster, Beartrap
 		/datum/outfit/loadout/expambusher,	// MP5, Bottlecap mine
 		)
 
@@ -726,6 +725,8 @@ commented out pending rework*/
 ///////////////////
 ////Legionnaires///
 ///////////////////
+
+
 
 // VETERAN
 
