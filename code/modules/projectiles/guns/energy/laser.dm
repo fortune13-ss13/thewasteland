@@ -317,7 +317,7 @@
 	icon_state = "protolaser"
 	item_state = "laser"
 	weapon_weight = WEAPON_MEDIUM
-	w_class = WEIGHT_CLASS_LIGHT //dual wielding
+	weapon_weight =  = WEIGHT_CLASS_LIGHT //dual wielding
 	slowdown = 0.3
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser) //7dmg, 0 AP, but essentially fires a pinpoint beam
