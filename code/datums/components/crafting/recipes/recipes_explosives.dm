@@ -49,10 +49,10 @@
 /datum/crafting_recipe/explosive/coffeepotbomb
 	name = "Coffeepot Bomb"
 	result = /obj/item/grenade/homemade/coffeepotbomb
-	reqs = list(/datum/reagent/blackpowder = 50,
+	reqs = list(/obj/item/crafting/coffee_pot = 1,
 				/obj/item/stack/ore/blackpowder = 5,
 				/obj/item/stack/cable_coil = 1,
-				/obj/item/assembly/timer = 1,)
+				/obj/item/assembly/timer = 1)
 	time = 30
 	category = CAT_EXPLOSIVE
 
