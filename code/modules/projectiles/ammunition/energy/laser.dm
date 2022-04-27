@@ -250,11 +250,12 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/autolaser
 	projectile_type = /obj/item/projectile/beam/laser/rcw/hitscan/autolaser
-	e_cost = 120
+	e_cost = 96
 
 /obj/item/ammo_casing/energy/laser/autolaser/shock
 	projectile_type = /obj/item/projectile/energy/teslacannon/oasis
 	fire_sound = 'sound/weapons/taser.ogg'
+	e_cost = 120
 
 // BETA // Obsolete
 /obj/item/ammo_casing/energy/laser/pistol/lasertest
