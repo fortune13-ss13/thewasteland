@@ -358,7 +358,6 @@
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor
 	belt = /obj/item/storage/belt/military/assault/ncr
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
-	accessory = /obj/item/clothing/accessory/ncr/TPR
 	head = /obj/item/clothing/head/f13/ncr
 
 /mob/living/simple_animal/hostile/ncr/trooper
