@@ -43,7 +43,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "vest_armor"
 	item_state = "vest_armor"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 25, energy = "20", "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 30)
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 25, energy = "20", "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 40)
 	slowdown = 0.18
 
 /obj/item/clothing/suit/armor/vest/trench
@@ -51,6 +51,9 @@
 	desc = "A grey and which trench coat with dark blue highlights, on the sides and back it has the unique symbol of the followers. Under said coat is an armor vest, perfect for light weight protection."
 	icon_state = "followerstrench"
 	item_state = "followerstrench"
+	armor = list("melee" = 15, "bullet" = 45, "laser" = 15, energy = "25", "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 30)
+	slowdown = 0.05
+
 
 /obj/item/clothing/suit/armor/vest/alt
 	desc = "A thick armored vest that provides decent protection against most types of damage."
