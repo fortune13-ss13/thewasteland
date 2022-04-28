@@ -13,14 +13,6 @@
 	step_energy_drain = 40
 	wreckage = /obj/structure/mecha_wreckage/durand
 
-/obj/mecha/combat/durand/GrantActions(mob/living/user, human_occupant = 0)
-	..()
-	defense_action.Grant(user, src)
-
-/obj/mecha/combat/durand/RemoveActions(mob/living/user, human_occupant = 0)
-	..()
-	defense_action.Remove(user)
-
 	var/obj/durand_shield/shield
 
 /obj/mecha/combat/durand/Initialize()
@@ -211,3 +203,11 @@ the shield is disabled by means other than the action button (like running out o
 /obj/durand_shield/bullet_act()
 	play_attack_sound()
 	. = ..()
+
+/obj/mecha/combat/durand/GrantActions(mob/living/user, human_occupant = 0)
+	..()
+	defense_action.Grant(user, src)
+
+/obj/mecha/combat/durand/RemoveActions(mob/living/user, human_occupant = 0)
+	..()
+	defense_action.Remove(user)
