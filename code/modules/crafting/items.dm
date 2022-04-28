@@ -193,6 +193,7 @@
 				/obj/item/crafting/lunchbox)
 
 
+
 /obj/item/salvage/tool
 	name = "Pre-war tool salvage"
 	desc = "Some tools meshed together. It could contain working tools or other useful items if dissasembled using a workbench..."
@@ -214,11 +215,19 @@
 				/obj/item/advanced_crafting_components/alloys,
 				/obj/item/advanced_crafting_components/conductors,
 				/obj/item/advanced_crafting_components/lenses,
+<<<<<<< HEAD
 				/obj/item/advanced_crafting_components/flux,
 				/obj/item/blueprint/research)
+=======
+				/obj/item/advanced_crafting_components/flux)
+>>>>>>> 9cb8954f569b79e004d83c5b1fde82dbfa0ba061
 
 /obj/item/salvage/Destroy()
 	QDEL_NULL(Loot)
 	..()
+<<<<<<< HEAD
 	return QDEL_HINT_HARDDEL
 
+=======
+	return QDEL_HINT_HARDDEL
+>>>>>>> 9cb8954f569b79e004d83c5b1fde82dbfa0ba061
