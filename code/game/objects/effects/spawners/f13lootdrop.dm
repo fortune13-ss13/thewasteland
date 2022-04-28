@@ -1485,7 +1485,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 /obj/effect/spawner/bundle/f13/bar
 	name = "automatic rifle and ammo spawner"
 	items = list(
-			obj/item/gun/ballistic/automatic/bar,
+			/obj/item/gun/ballistic/automatic/bar,
 			/obj/item/ammo_box/magazine/m762/ext,
 	)
 
