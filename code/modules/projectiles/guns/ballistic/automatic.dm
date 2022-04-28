@@ -1318,7 +1318,7 @@ obj/item/gun/ballistic/automatic/bar
 	mag_type = /obj/item/ammo_box/magazine/m762/ext
 	force = 24 //club
 	slowdown = 1.5 //really goddamn big
-	autofire_shot_delay = 2.5
+	autofire_shot_delay = 2.3
 	extra_damage = 27
 	spread = 10
 	recoil = 0.3
