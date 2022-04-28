@@ -1480,7 +1480,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/m762/ext
 	)
 
-<<<<<<< HEAD
 /obj/effect/spawner/bundle/f13/bar
 	name = "automatic rifle and ammo spawner"
 	items = list(
@@ -1488,8 +1487,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 			/obj/item/ammo_box/magazine/m762/ext,
 	)
 
-=======
->>>>>>> parent of da773c8efd (Update f13lootdrop.dm)
 /obj/effect/spawner/bundle/f13/rocketlauncher
 	name = "rocket launcher and ammo spawner"
 	items = list(
