@@ -861,9 +861,10 @@
 	icon_state = "fannypack_pink"
 	item_state = "fannypack_pink"
 
-/obj/item/storage/belt/sabre
-	name = "sabre sheath"
-	desc = "An ornate sheath designed to hold an officer's blade."
+
+/obj/item/storage/belt/sabre // broken legacy crap
+	name = "sword sheath"
+	desc = "A fine sheath for carrying a sword in style."
 	icon_state = "utilitybelt"
 	item_state = "utility"
 	w_class = WEIGHT_CLASS_BULKY
@@ -928,20 +929,34 @@
 	fitting_swords = list(/obj/item/melee/rapier)
 	starting_sword = /obj/item/melee/rapier
 
-/obj/item/storage/belt/sabre/twin
-	name = "twin sheath"
-	desc = "Two sheaths. One is capable of holding a katana (or bokken) and the other a wakizashi. You could put two wakizashis in if you really wanted to. Now you can really roleplay as a samurai."
-	icon_state = "twinsheath"
-	item_state = "quiver" //this'll do.
+
+/obj/item/storage/belt/sword // new that works
+	name = "sword sheath"
+	desc = "A fine sheath for carrying a sword in style."
+	icon = 'icons/fallout/clothing/belts.dmi'
+	icon_state = "sheath_sword"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	item_state = "sheath_sword"
 	w_class = WEIGHT_CLASS_BULKY
+	content_overlays = TRUE
+	onmob_overlays = TRUE
+	var/list/fitting_swords = list(/obj/item/melee/smith/sword, /obj/item/melee/baton/stunsword)
+	var/starting_sword = null
+
+/obj/item/storage/belt/sword/twin
+	name = "twin sword sheathes"
+	desc = "Two sheaths for holding japanese style swords."
+	icon_state = "sheath_twin"
+	item_state = "sheath_twin"
 	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/melee/smith/twohand/katana, /obj/item/melee/bokken)
 	starting_sword = null
 
-/obj/item/storage/belt/sabre/twin/ComponentInitialize()
+/obj/item/storage/belt/sword/twin/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 2
 	STR.max_w_class = WEIGHT_CLASS_BULKY + WEIGHT_CLASS_NORMAL //katana and waki.
+
 
 /obj/item/storage/belt/military/alt
 	icon_state = "explorer2"

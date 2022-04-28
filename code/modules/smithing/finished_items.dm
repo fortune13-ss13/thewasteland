@@ -151,16 +151,16 @@
 	icon_state = "crowbar_smith"
 	item_state = "crowbar"
 	toolspeed = 0.8
+	force = 15
+	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 
 /obj/item/crowbar/smithed/Initialize()
 	..()
 	desc = "A handmade [name]."
 	var/mutable_appearance/overlay
 	overlay = mutable_appearance(icon, "handle_crowbar")
-//	overlay.appearance_flags = RESET_COLOR
+	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
-	if(force < 0)
-		force = 0
 
 /obj/item/crowbar/smithedcrowaxe //basically a plain crowbar with more damage
 	name = "crowbar-axe"
@@ -170,16 +170,17 @@
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	item_state = "crow_smith"
 	sharpness = SHARP_POINTY
-	force = 27
+	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
+	force = 20
 
 /obj/item/crowbar/smithedcrowaxe/Initialize()
 	..()
 	desc = "A bizarre combination of a crowbar and some sort of axe."
 	var/mutable_appearance/overlay
 	overlay = mutable_appearance(icon, "handle_crow")
+	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
-	if(force < 0)
-		force = 0
+
 
 //obj/item/scythe/smithed //we need to inherit scythecode, but that's about it. Scythe not implemented, but good example of how to make smited items inherit special mechanics.
 //	obj_flags = UNIQUE_RENAME
@@ -292,6 +293,7 @@
 	item_flags = ITEM_CAN_PARRY | NEEDS_PERMIT
 	block_parry_data = /datum/block_parry_data/smithrapier
 	hitsound = 'sound/weapons/rapierhit.ogg'
+	slot_flags = ITEM_SLOT_BELT
 
 /datum/block_parry_data/smithrapier //Old rapier code reused. parry into riposte. i am pretty sure this is going to be nearly fucking impossible to land.
 	parry_stamina_cost = 12 //dont miss
