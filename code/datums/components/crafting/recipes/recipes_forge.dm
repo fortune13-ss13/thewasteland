@@ -105,7 +105,7 @@
 	time = 150
 	reqs = list(
 		/obj/item/stack/sheet/metal = 3,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		/obj/item/stack/sheet/cloth = 1,
 		)
 	tools = list(TOOL_FORGE)
@@ -131,7 +131,7 @@
 	time = 300
 	reqs = list(
 		/obj/item/stack/sheet/metal = 6,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
@@ -154,7 +154,7 @@
 	time = 100
 	reqs = list(
 		/obj/item/stack/sheet/metal = 5,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
@@ -177,7 +177,7 @@
 	result = /obj/item/melee/onehanded/knife/bowie
 	reqs = list(
 		/obj/item/stack/sheet/metal = 8,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 200
 	tools = list(TOOL_FORGE)
@@ -190,7 +190,7 @@
 	reqs = list(
 		/obj/item/stack/sheet/metal = 5,
 		/obj/item/stack/crafting/goodparts = 2,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 280
 	tools = list(TOOL_FORGE)
@@ -216,7 +216,7 @@
 	reqs = list(
 		/obj/item/stack/sheet/metal = 10,
 		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 180
 	tools = list(TOOL_FORGE)
@@ -261,7 +261,7 @@
 	reqs = list(
 		/obj/item/stack/sheet/metal = 15,
 		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 280
 	tools = list(TOOL_FORGE)

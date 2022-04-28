@@ -2,7 +2,7 @@
 /obj/item/melee/smith
 	name = "base class obj/item/melee/smith" //tin. handles overlay and quality and shit.
 	desc = "cringe"
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "claymore"
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
@@ -30,7 +30,7 @@
 
 
 /obj/item/melee/smith/twohand
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	item_flags = NEEDS_PERMIT //it's a bigass sword/spear. beepsky is going to give you shit for it.
@@ -72,7 +72,7 @@
 // Blacksmithing hammer, not useful for anything else.
 /obj/item/melee/smith/hammer
 	name = "smithing hammer"
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "hammer"
 	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
@@ -88,7 +88,7 @@
 	name = "prospector's pickaxe"
 	desc = "A pickaxe that can sound rocks to find mineral deposits."
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "minipick"
 	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
@@ -109,7 +109,7 @@
 	name = "pickaxe"
 	desc = "A pickaxe."
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "pickaxe"
 	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
@@ -133,7 +133,7 @@
 /obj/item/shovel/smithed
 	name = "shovel"
 	desc = "A shovel."
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "shovel"
 	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
@@ -153,7 +153,7 @@
 
 // Smithed crowbars are slightly better than the ones made in crafting.
 /obj/item/crowbar/smithed
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "crowbar_smith"
 	item_state = "crowbar"
 	toolspeed = 0.8
@@ -171,7 +171,7 @@
 // Crowbar-axe. Just a crowbar with more force and a homemade vibe.
 /obj/item/crowbar/smithedcrowaxe
 	name = "crowbar-axe"
-	icon = 'icons/fallout/objects/blacksmith.dmi'
+	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "crow_smith"
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
@@ -210,6 +210,12 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	layer = MOB_UPPER_LAYER
 
+/obj/item/melee/smith/sword/spatha
+	name = "spatha"
+	icon_state = "spatha_smith"
+	item_state = "spatha_smith"
+	overlay_state = "hilt_spatha"
+
 /obj/item/melee/smith/sword/sabre
 	name = "sabre"
 	icon_state = "sabre_smith"
@@ -217,7 +223,7 @@
 	overlay_state = "hilt_sabre"
 	armour_penetration = 0.15
 	force = 22
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+
 
 /obj/item/melee/smith/dagger
 	name = "dagger"
@@ -234,6 +240,11 @@
 	overlay_state = "hilt_machete"
 	force = 24
 	sharpness = SHARP_EDGED
+
+/obj/item/melee/smith/machete/gladius
+	name = "gladius"
+	icon_state = "gladius_smith"
+	overlay_state = "hilt_gladius"
 
 /obj/item/melee/smith/machete/reforged
 	name = "reforged machete"
@@ -334,10 +345,15 @@
 	icon_state = "spear_smith"
 	icon_prefix = "spear_smith"
 	overlay_state = "shaft_spear"
-	item_state = "spear_smith"
 	max_reach = 2
 	force = 10
 	sharpness = SHARP_POINTY
+
+/obj/item/melee/smith/twohand/spear/lance
+	name = "legion lance"
+	icon_state = "lance_smith"
+	icon_prefix = "lance_smith"
+	overlay_state = "shaft_lance"
 
 
 //////////////////////////
