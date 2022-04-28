@@ -36,6 +36,9 @@
 	name = "heavy laser beam"
 	damage = 40
 	armour_penetration = 0.30
+	tracer_type = /obj/effect/projectile/tracer/heavy_laser
+	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
+	impact_type = /obj/effect/projectile/impact/heavy_laser
 
 /obj/item/projectile/beam/laser/mech/pulse
 	name = "charged pulse beam"
@@ -45,7 +48,7 @@
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
 
-/obj/item/projectile/beam/laser/lasgun/hitscan/mech/pulse/on_hit(atom/target, blocked = FALSE)
+/obj/item/projectile/beam/laser/mech/pulse/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if (!QDELETED(target) && (isturf(target) || istype(target, /obj/structure/)))
 		target.ex_act(EXPLODE_HEAVY)
