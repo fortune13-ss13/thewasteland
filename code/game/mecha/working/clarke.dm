@@ -8,7 +8,7 @@
 	step_in = 1.75
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	lights_power = 7
-	step_energy_drain = 15 //slightly higher energy drain since you movin those wheels FAST
+	step_energy_drain = 20 //slightly higher energy drain since you movin those wheels FAST
 	armor = list("melee" = 35, "bullet" = 15, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
 	max_equip = 5
 	wreckage = /obj/structure/mecha_wreckage/clarke

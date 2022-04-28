@@ -11,6 +11,7 @@
 	force = 40
 	canstrafe = TRUE
 	step_energy_drain = 40
+	internal_damage_threshold = 40
 	wreckage = /obj/structure/mecha_wreckage/durand
 
 	var/obj/durand_shield/shield

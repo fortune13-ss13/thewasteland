@@ -11,6 +11,7 @@
 	wreckage = /obj/structure/mecha_wreckage/marauder
 	add_req_access = 0
 	internal_damage_threshold = 30
+	step_energy_drain = 60
 	force = 45
 	canstrafe = FALSE
 
