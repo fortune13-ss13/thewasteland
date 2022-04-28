@@ -1,4 +1,3 @@
-//wrapper macros for easier grepping
 #define DIRECT_OUTPUT(A, B) A << B
 #define DIRECT_INPUT(A, B) A >> B
 #define SEND_IMAGE(target, image) DIRECT_OUTPUT(target, image)
@@ -30,6 +29,9 @@
 //print a testing-mode debug message to world.log and world
 #ifdef TESTING
 #define testing(msg) log_world("## TESTING: [msg]"); to_chat(world, "## TESTING: [msg]")
+#else
+#define testing(msg)
+#endif
 
 #if defined(UNIT_TESTS) || defined(SPACEMAN_DMM)
 /proc/log_test(text)
@@ -39,6 +41,9 @@
 
 #if defined(REFERENCE_DOING_IT_LIVE)
 #define log_reftracker(msg) log_harddel("## REF SEARCH [msg]")
+
+/proc/log_harddel(text)
+	WRITE_LOG(GLOB.harddel_log, text)
 
 #elif defined(REFERENCE_TRACKING) // Doing it locally
 #define log_reftracker(msg) log_world("## REF SEARCH [msg]")
