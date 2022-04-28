@@ -349,7 +349,7 @@
 		var/mob/M = A
 		if(M.anti_magic_check()) // no this doesn't check if ..() returned to phase through do I care no it's magic ain't gotta explain shit - Silly-Cons
 			M.visible_message("<span class='warning'>[src] vanishes on contact with [A]!</span>")
-		return PROJECTILE_DELETE_WITHOUT_HITTING
+			return PROJECTILE_DELETE_WITHOUT_HITTING
 		if(M.anchored)
 			return
 		M.forceMove(src)
