@@ -871,7 +871,6 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				/obj/item/gun/ballistic/rocketlauncher = 5,
-				/obj/effect/spawner/bundle/f13/bar = 5,
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 1,
@@ -887,8 +886,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 				/obj/effect/spawner/bundle/f13/rangemaster = 15,
 				/obj/effect/spawner/bundle/f13/fnfal = 10,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
-				/obj/item/gun/ballistic/automatic/bozar = 10,
-				/obj/effect/spawner/bundle/f13/bar = 5,
+				/obj/item/gun/ballistic/automatic/bozar = 10
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique
@@ -1482,6 +1480,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/m762/ext
 	)
 
+<<<<<<< HEAD
 /obj/effect/spawner/bundle/f13/bar
 	name = "automatic rifle and ammo spawner"
 	items = list(
@@ -1489,6 +1488,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 			/obj/item/ammo_box/magazine/m762/ext,
 	)
 
+=======
+>>>>>>> parent of da773c8efd (Update f13lootdrop.dm)
 /obj/effect/spawner/bundle/f13/rocketlauncher
 	name = "rocket launcher and ammo spawner"
 	items = list(
