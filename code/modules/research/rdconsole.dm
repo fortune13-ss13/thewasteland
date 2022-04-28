@@ -1101,8 +1101,7 @@ Nothing else in the console has ID requirements.
 
 /obj/machinery/computer/rdconsole/proc/rescan_views()
 	var/compare
-	if(!QDELETED(matching_design_ids))
-		matching_design_ids.Cut()
+	matching_design_ids.Cut()
 	if(searchtype == "proto")
 		compare = PROTOLATHE
 	else if(searchtype == "imprint")
@@ -1111,8 +1110,8 @@ Nothing else in the console has ID requirements.
 		var/datum/design/D = SSresearch.techweb_design_by_id(v)
 		if(!(D.build_type & compare))
 			continue
-		if(!QDELETED(matching_design_ids))
-				matching_design_ids.Add(D.id)
+		if(findtext(D.name,searchstring))
+			matching_design_ids.Add(D.id)
 
 /obj/machinery/computer/rdconsole/proc/check_canprint(datum/design/D, buildtype)
 	var/amount = 50
