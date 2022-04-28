@@ -658,7 +658,7 @@
 	desc = "A rank pin denominating its wearer as Sergeant within United States army."
 	icon_state = "sergeant"
 
-// Gunnery Sergeant
+// Master Sergeant
 /obj/item/clothing/accessory/enclave/master_sergeant
 	name = "(E-8) Master Sergeant rank pins"
 	desc = "A rank pin denominating its wearer as Master Sergeant within United States army."
@@ -669,3 +669,11 @@
 	name = "(O-2) First Lieutenant rank pins"
 	desc = "A rank pin denominating its wearer as First Lieutenant within United States army."
 	icon_state = "firstlieutenantrank"
+
+//donator
+/obj/item/clothing/accessory/cia_badge
+	name = "CIA Badge"
+	desc = "A strange pre-war badge, the letters 'CIA' are written at the top, a seal reading 'Central Intelligence Agency, United States of America' sits in the middle of it with the letters 'U S' flanking it, and the words 'Special Agent' are written at the bottom."
+	icon_state = "cia_badge"
+	item_state = "cia_badge"
+	minimize_when_attached = FALSE
