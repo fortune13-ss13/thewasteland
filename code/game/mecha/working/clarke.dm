@@ -12,7 +12,7 @@
 	armor = list("melee" = 35, "bullet" = 15, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
 	max_equip = 5
 	wreckage = /obj/structure/mecha_wreckage/clarke
-//	canstrafe = TRUE
+	canstrafe = FALSE
 	exit_delay = 10
 	enter_delay = 10
 	/// Handles an internal ore box for Clarke

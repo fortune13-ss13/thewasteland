@@ -22,7 +22,7 @@
 			var/integrity = obj_integrity*100/max_integrity
 			if(. && integrity < 20)
 				to_chat(occupant, "[icon2html(src, occupant)][span_userdanger("HULL DAMAGE CRITICAL!")]")
-				playsound(loc, 'sound/mecha/critical.ogg', 40, 1, -1)
+				playsound(loc, 'sound/mecha/mecha_critical.ogg', 40, 1, -1)
 		log_append_to_last("Took [damage_amount] points of damage. Damage type: \"[damage_type]\".",1)
 
 /obj/mecha/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
