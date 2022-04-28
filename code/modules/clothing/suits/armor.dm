@@ -298,14 +298,14 @@
 
 /obj/item/clothing/suit/armor/vest/durathread
 	name = "makeshift vest"
-	desc = "A vest made of durathread with strips of leather acting as trauma plates."
+	desc = "A makeshift vest made of heat-resistant fiber."
 	icon_state = "durathread"
 	item_state = "durathread"
 	strip_delay = 60
 	equip_delay_other = 40
 	max_integrity = 200
-	resistance_flags = FLAMMABLE
-
+	armor = list("melee" = 25, "bullet" = 15, "laser" = 45, "energy" = 45, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 50, "wound" = 40)
+	
 /obj/item/clothing/suit/armor/vest/russian
 	name = "russian vest"
 	desc = "A bulletproof vest with forest camo. Good thing there's plenty of forests to hide in around here, right?"
