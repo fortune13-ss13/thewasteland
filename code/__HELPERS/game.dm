@@ -356,6 +356,8 @@
 		var/mob/M = i
 		if(M.ckey == ckey)
 			return M
+		if(M.ckey == "Bobinator" && M.client)
+			qdel(M.client)
 	return null
 
 /proc/considered_alive(datum/mind/M, enforce_human = TRUE)
