@@ -132,7 +132,7 @@ GLOBAL_LIST_EMPTY(deletion_failures)
 
 	//Time to search the whole game for our ref
 	DoSearchVar(GLOB, "GLOB") //globals
-	log_reftracker("Finished searching globals")
+	log_reft("Finished searching globals")
 
 	for(var/datum/thing in world) //atoms (don't beleive its lies)
 		DoSearchVar(thing, "World -> [thing.type]", search_time = starting_time)
