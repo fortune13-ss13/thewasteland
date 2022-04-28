@@ -1,5 +1,5 @@
 /obj/mecha/combat/gygax
-	desc = "A lightweight, security exosuit. Popular among private and corporate security."
+	desc = "A pre-War security exosuit developed by Vault-Tec to minimize casulties among security staff during violent uprisings. It's painted in a bright orange scheme to ensure recognizability."
 	name = "\improper Gygax"
 	icon_state = "gygax"
 	step_in = 2.5

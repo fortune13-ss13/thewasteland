@@ -1,5 +1,5 @@
 /obj/mecha/combat/marauder
-	desc = "Heavy-duty, combat exosuit, developed after the Durand model. Rarely found among civilian populations."
+	desc = "A retrofit of the orginal 'Durand' exosuit designed for extended combat operations, the shield projector has been replaced with a smoke-screen dispenser and a sophisticated sensor suite."
 	name = "\improper Marauder"
 	icon_state = "marauder"
 	step_in = 5
