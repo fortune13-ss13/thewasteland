@@ -213,7 +213,7 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13sheriff
-	title = "Sheriff"
+	title = "Chief of Police"
 	flag = F13SHERIFF
 	department_flag = DEP_OASIS
 	head_announce = list("Security")
