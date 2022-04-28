@@ -9,7 +9,7 @@
 	var/orgasm_verb = "cumming" //present continous
 	var/arousal_verb = "You feel aroused"
 	var/unarousal_verb = "You no longer feel aroused"
-	var/fluid_transfer_factor = 10 //How much would a partner get in them if they climax using this?
+	var/fluid_transfer_factor = 0 //How much would a partner get in them if they climax using this?
 	var/size = 2 //can vary between num or text, just used in icon_state strings
 	var/datum/reagent/fluid_id = null
 	var/fluid_max_volume = 50
@@ -116,7 +116,7 @@
 			picked_organ.toggle_visibility(picked_visibility)
 	return
 
-/mob/living/carbon/verb/toggle_arousal_state()
+/*/mob/living/carbon/verb/toggle_arousal_state()
 	set category = "IC"
 	set name = "Toggle genital arousal"
 	set desc = "Allows you to toggle which genitals are showing signs of arousal."
@@ -136,7 +136,7 @@
 		else
 			to_chat(src,"<span class='userlove'>You can't make that genital [picked_organ.aroused_state ? "unaroused" : "aroused"]!</span>")
 		picked_organ.update_appearance()
-	return
+	return*/
 
 
 /obj/item/organ/genital/proc/modify_size(modifier, min = -INFINITY, max = INFINITY)

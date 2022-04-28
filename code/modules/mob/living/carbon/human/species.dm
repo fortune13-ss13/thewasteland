@@ -116,7 +116,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	//the ids you can use for your species, if empty, it means default only and not changeable
 	var/list/allowed_limb_ids
-
+	
 	// simple laugh sound overrides
 	/// This is used for every gender other than female
 	var/laugh_male = list('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
@@ -197,7 +197,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/obj/item/organ/tail/tail = C.getorganslot(ORGAN_SLOT_TAIL)
 
 	var/should_have_brain = TRUE
-	var/should_have_heart = !(NOBLOOD in species_traits)
+	var/should_have_heart = TRUE
 	var/should_have_lungs = !(TRAIT_NOBREATH in inherent_traits)
 	var/should_have_appendix = !(TRAIT_NOHUNGER in inherent_traits)
 	var/should_have_eyes = TRUE
