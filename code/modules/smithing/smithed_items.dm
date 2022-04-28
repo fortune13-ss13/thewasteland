@@ -63,8 +63,12 @@
 /obj/item/ingot/titanium
 	custom_materials = list(/datum/material/titanium=12000)
 
+// Adapted to suit FO so it can be used.
 /obj/item/ingot/adamantine
 	custom_materials = list(/datum/material/adamantine=12000)
+	name = "pre-war steel ingot"
+	desc = "Top quality steel from the old world."
+	material_flags = MATERIAL_COLOR
 
 /obj/item/ingot/cult
 	custom_materials = list(/datum/material/runedmetal=12000)
@@ -254,6 +258,7 @@
 	finalitem = finalforreal
 	..()
 
+// Does not produce the desired result with toolspeed reduction dependent on quality. The placeholder does the work but if you know how to make it work, feel free.
 /obj/item/smithing/crowbar
 	name = "unwrapped crowbar"
 	desc = "Add leather strips."
@@ -262,20 +267,25 @@
 	finalitem = /obj/item/crowbar/smithed
 
 /obj/item/smithing/crowbar/startfinish()
-	finalitem = new /obj/item/crowbar/smithed(src)
-	finalitem.force += quality*1.5
+	var/obj/item/crowbar/smithed/finalforreal = new /obj/item/crowbar/smithed(src)
+	finalforreal.force += quality
+	finalitem = finalforreal
 	..()
 
+// Does not produce the expected result with force dependent on quality, instead just uses the base one. The finished item is a placeholder, it works though.
 /obj/item/smithing/crowaxe
-	name = "smithed crowbar-axe"
+	name = "unwrapped crowbar-axe"
+	desc = "Add leather strips."
 	icon_state = "crow_smith"
 	finishingitem = /obj/item/stack/sheet/leatherstrips
 	finalitem = /obj/item/crowbar/smithedcrowaxe
 
 /obj/item/smithing/crowaxe/startfinish()
-	finalitem = new /obj/item/crowbar/smithedcrowaxe(src)
-	finalitem.force += quality*1.5
+	var/obj/item/crowbar/smithedcrowaxe/finalforreal = new /obj/item/crowbar/smithedcrowaxe(src)
+	finalforreal.force += quality
+	finalitem = finalforreal
 	..()
+
 
 /obj/item/smithing/knifeblade
 	name = "smithed knife blade"
@@ -284,8 +294,10 @@
 	finalitem = /obj/item/kitchen/knife
 
 /obj/item/smithing/knifeblade/startfinish()
+	var/obj/item/smithing/knifeblade/finalforreal = new /obj/item/smithing/knifeblade(src)
 	finalitem = new /obj/item/kitchen/knife(src)
-	finalitem.force = 9 + quality
+	finalforreal.force += quality*3
+	finalitem = finalforreal
 	finalitem.icon = 'icons/fallout/objects/blacksmith.dmi'
 	finalitem.icon_state = "knife_smith"
 	finalitem.name = "kitchen knife"
@@ -335,6 +347,7 @@
 	. = ..()
 	SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
 
+// For captives, slaves etc. Slowdown, can't be removed on your own, takes a long time to remove for others.
 /obj/item/smithing/special/ballandchain
 	name = "ball and chain"
 	desc = "An unpopular alternative to shoes."
@@ -344,11 +357,13 @@
 	strip_delay = 500
 	equip_delay_other = 50
 	slowdown = 8
-	body_parts_covered = FEET
 	slot_flags = ITEM_SLOT_FEET
-
+	hitsound = 'sound/weapons/chainhit.ogg'
+	var/bloody_shoes = null
+	
 /obj/item/smithing/special/ballandchain/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	if(loc == user && user.get_item_by_slot(SLOT_SHOES))
+		playsound(usr.loc, 'sound/weapons/chainhit.ogg', 75, 1)
 		to_chat(user, "<span class='warning'>The ball and chain are too hard to remove by yourself! You'll need help taking this off!</span>")
 		return
 	return ..()
@@ -422,6 +437,7 @@
 	finalitem = finalforreal
 	..()
 
+
 /obj/item/smithing/daggerblade
 	name = "smithed dagger blade"
 	icon_state = "dagger_smith"
@@ -434,6 +450,7 @@
 	finalitem.armour_penetration += quality*0.0375
 	..()
 
+
 /obj/item/smithing/macheteblade
 	name = "smithed machete blade"
 	icon_state = "machete_smith"
@@ -444,6 +461,7 @@
 	finalitem = new /obj/item/melee/smith/machete(src)
 	finalitem.force += quality*1.5
 	..()
+
 
 /obj/item/smithing/macheterblade
 	name = "reforged machete blade"
@@ -456,6 +474,19 @@
 	finalitem.force += quality*1.5
 	..()
 
+/obj/item/smithing/macehead
+	name = "smithed macehead"
+	icon_state = "mace_smith"
+	finishingitem = /obj/item/swordhandle
+	finalitem = /obj/item/melee/smith/mace
+
+/obj/item/smithing/macehead/startfinish()
+	finalitem = new /obj/item/melee/smith/mace(src)
+	finalitem.force += quality*1.5
+	finalitem.armour_penetration += quality*0.05
+	..()
+
+
 
 /obj/item/smithing/wakiblade
 	name = "smithed wakizashi blade"
@@ -467,6 +498,7 @@
 	finalitem = new /obj/item/melee/smith/wakizashi(src)
 	finalitem.force += quality*1.5
 	..()
+
 
 /obj/item/smithing/katanablade
 	name = "smithed katana blade"
@@ -495,14 +527,19 @@
 	finalitem = finalforreal
 	..()
 
-/obj/item/smithing/macehead
-	name = "smithed macehead"
-	icon_state = "mace_smith"
-	finishingitem = /obj/item/swordhandle
-	finalitem = /obj/item/melee/smith/mace
 
-/obj/item/smithing/macehead/startfinish()
-	finalitem = new /obj/item/melee/smith/mace(src)
-	finalitem.force += quality*1.5
-	finalitem.armour_penetration += quality*0.05
+/obj/item/smithing/throwingknife
+	name = "unfinished throwing knife"
+	desc = "Add leather strips."
+	icon_state = "throwing_smith"
+	finishingitem = /obj/item/stack/sheet/leatherstrips
+	finalitem = /obj/item/melee/smith/throwingknife
+
+/obj/item/smithing/throwingknife/startfinish()
+	var/obj/item/melee/smith/throwingknife/finalforreal = new /obj/item/melee/smith/throwingknife(src)
+	finalforreal.force += quality*1.4
+	finalforreal.throwforce = finalforreal.force*1.4
+	finalitem = finalforreal
 	..()
+
+

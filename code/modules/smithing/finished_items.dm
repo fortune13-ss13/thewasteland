@@ -69,7 +69,8 @@
 //					//
 //////////////////////
 
-/obj/item/melee/smith/hammer//blacksmithing, not warhammer.
+// Blacksmithing hammer, not useful for anything else.
+/obj/item/melee/smith/hammer
 	name = "smithing hammer"
 	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "hammer"
@@ -78,6 +79,10 @@
 	item_state = "hammer"
 	overlay_state = "hammerhandle"
 	var/qualitymod = 0
+
+/obj/item/melee/smith/hammer/premade
+	custom_materials = list(/datum/material/iron=1000)
+	quality = 5
 
 /obj/item/mining_scanner/prospector
 	name = "prospector's pickaxe"
@@ -146,7 +151,8 @@
 	if(force < 0)
 		force = 0
 
-/obj/item/crowbar/smithed // to enable various linked crowbar code since its not consistently linked to tool behaviour
+// Smithed crowbars are slightly better than the ones made in crafting.
+/obj/item/crowbar/smithed
 	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "crowbar_smith"
 	item_state = "crowbar"
@@ -162,7 +168,8 @@
 	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
 
-/obj/item/crowbar/smithedcrowaxe //basically a plain crowbar with more damage
+// Crowbar-axe. Just a crowbar with more force and a homemade vibe.
+/obj/item/crowbar/smithedcrowaxe
 	name = "crowbar-axe"
 	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "crow_smith"
@@ -171,20 +178,15 @@
 	item_state = "crow_smith"
 	sharpness = SHARP_POINTY
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	force = 20
+	force = 28
 
 /obj/item/crowbar/smithedcrowaxe/Initialize()
 	..()
-	desc = "A bizarre combination of a crowbar and some sort of axe."
+	desc = "A bizarre combination of a crowbar and some sort of knifeblade."
 	var/mutable_appearance/overlay
 	overlay = mutable_appearance(icon, "handle_crow")
 	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
-
-
-//obj/item/scythe/smithed //we need to inherit scythecode, but that's about it. Scythe not implemented, but good example of how to make smited items inherit special mechanics.
-//	obj_flags = UNIQUE_RENAME
-//	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 
 
 
@@ -204,6 +206,9 @@
 	sharpness = SHARP_EDGED
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	block_parry_data = /datum/block_parry_data/captain_saber
+	w_class = WEIGHT_CLASS_BULKY
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	layer = MOB_UPPER_LAYER
 
 /obj/item/melee/smith/sword/sabre
 	name = "sabre"
@@ -212,6 +217,7 @@
 	overlay_state = "hilt_sabre"
 	armour_penetration = 0.15
 	force = 22
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 
 /obj/item/melee/smith/dagger
 	name = "dagger"
@@ -258,18 +264,7 @@
 	parry_failed_stagger_duration = 3 SECONDS
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1.9)
 
-// Good throwing, thats about it
-/obj/item/melee/smith/javelin
-	name = "javelin"
-	icon_state = "javelin_smith"
-	overlay_state = "shaft_javelin"
-	item_state = "javelin_smith"
-	sharpness = SHARP_POINTY
-	embedding = list("pain_mult" = 2, "embed_chance" = 60, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
-	force = 15
-	armour_penetration = 0.10
-
-// Mace - low damage, high AP
+// Mace - low damage, high AP (25, 0,4)
 /obj/item/melee/smith/mace 
 	name = "mace"
 	icon_state = "mace_smith"
@@ -294,6 +289,8 @@
 	block_parry_data = /datum/block_parry_data/smithrapier
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	slot_flags = ITEM_SLOT_BELT
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	layer = MOB_UPPER_LAYER
 
 /datum/block_parry_data/smithrapier //Old rapier code reused. parry into riposte. i am pretty sure this is going to be nearly fucking impossible to land.
 	parry_stamina_cost = 12 //dont miss
@@ -310,6 +307,7 @@
 	parry_efficiency_perfect = 120
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
 
+// Heavy axe, 2H focused chopper 27/54. Can be worn on your back.
 /obj/item/melee/smith/twohand/axe
 	name = "heavy axe"
 	icon_state = "axe_smith"
@@ -318,7 +316,11 @@
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
 	force = 15
 	wielded_mult = 2
+	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
+	slot_flags = ITEM_SLOT_BACK
+	layer = MOB_UPPER_LAYER
 
+// Scrap blade. 1/2 H chopper, variant on the axe basically 32/48. Can be worn on your back.
 /obj/item/melee/smith/twohand/axe/scrapblade
 	name = "scrap blade"
 	icon_state = "scrap_smith"
@@ -330,11 +332,41 @@
 /obj/item/melee/smith/twohand/spear
 	name = "spear"
 	icon_state = "spear_smith"
+	icon_prefix = "spear_smith"
 	overlay_state = "shaft_spear"
 	item_state = "spear_smith"
 	max_reach = 2
 	force = 10
 	sharpness = SHARP_POINTY
+
+
+//////////////////////////
+//						//
+//  THROWING WEAPONS	//
+//						//
+//////////////////////////
+
+
+// Good throwing, thats about it (27, 40)
+/obj/item/melee/smith/javelin 
+	name = "javelin"
+	icon_state = "javelin_smith"
+	overlay_state = "shaft_javelin"
+	item_state = "javelin_smith"
+	sharpness = SHARP_POINTY
+	embedding = list("pain_mult" = 2, "embed_chance" = 60, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
+	force = 15
+	armour_penetration = 0.10
+
+// Smaller weaker javelin, easier to store/carry, less effective
+/obj/item/melee/smith/throwingknife
+	name = "throwing knife"
+	icon_state = "throwing_smith"
+	overlay_state = "handle_throwing"
+	item_state = "dagger_smith"
+	embedding = list("pain_mult" = 2, "embed_chance" = 50, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
+	force = 14
+	w_class = WEIGHT_CLASS_SMALL
 
 
 // TG stuff

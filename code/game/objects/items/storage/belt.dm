@@ -122,6 +122,7 @@
 		/obj/item/radio,
 		/obj/item/assembly/signaler,
 		/obj/item/twohanded/chainsaw,
+		/obj/item/melee/smith/hammer,
 		))
 	STR.can_hold = can_hold
 
@@ -144,6 +145,7 @@
 	new /obj/item/screwdriver/basic(src)
 	new /obj/item/weldingtool/basic(src)
 	new /obj/item/wirecutters/basic(src)
+	new /obj/item/melee/smith/hammer/premade(src)
 	new /obj/item/twohanded/chainsaw(src)
 
 // Gardener belt. Hold farming stuff thats small, also flasks (think hip flasks, not bottles as such)
@@ -176,7 +178,7 @@
 	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
 	content_overlays = FALSE
 
-/obj/item/storage/belt/medical/legion/PopulateContents()
+/obj/item/storage/belt/medical/primitive/PopulateContents()
 	new /obj/item/surgical_drapes(src)
 	new /obj/item/scalpel (src)
 	new /obj/item/handsaw(src)
@@ -184,6 +186,30 @@
 	new /obj/item/hemostat(src)
 	new /obj/item/weldingtool/basic(src)
 	new /obj/item/bonesetter(src)
+
+// ---------------------------------------------
+// BANDOLIER - since TG style bandolier was useless, now takes 3 boxes of shotgun ammo, or flasks, or grenades, or improvised bombs/molotovs
+/obj/item/storage/belt/bandolier
+	name = "bandolier"
+	desc = "A bandolier for holding shotgun boxes, flasks, las musket cells or various grenades."
+	icon_state = "bandolier"
+	item_state = "bandolier"
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+
+/obj/item/storage/belt/bandolier/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/ammo_box/shotgun,
+		/obj/item/ammo_box/lasmusket,
+		/obj/item/reagent_containers/food/drinks/flask,
+		/obj/item/grenade/f13,
+		/obj/item/reagent_containers/food/drinks/bottle/molotov,
+		/obj/item/grenade/homemade
+		))
+
 
 // END OF FALLOUT BELTS
 // ------------------------------------------------------
@@ -638,28 +664,7 @@
 		/obj/item/stack/cable_coil
 		))
 
-// ---------------------------------------------
-// BANDOLIER - since TG style bandolier was useless, now takes 3 boxes of shotgun ammo, or flasks, or grenades, or improvised bombs/molotovs
-/obj/item/storage/belt/bandolier
-	name = "bandolier"
-	desc = "A bandolier for holding shotgun boxes, flasks, las musket cells or various grenades."
-	icon_state = "bandolier"
-	item_state = "bandolier"
-	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
-/obj/item/storage/belt/bandolier/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 3
-	STR.max_w_class = WEIGHT_CLASS_NORMAL
-	STR.can_hold = typecacheof(list(
-		/obj/item/ammo_box/shotgun,
-		/obj/item/ammo_box/lasmusket,
-		/obj/item/reagent_containers/food/drinks/flask,
-		/obj/item/grenade/f13,
-		/obj/item/reagent_containers/food/drinks/bottle/molotov,
-		/obj/item/grenade/homemade
-		))
 
 /obj/item/storage/belt/utility
 	name = "toolbelt" //Carn: utility belt is nicer, but it bamboozles the text parsing.
@@ -862,7 +867,7 @@
 	item_state = "fannypack_pink"
 
 
-/obj/item/storage/belt/sabre // broken legacy crap
+/obj/item/storage/belt/sabre
 	name = "sword sheath"
 	desc = "A fine sheath for carrying a sword in style."
 	icon_state = "utilitybelt"
@@ -943,9 +948,10 @@
 	var/list/fitting_swords = list(/obj/item/melee/smith/sword, /obj/item/melee/baton/stunsword)
 	var/starting_sword = null
 
+// Instead of half-assed broken weaboo stuff lets have something that works.
 /obj/item/storage/belt/sword/twin
-	name = "twin sword sheathes"
-	desc = "Two sheaths for holding japanese style swords."
+	name = "daishō"
+	desc = "A set of sheathes and straps for carrying two curved japanese style swords."
 	icon_state = "sheath_twin"
 	item_state = "sheath_twin"
 	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/melee/smith/twohand/katana, /obj/item/melee/bokken)
@@ -956,6 +962,8 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 2
 	STR.max_w_class = WEIGHT_CLASS_BULKY + WEIGHT_CLASS_NORMAL //katana and waki.
+	STR.can_hold = typecacheof(fitting_swords)
+	STR.quickdraw = TRUE
 
 
 /obj/item/storage/belt/military/alt
