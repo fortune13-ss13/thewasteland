@@ -123,6 +123,18 @@
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
+	
+/datum/crafting_recipe/meleebelt
+	name = "Melee Belt"
+	result = /obj/item/storage/belt/bigleagues/melee
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/sheet/mineral/gold = 10)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
+	always_available = FALSE
 
 /////////
 //SHOES//
