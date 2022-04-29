@@ -36,7 +36,7 @@
 /obj/item/projectile/beam/laser/mech/heavy
 	name = "heavy laser beam"
 	damage = 40
-	armour_penetration = 0.30
+	armour_penetration = 0.20
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
@@ -44,7 +44,7 @@
 /obj/item/projectile/beam/laser/mech/pulse
 	name = "charged pulse beam"
 	damage = 35
-	armour_penetration = 0.50
+	armour_penetration = 0.40
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
