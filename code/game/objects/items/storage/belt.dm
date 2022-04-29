@@ -411,6 +411,25 @@
 	STR.can_hold = list(
 		/obj/item/clothing/mask/luchador
 		)
+		
+/obj/item/storage/belt/bigleagues
+	name = "belt template"
+	desc = "A lightweight belt worn as a vow to abstain from gun use. It is difficult to put on and cannot store more than one vial of medicine."
+	icon_state = "belt_melee"
+	item_state = "belt_melee"
+	equip_delay_self = 350
+	equip_delay_other = 350
+	strip_delay = 350
+	slowdown = -0.22
+
+/obj/item/storage/belt/bigleagues/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
+	STR.can_hold = list(
+		/obj/item/reagent_containers/pill,
+		/obj/item/reagent_containers/hypospray/medipen
+		)
 
 /obj/item/storage/belt/military
 	name = "chest rig"
