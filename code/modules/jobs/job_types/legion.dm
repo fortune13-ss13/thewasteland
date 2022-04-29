@@ -695,7 +695,7 @@ commented out pending rework*/
 		/obj/item/ammo_box/c45rev = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/melee/onehanded/machete = 1,
+		/obj/item/melee/onehanded/machete/forgedmachete = 1,
 		/obj/item/restraints/handcuffs = 1,
 		)
 
@@ -716,9 +716,9 @@ commented out pending rework*/
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762 = 2,
-		/obj/item/grenade/smokebomb = 1,
+		/obj/item/grenade/smokebomb = 2
 		/obj/item/book/granter/trait/rifleman = 1,
-		/obj/item/attachments/scope = 1,
+	
 		)
 
 
