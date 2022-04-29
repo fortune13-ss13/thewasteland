@@ -633,6 +633,7 @@ commented out pending rework*/
 	backpack_contents = list(
 		/obj/item/ammo_box/a556 = 1,
 		/obj/item/melee/powered/ripper = 1,
+		/obj/item/storage/belt/bigleagues/melee = 1,
 		)
 
 /datum/outfit/loadout/vexfox
@@ -649,8 +650,8 @@ commented out pending rework*/
 /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	title = "Legion Explorer"
 	flag = F13EXPLORER
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "Scout the area, secure key points, but do not ignore orders or wordlessly die some place. A good explorer helps his unit by taking initiative and helping the commander without needing micro-managment."
 	supervisors = "the Veteran Decanus and Centurion must be obeyed, and as always, respect must be given to other Decanus. You are not a officer, but you are a specialist."
 	display_order = JOB_DISPLAY_ORDER_EXPLORER
@@ -658,7 +659,7 @@ commented out pending rework*/
 	exp_requirements = 300
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
-		/datum/outfit/loadout/expsniper,	// Rangemaster, Beartrap
+		/datum/outfit/loadout/expsniper,	// Sniper rifle, Beartrap
 		/datum/outfit/loadout/expambusher,	// MP5, Bottlecap mine
 		)
 
@@ -704,7 +705,7 @@ commented out pending rework*/
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/melee/powered/ripper = 1,
 		/obj/item/bottlecap_mine = 1,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
@@ -785,10 +786,9 @@ commented out pending rework*/
 	name = "Enforcer"
 	suit_store = /obj/item/twohanded/legionaxe
 	backpack_contents = list(
-		/obj/item/melee/unarmed/maceglove = 1,
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
-		/obj/item/stack/crafting/armor_plate = 4,
+		/obj/item/storage/belt/bigleagues/melee = 1,
 		)
 
 /datum/outfit/loadout/vetsmg
@@ -1069,7 +1069,7 @@ commented out pending rework*/
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/xbow)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
-
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/meleebelt)
 
 
 // AUXILIA - Civilians with special training. Can sow new uniforms for soldiers who lost theirs, and are loyal so they would never abuse this.
@@ -1126,6 +1126,7 @@ commented out pending rework*/
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/legionuniform)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/warpaint)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/meleebelt)
 
 
 /datum/outfit/loadout/auxassist
