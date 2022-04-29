@@ -5,7 +5,7 @@
 	icon_state = "clarke"
 	max_temperature = 65000
 	max_integrity = 300
-	step_in = 1.75
+	step_in = 1.6
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	lights_power = 7
 	step_energy_drain = 20 //slightly higher energy drain since you movin those wheels FAST
