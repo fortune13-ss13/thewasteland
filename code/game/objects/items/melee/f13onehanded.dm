@@ -774,8 +774,8 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	item_state = "deathclaw_g"
 	slot_flags = ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 28
-	armour_penetration = 1
+	force = 25
+	armour_penetration = 0.75
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
