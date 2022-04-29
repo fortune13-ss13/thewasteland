@@ -26,6 +26,7 @@
 
 /obj/item/projectile/beam/laser/mech
 	hitscan = TRUE
+	wound_bonus = 0
 
 /obj/item/projectile/beam/laser/mech/light
 	name = "laser beam"
