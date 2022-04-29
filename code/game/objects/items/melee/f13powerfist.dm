@@ -12,7 +12,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	flags_1 = CONDUCT_1
 	attack_verb = list("whacked", "fisted", "power-punched")
-	force = 22
+	force = 20
 	throwforce = 10
 	throw_range = 3
 	w_class = WEIGHT_CLASS_NORMAL
@@ -62,11 +62,11 @@
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "goliath"
 	item_state = "goliath"
-	force = 25
+	force = 20
 	throw_distance = 3
 
 
-// Ballistic Fist			Keywords: Damage max 42, AP 0.45, Shotgun
+// Ballistic Fist			Keywords: Damage max 42, AP 0.35, Shotgun
 /obj/item/gun/ballistic/revolver/ballisticfist
 	name = "ballistic fist"
 	desc = "This powerfist has been modified to have two shotgun barrels welded to it, with the trigger integrated into the knuckle guard. For those times when you want to punch someone and shoot them in the face at the same time."
@@ -75,8 +75,8 @@
 	item_state = "powerfist"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 30
-	armour_penetration = 0.45
+	force = 25
+	armour_penetration = 0.35
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual
 	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
@@ -180,7 +180,7 @@
 	on_item_state = "prewarrip_on"
 	off_item_state = "prewarrip_off"
 	force_on = 50
-	armour_penetration = 0.15
+	armour_penetration = 0.10
 
 
 // Shishkebab backpack				The shishkebab weapon base unit
@@ -276,7 +276,7 @@
 	..()
 	remove_sword()
 
-// Shishkebab sword				Keywords: Damage 55 (fire), Tool welder
+// Shishkebab sword				Keywords: Damage 55 (fire), AP 0.10, Tool welder
 /obj/item/weapon/melee/shishkebab //This should never exist without the backpack.
 	name = "shishkebab"
 	desc = "A deadly flaming sword covered in fuel. You're not sure this is entirely safe."
@@ -289,6 +289,7 @@
 	item_flags = ABSTRACT  // don't put in storage
 	slot_flags = 0
 	force = 55
+	armour_penetration = 0.10
 	damtype = "fire"
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 0.3
