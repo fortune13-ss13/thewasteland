@@ -86,10 +86,11 @@
 				The needed tools are: good gloves, metal ingots, a furnace, wood planks, an anvil and a special hammer.
 				<p>
 				<ol>
-				<li>Gloves: Not all gloves can handle red hot metal, Forgemaster gloves, or most others with fingers, or handwraps are preferable. If you can move the hot metal from the furnace the gloves are good enough.</li>
+				<li>Gloves: Not all gloves can handle red hot metal, Forgemaster gloves, or most others with fingers, or handwraps, are preferable. If you can move the hot metal from the furnace the gloves are good enough.</li>
 				<li>Metal ingots: Take the metal stack you want to work in your hand and fashion ingots from it. (inhand crafting) </li>
 				<li>Furnace: Needs fuel, welding fuel most commonly. Five measures of fuel burns fast but is enough to heat a couple ingots if you are fast.</li>
 				<li>Wooden bits: Cut down planks to rods with something sharp. Then cut leather to strips and wrap it around the rod for making a sword handle, or directly on the metal for some tools. </li>
+				<li>Metal bits: On occasion you might need some chain to complete your work, if so, take a metal sheet in your hand and make a length of chain from it. (inhand crafting) </li>
 				<li>Anvil: The iron ones are most dependable, but you can use an anvil made from sandstone or a sturdy table in a pinch.(crafting menu forging & blacksmithing)</li>
 				<li>Hammer: Most commonly a sledgehammer is used for the first work, which is making a better hammer. Craft one to get going. (crafting menu forging & blacksmithing) </li>
 				</ol>
@@ -109,23 +110,23 @@
 	
 				<h3>Some secret smithing recipes.</h3>
 
-				These are some of the items that can be made with hot iron and a steady hand.
+				These are some of the items that can be made with hot iron and a steady hand. Results are not always the same depending on the anvil used.
 				<p>
 				<ol>
 				<li>Hammer: (BPP) Bend the metal, then punch it like you would a profligates face until the hammerhead is done. Add a rod.</li>
 				<li>Crowbar: (BBB) Bend the metal until you got the crowbar done, then wrap it in leather strips. Better than the usual crowbars folks use nowadays.</li>
-				<li>Pickaxe: (BFF) Bend the metal, then fold it into shape twice, then add a rod.</li>
+				<li>Pickaxe: (BFF) Bend the metal, then fold it into shape twice, then add a wooden rod.</li>
 				<li>Kitchen knife: (BSD) Bend the metal, shrink and draw it, then add a knife handle. A perfect gift for women.</li>
 				<li>Rings: (SSS) Tiny things, my fingers hurt when I try to work it, but if you youngsters want to make one just shrink the metal to shape. Might cheer you up.</li>
-				<li>Dagger: (DFS) Draw, fold and shrink it, add a handle and you got a tiny little weapon. </li>
+				<li>Dagger: (DFS) Draw, fold and shrink it, add a sword handle and you got a tiny little weapon. </li>
 				<li>Sabre: (FFDD) Like all swords, you must fold the metal some, then draw it into a proper thin shape. Add a handle and you got a fine blade! </li>
-				<li>Sword: (FFDF) Fold, fold, draw, then FOLD SOME MORE. Done right, you get a proper sharp sword.</li>
-				<li>Machete: (FDF) Fold the metal, draw it and ugh..yeah, fold it more.</li>
-				<li>Reforged machete: (FPP) Fold the metal then punch it until its square and ready. Rough looking machete I guess. </li>
-				<li>Heavy axe: (UDSP) Upset the hot metal, draw it, then shrink it and give it a solid punch. Add a rod, chop down some wood and enemies. Easy. </li>
-				<li>Javelin: (DBF) Draw the metal, bend it and fold it, then add a stick and throw it in someones face.</li>
+				<li>Sword: (FFDF) Fold, fold, draw, then FOLD SOME MORE. Done right, you get a proper sharp sword, after adding a sword handle.</li>
+				<li>Machete: (FDF) Fold the metal, draw it and ugh..yeah, fold it more. Add handle.</li>
+				<li>Heavy axe: (UDSP) Upset the hot metal, draw it, then shrink it and give it a solid punch. Add a wooden rod, then go chop down some wood or enemies. Easy. </li>
+				<li>Javelin: (DBF) Draw the metal, bend it and fold it, then add a wooden rod and throw it in someones face.</li>
+				<li>Throwing knife: (DBD) Draw the metal, bend it and draw it again, then add leather strips and there you go.</li>
 				<li>Spear: (DDBF) Draw the metal twice, bend it and fold it. Add a rod, and enjoy a simple but effective weapon.</li>
-				<li>Ball and chain: (PBU) Punch the metal, bend and upset it. Then snap it on the slaves leg, and laugh while they hobble about. Silly slave.</li>
+				<li>Ball and chain: (PBU) Punch the metal, bend and upset it. Add a chain and then snap it on the slaves leg, and laugh while they hobble about. Silly slave.</li>
 				</ol>
 				<p>
 

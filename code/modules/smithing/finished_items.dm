@@ -209,12 +209,14 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	layer = MOB_UPPER_LAYER
+	wound_bonus = 30
 
 /obj/item/melee/smith/sword/spatha
 	name = "spatha"
 	icon_state = "spatha_smith"
 	item_state = "spatha_smith"
 	overlay_state = "hilt_spatha"
+	block_chance = 18
 
 /obj/item/melee/smith/sword/sabre
 	name = "sabre"
@@ -240,11 +242,13 @@
 	overlay_state = "hilt_machete"
 	force = 24
 	sharpness = SHARP_EDGED
+	wound_bonus = 30
 
 /obj/item/melee/smith/machete/gladius
 	name = "gladius"
 	icon_state = "gladius_smith"
 	overlay_state = "hilt_gladius"
+	block_chance = 10
 
 /obj/item/melee/smith/machete/reforged
 	name = "reforged machete"
