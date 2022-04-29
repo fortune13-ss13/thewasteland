@@ -716,7 +716,7 @@ commented out pending rework*/
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762 = 2,
-		/obj/item/grenade/smokebomb = 2
+		/obj/item/grenade/smokebomb = 2,
 		/obj/item/book/granter/trait/rifleman = 1,
 	
 		)
