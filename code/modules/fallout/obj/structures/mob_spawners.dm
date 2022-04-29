@@ -41,7 +41,7 @@
 	if(spawned_mobs.len >= max_mobs)
 		return FALSE
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in range(radius, get_turf(src))
-	if(!H?.client & !locate(/obj/mecha) in range(radius, get_turf(src)))
+	if(!H?.client | !locate(/obj/mecha) in range(radius, get_turf(src)))
 		return FALSE
 	toggle_fire(FALSE)
 	addtimer(CALLBACK(src, .proc/toggle_fire), spawn_time)
