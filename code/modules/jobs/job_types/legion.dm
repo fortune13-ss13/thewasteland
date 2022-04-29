@@ -701,12 +701,11 @@ commented out pending rework*/
 		)
 
 /datum/outfit/loadout/expambusher
-	name = "Ambusher"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
+	name = "Scout"
+	suit_store = /obj/item/melee/powered/ripper = 1
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/melee/powered/ripper = 1,
-		/obj/item/bottlecap_mine = 1,
+		/obj/item/ammo_box/c45rev = 3,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		)
