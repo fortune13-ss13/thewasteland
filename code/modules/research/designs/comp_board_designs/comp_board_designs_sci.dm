@@ -36,6 +36,7 @@
 	category = list("Computer Boards")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
+/* disabled until somebody codes the robotics console to not be able to blow up other faction's borgs
 /datum/design/board/robocontrol
 	name = "Computer Design (Robotics Control Console)"
 	desc = "Allows for the construction of circuit boards used to build a Robotics Control console."
@@ -43,6 +44,7 @@
 	build_path = /obj/item/circuitboard/computer/robotics
 	category = list("Computer Boards")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+*/
 
 /datum/design/board/mechacontrol
 	name = "Computer Design (Exosuit Control Console)"
