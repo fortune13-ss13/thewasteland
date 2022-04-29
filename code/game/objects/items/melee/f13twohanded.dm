@@ -33,13 +33,14 @@
 // AXES //
 //////////			-bonus damage to all doors, windows
 
-// Legion Axe		Keywords: Damage 30/60
+// Legion Axe		Keywords: Damage 30/50 AP 0.25
 /obj/item/twohanded/legionaxe
 	name = "War Honed Axe"
 	desc = "Heavy fireman axe from the old world, Restored to working order by legion craftsmen. Excellent for smashing doors or heads."
 	icon_state = "legionaxe"
 	icon_prefix = "legionaxe"
-	force = 30
+	force = 25
+	armour_penetration = 0.25
 	throwforce = 15
 	wound_bonus = 10
 	bare_wound_bonus = 10
@@ -51,7 +52,7 @@
 /obj/item/twohanded/legionaxe/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound) //axes are not known for being precision butchering tools
-	AddComponent(/datum/component/two_handed, force_unwielded=30, force_wielded=60, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=50, icon_wielded="[icon_prefix]2")
 
 /obj/item/twohanded/legionaxe/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -80,7 +81,8 @@
 	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel. Excellent for smashing doors."
 	icon_state = "fireaxe"
 	icon_prefix = "fireaxe"
-	force = 26
+	force = 21
+	armour_penetration = 0.15
 	throwforce = 15
 	wound_bonus = 10
 	bare_wound_bonus = 10
@@ -92,7 +94,7 @@
 /obj/item/twohanded/fireaxe/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound) //axes are not known for being precision butchering tools
-	AddComponent(/datum/component/two_handed, force_unwielded=26, force_wielded=46, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=21, force_wielded=42, icon_wielded="[icon_prefix]2")
 
 /obj/item/twohanded/fireaxe/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -298,7 +300,7 @@
 	AddComponent(/datum/component/two_handed, force_unwielded=17, force_wielded=28, icon_wielded="[icon_prefix]2")
 
 
-// Bone Spear		Keywords: TRIBAL, Damage 18/30, Armor-piercing +0.2, Reach
+// Bone Spear		Keywords: TRIBAL, Damage 18/30, Armor-piercing +0.07, Reach
 /obj/item/twohanded/spear/bonespear
 	name = "bone spear"
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
@@ -319,25 +321,25 @@
 	AddComponent(/datum/component/two_handed, force_unwielded=18, force_wielded=30, icon_wielded="[icon_prefix]2")
 
 
-// Deathclaw Spear		Keywords: TRIBAL, Damage 20/45, Armor-piercing +0.3, Reach
+// Deathclaw Spear		Keywords: TRIBAL, Damage 15/30, Armor-piercing +0.15, Reach
 /obj/item/twohanded/spear/bonespear/deathclaw
 	name = "deathclaw spear"
 	desc = "A finely crafted spear with a shaft wrapped in deathclaw leather. It is tipped with a claw from a beast that must have been terrifying in size."
 	icon_state = "spear-claw"
 	icon_prefix = "spear-claw"
-	force = 20
+	force = 15
 	armour_penetration = 0.15
 	sharpness = SHARP_EDGED
 
 /obj/item/twohanded/spear/bonespear/deathclaw/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 20, force_wielded = 45, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded = 15, force_wielded = 30, icon_wielded="[icon_prefix]2")
 
 
 
 /////////////////
 // HEAVY CLUBS //
-/////////////////		- Bonus damage to stamina, low damage
+/////////////////		- High AP, low damage
 
 // Baseball Bat			Keywords: Damage 20/30
 /obj/item/twohanded/baseball
@@ -362,38 +364,29 @@
 	desc = "There ain't a skull in the league that can withstand a swatter, especially with large nails drilled through the top of it."
 	icon_state = "baseballspike"
 	icon_prefix = "baseballspike"
-	force = 26
+	force = 20
+	armour_penetration = 0.40
 	throwforce = 15
 	wound_bonus = 5
 	sharpness = SHARP_POINTY
 
 /obj/item/twohanded/baseball/spiked/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 26, force_wielded = 33, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded = 20, force_wielded = 31, icon_wielded="[icon_prefix]2")
 
-/obj/item/twohanded/baseball/spiked/attack(mob/living/M, mob/living/user)
-	. = ..()
-	if(!istype(M))
-		return
-	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
-
-// Louisville Slugger		Keywords: Damage 25/32, Damage bonus Stamina
+// Louisville Slugger		Keywords: Damage 23/27, AP 0.65 Damage bonus Stamina
 /obj/item/twohanded/baseball/louisville
 	name = "Louisville slugger"
 	desc = "Purification in progress."
 	icon_state = "louisville"
 	icon_prefix = "louisville"
+	force = 23
+	armour_penetration = 0.65
 	attack_verb = list("thwacked", "bashed", "louisville slugged", "hit", "bludgeoned", "whacked", "bonked")
 
 /obj/item/twohanded/baseball/louisville/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 34, icon_wielded="[icon_prefix]2")
-
-/obj/item/twohanded/baseball/louisville/attack(mob/living/M, mob/living/user)
-	. = ..()
-	if(!istype(M))
-		return
-	M.apply_damage(25, STAMINA, null, 0)
+	AddComponent(/datum/component/two_handed, force_unwielded = 23, force_wielded = 27, icon_wielded="[icon_prefix]2")
 
 // Golf Club		Keywords: Damage 22/32, Damage bonus Stamina
 /obj/item/twohanded/baseball/golfclub
@@ -452,7 +445,7 @@
 // ADVANCED TWO HANDED WEAPONS //
 /////////////////////////////////
 
-// Thermic Lance		Keywords: Damage 5/60, AP 0.1 Special Damage Type - Burn, bonus damage metal door
+// Thermic Lance		Keywords: Damage 5/55, AP 0.3 Special Damage Type - Burn, bonus damage metal door
 /obj/item/twohanded/thermic_lance
 	name = "thermic lance"
 	desc = "A versatile power-welding tool. Useful for cutting apart metal things like airlocks, bars, and probably limbs."
@@ -465,7 +458,7 @@
 	inhand_y_dimension = 64
 	damtype = "fire"
 	force = 5
-	armour_penetration = 0.1
+	armour_penetration = 0.3
 	throwforce = 5
 	throw_speed = 2
 	throw_range = 3
@@ -474,7 +467,7 @@
 
 /obj/item/twohanded/thermic_lance/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=60, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=55, icon_wielded="[icon_prefix]2")
 
 /obj/item/twohanded/thermic_lance/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -512,7 +505,7 @@
 	slot_flags = null
 	force = 20
 	force_on = 32
-	armour_penetration = 0.7
+	armour_penetration = 0.80
 	throwforce = 15
 	throwforce_on = 30
 
@@ -522,17 +515,18 @@
 	AddElement(/datum/element/update_icon_updates_onmob)
 
 
-// Super Sledge			Keywords: Damage 25/60
+// Super Sledge			Keywords: Damage 25/50 AP 0.3
 /obj/item/twohanded/sledgehammer/supersledge
 	name = "super sledge"
 	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
 	icon_state = "hammer-super"
 	icon_prefix = "hammer-super"
 	force = 25
+	armour_penetration = 0.30
 
 obj/item/twohanded/sledgehammer/supersledge/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 60, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 50, icon_wielded="[icon_prefix]2")
 
 obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -547,7 +541,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	else if(istype(A, /turf/closed))
 		playsound(loc, hitsound, 80, TRUE)
 
-// Rocket-assisted Sledgehammer			Keywords: Damage 20/52, Mining  Issues left: mining only when dual wielded, sound to play always on hit
+// Rocket-assisted Sledgehammer			Keywords: Damage 20/52, AP 0.30 Mining  Issues left: mining only when dual wielded, sound to play always on hit
 /obj/item/twohanded/sledgehammer/rockethammer
 	name = "rocket-assisted sledgehammer"
 	desc = "This pre-War model was originally used by construction crews for demolition. Fitted with a rocket booster at the head, \
@@ -556,6 +550,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	icon_state = "hammer-rocket"
 	icon_prefix = "hammer-rocket"
 	force = 20
+	armour_penetration = 0.30
 	tool_behaviour = TOOL_MINING
 	toolspeed = 0.5
 	hitsound = "sound/f13effects/explosion_distant_2.ogg"
@@ -743,6 +738,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	item_state = "steelsaw"
 	icon_prefix = "steelsaw"
 	force = 4
+	armour_penetration = 0.25
 	toolspeed = 0.5
 	wound_bonus = 20
 	bare_wound_bonus = 20
@@ -815,7 +811,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		playsound(src, 'sound/weapons/genhit1.ogg', 100, 1)
 	return(BRUTELOSS)
 
-//autoaxe		Keywords: Damage 10/29, 2x attackspeed, Wound Bonus, structure bonus damage, 0.3 AP
+//autoaxe		Keywords: Damage 10/29, 2x attackspeed, Wound Bonus, structure bonus damage, 0.35 AP
 /obj/item/twohanded/steelsaw/autoaxe
 	name = "auto axe"
 	desc = "A reinforced and heavier steel saw, upgraded using the parts of a car engine. A little heavy and ungainly to use as a tool, however."
@@ -824,7 +820,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	icon_prefix = "autoaxe"
 	force_on = 29
 	attack_speed = CLICK_CD_MELEE * 1.5
-	armour_penetration = 0.3
+	armour_penetration = 0.35
 	on_icon_state = "autoaxe_on"
 	off_icon_state = "autoaxe"
 	on_item_state = "autoaxe_on"
