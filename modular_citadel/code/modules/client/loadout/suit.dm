@@ -172,7 +172,7 @@
 	path = /obj/item/clothing/suit/armor/f13/town
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 4
-	restricted_desc = ""
+	restricted_desc = "Oasis"
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Chief of Police",
