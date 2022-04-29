@@ -5,6 +5,7 @@
 	mouse_pointer = 'icons/mecha/mecha_mouse.dmi'
 	deflect_chance = 0
 	max_equip = 4
+	stepsound = 'sound/mecha/neostep2.ogg'
 
 /obj/mecha/combat/proc/max_ammo() //Max the ammo stored for Nuke Ops mechs, or anyone else that calls this
 	for(var/obj/item/I in equipment)
