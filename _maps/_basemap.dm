@@ -4,12 +4,12 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
-		#include "map_files\Pahrump\Pahrump-Sky-3.dmm"
+		#include "map_files\Pahrump\Pahrump-Above--3.dmm"
 		#include "map_files\Pahrump\Pahrump-Surface-2.dmm"
 		#include "map_files\Pahrump\Pahrump-Underground-1.dmm"
 		#include "map_files\Pahrump\Dungeons.dmm"
 
-		#include "map_files\Sunnyvale\Sunnyvale-Sky-3.dmm"
+		#include "map_files\Sunnyvale\Sunnyvale-Above-3.dmm"
 		#include "map_files\Sunnyvale\Sunnyvale-Surface-2.dmm"
 		#include "map_files\Sunnyvale\Sunnyvale-Under-1.dmm"
 		#include "map_files\Sunnyvale\Dungeons.dmm"
