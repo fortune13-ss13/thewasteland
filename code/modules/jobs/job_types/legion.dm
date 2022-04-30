@@ -721,6 +721,16 @@ commented out pending rework*/
 		/obj/item/attachments/scope = 1,
 		)
 
+	/datum/outfit/loadout/exprifleman
+	name = "Rifleman"
+	glasses = /obj/item/clothing/glasses/sunglasses/big
+	suit_store = /obj/item/gun/ballistic/automatic/m1garand/sks
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/sks = 2,
+		/obj/item/grenade/smokebomb = 1,
+		/obj/item/attachments/scope = 1,
+		)
+
 
 ///////////////////
 ////Legionnaires///
