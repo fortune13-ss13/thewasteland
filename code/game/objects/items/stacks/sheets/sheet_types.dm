@@ -55,10 +55,10 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		new /datum/stack_recipe("sofa (corner)", /obj/structure/chair/sofa/corp/corner, one_per_turf = TRUE, on_floor = TRUE), \
 		)), \
 	new/datum/stack_recipe_list("diner booths", list( \
-		new  /datum/stack_recipe("diner booth (middle)", obj/structure/chair/middle,one_per_turf = TRUE, on_floor = TRUE), \
-		new  /datum/stack_recipe("diner booth (left)", /obj/structure/chair/left,one_per_turf = TRUE, on_floor = TRUE), \
-		new  /datum/stack_recipe("diner booth (right)",/obj/structure/chair/right, one_per_turf = TRUE, on_floor = TRUE), \
-		new  /datum/stack_recipe("diner booth (single)",/obj/structure/chair/booth, one_per_turf = TRUE, on_floor = TRUE), \
+		new /datum/stack_recipe("diner booth (middle)", /obj/structure/chair/middle, one_per_turf = TRUE, on_floor = TRUE), \
+		new /datum/stack_recipe("diner booth (left)", /obj/structure/chair/left, one_per_turf = TRUE, on_floor = TRUE), \
+		new /datum/stack_recipe("diner booth (right)", /obj/structure/chair/right, one_per_turf = TRUE, on_floor = TRUE), \
+		new /datum/stack_recipe("diner booth (single)", /obj/structure/chair/booth, one_per_turf = TRUE, on_floor = TRUE), \
 		)),\
 	null, \
 	new/datum/stack_recipe_list("office chairs", list( \
@@ -990,7 +990,7 @@ prewar alloys
 GLOBAL_LIST_INIT(prewar_recipes, list ( \
 	new/datum/stack_recipe("modern chair", /obj/structure/chair/comfy/modern, 2, time = 5, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("gun locker", /obj/structure/guncase, 4, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
-	
+
 ))
 
 /obj/item/stack/sheet/prewar
@@ -1010,7 +1010,7 @@ GLOBAL_LIST_INIT(prewar_recipes, list ( \
 /obj/item/stack/sheet/prewar/get_main_recipes()
 	. = ..()
 	. += GLOB.prewar_recipes
-	
+
 /obj/item/stack/sheet/prewar/five
 	amount = 5
 
