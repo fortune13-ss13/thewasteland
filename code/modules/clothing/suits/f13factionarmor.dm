@@ -557,6 +557,9 @@
 	slowdown = 0.08
 	armor = list("melee" = 50, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
 
+/obj/item/clothing/suit/armor/f13/rangercombat/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/ncrcfjacket
 	name = "NCRCF jacket"
@@ -663,7 +666,7 @@
 	desc = " A trenchcoat which does not attempt to hide the full-body combat armor beneath it."
 	icon_state = "towntrench_heavy"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45,  "energy" = 35, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 55)
-	slowdown = 0.12 
+	slowdown = 0.12
 
 /obj/item/clothing/suit/armor/f13/town/chief
 	name = "OPD Chief's jacket"
