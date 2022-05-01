@@ -1005,11 +1005,11 @@ GLOBAL_LIST_INIT(prewar_recipes, list ( \
 	. = ..()
 	. += GLOB.prewar_recipes
 	
-/obj/item/stack/sheet/prewar/twenty
-	amount = 20
-
 /obj/item/stack/sheet/prewar/five
 	amount = 5
+
+/obj/item/stack/sheet/prewar/twenty
+	amount = 20
 
 /obj/item/stack/sheet/prewar/fifty
 	amount = 50
