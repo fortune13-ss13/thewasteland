@@ -433,6 +433,7 @@
 	if(mode == PROJECTILE_DELETE_WITHOUT_HITTING)
 		qdel(src)
 		return hit_something
+
 	else if(mode == PROJECTILE_PIERCE_PHASE)
 		if(!(movement_type & PHASING))
 			temporary_unstoppable_movement = TRUE
