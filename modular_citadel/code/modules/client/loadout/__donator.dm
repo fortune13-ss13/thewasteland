@@ -60,8 +60,8 @@
 
 /obj/item/storage/box/large/custom_kit/klatue/PopulateContents()
 	new /obj/item/storage/belt/holster(src)
-	new /obj/item/gun/ballistic/revolver/hunting(src)
-	new /obj/item/gun/ballistic/revolver/hunting(src)
+	new /obj/item/gun/ballistic/revolver/hunting/klatue(src)
+	new /obj/item/gun/ballistic/revolver/hunting/klatue(src)
 	new /obj/item/ammo_box/c4570(src)
 	new /obj/item/ammo_box/c4570(src)
 	new /obj/item/clothing/suit/armor/hos/trenchcoat(src)
@@ -110,8 +110,8 @@
 	ckeywhitelist = list("myguy49")
 	
 /obj/item/storage/box/large/custom_kit/pineapple/PopulateContents()
-	new /obj/item/clothing/suit/armor/f13/power_armor/t60(src)
-	new /obj/item/clothing/head/helmet/f13/power_armor/t60(src)
+	new /obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple(src)
+	new /obj/item/clothing/head/helmet/f13/power_armor/t60/pineapple(src)
 	new /obj/item/clothing/neck/mantle/bos(src)
 
 
@@ -119,6 +119,27 @@
 	name = "Silvers goods"
 	path = /obj/item/storage/box/large/custom_kit/pineapple
 	ckeywhitelist = list("silveredsoul")
+
+/obj/item/storage/box/large/custom_kit/evosolus/PopulateContents()
+	new /obj/item/clothing/head/beret/ncr/ncr_recon(src)
+	new /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced(src)
+	new /obj/item/gun/ballistic/automatic/rangemaster(src)
+	new /obj/item/ammo_box/magazine/m762(src)
+	new /obj/item/clothing/mask/gas/sechailer(src)
+
+/datum/gear/donator/kits/evosolus
+	name = "Evos goods"
+	path = /obj/item/storage/box/large/custom_kit/evosolus
+	ckeywhitelist = list("evosolus")
+
+/obj/item/storage/box/large/custom_kit/snugglytrap/PopulateContents()
+	new /obj/item/clothing/neck/mantle/snugglycape(src)
+	new /obj/item/mmi/posibrain(src)
+
+/datum/gear/donator/kits/snugglytrap
+	name = "Good boy kit"
+	path = /obj/item/storage/box/large/custom_kit/snugglytrap
+	ckeywhitelist = list("snugglytrap")	
 
 /obj/item/storage/box/large/custom_kit/pug/PopulateContents()
 	new /obj/item/melee/transforming/cleaving_saw/old_rusty(src)
