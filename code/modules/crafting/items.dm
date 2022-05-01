@@ -227,7 +227,10 @@
 	..()
 <<<<<<< HEAD
 	return QDEL_HINT_HARDDEL
+<<<<<<< HEAD
 
 =======
 	return QDEL_HINT_HARDDEL
 >>>>>>> 9cb8954f569b79e004d83c5b1fde82dbfa0ba061
+=======
+>>>>>>> upstream/master
