@@ -367,7 +367,7 @@
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0, "wound" = 80)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 
-/obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple
+/obj/item/clothing/head/helmet/f13/power_armor/t60/pineapple
 	name = "degraded T-60a power helmet"
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player. This suit is heavily degraded." //reskin of head knight armor
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
