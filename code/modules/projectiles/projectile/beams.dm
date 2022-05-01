@@ -1,7 +1,7 @@
 /obj/item/projectile/beam
 	name = "laser"
 	icon_state = "laser"
-	pass_flags = PASSTABLE
+	pass_flags = PASSTABLE| PASSGLASS
 	damage = 20
 	light_range = 2
 	damage_type = BURN
@@ -23,6 +23,36 @@
 	impact_type = /obj/effect/projectile/impact/laser
 	wound_bonus = -30
 	bare_wound_bonus = 40
+
+/obj/item/projectile/beam/laser/mech
+	hitscan = TRUE
+	wound_bonus = 0
+
+/obj/item/projectile/beam/laser/mech/light
+	name = "laser beam"
+	damage = 25
+	armour_penetration = 0.10
+
+/obj/item/projectile/beam/laser/mech/heavy
+	name = "heavy laser beam"
+	damage = 40
+	armour_penetration = 0.20
+	tracer_type = /obj/effect/projectile/tracer/heavy_laser
+	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
+	impact_type = /obj/effect/projectile/impact/heavy_laser
+
+/obj/item/projectile/beam/laser/mech/pulse
+	name = "charged pulse beam"
+	damage = 35
+	armour_penetration = 0.40
+	tracer_type = /obj/effect/projectile/tracer/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/pulse
+	impact_type = /obj/effect/projectile/impact/pulse
+
+/obj/item/projectile/beam/laser/mech/pulse/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if (!QDELETED(target) && (isturf(target) || istype(target, /obj/structure/)))
+		target.ex_act(EXPLODE_LIGHT)
 
 //overclocked laser, does a bit more damage but has much higher wound power (-0 vs -20)
 /obj/item/projectile/beam/laser/hellfire
@@ -85,7 +115,9 @@
 	name = "gamma beam"
 	icon_state = "xray"
 	damage = 5
-	damage_type = "clone"
+	flag = "energy"
+	armour_penetration = 1 //it only does 5 damage.
+	damage_type = "toxin"
 	irradiate = 200
 	range = 15
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF
@@ -308,7 +340,7 @@
 
 /obj/item/projectile/beam/laser/lasgun/hitscan/focused
 	name = "overcharged laser beam"
-	damage = 30
+	damage = 34
 	armour_penetration = 0.6
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
@@ -469,13 +501,13 @@
 		M.gets_drilled(firer)
 
 /obj/item/projectile/f13plasma/pistol //Plasma pistol
-	damage = 15
+	damage = 18
 
 /obj/item/projectile/f13plasma/pistol/worn
-	damage = 31
+	damage = 16
 
 /obj/item/projectile/f13plasma/pistol/glock //Glock (streamlined plasma pistol)
-	damage = 38
+	damage = 20
 
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 25
@@ -490,12 +522,15 @@
 /obj/item/projectile/beam/laser/rcw/hitscan //RCW
 	name = "rapidfire beam"
 	icon_state = "emitter"
-	damage = 15 //ALWAYS does 50, this is a burstfire hitscan weapon that fires in bursts of 2.
+	damage = 15
 	hitscan = TRUE
 	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
 	tracer_type = /obj/effect/projectile/tracer/laser/emitter
 	impact_type = /obj/effect/projectile/impact/laser/emitter
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+
+/obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
+	damage = 7
 
 /obj/item/projectile/f13plasma/pistol/alien
 	name = "alien projectile"

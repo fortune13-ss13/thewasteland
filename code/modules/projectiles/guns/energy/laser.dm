@@ -37,10 +37,13 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/gun/energy/laser/cyborg
+	name = "integrated AER9"
 	can_charge = FALSE
-	desc = "An energy-based laser gun that draws power from the cyborg's internal energy cell directly. So this is what freedom looks like?"
-	icon = 'icons/obj/items_cyborg.dmi'
-	icon_state = "laser_cyborg"
+	desc = "An energy-based laser gun that draws power from the Handy's internal energy cell directly. So this is what freedom looks like?"
+	fire_delay = 1
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan)
+	icon_state = "laser"
+	item_state = "laser-rifle9"
 	selfcharge = EGUN_SELFCHARGE_BORG
 	cell_type = /obj/item/stock_parts/cell/secborg
 	charge_delay = 3
@@ -254,6 +257,19 @@
 	scope_y_offset = 22
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
+/obj/item/gun/energy/laser/pistol/cyborg
+	name = "\improper assaultron AEP7 laser eye"
+	desc = "A basic energy-based laser projector that fires concentrated beams of light from your eye! It draws power from your cell so try not to go crazy."
+	can_scope = FALSE
+	can_charge = FALSE
+	selfcharge = EGUN_SELFCHARGE_BORG
+	cell_type = /obj/item/stock_parts/cell/secborg
+	charge_delay = 3
+
+/obj/item/gun/energy/laser/pistol/cyborg/gutsy
+	name = "\improper integrated laser pistol"
+	desc = "An integrated laser pistol that draws power directly from your cell."
+
 //Compliance Regulator
 
 /obj/item/gun/energy/laser/complianceregulator
@@ -293,6 +309,30 @@
 	selfcharge = 1 //selfcharging adds 100 a shot
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
+//autolaser, recycled from SS13
+
+/obj/item/gun/energy/laser/auto
+	name = "compact autolaser"
+	desc = "A beefed-up laser pistol manufactured by West Tek, reinforced to allow it to withstand the thermal load of sustained fire."
+	icon_state = "protolaser"
+	item_state = "laser"
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT //dual wielding
+	slowdown = 0.3
+	cell_type = /obj/item/stock_parts/cell/ammo/ecp
+	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser) //7dmg, 0 AP, but essentially fires a pinpoint beam
+	automatic = 1
+	autofire_shot_delay = 0.75 //pew pew pew
+	spread = 2
+	can_scope = FALSE
+
+// OASIS autolaser
+/obj/item/gun/energy/laser/auto/oasis
+	name = "autoshock tesla pistol"
+	desc = "This pistol has been unwisely modified by the OPD to fire bolts of electricty. And they beheld Satan as he fell from heaven like lightning."
+	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser/shock) //8dmg + 5 Stamina, flagged as "energy" so very few armors can reduce it below 5-6 dmg, has a very high bare wound bonus, so anyone with no armor on will be crippled
+	slowdown = 0.35
+	weapon_weight = WEAPON_MEDIUM //DO NOT DUAL WIELD
 
 //Ultracite Laser pistol
 /obj/item/gun/energy/laser/ultra_pistol
@@ -367,7 +407,7 @@
 	scope_x_offset = 12
 	scope_y_offset = 20
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
-	
+
 /obj/item/gun/energy/laser/aer9/oasis
 	name = "\improper Hot-wired AER9 laser rifle"
 	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets. This one has been jury-rigged against common sense to dump more power into its shots."
@@ -490,9 +530,9 @@
 //Gamma gun
 /obj/item/gun/energy/gammagun
 	name = "Gamma gun"
-	desc = "A very crude weapon overall and appears to have been built from scavenged junk found throughout the wasteland."
-	icon_state = "gammagun"
-	item_state = "gammagun"
+	desc = "An advanced radiation weapon commonly utilized by people who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
+	icon_state = "ultra_pistol"
+	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT

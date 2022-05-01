@@ -350,7 +350,7 @@
 	return
 
 /obj/proc/check_skinnable(/mob/M)
-	if(current_skin || !always_reskinnable)
+	if(current_skin && !always_reskinnable)
 		return FALSE
 	return TRUE
 
@@ -376,4 +376,3 @@
 
 /obj/proc/plunger_act(obj/item/plunger/P, mob/living/user, reinforced)
 	return
-	

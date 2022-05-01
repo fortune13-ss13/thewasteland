@@ -117,11 +117,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	//the ids you can use for your species, if empty, it means default only and not changeable
 	var/list/allowed_limb_ids
 	
-	// scream sound overrides
+	// simple laugh sound overrides
 	/// This is used for every gender other than female
-	var/scream_male = list('sound/voice/human/womanlaugh.ogg')
+	var/laugh_male = list('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
 	/// This is used exclusively by females
-	var/scream_female = list('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
+	var/laugh_female = list('sound/voice/human/womanlaugh.ogg')
 
 ///////////
 // PROCS //
@@ -197,7 +197,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/obj/item/organ/tail/tail = C.getorganslot(ORGAN_SLOT_TAIL)
 
 	var/should_have_brain = TRUE
-	var/should_have_heart = !(NOBLOOD in species_traits)
+	var/should_have_heart = TRUE
 	var/should_have_lungs = !(TRAIT_NOBREATH in inherent_traits)
 	var/should_have_appendix = !(TRAIT_NOHUNGER in inherent_traits)
 	var/should_have_eyes = TRUE
@@ -1287,7 +1287,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/radiation = H.radiation
 
 	if(HAS_TRAIT(H, TRAIT_RADIMMUNE))
-		radiation = 0
 		return TRUE
 
 	if(radiation > RAD_MOB_KNOCKDOWN && prob(RAD_MOB_KNOCKDOWN_PROB))
@@ -2207,8 +2206,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				mutant_bodyparts -= "waggingspines"
 			H.update_body()
 
-/datum/species/proc/get_scream_sound(mob/living/carbon/human/H)
+/datum/species/proc/get_laugh_sound(mob/living/carbon/human/H)
 	if(H.gender != FEMALE)
-		return pick(scream_female)
+		return pick(laugh_male)
 	else
-		return pick(scream_female)
+		return pick(laugh_female)

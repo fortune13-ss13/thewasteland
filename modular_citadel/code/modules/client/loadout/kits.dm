@@ -4,3 +4,4 @@
 	name = "Custom Loadout"
 	desc = "Your custom loadout items!"
 	w_class = WEIGHT_CLASS_BULKY
+	

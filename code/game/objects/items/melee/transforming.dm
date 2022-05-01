@@ -88,3 +88,8 @@
 	if(clumsy_check && HAS_TRAIT(user, TRAIT_CLUMSY) && prob(50))
 		to_chat(user, "<span class='warning'>You accidentally cut yourself with [src], like a doofus!</span>")
 		user.take_bodypart_damage(5,5)
+/obj/item/melee/transforming/cleaving_saw/old_rusty
+	name = "Old Rusty"
+	desc = "A chosen weapon of a hunter made in the image of a cleaving saw but heavily improvised"
+	force = 10
+	force_on = 30 //force when active

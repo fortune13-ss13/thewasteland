@@ -3,78 +3,17 @@
 ////////////
 
 /datum/crafting_recipe/forge
-	name = "Forge"
+	name = "Metalworking bench"
 	result = /obj/machinery/workbench/forge
 	reqs = list(
-		/obj/item/stack/sheet/mineral/wood = 10,
-		/obj/item/lighter = 1,
-		/obj/item/twohanded/sledgehammer = 1,
+		/datum/reagent/fuel = 100,
+		/obj/item/weldingtool = 1,
 		/obj/item/screwdriver = 1,
-		/obj/item/crowbar = 1,
 		/obj/item/wrench = 1,
 		/obj/item/wirecutters = 1,
-		/obj/item/stack/sheet/metal = 50,
+		/obj/item/stack/sheet/metal = 20,
 		)
 	time = 400
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/ring_silver
-	name = "Silver Ring"
-	time = 30
-	reqs = list(/obj/item/stack/sheet/mineral/silver = 10)
-	result = /obj/item/clothing/gloves/ring/silver
-	tools = list(TOOL_FORGE)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/ring_gold
-	name = "Gold Ring"
-	time = 30
-	reqs = list(/obj/item/stack/sheet/mineral/gold = 10)
-	result = /obj/item/clothing/gloves/ring
-	tools = list(TOOL_FORGE)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/ring_diamond
-	name = "Diamond Ring"
-	time = 30
-	reqs = list(
-		/obj/item/stack/sheet/mineral/gold = 20,
-		/obj/item/stack/sheet/mineral/diamond = 10,
-		)
-	result = /obj/item/clothing/gloves/ring/diamond
-	tools = list(TOOL_FORGE)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/stick
-	name = "Wooden Handle"
-	time = 30
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 1)
-	result = /obj/item/stick
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/swordhilt
-	name = "Sword Hilt"
-	time = 30
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 2)
-	result = /obj/item/swordhandle
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/toolboxhammer
-	name = "Toolbox Hammer"
-	result = /obj/item/melee/smith/hammer/toolbox
-	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
-	reqs = list(
-		/obj/item/storage/toolbox = 1,
-		/obj/item/stack/sheet/metal = 4,
-		/obj/item/stack/rods = 2,
-		)
-	time = 40
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
@@ -83,8 +22,8 @@
 	result = /obj/structure/anvil/obtainable/table
 	time = 300
 	reqs = list(
-		/obj/item/stack/sheet/metal = 4,
-		/obj/item/stack/rods = 2,
+		/obj/item/stack/sheet/metal = 8,
+		/obj/item/stack/rods = 8,
 		)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
 	category = CAT_CRAFTING
@@ -96,7 +35,6 @@
 	time = 450
 	reqs = list(
 		/obj/item/stack/sheet/metal = 50,
-		/obj/item/stack/rods = 5,
 		/obj/item/stack/sheet/mineral/titanium = 15,
 		)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER, TOOL_CROWBAR)
@@ -107,37 +45,18 @@
 	name = "Sandstone Anvil"
 	result = /obj/structure/anvil/obtainable/sandstone
 	time = 300
-	reqs = list(/obj/item/stack/sheet/mineral/sandstone = 24)
-	tools = list(TOOL_CROWBAR)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/basaltblock
-	name = "Sintered Basalt Block"
-	result = /obj/item/basaltblock
-	time = 200
-	reqs = list(/obj/item/stack/ore/glass/basalt = 50)
-	tools = list(TOOL_WELDER)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/basaltanvil
-	name = "Basalt Anvil"
-	result = /obj/structure/anvil/obtainable/basalt
-	time = 200
-	reqs = list(/obj/item/basaltblock = 5)
+	reqs = list(/obj/item/stack/sheet/mineral/sandstone = 16)
 	tools = list(TOOL_CROWBAR)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
 /datum/crafting_recipe/furnace
-	name = "Sandstone Furnace"
+	name = "Furnace"
 	result = /obj/structure/furnace
 	time = 300
 	reqs = list(
-		/obj/item/stack/sheet/mineral/sandstone = 15,
-		/obj/item/stack/sheet/metal = 4,
-		/obj/item/stack/rods = 2,
+		/obj/item/stack/sheet/mineral/sandstone = 20,
+		/obj/item/stack/sheet/metal = 6,
 		)
 	tools = list(TOOL_CROWBAR)
 	category = CAT_CRAFTING
@@ -151,6 +70,18 @@
 		/obj/item/stack/sheet/metal = 10,
 		)
 	time = 80
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
+/datum/crafting_recipe/tools/forged/sledge
+	name = "Sledgehammer"
+	result = /obj/item/twohanded/sledgehammer/simple
+	time = 700
+	reqs = list(
+		/obj/item/stack/sheet/metal = 15,
+		/obj/item/stack/sheet/mineral/wood = 5,
+		)
+	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
@@ -174,7 +105,7 @@
 	time = 150
 	reqs = list(
 		/obj/item/stack/sheet/metal = 3,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		/obj/item/stack/sheet/cloth = 1,
 		)
 	tools = list(TOOL_FORGE)
@@ -200,7 +131,7 @@
 	time = 300
 	reqs = list(
 		/obj/item/stack/sheet/metal = 6,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
@@ -223,7 +154,7 @@
 	time = 100
 	reqs = list(
 		/obj/item/stack/sheet/metal = 5,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
@@ -246,7 +177,7 @@
 	result = /obj/item/melee/onehanded/knife/bowie
 	reqs = list(
 		/obj/item/stack/sheet/metal = 8,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 200
 	tools = list(TOOL_FORGE)
@@ -259,7 +190,7 @@
 	reqs = list(
 		/obj/item/stack/sheet/metal = 5,
 		/obj/item/stack/crafting/goodparts = 2,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 280
 	tools = list(TOOL_FORGE)
@@ -285,7 +216,7 @@
 	reqs = list(
 		/obj/item/stack/sheet/metal = 10,
 		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 180
 	tools = list(TOOL_FORGE)
@@ -330,7 +261,7 @@
 	reqs = list(
 		/obj/item/stack/sheet/metal = 15,
 		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/swordhandle = 1,
+		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 280
 	tools = list(TOOL_FORGE)
@@ -454,18 +385,6 @@
 ///////////
 // TOOLS //
 ///////////
-
-/datum/crafting_recipe/tools/forged/sledge
-	name = "Sledgehammer"
-	result = /obj/item/twohanded/sledgehammer
-	time = 700
-	reqs = list(
-		/obj/item/stack/sheet/metal = 25,
-		/obj/item/stack/sheet/mineral/wood = 5,
-		)
-	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
 
 /datum/crafting_recipe/crusher
 	name = "Kinetic Crusher"
