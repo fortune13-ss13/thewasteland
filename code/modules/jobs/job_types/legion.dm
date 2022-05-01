@@ -713,13 +713,14 @@ commented out pending rework*/
 /datum/outfit/loadout/expsniper
 	name = "Sniper"
 	glasses = /obj/item/clothing/glasses/sunglasses/big
-	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
+	suit_store = /obj/item/gun/ballistic/automatic/m1garand/sks
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762 = 2,
+		/obj/item/ammo_box/magazine/sks = 2,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/book/granter/trait/rifleman = 1,
 		/obj/item/attachments/scope = 1,
 		)
+
+
 
 
 ///////////////////
@@ -1144,7 +1145,7 @@ commented out pending rework*/
 	name = "Medicus (Surgeon)"
 	neck = /obj/item/clothing/neck/apron/medicus
 	gloves = /obj/item/clothing/gloves/f13/crudemedical
-	belt = /obj/item/storage/belt/medical/legion
+	belt = /obj/item/storage/belt/medical/primitive
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/storage/firstaid/ancient = 1,
