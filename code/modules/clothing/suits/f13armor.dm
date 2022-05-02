@@ -424,6 +424,11 @@
 	slowdown = 0.2
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0, "wound" = 80)
 
+/obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple
+	name = "degraded T-60a power armor"
+	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal. This suit is heavily degraded." //reskin of head knight armor
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
@@ -1032,6 +1037,8 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 /obj/item/clothing/suit/f13/tribal/light/westernwayfarer
 	name = "Western Wayfarer salvaged armor"
 	desc = "A set of scrap and banded metal armor forged by the Wayfarer tribe, due to it's lightweight and unrestrictive nature,  it's used by scouts and agile hunters. A torn cloak hangs around its neck, protecting the user from the harsh desert sands."
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	icon_state = "western_wayfarer_armor"
 	item_state = "western_wayfarer_armor"
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
@@ -1042,6 +1049,8 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 /obj/item/clothing/suit/f13/tribal/heavy/westernwayfarer
 	name = "Western Wayfarer heavy armor"
 	desc = "A Suit of armor crafted by Tribals using pieces of scrap metals and the armor of fallen foes, a bighorner's skull sits on the right pauldron along with bighorner fur lining the collar of the leather bound chest. Along the leather straps adoring it are multiple bone charms with odd markings on them."
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "western_wayfarer_armor_heavy"
 	item_state = "western_wayfarer_armor_heavy"
 	armor = list("melee" = 37, "bullet" = 40, "laser" = 25, "energy" = 20, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
