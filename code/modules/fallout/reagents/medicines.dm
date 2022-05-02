@@ -11,7 +11,7 @@
 	overdose_threshold = 35
 	addiction_threshold = 25
 	value = REAGENT_VALUE_COMMON
-	ghoulfriendly = TRUE
+	ghoulfriendly = FALSE
 
 /datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
@@ -71,7 +71,7 @@
 	description = "Rapidly heals damage when injected. A poor man's stimpak."
 	reagent_state = LIQUID
 	color = "#FFA500"
-	ghoulfriendly = TRUE
+	ghoulfriendly = FALSE
 
 /datum/reagent/medicine/stimpakimitation/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-2.5*REAGENTS_EFFECT_MULTIPLIER)
@@ -89,7 +89,7 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 25
 	addiction_threshold = 16
-	ghoulfriendly = TRUE
+	ghoulfriendly = FALSE
 
 datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	M.adjust_nutrition(-3)
@@ -246,7 +246,7 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	overdose_threshold = 31
 	var/heal_factor = -3 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -5.2 //Multiplier if you have the right perk.
-	ghoulfriendly = TRUE
+	ghoulfriendly = FALSE
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
 	var/is_tribal = FALSE
@@ -282,7 +282,7 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	overdose_threshold = 30
 	var/heal_factor = -1.5 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -2.9 //Multiplier if you have the right perk.
-	ghoulfriendly = TRUE
+	ghoulfriendly = FALSE
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
 	var/is_tribal = FALSE
