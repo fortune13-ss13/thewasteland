@@ -29,6 +29,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("metal rod", /obj/item/stack/rods, 1, 2, 60), \
 	new/datum/stack_recipe("iron ingot", /obj/item/ingot/iron, 6, time = 100), \
 	new/datum/stack_recipe("metal parts", /obj/item/stack/crafting/metalparts, 5), \
+	new/datum/stack_recipe("length of chain", /obj/item/blacksmith/chain, 1, time = 50), \
 	null, \
 	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1), \
 	new/datum/stack_recipe("key", /obj/item/key, 1), \
@@ -53,6 +54,12 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		new /datum/stack_recipe("sofa (right)", /obj/structure/chair/sofa/corp/right, one_per_turf = TRUE, on_floor = TRUE), \
 		new /datum/stack_recipe("sofa (corner)", /obj/structure/chair/sofa/corp/corner, one_per_turf = TRUE, on_floor = TRUE), \
 		)), \
+	new/datum/stack_recipe_list("diner booths", list( \
+		new /datum/stack_recipe("diner booth (middle)", /obj/structure/chair/middle, one_per_turf = TRUE, on_floor = TRUE), \
+		new /datum/stack_recipe("diner booth (left)", /obj/structure/chair/left, one_per_turf = TRUE, on_floor = TRUE), \
+		new /datum/stack_recipe("diner booth (right)", /obj/structure/chair/right, one_per_turf = TRUE, on_floor = TRUE), \
+		new /datum/stack_recipe("diner booth (single)", /obj/structure/chair/booth, one_per_turf = TRUE, on_floor = TRUE), \
+		)),\
 	null, \
 	new/datum/stack_recipe_list("office chairs", list( \
 		new/datum/stack_recipe("dark office chair", /obj/structure/chair/office/dark, 5, one_per_turf = TRUE, on_floor = TRUE), \
@@ -342,7 +349,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 		if(!do_after(user, 70, TRUE, src))
 			return
 		// Make stick
-		var/obj/item/stick/new_item = new(user.loc)
+		var/obj/item/blacksmith/woodrod/new_item = new(user.loc)
 		user.visible_message("[user] finishes carving a rod from the [src].", \
 				"<span class='notice'>You finish carving a rod from the [src].</span>")
 		// Prepare to Put in Hands (if holding wood)
@@ -980,13 +987,19 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 /*
 prewar alloys
 */
+GLOBAL_LIST_INIT(prewar_recipes, list ( \
+	new/datum/stack_recipe("modern chair", /obj/structure/chair/comfy/modern, 2, time = 5, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("gun locker", /obj/structure/guncase, 4, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
+
+))
+
 /obj/item/stack/sheet/prewar
 	name = "pre-war alloys"
 	singular_name = "pre war alloy"
 	desc = "This sheet was manufactured by using advanced smelting techniques before the war."
 	icon_state = "sheet-prewar"
 	item_state = "sheet-metal"
-	custom_materials = list(/datum/material/iron = 10000)
+	custom_materials = list()
 	throwforce = 10
 	flags_1 = CONDUCT_1
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 80)
@@ -994,11 +1007,16 @@ prewar alloys
 	merge_type = /obj/item/stack/sheet/prewar
 	grind_results = list(/datum/reagent/iron = 20, /datum/reagent/toxin/plasma = 20)
 
-/obj/item/stack/sheet/prewar/twenty
-	amount = 20
+/obj/item/stack/sheet/prewar/get_main_recipes()
+	. = ..()
+	. += GLOB.prewar_recipes
 
 /obj/item/stack/sheet/prewar/five
 	amount = 5
 
+/obj/item/stack/sheet/prewar/twenty
+	amount = 20
+
 /obj/item/stack/sheet/prewar/fifty
 	amount = 50
+
