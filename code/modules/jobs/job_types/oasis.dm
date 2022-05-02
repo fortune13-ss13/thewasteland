@@ -284,6 +284,8 @@ Mayor
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/trainshot = 1,
 		/obj/item/gun/energy/laser/auto/oasis = 1,
+		/obj/item/ammo_box/magazine/d12g/empty = 2,
+		
 		/obj/item/gun/ballistic/automatic/shotgun/riot = 1,
 		)
 
