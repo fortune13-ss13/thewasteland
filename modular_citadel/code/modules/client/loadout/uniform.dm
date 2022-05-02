@@ -603,8 +603,8 @@
 						)
 
 /datum/gear/uniform/ncr_officer_dress
-	name = "NCR Female Officer Dress"
-	path = /obj/item/clothing/under/f13/ncr/ncr_shorts
+	name = "NCR Officer Dress"
+	path = /obj/item/clothing/under/f13/ncr_female_officer
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",

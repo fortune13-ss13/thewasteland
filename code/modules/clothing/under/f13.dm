@@ -273,7 +273,7 @@
 	item_color = "majzirilli"
 
 /obj/item/clothing/under/f13/ncr_female_officer
-	name = "NCR Female Officer Uniform"
+	name = "NCR Officer Dress"
 	desc = "An immaculately maintained NCRA service uniform."
 	icon_state = "ncr_female_officer"
 	item_state = "ncr_female_officer"

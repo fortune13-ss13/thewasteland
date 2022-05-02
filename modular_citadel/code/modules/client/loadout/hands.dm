@@ -124,7 +124,7 @@
 	path = /obj/item/lighter
 	cost = 2
 
-/datum/gear/hands/zippolighter
+/datum/gear/hands/beeplushie
 	name = "Bee Plushie"
 	path = /obj/item/toy/plush/beeplushie
 	cost = 2
