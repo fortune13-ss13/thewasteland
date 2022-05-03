@@ -185,6 +185,7 @@ Mayor
 		/obj/item/clothing/gloves/color/latex/nitrile = 1,
 		/obj/item/camera = 1,
 		/obj/item/storage/crayons = 1,
+		/obj/item/choice_beacon/box/carpet = 1,
 		)
 
 /datum/outfit/loadout/pw
@@ -192,9 +193,9 @@ Mayor
 	backpack_contents = list(
 		/obj/item/clothing/head/hardhat = 1,
 		/obj/item/clothing/suit/hazardvest = 1,
-		/obj/item/stack/sheet/metal/twenty = 1,
-		/obj/item/stack/sheet/glass/ten = 1,
-		/obj/item/stack/sheet/mineral/concrete/ten = 1
+		/obj/item/stack/sheet/metal/twenty = 2,
+		/obj/item/stack/sheet/glass/ten = 2,
+		/obj/item/stack/sheet/mineral/concrete/ten = 2
 		)
 	
 /datum/outfit/job/den/f13secretary/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -264,6 +265,7 @@ Mayor
 		/obj/item/restraints/handcuffs = 2,
 		/obj/item/melee/classic_baton = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/grenade/flashbang = 1,
 		)
 
 /datum/outfit/loadout/dakka
@@ -361,6 +363,7 @@ Mayor
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/gun/ballistic/revolver/police = 1,
 		/obj/item/ammo_box/a357 = 3,
+		/obj/item/grenade/flashbang = 1,
 		)
 
 /datum/outfit/loadout/standardpd
@@ -502,7 +505,7 @@ Mayor
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
+	r_pocket = /obj/item/flashlight/lantern
 	r_hand = /obj/item/pickaxe
 	belt = /obj/item/storage/bag/ore
 	shoes = /obj/item/clothing/shoes/workboots
@@ -624,7 +627,7 @@ Mayor
 		/obj/item/storage/bag/money/small/settler = 1,
 		/obj/item/book/granter/action/drink_fling = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
-		/obj/item/book/manual/nuka_recipes = 1
+		/obj/item/book/manual/nuka_recipes = 1,
 		)
 
 /datum/outfit/loadout/rugged
