@@ -277,14 +277,13 @@ Mayor
 
 /datum/outfit/loadout/pew
 	name = "Tactical"
-	suit_store = /obj/item/gun/energy/laser/aer9/oasis
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 1
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ecp = 1,
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/trainshot = 1,
 		/obj/item/gun/energy/laser/auto/oasis = 1,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 1,
 		)
 
 /datum/outfit/job/den/f13sheriff/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
