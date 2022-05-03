@@ -353,7 +353,7 @@ Mayor
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	belt = /obj/item/storage/belt/military/assault
 	suit = /obj/item/clothing/suit/armor/bulletproof
-	neck = obj/item/storage/belt/holster/legholster/police
+	neck = /obj/item/storage/belt/holster/legholster/police
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 	shoes = /obj/item/clothing/shoes/jackboots
