@@ -353,7 +353,7 @@ Mayor
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	belt = /obj/item/storage/belt/military/assault
 	suit = /obj/item/clothing/suit/armor/bulletproof
-	neck = /obj/item/storage/belt/holster/legholster
+	neck = obj/item/storage/belt/holster/legholster/police
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 	shoes = /obj/item/clothing/shoes/jackboots
@@ -361,8 +361,6 @@ Mayor
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 2,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/gun/ballistic/revolver/police = 1,
-		/obj/item/ammo_box/a357 = 3,
 		/obj/item/grenade/flashbang = 1,
 		)
 
