@@ -628,6 +628,8 @@ Mayor
 		/obj/item/book/granter/action/drink_fling = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
 		/obj/item/book/manual/nuka_recipes = 1,
+		/obj/item/stack/f13Cash/caps/onezerozero = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/rotgut = 1,
 		)
 
 /datum/outfit/loadout/rugged
@@ -637,7 +639,7 @@ Mayor
 	suit = /obj/item/clothing/suit/f13/cowboybvest
 	gloves = /obj/item/clothing/gloves/color/brown
 	shoes = /obj/item/clothing/shoes/f13/brownie
-
+	
 /datum/outfit/loadout/frontier
 	name = "Frontier"
 	head = /obj/item/clothing/head/bowler
