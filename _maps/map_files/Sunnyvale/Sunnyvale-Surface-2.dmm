@@ -12916,6 +12916,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/workbench,
 /turf/open/floor/wood/f13/old,
 /area/f13/den)
 "aLI" = (
@@ -28575,10 +28576,11 @@
 /turf/open/floor/carpet/purple,
 /area/f13/den)
 "bJt" = (
-/obj/structure/flora/grass/wasteland,
-/obj/structure/flora/grass/jungle/b,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/desert)
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/wood/f13/old,
+/area/f13/den)
 "bJu" = (
 /mob/living/simple_animal/hostile/supermutant/rangedmutant,
 /turf/open/floor/wood/f13/old,
@@ -29429,7 +29431,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral,
 /area/f13/den)
 "bRB" = (
-/obj/structure/flora/grass/jungle,
+/obj/structure/flora/grass/wasteland,
+/obj/structure/flora/grass/jungle/b,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/desert)
 "bRC" = (
@@ -29454,16 +29457,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral,
 /area/f13/den)
 "bRF" = (
-/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/grass/jungle,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/desert)
 "bRG" = (
-/obj/structure/lamp_post{
-	dir = 4
-	},
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "verticalleftborderleft0"
-	},
+/obj/structure/flora/ausbushes/grassybush,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/desert)
 "bRH" = (
 /obj/machinery/light{
@@ -29479,8 +29478,13 @@
 	},
 /area/f13/den)
 "bRJ" = (
-/turf/open/floor/carpet/green,
-/area/f13/den)
+/obj/structure/lamp_post{
+	dir = 4
+	},
+/turf/open/floor/plating/f13/outside/road{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/desert)
 "bRK" = (
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
@@ -30902,6 +30906,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/engine/engineering)
+"bWD" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hop{
+	desc = "A fine quilted blanket, made with blue and yellow fabric.";
+	dream_messages = list("authority","a silvery ID","obligation","a computer","an ID","a corgi","the vault");
+	name = "fine bedsheet"
+	},
+/turf/open/floor/wood/wood_tiled,
+/area/f13/den)
 "bYr" = (
 /obj/machinery/microwave/stove,
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
@@ -31132,6 +31145,12 @@
 	icon_state = "bluefull"
 	},
 /area/f13/mountain_bunker)
+"cYJ" = (
+/obj/structure/lamp_post,
+/turf/open/floor/plating/f13/outside/road{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/desert)
 "daJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -31210,12 +31229,10 @@
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/ncr_main)
-"dPs" = (
-/obj/structure/lamp_post,
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontaltopbordertop0"
-	},
-/area/f13/desert)
+"dTe" = (
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/neutral,
+/area/f13/den)
 "dTC" = (
 /obj/structure/closet/crate/secure/weapon,
 /obj/item/ammo_box/c4570,
@@ -31369,12 +31386,7 @@
 	},
 /area/f13/mountain_bunker)
 "gcS" = (
-/obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/mechanic,
-/obj/item/clothing/suit/armor/f13/kit,
-/obj/item/clothing/shoes/sneakers/black,
-/obj/item/clothing/gloves/fingerless,
-/turf/open/floor/wood/wood_tiled,
+/turf/open/floor/carpet/green,
 /area/f13/den)
 "gcY" = (
 /obj/structure/window/reinforced{
@@ -31394,10 +31406,6 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/mountain_bunker)
-"gfX" = (
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/f13/vault_floor/neutral,
-/area/f13/den)
 "ghi" = (
 /obj/structure/chair/stool/retro,
 /mob/living/simple_animal/hostile/ghoul/reaver,
@@ -31405,15 +31413,6 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/powerplant)
-"gkj" = (
-/obj/structure/rack,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/plasteel/fifty,
-/obj/item/stack/sheet/plasteel/fifty,
-/turf/open/floor/plasteel/f13/vault_floor/neutral,
-/area/f13/den)
 "gyc" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/blood/old,
@@ -31548,14 +31547,6 @@
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
-/area/f13/den)
-"iBW" = (
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#706891"
-	},
-/obj/structure/dresser,
-/turf/open/floor/f13/wood,
 /area/f13/den)
 "iCI" = (
 /obj/machinery/power/apc{
@@ -31877,10 +31868,6 @@
 "lxi" = (
 /turf/open/floor/carpet/blue,
 /area/f13/den)
-"lyz" = (
-/obj/machinery/light,
-/turf/open/floor/f13,
-/area/f13/den)
 "lCC" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/plasteel/f13{
@@ -32071,6 +32058,15 @@
 	},
 /turf/open/space/basic,
 /area/f13/desert)
+"npe" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/plasteel/fifty,
+/obj/item/stack/sheet/plasteel/fifty,
+/turf/open/floor/plasteel/f13/vault_floor/neutral,
+/area/f13/den)
 "npJ" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/syringe/piercing,
@@ -32080,10 +32076,6 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/mountain_bunker)
-"nud" = (
-/obj/structure/stairs/south,
-/turf/open/floor/wood/f13/old,
-/area/f13/den)
 "nyB" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/wood/f13/old,
@@ -32218,13 +32210,16 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/prison)
+"oSS" = (
+/obj/structure/stairs/south,
+/turf/open/floor/wood/f13/old,
+/area/f13/den)
 "paK" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hop{
-	desc = "A fine quilted blanket, made with blue and yellow fabric.";
-	dream_messages = list("authority","a silvery ID","obligation","a computer","an ID","a corgi","the vault");
-	name = "fine bedsheet"
-	},
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/f13/mechanic,
+/obj/item/clothing/suit/armor/f13/kit,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/gloves/fingerless,
 /turf/open/floor/wood/wood_tiled,
 /area/f13/den)
 "paT" = (
@@ -32621,6 +32616,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/den)
+"sGA" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#706891"
+	},
+/obj/structure/dresser,
+/turf/open/floor/f13/wood,
+/area/f13/den)
 "sIj" = (
 /obj/structure/bed,
 /turf/open/floor/plasteel/f13{
@@ -32789,6 +32792,10 @@
 	icon_state = "innermiddle"
 	},
 /area/f13/desert)
+"uxH" = (
+/obj/machinery/workbench/forge,
+/turf/open/floor/plasteel/f13/vault_floor/neutral,
+/area/f13/den)
 "uxU" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -33005,10 +33012,6 @@
 	icon_state = "rubbleslab"
 	},
 /area/f13/desert)
-"wzY" = (
-/obj/machinery/workbench/forge,
-/turf/open/floor/plasteel/f13/vault_floor/neutral,
-/area/f13/den)
 "wAO" = (
 /obj/machinery/light,
 /turf/open/floor/f13{
@@ -33045,6 +33048,10 @@
 	icon_state = "showroomfloor"
 	},
 /area/f13/mountain_bunker)
+"wXY" = (
+/obj/machinery/light,
+/turf/open/floor/f13,
+/area/f13/den)
 "xgO" = (
 /obj/structure/sign/poster/prewar/poster60{
 	pixel_y = 32
@@ -111308,7 +111315,7 @@ bKe
 bHn
 bHn
 bHn
-bJt
+bRB
 bHn
 bHn
 aag
@@ -111708,11 +111715,11 @@ bKe
 aGg
 bKe
 bHn
-bJt
+bRB
 bHn
 bHn
 bHn
-bJt
+bRB
 mRO
 mRO
 mRO
@@ -112532,7 +112539,7 @@ aYX
 aZL
 aOB
 aGg
-dPs
+cYJ
 aer
 baE
 baE
@@ -113315,7 +113322,7 @@ aag
 bKe
 aGg
 bKe
-bJt
+bRB
 mRO
 aGE
 bMb
@@ -114137,7 +114144,7 @@ aNQ
 aNQ
 aNQ
 aOj
-bRJ
+gcS
 aOM
 aGX
 aen
@@ -114540,7 +114547,7 @@ aGg
 aNQ
 aGg
 aLq
-bRJ
+gcS
 aLz
 aen
 aer
@@ -114937,12 +114944,12 @@ mRO
 aFW
 aGg
 aKg
-bRJ
+gcS
 aGg
 aOf
 aOt
-bRJ
-bRJ
+gcS
+gcS
 aGX
 aen
 aer
@@ -115325,7 +115332,7 @@ aag
 bKe
 aGg
 bKe
-bJt
+bRB
 mRO
 aHZ
 aIj
@@ -115338,13 +115345,13 @@ aGX
 mRO
 aFW
 aGg
-bRJ
-bRJ
+gcS
+gcS
 aNK
 aOh
 aGg
 aLq
-bRJ
+gcS
 aLz
 aen
 aer
@@ -115745,7 +115752,7 @@ aMp
 aGg
 aOf
 aOt
-bRJ
+gcS
 aOM
 aGX
 aen
@@ -116531,7 +116538,7 @@ aag
 bKe
 aGg
 bKe
-bRB
+bRF
 mRO
 bMb
 aGW
@@ -116552,7 +116559,7 @@ afp
 afp
 afp
 afp
-dPs
+cYJ
 aer
 baE
 baE
@@ -117738,8 +117745,8 @@ bKe
 aGg
 bKe
 aag
-bRF
-bRF
+bRG
+bRG
 aFW
 afp
 afp
@@ -118980,7 +118987,7 @@ oii
 oii
 bHO
 qSe
-lyz
+wXY
 mRO
 bKe
 aGg
@@ -120170,7 +120177,7 @@ afp
 afp
 afp
 afp
-dPs
+cYJ
 aer
 baE
 baE
@@ -120972,7 +120979,7 @@ bRv
 bRz
 bRD
 bRH
-gkj
+npe
 aGg
 aGk
 aer
@@ -121374,7 +121381,7 @@ ffz
 ffz
 ffz
 ffz
-wzY
+uxH
 aGg
 aen
 aer
@@ -122589,7 +122596,7 @@ baE
 aeE
 mRO
 aMM
-iBW
+sGA
 aQh
 aQD
 bRb
@@ -123381,10 +123388,10 @@ bMb
 ofz
 scC
 scC
-gcS
+paK
 aGg
 ffz
-gfX
+dTe
 aGg
 abe
 aer
@@ -123393,7 +123400,7 @@ baE
 aGm
 mRO
 aGG
-nud
+oSS
 aQD
 bRb
 bRb
@@ -123783,7 +123790,7 @@ bMb
 bvl
 bRu
 scC
-paK
+bWD
 aGg
 bRL
 bRL
@@ -123794,7 +123801,7 @@ baE
 baE
 aeE
 mRO
-aLH
+bJt
 aGG
 aLz
 bRb
@@ -124577,7 +124584,7 @@ acv
 acv
 acv
 acv
-bRG
+bRJ
 acv
 acv
 acv
@@ -124590,7 +124597,7 @@ acv
 acv
 acv
 acv
-bRG
+bRJ
 acv
 auT
 aZZ
@@ -124598,7 +124605,7 @@ baE
 baE
 ajy
 acv
-bRG
+bRJ
 acv
 acv
 acv
@@ -126976,7 +126983,7 @@ bJz
 aKJ
 aGG
 aGG
-aLH
+bJt
 bDn
 bDn
 bDn
