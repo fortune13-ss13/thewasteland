@@ -338,7 +338,7 @@ Uranium, Contaminated
 	damage = 0
 	wound_bonus = 18
 	bare_wound_bonus = -24
-	anti_armour_damage = 30
+	anti_armour_damage = 20
 
 /obj/item/projectile/bullet/c4570/explosive
 	damage = -15
@@ -376,6 +376,7 @@ Uranium, Contaminated
 	wound_bonus = 0
 	sharpness = SHARP_NONE
 	pixels_per_second = TILES_TO_PIXELS(500)
+	anti_armour_damage = 15
 
 /obj/item/projectile/bullet/c4570/knockback/on_hit(atom/target, blocked = FALSE)
 	. = ..()

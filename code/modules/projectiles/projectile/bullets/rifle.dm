@@ -143,7 +143,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	damage = 0
 	pixels_per_second = 4000
 	zone_accuracy_factor = 100
-	anti_armour_damage = 40
+	anti_armour_damage = 30
 
 /obj/item/projectile/bullet/a50MG/incendiary
 	damage = -10
@@ -178,7 +178,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	name = ".50 penetrator round"
 	damage = -10
 	movement_type = FLYING | UNSTOPPABLE
-	anti_armour_damage = 60
+	anti_armour_damage = 50
 
 /obj/item/projectile/bullet/a50MG/uraniumtipped
 	name = "12.7mm uranium-tipped bullet"
@@ -332,7 +332,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	damage = 0
 	armour_penetration = 0.9 //if only one bullet has built in AP, its this one
 	pixels_per_second = TILES_TO_PIXELS(100)
-	anti_armour_damage = 40
+	anti_armour_damage = 30
 
 
 /obj/item/projectile/bullet/c2mm/blender //welcome to pain town
