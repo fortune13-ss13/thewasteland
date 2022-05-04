@@ -20,11 +20,9 @@
 	..()
 	explosion(target, -1, 1, 3, 1, 0, flame_range = 4)
 
-/obj/item/projectile/bullet/a84mm/on_hit(atom/target)
 	if(ismecha(target))
 		var/obj/mecha/M = target
 		M.take_damage(anti_armour_damage)
-	return BULLET_ACT_HIT
 	if(issilicon(target))
 		var/mob/living/silicon/S = target
 		S.take_overall_damage(anti_armour_damage*0.75, anti_armour_damage*0.25)
