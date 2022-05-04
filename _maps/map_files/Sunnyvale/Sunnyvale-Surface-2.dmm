@@ -26622,6 +26622,7 @@
 	},
 /area/f13/prison)
 "bCK" = (
+/obj/machinery/reagentgrinder,
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/den)
@@ -29174,8 +29175,10 @@
 	},
 /area/f13/sunny_dale)
 "bLW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light,
 /obj/structure/table/reinforced,
-/obj/effect/spawner/lootdrop/f13/foodspawner,
+/obj/item/reagent_containers/food/snacks/sugarcookie,
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/den)
 "bMb" = (
@@ -30970,15 +30973,17 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "bYx" = (
-/obj/machinery/reagentgrinder,
 /obj/structure/table/reinforced,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/den)
 "bYy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light,
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/snacks/sugarcookie,
+/obj/machinery/chem_dispenser/drinks/beer{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/den)
 "bYz" = (
@@ -31031,6 +31036,10 @@
 	icon_state = "ruinswindowdestroyed"
 	},
 /area/f13/desert)
+"bZz" = (
+/obj/structure/stairs/south,
+/turf/open/floor/wood/f13/old,
+/area/f13/den)
 "cbD" = (
 /obj/machinery/shower{
 	dir = 4
@@ -31066,15 +31075,6 @@
 	icon_state = "plating"
 	},
 /area/f13/mountain_bunker)
-"cho" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hop{
-	desc = "A fine quilted blanket, made with blue and yellow fabric.";
-	dream_messages = list("authority","a silvery ID","obligation","a computer","an ID","a corgi","the vault");
-	name = "fine bedsheet"
-	},
-/turf/open/floor/wood/wood_tiled,
-/area/f13/den)
 "ciE" = (
 /obj/item/ammo_box/c4570,
 /turf/open/floor/wood/f13/old,
@@ -31145,12 +31145,6 @@
 	icon_state = "bluefull"
 	},
 /area/f13/mountain_bunker)
-"cRL" = (
-/obj/structure/lamp_post,
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontaltopbordertop0"
-	},
-/area/f13/desert)
 "daJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -31472,15 +31466,6 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/mountain_bunker)
-"hlR" = (
-/obj/structure/rack,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/plasteel/fifty,
-/obj/item/stack/sheet/plasteel/fifty,
-/turf/open/floor/plasteel/f13/vault_floor/neutral,
-/area/f13/den)
 "hpB" = (
 /obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line,
@@ -31489,6 +31474,10 @@
 	icon_state = "plating"
 	},
 /area/f13/mountain_bunker)
+"hqI" = (
+/obj/machinery/light,
+/turf/open/floor/f13,
+/area/f13/den)
 "hrd" = (
 /obj/structure/timeddoor,
 /turf/closed/wall/f13/store/constructed,
@@ -31601,10 +31590,6 @@
 /obj/item/weldingtool/experimental/brass,
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/legioncamp)
-"iTe" = (
-/obj/machinery/light,
-/turf/open/floor/f13,
-/area/f13/den)
 "iUz" = (
 /turf/closed/wall/f13/store/constructed,
 /area/f13/powerplant)
@@ -31760,6 +31745,12 @@
 /obj/structure/table/booth,
 /turf/open/floor/carpet/red,
 /area/f13/den)
+"kcd" = (
+/obj/structure/lamp_post,
+/turf/open/floor/plating/f13/outside/road{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/desert)
 "kfx" = (
 /turf/closed/wall/r_wall/f13composite{
 	icon_state = "rubbleplate"
@@ -31776,14 +31767,6 @@
 	icon_state = "bluefull"
 	},
 /area/f13/mountain_bunker)
-"kpv" = (
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#706891"
-	},
-/obj/structure/dresser,
-/turf/open/floor/f13/wood,
-/area/f13/den)
 "kuL" = (
 /obj/structure/sign/poster/ncr/keep_to_myself{
 	pixel_y = 32
@@ -32003,6 +31986,10 @@
 	icon_state = "plating"
 	},
 /area/f13/mountain_bunker)
+"muX" = (
+/obj/machinery/workbench/forge,
+/turf/open/floor/plasteel/f13/vault_floor/neutral,
+/area/f13/den)
 "mvU" = (
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/floor/plating/f13/inside/mountain,
@@ -32180,10 +32167,6 @@
 /obj/item/radio,
 /turf/open/floor/wood/f13/old,
 /area/f13/ncr_main)
-"orr" = (
-/obj/structure/stairs/south,
-/turf/open/floor/wood/f13/old,
-/area/f13/den)
 "osl" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/stack/sheet/metal/twenty,
@@ -32546,6 +32529,14 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/mountain_bunker)
+"rXa" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#706891"
+	},
+/obj/structure/dresser,
+/turf/open/floor/f13/wood,
+/area/f13/den)
 "rZM" = (
 /turf/closed/wall/f13/store/constructed,
 /area/f13/desert)
@@ -32612,10 +32603,6 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/mountain_bunker)
-"sDn" = (
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/f13/vault_floor/neutral,
-/area/f13/den)
 "sEF" = (
 /obj/item/reagent_containers/food/drinks/drinkingglass,
 /obj/structure/table/wood/settler,
@@ -32716,6 +32703,17 @@
 	icon_state = "plating"
 	},
 /area/f13/mountain_bunker)
+"tDU" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "barshutters"
+	},
+/obj/structure/table/wood/settler,
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
+/area/f13/den)
 "tMX" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -32767,6 +32765,10 @@
 /obj/structure/timeddoor,
 /turf/closed/wall/f13/tunnel,
 /area/f13/desert)
+"ukc" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
+/area/f13/den)
 "unK" = (
 /obj/item/stock_parts/cell/ammo/mfc,
 /turf/open/floor/plating/f13/inside/mountain,
@@ -32998,6 +33000,15 @@
 /obj/item/bedsheet/black,
 /turf/open/floor/wood/f13/old,
 /area/f13/ncr_main)
+"wuh" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/plasteel/fifty,
+/obj/item/stack/sheet/plasteel/fifty,
+/turf/open/floor/plasteel/f13/vault_floor/neutral,
+/area/f13/den)
 "wxp" = (
 /obj/machinery/light{
 	dir = 8
@@ -33012,6 +33023,10 @@
 	icon_state = "rubbleslab"
 	},
 /area/f13/desert)
+"wAr" = (
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/neutral,
+/area/f13/den)
 "wAO" = (
 /obj/machinery/light,
 /turf/open/floor/f13{
@@ -33048,10 +33063,6 @@
 	icon_state = "showroomfloor"
 	},
 /area/f13/mountain_bunker)
-"wQZ" = (
-/obj/machinery/workbench/forge,
-/turf/open/floor/plasteel/f13/vault_floor/neutral,
-/area/f13/den)
 "xgO" = (
 /obj/structure/sign/poster/prewar/poster60{
 	pixel_y = 32
@@ -33131,6 +33142,15 @@
 /obj/structure/window/fulltile/wood_window,
 /turf/open/floor/wood/f13,
 /area/f13/desert)
+"xUG" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hop{
+	desc = "A fine quilted blanket, made with blue and yellow fabric.";
+	dream_messages = list("authority","a silvery ID","obligation","a computer","an ID","a corgi","the vault");
+	name = "fine bedsheet"
+	},
+/turf/open/floor/wood/wood_tiled,
+/area/f13/den)
 "ybC" = (
 /obj/item/radio/intercom{
 	pixel_x = 30
@@ -112539,7 +112559,7 @@ aYX
 aZL
 aOB
 aGg
-cRL
+kcd
 aer
 baE
 baE
@@ -116961,7 +116981,7 @@ aGs
 aGs
 aGs
 aGs
-cRL
+kcd
 aer
 baE
 baE
@@ -118987,7 +119007,7 @@ oii
 oii
 bHO
 qSe
-iTe
+hqI
 mRO
 bKe
 aGg
@@ -120178,9 +120198,9 @@ afp
 afp
 afp
 aen
-aer
-baE
-baE
+bid
+bid
+bid
 aGm
 mRO
 qSe
@@ -120579,7 +120599,7 @@ aGg
 aGg
 aGg
 aGg
-cRL
+kcd
 aer
 baE
 baE
@@ -120979,7 +120999,7 @@ bRv
 bRz
 bRD
 bRH
-hlR
+wuh
 aGg
 aGk
 aer
@@ -121381,7 +121401,7 @@ ffz
 ffz
 ffz
 ffz
-wQZ
+muX
 aGg
 aen
 aer
@@ -122596,7 +122616,7 @@ baE
 aeE
 mRO
 aMM
-kpv
+rXa
 aQh
 aQD
 bRb
@@ -123391,7 +123411,7 @@ scC
 paK
 aGg
 ffz
-sDn
+wAr
 aGg
 abe
 aer
@@ -123400,7 +123420,7 @@ baE
 aGm
 mRO
 aGG
-orr
+bZz
 aQD
 bRb
 bRb
@@ -123790,7 +123810,7 @@ bMb
 bvl
 bRu
 scC
-cho
+xUG
 aGg
 bRL
 bRL
@@ -130235,8 +130255,8 @@ aMk
 aMz
 aMk
 aGG
-aNm
-aQe
+aGG
+aQD
 sEF
 aQe
 aQe
@@ -131442,10 +131462,10 @@ aGG
 aGG
 aGG
 aGG
-aQe
-bCK
-bCK
+tDU
 bBe
+bCK
+ukc
 bBe
 bYx
 aGs
@@ -131844,10 +131864,10 @@ bFf
 bFf
 bFf
 aMO
-aQe
-bLW
-bLW
+tDU
 bBe
+bLW
+ukc
 bBe
 bYy
 aGs
@@ -132246,7 +132266,7 @@ bGc
 bFm
 bFm
 aMP
-aQe
+tDU
 bBe
 bBe
 bBe
