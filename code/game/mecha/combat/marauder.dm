@@ -8,7 +8,7 @@
 	desc = "A retrofit of the orginal 'Durand' exosuit designed for extended combat operations, the shield projector has been replaced with a smoke-screen dispenser and a sophisticated sensor suite."
 	icon_state = "marauder"
 	step_in = 5
-	max_integrity = 750
+	max_integrity = 900
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 40, "energy" = 30, "bomb" = 60, "bio" = 0, "rad" = 75, "fire" = 100, "acid" = 100)
 	max_temperature = 60000
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -17,7 +17,7 @@
 	add_req_access = 0
 	internal_damage_threshold = 10
 	step_energy_drain = 60
-	force = 60 // Just don't go near that thing, or do, it can't strafe.
+	force = 50 // Just don't go near that thing, or do, it can't strafe.
 	attack_knockdown = 20
 	canstrafe = FALSE
 
@@ -52,7 +52,7 @@
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 60, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
 	wreckage = /obj/structure/mecha_wreckage/seraph
 	internal_damage_threshold = 20
-	force = 80
+	force = 65
 	max_equip = 5
 
 /obj/mecha/combat/marauder/seraph/Initialize()

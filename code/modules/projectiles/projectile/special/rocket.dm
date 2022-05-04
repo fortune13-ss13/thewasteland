@@ -112,7 +112,7 @@
 	name ="\improper APHE missile"
 	desc = "Boom."
 	icon_state = "missile"
-	damage = 200 // It only damages "sturdy" objects
+	damage = 20
 	armour_penetration = 0.25
 	ricochets_max = 0 //Guess what? Still a MISSILE
 	var/sturdy = list(
