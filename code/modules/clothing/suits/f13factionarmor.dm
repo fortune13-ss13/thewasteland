@@ -674,8 +674,7 @@
 	item_state = "police_chief"
 	armor = list("melee" = 45, "bullet" = 65, "laser" = 45,  "energy" = 35, "bomb" = 40, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 55)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/holdout
-	slowdown = 0.06  //bulletproof vest, but less weakness and more speed
-
+	slowdown = 0.12  //RCA statline
 /obj/item/clothing/suit/armor/f13/town/chief/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
