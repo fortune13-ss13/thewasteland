@@ -893,10 +893,10 @@
 
 
 /obj/item/card/id/dogtag/deputy
-	name = "deputy's badge"
+	name = "officer's badge"
 	desc = "A silver badge which shows honour and dedication."
 	assignment = "badge"
-	assignment = "Deputy"
+	assignment = "Officer"
 	icon_state = "deputy"
 	item_state = "badge-deputy"
 	access = list(ACCESS_BAR, ACCESS_GATEWAY)
