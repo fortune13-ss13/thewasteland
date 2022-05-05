@@ -128,10 +128,10 @@
 /obj/item/storage/box/large/custom_kit/pug2/PopulateContents()
 	new /obj/item/melee/onehanded/dragonfire(src)
 
-/obj/item/storage/box/large/custom_kit/pug2/PopulateContents()
+/obj/item/storage/box/large/custom_kit/mutie/PopulateContents()
 	new /obj/item/clothing/shoes/f13/mutie/boots(src)
 	new /obj/item/clothing/gloves/f13/mutant/mk2(src)
-	new /obj/item/clothing/under/f13/mutie_suit(src)
+	new /obj/item/clothing/under/f13/vaultmutie(src)
 	new /obj/item/clothing/suit/armor/f13/mutant/metal(src)
 
 /datum/gear/donator/kits/pug
@@ -144,7 +144,7 @@
 	path = /obj/item/storage/box/large/custom_kit/pug2
 	ckeywhitelist = list("puglord777")
 	
-/datum/gear/donator/kits/Mutie
+/datum/gear/donator/kits/mutie
 	name = "I die to mobsx2"
-	path = /obj/item/storage/box/large/custom_kit/Mutie
+	path = /obj/item/storage/box/large/custom_kit/mutie
 	ckeywhitelist = list("puglord777")
