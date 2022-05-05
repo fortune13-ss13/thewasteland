@@ -108,7 +108,7 @@
 	name = "Burnings Goods"
 	path = /obj/item/storage/box/large/custom_kit/burningcold
 	ckeywhitelist = list("myguy49")
-	
+
 /obj/item/storage/box/large/custom_kit/pineapple/PopulateContents()
 	new /obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple(src)
 	new /obj/item/clothing/head/helmet/f13/power_armor/t60/pineapple(src)
@@ -139,7 +139,7 @@
 /datum/gear/donator/kits/snugglytrap
 	name = "Good boy kit"
 	path = /obj/item/storage/box/large/custom_kit/snugglytrap
-	ckeywhitelist = list("snugglytrap")	
+	ckeywhitelist = list("snugglytrap")
 
 /obj/item/storage/box/large/custom_kit/pug/PopulateContents()
 	new /obj/item/melee/transforming/cleaving_saw/old_rusty(src)
@@ -155,4 +155,9 @@
 /datum/gear/donator/kits/pug2
 	name = "I die to mobsx2"
 	path = /obj/item/storage/box/large/custom_kit/pug2
+	ckeywhitelist = list("puglord777")
+
+/datum/gear/donator/kits/mutie
+	name = "Muties"
+	path = /obj/item/storage/box/large/custom_kit/mutie
 	ckeywhitelist = list("puglord777")
