@@ -296,33 +296,29 @@
 		return
 	if(!powered)
 		return
-	if(emped == 0)
-		if(ismob(loc))
+	if(!emped)
+		if(isliving(loc))
 			var/mob/living/L = loc
+			var/induced_slowdown = 0
 			if(severity >= 41) //heavy emp
-				slowdown += 4
-				to_chat(loc, "<span class='boldwarning'>Warning: severe electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
-				emped = 1
-				if(istype(L))
-					L.update_equipment_speed_mods()
-				spawn(50) //5 seconds of being really slow
-					to_chat(loc, "<span class='notice'>Power armor systems restored.</span>")
-					slowdown -= 4
-					emped = 0
-					if(istype(L))
-						L.update_equipment_speed_mods()
+				induced_slowdown = 4
+				to_chat(L, "<span class='boldwarning'>Warning: severe electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
 			else
-				slowdown +=2
-				to_chat(loc, "<span class='warning'>Warning: light electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
-				emped = 1
-				if(istype(L))
-					L.update_equipment_speed_mods()
-				spawn(50) //5 seconds of being slow
-					to_chat(loc, "<span class='notice'>Power armor systems restored.</span>")
-					slowdown -= 2
-					emped = 0
-					if(istype(L))
-						L.update_equipment_speed_mods()
+				induced_slowdown = 2
+				to_chat(L, "<span class='warning'>Warning: light electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
+			emped = TRUE
+			slowdown += induced_slowdown
+			L.update_equipment_speed_mods()
+			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), 50)
+	return
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/end_emp_effect(slowdown_induced)
+	emped = FALSE
+	slowdown -= slowdown_induced // Even if armor is dropped it'll fix slowdown
+	if(isliving(loc))
+		var/mob/living/L = loc
+		to_chat(L, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
+		L.update_equipment_speed_mods()
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "salvaged T-45b power armor"
