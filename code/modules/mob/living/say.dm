@@ -213,13 +213,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		spans |= L.spans
 
 	if(message_mode == MODE_SING)
-	#if DM_VERSION < 513
-		var/randomnote = "~"
-	#else
-		var/randomnote = pick ("\u2669", "\u266A", "\u266B")
-	#endif
-		spans |= span_singing
+		var/randomnote = pick("\u2669", "\u266A", "\u266B")
 		message = "[randomnote] [message] [randomnote]"
+		spans |= SPAN_SINGING
 
 	var/radio_return = radio(message, message_mode, spans, language)
 	if(radio_return & ITALICS)
