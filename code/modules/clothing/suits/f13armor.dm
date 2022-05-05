@@ -264,6 +264,7 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	var/requires_training = TRUE
 	var/powered = TRUE
+	var/emped = 0
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -295,23 +296,33 @@
 		return
 	if(!powered)
 		return
-	if(isliving(loc) && prob(severity*1.5))
-		var/time_slowed = severity / 10 SECONDS
-		var/mob/living/L = loc
-		to_chat(L, "<span class='warning'>Warning: electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
-		slowdown += 1.2
-		if(istype(L))
-			L.update_equipment_speed_mods()
-		addtimer(CALLBACK(src, .proc/end_emp_effect), time_slowed)
-
-/obj/item/clothing/suit/armor/f13/power_armor/proc/end_emp_effect()
-	if(isliving(loc))
-		var/mob/living/L = loc
-		slowdown -= 1.2
-		to_chat(L, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
-		if(istype(L))
-			L.update_equipment_speed_mods()
-	return TRUE
+	if(emped == 0)
+		if(ismob(loc))
+			var/mob/living/L = loc
+			if(severity >= 41) //heavy emp
+				slowdown += 4
+				to_chat(loc, "<span class='boldwarning'>Warning: severe electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
+				emped = 1
+				if(istype(L))
+					L.update_equipment_speed_mods()
+				spawn(50) //5 seconds of being really slow
+					to_chat(loc, "<span class='notice'>Power armor systems restored.</span>")
+					slowdown -= 4
+					emped = 0
+					if(istype(L))
+						L.update_equipment_speed_mods()
+			else
+				slowdown +=2
+				to_chat(loc, "<span class='warning'>Warning: light electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
+				emped = 1
+				if(istype(L))
+					L.update_equipment_speed_mods()
+				spawn(50) //5 seconds of being slow
+					to_chat(loc, "<span class='notice'>Power armor systems restored.</span>")
+					slowdown -= 2
+					emped = 0
+					if(istype(L))
+						L.update_equipment_speed_mods()
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "salvaged T-45b power armor"
