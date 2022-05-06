@@ -122,7 +122,7 @@
 #define F13SETTLER		(1<<2)
 #define F13FARMER		(1<<3)
 #define F13PROSPECTOR	(1<<4)
-#define F13POLICEOFFICER(1<<5)
+#define F13POLICEMAN	(1<<5)
 #define F13MAYOR		(1<<6)
 #define F13SECRETARY    (1<<7)
 #define F13PREACHER		(1<<8)
