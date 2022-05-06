@@ -865,14 +865,12 @@ Mayor
 	description = "Sometimes you need a cog in the machine to keep it turning. You are the cog, capitalism is the machine, and the shopkeeper turns the handle. In return for being taught the ways of commerce and crafting, you help keep the shop orderly and customers happy."
 	selection_color = "#dcba97"
 	exp_requirements = 600
-
 	outfit = /datum/outfit/job/den/f13assist
 	
-	exp_requirements = 600
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	
-/datum/outfit/job/den/f13assist
+/datum/job/oasis/f13assist
 	name = "Shop Assistant"
 	jobtype = /datum/job/oasis/f13assistant
 	
@@ -880,7 +878,7 @@ Mayor
 	suit = /obj/item/clothing/suit/f13/blacksmith_apron
 	belt = /obj/item/storage/belt/utility
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
-	id = id = /obj/item/card/id/dogtag/town
+	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town
 	shoes = /obj/item/clothing/shoes/f13/cowboy
 	r_pocket = /obj/item/flashlight/flare
@@ -898,7 +896,7 @@ Mayor
 		),
 	)
 	
-/datum/job/oasis/f13assistant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/job/oasis/f13assist/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -915,7 +913,7 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
 
-/datum/job/oasis/f13assistant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/job/oasis/f13assist/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -937,7 +935,7 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 
-matchmaking_allowed = list(
+	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis,
 		),
