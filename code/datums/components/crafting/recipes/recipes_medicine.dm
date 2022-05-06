@@ -61,6 +61,16 @@
 	time = 60
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/berserker_powder
+	name = "Berserker powder"
+	result = /obj/item/reagent_containers/pill/patch/healingpowder/berserker
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/mushroom/angel = 2,
+				/obj/item/reagent_containers/food/snacks/grown/agave = 2,
+				/datum/reagent/blood = 30)
+	time = 40
+	category = CAT_MEDICAL
+	always_available = FALSE
+
 /datum/crafting_recipe/healpoultice
 	name = "Healing poultice"
 	result = /obj/item/reagent_containers/pill/patch/healpoultice
