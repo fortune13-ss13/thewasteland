@@ -197,7 +197,7 @@ Mayor
 		/obj/item/stack/sheet/glass/ten = 2,
 		/obj/item/stack/sheet/mineral/concrete/ten = 2
 		)
-	
+
 /datum/outfit/job/den/f13secretary/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -210,7 +210,7 @@ Mayor
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
 
-	
+
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13sheriff
@@ -865,15 +865,23 @@ Mayor
 	description = "Sometimes you need a cog in the machine to keep it turning. You are the cog, capitalism is the machine, and the shopkeeper turns the handle. In return for being taught the ways of commerce and crafting, you help keep the shop orderly and customers happy."
 	selection_color = "#dcba97"
 	exp_requirements = 600
-	outfit = /datum/outfit/job/den/f13assist
-	
+	outfit = /datum/outfit/job/oasis/f13assist
+
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
-	
-/datum/job/oasis/f13assist
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+/datum/outfit/job/oasis/f13assist
 	name = "Shop Assistant"
 	jobtype = /datum/job/oasis/f13assistant
-	
+
 	uniform = /obj/item/clothing/under/f13/mechanic
 	suit = /obj/item/clothing/suit/f13/blacksmith_apron
 	belt = /obj/item/storage/belt/utility
@@ -887,16 +895,9 @@ Mayor
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/)
 
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-	
-/datum/job/oasis/f13assist/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+
+
+/datum/outfit/job/oasis/f13assist/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -913,23 +914,23 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
 
-/datum/job/oasis/f13assist/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/oasis/f13assist/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 
-	
+
 /*--------------------------------------------------------------*/
 /datum/job/oasis/f13shopkeeper
 	title = "Shopkeeper"
 	flag = F13SHOPKEEPER
 	department_flag = DEP_OASIS
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "free hand of the market"
 	description = "The greed of the United States survived better than its people. You are an organ of this greed. Ensure its continuation."
 	selection_color = "#dcba97"
-	exp_requirements = 600
+	exp_requirements = 800
 
 	outfit = /datum/outfit/job/den/f13shopkeeper
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
