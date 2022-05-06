@@ -173,8 +173,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 /obj/item/projectile/bullet/a50MG/penetrator
 	name = ".50 penetrator round"
 	damage = -10
-	projectile_piercing = PASSMOB
-	projectile_phasing = (ALL & (~PASSMOB))
+	movement_type = FLYING | UNSTOPPABLE
 
 /obj/item/projectile/bullet/a50MG/uraniumtipped
 	name = "12.7mm uranium-tipped bullet"
@@ -244,6 +243,8 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 /obj/item/projectile/bullet/a473/dumdum
 	name = "4.73 flat-nose bullet"
 	damage = 5
+	supereffective_damage = 10
+	supereffective_faction = list("hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot")
 	armour_penetration = -0.2
 	wound_bonus = 20
 	bare_wound_bonus = 30
@@ -263,14 +264,10 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	name = "4.73mm shock bullet"
 	wound_bonus = 0
 	sharpness = SHARP_NONE
-	var/energy_damage = 4
 
 /obj/item/projectile/bullet/a473/shock/on_hit(atom/target, blocked = FALSE)
 	..()
-	target.emp_act(5)//5 severity is very, very low
-	if(blocked != 100 && isliving(target))
-		var/mob/living/L = target
-		L.electrocute_act(energy_damage, "shock bullet", 1, SHOCK_NOGLOVES | SHOCK_NOSTUN)
+	target.emp_act(15)//5 severity is very, very low
 
 /obj/item/projectile/bullet/a473/hv
 	name = "4.73mm highvelocity bullet"
@@ -298,15 +295,10 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	damage = -6 //about -30% damage
 	wound_bonus = 0
 	sharpness = SHARP_NONE
-	var/energy_damage = 5
 
 /obj/item/projectile/bullet/m5mm/shock/on_hit(atom/target, blocked = FALSE)
 	..()
-	target.emp_act(5)//5 severity is very, very low
-	if(blocked != 100 && isliving(target))
-		var/mob/living/L = target
-		L.electrocute_act(energy_damage, "shock bullet", 1, SHOCK_NOGLOVES | SHOCK_NOSTUN) //this might be spammy todo: check
-		//if it is, use O.take_damage(energy_damage, BURN, "energy", FALSE)
+	target.emp_act(15)//5 severity is very, very low
 
 //////////////////////////
 // 5 MM minigun special //
@@ -326,13 +318,11 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	armour_penetration = 0.9 //if only one bullet has built in AP, its this one
 	pixels_per_second = TILES_TO_PIXELS(100)
 
-
 /obj/item/projectile/bullet/c2mm/blender //welcome to pain town
 	name = "2mm blender projectile"
 	damage = -20
 	hitscan = TRUE
-	projectile_piercing = PASSMOB
-	projectile_phasing = (ALL & (~PASSMOB))
+	pass_flags = PASSTABLE
 	armour_penetration = 1
 	ricochets_max = 9 //ain't called the 'blender' for nothin'
 	ricochet_incidence_leeway = 130
@@ -340,3 +330,10 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	ricochet_decay_chance = 11
 	ricochet_chance = 100
 	var/collats = 3
+
+/obj/item/projectile/bullet/c2mm/blender/process_hit(turf/T, atom/target, qdel_self, hit_something = FALSE)
+	if(isliving(target) && collats)
+		collats--
+		temporary_unstoppable_movement = TRUE
+		ENABLE_BITFIELD(movement_type, UNSTOPPABLE)
+	..()

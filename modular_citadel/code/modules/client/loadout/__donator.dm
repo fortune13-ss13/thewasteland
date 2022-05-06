@@ -60,8 +60,8 @@
 
 /obj/item/storage/box/large/custom_kit/klatue/PopulateContents()
 	new /obj/item/storage/belt/holster(src)
-	new /obj/item/gun/ballistic/revolver/hunting(src)
-	new /obj/item/gun/ballistic/revolver/hunting(src)
+	new /obj/item/gun/ballistic/revolver/hunting/klatue(src)
+	new /obj/item/gun/ballistic/revolver/hunting/klatue(src)
 	new /obj/item/ammo_box/c4570(src)
 	new /obj/item/ammo_box/c4570(src)
 	new /obj/item/clothing/suit/armor/hos/trenchcoat(src)
@@ -103,17 +103,65 @@
 	new /obj/item/clothing/mask/bandana/blue(src)
 	new /obj/item/clothing/suit/armored/light/kit/punk(src)
 
+// DaemonTinadel Custom Vet Decanus
+/datum/gear/donator/kits/daemon
+	name = "Daemon's small wiener"
+	path = /obj/item/storage/box/large/custom_kit/daemon
+	ckeywhitelist = list("DaemonTinadel")
+
+/obj/item/storage/box/large/custom_kit/daemon/PopulateContents()
+	new /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon(src)
+	new /obj/item/clothing/suit/armor/f13/legion/heavy/daemon(src)
 
 /datum/gear/donator/kits/burningcold
 	name = "Burnings Goods"
 	path = /obj/item/storage/box/large/custom_kit/burningcold
 	ckeywhitelist = list("myguy49")
 	
+/obj/item/storage/box/large/custom_kit/pineapple/PopulateContents()
+	new /obj/item/clothing/suit/armor/f13/combat/environmental(src)
+	new /obj/item/clothing/head/helmet/f13/combat/environmental(src)
+	new /obj/item/gun/energy/laser/plasma/glock(src)
+	new /obj/item/stock_parts/cell/ammo/ec(src)
+
+
+/datum/gear/donator/kits/pineapple
+	name = "Silvers goods"
+	path = /obj/item/storage/box/large/custom_kit/pineapple
+	ckeywhitelist = list("silveredsoul")
+
+/obj/item/storage/box/large/custom_kit/evosolus/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator(src)
+	new /obj/item/ammo_box/magazine/m556/rifle(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911/custom(src)
+	new /obj/item/ammo_box/magazine/m45(src)
+	new /obj/item/storage/belt/holster(src)
+
+/datum/gear/donator/kits/evosolus
+	name = "Evos goods"
+	path = /obj/item/storage/box/large/custom_kit/evosolus
+	ckeywhitelist = list("evosolus")
+
+/obj/item/storage/box/large/custom_kit/snugglytrap/PopulateContents()
+	new /obj/item/clothing/neck/mantle/snugglycape(src)
+	new /obj/item/mmi/posibrain(src)
+
+/datum/gear/donator/kits/snugglytrap
+	name = "Good boy kit"
+	path = /obj/item/storage/box/large/custom_kit/snugglytrap
+	ckeywhitelist = list("snugglytrap")	
+
 /obj/item/storage/box/large/custom_kit/pug/PopulateContents()
 	new /obj/item/melee/transforming/cleaving_saw/old_rusty(src)
 
 /obj/item/storage/box/large/custom_kit/pug2/PopulateContents()
 	new /obj/item/melee/onehanded/dragonfire(src)
+
+/obj/item/storage/box/large/custom_kit/mutie/PopulateContents()
+	new /obj/item/clothing/shoes/f13/mutie/boots(src)
+	new /obj/item/clothing/gloves/f13/mutant/mk2(src)
+	new /obj/item/clothing/under/f13/vaultmutie(src)
+	new /obj/item/clothing/suit/armor/f13/mutant/poncho(src)
 
 /datum/gear/donator/kits/pug
 	name = "I die to mobs"
@@ -123,4 +171,9 @@
 /datum/gear/donator/kits/pug2
 	name = "I die to mobsx2"
 	path = /obj/item/storage/box/large/custom_kit/pug2
+	ckeywhitelist = list("puglord777")
+	
+/datum/gear/donator/kits/mutie
+	name = "Muties"
+	path = /obj/item/storage/box/large/custom_kit/mutie
 	ckeywhitelist = list("puglord777")
