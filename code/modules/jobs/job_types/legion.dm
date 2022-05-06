@@ -632,10 +632,10 @@ commented out pending rework*/
 /datum/outfit/loadout/vexbear
 	name = "Mountain Bear"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
-	suit_store = /obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
-		/obj/item/ammo_box/a556 = 1,
-		/obj/item/melee/powered/ripper = 1,
+		/obj/item/melee/unarmed/tigerclaw = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 2,
+		/obj/item/book/granter/martial/berserker = 1
 		)
 
 /datum/outfit/loadout/vexfox
