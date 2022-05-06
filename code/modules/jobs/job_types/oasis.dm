@@ -855,7 +855,7 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/*
+
 /datum/job/oasis/f13assistant
 	title = "shop assistant"
 	flag = F13ASSIST
@@ -910,7 +910,7 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-*/
+
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13shopkeeper
