@@ -316,7 +316,7 @@ Mayor
 
 /datum/job/oasis/f13deputy
 	title = "Officer"
-	flag = F13DEPUTY
+	flag = F13OFFICER
 	department_flag = DEP_OASIS
 	total_positions = 5
 	spawn_positions = 5
@@ -875,7 +875,7 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	
-	/datum/outfit/job/den/f13assist
+/datum/outfit/job/den/f13assist
 	name = "Shop Assistant"
 	jobtype = /datum/job/oasis/f13assistant
 	
@@ -925,6 +925,21 @@ Mayor
 
 	
 /*--------------------------------------------------------------*/
+/datum/job/oasis/f13shopkeeper
+	title = "Shopkeeper"
+	flag = F13SHOPKEEPER
+	department_flag = DEP_OASIS
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "free hand of the market"
+	description = "The greed of the United States survived better than its people. You are an organ of this greed. Ensure its continuation."
+	selection_color = "#dcba97"
+	exp_requirements = 600
+
+	outfit = /datum/outfit/job/den/f13shopkeeper
+	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+
 /datum/outfit/job/den/f13shopkeeper
 	name = "Shopkeeper"
 	jobtype = /datum/job/oasis/f13shopkeeper
