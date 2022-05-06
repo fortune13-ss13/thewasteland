@@ -880,7 +880,7 @@ Mayor
 	suit = /obj/item/clothing/suit/f13/blacksmith_apron
 	belt = /obj/item/storage/belt/utility
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
-	id = id = /obj/item/card/id/dogtag/town
+	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town
 	shoes = /obj/item/clothing/shoes/f13/cowboy
 	r_pocket = /obj/item/flashlight/flare
