@@ -747,8 +747,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/mayor
 	name = "Mayor"
-	icon_state = "Assistant"
-	
+	icon_state = "banker"
+
 /obj/effect/landmark/start/f13/secretary
 	name = "Secretary"
 	icon_state = "Lawyer"
@@ -778,8 +778,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Shopkeeper"
 	icon_state = "Shopkeeper"
 
-/obj/effect/landmark/start/f13/assistant
-	name = "F13assistant"
+/obj/effect/landmark/start/f13/banker
+	name = "Banker"
 	icon_state = "Banker"
 
 /obj/effect/landmark/start/f13/barkeep
@@ -853,7 +853,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/usgysgt
 	name = "Enclave Gunnery Sergeant"
-	icon_state = "usgunnery"
 
 
 /obj/effect/landmark/start/f13/uslightduty

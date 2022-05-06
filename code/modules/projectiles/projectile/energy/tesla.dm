@@ -53,9 +53,9 @@
 
 /obj/item/projectile/energy/teslacannon/oasis
 	name = "shock beam"
-	damage = 9
+	damage = 8
 	armour_penetration = 0
-	stamina = 10
+	stamina = 5 
 	flag = "energy"
 	wound_bonus = 10
 	bare_wound_bonus = 30

@@ -508,9 +508,9 @@
 	fire_delay = 3.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.15
+	autofire_shot_delay = 2.25
 	burst_shot_delay = 2
-	extra_damage = 17
+	extra_damage = 15
 	suppressed = 1
 	recoil = 0.05
 	can_attachments = TRUE
@@ -754,7 +754,7 @@
 	spread = 1
 	extra_damage = 32
 	extra_penetration = 0.2
-	slowdown = 0.5
+	slowdown = 0.1
 	can_attachments = FALSE
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -817,6 +817,27 @@
 	scope_y_offset = 15
 	suppressor_x_offset = 26
 	suppressor_y_offset = 28
+
+
+//Police rifle			Keywords: OASIS, 5.56mm, Semi-auto, 20 (10-50) round magazine
+/obj/item/gun/ballistic/automatic/marksman/policerifle
+	name = "Police Rifle"
+	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Oasis Police Department. Held together by duct tape and prayers, it somehow still shoots."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_prefix = "assault_carbine"
+	icon_state = "rifle-police"
+	item_state = "assault_carbine"
+	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	extra_damage = 25
+	extra_penetration = 0.1
+	spread = 1.1
+	fire_delay = 4
+	can_suppress = FALSE
+	can_scope = TRUE
+	zoomable = FALSE
+
 
 //Marksman carbine			Keywords: 5.56mm, Semi-auto, 20 (10-50) round magazine, Small scope
 /obj/item/gun/ballistic/automatic/marksman
@@ -1393,7 +1414,7 @@ obj/item/gun/ballistic/automatic/bar
 	burst_shot_delay = 1.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.5
+	autofire_shot_delay = 2.8
 	fire_delay = 4
 	extra_damage = 25
 	spread = 8

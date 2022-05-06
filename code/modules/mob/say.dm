@@ -168,8 +168,6 @@
 	var/key = message[1]
 	if(key == "#")
 		return MODE_WHISPER
-	else if(key == "%")
-		return MODE_SING
 	else if(key == ";")
 		return MODE_HEADSET
 	else if((length(message) > (length(key) + 1)) && (key in GLOB.department_radio_prefixes))

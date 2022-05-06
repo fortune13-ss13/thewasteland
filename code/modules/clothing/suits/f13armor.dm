@@ -264,7 +264,6 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	var/requires_training = TRUE
 	var/powered = TRUE
-	var/emped = 0
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -296,29 +295,23 @@
 		return
 	if(!powered)
 		return
-	if(!emped)
-		if(isliving(loc))
-			var/mob/living/L = loc
-			var/induced_slowdown = 0
-			if(severity >= 41) //heavy emp
-				induced_slowdown = 4
-				to_chat(L, "<span class='boldwarning'>Warning: severe electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
-			else
-				induced_slowdown = 2
-				to_chat(L, "<span class='warning'>Warning: light electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
-			emped = TRUE
-			slowdown += induced_slowdown
+	if(isliving(loc) && prob(severity*1.5))
+		var/time_slowed = severity / 10 SECONDS
+		var/mob/living/L = loc
+		to_chat(L, "<span class='warning'>Warning: electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
+		slowdown += 1.2
+		if(istype(L))
 			L.update_equipment_speed_mods()
-			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), 50)
-	return
+		addtimer(CALLBACK(src, .proc/end_emp_effect), time_slowed)
 
-/obj/item/clothing/suit/armor/f13/power_armor/proc/end_emp_effect(slowdown_induced)
-	emped = FALSE
-	slowdown -= slowdown_induced // Even if armor is dropped it'll fix slowdown
+/obj/item/clothing/suit/armor/f13/power_armor/proc/end_emp_effect()
 	if(isliving(loc))
 		var/mob/living/L = loc
+		slowdown -= 1.2
 		to_chat(L, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
-		L.update_equipment_speed_mods()
+		if(istype(L))
+			L.update_equipment_speed_mods()
+	return TRUE
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "salvaged T-45b power armor"
@@ -393,12 +386,6 @@
 	icon_state = "t45dpowerarmor_bos"
 	item_state = "t45dpowerarmor_bos"
 
-/obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
-	name = "Scorched Sierra power armor"
-	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
-	icon_state = "sierra"
-	item_state = "sierra"
-
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
@@ -436,11 +423,6 @@
 	item_state = "t60powerarmor"
 	slowdown = 0.2
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0, "wound" = 80)
-
-/obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple
-	name = "degraded T-60a power armor"
-	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal. This suit is heavily degraded." //reskin of head knight armor
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor"
@@ -1045,28 +1027,4 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 20, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10, "wound" = 45)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	slowdown = 0.05
-
-/obj/item/clothing/suit/f13/tribal/light/westernwayfarer
-	name = "Western Wayfarer salvaged armor"
-	desc = "A set of scrap and banded metal armor forged by the Wayfarer tribe, due to it's lightweight and unrestrictive nature,  it's used by scouts and agile hunters. A torn cloak hangs around its neck, protecting the user from the harsh desert sands."
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "western_wayfarer_armor"
-	item_state = "western_wayfarer_armor"
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	slowdown = 0.025
-
-/obj/item/clothing/suit/f13/tribal/heavy/westernwayfarer
-	name = "Western Wayfarer heavy armor"
-	desc = "A Suit of armor crafted by Tribals using pieces of scrap metals and the armor of fallen foes, a bighorner's skull sits on the right pauldron along with bighorner fur lining the collar of the leather bound chest. Along the leather straps adoring it are multiple bone charms with odd markings on them."
-	icon = 'icons/fallout/clothing/armored_heavy.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
-	icon_state = "western_wayfarer_armor_heavy"
-	item_state = "western_wayfarer_armor_heavy"
-	armor = list("melee" = 37, "bullet" = 40, "laser" = 25, "energy" = 20, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 	slowdown = 0.05

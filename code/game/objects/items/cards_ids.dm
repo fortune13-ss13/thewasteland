@@ -893,10 +893,10 @@
 
 
 /obj/item/card/id/dogtag/deputy
-	name = "officer's badge"
+	name = "deputy's badge"
 	desc = "A silver badge which shows honour and dedication."
 	assignment = "badge"
-	assignment = "Officer"
+	assignment = "Deputy"
 	icon_state = "deputy"
 	item_state = "badge-deputy"
 	access = list(ACCESS_BAR, ACCESS_GATEWAY)
@@ -911,9 +911,9 @@
 	return ..()
 
 /obj/item/card/id/dogtag/sheriff
-	name = "Chief of Police's badge"
-	desc = "A golden chief's badge."
-	assignment = "Chief of Police"
+	name = "sheriff's badge"
+	desc = "A golden Sheriff's badge."
+	assignment = "badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
 

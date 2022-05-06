@@ -249,15 +249,6 @@
 	armor = list("melee" = 70, "bullet" = 50, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0, "wound" = 50)
 	slowdown = 0.1
 
-// Daemon's Custom Veteran Armor
-/obj/item/clothing/suit/armor/f13/legion/heavy/daemon
-	name = "customized legion veteran decan armor"
-	desc = "A customized Decanus chest plate with the front of the heavy plated armored separating into a facade of metal scales."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "daemon_armor"
-	item_state = "daemon_armor"
-
 /obj/item/clothing/suit/armor/f13/legion/vet/explorer
 	name = "legion explorer armor"
 	desc = "Armor based on layered strips of laminated linen and leather, the technique giving it surprising resilience for low weight."
@@ -683,7 +674,8 @@
 	item_state = "police_chief"
 	armor = list("melee" = 45, "bullet" = 65, "laser" = 45,  "energy" = 35, "bomb" = 40, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 55)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/holdout
-	slowdown = 0.1  //CA statline
+	slowdown = 0.06  //bulletproof vest, but less weakness and more speed
+
 /obj/item/clothing/suit/armor/f13/town/chief/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
@@ -693,7 +685,7 @@
 	desc = "An armored trench coat with added shoulderpads, a chestplate, and legguards."
 	icon_state = "towntrench_medium"
 	armor = list("melee" = 45, "bullet" = 33, "laser" = 45,  "energy" = 35, "bomb" = 30, "bio" = 40, "rad" = 40, "fire" = 50, "acid" = 10, "wound" = 50)
-	slowdown = 0.08 //combat armor but less slowdown
+	slowdown = 0.1 //combat armor but less slowdown
 
 /obj/item/clothing/suit/armor/vest/oasis
 	name = "OPD vest"

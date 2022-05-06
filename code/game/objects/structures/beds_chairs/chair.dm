@@ -238,19 +238,6 @@
 /obj/structure/chair/comfy/shuttle/GetArmrest()
 	return mutable_appearance('icons/fallout/objects/furniture/chairs_and_beds.dmi', "shuttle_chair_armrest")
 
-/obj/structure/chair/comfy/modern
-	name = "modern chair"
-	desc = "the latest in pre-war chair technology."
-	icon_state = "synthetic_chair"
-	max_integrity = 250
-	buildstacktype = /obj/item/stack/sheet/prewar
-	buildstackamount = 2
-
-/obj/structure/chair/comfy/modern/GetArmrest()
-	return mutable_appearance('icons/fallout/objects/furniture/chairs_and_beds.dmi', "synthetic_chair_armrest")
-
-
-
 // Office chairs
 /obj/structure/chair/office
 	icon_state = "office_chair"
@@ -358,7 +345,7 @@
 	color = COLOR_TEAL
 
 /obj/structure/chair/comfy/black
-	color = COLOR_FLOORTILE_GRAY
+	color = COLOR_FLOORTILE_GRAY 
 
 /obj/structure/chair/comfy/green
 	color = COLOR_GREEN_GRAY
@@ -395,6 +382,7 @@
 	icon = 'icons/obj/chairs.dmi'
 	icon_state = "f13chair2"
 	item_chair = null
+
 
 //Stool
 

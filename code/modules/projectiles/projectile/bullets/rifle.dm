@@ -264,10 +264,14 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	name = "4.73mm shock bullet"
 	wound_bonus = 0
 	sharpness = SHARP_NONE
+	var/energy_damage = 4
 
 /obj/item/projectile/bullet/a473/shock/on_hit(atom/target, blocked = FALSE)
 	..()
-	target.emp_act(15)//5 severity is very, very low
+	target.emp_act(5)//5 severity is very, very low
+	if(blocked != 100 && isliving(target))
+		var/mob/living/L = target
+		L.electrocute_act(energy_damage, "shock bullet", 1, SHOCK_NOGLOVES | SHOCK_NOSTUN)
 
 /obj/item/projectile/bullet/a473/hv
 	name = "4.73mm highvelocity bullet"
@@ -295,10 +299,15 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	damage = -6 //about -30% damage
 	wound_bonus = 0
 	sharpness = SHARP_NONE
+	var/energy_damage = 5
 
 /obj/item/projectile/bullet/m5mm/shock/on_hit(atom/target, blocked = FALSE)
 	..()
-	target.emp_act(15)//5 severity is very, very low
+	target.emp_act(5)//5 severity is very, very low
+	if(blocked != 100 && isliving(target))
+		var/mob/living/L = target
+		L.electrocute_act(energy_damage, "shock bullet", 1, SHOCK_NOGLOVES | SHOCK_NOSTUN) //this might be spammy todo: check
+		//if it is, use O.take_damage(energy_damage, BURN, "energy", FALSE)
 
 //////////////////////////
 // 5 MM minigun special //
@@ -317,6 +326,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	damage = 0
 	armour_penetration = 0.9 //if only one bullet has built in AP, its this one
 	pixels_per_second = TILES_TO_PIXELS(100)
+
 
 /obj/item/projectile/bullet/c2mm/blender //welcome to pain town
 	name = "2mm blender projectile"
