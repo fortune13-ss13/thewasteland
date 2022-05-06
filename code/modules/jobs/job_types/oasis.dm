@@ -855,9 +855,6 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-
-
-
 /datum/job/oasis/f13assistant
 	title = "shop assistant"
 	flag = F13ASSIST
@@ -939,6 +936,15 @@ Mayor
 	outfit = /datum/outfit/job/den/f13shopkeeper
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+
+matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
 
 /datum/outfit/job/den/f13shopkeeper
 	name = "Shopkeeper"
