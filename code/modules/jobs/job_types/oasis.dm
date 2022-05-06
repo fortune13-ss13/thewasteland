@@ -215,7 +215,7 @@ Mayor
 
 /datum/job/oasis/f13sheriff
 	title = "Chief of Police"
-	flag = F13SHERIFF
+	flag = F13POLICECHIEF
 	department_flag = DEP_OASIS
 	head_announce = list("Security")
 	total_positions = 1
@@ -316,7 +316,7 @@ Mayor
 
 /datum/job/oasis/f13deputy
 	title = "Officer"
-	flag = F13DEPUTY
+	flag = F13OFFICER
 	department_flag = DEP_OASIS
 	total_positions = 5
 	spawn_positions = 5
