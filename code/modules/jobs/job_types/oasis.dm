@@ -910,7 +910,7 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-
+*/
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13shopkeeper
