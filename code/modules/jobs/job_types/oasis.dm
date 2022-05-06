@@ -316,7 +316,7 @@ Mayor
 
 /datum/job/oasis/f13deputy
 	title = "Officer"
-	flag = F13POLICEOFFICER
+	flag = F13POLICEMAN
 	department_flag = DEP_OASIS
 	total_positions = 5
 	spawn_positions = 5
