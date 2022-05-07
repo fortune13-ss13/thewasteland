@@ -748,7 +748,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/mayor
 	name = "Mayor"
 	icon_state = "Assistant"
-	
+
 /obj/effect/landmark/start/f13/secretary
 	name = "Secretary"
 	icon_state = "Lawyer"
@@ -780,7 +780,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/assistant
 	name = "F13assistant"
-	icon_state = "Banker"
+	icon_state = "Janitor"
 
 /obj/effect/landmark/start/f13/barkeep
 	name = "Barkeep"
