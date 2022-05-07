@@ -203,6 +203,38 @@
 	tools = list(TOOL_WORKBENCH)
 	subcategory = CAT_FARMING
 	category = CAT_MISC
+	
+/datum/crafting_recipe/tribaldispenser
+	name = "Primitive Chemical Dispenser Board"
+	result = /obj/item/circuitboard/machine/chem_dispenser/primitive
+	reqs = list(/obj/item/circuitboard/machine/chem_dispenser)
+	time = 15
+	subcategory = CAT_FARMING
+	category = CAT_MISC
+	
+/datum/crafting_recipe/tribalmanipulator
+	name = "Primitive Seed DNA Manipulator Board"
+	result = /obj/item/circuitboard/machine/plantgenes/primitive
+	reqs = list(/obj/item/circuitboard/machine/plantgenes)
+	time = 15
+	subcategory = CAT_FARMING
+	category = CAT_MISC
+	
+/datum/crafting_recipe/tribalheater
+	name = "Primitive Chemical Heater Board"
+	result = /obj/item/circuitboard/machine/chem_heater/primitive
+	reqs = list(/obj/item/circuitboard/machine/chem_heater)
+	time = 15
+	subcategory = CAT_FARMING
+	category = CAT_MISC
+	
+/datum/crafting_recipe/tribaldisk
+	name = "Primitive Seed DNA Vial"
+	result = /obj/item/disk/plantgene/primitive
+	reqs = list(/obj/item/disk/plantgene)
+	time = 5
+	subcategory = CAT_FARMING
+	category = CAT_MISC
 
 /datum/crafting_recipe/beartrap
 	name = "Bear trap"
