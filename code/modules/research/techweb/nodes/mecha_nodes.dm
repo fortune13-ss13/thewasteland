@@ -15,7 +15,7 @@
 	display_name = "Basic Exosuit Equipment"
 	description = "Various tools fit for basic mech units"
 	design_ids = list("mech_drill", "mech_mscanner", "mech_extinguisher", "mech_cable_layer", "mech_hydraulic_clamp")
-
+/*
 /datum/techweb_node/ripley
 	id = "mech_ripley"
 	display_name = "EXOSUIT: Ripley"
@@ -23,7 +23,7 @@
 	prereq_ids = list("mecha")
 	design_ids = list("ripley_chassis", "ripley_torso", "ripley_left_arm", "ripley_right_arm", "ripley_left_leg", "ripley_right_leg", "ripley_main", "ripley_peri")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+*/
 /datum/techweb_node/clarke
 	id = "mech_clarke"
 	display_name = "EXOSUIT: Clarke"
@@ -39,7 +39,7 @@
 	prereq_ids = list("mecha", "adv_robotics")
 	design_ids = list("mech_repair_droid")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+/*
 /datum/techweb_node/odysseus
 	id = "mecha_odysseus"
 	display_name = "EXOSUIT: Odysseus"
@@ -48,7 +48,7 @@
 	design_ids = list("odysseus_chassis", "odysseus_torso", "odysseus_head", "odysseus_left_arm", "odysseus_right_arm" ,"odysseus_left_leg", "odysseus_right_leg",
 	"odysseus_main", "odysseus_peri")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+*/
 /datum/techweb_node/gygax
 	id = "mech_gygax"
 	display_name = "EXOSUIT: Gygax"
@@ -62,7 +62,7 @@
 	id = "mech_medigax"
 	display_name = "EXOSUIT: Medical-Spec Gygax"
 	description = "Medical-Spec Gygax designs"
-	prereq_ids = list("mech_gygax", "mecha_odysseus")
+	prereq_ids = list("mech_gygax", "adv_biotech")
 	design_ids = list("medigax_chassis", "medigax_torso", "medigax_head", "medigax_left_arm", "medigax_right_arm", "medigax_left_leg", "medigax_right_leg", "medigax_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
