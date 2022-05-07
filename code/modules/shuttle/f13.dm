@@ -95,8 +95,8 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/machinery/computer/shuttle/enclaveelevator
-	name = "America's Bunker elevator controls"
-	desc = "Controls the elevator between the Bunker and Surface."
+	name = "US Army elevator controls"
+	desc = "Controls the elevator. Has lots of stars and stripes." 
 	icon_screen = "shuttle"
 	icon_keyboard = "tech_key"
 	light_color = LIGHT_COLOR_CYAN
