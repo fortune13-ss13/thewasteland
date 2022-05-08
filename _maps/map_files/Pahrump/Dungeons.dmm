@@ -24,6 +24,12 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
+"acG" = (
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "acN" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/indestructible/vaultdoor,
@@ -104,6 +110,10 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/followers)
+"ajG" = (
+/obj/structure/stone_tile/block,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "ajK" = (
 /obj/machinery/chem_dispenser,
 /turf/open/floor/f13{
@@ -1167,6 +1177,14 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/legion)
+"bxq" = (
+/mob/living/simple_animal/hostile/venus_human_trap{
+	faction = list("hostile","vines","plants","cazador");
+	aggro_vision_range = 12;
+	vision_range = 12
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "bxJ" = (
 /obj/structure/bed,
 /obj/effect/landmark/start/f13/followersdoctor,
@@ -1681,6 +1699,11 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/ncr)
+"cfH" = (
+/obj/structure/stone_tile/slab/cracked,
+/obj/structure/spider/stickyweb,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "cfS" = (
 /obj/structure/simple_door/bunker,
 /turf/open/floor/f13{
@@ -2534,6 +2557,9 @@
 /area/f13/bunker)
 "djG" = (
 /obj/structure/flora/junglebush/b,
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 4
+	},
 /turf/open/water,
 /area/f13/bunker)
 "djH" = (
@@ -3151,9 +3177,12 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker)
 "dNZ" = (
-/obj/structure/stone_tile/block,
-/mob/living/simple_animal/hostile/deathclaw/mother{
-	faction = list("cazador")
+/obj/structure/stone_tile/block/burnt{
+	dir = 8
+	},
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -3222,8 +3251,9 @@
 	},
 /area/f13/followers)
 "dRt" = (
-/obj/effect/decal/remains/human,
-/turf/closed/mineral/random/low_chance,
+/obj/structure/stone_tile/center/burnt,
+/obj/item/reagent_containers/pill/patch/bitterdrink,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
 "dRx" = (
 /obj/item/flag/ncr,
@@ -3634,6 +3664,13 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/f13/followers)
+"emH" = (
+/obj/structure/flora/grass/jungle/b,
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 8
+	},
+/turf/open/water,
+/area/f13/bunker)
 "emN" = (
 /obj/item/candle/tribal_torch,
 /turf/open/indestructible/ground/outside/dirt{
@@ -3669,6 +3706,14 @@
 	},
 /turf/open/floor/holofloor/carpet,
 /area/f13/legion)
+"eoz" = (
+/obj/structure/stone_tile/surrounding/cracked,
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "eoP" = (
 /obj/machinery/door/airlock/security/glass{
 	max_integrity = 9999;
@@ -4045,7 +4090,13 @@
 /turf/open/floor/f13/wood,
 /area/f13/underground/cave)
 "eGJ" = (
-/obj/structure/stone_tile/block/burnt,
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+	},
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
 "eHG" = (
@@ -4184,6 +4235,13 @@
 	icon_state = "mountain2"
 	},
 /area/f13/bunker)
+"eSp" = (
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 8
+	},
+/obj/item/hemostat/tribal,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "eSU" = (
 /obj/machinery/workbench,
 /obj/item/stack/sheet/metal/fifty,
@@ -4519,6 +4577,14 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/bunker)
+"foH" = (
+/mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper{
+	health = 200;
+	name = "temple spider";
+	faction = list("cazador")
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "fpa" = (
 /obj/structure/timeddoor,
 /turf/open/floor/plating/tunnel,
@@ -4900,6 +4966,11 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
+"fPW" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/mask/facehugger/toy,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "fQq" = (
 /turf/open/indestructible/ground/outside/ruins{
 	dir = 1;
@@ -4944,9 +5015,13 @@
 /turf/open/floor/holofloor/carpet,
 /area/f13/legion)
 "fRV" = (
-/obj/structure/destructible/tribal_torch/lit,
+/mob/living/simple_animal/hostile/poison/giant_spider/nurse/ice{
+	health = 250;
+	name = "giant temple spider";
+	faction = list("cazador")
+	},
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/bunker)
+/area/f13/underground/cave)
 "fSw" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor6-old"
@@ -5249,6 +5324,11 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/bunker)
+"glo" = (
+/obj/structure/stone_tile/slab,
+/obj/item/reagent_containers/pill/patch/bitterdrink,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "glz" = (
 /obj/structure/flora/wasteplant/wild_xander,
 /turf/open/indestructible/ground/outside/desert,
@@ -6183,6 +6263,16 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/legion)
+"hvN" = (
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/obj/structure/stone_tile/block/burnt{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "hwh" = (
 /obj/structure/chair{
 	dir = 4
@@ -7462,7 +7552,9 @@
 /area/f13/bunker)
 "jhY" = (
 /obj/structure/stone_tile/slab,
-/obj/item/candle/tribal_torch,
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 4
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "jih" = (
@@ -8013,6 +8105,10 @@
 	icon_state = "tunnelchess2"
 	},
 /area/f13/bunker)
+"jKd" = (
+/obj/structure/stone_tile/surrounding/cracked,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "jKm" = (
 /obj/structure/table/wood/settler,
 /obj/item/kitchen/knife,
@@ -8317,6 +8413,11 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+/area/f13/bunker)
+"kdq" = (
+/obj/structure/stone_tile/block/burnt,
+/obj/item/candle/infinite/hugbox,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "kej" = (
 /obj/machinery/door/airlock/hatch,
@@ -8866,6 +8967,17 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/bunker)
+"kOd" = (
+/obj/structure/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/mob/living/simple_animal/hostile/poison/giant_spider/nurse/midwife{
+	health = 300;
+	name = "giant midwife temple spider";
+	faction = list("cazador")
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "kOP" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/mineral/gold{
@@ -8905,6 +9017,17 @@
 "kQb" = (
 /turf/closed/indestructible/f13/matrix,
 /area/f13/followers)
+"kQm" = (
+/mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper{
+	health = 200;
+	name = "temple spider";
+	faction = list("cazador")
+	},
+/obj/structure/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "kRA" = (
 /obj/structure/table/wood/settler,
 /turf/open/indestructible/ground/outside/dirt{
@@ -9509,6 +9632,12 @@
 /obj/structure/tires/five,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
+"lzo" = (
+/obj/structure/stone_tile/surrounding_tile/burnt{
+	dir = 4
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "lzU" = (
 /obj/structure/chair/office/light{
 	dir = 1
@@ -10166,6 +10295,13 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/carpet/green,
 /area/f13/underground/cave)
+"miM" = (
+/obj/structure/stone_tile/block/burnt{
+	dir = 8
+	},
+/obj/item/reagent_containers/pill/patch/bitterdrink,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "mjV" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor7-old"
@@ -10386,6 +10522,11 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/bunker)
+"mzb" = (
+/obj/structure/stone_tile/block/burnt,
+/obj/structure/spider/stickyweb,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "mzy" = (
 /obj/structure/safe/floor,
 /turf/open/floor/f13/wood,
@@ -10454,7 +10595,9 @@
 /area/f13/bunker)
 "mCu" = (
 /obj/structure/stone_tile/block/burnt,
-/obj/item/candle/tribal_torch,
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 8
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "mCx" = (
@@ -10531,6 +10674,10 @@
 "mFX" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /turf/open/floor/carpet/green,
+/area/f13/underground/cave)
+"mGc" = (
+/obj/structure/spider/stickyweb,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
 "mGi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10846,6 +10993,14 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/followers)
+"mYC" = (
+/mob/living/simple_animal/hostile/poison/giant_spider/nurse/midwife{
+	health = 300;
+	name = "giant midwife temple spider";
+	faction = list("cazador")
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "mZm" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor1-old"
@@ -11006,9 +11161,34 @@
 	icon_state = "dark"
 	},
 /area/f13/ncr)
+"nmG" = (
+/obj/structure/stone_tile/slab/cracked,
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/obj/structure/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "nmQ" = (
 /turf/closed/indestructible/wood,
 /area/f13/city)
+"nnl" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 4
+	},
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/obj/item/retractor/tribal,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "nnF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11666,6 +11846,11 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
+"ogc" = (
+/obj/structure/stone_tile/surrounding,
+/obj/item/clothing/mask/facehugger/dead,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "ogw" = (
 /obj/structure/debris/v3,
 /obj/structure/spider/stickyweb,
@@ -11855,6 +12040,13 @@
 "oqm" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /turf/open/floor/plating/tunnel,
+/area/f13/bunker)
+"oqu" = (
+/obj/structure/flora/grass/jungle/b,
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 4
+	},
+/turf/open/water,
 /area/f13/bunker)
 "oqD" = (
 /obj/effect/decal/cleanable/blood/old{
@@ -12588,6 +12780,14 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
+"phq" = (
+/obj/structure/stone_tile/surrounding/cracked,
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "phB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/dresser,
@@ -12651,6 +12851,11 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
 	},
+/area/f13/bunker)
+"pkp" = (
+/obj/structure/stone_tile/block/burnt,
+/obj/item/clothing/mask/rat/tribal,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "pkU" = (
 /obj/structure/table,
@@ -12986,6 +13191,16 @@
 /area/f13/underground/cave)
 "pGE" = (
 /obj/item/flag/bos,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
+"pGH" = (
+/obj/structure/stone_tile/block/burnt{
+	dir = 4
+	},
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
 "pHl" = (
@@ -13458,9 +13673,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/bunker)
 "qgr" = (
-/obj/structure/stone_tile/slab/cracked,
-/mob/living/simple_animal/hostile/deathclaw/mother{
-	faction = list("cazador")
+/obj/structure/stone_tile/slab/cracked{
+	dir = 1
+	},
+/mob/living/simple_animal/hostile/deathclaw/power_armor{
+	faction = list("cazador");
+	aggro_vision_range = 30;
+	vision_range = 30;
+	name = "power armored genetically altered deathclaw";
+	melee_damage_lower = 80;
+	desc = "A massive, reptillian creature with powerful muscles, razor-sharp claws, and aggression to match. This one in particular has power armor and seems to have a much of an aggression tone, this seems to be more an alpha deathclaw rather than a legendary. Some tribals would consider this an razorclaw to many ways"
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -13802,6 +14024,17 @@
 /obj/structure/nest/ghoul,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"qxa" = (
+/obj/structure/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper{
+	health = 200;
+	name = "temple spider";
+	faction = list("cazador")
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "qxb" = (
 /turf/open/floor/wood/wood_tiled,
 /area/f13/followers)
@@ -14008,6 +14241,17 @@
 /obj/item/trash/f13/cram_large,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
+"qHs" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 4
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
+"qHx" = (
+/obj/structure/stone_tile/block/burnt,
+/obj/item/reagent_containers/pill/patch/bitterdrink,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "qHD" = (
 /obj/structure/rack,
 /obj/item/assembly/signaler,
@@ -14149,6 +14393,10 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "yellowdirtysolid"
 	},
+/area/f13/bunker)
+"qRG" = (
+/obj/structure/spider/stickyweb,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "qTX" = (
 /turf/open/floor/f13/wood{
@@ -14424,6 +14672,10 @@
 /obj/structure/punching_bag,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
+"rib" = (
+/obj/item/candle/infinite/hugbox,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "rim" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -14451,7 +14703,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
 "rjt" = (
-/obj/structure/stone_tile/slab,
+/obj/structure/stone_tile/burnt{
+	dir = 1
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
 "rjG" = (
@@ -14623,6 +14877,17 @@
 /obj/structure/flora/tree/joshua,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
+"rrs" = (
+/mob/living/simple_animal/hostile/venus_human_trap{
+	faction = list("hostile","vines","plants","cazador");
+	aggro_vision_range = 12;
+	vision_range = 12
+	},
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "rrM" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom2left"
@@ -14980,6 +15245,20 @@
 	},
 /turf/open/floor/wood/f13/old,
 /area/f13/city)
+"rKo" = (
+/obj/structure/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
+"rLa" = (
+/obj/structure/stone_tile/slab,
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "rLw" = (
 /obj/structure/closet/wardrobe,
 /obj/item/clothing/under/f13/vault{
@@ -15041,6 +15320,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/decoration/rag,
 /turf/closed/wall/r_wall/rust,
+/area/f13/bunker)
+"rPb" = (
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 4
+	},
+/turf/open/water,
 /area/f13/bunker)
 "rPD" = (
 /turf/open/floor/f13{
@@ -15493,6 +15778,14 @@
 /obj/item/stack/sheet/mineral/wood/five,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/wasteland)
+"slA" = (
+/obj/structure/stone_tile/surrounding,
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "slU" = (
 /obj/machinery/workbench,
 /turf/open/floor/f13/wood,
@@ -15539,6 +15832,14 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
+"soG" = (
+/obj/structure/stone_tile/surrounding/burnt,
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "soH" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor6-old"
@@ -15830,6 +16131,13 @@
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess"
 	},
+/area/f13/bunker)
+"sJK" = (
+/obj/structure/flora/grass/jungle,
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 8
+	},
+/turf/open/water,
 /area/f13/bunker)
 "sJQ" = (
 /obj/effect/decal/cleanable/blood/old{
@@ -16271,6 +16579,12 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/followers)
+"tlN" = (
+/obj/structure/statue/bone/rib{
+	dir = 1
+	},
+/turf/open/water,
+/area/f13/bunker)
 "tmq" = (
 /obj/structure/debris/v3,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -16424,6 +16738,13 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
+"twV" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "txb" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /turf/open/indestructible/ground/inside/mountain,
@@ -16885,6 +17206,10 @@
 	icon_state = "housewood2"
 	},
 /area/f13/underground/cave)
+"uaq" = (
+/obj/structure/statue/bone/rib,
+/turf/open/water,
+/area/f13/bunker)
 "ubr" = (
 /obj/effect/decal/cleanable/blood/old,
 /mob/living/simple_animal/hostile/molerat,
@@ -17672,6 +17997,10 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/wasteland)
+"vdZ" = (
+/obj/item/clothing/mask/frog,
+/turf/open/water,
+/area/f13/bunker)
 "veh" = (
 /obj/structure/flora/junglebush,
 /turf/open/water,
@@ -17911,6 +18240,15 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
+"vqL" = (
+/obj/structure/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
 "vqY" = (
 /obj/structure/chair/bench,
 /obj/item/clothing/under/f13/vault{
@@ -17925,6 +18263,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/bunker)
+"vrh" = (
+/obj/structure/stone_tile/slab/cracked,
+/obj/structure/punji_sticks{
+	color = "#4E4943";
+	max_integrity = 200
+	},
+/obj/structure/stone_tile/block/burnt{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "vrx" = (
 /obj/structure/car/rubbish4,
 /turf/open/water,
@@ -18380,6 +18729,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
+"vYC" = (
+/obj/structure/stone_tile/surrounding_tile,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "vYK" = (
 /obj/structure/table/wood/poker,
 /obj/effect/decal/cleanable/dirt,
@@ -18516,6 +18869,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/bunker)
+"whx" = (
+/obj/structure/barricade/wooden/strong,
+/turf/closed/indestructible/riveted/boss{
+	name = "temple wall"
+	},
+/area/f13/underground/cave)
 "wip" = (
 /obj/structure/closet,
 /mob/living/simple_animal/hostile/ghoul,
@@ -18917,6 +19276,17 @@
 	},
 /turf/open/floor/carpet/green,
 /area/f13/underground/cave)
+"wMm" = (
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/mob/living/simple_animal/hostile/venus_human_trap{
+	faction = list("hostile","vines","plants","cazador");
+	aggro_vision_range = 12;
+	vision_range = 12
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/underground/cave)
 "wNj" = (
 /obj/structure/car/rubbish2,
 /obj/structure/tires/two,
@@ -19067,6 +19437,12 @@
 /obj/machinery/light,
 /turf/open/floor/wood/f13/old,
 /area/f13/city)
+"wWi" = (
+/obj/structure/destructible/tribal_torch/wall{
+	dir = 8
+	},
+/turf/open/water,
+/area/f13/bunker)
 "wWq" = (
 /obj/structure/barricade/bars,
 /obj/effect/spawner/structure/window/reinforced,
@@ -74836,9 +75212,9 @@ bkV
 bkV
 bkV
 kzC
-axj
-uEo
-cXI
+emH
+tlN
+sJK
 nUv
 bkV
 bkV
@@ -75096,14 +75472,14 @@ fFh
 reW
 bOn
 nMR
-fRV
-bkV
-bkV
-bkV
-bkV
-bkV
+tHQ
+tlN
+vdZ
+tlN
+wWi
+tlN
 heT
-bkV
+nUv
 heT
 heT
 heT
@@ -75353,24 +75729,24 @@ daX
 reW
 nuJ
 uLK
-tHQ
+fPW
 utX
-nMR
+cfH
+rib
+nmG
 bYA
 bYA
 bYA
+qxa
+twV
+mGc
+foH
+mGc
 bYA
 bYA
 bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
+acG
+rrs
 heT
 heT
 heT
@@ -75612,22 +75988,22 @@ uLK
 uLK
 tCf
 sLK
-reW
+mzb
 tHQ
+slA
+qRG
 bYA
 bYA
 bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
+rKo
+acG
+mGc
+wPz
 wxj
 bYA
 wxj
 wxj
-bYA
+acG
 heT
 heT
 heT
@@ -75867,24 +76243,24 @@ pjq
 uLK
 nMR
 daX
-reW
-daX
+pkp
+ogc
 fFh
+nMR
+vqL
+pjq
+eoz
+whx
 bYA
 bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
+kQm
+wPz
+mGc
 wxj
 bYA
 wxj
 wxj
-wxj
+wPz
 heT
 heT
 heT
@@ -76123,25 +76499,25 @@ jhY
 nMR
 tCf
 uLK
-reW
-fRV
-bkV
-bkV
-bkV
-heT
-bYA
-bYA
-wxj
-wxj
-wxj
-bYA
+kdq
+tHQ
+uaq
+adL
+uaq
+rPb
+uaq
 mpp
-bYA
-bYA
-bYA
-wxj
-wxj
-wxj
+mpp
+heT
+heT
+heT
+mpp
+heT
+heT
+heT
+heT
+bxq
+acG
 heT
 heT
 heT
@@ -76379,26 +76755,26 @@ bkV
 bkV
 sgN
 djG
-uEo
-axj
+uaq
+oqu
 nUv
 bkV
 heT
 heT
 mpp
-bYA
-bYA
-wxj
-wxj
-wxj
-bYA
-bYA
-bYA
-bYA
-bYA
-wxj
-wxj
-wxj
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+acG
+wPz
 heT
 heT
 heT
@@ -76648,14 +77024,14 @@ bYA
 wxj
 wxj
 wxj
-bYA
-bYA
+fRV
+mGc
 bYA
 bYA
 bYA
 wxj
 wxj
-bYA
+acG
 heT
 heT
 heT
@@ -76905,14 +77281,14 @@ bYA
 wxj
 wxj
 wxj
-bYA
-bYA
+rKo
+fRV
 bYA
 dmp
 bYA
 bYA
-bYA
-bYA
+acG
+wMm
 heT
 heT
 heT
@@ -77157,19 +77533,19 @@ bYA
 wxj
 bYA
 wxj
-wxj
-bYA
-wxj
-wxj
-wxj
-wxj
-wxj
-bYA
-wxj
-bYA
-bYA
-bYA
-bYA
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+mpp
+heT
+heT
+heT
+heT
+heT
 heT
 heT
 heT
@@ -77413,20 +77789,20 @@ bYA
 bYA
 bYA
 bYA
-wxj
-wxj
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
-dRt
-wxj
-bYA
 mpp
-bYA
-bYA
+heT
+heT
+heT
+mpp
+heT
+heT
+heT
+xwF
+heT
+heT
+mpp
+heT
+heT
 heT
 heT
 heT
@@ -77669,21 +78045,21 @@ bYA
 bYA
 bYA
 bYA
-bYA
-wxj
-wxj
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
-bYA
-wxj
+heT
+heT
+heT
 bYA
 bYA
 wxj
 wxj
+wxj
+wxj
+bYA
+wxj
+wMm
+acG
+acG
+wPz
 heT
 heT
 heT
@@ -77920,27 +78296,27 @@ heT
 heT
 bYA
 wxj
-wxj
-bYA
-wxj
-wxj
-wxj
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
-bYA
+heT
+heT
+heT
+heT
+mpp
+heT
+heT
+heT
 bYA
 bYA
 bYA
 wxj
 wxj
+wxj
+wxj
+bYA
+bYA
+acG
+acG
+wPz
+acG
 heT
 heT
 heT
@@ -78177,27 +78553,27 @@ heT
 heT
 bYA
 bYA
+heT
+mpp
+heT
+heT
+heT
+heT
+heT
+mGc
+wPz
 bYA
-bYA
-wxj
-wxj
-wxj
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+acG
+wPz
 heT
 heT
 heT
@@ -78439,22 +78815,22 @@ bYA
 wxj
 wxj
 wxj
+mGc
+wPz
+mYC
+rKo
+heT
+heT
+wxj
+wxj
+wxj
+wxj
 bYA
 bYA
-mpp
-bYA
 wxj
-bYA
+heT
 wxj
-wxj
-wxj
-wxj
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
+wMm
 heT
 heT
 heT
@@ -78696,12 +79072,12 @@ wxj
 wxj
 wxj
 wxj
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
+mYC
+mGc
+rKo
+heT
+heT
+heT
 wxj
 wxj
 wxj
@@ -78709,7 +79085,7 @@ wxj
 bYA
 bYA
 wxj
-wxj
+heT
 wxj
 wxj
 heT
@@ -78946,27 +79322,27 @@ heT
 heT
 heT
 heT
+mpp
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+rKo
+heT
+wxj
+wxj
+mpp
+heT
+heT
 bYA
 wxj
-wxj
-wxj
-wxj
-wxj
-wxj
-wxj
-wxj
-bYA
-bYA
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
-bYA
-bYA
-wxj
-wxj
+mpp
 wxj
 wxj
 heT
@@ -79203,27 +79579,27 @@ heT
 heT
 heT
 heT
-bYA
-wxj
-wxj
-wxj
-wxj
-wxj
-wxj
-wxj
-wxj
-bYA
-bYA
-wxj
-wxj
-wxj
-bYA
+heT
+heT
+heT
+mpp
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+kOd
+heT
 bYA
 bYA
-bYA
+acG
+wMm
+heT
 bYA
 wxj
-wxj
+heT
 wxj
 wxj
 heT
@@ -79461,10 +79837,10 @@ heT
 heT
 heT
 bYA
-wxj
-wxj
-wxj
-wxj
+bYA
+bYA
+bYA
+bYA
 wxj
 wxj
 wxj
@@ -79472,12 +79848,12 @@ wxj
 bYA
 bYA
 wxj
-wxj
-wxj
-bYA
-bYA
-bYA
-bYA
+heT
+heT
+heT
+heT
+acG
+heT
 bYA
 bYA
 bYA
@@ -79719,22 +80095,22 @@ heT
 heT
 bYA
 bYA
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
 bYA
 bYA
 bYA
-wxj
-wxj
-wxj
-wxj
-bYA
-bYA
-wxj
-wxj
-wxj
 bYA
 bYA
 bYA
-bYA
+heT
 bYA
 bYA
 wxj
@@ -79982,21 +80358,21 @@ bYA
 wxj
 wxj
 wxj
-wxj
+heT
 bYA
-bYA
-wxj
-wxj
-wxj
-wxj
-wxj
-bYA
-bYA
-bYA
-bYA
-wxj
-wxj
-wxj
+heT
+heT
+heT
+heT
+mpp
+heT
+heT
+heT
+heT
+heT
+heT
+heT
+heT
 heT
 heT
 heT
@@ -80232,32 +80608,32 @@ heT
 heT
 heT
 bYA
-wxj
-wxj
+bYA
+heT
 bYA
 bYA
 wxj
 wxj
 bYA
-bYA
+heT
 bYA
 bYA
 bYA
 wxj
 wxj
 wxj
+heT
+heT
+heT
+heT
+heT
 wxj
-qbS
-rjt
+wxj
 mpp
-bYA
+hvN
+miM
+mpp
 wxj
-wxj
-wxj
-heT
-heT
-heT
-heT
 heT
 heT
 "}
@@ -80489,32 +80865,32 @@ heT
 heT
 heT
 bYA
+bYA
+heT
+bYA
+bYA
+heT
+wxj
+bYA
+heT
+bYA
+bYA
+bYA
 wxj
 wxj
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-wxj
-wxj
-wxj
-wxj
+lzo
+phq
 qgr
-haa
+lzo
 dNZ
-bYA
+eSp
+rLa
+dRt
+jKd
+vrh
+haa
+ajG
 wxj
-wxj
-wxj
-heT
-heT
-heT
-heT
 heT
 heT
 "}
@@ -80746,32 +81122,32 @@ heT
 heT
 heT
 bYA
+bYA
+mpp
+bYA
+bYA
+heT
 wxj
+bYA
+heT
 wxj
 bYA
 bYA
-bYA
-bYA
 wxj
 wxj
-wxj
-wxj
-bYA
-wxj
-wxj
-wxj
-wxj
-qbS
-ewf
+rjt
+pGH
+qHs
+rjt
 eGJ
-bYA
+vYC
+qbS
+soG
+qbS
+vrh
+ewf
+qHx
 wxj
-wxj
-wxj
-heT
-heT
-heT
-heT
 heT
 heT
 "}
@@ -81007,28 +81383,28 @@ bYA
 bYA
 bYA
 bYA
+heT
 bYA
 bYA
 bYA
 bYA
 bYA
 bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
+wxj
+wxj
+wxj
 heT
 heT
 heT
 heT
+heT
+wxj
+wxj
+mpp
+nnl
+glo
+mpp
+bYA
 heT
 heT
 "}
