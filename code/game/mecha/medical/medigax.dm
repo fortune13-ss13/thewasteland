@@ -5,7 +5,7 @@
 	step_in = 1.75 // a little faster than an odysseus
 	max_temperature = 25000
 	max_integrity = 350
-	wreckage = /obj/structure/mecha_wreckage/odysseus
+	wreckage = /obj/structure/mecha_wreckage/medigax
 	armor = list("melee" = 25, "bullet" = 20, "laser" = 25, "energy" = 15, "bomb" = 20, "bio" = 0, "rad" = 100, "fire" = 100, "acid" = 100)
 	internal_damage_threshold = 30
 	step_energy_drain = 30
