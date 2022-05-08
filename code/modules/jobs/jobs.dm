@@ -214,6 +214,8 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 ))
 
 GLOBAL_LIST_INIT(vault_positions, list(
+	"Overseer",
+	"Chief of Security",
 	"Vault-tec Doctor",
 	"Vault-tec Scientist",
 	"Vault-tec Security",

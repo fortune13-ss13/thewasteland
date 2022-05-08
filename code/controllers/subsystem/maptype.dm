@@ -17,4 +17,5 @@ SUBSYSTEM_DEF(maptype)
 	//The faction tag is unused currently, but the map might break without it
 
 	//All the map tags that delete all jobs and replace them with others.
-	var/list/clearmaps = list("kepler-ice", "syndicate", "blacksite")
+	var/list/clearmaps = list()
+
