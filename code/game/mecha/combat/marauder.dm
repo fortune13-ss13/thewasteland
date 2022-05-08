@@ -12,11 +12,11 @@
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 40, "energy" = 30, "bomb" = 60, "bio" = 0, "rad" = 75, "fire" = 100, "acid" = 100)
 	max_temperature = 60000
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	infra_luminosity = 6
+	infra_luminosity = 3
 	wreckage = /obj/structure/mecha_wreckage/marauder
-	internal_damage_threshold = 25
+	internal_damage_threshold = 10
 	step_energy_drain = 60
-	force = 45 // Just don't go near that thing, or do, it can't strafe.
+	force = 40 // Just don't go near that thing, or do, it can't strafe.
 	canstrafe = FALSE
 
 /obj/mecha/combat/marauder/GrantActions(mob/living/user, human_occupant = 0)

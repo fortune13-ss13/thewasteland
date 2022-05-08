@@ -10,13 +10,13 @@
 	step_in = 4
 	dir_in = 1 //Facing North.
 	max_integrity = 600
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 25, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 75, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 75, "fire" = 100, "acid" = 100)
 	max_temperature = 30000
-	infra_luminosity = 6
-	force = 35
+	infra_luminosity = 8
+	force = 30
 	canstrafe = TRUE
 	step_energy_drain = 40
-	internal_damage_threshold = 25
+	internal_damage_threshold = 20
 	wreckage = /obj/structure/mecha_wreckage/durand
 
 	var/obj/durand_shield/shield
