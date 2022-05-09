@@ -588,14 +588,12 @@ Raider
 							/obj/item/smelling_salts=1,
 							/obj/item/healthanalyzer=1,
 							/obj/item/gun/ballistic/automatic/pistol/m1911=1,
-							/obj/item/lighter=1,
-							/obj/item/screwdriver=1,
-							/obj/item/wirecutters=1,
+							/obj/item/reagent_containers/glass/bottle/epinephrine=2,
 							/obj/item/storage/backpack/duffelbag/med/surgery=1,
 							/obj/item/paper_bin=1,
 							/obj/item/folder=1,
 							/obj/item/pen/fountain=1,
-							/obj/item/storage/firstaid/ancient = 1,
+							/obj/item/storage/firstaid/ancient=1,
 		)
 
 /datum/outfit/loadout/merchant
