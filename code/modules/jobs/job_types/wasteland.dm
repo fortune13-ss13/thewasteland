@@ -582,14 +582,11 @@ Raider
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/color/latex
-	neck = /obj/item/bedsheet/medical
+	neck = /obj/item/clothing/neck/stethoscope
 	belt = /obj/item/storage/belt/medical
 	backpack_contents =  list(/obj/item/reagent_containers/medspray/synthflesh=2,
-							/obj/item/stack/medical/suture/emergency/fifteen=1,
-							/obj/item/stack/medical/ointment/twelve=1,
 							/obj/item/smelling_salts=1,
 							/obj/item/healthanalyzer=1,
-							/obj/item/stack/sheet/mineral/silver=1,
 							/obj/item/gun/ballistic/automatic/pistol/m1911=1,
 							/obj/item/lighter=1,
 							/obj/item/screwdriver=1,
@@ -599,17 +596,7 @@ Raider
 							/obj/item/folder=1,
 							/obj/item/pen/fountain=1,
 							/obj/item/storage/firstaid/ancient = 1,
-							/obj/item/hatchet=1
 		)
-
-/datum/outfit/loadout/medic/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
