@@ -102,9 +102,7 @@
 /datum/crafting_recipe/metalarmor/polish
 	name = "Polished Metal Armor"
 	result = /obj/item/clothing/suit/armor/f13/metalarmor/laserproof
-	reqs = list(/obj/item/clothing/suit/armor/f13/metalarmor = 1,
-				/obj/item/crafting/abraxo,
-				)
+	reqs = list(/obj/item/clothing/suit/armor/f13/metalarmor = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
@@ -168,8 +166,8 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/ncrsalvagedarmorconversion
 	name = "Salvaged NCR Power Armor"
-	result = /obj/item/clothing/suit/armor/f13/power_armor/t45b/ncr
-	reqs = list(/obj/item/clothing/suit/armor/f13/power_armor/t45b = 1,
+	result = /obj/item/clothing/suit/armored/heavy/salvaged_t45b/ncr
+	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_t45b = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
@@ -178,8 +176,8 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/ncrsalvagedhelmetconversion
 	name = "NCR salvaged T-45b helmet"
-	result = /obj/item/clothing/head/helmet/f13/power_armor/ncr_t45b
-	reqs = list(/obj/item/clothing/head/helmet/f13/power_armor/t45b = 1,
+	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_t45b/ncr
+	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_t45b = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 20
 	category = CAT_CLOTHING
@@ -288,7 +286,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/legionsalvaged_ncr
 	name = "Shred salvaged power armor for armor plates"
 	result = /obj/item/stack/crafting/armor_plate/twenty
-	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_NCR = 1,)
+	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_t45b = 1,)
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
@@ -297,7 +295,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/legionsalvaged_salvaged
 	name = "Shred salvaged power armor helmet for armor plates"
 	result = /obj/item/stack/crafting/armor_plate/twenty
-	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_t45 = 1,)
+	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_t45b = 1,)
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
@@ -360,7 +358,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/ncrsalvaged_salvaged
 	name = "Shred salvaged power armor for armor plates"
 	result = /obj/item/stack/crafting/armor_plate/twenty
-	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_t45 = 1,)
+	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_t45b = 1,)
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR

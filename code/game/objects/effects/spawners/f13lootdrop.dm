@@ -376,17 +376,17 @@
 /obj/effect/spawner/lootdrop/f13/armor/tier4 //TIER 4 ARMOR
 	name = "tier 4 armor"
 	loot = list(
-				/obj/effect/spawner/bundle/f13/armor/t45b,
+				/obj/effect/spawner/bundle/f13/armor/t45b_salvaged,
 				/obj/effect/spawner/bundle/f13/armor/riot,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark
 				)
 
-/obj/effect/spawner/bundle/f13/armor/t45b
-	name = "t45b power armor spawner"
+/obj/effect/spawner/bundle/f13/armor/t45b_salvaged
+	name = "salvaged t45b power armor spawner"
 	items = list(
-				/obj/item/clothing/head/helmet/f13/power_armor/t45b,
-				/obj/item/clothing/suit/armor/f13/power_armor/t45b
+				/obj/item/clothing/suit/armored/heavy/salvaged_t45b,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_t45b
 				)
 
 /obj/effect/spawner/bundle/f13/armor/riot
@@ -420,15 +420,15 @@
 /obj/effect/spawner/bundle/f13/armor/raiderpa
 	name = "raider power armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/f13/power_armor/raiderpa,
-				/obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
+				/obj/item/clothing/suit/armored/heavy/salvaged_t45b/raider,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_t45b/raider
 				)
 
 /obj/effect/spawner/bundle/f13/armor/hotrodpa
 	name = "hotrod power armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/f13/power_armor/hotrod,
-				/obj/item/clothing/head/helmet/f13/power_armor/hotrod
+				/obj/item/clothing/suit/armored/heavy/salvaged_t45b/hotrod,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_t45b/hotrod
 				)
 
 
@@ -1841,10 +1841,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/stack/crafting/goodparts/five,
 				/obj/item/stack/crafting/electronicparts/three,
 				/obj/item/stack/crafting/electronicparts/five,
-				/obj/item/reagent_containers/glass/bottle/blackpowder,
-				/obj/item/assembly/timer,
-				/obj/item/crafting/wonderglue,
-				/obj/item/crafting/duct_tape)
+				/obj/item/reagent_containers/glass/bottle/blackpowder)
 
 /obj/effect/spawner/lootdrop/f13/crafting/Initialize(mapload) //on mapload, pick how many shit to spawn
 	lootcount = pick(1, 2)
