@@ -243,7 +243,9 @@
 	slowdown = 0.05
 	item_state = "combat_armor_raider"
 
-//Power armors, including salvaged and faction
+/////////////////
+// Power armor //
+/////////////////
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
@@ -270,6 +272,8 @@
 	var/no_power = FALSE
 	/// How much slowdown is added when suit is unpowered
 	var/unpowered_slowdown = 1.2
+	/// Projectiles below this damage will get deflected
+	var/deflect_damage = 18
 	/// If TRUE - it requires PA training trait to be worn
 	var/requires_training = TRUE
 	/// If TRUE - the suit will give its user specific traits when worn
@@ -409,55 +413,19 @@
 		L.update_equipment_speed_mods()
 
 /obj/item/clothing/suit/armor/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
-	if(def_zone in protected_zones)
-		if(prob(70) && (damage < 18) && (armour_penetration < 0.15)) // Weak projectiles like shrapnel get deflected
+	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+		if(prob(70) && (damage < deflect_damage)) // Weak projectiles like shrapnel get deflected
+			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
-	name = "salvaged T-45b power armor"
-	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
-	icon_state = "t45bpowerarmor"
-	item_state = "t45bpowerarmor"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 65)
-	slowdown = 1.2
-	powered = FALSE
-	requires_training = FALSE
-
-/obj/item/clothing/suit/armor/f13/power_armor/t45b/restored
-	name = "restored T-45b power armor"
+	name = "T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
 	requires_training = TRUE
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 65)
 	powered = TRUE
-	slowdown = 0.3
-
-/obj/item/clothing/suit/armor/f13/power_armor/t45b/ncr
-	name = "salvaged NCR power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, it however lacks servomotors to enhance the users strength. This one has brown paint trimmed along the edge and a two headed bear painted onto the chestplate."
-	icon_state = "ncrpowerarmor"
-	item_state = "ncrpowerarmor"
-	slowdown = 1.0
-
-/obj/item/clothing/suit/armor/f13/power_armor/raiderpa
-	name = "raider T-45b power armor"
-	desc = "An attempt by raider engineers to duplicate power armor. They failed miserably, but it is still pretty tough"
-	icon_state = "raiderpa"
-	item_state = "raiderpa"
-	armor = list("melee" = 65, "bullet" = 55, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 65)
-	slowdown = 1.0
-	powered = FALSE
-	requires_training = FALSE
-
-/obj/item/clothing/suit/armor/f13/power_armor/hotrod
-	name = "hotrod T-45b power armor"
-	desc = " It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
-	icon_state = "t45hotrod"
-	item_state = "t45hotrod"
-	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 70)
-	slowdown = 1.0
-	requires_training = FALSE
-	powered = FALSE
+	slowdown = 0.4
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
@@ -507,7 +475,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
-	slowdown = 0.25 //+0.05 from helmet = total 0.2
+	slowdown = 0.25 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 75)
 
 /obj/item/clothing/suit/armor/f13/power_armor/hmidwest
@@ -515,7 +483,7 @@
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
-	slowdown = 0.25 //+0.05 from helmet = total 0.2
+	slowdown = 0.25 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 75)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/bos
@@ -550,7 +518,7 @@
 	desc = "Upgraded pre-war power armor design used by the Enclave. It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
 	icon_state = "advanced"
 	item_state = "advanced"
-	slowdown = 0.25 //+0.1 from helmet = total 0.25
+	slowdown = 0.25 //+0.1 from helmet = total 0.35
 	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0, "wound" = 75)
 
 /obj/item/clothing/suit/armor/f13/enclave/armorvest

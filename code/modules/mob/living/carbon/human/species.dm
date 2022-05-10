@@ -1406,9 +1406,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			damage *= 0.8
 		//END OF CITADEL CHANGES
 
-		if(HAS_TRAIT(user, TRAIT_POWER_ARMOR)) // Being in power armor increases unarmed damage
-			damage *= 1.4
-
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
 
 		if(!affecting) //Maybe the bodypart is missing? Or things just went wrong..
