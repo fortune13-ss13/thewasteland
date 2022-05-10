@@ -60,6 +60,11 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Chief of Police",
 
 	"Enclave Lieutenant",
+
+	//For Alternative maptypes - Kitsunemitsu
+	"Chief",
+
+	"Overseer"
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -101,6 +106,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Doctor",
 "Prospector",
 "Detective",
+"Shop Assistant",
 
 "Enclave Lieutenant",
 "Enclave Gunnery Sergeant",
@@ -151,6 +157,7 @@ GLOBAL_LIST_INIT(oasis_positions, list(
 	"Citizen",
 	"Officer",
 	"Shopkeeper",
+	"Shop Assistant",
 	"Farmer",
 	"Prospector",
 	"Detective",
@@ -209,6 +216,8 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 ))
 
 GLOBAL_LIST_INIT(vault_positions, list(
+	"Overseer",
+	"Chief of Security",
 	"Vault-tec Doctor",
 	"Vault-tec Scientist",
 	"Vault-tec Security",
@@ -275,8 +284,9 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#323232"),
-	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),
+	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
+	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#ccffcc"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
