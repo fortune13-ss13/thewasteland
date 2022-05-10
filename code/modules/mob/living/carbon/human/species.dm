@@ -116,7 +116,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	//the ids you can use for your species, if empty, it means default only and not changeable
 	var/list/allowed_limb_ids
-	
+
 	// simple laugh sound overrides
 	/// This is used for every gender other than female
 	var/laugh_male = list('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
@@ -1405,6 +1405,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
 			damage *= 0.8
 		//END OF CITADEL CHANGES
+
+		if(HAS_TRAIT(user, TRAIT_POWER_ARMOR)) // Being in power armor increases unarmed damage
+			damage *= 1.4
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
 

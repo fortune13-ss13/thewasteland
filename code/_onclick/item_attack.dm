@@ -93,6 +93,7 @@
 	var/buffout = force*0.25
 	var/smutant = force*0.25
 	var/ghoulmelee = force*0.25 //negative trait, this will cut 25% of the damage done by melee
+	var/power_armor = force*0.25
 
 	//var/regular = force*(user.special_s/100)//SPECIAL integration
 
@@ -106,10 +107,13 @@
 
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_SMUTANT))
 		force += smutant
-	
+
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_GHOULMELEE)) //negative trait
 		force -= ghoulmelee
-	
+
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_POWER_ARMOR))
+		force += power_armor
+
 	if(!force)
 		playsound(loc, 'sound/weapons/tap.ogg', get_clamped_volume(), 1, -1)
 	else if(hitsound)
@@ -135,8 +139,11 @@
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_SMUTANT))
 		force -= smutant
 
-	if (force >= 5 && HAS_TRAIT(user, TRAIT_GHOULMELEE)) 
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_GHOULMELEE))
 		force += ghoulmelee
+
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_POWER_ARMOR))
+		force -= power_armor
 
 //the equivalent of the standard version of attack() but for object targets.
 /obj/item/proc/attack_obj(obj/O, mob/living/user)

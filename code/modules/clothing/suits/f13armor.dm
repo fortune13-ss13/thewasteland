@@ -262,9 +262,25 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	/// Cell that is currently installed in the suit
+	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/high
+	/// How much power the cell consumes each tick
+	var/usage_cost = 10 // With high-capacity cell it'd run out of charge in ~33 minutes
+	/// If TRUE - suit has ran out of charge and is currently affected by slowdown from it
+	var/no_power = FALSE
+	/// How much slowdown is added when suit is unpowered
+	var/unpowered_slowdown = 1.2
+	/// If TRUE - it requires PA training trait to be worn
 	var/requires_training = TRUE
+	/// If TRUE - the suit will give its user specific traits when worn
 	var/powered = TRUE
-	var/emped = 0
+	/// If TRUE - the suit has been recently affected by EMP blast
+	var/emped = FALSE
+
+/obj/item/clothing/suit/armor/f13/power_armor/Initialize()
+	. = ..()
+	if(ispath(cell))
+		cell = new cell(src)
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -272,23 +288,93 @@
 		return ..()
 	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
 		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
-		return 0
-	if(slot == SLOT_WEAR_SUIT && powered)
-		ADD_TRAIT(user, TRAIT_STUNIMMUNE,    "PA_stun_immunity")
-		ADD_TRAIT(user, TRAIT_PUSHIMMUNE,    "PA_push_immunity")
-		ADD_TRAIT(user, SPREAD_CONTROL,    "PA_spreadcontrol")
-
-		return ..()
-	if(slot == SLOT_WEAR_SUIT && !powered)
+		return FALSE
+	if(slot == SLOT_WEAR_SUIT)
 		return ..()
 	return
 
+/obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
+	..()
+	if(slot == SLOT_WEAR_SUIT && powered)
+		START_PROCESSING(SSobj, src)
+		assign_traits(user)
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/assign_traits(mob/user)
+	if(no_power) // Has no charge left
+		return
+	ADD_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
+	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
+	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
+	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
+
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
+	..()
 	if(powered)
-		REMOVE_TRAIT(user, TRAIT_STUNIMMUNE,	"PA_stun_immunity")
-		REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE,	"PA_push_immunity")
-		REMOVE_TRAIT(user, SPREAD_CONTROL,	"PA_spreadcontrol")
+		STOP_PROCESSING(SSobj, src)
+		remove_traits(user)
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/remove_traits(mob/user)
+	REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
+	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
+	REMOVE_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
+	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
+
+/obj/item/clothing/suit/armor/f13/power_armor/Destroy()
+	. = ..()
+	STOP_PROCESSING(SSobj, src)
+
+/obj/item/clothing/suit/armor/f13/power_armor/process()
+	var/mob/living/carbon/human/user = src.loc
+	if(!user || !ishuman(user) || (user.wear_suit != src))
+		return
+	if((!cell || !cell?.use(usage_cost)) && !no_power) // No cell or cell ran out of charge
+		remove_power(user)
+		return
+	if(no_power) // Above didn't proc and suit is currently unpowered, meaning cell is installed and has charge - restore power
+		restore_power(user)
+		return
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/remove_power(mob/user)
+	to_chat(user, "<span class='warning'>[src]'s power cell has ran out of charge!</span>")
+	remove_traits(user)
+	slowdown += unpowered_slowdown
+	no_power = TRUE
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/restore_power(mob/user)
+	to_chat(user, "<span class='notice'>[src]'s power restored.</span>")
+	assign_traits(user)
+	slowdown -= unpowered_slowdown
+	no_power = FALSE
+
+/obj/item/clothing/suit/armor/f13/power_armor/attackby(obj/item/I, mob/user, params)
+	if(powered && istype(I, /obj/item/stock_parts/cell))
+		if(cell)
+			to_chat(user, "<span class='warning'>[src] already has a cell installed.</span>")
+			return
+		if(user.transferItemToLoc(I, src))
+			cell = I
+			to_chat(user, "<span class='notice'>You successfully install \the [cell] into [src].</span>")
+			return
 	return ..()
+
+/obj/item/clothing/suit/armor/f13/power_armor/attack_self(mob/user)
+	if(powered)
+		if(cell)
+			user.visible_message("<span class='notice'>[user] removes \the [cell] from [src]!</span>", \
+				"<span class='notice'>You remove [cell].</span>")
+			cell.add_fingerprint(user)
+			user.put_in_hands(cell)
+			cell = null
+		else
+			to_chat(user, "<span class='warning'>[src] has no cell installed.</span>")
+
+/obj/item/clothing/suit/armor/f13/power_armor/examine(mob/user)
+	. = ..()
+	if(powered && (in_range(src, user) || isobserver(user)))
+		if(cell)
+			. += "The power meter shows [round(cell.percent(), 0.1)]% charge remaining."
+		else
+			. += "The power cell slot is currently empty."
 
 /obj/item/clothing/suit/armor/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity)
 	. = ..()
@@ -296,6 +382,8 @@
 		return
 	if(!powered)
 		return
+	if(cell)
+		cell.emp_act(severity)
 	if(!emped)
 		if(isliving(loc))
 			var/mob/living/L = loc
@@ -320,15 +408,21 @@
 		to_chat(L, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
 		L.update_equipment_speed_mods()
 
+/obj/item/clothing/suit/armor/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+	if(def_zone in protected_zones)
+		if(prob(70) && (damage < 18) && (armour_penetration < 0.15)) // Weak projectiles like shrapnel get deflected
+			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
+	return ..()
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "salvaged T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 65)
-	requires_training = FALSE
-	slowdown = 0.5
+	slowdown = 1.2
 	powered = FALSE
+	requires_training = FALSE
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b/restored
 	name = "restored T-45b power armor"
@@ -343,26 +437,27 @@
 	desc = "It's a set of T-45b power armor with a air conditioning module installed, it however lacks servomotors to enhance the users strength. This one has brown paint trimmed along the edge and a two headed bear painted onto the chestplate."
 	icon_state = "ncrpowerarmor"
 	item_state = "ncrpowerarmor"
+	slowdown = 1.0
 
 /obj/item/clothing/suit/armor/f13/power_armor/raiderpa
-	powered = FALSE
 	name = "raider T-45b power armor"
 	desc = "An attempt by raider engineers to duplicate power armor. They failed miserably, but it is still pretty tough"
 	icon_state = "raiderpa"
 	item_state = "raiderpa"
 	armor = list("melee" = 65, "bullet" = 55, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 65)
-	slowdown = 0.3
+	slowdown = 1.0
+	powered = FALSE
 	requires_training = FALSE
 
 /obj/item/clothing/suit/armor/f13/power_armor/hotrod
-	powered = FALSE
 	name = "hotrod T-45b power armor"
 	desc = " It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
 	icon_state = "t45hotrod"
 	item_state = "t45hotrod"
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 70)
-	slowdown = 0.25
+	slowdown = 1.0
 	requires_training = FALSE
+	powered = FALSE
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
