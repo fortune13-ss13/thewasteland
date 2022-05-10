@@ -1279,7 +1279,8 @@
 	fire_delay = 3.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 3
+	autofire_shot_delay = 2
+	extra_penetration = .15
 	mag_type = /obj/item/ammo_box/magazine/m762
 	spread = 16 //infamously hard to control on full-auto
 	recoil = 0.25
@@ -1298,7 +1299,7 @@ obj/item/gun/ballistic/automatic/bar
 	mag_type = /obj/item/ammo_box/magazine/m762/ext
 	force = 24 //club
 	slowdown = 1.5 //really goddamn big
-	autofire_shot_delay = 2.3
+	autofire_shot_delay = 1.5
 	extra_damage = 27
 	spread = 10
 	recoil = 0.3
@@ -1393,10 +1394,10 @@ obj/item/gun/ballistic/automatic/bar
 	burst_shot_delay = 1.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.5
+	burst_shot_delay = 1
 	fire_delay = 4
 	extra_damage = 25
-	spread = 8
+	spread = 20 //twice as much as the minigun, because it amuses me
 	can_attachments = FALSE
 	var/cover_open = FALSE
 	var/require_twohands = FALSE
