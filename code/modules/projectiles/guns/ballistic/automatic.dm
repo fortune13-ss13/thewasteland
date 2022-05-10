@@ -1280,7 +1280,7 @@
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 2
-	extra_penetration = .15
+	extra_penetration = 0.15
 	mag_type = /obj/item/ammo_box/magazine/m762
 	spread = 16 //infamously hard to control on full-auto
 	recoil = 0.25
