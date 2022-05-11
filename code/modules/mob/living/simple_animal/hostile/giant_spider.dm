@@ -160,7 +160,7 @@
 	health = 40
 	melee_damage_lower = 1
 	melee_damage_upper = 1
-	poison_per_bite = 12
+	poison_per_bite = 9
 	move_to_delay = 4
 	poison_type = /datum/reagent/toxin/venom //all in venom, glass cannon. you bite 5 times and they are DEFINITELY dead, but 40 health and you are extremely obvious. Ambush, maybe?
 	speed = 1
