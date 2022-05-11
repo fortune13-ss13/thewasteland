@@ -761,12 +761,12 @@
 /obj/item/melee/transforming/cleaving_saw
 	name = "cleaving saw"
 	desc = "This saw is the tool of choice for the Head Hunter. Capable of switching its reach and attack speed on the fly, it's an incredibly useful weapon for slaying the denizens of the wastes. Animal or human, the saw doesn't judge."
-	force = 30
-	force_on = 60 //force when active
+	force = 10
+	force_on = 30//force when active
 	throwforce = 20
 	throwforce_on = 20
 	max_reach = 1
-	reach_on = 2
+	reach_on = 1
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
@@ -781,14 +781,14 @@
 	hitsound_on = 'sound/weapons/bladeslice.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	sharpness = SHARP_EDGED
-	faction_bonus_force = 30
+	faction_bonus_force = 5
 	nemesis_factions = list("mining", "boss")
 	var/transform_cooldown
 	var/swiping = FALSE
 	var/bleed_stacks_per_hit = 3
 	total_mass = 2.75
-	total_mass_on = 5
-	attack_speed = 0
+	total_mass_on = 9
+	attack_speed = 0.5
 	attack_unwieldlyness = CLICK_CD_MELEE * 0.5
 
 /obj/item/melee/transforming/cleaving_saw/examine(mob/user)
