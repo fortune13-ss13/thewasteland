@@ -1275,3 +1275,48 @@
 
 /mob/living/carbon/human/species/smutant
 	race = /datum/species/smutant
+
+
+/mob/living/carbon/human/verb/acting()
+	set category = "IC"
+	set name = "Feign Impairment"
+	set desc = "Slur, stutter or jitter for a short duration."
+
+	if(stat != CONSCIOUS)
+		to_chat(usr, span_warning("You can't do this right now..."))
+		return
+
+	var/list/choices = list("Drunkenness", "Stuttering", "Jittering")
+	if(slurring >= 10 || stuttering >= 10 || jitteriness >= 10) //Give the option to end the impairment if there's one ongoing.
+		var/disable = input(src, "Stop performing existing impairment?", "Impairments", choices)
+		if(disable)
+			acting_expiry(disable)
+			return
+
+	var/impairment = input(src, "Select an impairment to perform:", "Impairments", choices)
+	if(!impairment)
+		return
+
+	var/duration = input(src, "How long would you like to feign [impairment] for?", "Duration in seconds", 25, 36000)
+	switch(impairment)
+		if("Drunkenness")
+			slurring = duration
+		if("Stuttering")
+			stuttering = duration
+		if("Jittering")
+			jitteriness = duration
+
+	if(duration)
+		addtimer(CALLBACK(src, .proc/acting_expiry, impairment), duration SECONDS)
+		to_chat(src, "You are now feigning [impairment].")
+
+/mob/living/carbon/human/proc/acting_expiry(var/impairment) //End only the impairment we're affected by.
+	if(impairment)
+		switch(impairment)
+			if("Drunkenness")
+				slurring = 0
+			if("Stuttering")
+				stuttering = 0
+			if("Jittering")
+				jitteriness = 0
+		to_chat(src, "You are no longer feigning [impairment].")
