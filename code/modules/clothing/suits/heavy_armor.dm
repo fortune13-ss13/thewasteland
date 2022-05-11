@@ -96,7 +96,6 @@
 	item_state = "t45hotrod"
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 10, "bomb" = 40, "bio" = 50, "rad" = 30, "fire" = 80, "acid" = 10, "wound" = 30)
 
-
 /obj/item/clothing/suit/armored/heavy/salvaged_t45b/tribal
 	name = "salvaged tribal T45-b power armor"
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
