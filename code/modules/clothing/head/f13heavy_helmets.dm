@@ -2,6 +2,7 @@
 // Salvaged Power Armor //
 //////////////////////////
 
+// T-45B
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_t45b
 	name = "salvaged T-45b helmet"
 	desc = "It's a salvaged T-45b power armor helmet."
@@ -39,3 +40,12 @@
 	armor = list("melee" = 65, "bullet" = 55, "laser" = 55, "energy" = 20, "bomb" = 30, "bio" = 40, "rad" = 20, "fire" = 40, "acid" = 0, "wound" = 25)
 	slowdown = 0
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
+// T-45D
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_t45d
+	name = "salvaged T-45d helmet"
+	desc = "It's a salvaged T-45d power armor helmet."
+	icon_state = "t45dhelmet0"
+	item_state = "t45dhelmet0"
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 65, "rad" = 40, "fire" = 70, "acid" = 35, "wound" = 40)
+	slowdown = 0.05
