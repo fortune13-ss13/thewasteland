@@ -299,6 +299,7 @@ obj/item/melee/onehanded/knife/switchblade
 		new /obj/item/melee/onehanded/knife/cosmic(drop_location())
 		qdel(src)
 		qdel(C)
+		return
 	return TRUE
 
 /obj/item/melee/onehanded/knife/cosmic
@@ -318,6 +319,7 @@ obj/item/melee/onehanded/knife/switchblade
 				"<span class='italics'>You hear faint sounds of a welder working.</span>")
 		new /obj/item/melee/onehanded/knife/cosmicheated(drop_location())
 		qdel(src)
+		return
 	return TRUE
 
 /obj/item/melee/onehanded/knife/cosmicheated

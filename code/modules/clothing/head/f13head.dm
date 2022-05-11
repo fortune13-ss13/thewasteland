@@ -82,7 +82,7 @@
 		playsound(get_turf(src), 'sound/weapons/circsawhit.ogg', 50, TRUE)
 		if(!do_after(user, 50, TRUE, src))
 			return
-		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 2)
+		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 3)
 		qdel(src)
 		to_chat(user, "<span class='notice'>You salvage armor plates from the [src].</span>")
 	else
