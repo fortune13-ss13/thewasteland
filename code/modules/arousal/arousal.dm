@@ -310,4 +310,4 @@
 	set name = "Climax"
 	set desc = "Lets you choose a couple ways to ejaculate."
 	mob_climax()
-	
+
