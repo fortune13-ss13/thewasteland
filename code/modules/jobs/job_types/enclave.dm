@@ -52,15 +52,16 @@
 
 /datum/job/enclave/enclavecpt
 	title = "Enclave Captain"
-	flag = F13USLT
+	flag = F13USCPT
 	total_positions = 0
 	spawn_positions = 0
+	head_announce = list("Security")
 	req_admin_notify = 1
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
 	supervisors = "Enclave Department of the Army."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavecpt
 
-/datum/outfit/job/enclave/peacekeeper/enclavecpt
+/datum/outfit/job/enclave/peacekeeper/enclavecpt	// Hellfire Power Armor, Glock 86a
 	name = "Enclave Captain"
 	jobtype = /datum/job/enclave/enclavecpt
 	head = /obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire

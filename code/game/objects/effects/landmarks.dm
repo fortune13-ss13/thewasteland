@@ -831,6 +831,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Detective"
 
 // Enclave
+/obj/effect/landmark/start/f13/uscpt
+	name = "Enclave Captain"
+	icon_state = "usgunnery"
+
 /obj/effect/landmark/start/f13/usspy
 	name = "Enclave Private"
 	icon_state = "uspvt"
