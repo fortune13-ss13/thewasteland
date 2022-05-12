@@ -14,7 +14,11 @@
 	icon_state = "ingot"
 	material_flags = MATERIAL_COLOR | MATERIAL_ADD_PREFIX
 	var/workability = 0
-
+	light_system = MOVABLE_LIGHT
+	light_range = 2
+	light_power = 0.75
+	light_color = LIGHT_COLOR_FIRE
+	light_on = FALSE
 
 /obj/item/ingot/on_attack_hand(mob/user)
 	var/mob/living/carbon/human/H
@@ -256,19 +260,23 @@
 	..()
 
 /obj/item/smithing/prospectingpickhead
-	name = "smithed prospector's pickaxe head"
+	name = "smithed prospector's pick head"
+	icon_state = "prospect_smith"
 	finalitem = /obj/item/mining_scanner/prospector
-	icon_state = "minipick"
+	var/cooldown = null
+	var/range = null
+
 
 /obj/item/smithing/prospectingpickhead/startfinish()
 	var/obj/item/mining_scanner/prospector/finalforreal = new /obj/item/mining_scanner/prospector(src)
 	finalforreal.range = 2 + quality
 	if(quality)
 		finalforreal.cooldown = 100/quality
+	finalforreal.force += quality
 	finalitem = finalforreal
 	..()
 
-// Does not produce the desired result with toolspeed reduction dependent on quality. The placeholder does the work but if you know how to make it work, feel free.
+
 /obj/item/smithing/crowbar
 	name = "unwrapped crowbar"
 	desc = "Add leather strips."
@@ -279,19 +287,23 @@
 /obj/item/smithing/crowbar/startfinish()
 	var/obj/item/crowbar/smithed/finalforreal = new /obj/item/crowbar/smithed(src)
 	finalforreal.force += quality
+	if(quality > 0)
+		finalforreal.toolspeed = max(0.05,(1-(quality/10)))
+	else
+		finalforreal.toolspeed *= max(1, (quality * -1))	
 	finalitem = finalforreal
 	..()
 
 // Does not produce the expected result with force dependent on quality, instead just uses the base one. The finished item is a placeholder, it works though.
-/obj/item/smithing/crowaxe
-	name = "unwrapped crowbar-axe"
+/obj/item/smithing/unitool
+	name = "unwrapped universal tool"
 	desc = "Add leather strips."
-	icon_state = "crow_smith"
+	icon_state = "unitool_smith"
 	finishingitem = /obj/item/stack/sheet/leatherstrips
-	finalitem = /obj/item/crowbar/smithedcrowaxe
+	finalitem = /obj/item/crowbar/smithedunitool
 
-/obj/item/smithing/crowaxe/startfinish()
-	var/obj/item/crowbar/smithedcrowaxe/finalforreal = new /obj/item/crowbar/smithedcrowaxe(src)
+/obj/item/smithing/unitool/startfinish()
+	var/obj/item/crowbar/smithedunitool/finalforreal = new /obj/item/crowbar/smithedunitool(src)
 	finalforreal.force += quality
 	finalitem = finalforreal
 	..()
@@ -365,7 +377,7 @@
 	icon_state = "ballandchain"
 	mob_overlay_icon = 'icons/fallout/onmob/items/miscellaneous.dmi'
 	item_state = "ballandchain"
-	strip_delay = 500
+	strip_delay = 300
 	equip_delay_other = 50
 	can_be_tied = FALSE
 	w_class = WEIGHT_CLASS_BULKY

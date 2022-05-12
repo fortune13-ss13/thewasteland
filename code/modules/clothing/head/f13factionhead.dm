@@ -707,6 +707,21 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
 
+// recycling the above
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/attackby(obj/item/I, mob/user, params)
+	if(I.tool_behaviour == TOOL_SAW)
+		user.visible_message("[user] begins recycling the [src].", \
+				"<span class='notice'>You begin recycling the [src].</span>", \
+				"<span class='italics'>You hear the noise of a saw cutting through metal and ceramic.</span>")
+		playsound(get_turf(src), 'sound/weapons/circsawhit.ogg', 50, TRUE)
+		if(!do_after(user, 50, TRUE, src))
+			return
+		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 2)
+		new /obj/item/clothing/glasses/night/polarizing (drop_location(), 1)
+		qdel(src)
+		to_chat(user, "<span class='notice'>You salvage armor plates and a set of polarizing goggles from the [src].</span>")
+	else
+		return ..()
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/eliteriot
 	name = "elite riot gear helmet"
@@ -1023,15 +1038,6 @@
 	desc = "An old military grade pre-war reinforced combat helmet, repainted and re-purposed with bones and sinew."
 	icon_state = "tribe_helmet"
 	item_state = "tribe_helmet"
-
-/obj/item/clothing/head/helmet/f13/power_armor/t45b/tribal
-	name = "tribal t-45b headdress"
-	desc = "A salvaged T-45b powered armor, with the servos removed and a feathered headdress. Certain bits of plating have been stripped out to retain more freedom of movement."
-	icon_state = "tribal_PA_helmet"
-	item_state = "tribal_PA_helmet"
-	armor = list("melee" = 60, "bullet" = 60, "laser" = 60, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 65, "wound" = 65)
-	slowdown = 0
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/wayfarer/chief/attack_self(mob/user)
 	weldingvisortoggle(user)

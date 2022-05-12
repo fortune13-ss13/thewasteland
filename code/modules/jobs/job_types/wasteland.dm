@@ -581,18 +581,18 @@ Raider
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/color/latex
-	neck = /obj/item/bedsheet/medical
+	neck = /obj/item/clothing/neck/stethoscope
+	belt = /obj/item/storage/belt/medical
 	backpack_contents =  list(/obj/item/reagent_containers/medspray/synthflesh=2,
-							/obj/item/stack/medical/suture/emergency/fifteen=1,
-							/obj/item/stack/medical/ointment/twelve=1,
 							/obj/item/smelling_salts=1,
 							/obj/item/healthanalyzer=1,
-							/obj/item/stack/sheet/mineral/silver=1,
 							/obj/item/gun/ballistic/automatic/pistol/m1911=1,
-							/obj/item/lighter=1,
-							/obj/item/screwdriver=1,
-							/obj/item/wirecutters=1,
-							/obj/item/hatchet=1
+							/obj/item/reagent_containers/glass/bottle/epinephrine=2,
+							/obj/item/storage/backpack/duffelbag/med/surgery=1,
+							/obj/item/paper_bin=1,
+							/obj/item/folder=1,
+							/obj/item/pen/fountain=1,
+							/obj/item/storage/firstaid/ancient=1,
 		)
 
 /datum/outfit/loadout/merchant
@@ -614,10 +614,10 @@ Raider
 	uniform = /obj/item/clothing/under/f13/vault
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/fingerless
-	id = /obj/item/card/id/dogtag/vaultiecard
 	suit = /obj/item/clothing/suit/suspenders
 	ears = /obj/item/radio/headset
 	backpack_contents = list(
+		/obj/item/card/id/selfassign=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple=2,
 		/obj/item/pda=1,)
@@ -1199,6 +1199,7 @@ datum/job/wasteland/f13dendoctor
 	description = "You are a member of a tribe, far away from your homeland. Well, relatively far away. Whatever your reasons for coming here, you've found yourself pinned between the ongoing war of the NCR and Caesar's Legion. Try not to get shot."
 	supervisors = "the stars above"
 	selection_color = "#dddddd"
+	mapexclude = list("tribal")
 
 	outfit = /datum/outfit/job/wasteland/f13tribal
 

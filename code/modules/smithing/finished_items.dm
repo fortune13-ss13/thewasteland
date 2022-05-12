@@ -84,26 +84,36 @@
 	custom_materials = list(/datum/material/iron=1000)
 	quality = 5
 
+// The true manual mining scanner, knock it on rock to scan. Could use a cooldown, can't be bothered to sort it. Lowest quality got too short range to test out.
 /obj/item/mining_scanner/prospector
-	name = "prospector's pickaxe"
-	desc = "A pickaxe that can sound rocks to find mineral deposits."
+	name = "prospectors pick"
+	desc = "A pick that can sound rocks to find mineral deposits."
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
-	icon_state = "minipick"
+	icon_state = "prospect_smith"
 	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
-	item_state = "minipick"
-	sharpness = SHARP_POINTY//it doesnt have a blade it has a point
+	item_state = "prospect_smith"
+	sharpness = SHARP_POINTY
 
 /obj/item/mining_scanner/prospector/Initialize()
 	..()
 	var/mutable_appearance/overlay
 	desc = "A handmade [name]."
-	overlay = mutable_appearance(icon, "minihandle")
+	overlay = mutable_appearance(icon, "handle_prospect")
 	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
-	if(force < 0)
-		force = 0
+
+/obj/item/mining_scanner/prospector/afterattack(atom/A, mob/living/user, proximity)
+	. = ..()
+	if(!proximity || IS_STAMCRIT(user))
+		return
+	if(istype(A, /turf/closed/mineral))
+		mineral_scan_pulse(get_turf(user), range)
+		playsound(src, 'sound/effects/Glassknock.ogg', 50, 1)
+
+/obj/item/mining_scanner/prospector/attack_self(mob/user)
+	return
 
 /obj/item/pickaxe/smithed
 	name = "pickaxe"
@@ -121,7 +131,7 @@
 	..()
 	desc = "A handmade [name]."
 	var/mutable_appearance/overlay
-	overlay = mutable_appearance(icon, "stick")
+	overlay = mutable_appearance(icon, "woodrod")
 	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
 	if(force < 0)
@@ -151,7 +161,7 @@
 	if(force < 0)
 		force = 0
 
-// Smithed crowbars are slightly better than the ones made in crafting.
+// Smithed crowbars top out at 0.2 toolspeed max quality. Not bad. Not that useful either, its just a crowbar, still.
 /obj/item/crowbar/smithed
 	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	icon_state = "crowbar_smith"
@@ -169,22 +179,22 @@
 	add_overlay(overlay)
 
 // Crowbar-axe. Just a crowbar with more force and a homemade vibe.
-/obj/item/crowbar/smithedcrowaxe
-	name = "crowbar-axe"
+/obj/item/crowbar/smithedunitool
+	name = "universal tool"
 	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
-	icon_state = "crow_smith"
+	icon_state = "unitool_smith"
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
-	item_state = "crow_smith"
+	item_state = "unitool_smith"
 	sharpness = SHARP_POINTY
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	force = 28
 
-/obj/item/crowbar/smithedcrowaxe/Initialize()
+/obj/item/crowbar/smithedunitool/Initialize()
 	..()
 	desc = "A bizarre combination of a crowbar and some sort of knifeblade."
 	var/mutable_appearance/overlay
-	overlay = mutable_appearance(icon, "handle_crow")
+	overlay = mutable_appearance(icon, "handle_unitool")
 	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
 
@@ -202,7 +212,7 @@
 	item_state = "sword_smith"
 	overlay_state = "hilt_sword"
 	armour_penetration = 0.1
-	force = 23
+	force = 25
 	sharpness = SHARP_EDGED
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	block_parry_data = /datum/block_parry_data/captain_saber
@@ -224,7 +234,7 @@
 	item_state = "sabre_smith"
 	overlay_state = "hilt_sabre"
 	armour_penetration = 0.15
-	force = 22
+	force = 24
 
 
 /obj/item/melee/smith/dagger
@@ -233,14 +243,14 @@
 	overlay_state = "hilt_dagger"
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
-	force = 22
+	force = 24
 	hitsound = 'sound/weapons/rapierhit.ogg'
 
 /obj/item/melee/smith/machete
 	name = "machete"
 	icon_state = "machete_smith"
 	overlay_state = "hilt_machete"
-	force = 24
+	force = 26
 	sharpness = SHARP_EDGED
 	wound_bonus = 30
 
@@ -260,7 +270,7 @@
 	icon_state = "waki_smith"
 	overlay_state = "hilt_waki"
 	sharpness = SHARP_EDGED
-	force = 22
+	force = 24
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	block_parry_data = /datum/block_parry_data/waki
 	hitsound = 'sound/weapons/rapierhit.ogg'
@@ -284,7 +294,7 @@
 	name = "mace"
 	icon_state = "mace_smith"
 	overlay_state = "handle_mace"
-	force = 13
+	force = 15
 
 
 //////////////////////////
@@ -298,7 +308,7 @@
 	icon_state = "katana_smith"
 	icon_prefix = "katana_smith"
 	overlay_state = "hilt_katana"
-	force = 20
+	force = 22
 	wielded_mult = 1.5
 	item_flags = ITEM_CAN_PARRY | NEEDS_PERMIT
 	block_parry_data = /datum/block_parry_data/smithrapier
@@ -329,7 +339,7 @@
 	icon_prefix = "axe_smith"
 	overlay_state = "shaft_axe"
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
-	force = 15
+	force = 16
 	wielded_mult = 2
 	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	slot_flags = ITEM_SLOT_BACK
@@ -341,7 +351,7 @@
 	icon_state = "scrap_smith"
 	icon_prefix = "scrap_smith"
 	overlay_state = "hilt_scrap"
-	force = 20
+	force = 21
 	wielded_mult = 1.5
 
 /obj/item/melee/smith/twohand/spear

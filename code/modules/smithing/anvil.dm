@@ -3,13 +3,12 @@
 #define WORKPIECE_FINISHED 3
 #define WORKPIECE_SLAG 5
 
-#define RECIPE_LARGEPICK "bff" //bend fold fold
+#define RECIPE_PICKAXE "bff" //bend fold fold
 #define RECIPE_SHOVEL "buu" //bend upset upset
 #define RECIPE_HAMMER "bpp" //bend punch punch
-#define RECIPE_SMALLPICK "bfs" //bend fold shrink
+#define RECIPE_PROSPECTPICK "bfs" //bend fold shrink
 #define RECIPE_KITCHENKNIFE "bsd" //bend shrink draw
-#define RECIPE_CROWBAR "bbb" //bend bend bend ISSUE
-#define RECIPE_CROWAXE "bbd"  //bend bend draw ISSUE
+#define RECIPE_CROWBAR "bbb" //bend bend bend
 
 #define RECIPE_RING "sss" //shrink shrink shrink
 #define RECIPE_BALLANDCHAIN "pbu" //punch bend upset
@@ -31,6 +30,7 @@
 //Tablevil specific
 #define RECIPE_MACHREFORG "fdf" //fold punch punch
 #define RECIPE_SCRAP "udsp" //upset draw shrink punch
+#define RECIPE_UNITOOL "bbb"  //bend bend bend
 
 //Legion specific
 #define RECIPE_LANCE "ddbf" //draw draw fold fold
@@ -47,6 +47,11 @@
 	icon_state = "anvil"
 	density = TRUE
 	anchored = TRUE
+	light_system = MOVABLE_LIGHT
+	light_range = 2
+	light_power = 0.75
+	light_color = LIGHT_COLOR_FIRE
+	light_on = FALSE
 	var/busy = FALSE //If someone is already interacting with this anvil
 	var/workpiece_state = FALSE
 	var/datum/material/workpiece_material
@@ -61,11 +66,10 @@
 	var/itemqualitymax = 8
 	var/list/smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
-	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+	RECIPE_PICKAXE = /obj/item/smithing/pickaxehead,
+	RECIPE_PROSPECTPICK = /obj/item/smithing/prospectingpickhead,
 	RECIPE_KITCHENKNIFE = /obj/item/smithing/knifeblade,
 	RECIPE_CROWBAR = /obj/item/smithing/crowbar,
-	RECIPE_CROWAXE = /obj/item/smithing/crowaxe,
 	RECIPE_RING = /obj/item/smithing/special/jewelry/ring,
 	RECIPE_BALLANDCHAIN = /obj/item/smithing/ballandchain,
 	RECIPE_DAGGER = /obj/item/smithing/daggerblade,
@@ -99,6 +103,7 @@
 			var/skillmod = 4
 			if(workpiece_state == WORKPIECE_PRESENT)
 				add_overlay(image(icon= 'icons/fallout/objects/crafting/blacksmith.dmi',icon_state="workpiece"))
+				set_light_on(TRUE)
 			if(user.mind.skill_holder)
 				skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/2
 			currentquality += skillmod
@@ -219,6 +224,7 @@
 	if((currentsteps > 10 || (rng && prob(finalfailchance))) && !artifact)
 		to_chat(user, "<span class='warning'>You overwork the metal, causing it to turn into useless slag!</span>")
 		cut_overlay(image(icon= 'icons/fallout/objects/crafting/blacksmith.dmi',icon_state="workpiece"))
+		set_light_on(FALSE)
 		var/turf/T = get_turf(src)
 		workpiece_state = FALSE
 		new /obj/item/stack/ore/slag(T)
@@ -231,11 +237,12 @@
 			user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 25, 400, silent = FALSE)
 	for(var/i in smithrecipes)
 		if(i == stepsdone)
-			var/turf/T = get_turf(user)
+			var/turf/T = get_turf(src)
 			var/obj/item/smithing/create = smithrecipes[stepsdone]
 			var/obj/item/smithing/finisheditem = new create(T)
 			to_chat(user, "You finish your [finisheditem]!")
 			cut_overlay(image(icon= 'icons/fallout/objects/crafting/blacksmith.dmi',icon_state="workpiece"))
+			set_light_on(FALSE)
 			if(artifact)
 				to_chat(user, "It is an artifact, a creation whose legacy shall live on forevermore.") //todo: SSblackbox
 				currentquality = max(currentquality, 2)
@@ -291,14 +298,15 @@
 	name = "anvil"
 	desc = "A solid steel anvil with a stamped bull on it."
 	icon_state = "legvil"
+	anvilquality = 1
+	itemqualitymax = 8
 	anchored = TRUE
 	smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
-	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+	RECIPE_PICKAXE = /obj/item/smithing/pickaxehead,
+	RECIPE_PROSPECTPICK = /obj/item/smithing/prospectingpickhead,
 	RECIPE_KITCHENKNIFE = /obj/item/smithing/knifeblade,
 	RECIPE_CROWBAR = /obj/item/smithing/crowbar,
-	RECIPE_CROWAXE = /obj/item/smithing/crowaxe,
 	RECIPE_RING = /obj/item/smithing/special/jewelry/ring,
 	RECIPE_BALLANDCHAIN = /obj/item/smithing/ballandchain,
 	RECIPE_DAGGER = /obj/item/smithing/daggerblade,
@@ -315,7 +323,7 @@
 )
 
 
-// Decent makeshift anvil, can break, mobile. Gets the exclusive scrap version of the machete and 2h chopper.
+// Decent makeshift anvil, can break, mobile. Gets the exclusive scrap version of the machete and 2h chopper, as well as the universal tool instead of a crowbar
 /obj/structure/anvil/obtainable/table
 	name = "table anvil"
 	desc = "A reinforced table. Usable as an anvil, favored by mad wastelanders and the dregs of the wasteland. Can be loosened from its bolts and moved."
@@ -324,11 +332,10 @@
 	itemqualitymax = 7
 	smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
-	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+	RECIPE_PICKAXE = /obj/item/smithing/pickaxehead,
+	RECIPE_PROSPECTPICK = /obj/item/smithing/prospectingpickhead,
 	RECIPE_KITCHENKNIFE = /obj/item/smithing/knifeblade,
-	RECIPE_CROWBAR = /obj/item/smithing/crowbar,
-	RECIPE_CROWAXE = /obj/item/smithing/crowaxe,
+	RECIPE_UNITOOL = /obj/item/smithing/unitool,
 	RECIPE_RING = /obj/item/smithing/special/jewelry/ring,
 	RECIPE_BALLANDCHAIN = /obj/item/smithing/ballandchain,
 	RECIPE_DAGGER = /obj/item/smithing/daggerblade,

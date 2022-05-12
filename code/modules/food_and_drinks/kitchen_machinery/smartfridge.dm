@@ -624,7 +624,6 @@
 		/obj/item/shovel = 2,
 		/obj/item/hatchet = 2,
 		/obj/item/cultivator/rake  = 2,
-		/obj/item/scythe = 1,
 		/obj/item/reagent_containers/glass/bucket/wood = 3,
 		/obj/item/storage/bag/plants = 2,
 		/obj/item/book/manual/advice_farming = 1)
@@ -823,7 +822,9 @@
 		/obj/item/reagent_containers/food/condiment/yeast = 1,
 		/obj/item/reagent_containers/food/condiment/saltshaker = 1,
 		/obj/item/reagent_containers/food/condiment/peppermill = 1,
-		/obj/item/reagent_containers/food/condiment/soysauce = 1)
+		/obj/item/reagent_containers/food/condiment/soysauce = 1,
+		/obj/item/reagent_containers/food/condiment/bbqsauce = 1,
+		/obj/item/reagent_containers/food/condiment/mustardbottle = 1)
 
 /obj/machinery/smartfridge/bottlerack/lootshelf/books
 	desc = "A rusted pre-war shelf, this one has a faded label about magazines. "

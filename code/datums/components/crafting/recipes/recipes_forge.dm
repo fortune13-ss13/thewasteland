@@ -269,20 +269,6 @@
 	subcategory = CAT_MELEE
 	always_available = FALSE
 
-/datum/crafting_recipe/legionshield
-	name = "Legion Shield"
-	result = /obj/item/shield/riot/legion
-	reqs = list(
-		/obj/item/stack/sheet/metal = 8,
-		/obj/item/stack/sheet/mineral/wood = 8,
-		/obj/item/stack/sheet/leather = 2,
-		)
-	time = 250
-	tools = list(TOOL_FORGE)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-	always_available = FALSE
-
 /datum/crafting_recipe/legionlance
 	name = "Legion Lance"
 	result = /obj/item/twohanded/spear/lance
@@ -292,6 +278,21 @@
 		/obj/item/stack/sheet/mineral/wood = 6,
 		)
 	time = 180
+	tools = list(TOOL_FORGE)
+	category = CAT_WEAPONRY
+	subcategory = CAT_MELEE
+	always_available = FALSE
+
+
+/datum/crafting_recipe/legionshield
+	name = "Legion Shield"
+	result = /obj/item/shield/riot/legion
+	reqs = list(
+		/obj/item/stack/sheet/metal = 8,
+		/obj/item/stack/sheet/mineral/wood = 8,
+		/obj/item/stack/sheet/leather = 2,
+		)
+	time = 250
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
@@ -360,8 +361,7 @@
 	name = "Cosmic Knife"
 	result = /obj/item/melee/onehanded/knife/cosmic
 	reqs = list(
-		/obj/item/melee/onehanded/knife/cosmicdirty = 1,
-		/obj/item/crafting/abraxo = 1,
+		/obj/item/melee/onehanded/knife/cosmicdirty = 1
 		)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
