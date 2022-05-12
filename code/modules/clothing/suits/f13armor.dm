@@ -345,7 +345,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/proc/remove_power(mob/user)
 	if(salvage_step > 1) // Being salvaged
-		to_chat(user, "<span class='warning'>\The components in [src] require repairs!</span>")
+		to_chat(user, "<span class='warning'>Components in [src] require repairs!</span>")
 	else
 		to_chat(user, "<span class='warning'>\The [src] has ran out of charge!</span>")
 	remove_traits(user)
