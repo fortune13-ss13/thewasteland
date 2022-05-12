@@ -531,6 +531,10 @@
 	slowdown = 0.08
 	armor = list("melee" = 50, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
 
+/obj/item/clothing/suit/armor/f13/rangercombat/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 // Shredding combat armor directly with a saw. Some sort of pathing overhaul needed maybe to keep stuff consistent, this is just an adaptation of the current arbitrary selection of salvageable armors.
 /obj/item/clothing/suit/armor/f13/rangercombat/attackby(obj/item/I, mob/user, params)
 	if(I.tool_behaviour == TOOL_SAW)
