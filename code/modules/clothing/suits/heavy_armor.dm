@@ -140,10 +140,10 @@
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 65, "energy" = 30, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 45)
 	slowdown = 0.8
 
-// X-02
-/obj/item/clothing/suit/armored/heavy/salvaged_pa/x02
+// Advanced
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/advanced
 	name = "salvaged Enclave power armor"
-	desc = "X-02 power armor with servomotors and all valuable components stripped out of it."
+	desc = "Advanced power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 70, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)

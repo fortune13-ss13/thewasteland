@@ -46,6 +46,51 @@
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 
 
+///////////////////////
+/// Captain - Admin ///
+///////////////////////
+
+/datum/job/enclave/enclavecpt
+	title = "Enclave Captain"
+	flag = F13USLT
+	total_positions = 0
+	spawn_positions = 0
+	req_admin_notify = 1
+	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
+	supervisors = "Enclave Department of the Army."
+	outfit = /datum/outfit/job/enclave/peacekeeper/enclavecpt
+
+/datum/outfit/job/enclave/peacekeeper/enclavecpt
+	name = "Enclave Captain"
+	jobtype = /datum/job/enclave/enclavecpt
+	head = /obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire
+	uniform = /obj/item/clothing/under/f13/enclave/officer
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced/hellfire
+	suit_store = /obj/item/gun/energy/laser/plasma/glock/extended
+	accessory = /obj/item/clothing/accessory/ncr/CPT
+	id = /obj/item/card/id/dogtag/enclave/officer
+	ears = /obj/item/radio/headset/headset_enclave/command
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/megaphone = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/melee/classic_baton/telescopic = 1
+		)
+
+/datum/outfit/job/enclave/peacekeeper/enclavecpt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
+
+
 //Lieutenant
 /datum/job/enclave/enclavelt
 	title = "Enclave Lieutenant"
@@ -67,8 +112,7 @@
 /datum/outfit/job/enclave/peacekeeper/enclavelt
 	name = "Enclave Lieutenant"
 	jobtype = /datum/job/enclave/enclavelt
-
-	head = /obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+	head = /obj/item/clothing/head/helmet/f13/enclave/officer
 	uniform = /obj/item/clothing/under/f13/enclave/officer
 	suit = /obj/item/clothing/suit/armor/f13/enclavetrenchcoat
 	accessory = /obj/item/clothing/accessory/ncr/LT1
@@ -134,8 +178,8 @@
 /datum/outfit/job/enclave/peacekeeper/f13gysergeant
 	name = "Enclave Gunnery Sergeant"
 	jobtype = /datum/job/enclave/f13gysergeant
-	head = /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/x02
+	head = /obj/item/clothing/head/helmet/f13/power_armor/advanced
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	accessory = /obj/item/clothing/accessory/enclave/master_sergeant
 
 	backpack_contents = list(
@@ -361,6 +405,8 @@
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/USAeyebot)
+
 
 //Bunker Duty
 /datum/job/enclave/f13BDUTY

@@ -583,13 +583,6 @@
 	else
 		return ..()
 
-/obj/item/clothing/suit/armor/f13/power_armor/t45b
-	name = "T-45b power armor"
-	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 65)
-	slowdown = 0.4
-	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b
-
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
@@ -632,7 +625,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
-	slowdown = 0.25 //+0.05 from helmet = total 0.255
+	slowdown = 0.25 //+0.05 from helmet = total 0.30
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 75)
 
 /obj/item/clothing/suit/armor/f13/power_armor/hmidwest
@@ -640,7 +633,7 @@
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
-	slowdown = 0.25 //+0.05 from helmet = total 0.255
+	slowdown = 0.25 //+0.05 from helmet = total 0.30
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 75)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/bos
@@ -673,28 +666,20 @@
 	armor = list("melee" = 80, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 80, "wound" = 80)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
-	name = "advanced power armor"
-	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
-	icon_state = "advpowerarmor1"
-	item_state = "advpowerarmor1"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 35, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 90)
-
-//Peacekeeper armor adjust as needed
-/obj/item/clothing/suit/armor/f13/power_armor/x02
 	name = "Enclave power armor"
-	desc = "Upgraded pre-war power armor design used by the Enclave. It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
+	desc = "An advanced suit of armor used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
 	icon_state = "advanced"
 	item_state = "advanced"
-	slowdown = 0.25 //+0.1 from helmet = total 0.35
-	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
-	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/x02 // Oh the misery
+	slowdown = 0.5 //+0.5 from helmet = total 1
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 80)
+	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/advanced // Oh the misery
 
-/obj/item/clothing/suit/armor/f13/enclave/armorvest
-	name = "armored vest"
-	desc = "(VI) Efficient prewar design issued to Enclave personell."
-	icon_state = "armor_enclave_peacekeeper"
-	item_state = "armor_enclave_peacekeeper"
-	armor = list("tier" = 6)
+/obj/item/clothing/suit/armor/f13/power_armor/advanced/hellfire
+	name = "Hellfire power armor"
+	desc = "A deep black suit of Enclave-manufactured heavy power armor, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. No suit rivals it's strength."
+	icon_state = "hellfire"
+	item_state = "hellfire"
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 75, "bomb" = 80, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 60, "wound" = 90)
 
 
 //Generic Tribal - For Wayfarer specific, see f13factionhead.dm

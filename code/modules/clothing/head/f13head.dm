@@ -380,17 +380,9 @@
 	else
 		return ..()
 
-/obj/item/clothing/head/helmet/f13/power_armor/t45b
-	name = "T-45b helmet"
-	desc = "It's a T-45b power armor helmet."
-	icon_state = "t45bhelmet"
-	item_state = "t45bhelmet"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 40)
-	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
-
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
-	desc = "t's an old pre-War power armor helmet. It's pretty hot inside of it."
+	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
@@ -457,30 +449,20 @@
 	armor = list("melee" = 80, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 80, "wound" = 80)
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced
-	name = "advanced power helmet"
-	desc = "It's an advanced power armor MK1 helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advhelmet1"
-	item_state = "advhelmet1"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 35, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 90)
+	name = "Enclave power armor helmet"
+	desc = "The Enclave Mark II Powered Combat Armor helmet. It looks somewhat threatening."
+	icon_state = "advanced"
+	item_state = "advanced"
+	slowdown = 0.5
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/advanced
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire
 	name = "hellfire power armor"
 	desc = "A deep black helmet of Enclave-manufactured heavy power armor with yellow ballistic glass, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no other helmet rivals it's strength."
 	icon_state = "hellfirehelm"
 	item_state = "hellfirehelm"
-	armor = list("melee" = 85, "bullet" = 85, "laser" = 87, "energy" = 37, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 100)
-
-
-//Part of the peacekeeper enclave stuff, adjust values as needed.
-/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
-	name = "Enclave power armor helmet"
-	desc = "The Enclave Mark II Powered Combat Armor helmet."
-	icon_state = "advanced"
-	item_state = "advanced"
-	slowdown = 0.1
-	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 75, "bomb" = 80, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 60, "wound" = 90)
 
 
 //Generic Tribal - For Wayfarer specific, see f13factionhead.dm
