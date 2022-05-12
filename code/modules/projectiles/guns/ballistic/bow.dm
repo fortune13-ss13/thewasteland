@@ -1,9 +1,9 @@
 /obj/item/gun/ballistic/bow
 	name = "base bow"
 	desc = "base type of bow used to define features for multiple-loading bows"
-	icon_state = "bow"
-	item_state = "bow"
-	icon_prefix = "bow"
+	icon_state = "tribalbow"
+	item_state = "tribalbow"
+	icon_prefix = "tribalbow"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_HEAVY //need both hands to fire
 	force = 5
@@ -114,6 +114,9 @@
 /obj/item/gun/ballistic/bow/sturdy
 	name = "sturdy bow"
 	desc = "A firm sturdy wooden bow with leather handles and sinew wrapping, for extra stopping power in the shot speed of the arrows."
+	icon_state = "tribalbow"
+	item_state = "tribalbow"
+	icon_prefix = "tribalbow"
 	force = 15
 	mag_type = /obj/item/ammo_box/magazine/internal/bow/sturdy
 	extra_speed = 300
