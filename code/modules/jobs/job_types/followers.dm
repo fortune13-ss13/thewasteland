@@ -4,7 +4,7 @@
 	exp_type = EXP_TYPE_FOLLOWERS
 	access = list(ACCESS_FOLLOWER)
 	minimal_access = list(ACCESS_FOLLOWER)
-	forbids = "Collaborating, working with, or enabling organizations hostile to human life or society in general, such as the Enclave or Legion. Treating raiders or enabling those who will go on to cause more harm. Producing and selling drugs."
+	forbids = "Collaborating, working with, or enabling organizations hostile to human life or society in general, such as the Enclave or Legion. Treating raiders or enabling those who will go on to cause more harm. Producing and selling drugs. Having sex all day while people die in front of you."
 	enforces = "Preaching humanitarianism and valuing human life. Assist and provide medical services to those who value human life. Provide free education for all those who are willing to learn."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish medical outposts throughout the wasteland","Leadership recommends the following goal for this week: Experiment with and improve medical techniques and equipment", "Leadership recommends the following goal for this week: Replenish the operation's funds through donations and sales.")
 
@@ -75,6 +75,7 @@ Administrator
 	suit=	/obj/item/clothing/suit/toggle/labcoat/cmo
 	shoes =	/obj/item/clothing/shoes/f13/brownie
 	belt =	/obj/item/healthanalyzer/advanced
+	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	backpack =	/obj/item/storage/backpack/medic
 	satchel =	/obj/item/storage/backpack/satchel/med
 	duffelbag =	/obj/item/storage/backpack/duffelbag/med
