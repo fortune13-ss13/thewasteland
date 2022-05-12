@@ -74,7 +74,6 @@ Administrator
 	chemwhiz =	TRUE
 	backpack =	/obj/item/storage/backpack/explorer
 	uniform =	/obj/item/clothing/under/f13/followers
-	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	suit=	/obj/item/clothing/suit/toggle/labcoat/cmo
 	shoes =	/obj/item/clothing/shoes/f13/brownie
 	belt =	/obj/item/healthanalyzer/advanced
