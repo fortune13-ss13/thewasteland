@@ -531,6 +531,20 @@
 	slowdown = 0.08
 	armor = list("melee" = 50, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
 
+// Shredding combat armor directly with a saw. Some sort of pathing overhaul needed maybe to keep stuff consistent, this is just an adaptation of the current arbitrary selection of salvageable armors.
+/obj/item/clothing/suit/armor/f13/rangercombat/attackby(obj/item/I, mob/user, params)
+	if(I.tool_behaviour == TOOL_SAW)
+		user.visible_message("[user] begins recycling the [src] into armor plates.", \
+				"<span class='notice'>You begin recycling the [src] into armor plates.</span>", \
+				"<span class='italics'>You hear the noise of a saw cutting through metal and ceramic.</span>")
+		playsound(get_turf(src), 'sound/weapons/circsawhit.ogg', 50, TRUE)
+		if(!do_after(user, 50, TRUE, src))
+			return
+		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 8)
+		qdel(src)
+		to_chat(user, "<span class='notice'>You salvage armor plates from the [src].</span>")
+	else
+		return ..()
 
 /obj/item/clothing/suit/armor/f13/ncrcfjacket
 	name = "NCRCF jacket"
@@ -743,17 +757,6 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100, "wound" = 50)
 	slowdown = 0.025
-
-/obj/item/clothing/suit/armor/f13/power_armor/t45b/tribal
-	name = "tribal salvaged t45-b"
-	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
-	icon_state = "tribal_power_armor"
-	item_state = "tribal_power_armor"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("melee" = 65, "bullet" = 65, "laser" = 65, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 65)
-	slowdown = 0.3
-	requires_training = FALSE
-	powered = FALSE
 
 //Vault
 

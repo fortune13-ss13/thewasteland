@@ -73,6 +73,21 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
+// Instead of filling the crafting menus and recipes with tons of duplicates lets make shredding combat helmets a direct action. Use a saw.
+/obj/item/clothing/head/helmet/f13/combat/attackby(obj/item/I, mob/user, params)
+	if(I.tool_behaviour == TOOL_SAW)
+		user.visible_message("[user] begins recycling the [src].", \
+				"<span class='notice'>You begin recycling the [src].</span>", \
+				"<span class='italics'>You hear the noise of a saw cutting through metal and ceramic.</span>")
+		playsound(get_turf(src), 'sound/weapons/circsawhit.ogg', 50, TRUE)
+		if(!do_after(user, 50, TRUE, src))
+			return
+		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 3)
+		qdel(src)
+		to_chat(user, "<span class='notice'>You salvage armor plates from the [src].</span>")
+	else
+		return ..()
+
 /obj/item/clothing/head/helmet/f13/combat/mk2
 	name = "reinforced combat helmet"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
@@ -209,7 +224,9 @@
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
 
-//Power Armour
+/////////////////
+// Power Armor //
+/////////////////
 
 /obj/item/clothing/head/helmet/f13/power_armor
 	cold_protection = HEAD
@@ -236,8 +253,16 @@
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_range = 5
 	light_on = FALSE
+	/// Projectiles below this damage will get deflected
+	var/deflect_damage = 18
+	/// If TRUE - it requires PA training trait to be worn
 	var/requires_training = TRUE
+	/// If TRUE - the suit will give its user specific traits when worn
 	var/powered = TRUE
+	/// Path of item that this helmet gets salvaged into
+	var/obj/item/salvaged_type = null
+	/// Used to track next tool required to salvage the suit
+	var/salvage_step = 0
 
 /obj/item/clothing/head/helmet/f13/power_armor/ComponentInitialize()
 	. = ..()
@@ -262,41 +287,106 @@
 		return ..()
 	return
 
+/obj/item/clothing/head/helmet/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+		if(prob(70) && (damage < deflect_damage))
+			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
+			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
+	return ..()
+
+/obj/item/clothing/head/helmet/f13/power_armor/attackby(obj/item/I, mob/living/carbon/human/user, params)
+	if(ispath(salvaged_type))
+		switch(salvage_step)
+			if(0)
+				// Salvage
+				if(istype(I, /obj/item/screwdriver))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the helmet before salvaging it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You begin unsecuring the cover...</span>")
+					if(I.use_tool(src, user, 60, volume=50))
+						salvage_step = 1
+						to_chat(user, "<span class='notice'>You unsecure the cover.</span>")
+					return
+			if(1)
+				// Salvage
+				if(istype(I, /obj/item/wrench))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the helmet before salvaging it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You begin disconnecting the connection ports...</span>")
+					if(I.use_tool(src, user, 80, volume=50))
+						salvage_step = 2
+						to_chat(user, "<span class='notice'>You disconnect the connection ports.</span>")
+					return
+				// Fix
+				if(istype(I, /obj/item/screwdriver))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the helmet before fixing it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You begin securing the cover...</span>")
+					if(I.use_tool(src, user, 60, volume=50))
+						salvage_step = 0
+						to_chat(user, "<span class='notice'>You secure the cover.</span>")
+					return
+			if(2)
+				// Salvage
+				if(istype(I, /obj/item/wirecutters))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the helmet before salvaging it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You begin disconnecting wires...</span>")
+					if(I.use_tool(src, user, 60, volume=70))
+						to_chat(user, "<span class='notice'>You finish salvaging the helmet.</span>")
+						var/obj/item/ST = new salvaged_type(src)
+						user.put_in_hands(ST)
+						qdel(src)
+					return
+				// Fix
+				if(istype(I, /obj/item/wrench))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the helmet before fixing it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You try to anchor connection ports to the frame...</span>")
+					if(I.use_tool(src, user, 80, volume=60))
+						salvage_step = 1
+						to_chat(user, "<span class='notice'>You re-connect connection ports.</span>")
+					return
+	return ..()
+
+/obj/item/clothing/head/helmet/f13/power_armor/examine(mob/user)
+	. = ..()
+	if(ispath(salvaged_type))
+		. += salvage_hint()
+
+/obj/item/clothing/head/helmet/f13/power_armor/proc/salvage_hint()
+	switch(salvage_step)
+		if(0)
+			return "<span class='notice'>The metal cover can be <i>screwed</i> open.</span>"
+		if(1)
+			return "<span class='notice'>The cover is <i>screwed</i> open with connection ports <i>bolted down</i>.</span>"
+		if(2)
+			return "<span class='warning'>The connections ports have been <i>unanchored</i> and only <i>wires</i> remain.</span>"
+
+// Recycle power armor helmet with blowtorch (welder ok fine)
+/obj/item/clothing/head/helmet/f13/power_armor/welder_act(mob/living/user, obj/item/I)
+	user.visible_message("[user] begins recycling the [src].", \
+			"<span class='notice'>You begin cutting the [src] apart.</span>", \
+			"<span class='italics'>You hear the noise of a blowtorch working.</span>")
+	if(I.use_tool(src, user, 80, volume=50, amount=15))
+		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 5)
+		qdel(src)
+		to_chat(user, "<span class='notice'>You salvage armor plates from the [src].</span>")
+	else
+		return ..()
+
 /obj/item/clothing/head/helmet/f13/power_armor/t45b
-	name = "salvaged T-45b helmet"
-	desc = "It's a salvaged T-45b power armor helmet."
+	name = "T-45b helmet"
+	desc = "It's a T-45b power armor helmet."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 40)
-	requires_training = FALSE
-	powered = FALSE
-
-/obj/item/clothing/head/helmet/f13/power_armor/ncr_t45b
-	name = "ncr salvaged T-45b helmet"
-	desc = "It's an NCR salvaged T-45b power armor helmet, better repaired than regular salvaged PA, and decorated with the NCR flag and other markings for an NCR Heavy Trooper."
-	icon_state = "t45bhelmet_ncr"
-	item_state = "t45bhelmet_ncr"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 24, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 40)
-	requires_training = FALSE
-	powered = FALSE
-
-/obj/item/clothing/head/helmet/f13/power_armor/t45b/restored
-	name = "restored T-45b helmet"
-	desc = "It's a restored T-45b power armor helmet."
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 40)
-	requires_training = TRUE
-	powered = TRUE
-
-/obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
-	name = "raider T-45b power helmet"
-	desc = "a raider's attempt to duplicate a power armor helmet. The result is a fuzed mass of metal and ceramic that nonetheless provides protection"
-	icon_state = "raiderpa_helm"
-	item_state = "raiderpa_helm"
-	armor = list("melee" = 65, "bullet" = 55, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 40)
-	requires_training = FALSE
-	powered = FALSE
-	slowdown = 0.05
-
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
@@ -305,8 +395,7 @@
 	item_state = "t45dhelmet0"
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 25, "bomb" = 65, "bio" = 75, "rad" = 80, "fire" = 85, "acid" = 30, "wound" = 40)
-//	armor_block_chance = 60
-//	deflection_chance = 10 //20% chance to block damage from blockable bullets and redirect the bullet at a random angle
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/update_icon_state()
 	icon_state = "t45dhelmet[light_on]"
@@ -320,22 +409,14 @@
 	icon_state = "t45dhelmet[light_on]"
 	item_state = "t45dhelmet[light_on]"
 
-/obj/item/clothing/head/helmet/f13/power_armor/hotrod
-	name = "hotrod T-45b power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
-	icon_state = "t45hotrod_helm"
-	item_state = "t45hotrod_helm"
-	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0, "wound" = 40)
-	requires_training = FALSE
-	powered = FALSE
-
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 27, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 70)
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 27, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 70)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/update_icon_state()
 	icon_state = "t51bhelmet[light_on]"
@@ -354,18 +435,19 @@
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
 	icon_state = "t60helmet0"
 	item_state = "t60helmet0"
-	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0, "wound" = 80)
+	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 80)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t60
+
+/obj/item/clothing/head/helmet/f13/power_armor/t60/update_icon_state()
+	icon_state = "t60helmet[light_on]"
+	item_state = "t60helmet[light_on]"
 
 /obj/item/clothing/head/helmet/f13/power_armor/t60/pineapple
 	name = "degraded T-60a power helmet"
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player. This suit is heavily degraded." //reskin of head knight armor
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
-
-
-/obj/item/clothing/head/helmet/f13/power_armor/t60/update_icon_state()
-	icon_state = "t60helmet[light_on]"
-	item_state = "t60helmet[light_on]"
+	salvaged_type = null
 
 /obj/item/clothing/head/helmet/f13/power_armor/excavator
 	name = "excavator power helmet"
@@ -374,21 +456,19 @@
 	item_state = "excavator"
 	armor = list("melee" = 80, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 80, "wound" = 80)
 
-
 /obj/item/clothing/head/helmet/f13/power_armor/advanced
 	name = "advanced power helmet"
 	desc = "It's an advanced power armor MK1 helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 35, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0, "wound" = 90)
-
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 35, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 90)
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire
 	name = "hellfire power armor"
 	desc = "A deep black helmet of Enclave-manufactured heavy power armor with yellow ballistic glass, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no other helmet rivals it's strength."
 	icon_state = "hellfirehelm"
 	item_state = "hellfirehelm"
-	armor = list("melee" = 85, "bullet" = 85, "laser" = 87, "energy" = 37, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0, "wound" = 100)
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 87, "energy" = 37, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 100)
 
 
 //Part of the peacekeeper enclave stuff, adjust values as needed.
@@ -398,8 +478,9 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	slowdown = 0.1
-	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0, "wound" = 75)
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02
 
 
 //Generic Tribal - For Wayfarer specific, see f13factionhead.dm
