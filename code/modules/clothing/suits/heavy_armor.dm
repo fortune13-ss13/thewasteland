@@ -120,7 +120,7 @@
 	icon_state = "t45d_salvaged"
 	item_state = "t45d_salvaged"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 65, "rad" = 40, "fire" = 70, "acid" = 25, "wound" = 40)
-	slowdown = 0.85
+	slowdown = 0.9
 
 // T-51B
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
@@ -129,7 +129,7 @@
 	icon_state = "t51b_salvaged"
 	item_state = "t51b_salvaged"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 40)
-	slowdown = 0.85
+	slowdown = 0.9
 
 // T-60A
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
@@ -138,7 +138,7 @@
 	icon_state = "t60_salvaged"
 	item_state = "t60_salvaged"
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 65, "energy" = 30, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 45)
-	slowdown = 0.8
+	slowdown = 0.9
 
 // Advanced
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/advanced
@@ -147,7 +147,7 @@
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 70, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)
-	slowdown = 0.85
+	slowdown = 0.9
 
 ////////////
 // LEGION //
