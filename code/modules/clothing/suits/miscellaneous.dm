@@ -403,7 +403,7 @@
 
 /obj/item/clothing/suit/jacket/flannel/brown
 	name = "brown flannel jacket"
-	desc = Comfy and supposedly flammable."
+	desc = "Comfy and supposedly flammable."
 	icon_state = "flannel_brown"
 	item_state = "flannel_brown"
 
