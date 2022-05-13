@@ -409,6 +409,13 @@
 	icon_state = "t45dhelmet[light_on]"
 	item_state = "t45dhelmet[light_on]"
 
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/excavator
+	name = "excavator power helmet"
+	desc = "The helmet of the excavator power armor suit."
+	icon_state = "excavator"
+	item_state = "excavator"
+	armor = list("melee" = 80, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 80, "wound" = 80)
+
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
@@ -449,13 +456,6 @@
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player. This suit is heavily degraded." //reskin of head knight armor
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 	salvaged_type = null
-
-/obj/item/clothing/head/helmet/f13/power_armor/excavator
-	name = "excavator power helmet"
-	desc = "The helmet of the excavator power armor suit."
-	icon_state = "excavator"
-	item_state = "excavator"
-	armor = list("melee" = 80, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 80, "wound" = 80)
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced
 	name = "Enclave power armor helmet"
