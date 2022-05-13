@@ -126,7 +126,7 @@
 	if(LAZYLEN(salvage_loot) && (W.tool_behaviour == salvage_tool_behavior))
 		user.visible_message("[user] begins recycling the [src].", \
 				"<span class='notice'>You begin recycling the [src].</span>", \
-				"<span class='italics'>You hear the noise of a saw cutting through metal and ceramic.</span>")
+				"<span class='italics'>You hear the noise of a [salvage_tool_behavior] working on metal and ceramic.</span>")
 		W.play_tool_sound(get_turf(src))
 		if(!do_after(user, 60, TRUE, src))
 			return
