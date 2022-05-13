@@ -131,7 +131,7 @@
 		if(!do_after(user, 60, TRUE, src))
 			return
 		drop_salvage()
-		to_chat(user, "<span class='notice'>You finish salvaging \the [src].</span>")
+		to_chat(user, "<span class='notice'>You finish recycling \the [src].</span>")
 		qdel(src)
 		return TRUE
 
@@ -307,7 +307,7 @@
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
 		. += "<span class='notice'>It has a <a href='?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.</span>"
 	if(salvage_tool_behavior && LAZYLEN(salvage_loot))
-		. += "<span class='notice'>It can be salvaged for materials using [salvage_tool_behavior].</span>"
+		. += "<span class='notice'>It can be recycled for materials using [salvage_tool_behavior].</span>"
 
 /obj/item/clothing/Topic(href, href_list)
 	. = ..()
