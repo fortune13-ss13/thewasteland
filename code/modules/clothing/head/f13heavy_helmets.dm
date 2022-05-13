@@ -52,25 +52,23 @@
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 65, "rad" = 40, "fire" = 70, "acid" = 35, "wound" = 40)
-	slowdown = 0.05
 
 // T-51B
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
-	name = "salvaged T-51b power armor"
+	name = "salvaged T-51b helmet"
 	desc = "It's a salvaged T-51b power armor helmet."
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 40)
-	slowdown = 0.05
 
 // T-60A
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t60
-	name = "salvaged T-51b helmey"
+	name = "salvaged T-60a helmet"
 	desc = "It's a salvaged T-60a power armor helmet."
 	icon_state = "t60helmet0"
 	item_state = "t60helmet0"
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 65, "energy" = 30, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 45)
-	slowdown = 0.05
+	slowdown = 0.15
 
 // Advanced
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/advanced
@@ -79,4 +77,4 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 70, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)
-	slowdown = 0.1
+	slowdown = 0.25

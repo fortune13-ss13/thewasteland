@@ -583,12 +583,19 @@
 	else
 		return ..()
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45b
+	name = "T-45b power armor"
+	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
+	slowdown = 0.3 //+0.05 from helmet = total 0.35
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 65)
+	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	slowdown = 0.25
+	slowdown = 0.35 //+0.05 from helmet = total 0.40
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 25, "bomb" = 65, "bio" = 75, "rad" = 80, "fire" = 85, "acid" = 30, "wound" = 70)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45d
 
@@ -597,7 +604,6 @@
 	desc = "A classic set of T-45d Power Armour only to be used in armed combat, it signifies the Head Knight and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to his call, for he is the Head Knight and your safety is his duty."
 	icon_state = "t45dkc"
 	item_state = "t45dkc"
-	slowdown = 0.16
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/bos
 	name = "Brotherhood T-45d Power Armour"
@@ -611,12 +617,19 @@
 	icon_state = "sierra"
 	item_state = "sierra"
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/excavator
+	name = "excavator power armor"
+	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
+	icon_state = "excavator"
+	item_state = "excavator"
+	armor = list("melee" = 80, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 80, "wound" = 80)
+
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	slowdown = 0.25 //+0.05 from helmet = total 0.255
+	slowdown = 0.4 //+0.05 from helmet = total 0.45
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 72)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
 
@@ -625,15 +638,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
-	slowdown = 0.25 //+0.05 from helmet = total 0.30
-	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 75)
-
-/obj/item/clothing/suit/armor/f13/power_armor/hmidwest
-	name = "Hardened Midwestern power armor"
-	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
-	icon_state = "midwestgrey_pa"
-	item_state = "midwestgrey_pa"
-	slowdown = 0.25 //+0.05 from helmet = total 0.30
+	slowdown = 0.45 //+0.05 from helmet = total 0.5
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 75)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/bos
@@ -647,7 +652,7 @@
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
-	slowdown = 0.2
+	slowdown = 0.5 //+0.1 from helmet = total 0.6
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 80)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
 
@@ -657,20 +662,12 @@
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 	salvaged_type = null
 
-/obj/item/clothing/suit/armor/f13/power_armor/excavator
-	name = "excavator power armor"
-	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
-	icon_state = "excavator"
-	item_state = "excavator"
-	slowdown = 0.4
-	armor = list("melee" = 80, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 80, "wound" = 80)
-
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "Enclave power armor"
 	desc = "An advanced suit of armor used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
 	icon_state = "advanced"
 	item_state = "advanced"
-	slowdown = 0.5 //+0.5 from helmet = total 1
+	slowdown = 0.5 //+0.2 from helmet = total 0.7
 	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 80)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/advanced // Oh the misery
 

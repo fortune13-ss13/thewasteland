@@ -180,7 +180,7 @@
 	armor_block_chance = 40
 	deflection_chance = 10 //10% chance to block damage from blockable bullets and redirect the bullet at a random angle. Not a heavy combat model
 
-/obj/item/clothing/suit/armor/f13/power_armor/excavator
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/excavator
 	name = "excavator power armor"
 	desc = "(VIII) Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
 	icon_state = "excavator"

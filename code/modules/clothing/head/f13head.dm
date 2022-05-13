@@ -380,6 +380,14 @@
 	else
 		return ..()
 
+/obj/item/clothing/head/helmet/f13/power_armor/t45b
+	name = "T-45b helmet"
+	desc = "It's a T-45b power armor helmet."
+	icon_state = "t45bhelmet"
+	item_state = "t45bhelmet"
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 40)
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
+
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
@@ -427,6 +435,7 @@
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
 	icon_state = "t60helmet0"
 	item_state = "t60helmet0"
+	slowdown = 0.1
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 80)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t60
@@ -453,7 +462,7 @@
 	desc = "The Enclave Mark II Powered Combat Armor helmet. It looks somewhat threatening."
 	icon_state = "advanced"
 	item_state = "advanced"
-	slowdown = 0.5
+	slowdown = 0.2
 	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/advanced
 
