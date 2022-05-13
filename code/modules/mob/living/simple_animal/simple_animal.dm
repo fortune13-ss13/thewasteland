@@ -356,8 +356,8 @@
 
 /mob/living/simple_animal/proc/drop_loot()
 	for(var/drop in loot)
-		new drop(loc)
-
+		for(var/i in 1 to loot[drop])
+			new drop(loc)
 
 /mob/living/simple_animal/death(gibbed)
 	movement_type &= ~FLYING

@@ -478,5 +478,7 @@ BLIND     // can't see anything
 
 /// The results of salvaging the clothing
 /obj/item/clothing/proc/drop_salvage()
+	var/atom/dropTurf = drop_location()
 	for(var/drop in salvage_loot)
-		new drop(drop_location())
+		for(var/i in 1 to salvage_loot[drop]) // So "/obj/item/stuff = 3" drops exactly 3 times
+			new drop(dropTurf)
