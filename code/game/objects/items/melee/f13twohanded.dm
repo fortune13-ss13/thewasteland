@@ -35,7 +35,7 @@
 
 // Legion Axe		Keywords: Damage 30/60 do not change these numbers
 /obj/item/twohanded/legionaxe
-w
+	name = "War Honed Axe"
 	desc = "Heavy fireman axe from the old world, Restored to working order by legion craftsmen. Excellent for smashing doors or heads."
 	icon_state = "legionaxe"
 	icon_prefix = "legionaxe"
