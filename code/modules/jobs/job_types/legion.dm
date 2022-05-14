@@ -310,7 +310,7 @@ commented out pending rework*/
 		/datum/outfit/loadout/decvetbull,	// Supersledge, 10mm SMG, Smokebomb
 		/datum/outfit/loadout/decvetwolf,	// Thermic lance, Carl Gustaf, Extra Bitter
 		/datum/outfit/loadout/decvetsnake, // Brush gun, Ripper, Extra Bitters
-		/datum/outfit/loadout/decvetbrave, // FNFAL, .44 snubnose
+		/datum/outfit/loadout/decvetbrave, // Crossbow, .44 snubnose
 		)
 
 
@@ -378,9 +378,9 @@ commented out pending rework*/
 /datum/outfit/loadout/decvetbrave
 	name = "Mark of the Brave"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/decan
-	suit_store = /obj/item/gun/ballistic/automatic/fnfal
+	suit_store = /obj/item/gun/ballistic/bow/crossbow
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762 = 2,
+		/obj/item/ammo_casing/caseless/arrow/broadhead = 5,
 		/obj/item/gun/ballistic/revolver/m29/snub = 1,
 		/obj/item/ammo_box/m44 = 1,
 		)
@@ -579,7 +579,7 @@ commented out pending rework*/
 	exp_requirements = 720
 
 	loadout_options = list(
-		/datum/outfit/loadout/vexbear,	//	Classic FO13 Vex with his ripper: .223 pistol, Ripper
+		/datum/outfit/loadout/vexbear,	//	"""Classic""" FO13 Vex with his ripper: Tiger Claw and Berserker Martial Art
 		/datum/outfit/loadout/vexfox,	//	Classic New Vegas Vex with his 10mm SMG: 14mm SMG, Spartha
 		)
 
@@ -637,22 +637,22 @@ commented out pending rework*/
 		/obj/item/melee/onehanded/machete/spatha = 1,
 		)
 
-//EXPLORER
+//SCOUT
 
-/datum/job/CaesarsLegion/Legionnaire/f13explorer
-	title = "Legion Explorer"
-	flag = F13EXPLORER
+/datum/job/CaesarsLegion/Legionnaire/f13scout
+	title = "Legion Scout"
+	flag = F13SCOUT
 	total_positions = 3
 	spawn_positions = 3
-	description = "Scout the area, secure key points, but do not ignore orders or wordlessly die some place. A good explorer helps his unit by taking initiative and helping the commander without needing micro-managment."
+	description = "Scout the area, secure key points, but do not ignore orders or wordlessly die some place. A good scout helps his unit by taking initiative and helping the commander without needing micro-managment."
 	supervisors = "the Veteran Decanus and Centurion must be obeyed, and as always, respect must be given to other Decanus. You are not a officer, but you are a specialist."
-	display_order = JOB_DISPLAY_ORDER_EXPLORER
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
+	display_order = JOB_DISPLAY_ORDER_SCOUT
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13scout
 	exp_requirements = 300
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
-		/datum/outfit/loadout/expambusher,	// MP5, Bottlecap mine
-		/datum/outfit/loadout/expsniper,	// SKS, Smokebomb
+		/datum/outfit/loadout/scoutambusher,	// MP5, Bottlecap mine
+		/datum/outfit/loadout/scoutsniper,	// SKS, Smokebomb
 		)
 
 	matchmaking_allowed = list(
@@ -664,7 +664,7 @@ commented out pending rework*/
 			),
 		)
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13scout/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	if(visualsOnly)
 		return
@@ -674,9 +674,9 @@ commented out pending rework*/
 
 
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
-	name = "Legion Explorer"
-	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13scout
+	name = "Legion Scout"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13scout
 	id = /obj/item/card/id/dogtag/legprime
 	suit = /obj/item/clothing/suit/armor/f13/legion/vet/explorer
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/explorer
@@ -692,7 +692,7 @@ commented out pending rework*/
 		/obj/item/restraints/handcuffs = 1,
 		)
 
-/datum/outfit/loadout/expambusher
+/datum/outfit/loadout/scoutambusher
 	name = "Ambusher"
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	glasses = /obj/item/clothing/glasses/sunglasses/big
@@ -703,7 +703,7 @@ commented out pending rework*/
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		)
 
-/datum/outfit/loadout/expsniper
+/datum/outfit/loadout/scoutsniper
 	name = "Sniper"
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	suit_store = /obj/item/gun/ballistic/automatic/m1garand/sks
@@ -933,6 +933,7 @@ commented out pending rework*/
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_POOR_AIM	, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 	name = "Recruit Legionnaire"
@@ -1262,21 +1263,21 @@ commented out pending rework*/
 /*
 Post Scriptum
 Plans: Add recipes/traits to keep refining support roles, Forgemaster done, others will need some minor tweaking. Planned is making the medicus more of a improvised surgery master, using primitive tools to good effect, because its interesting and unique.
-Venator  - Zero slots, role built on cloning vet ranger, linear just vastly better than all but the Cent, snowflakey in command when it suits them, messes up the chain of command thats already messy for Legion. FUCK IT ENABLE IT
+Explorer  - Zero slots, role built on cloning vet ranger, linear just vastly better than all but the Cent, snowflakey in command when it suits them, messes up the chain of command thats already messy for Legion. FUCK IT ENABLE IT
 */
-/datum/job/CaesarsLegion/Legionnaire/f13venator
-	title = "Legion Venator"
-	flag = F13VENATOR
+/datum/job/CaesarsLegion/Legionnaire/f13explorer
+	title = "Legion Explorer"
+	flag = F13EXPLORER
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the Venator -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is special operations, not fighting alongside the hordes of the Legion."
+	description = "You are the Explorer -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is to scout the area for your fellow Legionnaires, do not fighting alongside the hordes of the Legion."
 	supervisors = "the Centurion"
 	selection_color = "#ffdddd"
-	display_order = JOB_DISPLAY_ORDER_VENATOR
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
+	display_order = JOB_DISPLAY_ORDER_EXPLORER
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	exp_requirements = 1500
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -1285,8 +1286,8 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	name = "Legion Venator"
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
+	name = "Legion Explorer"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id = /obj/item/card/id/dogtag/legvenator
 	suit = /obj/item/clothing/suit/armor/f13/legion/venator
@@ -1296,7 +1297,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	glasses = /obj/item/clothing/glasses/night/polarizing
 	ears = /obj/item/radio/headset/headset_legion
 	r_pocket = /obj/item/binoculars
-	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper/sniperexplorer
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308 = 3,
 		/obj/item/melee/onehanded/machete/gladius = 1,

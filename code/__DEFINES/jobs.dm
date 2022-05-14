@@ -64,14 +64,14 @@
 #define F13LOGISTICSOFFICER (1<<3)
 #define F13MEDICALOFFICER (1<<4)
 #define	F13FIRSTSERGEANT (1<<5)
-#define F13HEAVYTROOPER	(1<<6)
+#define F13HEAVYTROOPER	 (1<<6)
 #define F13DRILLSERGEANT (1<<7)
 #define F13SERGEANT		 (1<<8)
 #define F13CORPORAL		 (1<<9)
 #define F13COMBATMEDIC	 (1<<10)
 #define F13COMBATENGINEER (1<<11)
 #define F13TROOPER		 (1<<12)
-#define F13CONSCRIPT    (1<<13)
+#define F13CONSCRIPT     (1<<13)
 #define F13REARECHELON	 (1<<14)
 #define F13NCROFFDUTY    (1<<15)
 #define F13VETRANGER	 (1<<16)
@@ -90,13 +90,13 @@
 #define F13DECANVET		(1<<6)
 #define F13VEXILLARIUS	(1<<7)
 #define F13EXPLORER		(1<<8)
-#define F13VENATOR		(1<<9)
+#define F13SCOUT		(1<<9)
 #define F13VETLEGIONARY	(1<<10)
 #define F13LEGIONARY	(1<<11)
 #define F13RECRUITLEG	(1<<12)
-#define F13AUXILIA	(1<<13)
+#define F13AUXILIA		(1<<13)
 #define F13LEGIONSLAVE	(1<<14)
-#define F13IMMUNE	(1<<15)
+#define F13IMMUNE		(1<<15)
 #define F13CAMPFOLLOWER (1<<16)
 #define F13SLAVEMASTER	(1<<17)
 
@@ -159,15 +159,16 @@
 #define F13CULTLEADER	(1<<9)
 #define F13TRIBAL		(1<<10)
 
-#define ENCLAVE			(1<<10)
+#define ENCLAVE			(1<<9)
 
-#define F13USLT			(1<<0)
-#define F13USGYSGT		(1<<1)
-#define F13USSGT		(1<<2)
-#define F13USSCIENTIST	(1<<3)
-#define F13USSPECIALIST	(1<<4)
-#define F13USPRIVATE	(1<<5)
-#define F13USBDUTY      (1<<6)
+#define F13USCPT		(1<<0)
+#define F13USLT			(1<<1)
+#define F13USGYSGT		(1<<2)
+#define F13USSGT		(1<<3)
+#define F13USSCIENTIST	(1<<4)
+#define F13USSPECIALIST	(1<<5)
+#define F13USPRIVATE	(1<<6)
+#define F13USBDUTY      (1<<7)
 
 #define TRIBAL			(1<<10)
 
@@ -262,7 +263,7 @@
 #define JOB_DISPLAY_ORDER_DECANVET 57
 #define JOB_DISPLAY_ORDER_VEXILLARIUS 58
 #define JOB_DISPLAY_ORDER_EXPLORER 59
-#define JOB_DISPLAY_ORDER_VENATOR 60
+#define JOB_DISPLAY_ORDER_SCOUT 60
 #define JOB_DISPLAY_ORDER_VETLEGIONARY 61
 #define JOB_DISPLAY_ORDER_LEGIONARY 62
 #define JOB_DISPLAY_ORDER_RECRUITLEG 63

@@ -1031,8 +1031,8 @@
 	icon_state = "gold_sniper"
 	item_state = "gold_sniper"
 
-/obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
-	name = "Venator sniper rifle"
+/obj/item/gun/ballistic/automatic/marksman/sniper/sniperexplorer
+	name = "Explorer sniper rifle"
 	desc = "The customized sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
@@ -1275,13 +1275,13 @@
 	icon_state = "fnfal"
 	item_state = "fnfal"
 	force = 20
-	extra_damage = 28
+	extra_damage = 30
 	fire_delay = 3.5
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 3
 	mag_type = /obj/item/ammo_box/magazine/m762
-	spread = 16 //infamously hard to control on full-auto
+	spread = 10
 	recoil = 0.25
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
