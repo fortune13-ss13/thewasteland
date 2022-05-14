@@ -667,10 +667,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
 "aQB" = (
-/obj/structure/rack,
-/obj/item/storage/box/masks,
-/obj/item/storage/box/gloves,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
+/obj/structure/table/reinforced,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -1184,8 +1183,8 @@
 /area/f13/legion)
 "bxq" = (
 /mob/living/simple_animal/hostile/venus_human_trap{
-	faction = list("hostile","vines","plants","cazador");
 	aggro_vision_range = 12;
+	faction = list("hostile","vines","plants","cazador");
 	vision_range = 12
 	},
 /turf/open/indestructible/ground/inside/mountain,
@@ -2360,11 +2359,12 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "cVI" = (
-/obj/structure/table/glass,
-/obj/item/pen,
-/obj/item/pen,
+/obj/machinery/iv_drip,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/f13{
-	icon_state = "bluerustysolid"
+	icon_state = "floorrusty"
 	},
 /area/f13/followers)
 "cWF" = (
@@ -3403,14 +3403,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
 "dYl" = (
-/obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "fadmin";
-	name = "Door lockdown button";
-	pixel_x = -5
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/open/floor/f13{
-	icon_state = "bluerustysolid"
+	icon_state = "floorrusty"
 	},
 /area/f13/followers)
 "dYt" = (
@@ -4158,12 +4155,13 @@
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
 "eId" = (
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
 /obj/structure/table/reinforced,
-/obj/item/folder{
-	pixel_x = -4
-	},
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
 /turf/open/floor/f13{
-	icon_state = "bluerustysolid"
+	icon_state = "floorrusty"
 	},
 /area/f13/followers)
 "eIo" = (
@@ -4531,12 +4529,9 @@
 /turf/open/water,
 /area/f13/wasteland)
 "fge" = (
-/obj/structure/table,
-/obj/item/gun/energy/laser/wattz/recharger,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/followers)
+/mob/living/simple_animal/crab/evil/kreb,
+/turf/open/floor/wood/f13/old,
+/area/f13/city)
 "fgq" = (
 /obj/structure/table/wood/settler,
 /obj/item/papercutter,
@@ -4620,9 +4615,9 @@
 /area/f13/bunker)
 "foH" = (
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper{
+	faction = list("cazador");
 	health = 200;
-	name = "temple spider";
-	faction = list("cazador")
+	name = "temple spider"
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -4660,7 +4655,7 @@
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds,
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds,
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds,
-/obj/effect/spawner/lootdrop/weapons/experimental,
+/obj/effect/spawner/lootdrop/f13/medical/rnd/good,
 /obj/structure/closet,
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
@@ -4670,13 +4665,12 @@
 /turf/open/floor/holofloor/carpet,
 /area/f13/legion)
 "frs" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/medical/rnd/mid,
 /turf/open/floor/f13{
-	icon_state = "floorrusty"
+	icon_state = "freezerfloor"
 	},
-/area/f13/followers)
+/area/f13/city)
 "fsR" = (
 /obj/structure/timeddoor,
 /turf/open/floor/plating/tunnel{
@@ -5057,9 +5051,9 @@
 /area/f13/legion)
 "fRV" = (
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse/ice{
+	faction = list("cazador");
 	health = 250;
-	name = "giant temple spider";
-	faction = list("cazador")
+	name = "giant temple spider"
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -5667,12 +5661,6 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/bunker)
-"gGK" = (
-/obj/structure/dresser,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/followers)
 "gHc" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 4
@@ -6163,17 +6151,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
-"hmv" = (
-/obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/fire,
-/obj/structure/table/reinforced,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/followers)
 "hns" = (
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/outside/dirt,
@@ -7686,15 +7663,6 @@
 	icon_state = "rubblepillar"
 	},
 /area/f13/bunker)
-"jla" = (
-/obj/structure/bookcase/manuals,
-/obj/item/book/granter/trait/midsurgery,
-/obj/item/book/granter/trait/chemistry,
-/obj/item/book/granter/trait/lowsurgery,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "jld" = (
 /obj/item/stock_parts/cell/ammo/ec,
 /obj/effect/decal/cleanable/dirt,
@@ -7857,12 +7825,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/ncr)
-"jtm" = (
-/obj/structure/filingcabinet,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "jtF" = (
 /obj/structure/table,
 /obj/item/coin/diamond,
@@ -8476,13 +8438,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
-"kcy" = (
-/obj/structure/table/glass,
-/obj/item/paper_bin,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "kdm" = (
 /obj/structure/closet/crate/bin,
 /obj/machinery/light{
@@ -8639,13 +8594,6 @@
 	},
 /turf/open/floor/wood/f13/old,
 /area/f13/city)
-"kpx" = (
-/obj/structure/chair/comfy/shuttle,
-/obj/effect/landmark/start/f13/followersadministrator,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "kqh" = (
 /obj/structure/decoration/warning{
 	name = "WARNING: NO MANS LAND AHEAD PVP ZONE"
@@ -9048,9 +8996,9 @@
 	icon_state = "stickyweb2"
 	},
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse/midwife{
+	faction = list("cazador");
 	health = 300;
-	name = "giant midwife temple spider";
-	faction = list("cazador")
+	name = "giant midwife temple spider"
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -9095,9 +9043,9 @@
 /area/f13/followers)
 "kQm" = (
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper{
+	faction = list("cazador");
 	health = 200;
-	name = "temple spider";
-	faction = list("cazador")
+	name = "temple spider"
 	},
 /obj/structure/spider/stickyweb{
 	icon_state = "stickyweb2"
@@ -9272,14 +9220,6 @@
 "lbQ" = (
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legion)
-"lcN" = (
-/obj/structure/chair/office/dark{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "lcX" = (
 /turf/open/floor/f13{
 	icon_state = "stagestairs"
@@ -9316,28 +9256,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
-"leP" = (
-/obj/structure/table/reinforced,
-/obj/item/flashlight/lamp,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "lfj" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker)
-"lfu" = (
-/obj/structure/table/reinforced,
-/obj/machinery/computer/terminal{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "lfU" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_4"
@@ -9471,19 +9395,6 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker)
-"lmk" = (
-/obj/machinery/door/airlock/medical{
-	name = "Clinic";
-	req_one_access_txt = "124"
-	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "fadmin";
-	name = "Follower Admin shutters"
-	},
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "lmH" = (
 /obj/structure/sink{
 	dir = 8;
@@ -10295,24 +10206,6 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
-"mcl" = (
-/obj/structure/closet{
-	name = "implants locker"
-	},
-/obj/item/organ/cyberimp/chest/nutriment,
-/obj/item/organ/cyberimp/chest/nutriment,
-/obj/item/organ/cyberimp/chest/nutriment,
-/obj/item/organ/cyberimp/chest/nutriment/plus,
-/obj/item/organ/cyberimp/eyes/hud/medical,
-/obj/item/organ/cyberimp/eyes/hud/medical,
-/obj/item/organ/cyberimp/eyes/hud/medical,
-/obj/item/organ/cyberimp/eyes/hud/medical,
-/obj/item/organ/cyberimp/eyes/hud/medical,
-/obj/item/organ/cyberimp/eyes/hud/medical,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "mcC" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/wreck/trash/three_barrels,
@@ -11102,21 +10995,11 @@
 	icon_state = "rubble"
 	},
 /area/f13/wasteland)
-"mYj" = (
-/obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/o2,
-/obj/structure/table/reinforced,
-/obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/toxin,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/followers)
 "mYC" = (
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse/midwife{
+	faction = list("cazador");
 	health = 300;
-	name = "giant midwife temple spider";
-	faction = list("cazador")
+	name = "giant midwife temple spider"
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -11348,14 +11231,18 @@
 "npi" = (
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds,
-/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/effect/spawner/lootdrop/f13/medical/rnd/good,
 /obj/structure/closet,
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
 /area/f13/city)
 "nqo" = (
-/obj/structure/closet/crate/freezer/blood,
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/brute,
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/ancient,
+/obj/item/storage/firstaid/ancient,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -12131,11 +12018,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
 "omv" = (
-/obj/item/storage/firstaid/brute,
-/obj/item/storage/firstaid/brute,
-/obj/structure/table/reinforced,
-/obj/item/storage/firstaid/ancient,
-/obj/item/storage/firstaid/ancient,
+/obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -12423,8 +12306,8 @@
 "oIv" = (
 /mob/living/simple_animal/hostile/jungle/seedling{
 	faction = list("cazador");
-	name = "temple seedling";
-	health = 250
+	health = 250;
+	name = "temple seedling"
 	},
 /obj/structure/spacevine{
 	name = "vines"
@@ -13382,15 +13265,13 @@
 /obj/structure/closet/crate/freezer{
 	storage_capacity = 30
 	},
-/obj/item/organ/heart,
-/obj/item/organ/heart,
-/obj/item/organ/heart,
-/obj/item/organ/heart,
 /obj/item/organ/eyes/robotic,
-/obj/item/organ/heart/cybernetic/upgraded,
 /obj/item/organ/liver/cybernetic/upgraded,
 /obj/item/organ/lungs/cybernetic/tier2,
 /obj/item/organ/tongue/robot,
+/obj/item/organ/heart/cybernetic/upgraded,
+/obj/item/organ/stomach/ethereal,
+/obj/item/organ/cyberimp/arm/surgery,
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
@@ -13534,8 +13415,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "pPi" = (
-/obj/machinery/light/small,
-/obj/structure/closet/crate/freezer/blood,
+/obj/structure/rack,
+/obj/item/storage/box/masks,
+/obj/item/storage/box/gloves,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -13837,12 +13720,12 @@
 	dir = 1
 	},
 /mob/living/simple_animal/hostile/deathclaw/power_armor{
-	faction = list("cazador");
 	aggro_vision_range = 30;
-	vision_range = 30;
-	name = "power armored genetically altered deathclaw";
+	desc = "A massive, reptillian creature with powerful muscles, razor-sharp claws, and aggression to match. This one in particular has power armor and seems to have a much of an aggression tone, this seems to be more an alpha deathclaw rather than a legendary. Some tribals would consider this an razorclaw to many ways";
+	faction = list("cazador");
 	melee_damage_lower = 80;
-	desc = "A massive, reptillian creature with powerful muscles, razor-sharp claws, and aggression to match. This one in particular has power armor and seems to have a much of an aggression tone, this seems to be more an alpha deathclaw rather than a legendary. Some tribals would consider this an razorclaw to many ways"
+	name = "power armored genetically altered deathclaw";
+	vision_range = 30
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -14216,9 +14099,9 @@
 	icon_state = "stickyweb2"
 	},
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper{
+	faction = list("cazador");
 	health = 200;
-	name = "temple spider";
-	faction = list("cazador")
+	name = "temple spider"
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -15109,8 +14992,8 @@
 /area/f13/wasteland)
 "rrs" = (
 /mob/living/simple_animal/hostile/venus_human_trap{
-	faction = list("hostile","vines","plants","cazador");
 	aggro_vision_range = 12;
+	faction = list("hostile","vines","plants","cazador");
 	vision_range = 12
 	},
 /obj/structure/spacevine{
@@ -16816,13 +16699,6 @@
 /obj/structure/nest/ghoul,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
-"tlf" = (
-/obj/structure/bed,
-/obj/item/bedsheet,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/followers)
 "tlN" = (
 /obj/structure/statue/bone/rib{
 	dir = 1
@@ -17962,18 +17838,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/underground/cave)
-"uKs" = (
-/obj/structure/table/glass,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/item/clothing/glasses/hud/health/night,
-/obj/item/clothing/glasses/hud/health/night,
-/obj/item/pda,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "uKK" = (
 /obj/structure/flora/tree/joshua,
 /obj/structure/flora/grass/wasteland{
@@ -18107,12 +17971,6 @@
 /mob/living/simple_animal/hostile/supermutant/legendary,
 /turf/open/floor/wood/f13/old,
 /area/f13/city)
-"uSH" = (
-/obj/machinery/light,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "uSJ" = (
 /obj/structure/rack,
 /obj/item/clothing/glasses/meson/engine,
@@ -19542,8 +19400,8 @@
 	name = "vines"
 	},
 /mob/living/simple_animal/hostile/venus_human_trap{
-	faction = list("hostile","vines","plants","cazador");
 	aggro_vision_range = 12;
+	faction = list("hostile","vines","plants","cazador");
 	vision_range = 12
 	},
 /turf/open/indestructible/ground/inside/mountain,
@@ -25424,7 +25282,7 @@ fzi
 xrD
 dcB
 bMK
-bMK
+cVI
 rPD
 qhz
 dcB
@@ -25937,7 +25795,7 @@ fzi
 fzi
 fzi
 jXF
-hmv
+rPD
 rPD
 rPD
 nqo
@@ -26194,7 +26052,7 @@ fzi
 fzi
 fzi
 dcB
-mYj
+omv
 rPD
 rPD
 aQB
@@ -26452,9 +26310,9 @@ dlC
 jXF
 dcB
 omv
+dYl
 rPD
-rPD
-rPD
+eId
 dcB
 heT
 bYA
@@ -30304,7 +30162,7 @@ dcB
 dcB
 dcB
 dcB
-lmk
+dcB
 dcB
 dcB
 dcB
@@ -30554,18 +30412,18 @@ wxj
 wxj
 bYA
 bYA
-dcB
-fge
-gGK
-dcB
-jla
-jtm
-leP
-fzi
-mcl
-dcB
-heT
-heT
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
 heT
 heT
 heT
@@ -30811,17 +30669,17 @@ wxj
 wxj
 bYA
 bYA
-dcB
-frs
-rPD
-dcB
-sSQ
-kpx
-lfu
-lcN
-fzi
-dcB
-heT
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
 bYA
 bYA
 bYA
@@ -31068,17 +30926,17 @@ wxj
 wxj
 bYA
 bYA
-dcB
-tlf
-rPD
-fTx
-fzi
-dYl
-eId
-fzi
-uSH
-dcB
-heT
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
 bYA
 bYA
 heT
@@ -31325,17 +31183,17 @@ bYA
 bYA
 bYA
 bYA
-dcB
-dcB
-dcB
-dcB
-fzi
-fzi
-fzi
-fzi
-fzi
-dcB
-heT
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
+bYA
 bYA
 bYA
 heT
@@ -31583,16 +31441,16 @@ bYA
 bYA
 bYA
 bYA
+wxj
 bYA
 bYA
-dcB
-kcy
-cVI
-uKs
-fzi
-fzi
-dcB
-heT
+wxj
+wxj
+wxj
+wxj
+wxj
+bYA
+bYA
 bYA
 bYA
 heT
@@ -31840,16 +31698,16 @@ wxj
 bYA
 bYA
 bYA
+wxj
 bYA
 bYA
-dcB
-dcB
-dcB
-dcB
-dcB
-dcB
-dcB
-heT
+wxj
+wxj
+wxj
+wxj
+wxj
+bYA
+bYA
 bYA
 bYA
 heT
@@ -32097,16 +31955,16 @@ wxj
 bYA
 bYA
 bYA
+wxj
 bYA
 bYA
-heT
-heT
-heT
-heT
-heT
-heT
-heT
-heT
+wxj
+wxj
+wxj
+wxj
+wxj
+bYA
+bYA
 bYA
 bYA
 heT
@@ -32354,14 +32212,14 @@ wxj
 bYA
 bYA
 bYA
+wxj
 bYA
 bYA
-bYA
-bYA
-bYA
-bYA
-bYA
-bYA
+wxj
+wxj
+wxj
+wxj
+wxj
 bYA
 bYA
 bYA
@@ -34301,7 +34159,7 @@ bYA
 vKV
 vOG
 wef
-qDz
+fge
 hUZ
 vkL
 wef
@@ -37658,9 +37516,9 @@ ksx
 ymg
 xbP
 fMG
-wRZ
+frs
 sUh
-wRZ
+frs
 xdM
 fMG
 fxU
