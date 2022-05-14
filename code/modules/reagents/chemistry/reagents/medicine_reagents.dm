@@ -357,7 +357,7 @@
 
 /datum/reagent/medicine/styptic_powder/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
-		if(method in list(INGEST, VAPOR, INJECT))
+		if(method in list(INGEST, VAPOR, INJECT, TOUCH))
 			if (method == TOUCH)
 				if(show_message)
 					to_chat(M, "<span class='warning'>The pink mixture is clotting up, running down your body without effect! It stings and feels slimy!</span>")
