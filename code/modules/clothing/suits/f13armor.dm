@@ -9,7 +9,6 @@
 	equip_delay_other = 40
 	max_integrity = 250
 	resistance_flags = NONE
-	armor = list("tier" = 4, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 25)
 
 
 /obj/item/clothing/suit/armor/Initialize()
@@ -42,13 +41,6 @@
 	desc = "A combat leather jacket, outfitted with a special armored leather coat."
 	armor = list("melee" = 35, "bullet" = 22, "laser" = 22, "energy" = 15, "bomb" = 45, "bio" = 30, "rad" = 5, "fire" = 50, "acid" = 35, "wound" = 35)
 
-/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
-	name = "combat body armor"
-	icon_state = "combat_coat"
-	item_state = "combat_coat"
-	desc = "A heavy armor with ballistic inserts, sewn into a padded riot police coat."
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 35, "wound" = 45)
-	slowdown = 0.15
 
 /obj/item/clothing/suit/armor/f13/kit
 	name = "armor kit"
@@ -163,6 +155,7 @@
 	item_state = "combat_armor"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 	slowdown = 0.12
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 
 /obj/item/clothing/suit/armor/f13/combat/laserproof
 	name = "ablative combat armor"
@@ -183,21 +176,13 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-// Shredding combat armor a direct action. Use a saw.
-/obj/item/clothing/suit/armor/f13/combat/attackby(obj/item/I, mob/user, params)
-	if(I.tool_behaviour == TOOL_SAW)
-		user.visible_message("[user] begins recycling the [src] into armor plates.", \
-				"<span class='notice'>You begin recycling the [src] into armor plates.</span>", \
-				"<span class='italics'>You hear the noise of a saw cutting through metal and ceramic.</span>")
-		playsound(get_turf(src), 'sound/weapons/circsawhit.ogg', 50, TRUE)
-		if(!do_after(user, 50, TRUE, src))
-			return
-		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 4)
-		qdel(src)
-		to_chat(user, "<span class='notice'>You salvage armor plates from the [src].</span>")
-	else
-		return ..()
-
+/obj/item/clothing/suit/armor/f13/combat/riotpolice
+	name = "combat body armor"
+	icon_state = "combat_coat"
+	item_state = "combat_coat"
+	desc = "A heavy armor with ballistic inserts, sewn into a padded riot police coat."
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 35, "wound" = 45)
+	slowdown = 0.15
 
 /obj/item/clothing/suit/armor/f13/combat/mk2
 	name = "reinforced combat armor"
@@ -207,6 +192,7 @@
 	item_state = "combat_armor_mk2"
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 55)
 	slowdown = 0.15
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 
 /obj/item/clothing/suit/armor/f13/combat/mk2/dark
 	name = "reinforced combat armor"
@@ -280,6 +266,8 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 20)
+	salvage_tool_behavior = TOOL_WELDER
 	/// Cell that is currently installed in the suit
 	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/high
 	/// How much power the cell consumes each process tick
@@ -351,8 +339,9 @@
 	var/mob/living/carbon/human/user = src.loc
 	if(!user || !ishuman(user) || (user.wear_suit != src))
 		return
-	if((!cell || !cell?.use(usage_cost) || (salvage_step > 1)) && !no_power) // No cell, ran out of charge or we're in the process of being salvaged
-		remove_power(user)
+	if((!cell || !cell?.use(usage_cost) || (salvage_step > 1))) // No cell, ran out of charge or we're in the process of being salvaged
+		if(!no_power)
+			remove_power(user)
 		return
 	if(no_power) // Above didn't proc and suit is currently unpowered, meaning cell is installed and has charge - restore power
 		restore_power(user)
@@ -360,7 +349,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/proc/remove_power(mob/user)
 	if(salvage_step > 1) // Being salvaged
-		to_chat(user, "<span class='warning'>\The components in [src] require repairs!</span>")
+		to_chat(user, "<span class='warning'>Components in [src] require repairs!</span>")
 	else
 		to_chat(user, "<span class='warning'>\The [src] has ran out of charge!</span>")
 	remove_traits(user)
@@ -570,18 +559,6 @@
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
 
-// Recycle power armor with blowtorch (welder ok fine)
-/obj/item/clothing/suit/armor/f13/power_armor/welder_act(mob/living/user, obj/item/I)
-	user.visible_message("[user] begins recycling the [src].", \
-			"<span class='notice'>You begin cutting the [src] apart.</span>", \
-			"<span class='italics'>You hear the noise of a blowtorch working.</span>")
-	if(I.use_tool(src, user, 100, volume=50, amount=15))
-		new /obj/item/stack/crafting/armor_plate/ (drop_location(), 10)
-		qdel(src)
-		to_chat(user, "<span class='notice'>You salvage armor plates from the [src].</span>")
-	else
-		return ..()
-
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
@@ -624,6 +601,7 @@
 	item_state = "t51bpowerarmor"
 	slowdown = 0.25 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 72)
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51green
@@ -655,6 +633,7 @@
 	item_state = "t60powerarmor"
 	slowdown = 0.2
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 80)
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple
@@ -690,10 +669,10 @@
 
 /obj/item/clothing/suit/armor/f13/enclave/armorvest
 	name = "armored vest"
-	desc = "(VI) Efficient prewar design issued to Enclave personell."
+	desc = "Efficient prewar design issued to Enclave personell."
 	icon_state = "armor_enclave_peacekeeper"
 	item_state = "armor_enclave_peacekeeper"
-	armor = list("tier" = 6)
+	armor = list("melee" = 35, "bullet" = 50, "laser" = 30, "energy" = 30, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
 
 
 //Generic Tribal - For Wayfarer specific, see f13factionhead.dm
@@ -783,7 +762,6 @@
 	equip_delay_other = 40
 	max_integrity = 250
 	resistance_flags = NONE
-	armor = list("tier" = 2, "energy" = 16, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	togglename = "collar"
 
 /obj/item/clothing/suit/armor/f13/vaquero
@@ -1004,11 +982,11 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 
 /obj/item/clothing/suit/armor/f13/herbertranger //Armor wise, it's reskinned raider armor.
 	name = "weathered desert ranger armor"
-	desc = "(IV) A set of pre-unification desert ranger armor, made using parts of what was once USMC riot armor. It looks as if it has been worn for decades; the coat has become discoloured from years under the Mojave sun and has multiple tears and bullet holes in its leather. The armor plating itself seems to be in relatively good shape, though it could do with some maintenance."
+	desc = "A set of pre-unification desert ranger armor, made using parts of what was once USMC riot armor. It looks as if it has been worn for decades; the coat has become discoloured from years under the Mojave sun and has multiple tears and bullet holes in its leather. The armor plating itself seems to be in relatively good shape, though it could do with some maintenance."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon_state = "usmc_riot_gear"
 	item_state = "usmc_riot_gear"
-	armor = list("tier" = 4, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/herbertranger/Initialize() //HQ parts reinforcement, just like raider gear
@@ -1030,7 +1008,7 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 
 /obj/item/clothing/suit/armor/f13/marlowsuit/ikesuit
 	name = "gunfighter's overcoat"
-	desc = "(IV) A thick double-breasted red leather overcoat worn through with scattered tears and bullet holes."
+	desc = "A thick double-breasted red leather overcoat worn through with scattered tears and bullet holes."
 	icon_state = "ikesuit"
 	item_state = "ikesuit"
 
@@ -1040,7 +1018,7 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 
 /obj/item/clothing/suit/armor/f13/marlowsuit/masonsuit
 	name = "vagabond's vest"
-	desc = "(IV) A padded thick red leather vest, coated in stitched pockets and other mends."
+	desc = "A padded thick red leather vest, coated in stitched pockets and other mends."
 	icon_state = "masonsuit"
 	item_state = "masonsuit"
 
@@ -1060,55 +1038,55 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 
 /obj/item/clothing/suit/armor/f13/atomzealot
 	name = "zealot armor"
-	desc = "(IV) The armor of those true to the Division."
+	desc = "The armor of those true to the Division."
 	icon_state = "atomzealot"
 	item_state = "atomzealot"
-	armor = list("tier" = 4, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 100, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 10)
 
 /obj/item/clothing/suit/armor/f13/atomwitch
 	name = "atomic seer robes"
-	desc = "(II) The robes worn by female seers of the Division."
+	desc = "The robes worn by female seers of the Division."
 	icon_state = "atomwitch"
 	item_state = "atomwitch"
-	armor = list("tier" = 2, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 100, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 10)
 
 /obj/item/clothing/suit/armor/f13/harbingermantle
 	name = "Harbinger's Mantle"
-	desc = "(VII) An eerie, silken cloth that seems to be dripping with a thick mist. It is in truth a high-tech stealth device that allows for psionic amplification. The capacitors and manipulators in it utilise quantum technology and are highly volatile."
+	desc = "An eerie, silken cloth that seems to be dripping with a thick mist. It is in truth a high-tech stealth device that allows for psionic amplification. The capacitors and manipulators in it utilise quantum technology and are highly volatile."
 	icon_state = "scloak"
 	item_state = "scloak"
-	armor = list("tier" = 7, "energy" = 55, "bomb" = 45, "bio" = 45, "rad" = 45, "fire" = 45, "acid" = 0)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 
 /obj/item/clothing/suit/armor/f13/ghostechoe
 	name = "tattered peace coat"
-	desc = "(II) An old coat belonging to a Desert Ranger once. It has been stripped of most useful protection, and has seen better days. A crude peace symbol has been painted on the back in white."
+	desc = "An old coat belonging to a Desert Ranger once. It has been stripped of most useful protection, and has seen better days. A crude peace symbol has been painted on the back in white."
 	icon_state = "ghostechoe"
 	item_state = "ghostechoe"
-	armor = list("tier" = 2, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 10)
 
 
 //Mutants
 
 /obj/item/clothing/suit/armor/f13/mutant/poncho
 	name = "mutant poncho"
-	desc = "(IV) An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_poncho"
 	item_state = "mutie_poncho"
-	armor = list("tier" = 4, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 35, "bullet" = 25, "laser" = 35, "energy" = 15, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10, "wound" = 40)
 
 /obj/item/clothing/suit/armor/f13/mutant/metal
 	name = "mutant armour"
-	desc = "(V) An oversized set of metal armour, made to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	desc = "An oversized set of metal armour, made to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
 	icon_state = "mutie_metal_armour"
 	item_state = "mutie_metal_armour"
-	armor = list("tier" = 5, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 10, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 
 /obj/item/clothing/suit/armor/f13/mutant/metal/reinforced
 	name = "mutant armour"
-	desc = "(6) An oversized boiler plate, hammered to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	desc = "An oversized boiler plate, hammered to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
 	icon_state = "mutie_metal_armour_mk2"
 	item_state = "mutie_metal_armour_mk2"
-	armor = list("tier" = 6, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 40, "fire" = 30, "acid" = 20)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 
 //TRIBALS
 
@@ -1129,7 +1107,7 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 /obj/item/clothing/suit/f13/tribal/heavy
 	name = "heavy tribal armor"
 	desc = "A heavy suit of armour made of brahmin and gecko hides. It seems rather heavy."
-	armor = list("melee" = 37, "bullet" = "40", "laser" = 37, "energy" = 25, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+	armor = list("melee" = 37, "bullet" = 40, "laser" = 37, "energy" = 25, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 	slowdown = 0.1
 
 /obj/item/clothing/suit/f13/tribal/ncr
