@@ -33,13 +33,13 @@
 // AXES //
 //////////			-bonus damage to all doors, windows
 
-// Legion Axe		Keywords: Damage 47/60
+// Legion Axe		Keywords: Damage 30/60 do not change these numbers
 /obj/item/twohanded/legionaxe
-	name = "War Honed Axe"
+w
 	desc = "Heavy fireman axe from the old world, Restored to working order by legion craftsmen. Excellent for smashing doors or heads."
 	icon_state = "legionaxe"
 	icon_prefix = "legionaxe"
-	force = 47
+	force = 30
 	throwforce = 15
 	wound_bonus = 10
 	bare_wound_bonus = 10
