@@ -28,6 +28,11 @@
 	update_icon()
 	return ..()
 
+/proc/istempered()
+	cut_overlay(image(icon= 'icons/fallout/objects/crafting/blacksmith.dmi',icon_state="[icon_state]_hot"))
+	update_icon()
+	return ..()
+
 /obj/item/smithing/proc/istempered()
 	cut_overlay(image(icon= 'icons/fallout/objects/crafting/blacksmith.dmi',icon_state="[icon_state]_hot"))
 	update_icon()
