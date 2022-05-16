@@ -1440,10 +1440,8 @@ list(/obj/item/stack/sheet/metal = 20,
 	
 
 /obj/item/storage/box/shopkeeper/PopulateContents()
-	. = ..()
-	
 	for(var/i in 1 to 7)
-		var/randomgun= pick(/obj/item/book/granter/crafting_recipe/blueprint/gauss,
+		var/randomgun = pick(/obj/item/book/granter/crafting_recipe/blueprint/gauss,
 							/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
 							/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
 							/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
@@ -1455,7 +1453,7 @@ list(/obj/item/stack/sheet/metal = 20,
 							/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
 							/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 							)
-	new randomgun(src)
+		new randomgun(src)
 	
 
 
