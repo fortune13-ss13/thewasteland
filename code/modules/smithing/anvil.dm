@@ -21,6 +21,7 @@
 
 #define RECIPE_MACE "upu"  //upset punch upset
 #define RECIPE_AXE "udsp" //upset draw shrink punch
+#define RECIPE_CRUSHER "uuppp" //upset draw shrink punch
 
 #define RECIPE_DAGGER "dfs" //draw fold shrink
 #define RECIPE_SPEAR "ddbf" //draw draw bend fold
@@ -36,6 +37,7 @@
 #define RECIPE_LANCE "ddbf" //draw draw fold fold
 #define RECIPE_GLADIUS "fdf" //fold draw fold
 #define RECIPE_SPATHA "ffdf" // fold fold draw fold
+#define RECIPE_WARHONED "udsp" //upset draw shrink punch
 
 // Logic of smithing recipes: Tools start with bend and have 3 steps. 1h weapons have 3-4 steps. 2h weapons have 4-5 steps. Bigger bladed stuff start with a fold. Pointy stuff generally start with a draw. Unusual stuff migth start with upset.
 // Point of having a structure is obviously to help remember, not just keeping every recipe as pure rote memory with no internal logic. If you add more stuff and fuck this up and don't read comments I hope you get a prolapse. - Pebbles
@@ -80,6 +82,7 @@
 	RECIPE_KATANA = /obj/item/smithing/katanablade,
 	RECIPE_MACE = /obj/item/smithing/macehead,
 	RECIPE_AXE = /obj/item/smithing/axehead,
+	RECIPE_CRUSHER = /obj/item/melee/smith/twohand/crusher,
 	RECIPE_SPEAR = /obj/item/smithing/spearhead,
 	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_THROWING = /obj/item/smithing/throwingknife,
@@ -316,7 +319,8 @@
 	RECIPE_WAKI = /obj/item/smithing/wakiblade,
 	RECIPE_KATANA = /obj/item/smithing/katanablade,
 	RECIPE_MACE = /obj/item/smithing/macehead,
-	RECIPE_AXE = /obj/item/smithing/axehead,
+	RECIPE_WARHONED = /obj/item/smithing/warhonedhead,
+	RECIPE_CRUSHER = /obj/item/smithing/crusherhead,
 	RECIPE_LANCE = /obj/item/smithing/lancehead,
 	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_THROWING = /obj/item/smithing/throwingknife,
@@ -345,6 +349,7 @@
 	RECIPE_WAKI = /obj/item/smithing/wakiblade,
 	RECIPE_KATANA = /obj/item/smithing/katanablade,
 	RECIPE_MACE = /obj/item/smithing/macehead,
+	RECIPE_CRUSHER = /obj/item/melee/smith/twohand/crusher,
 	RECIPE_SPEAR = /obj/item/smithing/spearhead,
 	RECIPE_SCRAP = /obj/item/smithing/scrapblade,
 	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,

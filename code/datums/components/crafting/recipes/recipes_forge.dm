@@ -62,6 +62,19 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
+/datum/crafting_recipe/quenching
+	name = "Quenching trough"
+	result = /obj/structure/blacksmith/quenching
+	time = 200
+	reqs = list(
+		/obj/item/stack/sheet/mineral/wood = 6,
+		/obj/item/stack/sheet/metal = 2,
+		/datum/reagent/water = 300,
+		)
+	tools = list(TOOL_CROWBAR)
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
 /datum/crafting_recipe/barrelfire
 	name = "Stoke barrel fire"
 	result = /obj/structure/campfire/barrel
@@ -356,30 +369,6 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-
-/datum/crafting_recipe/cosmicknife
-	name = "Cosmic Knife"
-	result = /obj/item/melee/onehanded/knife/cosmic
-	reqs = list(
-		/obj/item/melee/onehanded/knife/cosmicdirty = 1
-		)
-	tools = list(TOOL_WORKBENCH)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-	time = 30
-
-/datum/crafting_recipe/cosmicknifeheated
-	name = "Superheated Cosmic Knife"
-	result = /obj/item/melee/onehanded/knife/cosmicheated
-	reqs = list(
-		/obj/item/melee/onehanded/knife/cosmic = 1,
-		/datum/reagent/fuel = 25,
-		)
-	tools = list(TOOL_WORKBENCH)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-	time = 40
-
 
 
 ///////////
