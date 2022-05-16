@@ -91,6 +91,17 @@
 		w_class = full_w_class
 
 /obj/item/stack/update_icon_state()
+	var/amount = get_amount()
+	if(novariants)
+		return
+	if(amount <= 10)
+		icon_state = initial(icon_state)
+	else
+		icon_state = "[initial(icon_state)]_2"
+
+
+/* This is temporarily commented out since the PR increasing stack limit to 5000 makes it not work. Re-enable if limit 50 put back.
+/obj/item/stack/update_icon_state()
 	if(novariants)
 		return
 	if(amount <= (max_amount * (1/3)))
@@ -99,7 +110,7 @@
 		icon_state = "[initial(icon_state)]_2"
 	else
 		icon_state = "[initial(icon_state)]_3"
-
+*/
 
 /obj/item/stack/Destroy()
 	if (usr && usr.machine==src)

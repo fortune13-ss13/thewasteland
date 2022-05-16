@@ -6,7 +6,7 @@
 	name = "bottlecap mine"
 	desc = "It has an adjustable timer. It can explode in 5 seconds after activating."
 	w_class = 2
-	icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting/parts.dmi'
 	icon_state = "capmine"
 	item_state = "capmine"
 	throw_speed = 1

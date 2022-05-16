@@ -139,14 +139,8 @@
 /obj/item/ingot/iron
 	custom_materials = list(/datum/material/iron=12000)
 
-/obj/item/ingot/diamond
-	custom_materials = list(/datum/material/diamond=12000) //yeah ok
-
 /obj/item/ingot/uranium
 	custom_materials = list(/datum/material/uranium=12000)
-
-/obj/item/ingot/plasma
-	custom_materials = list(/datum/material/plasma=12000)//yeah ok
 
 /obj/item/ingot/gold
 	custom_materials = list(/datum/material/gold=12000)
@@ -157,18 +151,24 @@
 /obj/item/ingot/titanium
 	custom_materials = list(/datum/material/titanium=12000)
 
-// Adapted to suit FO so it can be used.
 /obj/item/ingot/adamantine
 	custom_materials = list(/datum/material/adamantine=12000)
 	name = "pre-war steel ingot"
 	desc = "Top quality steel from the old world."
 	material_flags = MATERIAL_COLOR
 
-/obj/item/ingot/cult
-	custom_materials = list(/datum/material/runedmetal=12000)
-
 /obj/item/ingot/bronze
 	custom_materials = list(/datum/material/bronze=12000)
+
+// TG remnant ingots
+/obj/item/ingot/diamond
+	custom_materials = list(/datum/material/diamond=12000) //yeah ok
+
+/obj/item/ingot/plasma
+	custom_materials = list(/datum/material/plasma=12000)//yeah ok
+
+/obj/item/ingot/cult
+	custom_materials = list(/datum/material/runedmetal=12000)
 
 /obj/item/ingot/ratvar
 	custom_materials = list(/datum/material/brass=12000)

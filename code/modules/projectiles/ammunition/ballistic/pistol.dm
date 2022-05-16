@@ -69,10 +69,3 @@
 	name = ".22lr shock bullet casing"
 	desc = "A .22lr shock bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c22/shock
-
-// BETA AMMO // Obsolete
-/obj/item/ammo_casing/testcasing
-	name = "casing"
-	desc = "casing."
-	caliber = "9mm"
-	projectile_type = /obj/item/projectile/bullet/test

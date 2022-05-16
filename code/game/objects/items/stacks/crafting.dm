@@ -1,17 +1,25 @@
 /obj/item/stack/crafting
 	name = "crafting part"
-	icon = 'icons/fallout/objects/items.dmi'
+	icon = 'icons/fallout/objects/crafting/parts_stack.dmi'
 	amount = 1
-	max_amount = 5000
+	max_amount = 5000 // This high number breaks the root icon update thingie so made a new one since visual feedback is important IMO and removing it entirely is a regression.
 	throw_speed = 3
 	throw_range = 7
 	w_class = WEIGHT_CLASS_TINY
-	novariants = TRUE
+	novariants = FALSE
+
+// Update icon adapted for the 5000 max_amount limit, so there will be some visual feedback on how much stuff is in a stack.
+/obj/item/stack/crafting/update_icon_state()
+	var/amount = get_amount()
+	if(amount <= 4)
+		icon_state = initial(icon_state)
+	else
+		icon_state = "[initial(icon_state)]_2"
 
 /obj/item/stack/crafting/armor_plate
 	name = "armor plate"
 	desc = "an armor plate used to upgrade some types of armor."
-	icon_state = "plate"
+	icon_state = "sheet-plate"
 	merge_type = /obj/item/stack/crafting/armor_plate
 
 /obj/item/stack/crafting/armor_plate/five
@@ -23,14 +31,6 @@
 /obj/item/stack/crafting/armor_plate/ten
 	amount = 10
 
-/obj/item/stack/crafting/armor_plate/fifteen
-	amount = 15
-
-/obj/item/stack/crafting/armor_plate/twenty
-	amount = 20
-
-/obj/item/stack/crafting/armor_plate/fifty
-	amount = 50
 
 /obj/item/stack/crafting/metalparts
 	name = "metal parts"
@@ -84,13 +84,19 @@
 	merge_type = /obj/item/stack/crafting/powder
 
 GLOBAL_LIST_INIT(powder_recipes, list ( \
-	new/datum/stack_recipe("Scavenge blackpowder", /obj/item/reagent_containers/glass/bottle/blackpowder, 80),\
+	new/datum/stack_recipe("extract blackpowder", /obj/item/reagent_containers/glass/bottle/blackpowder, 80),\
 ))
-
-///obj/item/stack/crafting/powder/Initialize(mapload, new_amount, merge = TRUE)
-//	recipes = GLOB.powder_recipes
-//	return ..()
 
 /obj/item/stack/crafting/powder/get_main_recipes()
 	. = ..()
 	. += GLOB.powder_recipes
+
+// Adapted for the specific bullet remnant stacking
+/obj/item/stack/crafting/powder/update_icon_state()
+	var/amount = get_amount()
+	if(amount <= 80)
+		icon_state = initial(icon_state)
+	else if(amount <= 160)
+		icon_state = "[initial(icon_state)]_2"
+	else
+		icon_state = "[initial(icon_state)]_3"

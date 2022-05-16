@@ -338,13 +338,3 @@
 	w_class = WEIGHT_CLASS_SMALL
 	extra_damage = 50
 	fire_delay = 4
-
-
-/////////////////////////////////
-// TEMPORARY REMOVE AFTER BETA //
-/////////////////////////////////obsolete
-
-/obj/item/gun/ballistic/automatic/pistol/pistoltesting
-	name = "pistol"
-	extra_damage = 18
-	mag_type = /obj/item/ammo_box/magazine/testbullet

@@ -338,9 +338,3 @@
 	zoom_out_amt = 13
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
-
-// BETA // Obsolete
-/obj/item/gun/ballistic/rifle/rifletesting
-	name = "hunting"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 30

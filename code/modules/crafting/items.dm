@@ -92,7 +92,7 @@
 
 /obj/item/advanced_crafting_components
 	name = "crafting blueprint"
-	icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting/parts.dmi'
 	icon_state = "blueprint_empty"
 	w_class = WEIGHT_CLASS_TINY
 
@@ -134,7 +134,7 @@
 
 /obj/item/attachments
 	name = "attachment"
-	icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting/parts.dmi'
 	icon_state = "alloys"
 	w_class = WEIGHT_CLASS_TINY
 

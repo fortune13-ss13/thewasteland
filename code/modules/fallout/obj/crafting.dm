@@ -4,13 +4,13 @@
 /obj/item/weaponcrafting/reciever
 	name = "modular receiver"
 	desc = "A prototype modular receiver and trigger assembly for a firearm."
-	icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting/parts.dmi'
 	icon_state = "receiver"
 
 /obj/item/weaponcrafting/stock
 	name = "rifle stock"
 	desc = "A classic rifle stock that doubles as a grip, roughly carved out of wood."
-	icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting/parts.dmi'
 	icon_state = "riflestock"
 
 /obj/item/rocketshell //only useful for crafting rockets
@@ -24,7 +24,7 @@
 /obj/item/crafting
 	name = "basic crafting components obtained from salvaging"
 	desc = "This should not be visible. Tell someone about it."
-	icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting/parts.dmi'
 	item_state = "null"
 	w_class = WEIGHT_CLASS_TINY
 
