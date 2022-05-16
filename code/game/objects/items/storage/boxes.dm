@@ -1438,8 +1438,26 @@ list(/obj/item/stack/sheet/metal = 20,
 	name = "Shopkeeper's blueprints"
 	desc = "a box of the shopkeeper's blueprints"
 
+	for(var/i in 1 to 7)
+		var/randomgun= pick(/obj/item/book/granter/crafting_recipe/blueprint/gauss,
+							/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
+							/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
+							/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
+							/obj/item/book/granter/crafting_recipe/blueprint/bozar,
+							/obj/item/book/granter/crafting_recipe/blueprint/neostead,
+							/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
+							/obj/item/book/granter/crafting_recipe/blueprint/aer9,
+							/obj/item/book/granter/crafting_recipe/blueprint/r91,
+							/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
+							/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
+							)
+
 /obj/item/storage/box/shopkeeper/PopulateContents()
 	. = ..()
-	new /obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics
-	new /obj/effect/spawner/lootdrop/f13/blueprintVHigh
-	new /obj/effect/spawner/lootdrop/f13/blueprintHigh
+	new randomgun(src)
+	new randomgun(src)
+	new randomgun(src)
+	new randomgun(src)
+	
+
+
