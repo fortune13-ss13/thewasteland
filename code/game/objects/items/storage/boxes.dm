@@ -1440,7 +1440,7 @@ list(/obj/item/stack/sheet/metal = 20,
 	
 
 /obj/item/storage/box/shopkeeper/PopulateContents()
-	for(var/i in 1 to 7)
+	for(var/i in 1 to 4)
 		var/randomgun = pick(/obj/item/book/granter/crafting_recipe/blueprint/gauss,
 							/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
 							/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
