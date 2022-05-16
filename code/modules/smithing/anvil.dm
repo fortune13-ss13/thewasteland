@@ -47,7 +47,7 @@
 	var/rng = FALSE
 	var/debug = FALSE //vv this if you want an artifact
 	var/artifactrolled = FALSE
-	var/itemqualitymax = 20
+	var/itemqualitymax = 8
 	var/list/smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
 	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
