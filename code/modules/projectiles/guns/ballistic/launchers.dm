@@ -87,7 +87,7 @@
 	fire_delay = 0
 	inaccuracy_modifier = 0.25
 	casing_ejector = FALSE
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "rocket"
 
 /obj/item/gun/ballistic/rocketlauncher/handle_atom_del(atom/A)
