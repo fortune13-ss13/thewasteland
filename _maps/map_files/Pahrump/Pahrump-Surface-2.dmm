@@ -376,16 +376,16 @@
 	},
 /area/f13/wasteland)
 "agU" = (
-/obj/item/reagent_containers/glass/bucket/wood{
-	pixel_x = -15;
-	pixel_y = 6
+/obj/structure/fence/wooden{
+	climbable = 0;
+	density = 0;
+	dir = 1;
+	layer = 3.6;
+	pixel_x = -13;
+	pixel_y = 1
 	},
-/obj/item/reagent_containers/glass/bucket/wood{
-	pixel_x = -15;
-	pixel_y = 6
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
+/turf/open/floor/wood/f13/stage_bl,
+/area/f13/raiders)
 "agW" = (
 /obj/item/storage/trash_stack{
 	icon_state = "trash_3"
@@ -570,9 +570,16 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
 "akf" = (
-/obj/structure/fermenting_barrel,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/caves)
+/obj/structure/fence/wooden{
+	climbable = 0;
+	density = 0;
+	dir = 1;
+	layer = 3.6;
+	pixel_x = 13;
+	pixel_y = 1
+	},
+/turf/open/floor/wood/f13/stage_br,
+/area/f13/raiders)
 "akk" = (
 /obj/structure/decoration/rag{
 	icon_state = "skin"
@@ -2900,11 +2907,21 @@
 	},
 /area/f13/building)
 "bhQ" = (
-/obj/structure/fermenting_barrel,
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirtcorner"
+/obj/structure/table/booth,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
 	},
-/area/f13/wasteland)
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = -8;
+	pixel_y = 11
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = 9;
+	pixel_y = 9
+	},
+/turf/open/floor/wood/f13/stage_t,
+/area/f13/raiders)
 "bia" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright0"
@@ -15976,11 +15993,6 @@
 /turf/open/floor/carpet/blackred,
 /area/f13/ncr)
 "gpC" = (
-/obj/structure/tires/two,
-/obj/structure/tires/five,
-/obj/structure/wreck/bus/rusted/segmented1{
-	layer = 3.2
-	},
 /obj/structure/fence/wooden{
 	climbable = 0;
 	dir = 4;
@@ -24995,9 +25007,6 @@
 	},
 /area/f13/bunker)
 "jDk" = (
-/obj/structure/wreck/bus/rusted{
-	layer = 3.5
-	},
 /obj/structure/fence/corner/wooden{
 	dir = 1;
 	layer = 6.1;
@@ -25010,6 +25019,10 @@
 	layer = 6;
 	name = "awning";
 	pixel_y = -3
+	},
+/obj/structure/closet/bus{
+	pixel_x = -16;
+	pixel_y = -14
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/raiders)
@@ -25104,10 +25117,6 @@
 	},
 /area/f13/wasteland)
 "jGe" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented2{
-	layer = 3.2
-	},
 /obj/structure/fence/corner/wooden{
 	dir = 4;
 	layer = 6.1;
@@ -26598,14 +26607,8 @@
 	},
 /area/f13/wasteland)
 "kkk" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented7{
-	layer = 6
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirtcorner"
-	},
-/area/f13/wasteland)
+/turf/open/floor/wood/f13/stage_b,
+/area/f13/raiders)
 "kkD" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /turf/open/floor/f13/wood,
@@ -26717,13 +26720,18 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "kmz" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented9{
-	layer = 6
+/obj/structure/fence/wooden{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 7
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
+/obj/structure/fence/wooden{
+	pixel_x = 14
 	},
+/obj/structure/fence/wooden{
+	pixel_x = -13
+	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "kmA" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -26907,20 +26915,10 @@
 /obj/structure/chair/booth{
 	dir = 8
 	},
-/obj/structure/fence/wooden{
-	climbable = 0;
-	density = 0;
-	dir = 1;
-	layer = 3.6;
-	pixel_x = 13;
-	pixel_y = 1
-	},
 /obj/structure/chair/booth{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/desert{
-	icon_state = "wasteland32"
-	},
+/turf/open/floor/wood/f13/stage_t,
 /area/f13/raiders)
 "kpW" = (
 /obj/structure/closet/cabinet,
@@ -27624,9 +27622,13 @@
 	},
 /area/f13/wasteland)
 "kGe" = (
-/obj/structure/sink/well{
-	pixel_x = -32;
-	pixel_y = -20
+/obj/structure/fence/wooden{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 7
+	},
+/obj/structure/fence/wooden{
+	pixel_x = 14
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
@@ -27679,12 +27681,11 @@
 	},
 /area/f13/village)
 "kHB" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented10,
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
+/turf/open/floor/f13{
+	color = "#A47449";
+	icon_state = "rampdowntop"
 	},
-/area/f13/caves)
+/area/f13/wasteland)
 "kHC" = (
 /obj/machinery/light/small/broken{
 	dir = 8
@@ -28473,14 +28474,16 @@
 /turf/closed/wall/f13/wood,
 /area/f13/legion)
 "kZp" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented11{
-	layer = 3.2
+/obj/item/reagent_containers/glass/bucket/wood{
+	pixel_x = -15;
+	pixel_y = 6
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
+/obj/item/reagent_containers/glass/bucket/wood{
+	pixel_x = -15;
+	pixel_y = 6
 	},
-/area/f13/caves)
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "kZz" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -28625,14 +28628,11 @@
 	},
 /area/f13/enclave)
 "lcl" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented12{
-	layer = 6
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirtcorner"
-	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "lcm" = (
 /obj/effect/decal/waste{
@@ -30072,23 +30072,26 @@
 /turf/closed/wall/r_wall/rust,
 /area/f13/building)
 "lGH" = (
-/obj/structure/wreck/bus/rusted/segmented3{
-	layer = 3.2
+/obj/structure/barricade/wooden/strong{
+	desc = "Provides mild weather protection.";
+	icon = 'icons/fallout/turfs/walls/tents.dmi';
+	icon_state = "cloth_edge";
+	layer = 6;
+	name = "awning";
+	pixel_y = -3
 	},
-/obj/structure/decoration/rag{
-	icon_state = "skin";
+/obj/structure/fence/wooden{
+	climbable = 0;
+	dir = 4;
 	layer = 6.1;
-	pixel_x = 2;
-	pixel_y = 13
+	pixel_x = -17
 	},
-/obj/structure/decoration/rag{
-	icon_state = "skulls";
-	layer = 6.1;
-	pixel_x = 3;
-	pixel_y = 12
+/obj/structure/wreck/bus/rusted/segmented10{
+	pixel_y = 9
 	},
+/obj/structure/wreck/bus/rusted/segmented10,
 /turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
+/area/f13/raiders)
 "lGV" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -34483,13 +34486,24 @@
 /turf/open/floor/wood/wood_tiled,
 /area/f13/building)
 "nnl" = (
-/obj/structure/wreck/bus/rusted/segmented4{
-	layer = 3.2
+/obj/structure/barricade/wooden/strong{
+	desc = "Provides mild weather protection.";
+	icon = 'icons/fallout/turfs/walls/tents.dmi';
+	icon_state = "cloth_edge";
+	layer = 6;
+	name = "awning";
+	pixel_y = -3
+	},
+/obj/structure/fence/wooden{
+	climbable = 0;
+	dir = 4;
+	layer = 6.1;
+	pixel_x = -17
 	},
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32"
 	},
-/area/f13/wasteland)
+/area/f13/raiders)
 "nnB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/cabinet/anchored{
@@ -35134,10 +35148,7 @@
 	pixel_x = -13;
 	pixel_y = 1
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirtcorner"
-	},
+/turf/open/floor/wood/f13/stage_tl,
 /area/f13/raiders)
 "nBA" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -35305,15 +35316,6 @@
 	icon_state = "floordirty"
 	},
 /area/f13/building)
-"nFA" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented8{
-	layer = 6
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
-	},
-/area/f13/wasteland)
 "nFL" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "shadowleft"
@@ -39048,14 +39050,29 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "piw" = (
-/obj/structure/tires/two,
-/obj/structure/wreck/bus/rusted/segmented5{
-	layer = 3.2
+/obj/structure/fence/corner/wooden{
+	dir = 4;
+	layer = 6.1;
+	pixel_x = 13
+	},
+/obj/structure/fence/wooden{
+	climbable = 0;
+	dir = 4;
+	layer = 6.1;
+	pixel_x = -17
+	},
+/obj/structure/barricade/wooden/strong{
+	desc = "Provides mild weather protection.";
+	icon = 'icons/fallout/turfs/walls/tents.dmi';
+	icon_state = "cloth_edge";
+	layer = 6;
+	name = "awning";
+	pixel_y = -3
 	},
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirtcorner"
 	},
-/area/f13/caves)
+/area/f13/raiders)
 "pix" = (
 /obj/structure/chair/sofa/corner,
 /turf/open/floor/wood,
@@ -45035,12 +45052,19 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/village)
 "rLs" = (
-/obj/structure/fermenting_barrel,
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 6;
-	icon_state = "dirt"
+/obj/structure/fence/wooden{
+	climbable = 0;
+	density = 0;
+	dir = 1;
+	layer = 3.6;
+	pixel_x = 13;
+	pixel_y = 1
 	},
-/area/f13/caves)
+/obj/structure/chair/booth{
+	dir = 8
+	},
+/turf/open/floor/wood/f13/stage_tr,
+/area/f13/raiders)
 "rLz" = (
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/road{
@@ -47037,10 +47061,6 @@
 /area/f13/legion)
 "sDg" = (
 /obj/structure/table/booth,
-/obj/item/reagent_containers/food/condiment/ketchup{
-	pixel_x = -8;
-	pixel_y = 9
-	},
 /obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_y = 11
 	},
@@ -47048,7 +47068,11 @@
 	pixel_x = 4;
 	pixel_y = 5
 	},
-/turf/open/indestructible/ground/outside/desert,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/floor/wood/f13/stage_t,
 /area/f13/raiders)
 "sDk" = (
 /obj/structure/table/glass,
@@ -57786,14 +57810,11 @@
 	},
 /area/f13/village)
 "wXE" = (
-/obj/structure/flora/tree/cactus{
-	pixel_x = 3;
-	pixel_y = -6
+/obj/structure/chair/booth{
+	dir = 4
 	},
-/turf/open/indestructible/ground/outside/desert{
-	icon_state = "wasteland33"
-	},
-/area/f13/wasteland)
+/turf/open/floor/wood/f13/stage_t,
+/area/f13/raiders)
 "wXJ" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -112684,7 +112705,7 @@ mvv
 mvv
 mvv
 mvv
-mvv
+odZ
 mvv
 mei
 mzO
@@ -112940,7 +112961,7 @@ stD
 stD
 mvv
 mvv
-mvv
+pIn
 mvv
 mvv
 mvv
@@ -113195,10 +113216,10 @@ ekT
 eFA
 mvv
 stD
-kGe
 mvv
-agU
 mvv
+mvv
+kZp
 ttW
 mvv
 mss
@@ -113457,7 +113478,7 @@ stD
 qTe
 qTe
 qTe
-mvv
+gVp
 dCL
 mcf
 stD
@@ -113705,14 +113726,14 @@ mvv
 egy
 blv
 dEc
-kkk
+hwC
 jDk
 nBv
-xGH
+agU
+kmz
 mvv
 mvv
-gVp
-odZ
+mvv
 mvv
 dCL
 mcf
@@ -113962,12 +113983,12 @@ aLd
 fzN
 pye
 mvv
-nFA
+hwC
 gpC
 sDg
-tBN
-mvv
-mvv
+kkk
+kGe
+gVp
 qTe
 qTe
 qTe
@@ -114219,11 +114240,11 @@ jIz
 pye
 mvv
 pye
-kmz
+hwC
 jGe
 kpR
-tBN
-mvv
+kkk
+kHB
 mvv
 mvv
 xwW
@@ -114476,10 +114497,10 @@ jIz
 mvv
 mvv
 gcK
-kHB
+gcK
 lGH
 wXE
-tBN
+kkk
 iCH
 mmV
 rxE
@@ -114733,10 +114754,10 @@ htN
 tan
 gcK
 gcK
-kZp
+gcK
 nnl
 bhQ
-ltK
+kkk
 gVt
 qcC
 ach
@@ -114990,7 +115011,7 @@ mTd
 gcK
 gcK
 gcK
-lcl
+gcK
 piw
 rLs
 akf
@@ -115255,7 +115276,7 @@ gcK
 gcK
 gcK
 gcK
-ggK
+lcl
 ggK
 ggK
 gcK
