@@ -63,6 +63,7 @@
 	var/completely_disabled = FALSE //stops the mech from doing anything
 	var/breach_time = 0
 	var/recharge_rate = 0
+	var/can_be_locked = FALSE //Whether the mech can be DNA-locked or not.
 
 	var/bumpsmash = 0 //Whether or not the mech destroys walls by running into it.
 	//inner atmos
@@ -91,9 +92,11 @@
 
 	var/stepsound = 'sound/mecha/mechstep.ogg'
 	var/turnsound = 'sound/mecha/mechturn.ogg'
+	var/attacksound = 'sound/weapons/punch4.ogg'
 
 	var/melee_cooldown = 10
 	var/melee_can_hit = 1
+	var/attack_knockdown = 0 // For how much time it will knockdown a target in melee
 
 	var/exit_delay = 40 //Time to exit mech
 	var/destruction_sleep_duration = 50 //Time that mech pilot is put to sleep for if mech is destroyed
@@ -957,6 +960,8 @@
 	return TRUE
 
 /obj/mecha/container_resist(mob/living/user)
+	if(occupant)
+		occupant.SetSleeping(destruction_sleep_duration*2)
 	go_out()
 
 /obj/mecha/Exited(atom/movable/M, atom/newloc)

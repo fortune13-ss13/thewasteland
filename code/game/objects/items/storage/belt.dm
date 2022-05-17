@@ -138,6 +138,7 @@
 /obj/item/storage/belt/utility/waster/forgemaster
 	name = "forgemasters toolbelt"
 	desc = "Has a collection of basic tools and a hook rigging to sling a chainsaw from."
+	var/max_combined_w_class = WEIGHT_CLASS_SMALL * 8
 
 /obj/item/storage/belt/utility/waster/forgemaster/PopulateContents()
 	new /obj/item/crowbar(src)
@@ -145,7 +146,6 @@
 	new /obj/item/screwdriver/basic(src)
 	new /obj/item/weldingtool/basic(src)
 	new /obj/item/wirecutters/basic(src)
-	new /obj/item/melee/smith/hammer/premade(src)
 	new /obj/item/twohanded/chainsaw(src)
 
 // Gardener belt. Hold farming stuff thats small, also flasks (think hip flasks, not bottles as such)
@@ -784,6 +784,7 @@
 		/obj/item/ammo_box/a45lcrev,
 		/obj/item/gun/energy/laser/solar,
 		/obj/item/gun/energy/laser/pistol,
+		/obj/item/gun/energy/laser/auto,
 		/obj/item/gun/energy/laser/complianceregulator,
 		/obj/item/gun/energy/laser/plasma/pistol,
 		/obj/item/gun/energy/laser/plasma/glock,
@@ -791,7 +792,8 @@
 		/obj/item/gun/energy/laser/wattz,
 		/obj/item/gun/energy/laser/wattz/magneto,
 		/obj/item/gun/energy/laser/plasma/pistol/alien,
-		/obj/item/stock_parts/cell/ammo/ec
+		/obj/item/stock_parts/cell/ammo/ec,
+		/obj/item/stock_parts/cell/ammo/ecp,
 		))
 
 /obj/item/storage/belt/holster/full/PopulateContents()
@@ -836,6 +838,12 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	icon_state = "holster_leg"
 	item_state = "holster_leg"
+
+/obj/item/storage/belt/holster/legholster/police/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/police(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
 
 /obj/item/storage/belt/fannypack
 	name = "fannypack"
@@ -904,13 +912,9 @@
 	content_overlays = TRUE
 	onmob_overlays = TRUE
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_NECK
-	fitting_swords = list(/obj/item/melee/smith/machete,
-	/obj/item/melee/smith/machete/reforged,
+	fitting_swords = list(
 	/obj/item/melee/smith/wakizashi,
-	/obj/item/melee/smith/sword,
-	/obj/item/melee/smith/twohand/axe,
 	/obj/item/melee/smith/twohand/katana,
-	/obj/item/melee/smith/sword/sabre,
 	/obj/item/melee/onehanded/machete,
 	/obj/item/melee/onehanded/club,
 	/obj/item/melee/classic_baton,
@@ -945,7 +949,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	content_overlays = TRUE
 	onmob_overlays = TRUE
-	var/list/fitting_swords = list(/obj/item/melee/smith/sword, /obj/item/melee/baton/stunsword)
+	var/list/fitting_swords = list(/obj/item/melee/smith/sabre, /obj/item/melee/baton/stunsword)
 	var/starting_sword = null
 
 // Instead of half-assed broken weaboo stuff lets have something that works.

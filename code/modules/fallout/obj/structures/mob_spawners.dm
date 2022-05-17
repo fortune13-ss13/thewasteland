@@ -28,6 +28,7 @@
 
 /obj/structure/nest/Destroy()
 	GLOB.mob_nests -= src
+	playsound(src, 'sound/effects/break_stone.ogg', 100, 1)
 	visible_message("[src] collapses!")
 	. = ..()
 
@@ -42,7 +43,7 @@
 		return FALSE
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in range(radius, get_turf(src))
 	var/obj/mecha/M = locate(/obj/mecha) in range(radius, get_turf(src))
-	if(!H?.client && !M)
+	if(!H?.client && !M?.occupant)
 		return FALSE
 	toggle_fire(FALSE)
 	addtimer(CALLBACK(src, .proc/toggle_fire), spawn_time)
@@ -58,7 +59,7 @@
 		if(spawned_mobs.len >= max_mobs)
 			Destroy()
 	if(spawn_once) //if the subtype has TRUE, call destroy() after we spawn our first mob
-		Destroy()
+		qdel(src)
 		return
 
 
@@ -96,6 +97,7 @@
 
 		var/image/rod_image = image(icon, icon_state = "rods")
 		add_overlay(rod_image)
+		QDEL_IN(src, 2 MINUTES)
 		return
 
 	if(istype(I, /obj/item/stack/sheet/mineral/wood))
@@ -122,24 +124,8 @@
 		covertype = /obj/item/stack/sheet/mineral/wood
 		var/image/plank_image = image(icon, icon_state = "planks")
 		add_overlay(plank_image)
-
-
+		QDEL_IN(src, 2 MINUTES)
 		return
-
-	/*if(istype(I, /obj/item/crowbar))
-		var/turf/T = get_turf(src)
-		if(!covered)
-			to_chat(user, "<span class='warning'>The hole is not covered!</span>")
-			return
-		if(!do_after(user, 10 SECONDS, FALSE, src))
-			to_chat(user, "<span class='warning'>You must stand still to remove the cover!</span>")
-			return
-		for(var/i in 1 to 4)
-			new covertype(T)
-		to_chat(user, "<span class='notice'>You cover the hole!</span>")
-		covertype = null
-		covered = FALSE
-		cut_overlays()*/
 
 //the nests themselves
 /*

@@ -72,17 +72,17 @@
 	addtimer(CALLBACK(src, .proc/set_ready_state, 1), equip_cooldown)
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
-	equip_cooldown = 8
+	equip_cooldown = 7
 	name = "\improper CH-PS \"Immolator\" laser"
 	desc = "A weapon for combat exosuits. Shoots basic lasers."
 	icon_state = "mecha_laser"
 	energy_drain = 50
-	projectile = /obj/item/projectile/beam/laser/mech
+	projectile = /obj/item/projectile/beam/laser/mech/light
 	fire_sound = 'sound/weapons/laser.ogg'
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
-	equip_cooldown = 15
+	equip_cooldown = 14
 	name = "\improper CH-LC \"Solaris\" laser cannon"
 	desc = "A weapon for combat exosuits. Shoots heavy lasers."
 	icon_state = "mecha_laser"
@@ -91,7 +91,7 @@
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion
-	equip_cooldown = 20
+	equip_cooldown = 16
 	name = "\improper MKIV ion heavy cannon"
 	desc = "A weapon for combat exosuits. Shoots technology-disabling ion beams. Don't catch yourself in the blast!"
 	icon_state = "mecha_ion"
@@ -100,7 +100,7 @@
 	fire_sound = 'sound/weapons/laser.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/tesla
-	equip_cooldown = 30
+	equip_cooldown = 25
 	name = "\improper MKI Tesla Cannon"
 	desc = "A weapon for combat exosuits. Fires bolts of electricity similar to the experimental tesla engine."
 	icon_state = "mecha_ion"
@@ -110,17 +110,17 @@
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
-	equip_cooldown = 20
-	name = "eZ-13 MK2 heavy pulse rifle"
-	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts capable of demolishing obstacles."
+	equip_cooldown = 40
+	name = "\improper MKII heavy pulse cannon"
+	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts."
 	icon_state = "mecha_pulse"
-	energy_drain = 200
+	energy_drain = 500
 	projectile = /obj/item/projectile/beam/laser/mech/pulse
 	fire_sound = 'sound/weapons/marauder.ogg'
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma
-	equip_cooldown = 8
+	equip_cooldown = 6
 	name = "217-D Heavy Plasma Cutter"
 	desc = "A device that shoots resonant plasma bursts at extreme velocity. The blasts are capable of crushing rock and demolishing solid obstacles."
 	icon_state = "mecha_plasmacutter"

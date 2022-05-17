@@ -290,3 +290,4 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "pill_buff"
 	list_reagents = list(/datum/reagent/drug/buffout = 10)
+	

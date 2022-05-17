@@ -12,6 +12,8 @@ here's a tip, go search DEFINES/access.dm
 	department_flag = VAULT
 	exp_type = EXP_TYPE_VAULT
 	faction = FACTION_VAULT
+	maptype = "vault"
+	mapexclude = list("standard")
 
 /datum/outfit/job/vault
 	gloves = /obj/item/pda
@@ -39,7 +41,7 @@ Overseer
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations."
 	description = "You are the leader of the Vault, and your word is law. Working with the Security team and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault, through any and all means necessary."
 	supervisors = "Vault-tec"
-	selection_color = "#ccffcc"
+	selection_color = "#95bd95"
 	req_admin_notify = 1
 	exp_requirements = 1500
 

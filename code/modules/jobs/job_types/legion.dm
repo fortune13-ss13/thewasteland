@@ -35,19 +35,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmor)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmormk2)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmetmk2)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_ncr)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_salvaged)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvagedhelmet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_broken)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_broken)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legiongate)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/berserker_powder)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rip/crossexecution)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/military/assault/legion
@@ -79,6 +69,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_TRIBAL, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_FEARLESS, src) //no phobias for legion!
+	ADD_TRAIT(H, TRAIT_BERSERKER, src)
 
 /obj/item/storage/box/legate
 	name = "legate belongings"
@@ -125,7 +116,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13legate	// 14mm Pistol, Powerfist
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13legate	// 14mm Pistol, Goliath
 	name = "Legate"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legate
 	shoes =	/obj/item/clothing/shoes/f13/military/legate
@@ -187,7 +178,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /////////////////
@@ -214,9 +205,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// 10mm SMG, Goliath
-		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, AMR, Spatha
-		/datum/outfit/loadout/centurion,	// M1919
+		/datum/outfit/loadout/palacent,		// 10mm SMG, Goliath, CQC
+		/datum/outfit/loadout/rangerhunter,	// Hunting Revolver, AMR, Spatha
+		/datum/outfit/loadout/centurion,	// M1919, Hunting Revolver
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -247,10 +238,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/storage/bag/money/small/legion = 1,
-		/obj/item/warpaint_bowl,
+		/obj/item/warpaint_bowl = 1,
 		/obj/item/ammo_box/a357 = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
-		/obj/item/binoculars
+		/obj/item/binoculars = 1,
 		)
 
 /datum/outfit/loadout/palacent
@@ -284,16 +275,18 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/mm762 = 1,
 		/obj/item/gun/ballistic/revolver/hunting = 1,
-		/obj/item/ammo_box/c4570 = 3)
+		/obj/item/ammo_box/c4570 = 3,
+		)
 
 /* /datum/outfit/loadout/berserkercenturion
 	name = 			"Praetorian Candidate"
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
 	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	backpack_contents = list(
-					/obj/item/melee/unarmed/sappers= 1,
-					/obj/item/book/granter/martial/berserker= 1,
-					/obj/item/reagent_containers/pill/patch/healingpowder/berserker=2)
+					/obj/item/melee/unarmed/sappers = 1,
+					/obj/item/book/granter/martial/berserker = 1,
+					/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 2
+					)
 commented out pending rework*/
 
 
@@ -314,10 +307,10 @@ commented out pending rework*/
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/decvetbull,	// Supersledge, 10mm smg, smokebomb
-		/datum/outfit/loadout/decvetwolf,	// Thermic lance, cg45, bitter
-		/datum/outfit/loadout/decvetsnake, //Brush gun, ripper, bitters
-		/datum/outfit/loadout/decvetbrave, //fnfal, m29 snubnose
+		/datum/outfit/loadout/decvetbull,	// Supersledge, 10mm SMG, Smokebomb
+		/datum/outfit/loadout/decvetwolf,	// Thermic lance, Carl Gustaf, Extra Bitter
+		/datum/outfit/loadout/decvetsnake, // Brush gun, Ripper, Extra Bitters
+		/datum/outfit/loadout/decvetbrave, // FNFAL, .44 snubnose
 		)
 
 
@@ -347,7 +340,7 @@ commented out pending rework*/
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/storage/bag/money/small/legofficers = 1,
-		/obj/item/binoculars
+		/obj/item/binoculars = 1,
 		)
 
 /datum/outfit/loadout/decvetbull
@@ -388,7 +381,7 @@ commented out pending rework*/
 	suit_store = /obj/item/gun/ballistic/automatic/fnfal
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762 = 2,
-		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/gun/ballistic/revolver/m29/snub = 1,
 		/obj/item/ammo_box/m44 = 1,
 		)
 
@@ -410,10 +403,10 @@ commented out pending rework*/
 	minimal_access = list(ACCESS_LEGION,  ACCESS_LEGION_COMMAND)
 	exp_requirements = 720
 
-	loadout_options = list(	//ALL: Gladius, smokebomb
-		/datum/outfit/loadout/decprimfront,	// 10mm SMG, .357 Revolver, lance, throwing kives
-		/datum/outfit/loadout/decprimrear,	// Trail carbine, Ballistic fist,
-		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver, frags, coffepot bomb
+	loadout_options = list(	//ALL: Gladius, Smokebomb
+		/datum/outfit/loadout/decprimfront,	// 10mm SMG, .357 Revolver, Legion lance, Throwing knives
+		/datum/outfit/loadout/decprimrear,	// Trail carbine, Ballistic fist
+		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 Revolver, Frag grenades, Coffepot bomb
 		)
 
 	matchmaking_allowed = list(
@@ -505,7 +498,7 @@ commented out pending rework*/
 
 	loadout_options = list(
 		/datum/outfit/loadout/recdeclegion,	// Uzi, Bumper sword, Smokebomb
-		/datum/outfit/loadout/recdectribal,	// Garand, Throwing spears, Reinforced machete, bottlecap mine
+		/datum/outfit/loadout/recdectribal,	// M1 Garand, Throwing spears, Reinforced machete, Bottlecap mine
 		)
 
 	matchmaking_allowed = list(
@@ -561,7 +554,7 @@ commented out pending rework*/
 		/obj/item/melee/onehanded/machete/forgedmachete = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
 		/obj/item/bottlecap_mine = 1,
-		/obj/item/warpaint_bowl,
+		/obj/item/warpaint_bowl = 1,
 		)
 
 
@@ -587,7 +580,7 @@ commented out pending rework*/
 
 	loadout_options = list(
 		/datum/outfit/loadout/vexbear,	//	Classic FO13 Vex with his ripper: .223 pistol, Ripper
-		/datum/outfit/loadout/vexfox,	//	Classic New Vegas Vex with his 10mm SMG: 10mm SMG, Spartha
+		/datum/outfit/loadout/vexfox,	//	Classic New Vegas Vex with his 10mm SMG: 14mm SMG, Spartha
 		)
 
 	matchmaking_allowed = list(
@@ -623,16 +616,16 @@ commented out pending rework*/
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/megaphone/cornu = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/warpaint_bowl,
+		/obj/item/warpaint_bowl = 1,
 		)
 
 /datum/outfit/loadout/vexbear
 	name = "Mountain Bear"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
-	suit_store = /obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
-		/obj/item/ammo_box/a556 = 1,
-		/obj/item/melee/powered/ripper = 1,
+		/obj/item/melee/unarmed/tigerclaw = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 2,
+		/obj/item/book/granter/martial/berserker = 1
 		)
 
 /datum/outfit/loadout/vexfox
@@ -658,8 +651,8 @@ commented out pending rework*/
 	exp_requirements = 300
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
-		/datum/outfit/loadout/expsniper,	// Rangemaster, Beartrap
 		/datum/outfit/loadout/expambusher,	// MP5, Bottlecap mine
+		/datum/outfit/loadout/expsniper,	// SKS, Smokebomb
 		)
 
 	matchmaking_allowed = list(
@@ -742,9 +735,9 @@ commented out pending rework*/
 
 	loadout_options = list(	//ALL: Gladius
 		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
-		/datum/outfit/loadout/vetrifle,		// Trail gun, .357 Revolver
-		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
 		/datum/outfit/loadout/vetsmg, 		// Carl Gustaf, .357 Revolver
+		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
+		/datum/outfit/loadout/vetrifle,		// Trail gun, .357 Revolver
 		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -762,6 +755,7 @@ commented out pending rework*/
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	name = "Veteran Legionnaire"
@@ -786,7 +780,7 @@ commented out pending rework*/
 	name = "Enforcer"
 	suit_store = /obj/item/twohanded/legionaxe
 	backpack_contents = list(
-		/obj/item/melee/unarmed/maceglove = 1,
+		/obj/item/melee/unarmed/tigerclaw = 1,
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/stack/crafting/armor_plate = 4,
@@ -841,8 +835,8 @@ commented out pending rework*/
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
 	loadout_options = list(	//ALL: Forged Machete
-		/datum/outfit/loadout/primelancer,	// .357 Revolver, Buckler, Bola. Trekking
-		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Firebomb
+		/datum/outfit/loadout/primelancer,	// .357 Revolver, Buckler, Bola.
+		/datum/outfit/loadout/primerifle,	// Cowboy Repeater, Firebomb
 		/datum/outfit/loadout/primebrave,	// Trench shotgun, Throwing spears
 		)
 
@@ -860,6 +854,7 @@ commented out pending rework*/
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Prime Legionnaire"
@@ -885,7 +880,6 @@ commented out pending rework*/
 	backpack_contents = list(
 		/obj/item/ammo_box/a357 = 3,
 		/obj/item/restraints/legcuffs/bola = 2,
-		/obj/item/book/granter/trait/trekking = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		)
 
@@ -905,7 +899,6 @@ commented out pending rework*/
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
-		/obj/item/book/granter/trait/trekking = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		)
 
@@ -963,7 +956,7 @@ commented out pending rework*/
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/book/granter/trait/trekking = 1,
-		/obj/item/warpaint_bowl
+		/obj/item/warpaint_bowl = 1,
 		)
 
 /datum/outfit/loadout/recruitlegion
@@ -986,7 +979,7 @@ commented out pending rework*/
 /datum/job/CaesarsLegion/Legionnaire/f13immune
 	title = "Legion Immune"
 	flag = F13IMMUNE
-	total_positions = 5
+	total_positions = 4
 	spawn_positions = 1
 	description = "An Immune is a legionnaire temporarily assigned to keeping the camp in order, according to their tasking on any given week."
 	supervisors = "the Centurion."
@@ -1056,15 +1049,15 @@ commented out pending rework*/
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gladius)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/spatha)
+//	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gladius)
+//	H.mind.teach_crafting_recipe(/datum/crafting_recipe/spatha)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lance)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionshield)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/grease_gun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/brush)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionlance)
+//	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionlance)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/strongrocket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
@@ -1078,8 +1071,8 @@ commented out pending rework*/
 /datum/job/CaesarsLegion/auxilia
 	title = "Legion Auxilia"
 	flag = F13AUXILIA
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	description = "A non-combat position in the Legion for free citizens who perform tasks that need special training, such as surgery. They are loyal to the Legion even if they are not treated as equals to warriors."
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_AUXILIA
@@ -1125,6 +1118,7 @@ commented out pending rework*/
 	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
 	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/legionuniform)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/warpaint)
 

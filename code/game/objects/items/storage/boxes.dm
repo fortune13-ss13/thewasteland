@@ -1162,7 +1162,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
-	
+
 /obj/item/storage/box/sparelimbs
 	name = "box of prosthethic limbs"
 	desc = "Contains superior prosthethic limbs, one of each type."
@@ -1174,7 +1174,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/bodypart/r_arm/robot(src)
 	new /obj/item/bodypart/l_leg/robot(src)
 	new /obj/item/bodypart/r_leg/robot(src)
-	
+
 //Colored boxes.
 /obj/item/storage/box/green
 	icon_state = "box_green"
@@ -1393,7 +1393,7 @@ obj/item/storage/box/stingbangs
 
 /obj/item/storage/box/deputy_badges
 	name = "box of spare badges"
-	desc = "A box containing the spare badges for deputies. Use your sheriff badge on a deputy badge to assign its owner."
+	desc = "A box containing the spare badges for officers. Use your chief of police badge on a officer's badge to assign its owner."
 	illustration = "id"
 
 /obj/item/storage/box/deputy_badges/PopulateContents()
@@ -1433,3 +1433,27 @@ list(/obj/item/stack/sheet/metal = 20,
 	new /obj/item/weldingtool(src)
 	new /obj/item/stack/f13Cash/random/med(src)
 	new /obj/item/stack/f13Cash/random/med(src)
+
+/obj/item/storage/box/shopkeeper
+	name = "Shopkeeper's blueprints"
+	desc = "a box of the shopkeeper's blueprints"
+	
+
+/obj/item/storage/box/shopkeeper/PopulateContents()
+	for(var/i in 1 to 4)
+		var/randomgun = pick(/obj/item/book/granter/crafting_recipe/blueprint/gauss,
+							/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
+							/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
+							/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
+							/obj/item/book/granter/crafting_recipe/blueprint/bozar,
+							/obj/item/book/granter/crafting_recipe/blueprint/neostead,
+							/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
+							/obj/item/book/granter/crafting_recipe/blueprint/aer9,
+							/obj/item/book/granter/crafting_recipe/blueprint/r91,
+							/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
+							/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
+							)
+		new randomgun(src)
+	
+
+
