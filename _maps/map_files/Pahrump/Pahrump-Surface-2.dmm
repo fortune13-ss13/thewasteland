@@ -376,14 +376,6 @@
 	},
 /area/f13/wasteland)
 "agU" = (
-/obj/structure/fence/wooden{
-	climbable = 0;
-	density = 0;
-	dir = 1;
-	layer = 3.6;
-	pixel_x = -13;
-	pixel_y = 1
-	},
 /turf/open/floor/wood/f13/stage_bl,
 /area/f13/raiders)
 "agW" = (
@@ -1950,6 +1942,13 @@
 /obj/structure/decoration/rag,
 /turf/closed/wall/f13/wood,
 /area/f13/caves)
+"aOu" = (
+/obj/structure/fence/wooden{
+	pixel_x = 14
+	},
+/obj/structure/fermenting_barrel,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "aOz" = (
 /obj/machinery/light{
 	dir = 8
@@ -2908,10 +2907,6 @@
 /area/f13/building)
 "bhQ" = (
 /obj/structure/table/booth,
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 1;
-	pixel_y = 12
-	},
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
 	pixel_x = -8;
 	pixel_y = 11
@@ -2919,6 +2914,10 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
 	pixel_x = 9;
 	pixel_y = 9
+	},
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 11
 	},
 /turf/open/floor/wood/f13/stage_t,
 /area/f13/raiders)
@@ -7759,6 +7758,9 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -9095,10 +9097,13 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "dHX" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/turf/open/floor/f13/wood,
+/obj/machinery/light,
+/turf/open/floor/f13{
+	icon_state = "darkdirty"
+	},
 /area/f13/raiders)
 "dIj" = (
 /obj/structure/simple_door/bunker,
@@ -14206,6 +14211,9 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -14246,9 +14254,6 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
@@ -17801,7 +17806,6 @@
 /turf/open/floor/plating,
 /area/f13/tunnel)
 "gYA" = (
-/obj/machinery/light,
 /obj/structure/table,
 /obj/item/stack/medical/gauze,
 /turf/open/floor/f13{
@@ -18413,6 +18417,7 @@
 "hhG" = (
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/machinery/light,
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -18794,7 +18799,7 @@
 /area/f13/wasteland)
 "hnU" = (
 /obj/structure/rack/shelf_metal,
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/f13/wood,
@@ -26731,6 +26736,9 @@
 /obj/structure/fence/wooden{
 	pixel_x = -13
 	},
+/obj/structure/fence/wooden{
+	pixel_x = -18
+	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "kmA" = (
@@ -29455,6 +29463,9 @@
 /area/f13/building)
 "lsF" = (
 /obj/machinery/workbench/forge,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "lsS" = (
@@ -35140,14 +35151,6 @@
 /obj/structure/chair/booth{
 	dir = 4
 	},
-/obj/structure/fence/wooden{
-	climbable = 0;
-	density = 0;
-	dir = 1;
-	layer = 3.6;
-	pixel_x = -13;
-	pixel_y = 1
-	},
 /turf/open/floor/wood/f13/stage_tl,
 /area/f13/raiders)
 "nBA" = (
@@ -38911,7 +38914,6 @@
 /obj/item/stack/sheet/hay/twenty,
 /obj/item/stack/sheet/cloth/five,
 /obj/structure/table,
-/obj/machinery/light/small,
 /obj/item/grenade/f13/stinger,
 /obj/item/grenade/f13/stinger,
 /turf/open/floor/f13/wood,
@@ -38953,13 +38955,19 @@
 	},
 /area/f13/wasteland)
 "pgB" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
 	},
-/turf/open/floor/f13/wood{
-	icon_state = "housewood2-broken"
+/obj/structure/fence/wooden{
+	pixel_x = 14
 	},
-/area/f13/raiders)
+/obj/structure/fermenting_barrel,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 10;
+	icon_state = "dirt"
+	},
+/area/f13/wasteland)
 "pgD" = (
 /obj/structure/railing/handrail/end{
 	dir = 4
@@ -46652,6 +46660,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/machinery/workbench/bottler,
+/obj/machinery/light,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "stl" = (
@@ -47068,9 +47077,9 @@
 	pixel_x = 4;
 	pixel_y = 5
 	},
-/obj/structure/destructible/tribal_torch/wall/lit{
+/obj/machinery/light{
 	dir = 1;
-	pixel_y = 12
+	pixel_y = 6
 	},
 /turf/open/floor/wood/f13/stage_t,
 /area/f13/raiders)
@@ -47595,7 +47604,6 @@
 /obj/item/melee/onehanded/machete,
 /obj/item/melee/onehanded/machete,
 /obj/structure/rack/shelf_metal,
-/obj/machinery/light/small,
 /obj/item/storage/bag/salvage,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
@@ -106781,7 +106789,7 @@ mvv
 amy
 hxt
 hMz
-dHX
+hMz
 qOn
 hnU
 gSx
@@ -107550,7 +107558,7 @@ dUS
 eyi
 cWG
 ftg
-pgB
+haw
 fRR
 fRR
 gSx
@@ -111151,7 +111159,7 @@ ogQ
 fIT
 xyT
 gez
-gez
+dHX
 tzz
 hZD
 iqZ
@@ -113471,8 +113479,8 @@ rxE
 dEc
 tDH
 jyz
-iDN
-mvv
+pgB
+aOu
 mvv
 stD
 qTe
