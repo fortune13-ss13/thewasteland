@@ -17,6 +17,35 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
+/datum/crafting_recipe/stick
+	name = "Wooden Handle"
+	time = 30
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1)
+	result = /obj/item/blacksmith/woodrod
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
+/datum/crafting_recipe/swordhilt
+	name = "Sword Hilt"
+	time = 30
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 2)
+	result = /obj/item/blacksmith/swordhandle
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
+/datum/crafting_recipe/toolboxhammer
+	name = "Toolbox Hammer"
+	result = /obj/item/melee/smith/hammer/toolbox
+	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
+	reqs = list(
+		/obj/item/storage/toolbox = 1,
+		/obj/item/stack/sheet/metal = 4,
+		/obj/item/stack/rods = 2,
+		)
+	time = 40
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
 /datum/crafting_recipe/tableanvil
 	name = "Table Anvil"
 	result = /obj/structure/anvil/obtainable/table
@@ -57,19 +86,6 @@
 	reqs = list(
 		/obj/item/stack/sheet/mineral/sandstone = 20,
 		/obj/item/stack/sheet/metal = 6,
-		)
-	tools = list(TOOL_CROWBAR)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-
-/datum/crafting_recipe/quenching
-	name = "Quenching trough"
-	result = /obj/structure/blacksmith/quenching
-	time = 200
-	reqs = list(
-		/obj/item/stack/sheet/mineral/wood = 6,
-		/obj/item/stack/sheet/metal = 2,
-		/datum/reagent/water = 300,
 		)
 	tools = list(TOOL_CROWBAR)
 	category = CAT_CRAFTING

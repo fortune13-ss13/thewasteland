@@ -98,7 +98,6 @@
 // --------------------------------------------------------
 // FALLOUT BELTS
 
-
 // Wasteland toolbelt
 /obj/item/storage/belt/utility/waster
 	name = "wastelander toolbelt"
@@ -107,7 +106,6 @@
 /obj/item/storage/belt/utility/waster/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_combined_w_class = WEIGHT_CLASS_SMALL * 9
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	var/static/list/can_hold = typecacheof(list(
 		/obj/item/crowbar,
@@ -140,6 +138,7 @@
 /obj/item/storage/belt/utility/waster/forgemaster
 	name = "forgemasters toolbelt"
 	desc = "Has a collection of basic tools and a hook rigging to sling a chainsaw from."
+	var/max_combined_w_class = WEIGHT_CLASS_SMALL * 8
 
 /obj/item/storage/belt/utility/waster/forgemaster/PopulateContents()
 	new /obj/item/crowbar(src)
@@ -147,9 +146,7 @@
 	new /obj/item/screwdriver/basic(src)
 	new /obj/item/weldingtool/basic(src)
 	new /obj/item/wirecutters/basic(src)
-	new /obj/item/melee/smith/hammer/premade(src)
 	new /obj/item/twohanded/chainsaw(src)
-
 
 // Gardener belt. Hold farming stuff thats small, also flasks (think hip flasks, not bottles as such)
 /obj/item/storage/belt/utility/gardener
@@ -915,13 +912,9 @@
 	content_overlays = TRUE
 	onmob_overlays = TRUE
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_NECK
-	fitting_swords = list(/obj/item/melee/smith/machete,
-	/obj/item/melee/smith/machete/reforged,
+	fitting_swords = list(
 	/obj/item/melee/smith/wakizashi,
-	/obj/item/melee/smith/sword,
-	/obj/item/melee/smith/twohand/axe,
 	/obj/item/melee/smith/twohand/katana,
-	/obj/item/melee/smith/sword/sabre,
 	/obj/item/melee/onehanded/machete,
 	/obj/item/melee/onehanded/club,
 	/obj/item/melee/classic_baton,
@@ -956,7 +949,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	content_overlays = TRUE
 	onmob_overlays = TRUE
-	var/list/fitting_swords = list(/obj/item/melee/smith/sword, /obj/item/melee/baton/stunsword)
+	var/list/fitting_swords = list(/obj/item/melee/smith/sabre, /obj/item/melee/baton/stunsword)
 	var/starting_sword = null
 
 // Instead of half-assed broken weaboo stuff lets have something that works.

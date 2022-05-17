@@ -1,43 +1,91 @@
-
-// SMITHED ITEMS NOTES: The base items made from hammering the ingot is here. Code is adapted TG smithing module, some stuff added & changed, some formulas changed, new mechanics such as quenching and various light/sound stuff added.
-// TG remnant stuff like the dwarf smithing thing, diamond sheets and ratvar etc remains but is not really supported. Logic of the code is : hammer on ingot, make base item, dip the base item in coolant, slap on finisher, and there you go, new item.
-// Power level of weapons should be more or less in line with "normal" weapons, but the idea is to push in more amusing gimmicks. Quality should make a big difference but not be necessary to have maxed for the item to be useful.
-// Items such as rings and the ball&chain are pretty basic, but can be expanded, and other suitable items adapted or new ones added. Point is to make smithing viable for not just weapons, at least some nice fluff.
-
-
-//////////////////////////////////////////
-//										//
-//		SMITHED ITEMS BASE CODE			//
-//										//
-//////////////////////////////////////////
+/obj/item/basaltblock
+	name = "basalt block"
+	desc = "A block of basalt."
+	icon = 'icons/obj/smith.dmi'
+	icon_state = "sandvilnoir"
 
 
 /obj/item/smithing
 	name = "base class /obj/item/smithing"
-	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
+	icon = 'icons/obj/smith.dmi'
 	icon_state = "unfinished"
 	material_flags = MATERIAL_COLOR | MATERIAL_ADD_PREFIX
 	var/quality = 0 //quality. Changed by the smithing process.
 	var/obj/item/finishingitem = /obj/item/blacksmith/woodrod //What this item needs to be hit by to create finalitem
 	var/obj/item/finalitem
 	var/artifact = FALSE
-	var/toohot = TRUE
 
-/obj/item/smithing/Initialize()
-	add_overlay(image(icon= 'icons/fallout/objects/crafting/blacksmith.dmi',icon_state="[icon_state]_hot"))
-	update_icon()
-	return ..()
+/obj/item/ingot
+	name = "ingot"
+	icon = 'icons/obj/smith.dmi'
+	icon_state = "ingot"
+	material_flags = MATERIAL_COLOR | MATERIAL_ADD_PREFIX
+	var/workability = 0
 
-/obj/item/smithing/proc/istempered()
-	cut_overlay(image(icon= 'icons/fallout/objects/crafting/blacksmith.dmi',icon_state="[icon_state]_hot"))
-	update_icon()
-	return
+
+/obj/item/ingot/on_attack_hand(mob/user)
+	var/mob/living/carbon/human/H
+	if(workability != "shapeable")
+		return ..()
+	var/prot = 0
+	if(ishuman(user))
+		H = user
+		if(H.gloves)
+			var/obj/item/clothing/gloves/G = H.gloves
+			if(G.max_heat_protection_temperature)
+				prot = (G.max_heat_protection_temperature > 360)
+		else
+			prot = 0
+	if(prot > 0 || HAS_TRAIT(user, TRAIT_RESISTHEAT) || HAS_TRAIT(user, TRAIT_RESISTHEATHANDS))
+		to_chat(user, "<span class='notice'>You pick up the [src].</span>")
+		return ..()
+	else
+		to_chat(user, "<span class='warning'>You try to move the [src], but you burn your hand on it!</span>")
+	if(H)
+		var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
+		if(affecting && affecting.receive_damage( 0, 5 ))		// 5 burn damage
+			H.update_damage_overlays()
+		var/list/hand_items = list(H.get_active_held_item(),H.get_inactive_held_item())
+		if(src in hand_items)
+			H.dropItemToGround(src)
+
+/obj/item/ingot/iron
+	custom_materials = list(/datum/material/iron=12000)
+
+/obj/item/ingot/diamond
+	custom_materials = list(/datum/material/diamond=12000) //yeah ok
+
+/obj/item/ingot/uranium
+	custom_materials = list(/datum/material/uranium=12000)
+
+/obj/item/ingot/plasma
+	custom_materials = list(/datum/material/plasma=12000)//yeah ok
+
+/obj/item/ingot/gold
+	custom_materials = list(/datum/material/gold=12000)
+
+/obj/item/ingot/silver
+	custom_materials = list(/datum/material/silver=12000)
+
+/obj/item/ingot/titanium
+	custom_materials = list(/datum/material/titanium=12000)
+
+/obj/item/ingot/adamantine
+	custom_materials = list(/datum/material/adamantine=12000)
+
+/obj/item/ingot/cult
+	custom_materials = list(/datum/material/runedmetal=12000)
+
+/obj/item/ingot/bronze
+	custom_materials = list(/datum/material/bronze=12000)
+
+/obj/item/ingot/ratvar
+	custom_materials = list(/datum/material/brass=12000)
+	desc = "On closer inspection, what appears to be wholly-unsuitable-for-smithing brass is actually primarily replicant alloy. Nezbere must have switched it while you weren't looking."
+
 
 /obj/item/smithing/attackby(obj/item/I, mob/user)
-	if(toohot == TRUE)
-		to_chat(user, "<span class='warning'>You need to quench the [src] before finishing it!</span>")
-		return
-	else if(istype(I, finishingitem))
+	if(istype(I, finishingitem))
 		qdel(I)
 		startfinish()
 	else
@@ -95,154 +143,6 @@
 	finalitem.desc = finaldesc
 	finalitem.name = pick("Delersibnir", "Nekolangrir", "Zanoreshik","Öntakrítin", "Nogzatan", "Vunomam", "Nazushagsaldôbar", "Sergeb", "Zafaldastot", "Vudnis", "Dostust", "Shotom", "Mugshith", "Angzak", "Oltud", "Deleratîs", "Nökornomal") //one of these is literally BLOOD POOL CREATE.iirc its Nazushagsaldôbar.
 
-
-// -------- INGOTS -------- //
-
-/obj/item/ingot
-	name = "ingot"
-	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
-	icon_state = "ingot"
-	material_flags = MATERIAL_COLOR | MATERIAL_ADD_PREFIX
-	var/workability = 0
-	light_system = MOVABLE_LIGHT
-	light_range = 2
-	light_power = 0.75
-	light_color = LIGHT_COLOR_FIRE
-	light_on = FALSE
-
-/obj/item/ingot/on_attack_hand(mob/user)
-	var/mob/living/carbon/human/H
-	if(workability != "shapeable")
-		return ..()
-	var/prot = 0
-	if(ishuman(user))
-		H = user
-		if(H.gloves)
-			var/obj/item/clothing/gloves/G = H.gloves
-			if(G.max_heat_protection_temperature)
-				prot = (G.max_heat_protection_temperature > 360)
-		else
-			prot = 0
-	if(prot > 0 || HAS_TRAIT(user, TRAIT_RESISTHEAT) || HAS_TRAIT(user, TRAIT_RESISTHEATHANDS))
-		to_chat(user, "<span class='notice'>You pick up the [src].</span>")
-		return ..()
-	else
-		to_chat(user, "<span class='warning'>You try to move the [src], but you burn your hand on it!</span>")
-	if(H)
-		var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
-		if(affecting && affecting.receive_damage( 0, 5 ))		// 5 burn damage
-			H.update_damage_overlays()
-		var/list/hand_items = list(H.get_active_held_item(),H.get_inactive_held_item())
-		if(src in hand_items)
-			H.dropItemToGround(src)
-
-/obj/item/ingot/iron
-	custom_materials = list(/datum/material/iron=12000)
-
-/obj/item/ingot/diamond
-	custom_materials = list(/datum/material/diamond=12000) //yeah ok
-
-/obj/item/ingot/uranium
-	custom_materials = list(/datum/material/uranium=12000)
-
-/obj/item/ingot/plasma
-	custom_materials = list(/datum/material/plasma=12000)//yeah ok
-
-/obj/item/ingot/gold
-	custom_materials = list(/datum/material/gold=12000)
-
-/obj/item/ingot/silver
-	custom_materials = list(/datum/material/silver=12000)
-
-/obj/item/ingot/titanium
-	custom_materials = list(/datum/material/titanium=12000)
-
-// Adapted to suit FO so it can be used.
-/obj/item/ingot/adamantine
-	custom_materials = list(/datum/material/adamantine=12000)
-	name = "pre-war steel ingot"
-	desc = "Top quality steel from the old world."
-	material_flags = MATERIAL_COLOR
-
-/obj/item/ingot/cult
-	custom_materials = list(/datum/material/runedmetal=12000)
-
-/obj/item/ingot/bronze
-	custom_materials = list(/datum/material/bronze=12000)
-
-/obj/item/ingot/ratvar
-	custom_materials = list(/datum/material/brass=12000)
-	desc = "On closer inspection, what appears to be wholly-unsuitable-for-smithing brass is actually primarily replicant alloy. Nezbere must have switched it while you weren't looking."
-
-
-
-//////////////////////////////////
-//								//
-//		BLACKSMITH FINISHERS	//
-//								//
-//////////////////////////////////
-
-// Root item code
-/obj/item/blacksmith
-	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
-	max_integrity = 50
-	w_class = WEIGHT_CLASS_SMALL
-
-// Stick can be made by using a sharp tool on a piece of wood, less time wasted in crafting menu
-/obj/item/blacksmith/woodrod
-	name = "wooden rod"
-	desc = "It's a rod, suitable for use of a handle of a tool. Also could serve as a weapon, in a pinch."
-	icon_state = "woodrod"
-	force = 7
-	resistance_flags = FLAMMABLE
-
-// Using leather strips on a wooden rod to make a sword handle
-/obj/item/blacksmith/woodrod/attackby/(obj/item/W, mob/user, params)
-	if (istype(W, /obj/item/stack/sheet/leatherstrips))
-		user.visible_message("[user] begins finishing the [src] into a sword handle.", \
-				"<span class='notice'>You begin wrapping the [src] with leather strips, and shaping the wood into a sword handle.</span>", \
-				"<span class='italics'>You hear faint sounds of handcrafting.</span>")
-		// 6 Second Timer
-		if(!do_after(user, 60, TRUE, src))
-			return
-		// Make stick
-		var/obj/item/blacksmith/swordhandle/new_item = new(user.loc)
-		user.visible_message("[user] finishes making a sword handle from the [src].", \
-				"<span class='notice'>You finish making a sword handle from the [src].</span>")
-		qdel(src)
-		// Prepare to Put xin Hands (if holding wood)
-		var/obj/item/stack/sheet/leatherstrips/N = src
-		var/replace = (user.get_inactive_held_item() == N)
-		// Use up the strips
-		N.use(1)
-		// If stack depleted, put item in that hand (if it had one)
-		if (!N && replace)
-			user.put_in_hands(new_item)
-	else
-		. = ..()
-
-
-/obj/item/blacksmith/swordhandle
-	name = "sword handle"
-	desc = "It's a wooden handle with leather strips, making it comfortable to hold."
-	icon_state = "swordhandle"
-	resistance_flags = FLAMMABLE
-
-/obj/item/blacksmith/chain
-	name = "length of chain"
-	desc = "It rattles and is pretty useless when not attached to stuff"
-	icon_state = "chain"
-
-
-//////////////////////////////
-//							//
-//  	SMITHED TOOLS		//
-//							//
-//////////////////////////////
-
-
-// -------- HAMMER AND SHOVEL -------- //
-
 /obj/item/smithing/hammerhead
 	name = "smithed hammer head"
 	finalitem = /obj/item/melee/smith/hammer
@@ -253,6 +153,19 @@
 	finalforreal.force += quality/2
 	finalforreal.qualitymod = quality/2
 	finalitem = finalforreal
+	..()
+
+
+
+/obj/item/smithing/scytheblade
+	name = "smithed scythe head"
+	finalitem = /obj/item/scythe/smithed
+	icon_state = "scythe"
+
+/obj/item/smithing/scytheblade/startfinish()
+	finalitem = new /obj/item/scythe/smithed(src)
+	finalitem.force += quality*2.5
+	//finalitem.armour_penetration += quality*0.0375
 	..()
 
 /obj/item/smithing/shovelhead
@@ -269,8 +182,45 @@
 		finalitem.toolspeed *= max(1, (quality * -1))
 	..()
 
+/obj/item/smithing/cogheadclubhead
+	name = "smithed coghead club head"
+	finalitem = /obj/item/melee/smith/cogheadclub
+	icon_state = "coghead"
 
-// -------- PICKAXES -------- //
+/obj/item/smithing/cogheadclubhead/startfinish()
+	finalitem = new /obj/item/melee/smith/cogheadclub(src)
+	finalitem.force += quality*3.4
+	..()
+
+/obj/item/smithing/javelinhead
+	name = "smithed javelin head"
+	finalitem = /obj/item/melee/smith/twohand/javelin
+	icon_state = "javelin"
+
+/obj/item/smithing/javelinhead/startfinish()
+	var/obj/item/melee/smith/twohand/javelin/finalforreal = new /obj/item/melee/smith/twohand/javelin(src)
+	finalforreal.force += quality*2.5
+	//finalforreal.armour_penetration += quality*0.0375
+	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
+	finalforreal.throwforce = finalforreal.force*2
+	finalitem = finalforreal
+	..()
+
+/obj/item/smithing/pikehead
+	name = "smithed pike head"
+	finalitem = /obj/item/melee/smith/twohand/pike
+	icon_state = "pike"
+
+/obj/item/smithing/pikehead/startfinish()
+	var/obj/item/melee/smith/twohand/pike/finalforreal = new /obj/item/melee/smith/twohand/pike(src)
+	finalforreal.force += quality*2.5
+	//finalforreal.armour_penetration += quality*0.0375
+	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
+	finalforreal.throwforce = finalforreal.force/10 //its a pike not a javelin
+	finalitem = finalforreal
+	..()
 
 /obj/item/smithing/pickaxehead
 	name = "smithed pickaxe head"
@@ -296,464 +246,191 @@
 	finalitem = finalforreal
 	..()
 
+
 /obj/item/smithing/prospectingpickhead
-	name = "smithed prospector's pick head"
-	icon_state = "prospect_smith"
+	name = "smithed prospector's pickaxe head"
 	finalitem = /obj/item/mining_scanner/prospector
-	var/cooldown = null
-	var/range = null
+	icon_state = "minipick"
 
 /obj/item/smithing/prospectingpickhead/startfinish()
 	var/obj/item/mining_scanner/prospector/finalforreal = new /obj/item/mining_scanner/prospector(src)
 	finalforreal.range = 2 + quality
 	if(quality)
 		finalforreal.cooldown = 100/quality
-	finalforreal.force += quality
 	finalitem = finalforreal
 	..()
 
 
-// -------- CROWBARS -------- //
-
-/obj/item/smithing/crowbar
-	name = "unwrapped crowbar"
-	desc = "Add leather strips."
-	icon_state = "crowbar_smith"
-	finishingitem = /obj/item/stack/sheet/leatherstrips
-	finalitem = /obj/item/crowbar/smithed
-
-/obj/item/smithing/crowbar/startfinish()
-	var/obj/item/crowbar/smithed/finalforreal = new /obj/item/crowbar/smithed(src)
-	finalforreal.force += quality
-	if(quality > 0)
-		finalforreal.toolspeed = max(0.05,(1-(quality/10)))
-	else
-		finalforreal.toolspeed *= max(1, (quality * -1))	
-	finalitem = finalforreal
-	..()
-
-
-/obj/item/smithing/unitool
-	name = "unwrapped universal tool"
-	desc = "Add leather strips."
-	icon_state = "unitool_smith"
-	finishingitem = /obj/item/stack/sheet/leatherstrips
-	finalitem = /obj/item/crowbar/smithedunitool
-
-/obj/item/smithing/unitool/startfinish()
-	var/obj/item/crowbar/smithedunitool/finalforreal = new /obj/item/crowbar/smithedunitool(src)
-	finalforreal.force += quality
-	finalitem = finalforreal
-	..()
-
-
-// -------- KITCHEN KNIFE -------- //
-
-/obj/item/smithing/knifeblade
-	name = "smithed knife blade"
-	icon_state = "knife_smith"
-	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/kitchen/knife
-
-/obj/item/smithing/knifeblade/startfinish()
-	var/obj/item/kitchen/knife/smithed/finalforreal = new /obj/item/kitchen/knife/smithed(src)
-	finalforreal.force += quality*2
-	finalitem = finalforreal
-	..()
-
-
-//////////////////////////////////////////////////
-//												//
-//  	BLING - smithed and finished both		//
-//												//
-//////////////////////////////////////////////////
-
-/obj/item/smithing/special
-	mob_overlay_icon = 'icons/fallout/onmob/items/miscellaneous.dmi'
-	gender = NEUTER
-	w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/smithing/special/jewelry
-	icon_state = "ring"
-	item_state = "ring"
-	strip_delay = 20
-	equip_delay_other = 40
-	var/strip_mod = 1 //how much they alter stripping items time by, higher is quicker
-	var/strip_silence = TRUE
-	var/mood_event_on_equip = /datum/mood_event/equipped_ring/gold
-
-/obj/item/smithing/special/jewelry/ring
-	name = "ring"
-	slot_flags = ITEM_SLOT_GLOVES
-	attack_verb = list("proposed")
-
-/obj/item/smithing/special/jewelry/ring/equipped(mob/user, slot)
-	. = ..()
-	if (slot == SLOT_GLOVES && istype(user))
-		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "ringbuff", mood_event_on_equip)
-	else
-		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
-
-/obj/item/smithing/special/jewelry/ring/dropped(mob/user)
-	. = ..()
-	SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
-
-
-/obj/item/clothing/shoes/ballandchain
-	name = "ball and chain"
-	desc = "An unpopular alternative to shoes."
-	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
-	icon_state = "ballandchain"
-	mob_overlay_icon = 'icons/fallout/onmob/items/miscellaneous.dmi'
-	item_state = "ballandchain"
-	strip_delay = 300
-	equip_delay_other = 50
-	can_be_tied = FALSE
-	w_class = WEIGHT_CLASS_BULKY
-	slowdown = 8
-	material_flags = MATERIAL_COLOR | MATERIAL_ADD_PREFIX
-	hitsound = 'sound/weapons/chainhit.ogg'
-	var/quality = null
-
-/obj/item/clothing/shoes/ballandchain/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-	if(loc == user && user.get_item_by_slot(SLOT_SHOES))
-		playsound(usr.loc, 'sound/weapons/chainhit.ogg', 75, 1)
-		to_chat(user, "<span class='warning'>The ball and chain are too hard to remove by yourself! You'll need help taking this off!</span>")
-		return
-	return ..()
-
-/obj/item/smithing/ballandchain
-	name = "unchained ball"
-	desc = "Finish by attaching a chain to it."
-	icon_state = "ball"
-	finishingitem = /obj/item/blacksmith/chain
-	finalitem = /obj/item/clothing/shoes/ballandchain
-
-/obj/item/smithing/ballandchain/startfinish()
-	var/obj/item/smithing/ballandchain/finalforreal = new /obj/item/clothing/shoes/ballandchain(src)
-	finalitem = new /obj/item/clothing/shoes/ballandchain(src)
-	finalforreal.force += quality*2
-	finalitem = finalforreal
-	finalitem.icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
-	finalitem.icon_state = "ballandchain"
-	finalitem.name = "ball and chain"
-	finalitem.desc = "Makes the captive even more miserable."
-	finalitem.material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	..()
-
-
-// -------- 1-H WEAPONS -------- //
-
-/obj/item/smithing/daggerblade
-	name = "smithed dagger blade"
-	icon_state = "dagger_smith"
-	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/dagger
-
-/obj/item/smithing/daggerblade/startfinish()
-	finalitem = new /obj/item/melee/smith/dagger(src)
-	finalitem.force += quality*1.5
-	finalitem.armour_penetration += quality*0.0375
-	..()
-
-/obj/item/smithing/macheteblade
-	name = "smithed machete blade"
-	icon_state = "machete_smith"
-	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/machete
-
-/obj/item/smithing/macheteblade/startfinish()
-	finalitem = new /obj/item/melee/smith/machete(src)
-	finalitem.force += quality*1.5
-	..()
-
-/obj/item/smithing/gladiusblade
+/obj/item/smithing/shortswordblade
 	name = "smithed gladius blade"
-	icon_state = "gladius_smith"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/machete/gladius
+	finalitem = /obj/item/melee/smith/shortsword
+	icon_state = "gladius"
 
-/obj/item/smithing/gladiusblade/startfinish()
-	finalitem = new /obj/item/melee/smith/machete/gladius(src)
-	finalitem.force += quality*1.5
+/obj/item/smithing/shortswordblade/startfinish()
+	finalitem = new /obj/item/melee/smith/shortsword(src)
+	finalitem.force += quality*2.5
+	//finalitem.armour_penetration += quality*0.0375
 	..()
 
-/obj/item/smithing/macheterblade
-	name = "reforged machete blade"
-	icon_state = "macheter_smith"
+/obj/item/smithing/scimitarblade
+	name = "smithed scimitar blade"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/machete/reforged
+	finalitem = /obj/item/melee/smith/shortsword/scimitar
+	icon_state = "scimitar"
 
-/obj/item/smithing/macheterblade/startfinish()
-	finalitem = new /obj/item/melee/smith/machete/reforged(src)
-	finalitem.force += quality*1.5
+/obj/item/smithing/scimitarblade/startfinish()
+	finalitem = new /obj/item/melee/smith/shortsword/scimitar(src)
+	finalitem.force += quality*2.5
+	//finalitem.armour_penetration += quality*0.0025
 	..()
 
-
-/obj/item/smithing/swordblade
-	name = "smithed swordblade"
-	icon_state = "sword_smith"
+/obj/item/smithing/wakiblade
+	name = "smithed wakizashi blade"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/sword
+	finalitem = /obj/item/melee/smith/wakizashi
+	icon_state = "waki"
 
-/obj/item/smithing/swordblade/startfinish()
-	finalitem = new /obj/item/melee/smith/sword(src)
-	finalitem.force += quality*1.5
+/obj/item/smithing/wakiblade/startfinish()
+	finalitem = new /obj/item/melee/smith/wakizashi(src)
+	finalitem.force += quality*2.5
+	//finalitem.armour_penetration += quality*0.0375
 	..()
 
 /obj/item/smithing/sabreblade
 	name = "smithed sabre blade"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/sword/sabre
-	icon_state = "sabre_smith"
+	finalitem = /obj/item/melee/smith/sabre
+	icon_state = "sabre"
 
 /obj/item/smithing/sabreblade/startfinish()
-	finalitem = new /obj/item/melee/smith/sword/sabre(src)
-	finalitem.force += quality*1.5
+	finalitem = new /obj/item/melee/smith/sabre(src)
+	finalitem.force += quality*2.5
+	//finalitem.armour_penetration += quality*0.0375
 	..()
 
-/obj/item/smithing/spathablade
-	name = "smithed spathablade"
-	icon_state = "spatha_smith"
+/obj/item/smithing/rapierblade
+	name = "smithed rapier blade"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/sword/spatha
+	finalitem = /obj/item/melee/smith/sabre/rapier
+	icon_state = "rapier"
 
-/obj/item/smithing/spathablade/startfinish()
-	finalitem = new /obj/item/melee/smith/sword/spatha(src)
-	finalitem.force += quality*1.5
+/obj/item/smithing/rapierblade/startfinish()
+	finalitem = new /obj/item/melee/smith/sabre/rapier(src)
+	finalitem.force += quality*2.5
+	//finalitem.armour_penetration += quality*0.0375
 	..()
 
-
-/obj/item/smithing/macehead
-	name = "smithed macehead"
-	icon_state = "mace_smith"
+/obj/item/smithing/knifeblade
+	name = "smithed knife blade"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/mace
+	finalitem = /obj/item/kitchen/knife
+	icon_state = "dagger"
 
-/obj/item/smithing/macehead/startfinish()
-	finalitem = new /obj/item/melee/smith/mace(src)
-	finalitem.force += quality*1.5
-	finalitem.armour_penetration += quality*0.05
+/obj/item/smithing/knifeblade/startfinish()
+	finalitem = new /obj/item/kitchen/knife(src)
+	finalitem.force = 4 + quality/2
+	finalitem.armour_penetration += quality*0.0375
+	finalitem.icon = 'icons/obj/smith.dmi'
+	finalitem.icon_state = "dagger"
+	finalitem.name = "dagger"
+	finalitem.desc = "A dagger."
+	var/mutable_appearance/overlay = mutable_appearance('icons/obj/smith.dmi', "daggerhilt")
+	overlay.appearance_flags = RESET_COLOR
+	finalitem.add_overlay(overlay)
+	if(finalitem.force < 0)
+		finalitem.force = 0
+	finalitem.material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	..()
 
-
-/obj/item/smithing/wakiblade
-	name = "smithed wakizashi blade"
-	icon_state = "waki_smith"
+/obj/item/smithing/broadblade
+	name = "smithed broadsword blade"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/wakizashi
+	finalitem = /obj/item/melee/smith/twohand/broadsword
+	icon_state = "broadsword"
 
-/obj/item/smithing/wakiblade/startfinish()
-	finalitem = new /obj/item/melee/smith/wakizashi(src)
-	finalitem.force += quality*1.5
-	..()
-
-// -------- POLEARMS -------- //
-
-/obj/item/smithing/spearhead
-	name = "smithed spearhead"
-	finalitem = /obj/item/melee/smith/twohand/spear
-	icon_state = "spear_smith"
-
-/obj/item/smithing/spearhead/startfinish()
-	var/obj/item/melee/smith/twohand/spear/finalforreal = new /obj/item/melee/smith/twohand/spear(src)
-	finalforreal.force += quality*1.5
+/obj/item/smithing/broadblade/startfinish()
+	var/obj/item/melee/smith/twohand/broadsword/finalforreal = new /obj/item/melee/smith/twohand/broadsword(src)
+	finalforreal.force += quality*2.5
+	//finalforreal.armour_penetration += quality*0.0375
 	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalforreal.throwforce = finalforreal.force/10
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
 	finalitem = finalforreal
 	..()
 
-/obj/item/smithing/lancehead
-	name = "smithed lancehead"
-	finalitem = /obj/item/melee/smith/twohand/spear/lance
-	icon_state = "lance_smith"
-
-/obj/item/smithing/lancehead/startfinish()
-	var/obj/item/melee/smith/twohand/spear/lance/finalforreal = new /obj/item/melee/smith/twohand/spear/lance(src)
-	finalforreal.force += quality*1.5
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalforreal.throwforce = finalforreal.force/10
-	finalitem = finalforreal
-	..()
-
-// -------- 2-H WEAPONS --------- //
-
-/obj/item/smithing/axehead
-	name = "smithed axehead"
-	icon_state = "axe_smith"
-	finalitem = /obj/item/melee/smith/twohand/axe
-
-/obj/item/smithing/axehead/startfinish()
-	var/obj/item/melee/smith/twohand/axe/finalforreal = new /obj/item/melee/smith/twohand/axe(src)
-	finalforreal.force += quality*1.5
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalitem = finalforreal
-	..()
-
-/obj/item/smithing/warhonedhead
-	name = "smithed axehead"
-	icon_state = "warhoned_smith"
-	finalitem = /obj/item/melee/smith/twohand/axe/warhoned
-
-/obj/item/smithing/warhonedhead/startfinish()
-	var/obj/item/melee/smith/twohand/axe/warhoned/finalforreal = new /obj/item/melee/smith/twohand/axe/warhoned(src)
-	finalforreal.force += quality*1.5
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalitem = finalforreal
-	..()
-
-/obj/item/smithing/scrapblade
-	name = "smithed scrap blade"
-	icon_state = "scrap_smith"
+/obj/item/smithing/zweiblade
+	name = "smithed zweihander blade"
 	finishingitem = /obj/item/blacksmith/swordhandle
-	finalitem = /obj/item/melee/smith/twohand/axe/scrapblade
+	finalitem = /obj/item/melee/smith/twohand/zweihander
+	icon_state = "zwei"
 
-/obj/item/smithing/scrapblade/startfinish()
-	var/obj/item/melee/smith/twohand/axe/scrapblade/finalforreal = new /obj/item/melee/smith/twohand/axe/scrapblade(src)
-	finalforreal.force += quality*1.5
+/obj/item/smithing/zweiblade/startfinish()
+	var/obj/item/melee/smith/twohand/zweihander/finalforreal = new /obj/item/melee/smith/twohand/zweihander(src)
+	finalforreal.force += quality*2.5
+	//finalforreal.armour_penetration += quality*0.0375
 	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
 	finalitem = finalforreal
 	..()
 
+/obj/item/smithing/halberdhead
+	name = "smithed halberd head"
+	finalitem = /obj/item/melee/smith/twohand/halberd
+	icon_state = "halberd"
+
+/obj/item/smithing/halberdhead/startfinish()
+	var/obj/item/melee/smith/twohand/halberd/finalforreal = new /obj/item/melee/smith/twohand/halberd(src)
+	finalforreal.force += quality*2.5
+	//finalforreal.armour_penetration += quality*0.025
+	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.throwforce = finalforreal.force/3
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
+	finalitem = finalforreal
+	..()
+
+/obj/item/smithing/glaivehead
+	name = "smithed glaive head"
+	finalitem = /obj/item/melee/smith/twohand/glaive
+	icon_state = "glaive"
+
+/obj/item/smithing/glaivehead/startfinish()
+	var/obj/item/melee/smith/twohand/glaive/finalforreal = new /obj/item/melee/smith/twohand/glaive(src)
+	finalforreal.force += quality*2.5
+	//finalforreal.armour_penetration += quality*0.0025
+	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.throwforce = finalforreal.force
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
+	finalitem = finalforreal
+	..()
 
 /obj/item/smithing/katanablade
 	name = "smithed katana blade"
-	icon_state = "katana_smith"
 	finishingitem = /obj/item/blacksmith/swordhandle
 	finalitem = /obj/item/melee/smith/twohand/katana
+	icon_state = "katana"
+
 
 /obj/item/smithing/katanablade/startfinish()
 	var/obj/item/melee/smith/twohand/katana/finalforreal = new /obj/item/melee/smith/twohand/katana(src)
-	finalforreal.force += quality*1.5
+	finalforreal.force += quality*2.5
+	//finalforreal.armour_penetration += quality*0.0375
 	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]")
 	finalitem = finalforreal
 	..()
 
+/obj/item/blacksmith/woodrod
+	name = "wooden rod"
+	desc = "It's a rod, suitable for use of a handle of a tool. Also could serve as a weapon, in a pinch."
+	icon = 'icons/obj/smith.dmi'
+	icon_state = "stick"
+	force = 7
 
-// GHOUL CRUSHER - for those dry twig like limbs, snap snap.
-/obj/item/smithing/crusherhead
-	name = "smithed crusher head"
-	finalitem = /obj/item/melee/smith/twohand/crusher
-	icon_state = "crusher_smith"
+/obj/item/blacksmith/swordhandle
+	name = "sword handle"
+	desc = "It's a crudlely shaped wooden sword hilt."
+	icon = 'icons/obj/smith.dmi'
+	icon_state = "shorthilt"
 
-/obj/item/smithing/crusherhead/startfinish()
-	var/obj/item/melee/smith/twohand/crusher/finalforreal = new /obj/item/melee/smith/twohand/crusher(src)
-	finalforreal.force += quality*1.5
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalforreal.AddComponent(/datum/component/bane, speciestype = /datum/species/ghoul, mobtype = /mob/living/simple_animal/hostile/ghoul, damage_multiplier = 1.5)
-	finalitem = finalforreal
-	..()
-
-
-
-// -------- THROWING WEAPONS --------- //
-
-/obj/item/smithing/javelinhead
-	name = "smithed javelin head"
-	icon_state = "javelin_smith"
-	finalitem = /obj/item/melee/smith/javelin
-
-/obj/item/smithing/javelinhead/startfinish()
-	var/obj/item/melee/smith/javelin/finalforreal = new /obj/item/melee/smith/javelin(src)
-	finalforreal.force += quality*1.5
-	finalforreal.throwforce = finalforreal.force*1.5
-	finalitem = finalforreal
-	..()
-
-
-/obj/item/smithing/throwingknife
-	name = "unfinished throwing knife"
-	desc = "Add leather strips."
-	icon_state = "throwing_smith"
-	finishingitem = /obj/item/stack/sheet/leatherstrips
-	finalitem = /obj/item/melee/smith/throwingknife
-
-/obj/item/smithing/throwingknife/startfinish()
-	var/obj/item/melee/smith/throwingknife/finalforreal = new /obj/item/melee/smith/throwingknife(src)
-	finalforreal.force += quality*1.4
-	finalforreal.throwforce = finalforreal.force*1.4
-	finalitem = finalforreal
-	..()
-
-
-//////////////////////////////////////
-//									//
-//		QUENCHING TROUGH			//
-//									//
-//////////////////////////////////////
-
-/obj/structure/blacksmith/quenching
-	name = "quenching trough"
-	desc = "Water in a open box, for tempering hot metal in."
-	icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
-	icon_state = "quench"
-	density = TRUE
-	anchored = TRUE
-	var/toohot
-
-/obj/structure/blacksmith/quenching/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/smithing))
-		var/obj/item/smithing/untempered = I
-		if(untempered.toohot == FALSE)
-			playsound(src, 'sound/effects/water_wade4.ogg',50, 1)
-			return
-		to_chat(user, "You temper the [untempered] by quenching it in the water. There is a loud hiss and a puff of steam.")
-		playsound(src, 'sound/f13effects/steam_long.ogg',80, 1)
-		flick("quench_boil",src)
-		var/datum/effect_system/steam_spread/puff = new /datum/effect_system/steam_spread/()
-		puff.effect_type = /obj/effect/particle_effect/steam
-		puff.set_up(2, 0, src)
-		puff.start()
-		if(!do_after(user, 20, TRUE, src))
-			return
-		untempered.toohot = FALSE
-		untempered.istempered()
-		I.on_attack_hand(user)
-	else
-		. = ..()
-
-
-/obj/structure/blacksmith/quenching/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/ingot))
-		var/obj/item/ingot/notsword = I
-		if(notsword.workability == FALSE)
-			playsound(src, 'sound/effects/water_wade4.ogg',50, 1)
-			return
-		to_chat(user, "You cool the [notsword] in the water.")
-		playsound(src, 'sound/f13effects/steam_short.ogg',80, 1)
-		flick("quench_boil",src)
-		var/datum/effect_system/steam_spread/puff = new /datum/effect_system/steam_spread/()
-		puff.effect_type = /obj/effect/particle_effect/steam
-		puff.set_up(1, 0, src)
-		puff.start()
-		notsword.workability = FALSE
-		notsword.icon_state = "ingot"
-		notsword.set_light_on(FALSE)
-		I.on_attack_hand(user)
-	else
-		. = ..()
-
-
-/*
-
-// -------- ARMOR STUFF CONCEPT --------- //
-
-/obj/item/smithing/helmet
-	name = "smithed unpadded helmet"
-	finalitem = /obj/item/clothing/head/helmet/f13/smithed
-	icon_state = "helmet_smith"
-
-/obj/item/smithing/helmet/startfinish()
-	var/obj/item/clothing/head/helmet/f13/smithed/finalforreal = new /obj/item/clothing/head/helmet/f13/smithed(src)
-	finalforreal.armor += quality*1
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalitem = finalforreal
-	..()
-*/
+/obj/item/blacksmith/chain
+	name = "placeholder"
