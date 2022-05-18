@@ -38,7 +38,7 @@
 					"<span class='userdanger'>[A] [atk_verb]s you!</span>", null, null, A)
 	to_chat(A, "<span class='danger'>You [atk_verb] [D]!</span>")
 	if(prob(10))
-		crit_damage += (damage + 2)
+		crit_damage += (damage + 3.5)
 		playsound(get_turf(D), 'sound/weapons/bite.ogg', 50, TRUE, -1)
 		D.visible_message("<span class='warning'>[D] staggers as they're slammed in the stomach</span>", "<span class='userdanger'>You are struck with incredible precision by [A]!</span>")
 		log_combat(A, D, "critcal hard punched (Berserker)")//log it here because a critical can swing for 40 force and it's important for the sake of how hard they hit
