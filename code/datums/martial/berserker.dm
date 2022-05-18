@@ -28,6 +28,7 @@
 /datum/martial_art/berserker/proc/hardPunch(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	///this var is so that the strong punch is always aiming for the body part the user is targeting and not trying to apply to the chest before deviating
 	var/obj/item/bodypart/affecting = D.get_bodypart(ran_zone(A.zone_selected))
+	var/armor_block = D.run_armor_check(affecting, "melee")
 	A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 	var/atk_verb = pick("forcefully kick", "brutally jab", "cleanly hit", "viciously slam")
 	///this is the critical hit damage added to the attack if it rolls, it starts at 0 because it'll be changed when rolled
@@ -44,11 +45,7 @@
 	else
 		playsound(get_turf(D), 'sound/weapons/punch1.ogg', 25, TRUE, -1)
 		log_combat(A, D, "hard punched punched (Berserker)")//so as to not double up on logging
-<<<<<<< Updated upstream
-	D.apply_damage((damage + 3) + crit_damage, BRUTE, affecting, wound_bonus = CANT_WOUND)
-=======
 	D.apply_damage(damage + 2.5 + crit_damage, BRUTE, affecting, armor_block, wound_bonus = CANT_WOUND)
->>>>>>> Stashed changes
 	return TRUE
 
 ///Shouldercheck: Harm Harm Harm combo, throws people seven tiles backwards
