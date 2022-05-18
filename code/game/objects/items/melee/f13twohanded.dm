@@ -522,7 +522,7 @@
 	AddElement(/datum/element/update_icon_updates_onmob)
 
 
-// Super Sledge			Keywords: Damage 25/60
+// Super Sledge			Keywords: Damage 25/80
 /obj/item/twohanded/sledgehammer/supersledge
 	name = "super sledge"
 	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
@@ -532,7 +532,7 @@
 
 obj/item/twohanded/sledgehammer/supersledge/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 60, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 80, icon_wielded="[icon_prefix]2")
 
 obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
