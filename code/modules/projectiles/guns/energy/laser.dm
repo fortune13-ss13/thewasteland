@@ -324,7 +324,7 @@
 	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser) //7dmg, 0 AP, but essentially fires a pinpoint beam
 	automatic = 1
 	autofire_shot_delay = 0.75 //pew pew pew
-	spread = 2
+	spread = 1
 	can_scope = FALSE
 
 // OASIS autolaser
