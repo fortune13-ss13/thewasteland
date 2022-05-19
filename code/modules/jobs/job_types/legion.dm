@@ -423,6 +423,7 @@ commented out pending rework*/
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 	name = "Prime Decanus"
@@ -442,6 +443,7 @@ commented out pending rework*/
 		/obj/item/storage/bag/money/small/legofficers = 1,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/binoculars = 1,
+		/obj/item/reagent_containers/pill/patch/bitterdrink = 1,
 		)
 
 /datum/outfit/loadout/decprimfront
@@ -512,6 +514,7 @@ commented out pending rework*/
 		return
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 	name = "Legion Recruit Decanus"
@@ -769,6 +772,7 @@ commented out pending rework*/
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/onehanded/machete/gladius = 1,
+		/obj/item/reagent_containers/pill/patch/bitterdrink = 1,
 		)
 
 

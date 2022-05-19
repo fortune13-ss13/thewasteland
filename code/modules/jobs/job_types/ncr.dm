@@ -896,9 +896,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Combat Sapper"
 	belt = /obj/item/storage/belt/military/assault/ncr
 	glasses	= /obj/item/clothing/glasses/sunglasses
-	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
+	suit_store =  /obj/item/gun/ballistic/automatic/service/r82
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/m2flamethrowertank = 1,
 		)
 
@@ -986,7 +986,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	mask = /obj/item/clothing/mask/surgical
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	accessory = /obj/item/clothing/accessory/armband/med/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		/obj/item/melee/onehanded/knife/survival = 1,
