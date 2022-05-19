@@ -193,6 +193,13 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 		if(!I.tool_start_check(user, amount=0))
 			return
 
+		if(I.use_tool(src, user, 60, volume=50))
+			user.visible_message("[user] welds the [src] apart.", "You start to weld the [src] apart...")
+			to_chat(user, "<span class='notice'>You weld the [src] apart.</span>")
+			qdel(src)
+			return
+	return ..()
+	
 /obj/structure/barricade/concrete
 	name = "concrete barricade"
 	desc = "A small concrete barricade. Could be turned into a concrete wall with some more concrete."
