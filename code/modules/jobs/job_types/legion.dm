@@ -625,6 +625,7 @@ commented out pending rework*/
 		/obj/item/melee/unarmed/tigerclaw = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 2,
 		/obj/item/melee/powered/ripper = 1,
+		/obj/item/book/granter/martial/berserker = 1,
 		)
 
 /datum/outfit/loadout/vexfox
