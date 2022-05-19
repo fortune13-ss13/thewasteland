@@ -176,7 +176,7 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 	explosion_block = 5
 	slicing_duration = 150 //50% longer than usual
 
-/turf/closed/wall/mineral/concrete/attackby
+/turf/closed/wall/mineral/concrete/attackby(obj/item/I, mob/user)
 	if(istype(I,/obj/item/stack/sheet/plastic))
 		var/obj/item/stack/sheet/plastic/C = I
 		if(C.amount < 3)
