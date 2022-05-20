@@ -877,3 +877,21 @@
 	icon_state = "bone_dancer_helmet"
 	item_state = "bone_dancer_helmet"
 	strip_delay = 100
+/obj/item/clothing/head/helmet/f13/power_armor/AltumHelm
+	name = "advanced power helmet"
+	desc = "It's an advanced power armor MK1 helmet, typically used by the Enclave. It looks somewhat threatening."
+	icon_state = "AltumHelm"
+	item_state = "AltumHelm"
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 90, "energy" = 40, "bomb" = 75, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 50, "wound" = 90)
+/obj/item/clothing/head/helmet/Enclave_combathelmetraider 
+	name = "Enclave Combat Helmet"
+	desc = "Standard issue combat helmets used by the Enclave."
+	icon_state = "Enclave_combathelmetraider"
+	item_state = "Enclave_combathelmetraider"
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 50
+	flags_inv = HIDEEARS|HIDEHAIR
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
