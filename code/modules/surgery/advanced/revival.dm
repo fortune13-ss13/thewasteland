@@ -15,7 +15,6 @@
 	requires_trait = "MEDICALEXPERT"
 
 /datum/surgery/advanced/revival/can_start(mob/user, mob/living/carbon/target, obj/item/tool)
-	return FALSE
 	if(!..())
 		return FALSE
 	if(target.stat != DEAD)
