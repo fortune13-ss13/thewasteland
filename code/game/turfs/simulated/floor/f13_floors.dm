@@ -585,3 +585,10 @@
 /turf/open/floor/circuit/f13_red/off
 	icon_state = "rcircuitoff1"
 	on = FALSE
+
+//CM Imported Ice Floor
+/turf/open/ice
+	name = "ice floor"
+	icon = 'icons/turf/ice.dmi'
+	icon_state = "ice_floor"
+	baseturfs = /turf/open/ice
