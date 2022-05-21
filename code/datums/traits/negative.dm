@@ -174,7 +174,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 		return //we're tied with the dark, so we don't get scared of it; don't cleanse outright to avoid cheese
 	var/turf/T = get_turf(quirk_holder)
 	var/lums = T.get_lumcount()
-	if(lums <= 0.2)
+	if(lums <= 0.2 && !(HAS_TRAIT(H, LIGHTING_PLANE_ALPHA_NV_TRAIT)))
 		if(quirk_holder.m_intent == MOVE_INTENT_RUN)
 			to_chat(quirk_holder, "<span class='warning'>Easy, easy, take it slow... you're in the dark...</span>")
 			quirk_holder.toggle_move_intent()
