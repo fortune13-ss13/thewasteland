@@ -895,7 +895,7 @@
 	desc = "The advanced MKII power armor helmet. Just looking at this makes you feel self conscious about your DNA."
 	icon_state = "AltumHelm"
 	item_state = "AltumHelm"
-	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 35, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
 	
 /obj/item/clothing/head/helmet/Enclave_combat_helmet_raider 
 	name = "Enclave Combat Armor Helmet"
