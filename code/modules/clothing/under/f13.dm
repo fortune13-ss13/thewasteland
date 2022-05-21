@@ -1858,3 +1858,4 @@
 	desc = "Best god dam uniform you have ever seen! so god dam good, uncle sam would cry."
 	icon_state = "Drill_sarge"
 	item_state = "Drill_sarge"
+	
