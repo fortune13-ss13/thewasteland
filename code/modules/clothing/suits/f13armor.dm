@@ -1299,6 +1299,8 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	slowdown = 0.05
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4) // Slightly better armor
 /obj/item/clothing/suit/armor/enclave_combatarmor
+
+/// Altum Push error check
 	name = "Enclave Combat Armor"
 	desc = "A set of standard issue combat armor used by the Enclave. Looks Cheaply made."
 	icon_state = "Enclave_combatarmor"
@@ -1311,6 +1313,7 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	strip_delay = 80
 	equip_delay_other = 60
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+
 /obj/item/clothing/suit/armor/f13/power_armor/AltumFire 
 	name = "Enclave Hellfire Enhanced"
 	desc = "A set of power armor design used by the Enclave. The armor looks brand new and has a werid effect around it."
@@ -1319,6 +1322,7 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	slowdown = 0.25 //+0.1 from helmet = total 0.3
 	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 70, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 50, "wound" = 75)
 	//Combat armor (Faction specific is on f13factionarmor.dm)
+	
 /obj/item/clothing/suit/armor/f13/Scav_combatarmor
 	name = "Russian combat armor"
 	desc = "An old military grade pre war combat armor, painted in black with white strips."
