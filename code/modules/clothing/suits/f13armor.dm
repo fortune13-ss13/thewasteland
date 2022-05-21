@@ -554,7 +554,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
-		if(prob(70) && (damage < deflect_damage)) // Weak projectiles like shrapnel get deflected
+		if(prob(70) && (damage < deflect_damage) && (armour_penetration <= 0)) // Weak projectiles like shrapnel get deflected
 			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
@@ -666,6 +666,13 @@
 	slowdown = 0.25 //+0.1 from helmet = total 0.35
 	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/x02 // Oh the misery
+
+/obj/item/clothing/suit/armor/f13/power_armor/advanced/hellfire
+	name = "hellfire power armor"
+	desc = "A deep black suit of Enclave-manufactured heavy power armor, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no suit rivals it's strength."
+	icon_state = "hellfire"
+	item_state = "hellfire"
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 70, "bomb" = 80, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 90)
 
 /obj/item/clothing/suit/armor/f13/enclave/armorvest
 	name = "armored vest"
@@ -958,7 +965,11 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	desc = "A customized and well-worn suit of riot gear with parts of the suit reinforced with leather armor and slain Centurion armor pieces by the wearer. A sniper's veil is wrapped around the neck."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/rangercombat/degancustom/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/rigscustom
 	name = "11th armored calvary armor"
@@ -1278,32 +1289,12 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 	slowdown = 0.05
-/obj/item/clothing/suit/armor/enclave_combatarmor
-	name = "Enclave Combat Armor"
-	desc = "A set of standard issue combat armor used by the Enclave. Looks Cheaply made."
-	icon_state = "Enclave_combatarmor"
-	item_state = "Enclave_combatarmor"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list("melee" = 70, "bullet" = 20, "laser" = 10,"energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
-	blocks_shove_knockdown = TRUE
-	strip_delay = 80
-	equip_delay_other = 60
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
-/obj/item/clothing/suit/armor/f13/power_armor/AltumFire 
-	name = "Enclave Hellfire Enhanced"
-	desc = "A set of power armor design used by the Enclave. The armor looks brand new and has a werid effect around it."
-	icon_state = "AltumFire"
-	item_state = "AltumFire"
-	slowdown = 0.25 //+0.1 from helmet = total 0.3
-	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 70, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 50, "wound" = 75)
-	//Combat armor (Faction specific is on f13factionarmor.dm)
-/obj/item/clothing/suit/armor/f13/Scav_combatarmor
-	name = "Russian combat armor"
-	desc = "An old military grade pre war combat armor, painted in black with white strips."
-	icon_state = "Scav_combatarmor"
-	item_state = "Scav_combatarmor"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
-	slowdown = 0.12
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+
+/// Daughters of Hecate
+/obj/item/clothing/suit/armor/f13/legion/vet/daughters
+	name = "daughters armor"
+	desc = "Armor worn by once worned by legion veterans now it seems to be daughters of hecate, salvaged bits of enemy armor and scrap metal often reinforcing the armor." //Legion stats as it is basically an female legion, Rigbe said we can use the legion scout sprite as it isnt too legion like.
+	icon_state = "legscout"
+	item_state = "legscout"
+	slowdown = 0.05
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4) // Slightly better armor
