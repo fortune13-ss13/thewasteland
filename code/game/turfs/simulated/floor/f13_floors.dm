@@ -587,29 +587,29 @@
 	on = FALSE
 
 //CM Imported Ice Floor //
-/turf/open/ice
+/turf/open/winter
 	name = "ice floor"
 	icon = 'icons/turf/ice.dmi'
 	icon_state = "ice_floor"
 	baseturfs = /turf/open/ice
 
 //auto snows
-/turf/open/auto_turf/snow/layer0 //still have to manually define the layers for the editor
+/turf/open/winter/snow/layer0 
 	icon_state = "snow_0"
 	bleed_layer = 0
 
-/turf/open/auto_turf/snow/layer1
+/turf/open/winter/snow/layer1
 	icon_state = "snow_1"
 	bleed_layer = 1
 
-/turf/open/auto_turf/snow/layer2
+/turf/open/winter/snow/layer2
 	icon_state = "snow_2"
 	bleed_layer = 2
 
-/turf/open/auto_turf/snow/layer3
+/turf/open/winter/snow/layer3
 	icon_state = "snow_3"
 	bleed_layer = 3
 
-/turf/open/auto_turf/snow/layer4
-	icon_state = "snow_4" //Add sorokyne rock decals to this one
+/turf/open/winter/snow/layer4
+	icon_state = "snow_4" 
 	bleed_layer = 4
