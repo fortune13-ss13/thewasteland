@@ -151,12 +151,14 @@
 	if(!naming)
 		naming = TRUE
 		w_class = WEIGHT_CLASS_GIGANTIC
+		sharpness = SHARP_NONE
 		to_chat(usr, "<span class='notice'>You firmly grip the pen in preparation to rename something.</span>")
 		playsound(src, 'sound/machines/button2.ogg', 50, 1)
 		return
 	if(naming)
 		naming = FALSE
 		w_class = WEIGHT_CLASS_TINY
+		sharpness = SHARP_POINTY
 		to_chat(usr, "<span class='notice'>You reset the grip on the pen</span>")
 		playsound(src, 'sound/machines/button2.ogg', 50, 1)
 		return
