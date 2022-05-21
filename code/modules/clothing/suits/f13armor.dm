@@ -1298,9 +1298,10 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	item_state = "legscout"
 	slowdown = 0.05
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4) // Slightly better armor
-/obj/item/clothing/suit/armor/enclave_combatarmor
 
-/// Altum Push error check
+	/// Altum Push error check
+
+/obj/item/clothing/suit/armor/enclave_combatarmor
 	name = "Enclave Combat Armor"
 	desc = "A set of standard issue combat armor used by the Enclave. Looks Cheaply made."
 	icon_state = "Enclave_combatarmor"
