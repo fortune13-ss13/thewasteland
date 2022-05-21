@@ -594,22 +594,39 @@
 	baseturfs = /turf/open/ice
 
 //auto snows
-/turf/open/winter/snow/layer0 
+
+/turf/open/winter/snow/layer0
+	name = "Cleared Snow Path"
+	desc = "Forgiving to cold boots, for once."
+	icon = 'icons/turf/floors/auto_ice'
 	icon_state = "snow_0"
-	bleed_layer = 0
+
+	
 
 /turf/open/winter/snow/layer1
+	name = "Shallow Snow"
+	desc = "Some of the ground underneath pokes out from the white covering."
+	icon = 'icons/turf/floors/auto_ice'
 	icon_state = "snow_1"
-	bleed_layer = 1
+	
 
 /turf/open/winter/snow/layer2
+	name = "Deep Snow"
+	desc = "Somewhat trampled snow, they must've had trouble getting through this."
+	icon = 'icons/turf/floors/auto_ice'
 	icon_state = "snow_2"
-	bleed_layer = 2
+	
 
 /turf/open/winter/snow/layer3
+	name = "Very deep snow"
+	desc = "It almost makes you wish for a nuclear summer."
+	icon = 'icons/turf/floors/auto_ice'
 	icon_state = "snow_3"
-	bleed_layer = 3
+	
 
 /turf/open/winter/snow/layer4
-	icon_state = "snow_4" 
-	bleed_layer = 4
+	name = "Rocky Snow"
+	desc = "A large rock juts out from the ground."
+	icon = 'icons/turf/floors/auto_ice'
+	icon_state = "snow_4"
+	
