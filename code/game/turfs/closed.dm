@@ -249,27 +249,27 @@
 	canSmoothWith = list(/turf/closed/indestructible/rock/glacierrock/blue)
 
 //Colonial Marines thin ice walls 
-/turf/closed/ice/thin
+/turf/closed/winter/thin
 	name = "thin ice wall"
 	icon = 'icons/turf/walls/icewalllight.dmi'
 	icon_state = "Single"
 	desc = "It is very thin."
 	opacity = 0
 
-/turf/closed/ice/thin/single
+/turf/closed/winter/thin/single
 	icon_state = "Single"
 
-/turf/closed/ice/thin/end
+/turf/closed/winter/thin/end
 	icon_state = "End"
 
-/turf/closed/ice/thin/straight
+/turf/closed/winter/thin/straight
 	icon_state = "Straight"
 
-/turf/closed/ice/thin/corner
+/turf/closed/winter/thin/corner
 	icon_state = "Corner"
 
-/turf/closed/ice/thin/junction
+/turf/closed/winter/thin/junction
 	icon_state = "T_Junction"
 
-/turf/closed/ice/thin/intersection
+/turf/closed/winter/thin/intersection
 	icon_state = "Intersection"
