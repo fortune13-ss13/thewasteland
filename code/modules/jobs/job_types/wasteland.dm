@@ -839,7 +839,7 @@ Raider
 		/obj/item/storage/bag/money/small/settler)
 //end preacher
 
-/*/datum/outfit/job/wasteland/f13enforcer
+/datum/outfit/job/wasteland/f13enforcer
 	name = "Den Mob Enforcer"
 	jobtype = /datum/job/wasteland/f13enforcer
 
@@ -1057,7 +1057,7 @@ datum/job/wasteland/f13dendoctor
 						/obj/item/clothing/mask/gas=1, \
 						/obj/item/reagent_containers/glass/beaker/large=2 \
 						)
-*/
+
 
 
 //vigilante
