@@ -212,22 +212,22 @@
 			C.next_move_slowdown = new_slowdown
 	..()
 
-/turf/open/winter/layer0 //still have to manually define the layers for the editor
+/turf/open/snow/layer0 //still have to manually define the layers for the editor
 	icon_state = "snow_0"
 	bleed_layer = 0
 
-/turf/open/winter/layer1
+/turf/open/snow/layer1
 	icon_state = "snow_1"
 	bleed_layer = 1
 
-/turf/open/winter/layer2
+/turf/open/snow/layer2
 	icon_state = "snow_2"
 	bleed_layer = 2
 
-/turf/open/winter/layer3
+/turf/open/snow/layer3
 	icon_state = "snow_3"
 	bleed_layer = 3
 
-/turf/open/winter/layer4
+/turf/open/snow/layer4
 	icon_state = "snow_4" //Add sorokyne rock decals to this one
 	bleed_layer = 4
