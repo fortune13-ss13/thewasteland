@@ -248,7 +248,7 @@
 	icon_state = "ice"
 	canSmoothWith = list(/turf/closed/indestructible/rock/glacierrock/blue)
 
-//Colonial Marines ice walls 
+//Colonial Marines thin ice walls 
 /turf/closed/ice/thin
 	name = "thin ice wall"
 	icon = 'icons/turf/walls/icewalllight.dmi'
