@@ -660,11 +660,11 @@ Raider
 
 /datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
-	flag = F13ENFORCER
+	flag = F13ENFORCER10
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 4
+	spawn_positions = 4
 	description = "The mob rules in Yuma. A hitman for the Den's Boss, you are a highly loyal enforcer charged with keeping order among the outlaw groups inhabiting the Den."
 	supervisors = "The Boss."
 	selection_color = "#ff4747"
@@ -1057,7 +1057,7 @@ datum/job/wasteland/f13dendoctor
 						/obj/item/clothing/mask/gas=1, \
 						/obj/item/reagent_containers/glass/beaker/large=2 \
 						)
-*/
+
 
 
 //vigilante
