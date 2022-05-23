@@ -28,9 +28,7 @@
 	desc = "A .50 anti-materiel rifle magazine loaded with crimes against god."
 	special_ammo = TRUE
 	ammo_type = /obj/item/ammo_casing/a50MG/uraniumtipped
-*/
 
-/*
 /obj/item/ammo_box/magazine/sniper_rounds/soporific
 	name = "sniper rounds (Zzzzz)"
 	desc = "Soporific sniper rounds, designed for happy days and dead quiet nights..."
@@ -43,3 +41,4 @@
 	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
 	max_ammo = 5
 */
+
