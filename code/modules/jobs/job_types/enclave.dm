@@ -348,8 +348,8 @@
 /datum/outfit/job/enclave/peacekeeper/enclavespy
 	name = "Enclave Private"
 	jobtype = /datum/job/enclave/enclavespy
-	head = /obj/item/clothing/head/helmet/f13/combat/swat
-	suit = /obj/item/clothing/suit/armor/f13/combat/swat
+	head = /obj/item/clothing/head/helmet/f13/combat/swat/enclave
+	suit = /obj/item/clothing/suit/armor/f13/combat/swat/enclave
 	accessory = /obj/item/clothing/accessory/enclave
 
 	backpack_contents = list(
