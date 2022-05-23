@@ -1308,19 +1308,19 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list("melee" = 70, "bullet" = 20, "laser" = 10,"energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	armor = list("melee" = 30, "bullet" = 50, "laser" = 30, "energy" = 20, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30, "wound" = 55)
 	blocks_shove_knockdown = TRUE
 	strip_delay = 80
 	equip_delay_other = 60
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 
 /obj/item/clothing/suit/armor/f13/power_armor/AltumFire 
-	name = "Enclave Hellfire Enhanced"
-	desc = "A set of power armor design used by the Enclave. The armor looks brand new and has a werid effect around it."
+	name = "enhanced hellfire power armor"
+	desc = "An advanced set of power armor utilized by Enclave forces. There is an odd visual distortion around it."
 	icon_state = "AltumFire"
 	item_state = "AltumFire"
 	slowdown = 0.25 //+0.1 from helmet = total 0.3
-	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 70, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 50, "wound" = 75)
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
 
 /obj/item/clothing/suit/armor/f13/Scav_combatarmor
 	name = "Russian combat armor"
