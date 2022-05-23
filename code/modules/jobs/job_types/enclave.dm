@@ -340,7 +340,7 @@
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 1200
 
-loadout_options = list(
+	loadout_options = list(
 		/datum/outfit/loadout/pvtfrontline, 
 		/datum/outfit/loadout/pvtguard,
 		)
