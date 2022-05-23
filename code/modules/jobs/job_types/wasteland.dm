@@ -660,7 +660,7 @@ Raider
 
 /datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
-	flag = F13ENFORCER10
+	flag = F13ENFORCER
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
 	total_positions = 4
