@@ -341,8 +341,8 @@
 	exp_requirements = 1200
 
 loadout_options = list(
-		/datum/outfit/loadout/frontline, 
-		/datum/outfit/loadout/guard,
+		/datum/outfit/loadout/pvtfrontline, 
+		/datum/outfit/loadout/pvtguard,
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavespy
@@ -360,13 +360,13 @@ loadout_options = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
-/datum/outfit/loadout/frontline
+/datum/outfit/loadout/pvtfrontline
 	backpack_contents = list(
 			/obj/item/gun/ballistic/automatic/assault_carbine/worn = 1,
 			/obj/item/ammo_box/magazine/m5mm = 2,
 			)
 	
-/datum/outfit/loadout/guard
+/datum/outfit/loadout/pvtguard
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
