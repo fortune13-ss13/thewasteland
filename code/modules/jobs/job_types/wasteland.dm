@@ -658,7 +658,7 @@ Raider
 		/obj/item/binoculars=1,
 		/obj/item/radio=1)
 
-/*/datum/job/wasteland/f13enforcer
+/datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
 	flag = F13ENFORCER
 	faction = FACTION_WASTELAND
@@ -680,7 +680,7 @@ Raider
 		/datum/outfit/loadout/hitman,
 		/datum/outfit/loadout/bodyguard,
 		)
-*/
+
 //Wasteland Preacher
 /datum/job/wasteland/f13preacher
 	title = "Preacher"
@@ -1057,7 +1057,7 @@ datum/job/wasteland/f13dendoctor
 						/obj/item/clothing/mask/gas=1, \
 						/obj/item/reagent_containers/glass/beaker/large=2 \
 						)
-
+*/
 
 
 //vigilante
