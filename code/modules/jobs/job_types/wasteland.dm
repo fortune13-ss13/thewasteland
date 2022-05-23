@@ -903,8 +903,8 @@ Raider
 	flag = F13MOBBOSS
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "The mob rules in Yuma, and you're on top. Keeping the loose association of Khans, outlaws, and other no-goods together you maintain order in The Den by force. Ensure that all inhabitants of the Den obey their rules, and spread your influence over the wasteland. Be careful though - even your own men can't be trusted."
 	supervisors = "Whatever god you pray to. Sky's the limit!"
 	selection_color = "#ff4747"
@@ -974,8 +974,8 @@ datum/job/wasteland/f13dendoctor
 	flag = F13DENDOCTOR
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 4
+	spawn_positions = 4
 	description = "While you prioritize providing medical treatment in emergency situations, you are still trained in combat and have the additional role as a loyal combanteer to the Den."
 	supervisors = "The Boss."
 	selection_color = "#ff4747"
