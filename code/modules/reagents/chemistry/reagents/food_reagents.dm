@@ -21,6 +21,9 @@
 	if(!HAS_TRAIT(M, TRAIT_NO_PROCESS_FOOD))
 		current_cycle++
 		M.adjust_nutrition(nutriment_factor, max_nutrition)
+		if(ishuman(M) && thirst_factor > 0) // Because it doesn't call parent proc
+			var/mob/living/carbon/human/H = M
+			H.adjust_thirst(thirst_factor)
 	M.CheckBloodsuckerEatFood(nutriment_factor)
 	holder?.remove_reagent(type, metabolization_rate)
 

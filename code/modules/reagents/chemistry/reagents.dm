@@ -56,6 +56,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/chemical_flags // See fermi/readme.dm REAGENT_DEAD_PROCESS, REAGENT_DONOTSPLIT, REAGENT_ONLYINVERSE, REAGENT_ONMOBMERGE, REAGENT_INVISIBLE, REAGENT_FORCEONNEW, REAGENT_SNEAKYNAME
 	var/value = REAGENT_VALUE_NONE //How much does it sell for in cargo?
 	var/datum/material/material //are we made of material?
+	var/thirst_factor = 0
 
 /datum/reagent/New()
 	. = ..()
@@ -89,6 +90,9 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	current_cycle++
 	if(holder)
 		holder.remove_reagent(type, metabolization_rate * M.metabolism_efficiency) //By default it slowly disappears.
+	if(ishuman(M) && thirst_factor > 0)
+		var/mob/living/carbon/human/H = M
+		H.adjust_thirst(thirst_factor)
 
 //called when a mob processes chems when dead.
 /datum/reagent/proc/on_mob_dead(mob/living/carbon/M)
