@@ -11,6 +11,7 @@
 	time = 40
 	category = CAT_CRAFTING
 	subcategory = CAT_ROBOT
+	always_available = FALSE
 
 /datum/crafting_recipe/trading_machine
 	name = "Vending machine"
@@ -201,38 +202,6 @@
 	reqs = list(/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/cloth = 3)
 	tools = list(TOOL_WORKBENCH)
-	subcategory = CAT_FARMING
-	category = CAT_MISC
-
-/datum/crafting_recipe/tribaldispenser
-	name = "Primitive Chemical Dispenser Board"
-	result = /obj/item/circuitboard/machine/chem_dispenser/primitive
-	reqs = list(/obj/item/circuitboard/machine/chem_dispenser = 1)
-	time = 15
-	subcategory = CAT_FARMING
-	category = CAT_MISC
-
-/datum/crafting_recipe/tribalmanipulator
-	name = "Primitive Seed DNA Manipulator Board"
-	result = /obj/item/circuitboard/machine/plantgenes/primitive
-	reqs = list(/obj/item/circuitboard/machine/plantgenes = 1)
-	time = 15
-	subcategory = CAT_FARMING
-	category = CAT_MISC
-
-/datum/crafting_recipe/tribalheater
-	name = "Primitive Chemical Heater Board"
-	result = /obj/item/circuitboard/machine/chem_heater/primitive
-	reqs = list(/obj/item/circuitboard/machine/chem_heater = 1)
-	time = 15
-	subcategory = CAT_FARMING
-	category = CAT_MISC
-
-/datum/crafting_recipe/tribaldisk
-	name = "Primitive Seed DNA Vial"
-	result = /obj/item/disk/plantgene/primitive
-	reqs = list(/obj/item/disk/plantgene = 1)
-	time = 5
 	subcategory = CAT_FARMING
 	category = CAT_MISC
 

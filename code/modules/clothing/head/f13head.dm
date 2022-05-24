@@ -877,3 +877,36 @@
 	icon_state = "bone_dancer_helmet"
 	item_state = "bone_dancer_helmet"
 	strip_delay = 100
+
+/// Midwestern Event stuff
+
+/obj/item/clothing/head/helmet/midwesternhelmet
+	name = "midwestern combat helmet"
+	desc = "A tactical black helmet, sealed from outside hazards with a plate of glass and not much else."
+	icon_state = "marine_security"
+	item_state = "marine_security"
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	can_flashlight = TRUE
+
+/// Item Update
+
+/obj/item/clothing/head/helmet/f13/power_armor/AltumHelm
+	name = "hellfire X02 power helmet"
+	desc = "The advanced MKII power armor helmet. Just looking at this makes you feel self conscious about your DNA."
+	icon_state = "AltumHelm"
+	item_state = "AltumHelm"
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 65, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 75)
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	
+/obj/item/clothing/head/helmet/Enclave_combathelmetraider 
+	name = "Enclave Combat Armor Helmet"
+	desc = "Standard issue combat helmets used by the Enclave."
+	icon_state = "Enclave_combathelmetraider"
+	item_state = "Enclave_combathelmetraider"
+	armor = list("melee" = 30, "bullet" = 50, "laser" = 30, "energy" = 20, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	strip_delay = 50
+	flags_inv = HIDEEARS|HIDEHAIR
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
