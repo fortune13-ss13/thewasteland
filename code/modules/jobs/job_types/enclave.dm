@@ -361,12 +361,14 @@
 		)
 
 /datum/outfit/loadout/pvtfrontline
+	name = "Frontliner"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine/worn = 1,
 		/obj/item/ammo_box/magazine/m5mm = 2,
 		)
 	
 /datum/outfit/loadout/pvtguard
+	name = "Hit And Run"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm/worn = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
