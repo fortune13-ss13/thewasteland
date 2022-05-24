@@ -1086,6 +1086,14 @@
 		return FALSE
 	return ..()
 
+///Adjust the thirst level of a mob
+/mob/living/carbon/human/proc/adjust_thirst(change, max = THIRST_LEVEL_FULL)
+	thirst = clamp(thirst + change, 0, max)
+
+///Force set the mob thirst level
+/mob/living/carbon/human/proc/set_thirst(change)
+	thirst = max(0, change)
+
 /mob/living/carbon/human/species
 	var/race = null
 
