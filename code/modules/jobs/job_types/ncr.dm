@@ -74,18 +74,18 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
-/datum/outfit/job/ncr/f13colonel	// Sierra Power Armor, , Desert Eagle
+/datum/outfit/job/ncr/f13colonel	// Dress Uniform, Desert Eagle
 	name = "NCR Colonel"
 	jobtype = /datum/job/ncr/f13colonel
 	id = /obj/item/card/id/dogtag/ncrcolonel
-	uniform	= /obj/item/clothing/under/f13/ncr/ncr_officer
+	uniform	= /obj/item/clothing/under/f13/ncr/ncr_dress
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
 	accessory = /obj/item/clothing/accessory/ncr
-	head = /obj/item/clothing/head/beret/ncr/ncr_sof
-	neck = /obj/item/storage/belt/holster/legholster
+	head = /obj/item/clothing/head/beret/ncr_codresscap
+	neck = /obj/item/storage/belt/holster
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	gloves = /obj/item/clothing/gloves/f13/leather
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/ncr_dressjack
 	r_pocket = /obj/item/binoculars
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle
 	backpack_contents = list(
@@ -118,12 +118,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "NCR Personal Aide"
 	jobtype = /datum/job/ncr/f13aide
 	id = /obj/item/card/id/dogtag/ncrtrooper
-	accessory = /obj/item/clothing/accessory/ncr/CPL
+	uniform	= /obj/item/clothing/under/f13/ncr/ncr_dress
+	accessory = /obj/item/clothing/accessory/ncr/SGT
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
-	head = /obj/item/clothing/head/f13/ncr
-	neck = /obj/item/storage/belt/holster/legholster
+	head = /obj/item/clothing/head/beret/ncr_dresscap
+	neck = /obj/item/storage/belt/holster
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/captain
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/ncr_dressjack
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle
 	r_hand = /obj/item/melee/onehanded/club/ncrflag
 	backpack_contents = list(
