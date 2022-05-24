@@ -117,13 +117,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/job/ncr/f13aide	// NCR Flag, Desert Eagle
 	name = "NCR Personal Aide"
 	jobtype = /datum/job/ncr/f13aide
-	id = /obj/item/card/id/dogtag/ncrtrooper
+	id = /obj/item/card/id/dogtag/ncrsergeant
 	uniform	= /obj/item/clothing/under/f13/ncr/ncr_dress
 	accessory = /obj/item/clothing/accessory/ncr/SSGT
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
 	head = /obj/item/clothing/head/f13/ncr/ncr_campaign
 	neck = /obj/item/storage/belt/holster
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
+	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/ncr_dressjack
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle
 	r_hand = /obj/item/melee/onehanded/club/ncrflag
