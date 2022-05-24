@@ -1290,7 +1290,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			H.throw_alert("nutrition", /obj/screen/alert/deadly_starving)
 
 /datum/species/proc/handle_hunger_damage(mob/living/carbon/human/H)
-	if(!H.client || (H.client && (H.client.inactivity / 600 > 10))) // Let's not kill AFK mobs
+	if(!H.client || (H.client && (H.client.inactivity / 600 > 5))) // Let's not kill AFK mobs
 		return
 
 	switch(H.nutrition)
@@ -1315,7 +1315,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	return
 
 /datum/species/proc/handle_thirst(mob/living/carbon/human/H)
-	if(!H.client || (H.client && (H.client.inactivity / 600 > 10)))
+	if(!H.client || (H.client && (H.client.inactivity / 600 > 5)))
 		return
 
 	switch(H.thirst)
