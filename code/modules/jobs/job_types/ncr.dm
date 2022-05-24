@@ -71,7 +71,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/ncr/f13colonel	// Dress Uniform, Desert Eagle
