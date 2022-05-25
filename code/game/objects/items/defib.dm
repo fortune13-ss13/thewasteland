@@ -525,7 +525,7 @@
 				H.set_heartattack(TRUE)
 			H.apply_damage(50, BURN, BODY_ZONE_CHEST)
 			log_combat(user, H, "overloaded the heart of", defib)
-			H.DefaultCombatKnockdown(60)
+			H.DefaultCombatKnockdown(45)
 			H.Jitter(100)
 			if(req_defib)
 				defib.deductcharge(revivecost)
