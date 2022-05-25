@@ -76,7 +76,6 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/weapon/uzi,
 		/datum/gang_item/weapon/brass,
 
-		/datum/gang_item/equipment/c4,
 		/datum/gang_item/equipment/emp,
 		/datum/gang_item/equipment/stinger,
 		/datum/gang_item/equipment/he,
