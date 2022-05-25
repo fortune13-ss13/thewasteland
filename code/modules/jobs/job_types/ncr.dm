@@ -18,7 +18,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	department_flag = NCR
 	selection_color = "#ffeeaa"
 	faction = FACTION_NCR
-	exp_type = EXP_TYPE_NCR
+	exp_type = EXP_TYPE_FALLOUT
 
 	access = list(ACCESS_NCR)
 	minimal_access = list(ACCESS_NCR)
@@ -71,21 +71,20 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
-/datum/outfit/job/ncr/f13colonel	// Sierra Power Armor, , Desert Eagle
+/datum/outfit/job/ncr/f13colonel	// Dress Uniform, Desert Eagle
 	name = "NCR Colonel"
 	jobtype = /datum/job/ncr/f13colonel
 	id = /obj/item/card/id/dogtag/ncrcolonel
-	uniform	= /obj/item/clothing/under/f13/ncr/ncr_officer
+	uniform	= /obj/item/clothing/under/f13/ncr/ncr_dress
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
 	accessory = /obj/item/clothing/accessory/ncr
-	head = /obj/item/clothing/head/beret/ncr/ncr_sof
-	neck = /obj/item/storage/belt/holster/legholster
+	head = /obj/item/clothing/head/beret/ncr_codresscap
+	neck = /obj/item/storage/belt/holster
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	gloves = /obj/item/clothing/gloves/f13/leather
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/ncr_dressjack
 	r_pocket = /obj/item/binoculars
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle
 	backpack_contents = list(
@@ -117,13 +116,14 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/job/ncr/f13aide	// NCR Flag, Desert Eagle
 	name = "NCR Personal Aide"
 	jobtype = /datum/job/ncr/f13aide
-	id = /obj/item/card/id/dogtag/ncrtrooper
-	accessory = /obj/item/clothing/accessory/ncr/CPL
+	id = /obj/item/card/id/dogtag/ncrsergeant
+	uniform	= /obj/item/clothing/under/f13/ncr/ncr_dress
+	accessory = /obj/item/clothing/accessory/ncr/SSGT
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
-	head = /obj/item/clothing/head/f13/ncr
-	neck = /obj/item/storage/belt/holster/legholster
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/captain
+	head = /obj/item/clothing/head/f13/ncr/ncr_campaign
+	neck = /obj/item/storage/belt/holster
+	gloves = /obj/item/clothing/gloves/f13/leather
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/ncr_dressjack
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle
 	r_hand = /obj/item/melee/onehanded/club/ncrflag
 	backpack_contents = list(
@@ -150,7 +150,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	req_admin_notify = 1
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN_NCR
 	outfit = /datum/outfit/job/ncr/f13captain
-	exp_requirements = 3800
+	exp_type = EXP_TYPE_NCR
+	exp_requirements = 1500
 
 	loadout_options = list(
 		/datum/outfit/loadout/captainbackline,	// Infiltrator, El Capitan
@@ -231,7 +232,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
 	outfit = /datum/outfit/job/ncr/f13lieutenant
-	exp_requirements = 2500
+	exp_type = EXP_TYPE_NCR
+	exp_requirements = 1000
 
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -382,7 +384,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND)
 	display_order = JOB_DISPLAY_ORDER_SERGEANT
 	outfit = /datum/outfit/job/ncr/f13drillsergeant
-	exp_requirements = 2000
+	exp_type = EXP_TYPE_NCR
+	exp_requirements = 1500
 
 	loadout_options = list( // ALL: Bayonet
 		/datum/outfit/loadout/seatechnical,
@@ -541,6 +544,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	display_order = JOB_DISPLAY_ORDER_VETRANGE
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND)
 	outfit = /datum/outfit/job/ncr/f13vetranger
+	exp_type = EXP_TYPE_NCR
 	exp_requirements = 3500
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
@@ -636,12 +640,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_RANGER
 	outfit = /datum/outfit/job/ncr/f13ranger
+	exp_type = EXP_TYPE_NCR
 	exp_requirements = 1000
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
 	/datum/outfit/loadout/rangerrecon, // DKS Sniper rifle, .45 Revolver
-	/datum/outfit/loadout/rangertrail, // Rangermaster, 2 x .357 Revolvers
-	/datum/outfit/loadout/rangerpatrol, // R91 Assault Rifle, .44 SA Revolver
+	/datum/outfit/loadout/rangertrail, // Trail carbine, 2 x .357 Revolvers
+	/datum/outfit/loadout/rangerpatrol, // Scout carbine, .44 SA Revolver
 	/datum/outfit/loadout/rangerpatrolcqb, // 10mm SMG, .44 Snubnose revolver
 	)
 
@@ -697,9 +702,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	suit = /obj/item/clothing/suit/armor/f13/trailranger
 	belt = /obj/item/storage/belt/military/NCR_Bandolier
 	neck = /obj/item/clothing/neck/mantle/ranger
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
+	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762 = 3,
+		/obj/item/ammo_box/tube/m44 = 2,
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/attachments/scope = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 2,
@@ -712,7 +717,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	head = /obj/item/clothing/head/f13/ranger
 	uniform	= /obj/item/clothing/under/f13/ranger/patrol
 	belt = /obj/item/storage/belt/military/assault/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle
+	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 1,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
@@ -752,6 +757,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_HEAVYTROOPER
 	outfit = /datum/outfit/job/ncr/f13heavytrooper
+	exp_type = EXP_TYPE_NCR
 	exp_requirements = 750
 
 	loadout_options = list(
@@ -1168,9 +1174,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/trooperfiresupport
 	name = "Sapper"
-	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 10,
 		/obj/item/storage/box/ration/menu_eight = 1,
@@ -1381,7 +1387,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	description = "You are the support element sent to assist the Camp Miller garrison. You are essential specialized support staff to help sustain the base via supply or specialized skills. You are not allowed to leave base unless given an explicit order by the CO or the current acting CO."
 	supervisors = "Logistics/Medical officer first, regular chain of command after that."
 	selection_color = "#fff5cc"
-	exp_type = EXP_TYPE_NCR
+	exp_type = EXP_TYPE_FALLOUT
 	display_order = JOB_DISPLAY_ORDER_REAR_ECHELON
 	outfit = /datum/outfit/job/ncr/f13rearechelon
 	exp_requirements = 60
