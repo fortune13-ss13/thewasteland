@@ -407,8 +407,13 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "anK" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/green,
+/obj/machinery/hydroponics/soil/pot,
+/obj/machinery/light/small,
+/obj/machinery/vending/hydronutrients{
+	pixel_y = -31;
+	density = 0
+	},
+/turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "anM" = (
 /obj/structure/rack,
@@ -2497,8 +2502,9 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/caves)
 "bve" = (
-/obj/machinery/smartfridge/chemistry{
-	pixel_y = -31
+/obj/machinery/iv_drip,
+/obj/machinery/defibrillator_mount/loaded{
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/den)
@@ -2514,6 +2520,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/closet/cabinet,
 /turf/open/floor/carpet/green,
 /area/f13/den)
 "bvG" = (
@@ -2970,10 +2977,22 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
 "bHA" = (
-/obj/machinery/smartfridge/bottlerack/drug_storage{
-	pixel_y = -33
+/obj/structure/table/wood/poker,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/toy/cards/singlecard{
+	pixel_x = 3
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/obj/item/toy/cards/singlecard{
+	pixel_x = 1
+	},
+/obj/item/toy/cards/singlecard{
+	pixel_x = -1
+	},
+/obj/item/toy/cards/singlecard{
+	pixel_x = -3
+	},
+/obj/item/toy/cards/singlecard,
+/turf/open/floor/carpet/red,
 /area/f13/den)
 "bHI" = (
 /obj/structure/window/reinforced{
@@ -3772,9 +3791,12 @@
 	},
 /area/f13/tunnel)
 "cbQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/floor,
-/turf/open/floor/carpet/green,
+/obj/machinery/door/airlock/grunge{
+	id_tag = "floor2elevatordoors";
+	req_access_txt = "87";
+	name = "Den Airlock"
+	},
+/turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "cbX" = (
 /obj/structure/lattice{
@@ -3826,6 +3848,11 @@
 /area/f13/tunnel)
 "ccG" = (
 /obj/structure/table,
+/obj/structure/barricade/bars{
+	max_integrity = 800;
+	name = "strong metal bars";
+	obj_integrity = 800
+	},
 /turf/open/floor/carpet/green,
 /area/f13/den)
 "ccH" = (
@@ -5096,39 +5123,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/enclave)
 "cLd" = (
-/obj/structure/closet/fridge{
-	pixel_x = 17
-	},
-/obj/effect/spawner/lootdrop/f13/foodspawner{
-	pixel_x = 19
-	},
-/obj/effect/spawner/lootdrop/f13/foodspawner{
-	pixel_x = 19
-	},
-/obj/effect/spawner/lootdrop/f13/foodspawner{
-	pixel_x = 19
-	},
-/obj/effect/spawner/lootdrop/f13/foodspawner{
-	pixel_x = 19
-	},
-/obj/effect/spawner/lootdrop/f13/foodspawner{
-	pixel_x = 19
-	},
-/obj/effect/spawner/lootdrop/f13/foodspawner{
-	pixel_x = 19
-	},
-/obj/item/reagent_containers/food/condiment/milk{
-	pixel_x = 17
-	},
-/obj/item/reagent_containers/food/condiment/milk{
-	pixel_x = 17
-	},
-/obj/item/reagent_containers/food/condiment/milk{
-	pixel_x = 17
-	},
 /obj/machinery/vending/boozeomat/syndicate_access{
-	pixel_y = -31;
-	pixel_x = -33
+	density = 0;
+	pixel_y = -34
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
@@ -5231,12 +5228,6 @@
 	},
 /turf/closed/wall/mineral/wood,
 /area/f13/brotherhood/leisure)
-"cQc" = (
-/obj/effect/spawner/lootdrop/f13/foodspawner{
-	pixel_x = 19
-	},
-/turf/open/floor/wood/f13/oak,
-/area/f13/den)
 "cQe" = (
 /obj/structure/barricade/wooden/strong,
 /obj/effect/decal/cleanable/greenglow,
@@ -6410,7 +6401,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/red,
 /area/f13/den)
 "dxN" = (
 /obj/structure/dresser,
@@ -7204,7 +7195,7 @@
 /obj/structure/table/wood/poker,
 /obj/item/dice,
 /obj/item/dice/d1,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/red,
 /area/f13/den)
 "dTQ" = (
 /obj/structure/chair/bench,
@@ -8901,14 +8892,12 @@
 /obj/structure/table/wood/poker,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/toy/cards/deck,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/red,
 /area/f13/den)
 "eLq" = (
 /obj/machinery/vending/hydroseeds{
-	pixel_y = -30
-	},
-/obj/machinery/seed_extractor{
-	pixel_x = 32
+	pixel_y = -31;
+	density = 0
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
@@ -9680,8 +9669,13 @@
 /turf/open/floor/carpet/red,
 /area/f13/den)
 "fjH" = (
-/obj/structure/simple_door/metal/fence/wooden,
-/turf/open/indestructible/ground/inside/dirt,
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/fullupgrade{
+	pixel_y = 3;
+	pixel_x = 2;
+	dir = 1
+	},
+/turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "fjJ" = (
 /obj/effect/spawner/lootdrop/f13/bomb/tier1,
@@ -9967,10 +9961,15 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/enclave)
 "fqB" = (
-/obj/structure/chair/wood{
+/obj/structure/table/optable,
+/obj/machinery/light/floor,
+/obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/carpet/green,
+/obj/machinery/defibrillator_mount/loaded{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/den)
 "fqF" = (
 /obj/machinery/light/small{
@@ -10331,8 +10330,7 @@
 	},
 /area/f13/den)
 "fzY" = (
-/obj/machinery/workbench/bottler,
-/obj/structure/table,
+/obj/machinery/seed_extractor,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "fAi" = (
@@ -10653,11 +10651,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/brotherhood/leisure)
-"fKK" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/storage/trash_stack,
-/turf/open/floor/wood/f13/oak,
-/area/f13/den)
 "fLl" = (
 /obj/machinery/light{
 	dir = 4
@@ -10769,11 +10762,6 @@
 /obj/structure/sign/poster/prewar/poster68,
 /turf/closed/wall/r_wall,
 /area/f13/brotherhood/archives)
-"fOg" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/light_emitter,
-/turf/open/floor/wood/f13/oak,
-/area/f13/den)
 "fOp" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_east_south"
@@ -13992,12 +13980,8 @@
 	},
 /area/f13/clinic)
 "hNw" = (
-/obj/structure/chair/wood{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/green,
-/area/f13/den)
+/turf/closed/indestructible/f13vaultrusted,
+/area/f13/sewer)
 "hNz" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -22667,7 +22651,7 @@
 "nfB" = (
 /obj/structure/table/wood/poker,
 /obj/item/dice/d00,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/red,
 /area/f13/den)
 "nfW" = (
 /obj/machinery/computer/message_monitor{
@@ -23305,12 +23289,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker)
 "nyG" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/floor,
-/turf/open/floor/carpet/red,
+/obj/machinery/light/small,
+/obj/machinery/microwave/stove,
+/turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "nyX" = (
 /obj/structure/chair/wood/normal{
@@ -27035,10 +27016,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "pPI" = (
-/obj/machinery/vending/hydronutrients{
-	pixel_y = 30
+/obj/structure/handrail/g_central{
+	dir = 8;
+	pixel_x = -20
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/carpet/green,
 /area/f13/den)
 "pQp" = (
 /obj/machinery/door/airlock/grunge{
@@ -27577,8 +27559,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker)
 "qfj" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/floor,
+/obj/machinery/smartfridge/chemistry{
+	density = 0;
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/den)
 "qfw" = (
@@ -28408,20 +28392,8 @@
 /turf/open/floor/plating/dirt,
 /area/f13/bunker)
 "qEH" = (
-/obj/structure/table{
-	pixel_x = -26
-	},
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
-	pixel_x = -21;
-	pixel_y = 3;
-	dir = 1
-	},
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
-	pixel_y = 3;
-	pixel_x = 2;
-	dir = 1
-	},
 /obj/structure/table,
+/obj/machinery/reagentgrinder,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "qEP" = (
@@ -28715,7 +28687,7 @@
 	dir = 1
 	},
 /obj/machinery/light/floor,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/red,
 /area/f13/den)
 "qMP" = (
 /obj/item/stack/sheet/metal/fifty,
@@ -29713,7 +29685,11 @@
 "rqX" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table,
-/obj/machinery/reagentgrinder,
+/obj/structure/barricade/bars{
+	max_integrity = 800;
+	name = "strong metal bars";
+	obj_integrity = 800
+	},
 /turf/open/floor/carpet/green,
 /area/f13/den)
 "rrh" = (
@@ -40003,10 +39979,12 @@
 	},
 /area/f13/sewer)
 "xtg" = (
-/obj/structure/chair/wood{
-	dir = 1
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+	dir = 1;
+	pixel_y = 0
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "xtk" = (
 /obj/machinery/light/small/broken{
@@ -41407,6 +41385,12 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/seeds/datura,
+/obj/item/seeds/punga,
+/obj/item/seeds/feracactus,
+/obj/item/seeds/mesquite,
+/obj/item/seeds/yucca,
+/obj/item/seeds/buffalogourd,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "ylv" = (
@@ -71393,7 +71377,7 @@ bzg
 cbu
 bzg
 dqh
-tda
+bFe
 gJz
 bFe
 dAO
@@ -71922,7 +71906,7 @@ dAO
 fPt
 fpD
 ehc
-fOg
+bFe
 nFt
 efa
 bFe
@@ -72424,7 +72408,7 @@ aqW
 dZO
 egc
 bFe
-ezs
+dTG
 efa
 efa
 efa
@@ -72460,7 +72444,7 @@ auj
 auj
 tus
 vVu
-wGF
+vVu
 vVu
 vVu
 wGF
@@ -72938,7 +72922,7 @@ bFe
 fpD
 fpD
 efa
-uqb
+fpD
 fpD
 efa
 egc
@@ -72951,10 +72935,10 @@ bFe
 aPF
 efa
 efa
+gJz
 efa
 efa
-efa
-fOg
+bFe
 vct
 xdj
 xdj
@@ -73209,10 +73193,10 @@ dTG
 efa
 efa
 efa
-nbd
+efa
 aPF
 bFe
-nbd
+efa
 rjD
 xdj
 xdj
@@ -73465,7 +73449,7 @@ efa
 efa
 bFe
 tda
-efa
+fqF
 efa
 bFe
 bFe
@@ -74995,7 +74979,7 @@ ica
 bFe
 bFe
 cXP
-tda
+bFe
 efa
 cKb
 dWg
@@ -75527,9 +75511,9 @@ dPt
 ekQ
 dLn
 efa
+efa
 blx
 blx
-hRI
 hRI
 bVp
 kUN
@@ -75783,10 +75767,10 @@ blx
 xXZ
 tBY
 xbj
+efa
 aLf
 blx
 blx
-hRI
 bBU
 exl
 kUN
@@ -76031,9 +76015,9 @@ fRv
 efa
 efa
 qQR
-anK
-fqB
-cbQ
+iDK
+gMZ
+hOB
 bIC
 gCa
 blx
@@ -76041,9 +76025,9 @@ mbT
 jyQ
 flC
 efa
+efa
 blx
 blx
-hRI
 lqf
 exl
 kUN
@@ -76283,14 +76267,14 @@ qOf
 opa
 bFe
 efa
-eiS
+efa
 efa
 efa
 fpD
 blx
 nfB
 dTK
-xtg
+bMt
 pxK
 gCa
 blx
@@ -76298,9 +76282,9 @@ cij
 hlg
 bTE
 efa
+efa
 blx
 blx
-hRI
 hNO
 hNO
 kUN
@@ -76547,7 +76531,7 @@ aLf
 blx
 qMr
 ugQ
-xtg
+bMt
 bIC
 kNM
 blx
@@ -76555,9 +76539,9 @@ wLR
 kLD
 txw
 efa
+efa
 blx
 blx
-hRI
 lqf
 lqf
 kUN
@@ -76803,7 +76787,7 @@ efa
 bFe
 blx
 eLg
-ugQ
+bHA
 dxH
 bIC
 gCa
@@ -76812,9 +76796,9 @@ kOS
 ekQ
 dke
 efa
+efa
 blx
 blx
-hRI
 bVp
 exl
 wYo
@@ -77054,24 +77038,24 @@ efa
 aPF
 bFe
 egc
-uqb
+fpD
 bFe
 bFe
 fpD
 blx
-gCa
-hNw
-cbQ
+auj
+vWZ
+hOB
 bIC
 gCa
 blx
 xXZ
 wQp
 xbj
+efa
 crb
 blx
 blx
-hRI
 hRI
 bBU
 wYo
@@ -77311,24 +77295,24 @@ nbd
 bFe
 bFe
 lwv
-fpD
+uqb
 bFe
 efa
 efa
 qQR
-blx
-blx
-blx
-qQR
+pPI
+pPI
+pPI
+bmJ
 gCa
 qQR
 mbT
 bIh
 pHQ
 efa
+efa
 blx
 blx
-hRI
 exl
 bVp
 xdj
@@ -77569,7 +77553,7 @@ efa
 eJq
 egc
 bFe
-fKK
+bFe
 bFe
 aLf
 blx
@@ -77583,9 +77567,9 @@ ibY
 gVp
 fVQ
 efa
+efa
 blx
 blx
-hRI
 hRI
 hRI
 xdj
@@ -77840,9 +77824,9 @@ exn
 bFe
 bFe
 efa
+qEH
 blx
 blx
-hRI
 hRI
 hRI
 xdj
@@ -78096,10 +78080,10 @@ gCa
 gAy
 efa
 efa
-crb
+efa
+nyG
 blx
 blx
-hRI
 hRI
 hRI
 fdw
@@ -78354,9 +78338,9 @@ rqX
 efa
 ucR
 cLd
+efa
 blx
 blx
-hRI
 hRI
 hRI
 fdw
@@ -78585,7 +78569,7 @@ wFD
 mjG
 blx
 blx
-blx
+auj
 iDK
 diR
 lyd
@@ -78610,10 +78594,10 @@ gCa
 ccG
 efa
 psU
-cQc
+efa
+xtg
 blx
 blx
-hRI
 hRI
 hRI
 cGg
@@ -78840,9 +78824,9 @@ mjG
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
+hNw
+kUN
+auj
 iDK
 blx
 iVF
@@ -78867,10 +78851,10 @@ gCa
 ccG
 xac
 psU
-qEH
+efa
+fjH
 blx
 blx
-hRI
 hRI
 hRI
 cGg
@@ -79097,10 +79081,10 @@ mjG
 wFD
 wFD
 mjG
-dtk
-wYo
-blx
-nyG
+hNw
+kUN
+vcx
+iDK
 dhF
 iDK
 auj
@@ -79354,10 +79338,10 @@ mjG
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
-nyG
+hNw
+kUN
+vcx
+iDK
 dhF
 auj
 auj
@@ -79611,9 +79595,9 @@ mjG
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
+hNw
+kUN
+auj
 auj
 diR
 emV
@@ -79868,9 +79852,9 @@ agK
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
+hNw
+kUN
+auj
 auj
 diR
 dEL
@@ -80125,10 +80109,10 @@ abB
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
-auj
+hNw
+kUN
+cbQ
+cbQ
 diR
 blx
 blx
@@ -80148,7 +80132,7 @@ ckD
 blx
 bKb
 vbx
-nbd
+efa
 vbx
 blx
 wif
@@ -80382,9 +80366,9 @@ abB
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
+hNw
+kUN
+efa
 efa
 efa
 psU
@@ -80639,10 +80623,10 @@ abB
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
+snI
+kUN
 dZO
+efa
 psU
 dHw
 eiA
@@ -80663,7 +80647,7 @@ blx
 ylp
 vbx
 efa
-eiv
+anK
 blx
 tXl
 tXl
@@ -80896,9 +80880,9 @@ mjG
 wFD
 wFD
 dtk
-mjG
-wYo
-blx
+snI
+kUN
+efa
 efa
 efa
 efa
@@ -80917,7 +80901,7 @@ erk
 wpa
 ckD
 blx
-pPI
+efa
 efa
 efa
 eLq
@@ -81153,9 +81137,9 @@ abB
 wFD
 wFD
 mjG
-mjG
-wYo
-blx
+snI
+kUN
+efa
 jHj
 psU
 sVP
@@ -81180,7 +81164,7 @@ blx
 blx
 blx
 tCl
-fjH
+tCl
 tCl
 blx
 blx
@@ -81410,9 +81394,9 @@ abB
 wFD
 wWB
 mjG
-mjG
-wYo
+snI
 blx
+efa
 uyC
 uuq
 dTr
@@ -81429,7 +81413,7 @@ tYJ
 diR
 thm
 wpa
-bHA
+ckD
 blx
 wpF
 mSP
@@ -81667,9 +81651,9 @@ abB
 wFD
 wWB
 mjG
-mjG
-wYo
+snI
 blx
+efa
 efa
 uuq
 efa
@@ -81686,7 +81670,7 @@ ndz
 diR
 vkI
 wpa
-bve
+ckD
 blx
 kTJ
 ckD
@@ -81924,9 +81908,9 @@ mjG
 wFD
 wWB
 mjG
-bzC
-wYo
+snI
 blx
+efa
 bRm
 bPB
 dLC
@@ -81938,10 +81922,10 @@ iDK
 iDK
 blx
 ckD
-qfj
+wpF
 ckD
-qfj
-bAz
+wpF
+ckD
 ckD
 ckD
 uLP
@@ -82181,9 +82165,9 @@ mjG
 wFD
 wWB
 mjG
-mjG
-wYo
+snI
 blx
+efa
 psU
 uCP
 psU
@@ -82195,12 +82179,12 @@ auj
 auj
 uLP
 ckD
-ckD
-ckD
-cdh
 bAz
 ckD
-tsX
+bAz
+bAz
+ckD
+qfj
 blx
 eFq
 ckD
@@ -82438,9 +82422,9 @@ mjG
 wFD
 wWB
 mjG
-mjG
-wYo
+snI
 blx
+efa
 uyC
 uuq
 dTr
@@ -82454,17 +82438,17 @@ kUN
 ckD
 ckD
 ckD
+cdh
+bAz
 ckD
-ckD
-ckD
-ckD
+tsX
 blx
 kTJ
 wpF
 ckD
 ckD
 ckD
-wpF
+ckD
 ckD
 wuU
 blx
@@ -82695,9 +82679,9 @@ abB
 wFD
 wFD
 mjG
-mjG
-kUN
+snI
 blx
+efa
 bRm
 efa
 efa
@@ -82708,13 +82692,13 @@ iDK
 iDK
 rGe
 kUN
-fnc
-nJB
-eqZ
-wam
-fnc
-nJB
-eqZ
+ckD
+ckD
+ckD
+ckD
+ckD
+ckD
+ckD
 blx
 jkU
 lGH
@@ -82952,7 +82936,7 @@ abB
 wFD
 wFD
 mjG
-mjG
+snI
 kUN
 kUN
 kUN
@@ -82965,13 +82949,13 @@ tac
 iDK
 auj
 kUN
-kUN
-kUN
-kUN
-kUN
-kUN
-kUN
-kUN
+bve
+nJB
+eqZ
+wam
+fnc
+fqB
+eqZ
 kUN
 kUN
 kUN
@@ -83226,9 +83210,9 @@ kUN
 kUN
 kUN
 kUN
-wYo
-wYo
-wYo
+kUN
+kUN
+kUN
 wYo
 blx
 blx
