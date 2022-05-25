@@ -1,12 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aau" = (
-/obj/effect/decal/marking{
-	icon_state = "doubleverticalcorroded"
+/obj/effect/decal/cleanable/dirt,
+/obj/item/kirbyplants/random,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
+	dir = 1
 	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontaltopborderbottom0"
-	},
-/area/f13/wasteland)
+/area/f13/followers)
 "aav" = (
 /obj/structure/window/fulltile/wood,
 /obj/structure/barricade/bars{
@@ -5113,6 +5112,7 @@
 	},
 /obj/structure/fence{
 	climbable = 1;
+	cuttable = 0;
 	dir = 1;
 	resistance_flags = 64
 	},
@@ -5534,6 +5534,14 @@
 	icon_state = "bluerustychess2"
 	},
 /area/f13/building)
+"cly" = (
+/obj/effect/decal/marking{
+	icon_state = "doublehorizontalcorroded"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain1"
+	},
+/area/f13/wasteland)
 "clL" = (
 /turf/open/indestructible/ground/outside/savannah/bottomright,
 /area/f13/wasteland)
@@ -9291,11 +9299,8 @@
 	color = "#363636"
 	},
 /obj/structure/simple_door/bunker,
-/obj/structure/lattice{
-	density = 1
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "plating"
+/turf/open/floor/plasteel/f13/vault_floor/blue/side{
+	dir = 4
 	},
 /area/f13/village)
 "dNo" = (
@@ -10654,9 +10659,7 @@
 	desc = "It's a corgi. He looks hungry";
 	name = "Ol' Scruff"
 	},
-/obj/structure/lattice{
-	density = 1
-	},
+/obj/structure/lattice,
 /turf/open/floor/plasteel/f13{
 	icon_state = "plating"
 	},
@@ -10686,8 +10689,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/chair/f13chair2,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/corner,
 /area/f13/followers)
 "eoc" = (
@@ -13468,6 +13471,7 @@
 	},
 /obj/structure/fence{
 	climbable = 1;
+	cuttable = 0;
 	dir = 1;
 	resistance_flags = 64
 	},
@@ -14163,11 +14167,9 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "fFB" = (
-/obj/machinery/vending/hydronutrients{
-	pixel_y = -31
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/followers)
 "fFF" = (
 /obj/structure/rack,
@@ -18326,9 +18328,7 @@
 	},
 /area/f13/building)
 "heT" = (
-/obj/structure/lattice{
-	density = 1
-	},
+/obj/structure/lattice,
 /turf/open/floor/plasteel/f13{
 	icon_state = "plating"
 	},
@@ -28534,9 +28534,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/structure/lattice{
-	density = 1
-	},
+/obj/structure/lattice,
 /turf/open/floor/plasteel/f13{
 	icon_state = "plating"
 	},
@@ -35064,11 +35062,12 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "nyV" = (
-/obj/item/kirbyplants/random,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
-	dir = 4
+/obj/structure/sink/greyscale{
+	dir = 8;
+	pixel_x = -14
 	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/followers)
 "nza" = (
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -36955,11 +36954,12 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/legion)
 "ooE" = (
-/obj/machinery/vending/hydroseeds{
-	pixel_y = -31
-	},
+/obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
+/obj/item/toy/cards/deck/cas,
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
 /area/f13/followers)
 "opl" = (
 /obj/effect/decal/cleanable/dirt,
@@ -40123,6 +40123,7 @@
 "pFv" = (
 /obj/structure/fence{
 	climbable = 1;
+	cuttable = 0;
 	dir = 1;
 	resistance_flags = 64
 	},
@@ -43921,7 +43922,9 @@
 	id = "followerladder"
 	},
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/plasteel/elevatorshaft,
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
 /area/f13/followers)
 "rhT" = (
 /obj/structure/simple_door/interior,
@@ -49785,11 +49788,8 @@
 /area/f13/village)
 "tGS" = (
 /obj/structure/simple_door/bunker,
-/obj/structure/lattice{
-	density = 1
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "plating"
+/turf/open/floor/plasteel/f13/vault_floor/blue/side{
+	dir = 4
 	},
 /area/f13/village)
 "tGV" = (
@@ -52192,6 +52192,12 @@
 	},
 /turf/open/floor/wood,
 /area/f13/building)
+"uCD" = (
+/obj/machinery/vending/hydronutrients,
+/turf/closed/wall/mineral/concrete{
+	slicing_duration = 150
+	},
+/area/f13/followers)
 "uCO" = (
 /turf/closed/wall/f13/wood/interior,
 /area/f13/building)
@@ -55670,13 +55676,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/building)
 "wab" = (
-/obj/effect/decal/marking{
-	icon_state = "doublevertical"
+/obj/machinery/vending/hydroseeds,
+/turf/closed/wall/mineral/concrete{
+	slicing_duration = 150
 	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaltopbordertop1"
-	},
-/area/f13/wasteland)
+/area/f13/followers)
 "wao" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/button/door{
@@ -58665,6 +58669,7 @@
 "xle" = (
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/kirbyplants/random,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -95069,7 +95074,7 @@ mfn
 enS
 sVc
 sVc
-nyV
+sVc
 sVc
 uxe
 mfn
@@ -95842,10 +95847,10 @@ xWX
 xWX
 xWX
 xWX
-wLL
+aau
 mfn
 hiB
-omU
+nyV
 med
 omU
 hiB
@@ -96619,8 +96624,8 @@ iNL
 omU
 omU
 omU
-ooE
-mfn
+omU
+wab
 dCV
 gts
 fyf
@@ -96876,8 +96881,8 @@ nnl
 omU
 omU
 omU
-fFB
-mfn
+omU
+uCD
 dCV
 gts
 nxY
@@ -97903,7 +97908,7 @@ mfn
 fxS
 nTm
 nTm
-sLH
+ooE
 sLH
 mfn
 dCV
@@ -98157,7 +98162,7 @@ vKZ
 vKZ
 mfn
 rhM
-nTm
+fFB
 nTm
 nTm
 jkw
@@ -99479,7 +99484,7 @@ vCc
 qvQ
 ehN
 hOl
-coi
+cly
 hOl
 ehN
 ehN
@@ -99736,7 +99741,7 @@ vCc
 qvQ
 hOl
 sgz
-qNI
+iUS
 hOl
 hOl
 ehN
@@ -100503,14 +100508,14 @@ mvv
 viN
 mvv
 dKW
-wab
-aau
+vCc
+qvQ
 pfl
 dAb
 hCs
 wNe
-qhx
-crs
+wKo
+hOl
 koD
 dMW
 thG
@@ -101792,7 +101797,7 @@ vCc
 qvQ
 hOl
 hOl
-coi
+cly
 hOl
 hOl
 hOl
@@ -105807,7 +105812,7 @@ bcV
 pcG
 heT
 kZp
-kZp
+heT
 heT
 pcG
 aoL
@@ -106065,7 +106070,7 @@ pcG
 enC
 heT
 heT
-kZp
+heT
 pcG
 aFb
 rKT
@@ -106321,8 +106326,8 @@ bcV
 pcG
 heT
 heT
-kZp
-kZp
+heT
+heT
 pcG
 vlw
 pcG
