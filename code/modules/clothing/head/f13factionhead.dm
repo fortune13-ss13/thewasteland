@@ -256,6 +256,12 @@
 	icon_state = "remnant_helmet"
 	item_state = "remnant_helmet"
 
+/obj/item/clothing/head/helmet/f13/combat/swat/enclave
+	name = "enclave combat armor helmet"
+	desc = "Standard issue combat helmets used by the Enclave."
+	icon_state = "Enclave_combathelmetraider"
+	item_state = "Enclave_combathelmetraider"
+
 // Lieutenant's hat
 /obj/item/clothing/head/helmet/f13/enclave/officer
 	name = "enclave officer hat"
@@ -760,6 +766,22 @@
 /obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/reclaimed/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma
+	name = "Ranger Patrol Hat"
+	desc = "A refurbished and personalized ranger duty hat with a gas mask to boot."
+	icon_state = "ranger_trauma"
+	item_state = "ranger_trauma"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 40)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	unique_reskin = list("M1" = "trauma_patrol" ,"M2" = "ranger_trauma")
+	always_reskinnable = "True"
+
+/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/reclaimed/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 
 //Brotherhood of Steel (PA in f13head.dm)
 
