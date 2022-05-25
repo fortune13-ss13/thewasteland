@@ -406,15 +406,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"anK" = (
-/obj/machinery/hydroponics/soil/pot,
-/obj/machinery/light/small,
-/obj/machinery/vending/hydronutrients{
-	pixel_y = -31;
-	density = 0
-	},
-/turf/open/floor/wood/f13/oak,
-/area/f13/den)
 "anM" = (
 /obj/structure/rack,
 /obj/machinery/light{
@@ -2501,13 +2492,6 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/caves)
-"bve" = (
-/obj/machinery/iv_drip,
-/obj/machinery/defibrillator_mount/loaded{
-	pixel_x = 32
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/den)
 "bvm" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
@@ -2977,22 +2961,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
 "bHA" = (
-/obj/structure/table/wood/poker,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/toy/cards/singlecard{
-	pixel_x = 3
+/obj/machinery/hydroponics/soil/pot,
+/obj/machinery/light/small,
+/obj/machinery/vending/hydronutrients{
+	pixel_y = -31;
+	density = 0
 	},
-/obj/item/toy/cards/singlecard{
-	pixel_x = 1
-	},
-/obj/item/toy/cards/singlecard{
-	pixel_x = -1
-	},
-/obj/item/toy/cards/singlecard{
-	pixel_x = -3
-	},
-/obj/item/toy/cards/singlecard,
-/turf/open/floor/carpet/red,
+/turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "bHI" = (
 /obj/structure/window/reinforced{
@@ -3245,10 +3220,11 @@
 /turf/open/floor/carpet/red,
 /area/f13/den)
 "bNV" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+	dir = 1;
+	pixel_y = 0
 	},
-/obj/machinery/gear_painter,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "bOp" = (
@@ -3390,9 +3366,6 @@
 /area/f13/tunnel)
 "bRm" = (
 /obj/structure/chair/stool/retro,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "bRu" = (
@@ -3791,13 +3764,8 @@
 	},
 /area/f13/tunnel)
 "cbQ" = (
-/obj/machinery/door/airlock/grunge{
-	id_tag = "floor2elevatordoors";
-	req_access_txt = "87";
-	name = "Den Airlock"
-	},
-/turf/open/floor/wood/f13/oak,
-/area/f13/den)
+/turf/closed/indestructible/f13vaultrusted,
+/area/f13/sewer)
 "cbX" = (
 /obj/structure/lattice{
 	layer = 3
@@ -3825,9 +3793,7 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/brotherhood/rnd)
 "ccg" = (
-/obj/structure/rack/shelf_metal,
-/obj/effect/spawner/bundle/f13/armor/combat,
-/obj/effect/spawner/bundle/f13/armor/combat,
+/obj/machinery/gear_painter,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "ccq" = (
@@ -5228,6 +5194,24 @@
 	},
 /turf/closed/wall/mineral/wood,
 /area/f13/brotherhood/leisure)
+"cQc" = (
+/obj/structure/table/wood/poker,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/toy/cards/singlecard{
+	pixel_x = 3
+	},
+/obj/item/toy/cards/singlecard{
+	pixel_x = 1
+	},
+/obj/item/toy/cards/singlecard{
+	pixel_x = -1
+	},
+/obj/item/toy/cards/singlecard{
+	pixel_x = -3
+	},
+/obj/item/toy/cards/singlecard,
+/turf/open/floor/carpet/red,
+/area/f13/den)
 "cQe" = (
 /obj/structure/barricade/wooden/strong,
 /obj/effect/decal/cleanable/greenglow,
@@ -7092,6 +7076,10 @@
 /obj/structure/barricade/bars,
 /obj/structure/table,
 /obj/structure/railing,
+/obj/machinery/door/poddoor/shutters{
+	id = "denshutters";
+	name = "Den Shutters"
+	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/den)
 "dQL" = (
@@ -8005,6 +7993,10 @@
 /obj/structure/table,
 /obj/structure/barricade/bars,
 /obj/structure/railing,
+/obj/machinery/door/poddoor/shutters{
+	id = "denshutters";
+	name = "Den Shutters"
+	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/den)
 "emN" = (
@@ -9668,15 +9660,6 @@
 /obj/machinery/light/floor,
 /turf/open/floor/carpet/red,
 /area/f13/den)
-"fjH" = (
-/obj/structure/table,
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
-	pixel_y = 3;
-	pixel_x = 2;
-	dir = 1
-	},
-/turf/open/floor/wood/f13/oak,
-/area/f13/den)
 "fjJ" = (
 /obj/effect/spawner/lootdrop/f13/bomb/tier1,
 /obj/effect/spawner/lootdrop/f13/bomb/tier1,
@@ -10651,6 +10634,13 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/brotherhood/leisure)
+"fKK" = (
+/obj/machinery/iv_drip,
+/obj/machinery/defibrillator_mount/loaded{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/den)
 "fLl" = (
 /obj/machinery/light{
 	dir = 4
@@ -10762,6 +10752,11 @@
 /obj/structure/sign/poster/prewar/poster68,
 /turf/closed/wall/r_wall,
 /area/f13/brotherhood/archives)
+"fOg" = (
+/obj/machinery/light/small,
+/obj/machinery/microwave/stove,
+/turf/open/floor/wood/f13/oak,
+/area/f13/den)
 "fOp" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_east_south"
@@ -13980,8 +13975,12 @@
 	},
 /area/f13/clinic)
 "hNw" = (
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/sewer)
+/obj/structure/handrail/g_central{
+	dir = 8;
+	pixel_x = -20
+	},
+/turf/open/floor/carpet/green,
+/area/f13/den)
 "hNz" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -22412,7 +22411,6 @@
 	dir = 1
 	},
 /obj/structure/chair/stool/bar/brass,
-/obj/effect/landmark/start/f13/mobboss,
 /turf/open/floor/carpet/red,
 /area/f13/den)
 "mZG" = (
@@ -23289,8 +23287,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker)
 "nyG" = (
-/obj/machinery/light/small,
-/obj/machinery/microwave/stove,
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "nyX" = (
@@ -27016,11 +27014,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "pPI" = (
-/obj/structure/handrail/g_central{
-	dir = 8;
-	pixel_x = -20
+/obj/machinery/smartfridge/chemistry{
+	density = 0;
+	pixel_y = -32
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/den)
 "pQp" = (
 /obj/machinery/door/airlock/grunge{
@@ -27559,11 +27557,15 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker)
 "qfj" = (
-/obj/machinery/smartfridge/chemistry{
-	density = 0;
-	pixel_y = -32
+/obj/machinery/light/small{
+	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/obj/machinery/button/door{
+	pixel_x = -28;
+	id = "denshutters";
+	name = "Den shutters"
+	},
+/turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "qfw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28391,11 +28393,6 @@
 	},
 /turf/open/floor/plating/dirt,
 /area/f13/bunker)
-"qEH" = (
-/obj/structure/table,
-/obj/machinery/reagentgrinder,
-/turf/open/floor/wood/f13/oak,
-/area/f13/den)
 "qEP" = (
 /obj/item/reagent_containers/food/snacks/deadmouse,
 /obj/structure/spider/stickyweb,
@@ -39980,9 +39977,10 @@
 /area/f13/sewer)
 "xtg" = (
 /obj/structure/table,
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
-	dir = 1;
-	pixel_y = 0
+/obj/machinery/chem_dispenser/drinks/fullupgrade{
+	pixel_y = 3;
+	pixel_x = 2;
+	dir = 1
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
@@ -76518,7 +76516,7 @@ gJz
 fjJ
 qTe
 bMI
-gJz
+qfj
 emK
 nbd
 bFe
@@ -76787,7 +76785,7 @@ efa
 bFe
 blx
 eLg
-bHA
+cQc
 dxH
 bIC
 gCa
@@ -77300,9 +77298,9 @@ bFe
 efa
 efa
 qQR
-pPI
-pPI
-pPI
+hNw
+hNw
+hNw
 bmJ
 gCa
 qQR
@@ -77824,7 +77822,7 @@ exn
 bFe
 bFe
 efa
-qEH
+nyG
 blx
 blx
 hRI
@@ -78055,7 +78053,7 @@ wFD
 mjG
 blx
 blx
-bNV
+dZO
 efa
 uBk
 dCp
@@ -78081,7 +78079,7 @@ gAy
 efa
 efa
 efa
-nyG
+fOg
 blx
 blx
 hRI
@@ -78312,8 +78310,8 @@ wFD
 mjG
 blx
 blx
-blx
-dqh
+gNv
+gNv
 diR
 blx
 blx
@@ -78595,7 +78593,7 @@ ccG
 efa
 psU
 efa
-xtg
+bNV
 blx
 blx
 hRI
@@ -78824,7 +78822,7 @@ mjG
 wFD
 wFD
 mjG
-hNw
+cbQ
 kUN
 auj
 iDK
@@ -78852,7 +78850,7 @@ ccG
 xac
 psU
 efa
-fjH
+xtg
 blx
 blx
 hRI
@@ -79081,7 +79079,7 @@ mjG
 wFD
 wFD
 mjG
-hNw
+cbQ
 kUN
 vcx
 iDK
@@ -79338,7 +79336,7 @@ mjG
 wFD
 wFD
 mjG
-hNw
+cbQ
 kUN
 vcx
 iDK
@@ -79595,7 +79593,7 @@ mjG
 wFD
 wFD
 mjG
-hNw
+cbQ
 kUN
 auj
 auj
@@ -79852,7 +79850,7 @@ agK
 wFD
 wFD
 mjG
-hNw
+cbQ
 kUN
 auj
 auj
@@ -80109,10 +80107,10 @@ abB
 wFD
 wFD
 mjG
-hNw
+cbQ
 kUN
-cbQ
-cbQ
+gNv
+gNv
 diR
 blx
 blx
@@ -80366,7 +80364,7 @@ abB
 wFD
 wFD
 mjG
-hNw
+cbQ
 kUN
 efa
 efa
@@ -80647,7 +80645,7 @@ blx
 ylp
 vbx
 efa
-anK
+bHA
 blx
 tXl
 tXl
@@ -81910,7 +81908,7 @@ wWB
 mjG
 snI
 blx
-efa
+dZO
 bRm
 bPB
 dLC
@@ -82184,7 +82182,7 @@ ckD
 bAz
 bAz
 ckD
-qfj
+pPI
 blx
 eFq
 ckD
@@ -82681,7 +82679,7 @@ wFD
 mjG
 snI
 blx
-efa
+dZO
 bRm
 efa
 efa
@@ -82945,11 +82943,11 @@ kUN
 kUN
 kUN
 kUN
-tac
+cIZ
 iDK
 auj
 kUN
-bve
+fKK
 nJB
 eqZ
 wam
@@ -83459,7 +83457,7 @@ dLs
 gCa
 gCa
 kUN
-cIZ
+auj
 gmI
 hJy
 hQE
@@ -84230,7 +84228,7 @@ tqC
 gCa
 gCa
 kUN
-cIZ
+iDK
 iDK
 rGe
 fLU
@@ -84487,7 +84485,7 @@ fjS
 gCa
 gCa
 kUN
-tac
+vcx
 auj
 iDK
 fLU
