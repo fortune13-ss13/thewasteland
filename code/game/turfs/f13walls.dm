@@ -30,86 +30,58 @@
 
 
 //CM imported ice walls//
-/turf/closed/ice/dense
+/turf/closed/wall/ice/dense
 	name = "dense ice wall"
 	icon = 'icons/turf/walls/icewall.dmi'
 	icon_state = "Single"
 	desc = "It is very thick."
 
-/turf/closed/ice/dense/single
+/turf/closed/wall/ice/dense/single
 	icon_state = "Single"
 
-/turf/closed/ice/dense/end
+/turf/closed/wall/ice/dense/end
 	icon_state = "End"
 
-/turf/closed/ice/dense/straight
+/turf/closed/wall/ice/dense/straight
 	icon_state = "Straight"
 
-/turf/closed/ice/dense/corner
+/turf/closed/wall/ice/dense/corner
 	icon_state = "Corner"
 
-/turf/closed/ice/dense/junction
+/turf/closed/wall/ice/dense/junction
 	icon_state = "T_Junction"
 
-/turf/closed/ice/dense/intersection
+/turf/closed/wall/ice/dense/intersection
 	icon_state = "Intersection"
 
 
 
 //Ice Thin Wall
-/turf/closed/ice/thin
+/turf/closed/wall/ice/thin
 	name = "thin ice wall"
 	icon = 'icons/turf/walls/icewalllight.dmi'
 	icon_state = "Single"
 	desc = "It is very thin."
 	opacity = 0
 
-/turf/closed/ice/thin/single
+/turf/closed/wall/ice/thin/single
 	icon_state = "Single"
 
-/turf/closed/ice/thin/end
+/turf/closed/wall/ice/thin/end
 	icon_state = "End"
 
-/turf/closed/ice/thin/straight
+/turf/closed/wall/ice/thin/straight
 	icon_state = "Straight"
 
-/turf/closed/ice/thin/corner
+/turf/closed/wall/ice/thin/corner
 	icon_state = "Corner"
 
-/turf/closed/ice/thin/junction
+/turf/closed/wall/ice/thin/junction
 	icon_state = "T_Junction"
 
-/turf/closed/ice/thin/intersection
+/turf/closed/wall/ice/thin/intersection
 	icon_state = "Intersection"
 
 
-//Ice Secret Wall
-/turf/closed/ice/secret
-	icon_state = "ice_wall_0"
-	desc = "There is something inside..."
 
 
-//ROCK WALLS------------------------------//
-
-//Icy Rock
-/turf/closed/indestructible/rock/ice_rock
-	name = "Icy rock"
-	icon = 'icons/turf/walls/rockwall.dmi'
-
-/turf/closed/indestructible/rock/ice_rock/single
-	icon_state = "single"
-
-/turf/closed/indestructible/rock/ice_rock/singlePart
-	icon_state = "single_part"
-
-/turf/closed/indestructible/rock/ice_rock/singleT
-	icon_state = "single_tshape"
-
-/turf/closed/indestructible/rock/ice_rock/singleEnd
-	icon_state = "single_ends"
-
-/turf/closed/indestructible/rock/ice_rock/fourway
-	icon_state = "4-way"
-
-/turf/closed/indestructible/rock/ice_rock/corners
-	icon_state = "full_corners"
