@@ -164,13 +164,7 @@
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/closed/wall,/turf/closed/wall/r_wall,/obj/structure/falsewall,/obj/structure/falsewall/brass,/obj/structure/falsewall/reinforced,/turf/closed/wall/rust,/turf/closed/wall/r_wall/rust,/turf/closed/wall/clockwork,/turf/closed/indestructible/f13vaultrusted)
 
-/turf/closed/indestructible/rock/snow
-	name = "mountainside"
-	desc = "An extremely densely-packed rock, sheeted over with centuries worth of ice and snow."
-	icon = 'icons/turf/walls.dmi'
-	icon_state = "snowrock"
-	bullet_sizzle = TRUE
-	bullet_bounce_sound = null
+
 
 /turf/closed/indestructible/vaultdoor
 	name = "vault wall"
@@ -178,11 +172,20 @@
 	icon = 'icons/turf/walls/f13vault_reinforced_wall.dmi'
 	icon_state = "vaultwall"
 
+/*
 /turf/closed/indestructible/rock/snow/ice
 	name = "iced rock"
 	desc = "Extremely densely-packed sheets of ice and rock, forged over the years of the harsh cold."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "icerock"
+
+	/turf/closed/indestructible/rock/snow
+	name = "mountainside"
+	desc = "An extremely densely-packed rock, sheeted over with centuries worth of ice and snow."
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "snowrock"
+	bullet_sizzle = TRUE
+	bullet_bounce_sound = null
 
 /turf/closed/indestructible/rock/snow/ice/ore
 	icon = 'icons/turf/walls/icerock_wall.dmi'
@@ -191,6 +194,21 @@
 	canSmoothWith = list (/turf/closed)
 	pixel_x = -4
 	pixel_y = -4
+	
+
+turf/closed/indestructible/rock/glacierrock
+	name = "unaturally hard ice wall"
+	desc = "Ice, hardened over thousands of years, you're not breaking through this."
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "snow_rock"
+
+/turf/closed/indestructible/rock/glacierrock/blue
+	name = "blue ice wall"
+	desc = "The incredible compressive forces that formed this sturdy ice wall gave it a blue color."
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "ice"
+	canSmoothWith = list(/turf/closed/indestructible/rock/glacierrock/blue)
+*/
 
 
 /turf/closed/indestructible/paper
@@ -235,41 +253,56 @@
 	icon = 'icons/turf/walls/hierophant_wall.dmi'
 	icon_state = "wall"
 
-/turf/closed/indestructible/rock/glacierrock
-	name = "unaturally hard ice wall"
-	desc = "Ice, hardened over thousands of years, you're not breaking through this."
-	icon = 'icons/turf/walls.dmi'
-	icon_state = "snow_rock"
 
-/turf/closed/indestructible/rock/glacierrock/blue
-	name = "blue ice wall"
-	desc = "The incredible compressive forces that formed this sturdy ice wall gave it a blue color."
-	icon = 'icons/turf/walls.dmi'
-	icon_state = "ice"
-	canSmoothWith = list(/turf/closed/indestructible/rock/glacierrock/blue)
 
-//Colonial Marines thin ice walls 
-/turf/closed/winter/thin
+//Colonial Marines ice walls
+
+/turf/closed/wall/ice/dense
+	name = "dense ice wall"
+	icon = 'icons/turf/walls/icewall.dmi'
+	icon_state = "Single"
+	desc = "It is very thick."
+
+/turf/closed/wall/ice/dense/single
+	icon_state = "Single"
+
+/turf/closed/wall/ice/dense/end
+	icon_state = "End"
+
+/turf/closed/wall/ice/dense/straight
+	icon_state = "Straight"
+
+/turf/closed/wall/ice/dense/corner
+	icon_state = "Corner"
+
+/turf/closed/wall/ice/dense/junction
+	icon_state = "T_Junction"
+
+/turf/closed/wall/ice/dense/intersection
+	icon_state = "Intersection"
+
+//thin ice walls, just ligher opacity
+/turf/closed/wall/ice/thin
 	name = "thin ice wall"
 	icon = 'icons/turf/walls/icewalllight.dmi'
 	icon_state = "Single"
 	desc = "It is very thin."
 	opacity = 0
 
-/turf/closed/winter/thin/single
+/turf/closed/wall/ice/thin/single
 	icon_state = "Single"
 
-/turf/closed/winter/thin/end
+/turf/closed/wall/ice/thin/end
 	icon_state = "End"
 
-/turf/closed/winter/thin/straight
+/turf/closed/wall/ice/thin/straight
 	icon_state = "Straight"
 
-/turf/closed/winter/thin/corner
+/turf/closed/wall/ice/thin/corner
 	icon_state = "Corner"
 
-/turf/closed/winter/thin/junction
+/turf/closed/wall/ice/thin/junction
 	icon_state = "T_Junction"
 
-/turf/closed/winter/thin/intersection
+/turf/closed/wall/ice/thin/intersection
 	icon_state = "Intersection"
