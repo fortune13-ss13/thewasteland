@@ -253,7 +253,7 @@
 	overdose_threshold = 150 //Imagine drinking a gallon of water
 	var/cooling_temperature = 2
 	var/radiation_amount = 2			// 10 per 5 units; 100 per 50; 500 per 250
-	thirst_factor = THIRST_FACTOR * 15	// 7.5 per 5 units; 75 per 50; 425 per 250
+	thirst_factor = THIRST_FACTOR * 15	// 11.25 per 5 units; 112.5 per 50; 562.5 per 250
 	glass_icon_state = "glass_clear"
 	glass_name = "glass of water"
 	glass_desc = "The father of all refreshments."
@@ -353,7 +353,7 @@
 	taste_description = "clean water"
 	value = REAGENT_VALUE_VERY_RARE // Remind me to make it ultra rare once recipes are gone
 	radiation_amount = 0
-	thirst_factor = THIRST_FACTOR * 30 // 15 per 5 units; 150 per 50; 450 per 150
+	thirst_factor = THIRST_FACTOR * 30 // 22.5 per 5 units; 225 per 50; 1125 per 250
 
 /datum/reagent/water/hollowwater
 	name = "Hollow Water"
