@@ -170,7 +170,7 @@
 	desc = "A wall made out of metal, really fucking tough metal. They definitely didn't want everything to give away around the door."
 	icon = 'icons/turf/walls/f13vault_reinforced_wall.dmi'
 	icon_state = "vaultwall"
-/* /turf/closed/indestructible/rock/snow
+ /turf/closed/indestructible/rock/snow
 	name = "mountainside"
 	desc = "An extremely densely-packed rock, sheeted over with centuries worth of ice and snow."
 	icon = 'icons/turf/walls.dmi'
@@ -193,7 +193,7 @@
 	canSmoothWith = list (/turf/closed)
 	pixel_x = -4
 	pixel_y = -4
-*/
+
 
 /turf/closed/indestructible/paper
 	name = "thick paper wall"
@@ -236,13 +236,13 @@
 	desc = "A wall made out of a strange metal. The squares on it pulse in a predictable pattern."
 	icon = 'icons/turf/walls/hierophant_wall.dmi'
 	icon_state = "wall"
-/*
+
 /turf/closed/indestructible/rock/glacierrock
 	name = "unaturally hard ice wall"
 	desc = "Ice, hardened over thousands of years, you're not breaking through this."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "snow_rock"
-*/
+
 /turf/closed/indestructible/rock/glacierrock/blue
 	name = "blue ice wall"
 	desc = "The incredible compressive forces that formed this sturdy ice wall gave it a blue color."
