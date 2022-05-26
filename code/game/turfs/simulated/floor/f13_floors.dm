@@ -590,4 +590,4 @@
 	name = "ice floor"
 	icon = 'icons/turf/ice.dmi'
 	icon_state = "ice_floor"
-	baseturfs = /turf/open/ice
+	
