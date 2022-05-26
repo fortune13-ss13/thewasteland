@@ -927,7 +927,6 @@ Raider
 	)
 
 	loadout_options = list(
-		/datum/outfit/loadout/montanadenboss,
 		/datum/outfit/loadout/ncrrdenboss,
 		/datum/outfit/loadout/truedenmob
 		)
@@ -965,13 +964,6 @@ Raider
 		GLOB.all_gangs |= DM
 		DM.add_member(H)
 		H.gang = DM
-
-/datum/outfit/loadout/montanadenboss
-	name = "'Montana' Den Boss"
-	r_hand = /obj/item/gun/ballistic/automatic/service/alr
-	backpack_contents = list(
-							/obj/item/ammo_box/magazine/m556/rifle=3, \
-							)
 
 /datum/outfit/loadout/ncrrdenboss
 	name = "Central Cali Den Boss"
