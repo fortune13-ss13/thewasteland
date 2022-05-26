@@ -979,8 +979,8 @@ Raider
 	backpack_contents = list(
 							/obj/item/ammo_box/tube/a357=4, \
 							/obj/item/book/granter/trait/trekking=1 \
-							/obj/item/gun/ballistic/revolver/colt357/brassgun
-							/obj/item/book/granter/trait/gunslinger
+							/obj/item/gun/ballistic/revolver/colt357/brassgun \
+							/obj/item/book/granter/trait/gunslinger \
 							)
 
 /datum/outfit/loadout/truedenmob
