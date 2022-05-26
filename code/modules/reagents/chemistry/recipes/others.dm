@@ -20,11 +20,10 @@
 /datum/chemical_reaction/water_purifier
 	name = "Water Purifier"
 	id = /datum/reagent/water_purifier
-	results = list(/datum/reagent/water_purifier = 4)
+	results = list(/datum/reagent/water_purifier = 3)
 	required_reagents = list(
-						/datum/reagent/medicine/charcoal = 1,
-						/datum/reagent/cryptobiolin = 1,
 						/datum/reagent/abraxo_cleaner/sterilizine = 1,
+						/datum/reagent/cryptobiolin = 1,
 						/datum/reagent/chlorine = 1
 						)
 
