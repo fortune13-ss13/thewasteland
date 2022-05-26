@@ -595,7 +595,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							150),
 		new /datum/data/wasteland_equipment("Pulse Grenade",				/obj/item/grenade/empgrenade,										50),
-		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/grenade/throwing_star/ninja,								75),
+		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star/ninja,								75),
 		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							50),
 		new /datum/data/wasteland_equipment("Flashbang",					/obj/item/grenade/flashbang, 										100),
 		new /datum/data/wasteland_equipment("Smoke Grenade",				/obj/item/grenade/smokebomb, 										100),
@@ -610,7 +610,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							150),
 		new /datum/data/wasteland_equipment("Pulse Grenade",				/obj/item/grenade/empgrenade,										50),
-		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/grenade/throwing_star/ninja,								75),
+		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star/ninja,								75),
 		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							50),
 		new /datum/data/wasteland_equipment("Flashbang",					/obj/item/grenade/flashbang, 										100),
 		new /datum/data/wasteland_equipment("Smoke Grenade",				/obj/item/grenade/smokebomb, 										100),
