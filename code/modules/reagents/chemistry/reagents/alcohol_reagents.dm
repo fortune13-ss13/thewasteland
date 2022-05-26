@@ -15,7 +15,7 @@
 	var/boozepwr = 65 //Higher numbers equal higher hardness, higher hardness equals more intense alcohol poisoning
 	pH = 7.33
 	value = REAGENT_VALUE_VERY_COMMON //don't bother tweaking all drinks values, way too many can easily be done roundstart or with an upgraded dispenser.
-	thirst_factor = THIRST_FACTOR * 8 // Slightly less than water
+	thirst_factor = THIRST_FACTOR * 6 // Less than water
 
 /*
 Boozepwr Chart

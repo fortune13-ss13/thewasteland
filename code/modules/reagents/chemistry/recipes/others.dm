@@ -17,18 +17,28 @@
 	required_reagents = list(/datum/reagent/water/hollowwater = 1)
 	required_catalysts = list(/datum/reagent/water/holywater = 1)
 
+/datum/chemical_reaction/water_purifier
+	name = "Water Purifier"
+	id = /datum/reagent/water_purifier
+	results = list(/datum/reagent/water_purifier = 4)
+	required_reagents = list(
+						/datum/reagent/medicine/charcoal = 1,
+						/datum/reagent/cryptobiolin = 1,
+						/datum/reagent/abraxo_cleaner/sterilizine = 1,
+						/datum/reagent/chlorine = 1
+						)
+
 /datum/chemical_reaction/purewater
 	name = "Purified Water"
 	id = /datum/reagent/water/purified
-	results = list(/datum/reagent/water/purified = 2)
-	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/chlorine = 1)
-	required_catalysts = list(/datum/reagent/abraxo_cleaner/sterilizine = 1) // To prevent conflicts
+	results = list(/datum/reagent/water/purified = 1)
+	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/water_purifier = 1) // Can mass produce, but has tedious recipe
 
 /datum/chemical_reaction/purewater2
 	name = "Purified Water"
 	id = "purewater2"
-	results = list(/datum/reagent/water/purified = 3)
-	required_reagents = list(/datum/reagent/water = 2, /datum/reagent/medicine/radx = 1) // Easy for wastelanders to do
+	results = list(/datum/reagent/water/purified = 1)
+	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/medicine/radx = 2) // Easy for wastelanders to do, but it wastes some resources in the process
 
 /datum/chemical_reaction/metalgen_imprint/on_reaction(datum/reagents/holder, created_volume)
 	var/datum/reagent/metalgen/MM = holder.get_reagent(/datum/reagent/metalgen)

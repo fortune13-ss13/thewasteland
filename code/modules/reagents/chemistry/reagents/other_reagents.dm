@@ -13,7 +13,7 @@
 	shot_glass_icon_state = "shotglassred"
 	pH = 7.4
 	ghoulfriendly = TRUE
-	thirst_factor = THIRST_FACTOR * 6 // I mean, why not? Emergency ration!
+	thirst_factor = THIRST_FACTOR * 10 // I mean, why not? Emergency ration!
 
 // FEED ME,SEYMOUR!
 /datum/reagent/blood/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray)
@@ -155,6 +155,7 @@
 	taste_description = "oil"
 	color = BLOOD_COLOR_SYNTHETIC // rgb: 11, 7, 48
 	value = REAGENT_VALUE_NONE
+	thirst_factor = THIRST_FACTOR * 5 // Not a good water substance
 
 /datum/reagent/blood/jellyblood
 	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_SLIME, "blood_type"="GEL","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
@@ -172,7 +173,7 @@
 	taste_description = "sap" //Like tree sap?
 	pH = 7.45
 	value = REAGENT_VALUE_NONE
-	thirst_factor = THIRST_FACTOR * 8
+	thirst_factor = THIRST_FACTOR * 12
 
 /datum/reagent/blood/jellyblood/on_mob_life(mob/living/carbon/M)
 	if(prob(10))
@@ -194,7 +195,7 @@
 	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_HUMAN, "blood_type"= "O+","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
 	pH = 7.45
 	ghoulfriendly = TRUE
-	thirst_factor = THIRST_FACTOR * 5 // In case you are REALLY out of options...
+	thirst_factor = THIRST_FACTOR * 7 // In case you are REALLY out of options...
 
 /datum/reagent/liquidgibs/xeno
 	name = "Liquid xeno gibs"
@@ -251,8 +252,8 @@
 	taste_description = "water"
 	overdose_threshold = 150 //Imagine drinking a gallon of water
 	var/cooling_temperature = 2
-	var/radiation_amount = 0.4
-	thirst_factor = THIRST_FACTOR * 15
+	var/radiation_amount = 2			// 10 per 5 units; 100 per 50; 500 per 250
+	thirst_factor = THIRST_FACTOR * 15	// 7.5 per 5 units; 75 per 50; 425 per 250
 	glass_icon_state = "glass_clear"
 	glass_name = "glass of water"
 	glass_desc = "The father of all refreshments."
@@ -263,19 +264,6 @@
 	. = ..()
 	if(M.blood_volume)
 		M.blood_volume += 0.1 // water is good for you!
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		H.adjust_thirst(thirst_factor)
-		if(radiation_amount > 0)
-			H.radiation += radiation_amount // This water isn't pure!
-
-/datum/reagent/water/purified
-	name = "Purified Water"
-	description = "An ubiquitous chemical substance that is composed of hydrogen and oxygen. This one has been purified from radiation."
-	color = "#C3DBDA66" // It's cleaner, kek
-	taste_description = "clean water"
-	radiation_amount = 0
-	thirst_factor = THIRST_FACTOR * 25 // Ultra healthy
 
 /*
  *	Water reaction to turf
@@ -335,6 +323,8 @@
 	if(method == TOUCH)
 		M.adjust_fire_stacks(-(reac_volume / 10))
 		M.ExtinguishMob()
+	if((method == INGEST) && radiation_amount > 0)
+		M.radiation += radiation_amount * reac_volume // This water isn't pure!
 	..()
 
 /datum/reagent/water/overdose_start(mob/living/M)
@@ -348,12 +338,28 @@
 		//You don't belong in this world, monster!
 		chems.remove_reagent(/datum/reagent/water, chems.get_reagent_amount(src.type))
 
+/datum/reagent/water_purifier
+	name = "Water Purifier"
+	description = "An industrical reagent used to purify irradiated or otherwise contaminated water. Just use it in proportions 1:1 with any container of water."
+	color = "#5E6566AA" // Charcoal is in it, so kinda looking weird?
+	taste_description = "purity" // Why did you eat it anyway?
+	value = REAGENT_VALUE_RARE // Difficult to make
+	thirst_factor = THIRST_FACTOR * 3 // Let's pretend you didn't have ANY source of water nearby
+
+/datum/reagent/water/purified
+	name = "Purified Water"
+	description = "An ubiquitous chemical substance that is composed of hydrogen and oxygen. This one has been purified from radiation."
+	color = "#C3DBDA66" // It's cleaner, kek
+	taste_description = "clean water"
+	value = REAGENT_VALUE_VERY_RARE // Remind me to make it ultra rare once recipes are gone
+	radiation_amount = 0
+	thirst_factor = THIRST_FACTOR * 30 // 15 per 5 units; 150 per 50; 450 per 150
+
 /datum/reagent/water/hollowwater
 	name = "Hollow Water"
 	description = "An ubiquitous chemical substance that is composed of hydrogen and oxygen, but it looks kinda hollow."
 	color = "#88878777"
 	taste_description = "emptyiness"
-
 
 /datum/reagent/water/holywater
 	name = "Holy Water"
@@ -363,7 +369,7 @@
 	glass_name = "glass of holy water"
 	glass_desc = "A glass of holy water."
 	pH = 7.5 //God is alkaline
-	radiation_amount = 0.1 // Less radioactive
+	radiation_amount = 1.5 // Less radioactive
 	thirst_factor = THIRST_FACTOR * 20 // Cool water
 
 	// Holy water. Mostly the same as water, it also heals the plant a little with the power of the spirits. Also ALSO increases instability.

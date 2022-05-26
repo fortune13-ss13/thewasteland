@@ -56,7 +56,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/chemical_flags // See fermi/readme.dm REAGENT_DEAD_PROCESS, REAGENT_DONOTSPLIT, REAGENT_ONLYINVERSE, REAGENT_ONMOBMERGE, REAGENT_INVISIBLE, REAGENT_FORCEONNEW, REAGENT_SNEAKYNAME
 	var/value = REAGENT_VALUE_NONE //How much does it sell for in cargo?
 	var/datum/material/material //are we made of material?
-	var/thirst_factor = 0
+	var/thirst_factor = null // How much thirst does it recover/remove on ingestion PER UNIT
 
 /datum/reagent/New()
 	. = ..()
@@ -78,6 +78,9 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 			var/amount = round(reac_volume*modifier, 0.1)
 			if(amount >= 0.5)
 				M.reagents.add_reagent(type, amount)
+	if((method == INGEST) && ishuman(M) && thirst_factor != null)
+		var/mob/living/carbon/human/H = M
+		H.adjust_thirst(thirst_factor * reac_volume)
 	return 1
 
 /datum/reagent/proc/reaction_obj(obj/O, volume)
