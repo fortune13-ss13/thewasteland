@@ -976,10 +976,10 @@ Raider
 /datum/outfit/loadout/ncrrdenboss
 	name = "Central Cali Den Boss"
 	r_hand = /obj/item/gun/ballistic/revolver/colt357/brassgun
-	l_hand = /obj/item/gun/ballistic/revolver/colt357/brassgun
 	backpack_contents = list(
 							/obj/item/ammo_box/tube/a357=4, \
 							/obj/item/book/granter/trait/trekking=1 \
+							/obj/item/gun/ballistic/revolver/colt357/brassgun
 							)
 
 /datum/outfit/loadout/truedenmob
@@ -1008,7 +1008,7 @@ datum/job/wasteland/f13dendoctor
 	minimal_access = list(ACCESS_DEN)
 
 	loadout_options = list(
-		/datum/outfit/loadout/dencombatmedic,
+		/* /datum/outfit/loadout/dencombatmedic, */
 		/datum/outfit/loadout/denchemist,
 		)
 
@@ -1057,7 +1057,7 @@ datum/job/wasteland/f13dendoctor
 		GLOB.all_gangs |= DM
 		DM.add_member(H)
 		H.gang = DM
-
+/*
 /datum/outfit/loadout/dencombatmedic
 	name = "Combat medic"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
@@ -1066,7 +1066,7 @@ datum/job/wasteland/f13dendoctor
 							/obj/item/clothing/glasses/hud/health/f13=1, \
 							/obj/item/ammo_box/magazine/tommygunm45/stick=2, \
 							)
-
+*/
 /datum/outfit/loadout/denchemist
 	name = "Chemist"
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/type17
