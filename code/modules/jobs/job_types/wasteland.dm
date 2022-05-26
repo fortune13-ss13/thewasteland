@@ -972,17 +972,16 @@ Raider
 	backpack_contents = list(
 							/obj/item/ammo_box/magazine/m556/rifle=3, \
 							)
-/*
+
 /datum/outfit/loadout/ncrrdenboss
 	name = "Central Cali Den Boss"
-	r_hand = /obj/item/gun/ballistic/revolver/colt357/brassgun
 	backpack_contents = list(
 							/obj/item/ammo_box/tube/a357=4, \
 							/obj/item/book/granter/trait/trekking=1 \
-							/obj/item/gun/ballistic/revolver/colt357/brassgun=1, \
+							/obj/item/gun/ballistic/revolver/colt357/brassgun=2, \
 							/obj/item/book/granter/trait/gunslinger=1, \
 							)
-*/ 
+
 /datum/outfit/loadout/truedenmob
 	name = "True Den Boss"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun

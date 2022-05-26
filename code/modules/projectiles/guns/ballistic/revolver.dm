@@ -197,7 +197,7 @@
 /obj/item/gun/ballistic/revolver/colt357/brassgun
 	name = "Brass Gun"
 	desc = "The revolver here appears to be made out of number of Sequoia's once held by a Vet Ranger. It doesn't have the punch as it once did."
-	icon_state = "lucky37"
+	icon_state = "lucky"
 	item_state = "lucky"
 	w_class = WEIGHT_CLASS_SMALL
 	extra_damage = 30
