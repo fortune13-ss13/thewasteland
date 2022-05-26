@@ -163,7 +163,7 @@ Raider
 	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/raider_bos,
 	/datum/outfit/loadout/quack_doctor,
-	/datum/outfit/loadout/raider_mobster,
+	/* /datum/outfit/loadout/raider_mobster, */
 	/datum/outfit/loadout/raider_tribal
 	)
 
@@ -426,7 +426,7 @@ Raider
 		/obj/item/radio/tribal = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
 		)
-
+/*
 /datum/outfit/loadout/raider_mobster
 	name = "Den Mob Enforcer"
 	belt = /obj/item/storage/belt/military/assault
@@ -444,7 +444,7 @@ Raider
 		/obj/item/ammo_box/magazine/greasegun = 2,
 		/obj/item/card/id/dogtag/town/mafia=1,
 		)
-
+*/
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
 	flag = F13WASTELANDER

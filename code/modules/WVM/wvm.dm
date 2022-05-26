@@ -623,6 +623,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 		)
 
+//The DEN should not offer chems!!! they deal in goods like above!!! Use accordingly
 /obj/machinery/mineral/wasteland_vendor/denchem
 	name = "Chem Dispenser"
 	icon_state = "med_idle"
