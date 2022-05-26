@@ -1040,7 +1040,7 @@ datum/job/wasteland/f13dendoctor
 
 /datum/outfit/loadout/dencombatmedic
 	name = "Combat medic"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/american180
+	r_hand = /obj/item/gun/ballistic/automatic/type93
 	suit = /obj/item/clothing/suit/toggle/labcoat/chemist
 	backpack_contents = list(
 							/obj/item/clothing/glasses/hud/health/f13=1, \
