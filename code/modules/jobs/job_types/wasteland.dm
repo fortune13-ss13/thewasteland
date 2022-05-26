@@ -694,6 +694,12 @@ Raider
 
 	outfit = /datum/outfit/job/wasteland/f13preacher
 
+	loadout_options = list(
+	/datum/outfit/loadout/crusader, 	//This is kinda a given. You bet.
+	/datum/outfit/loadout/samaritan, 	//Water and food to share with the wastes.
+	/datum/outfit/loadout/cleanser		//Just some bombs.
+	)
+
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
 	minimal_access = list()
 	matchmaking_allowed = list(
@@ -719,6 +725,31 @@ Raider
 			/datum/job/wasteland/f13wastelander,
 		),
 	)
+
+
+
+/datum/outfit/loadout/crusader
+	name = "Crusader"
+	backpack_contents = list(
+		/obj/item/clothing/suit/armor/knight = 1,
+		/obj/item/clothing/head/helmet/knight/red = 1,
+		/obj/item/melee/onehanded/machete = 1,
+	)
+
+/datum/outfit/loadout/samaritan
+	name = "Samaritan"
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/snacks/store/bread/plain = 5,
+		/obj/item/reagent_containers/food/snacks/fishmeat/salmon = 2,
+		/obj/item/reagent_containers/glass/beaker/waterbottle = 2
+	)	//Matthew 14:17 RSVCE and KJV - Kitsunemitsu
+
+/datum/outfit/loadout/cleanser
+	name = "Cleanser"
+	backpack_contents = list(
+		/obj/item/grenade/homemade/coffeepotbomb = 2,	//This is funny. I swear guys.
+	)
+
 
 /datum/job/wasteland/f13preacher/after_spawn(mob/living/H, mob/M)
 	. = ..()
@@ -774,7 +805,7 @@ Raider
 		if("lampism")
 			B.name = "Fluorescent Incandescence"
 		if("lol", "wtf", "gay", "penis", "ass", "poo", "badmin", "shitmin", "deadmin", "cock", "cocks", "meme", "memes")
-			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition","F.A.T.A.L. Rulebook")
+			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition", "F.A.T.A.L. Rulebook")
 			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 100) // starts off dumb as fuck
 		if("monkeyism","apism","gorillism","primatism")
 			B.name = pick("Going Bananas", "Bananas Out For Harambe")
