@@ -741,13 +741,16 @@ Raider
 	backpack_contents = list(
 		/obj/item/reagent_containers/food/snacks/store/bread/plain = 5,
 		/obj/item/reagent_containers/food/snacks/fishmeat/salmon = 2,
-		/obj/item/reagent_containers/glass/beaker/waterbottle = 2
+		/obj/item/reagent_containers/glass/beaker/waterbottle = 2,
+		/obj/item/nullrod = 1,
 	)	//Matthew 14:17 RSVCE and KJV - Kitsunemitsu
 
 /datum/outfit/loadout/cleanser
 	name = "Cleanser"
 	backpack_contents = list(
 		/obj/item/grenade/homemade/coffeepotbomb = 2,	//This is funny. I swear guys.
+		/obj/item/gun/ballistic/revolver/m29 = 1,		//Moved here for more *variety*
+		/obj/item/ammo_box/m44 = 2
 	)
 
 
@@ -859,9 +862,6 @@ Raider
 	backpack =		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
 	backpack_contents = list(
-		/obj/item/nullrod = 1, \
-		/obj/item/gun/ballistic/revolver/m29 = 1,\
-		/obj/item/ammo_box/m44=2, \
 		/obj/item/camera/spooky = 1, \
 		/obj/item/reagent_containers/food/drinks/flask=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
