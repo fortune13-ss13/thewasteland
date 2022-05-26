@@ -593,14 +593,13 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	name = "Den Illegal Supply"
 	icon_state = "generic_idle"
 	prize_list = list(
-		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							150),
+		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							700),
 		new /datum/data/wasteland_equipment("Pulse Grenade",				/obj/item/grenade/empgrenade,										200),
-		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star/ninja,										75),
-		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							50),
+		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star,											115),
+		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							100),
 		new /datum/data/wasteland_equipment("Flashbang",					/obj/item/grenade/flashbang, 										200),
 		new /datum/data/wasteland_equipment("Smoke Grenade",				/obj/item/grenade/smokebomb, 										200),
 		new /datum/data/wasteland_equipment("Tear Gas Grenade",				/obj/item/grenade/chem_grenade/teargas,								700),
-		new /datum/data/wasteland_equipment("MK. 23",						/obj/item/gun/ballistic/automatic/pistol/mk23, 						95),
 		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
 		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
 		new /datum/data/wasteland_equipment("Frag Grenade",					/obj/item/grenade/syndieminibomb/concussion/frag, 					200),
@@ -608,14 +607,13 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 		)
 	highpop_list = list(
-		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							150),
+		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							700),
 		new /datum/data/wasteland_equipment("Pulse Grenade",				/obj/item/grenade/empgrenade,										200),
-		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star/ninja,										75),
-		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							50),
+		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star,											115),
+		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							100),
 		new /datum/data/wasteland_equipment("Flashbang",					/obj/item/grenade/flashbang, 										200),
 		new /datum/data/wasteland_equipment("Smoke Grenade",				/obj/item/grenade/smokebomb, 										200),
 		new /datum/data/wasteland_equipment("Tear Gas Grenade",				/obj/item/grenade/chem_grenade/teargas,								700),
-		new /datum/data/wasteland_equipment("MK. 23",						/obj/item/gun/ballistic/automatic/pistol/mk23, 						95),
 		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
 		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
 		new /datum/data/wasteland_equipment("Frag Grenade",					/obj/item/grenade/syndieminibomb/concussion/frag, 					200),
