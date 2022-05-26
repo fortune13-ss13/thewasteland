@@ -849,21 +849,20 @@ Raider
 	jobtype = /datum/job/wasteland/f13preacher
 
 	id = null
-	ears = /obj/item/radio/headset
+	ears = 			/obj/item/radio/headset
 	belt = null
-	uniform = /obj/item/clothing/under/f13/chaplain
-	backpack_contents = list(/obj/item/camera/spooky = 1)
-	backpack =		/obj/item/storage/backpack/cultpack
-	satchel = 		/obj/item/storage/backpack/cultpack
-	l_hand = 		/obj/item/nullrod
+	uniform = 		/obj/item/clothing/under/f13/chaplain
 	gloves =		/obj/item/clothing/gloves/fingerless
 	shoes = 		/obj/item/clothing/shoes/jackboots
-	backpack = 		/obj/item/storage/backpack/cultpack
+	r_pocket = 		/obj/item/flashlight/flare
+
+	backpack =		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
-	r_hand = 		/obj/item/gun/ballistic/revolver/m29
-	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
+		/obj/item/nullrod = 1, \
+		/obj/item/gun/ballistic/revolver/m29 = 1,\
 		/obj/item/ammo_box/m44=2, \
+		/obj/item/camera/spooky = 1, \
 		/obj/item/reagent_containers/food/drinks/flask=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/storage/fancy/candle_box, \
