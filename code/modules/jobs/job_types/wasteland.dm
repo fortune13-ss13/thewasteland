@@ -928,7 +928,7 @@ Raider
 
 	loadout_options = list(
 		/datum/outfit/loadout/montanadenboss,
-	/*	/datum/outfit/loadout/ncrrdenboss, */
+		/datum/outfit/loadout/ncrrdenboss,
 		/datum/outfit/loadout/truedenmob
 		)
 
@@ -977,7 +977,7 @@ Raider
 	name = "Central Cali Den Boss"
 	backpack_contents = list(
 							/obj/item/ammo_box/tube/a357=4, \
-							/obj/item/book/granter/trait/trekking=1 \
+							/obj/item/book/granter/trait/trekking=1, \
 							/obj/item/gun/ballistic/revolver/colt357/brassgun=2, \
 							/obj/item/book/granter/trait/gunslinger=1, \
 							)
