@@ -193,6 +193,16 @@
 	fire_delay = 3
 	block_chance = 20
 
+//Brass Revolver							Keywords: DEN, .357, Double action, 6 rounds cylinder, Fire delay -1
+/obj/item/gun/ballistic/revolver/colt357/brassgun
+	name = "Lucky"
+	desc = "Just holding this gun makes you feel like an ace. This revolver was handmade from pieces of other guns in some workshop after the war. A one-of-a-kind gun, it was someone's lucky gun for many a year, it's in good condition and hasn't changed hands often."
+	icon_state = "lucky37"
+	item_state = "lucky"
+	w_class = WEIGHT_CLASS_SMALL
+	extra_damage = 33
+	fire_delay = 3
+
 //Police revolver					Keywords: .357, Double action, 6 rounds cylinder, Pocket Pistol
 /obj/item/gun/ballistic/revolver/police
 	name = "police revolver"
