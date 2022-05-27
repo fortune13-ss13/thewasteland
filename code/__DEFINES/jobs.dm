@@ -77,7 +77,8 @@
 #define F13VETRANGER	 (1<<16)
 #define F13RANGER	 	 (1<<17)
 #define F13MP            (1<<18)
-#define F13REP           (1<<19)
+#define F13HEADMP        (1<<19)
+#define F13REP           (1<<20)
 
 #define LEGION			(1<<4)
 

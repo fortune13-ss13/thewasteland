@@ -561,6 +561,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Military Police"
 	icon_state = "NCR Trooper"
 
+/obj/effect/landmark/start/f13/ncrheadmp
+	name = "NCR Provost Marshal"
+	icon_state = "NCR Lieutenant"
+
 /obj/effect/landmark/start/f13/ncrcombatengineer
 	name = "NCR Combat Engineer"
 	icon_state = "NCR Trooper"
