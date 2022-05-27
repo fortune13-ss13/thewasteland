@@ -301,7 +301,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	accessory = /obj/item/clothing/accessory/ncr/LT2
 	glasses	= /obj/item/clothing/glasses/sunglasses/big
 	head = /obj/item/clothing/head/beret/ncr
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/lieutenant
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced
 	uniform	= /obj/item/clothing/under/f13/ncr/ncr_officer
 	gloves = /obj/item/clothing/gloves/f13/leather
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
@@ -313,7 +313,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/d12g = 2,
 		/obj/item/ammo_box/m44box = 1,
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
-		/obj/item/ammo_box/shotgun/bean = 2,
 		/obj/item/melee/classic_baton/militarypolice = 1,
 		/obj/item/stack/crafting/armor_plate = 4,
 		/obj/item/clothing/head/f13/ncr/steelpot_mp
