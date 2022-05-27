@@ -298,7 +298,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	jobtype	= /datum/job/ncr/f13mp
 	id = /obj/item/card/id/dogtag/ncrsergeant
 	neck = /obj/item/storage/belt/holster/legholster
-	accessory = /obj/item/clothing/accessory/ncr/LT1
+	accessory = /obj/item/clothing/accessory/ncr/LT2
 	glasses	= /obj/item/clothing/glasses/sunglasses/big
 	head = /obj/item/clothing/head/beret/ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/lieutenant
