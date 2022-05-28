@@ -893,7 +893,7 @@
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/clothing/suit/armor/f13/combat/swat/enclave
-	name = "Enclave Combat Armor"
+	name = "enclave combat armor"
 	desc = "A set of standard issue combat armor used by the Enclave. Looks Cheaply made."
 	icon_state = "Enclave_combatarmor"
 	item_state = "Enclave_combatarmor"
