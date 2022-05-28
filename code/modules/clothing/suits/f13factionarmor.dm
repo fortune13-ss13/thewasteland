@@ -840,7 +840,7 @@
 
 /obj/item/clothing/suit/armor/f13/enclave/marine
 	name = "old United States Marine Corp Armor"
-	desc = "An advanced model of combat armor worn by marines aboard the USS Democracy, second only to power armor in protection used by the USCM For various tasks and operations, it's handled the nuclear wasteland somewhat better than the rest of the armors you've seen."
+	desc = "An advanced model of combat armor worn by marines aboard the USS Democracy, second only to power armor in protection used by the USMC For various tasks and operations, it's handled the nuclear wasteland somewhat better than the rest of the armors you've seen."
 	icon_state = "enclave_marine"
 	item_state = "enclave_marine"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
