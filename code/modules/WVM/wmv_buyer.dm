@@ -14,9 +14,9 @@
 	var/expected_price = 0
 	var/list/prize_list = list()  //if you add something to this, please, for the love of god, sort it by price/type. use tabs and not spaces.
 
-	var/list/goods_list = list( /obj/item/stack/sheet/mineral/diamond = 200,
-								/obj/item/stack/sheet/mineral/gold = 100,
-								/obj/item/stack/sheet/mineral/silver = 50,
+	var/list/goods_list = list( /obj/item/stack/sheet/mineral/diamond = 20,
+								/obj/item/stack/sheet/mineral/gold = 10,
+								/obj/item/stack/sheet/mineral/silver = 5,
 								/obj/item/stack/sheet/metal = 1.5,
 								/obj/item/reagent_containers/food/snacks/grown/wheat = 1,
 								/obj/item/reagent_containers/food/snacks/grown/rice = 1,
@@ -65,10 +65,10 @@
 	dat += "Wheat/Oats/Rice/Hay : 1 caps<br>"
 	dat += "Broc/Xander/Punga Fruit/Barrel Cactus Fruit/Cave Fungus/Agave : 5 caps<br>"
 	dat += "Iron Sheets : 1.5 caps<br>"
-	dat += "Silver Bars: 50 caps<br>"
-	dat += "Gold Bars: 100 caps<br>"
-	dat += "Cut Diamonds : 200 caps<br>"
-	dat += "Jet/Psycho/MedX : 10/20/100 caps<br>"
+	dat += "Silver Bars: 5 caps<br>"
+	dat += "Gold Bars: 10 caps<br>"
+	dat += "Cut Diamonds : 20 caps<br>"
+	dat += "Jet/Psycho/MedX : 10/20/75 caps<br>"
 	dat += "Healing Powder/Healing Paultice : 30/50 caps<br>"
 	dat += "Stimpak/Super Stimpak : 50/100 caps<br>"
 	dat += ""

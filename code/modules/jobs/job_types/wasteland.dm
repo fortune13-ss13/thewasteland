@@ -73,13 +73,19 @@
 		GK.add_member(H)
 		H.gang = GK
 
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/USAeyebot,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx,)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 
 /datum/outfit/loadout/enforcer
 	name = "Enforcer"
@@ -94,9 +100,10 @@
 	name = "Skirmisher"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm=3,
+		/obj/item/ammo_box/magazine/uzim9mm = 3,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/storage/belt/holster=1)
+		/obj/item/storage/belt/holster = 1,
+		/obj/item/book/granter/trait/trekking = 1)
 
 /datum/outfit/loadout/khandrug
 	name = "Drug Pusher"
@@ -163,7 +170,7 @@ Raider
 	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/raider_bos,
 	/datum/outfit/loadout/quack_doctor,
-	/datum/outfit/loadout/raider_mobster,
+	/* /datum/outfit/loadout/raider_mobster, */
 	/datum/outfit/loadout/raider_tribal
 	)
 
@@ -426,7 +433,7 @@ Raider
 		/obj/item/radio/tribal = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
 		)
-
+/*
 /datum/outfit/loadout/raider_mobster
 	name = "Den Mob Enforcer"
 	belt = /obj/item/storage/belt/military/assault
@@ -444,7 +451,7 @@ Raider
 		/obj/item/ammo_box/magazine/greasegun = 2,
 		/obj/item/card/id/dogtag/town/mafia=1,
 		)
-
+*/
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
 	flag = F13WASTELANDER
@@ -694,6 +701,12 @@ Raider
 
 	outfit = /datum/outfit/job/wasteland/f13preacher
 
+	loadout_options = list(
+	/datum/outfit/loadout/crusader, 	//This is kinda a given. You bet.
+	/datum/outfit/loadout/samaritan, 	//Water and food to share with the wastes.
+	/datum/outfit/loadout/cleanser		//Just some bombs.
+	)
+
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
 	minimal_access = list()
 	matchmaking_allowed = list(
@@ -719,6 +732,34 @@ Raider
 			/datum/job/wasteland/f13wastelander,
 		),
 	)
+
+
+
+/datum/outfit/loadout/crusader
+	name = "Crusader"
+	backpack_contents = list(
+		/obj/item/clothing/suit/armor/knight = 1,
+		/obj/item/clothing/head/helmet/knight/red = 1,
+		/obj/item/melee/onehanded/machete = 1,
+	)
+
+/datum/outfit/loadout/samaritan
+	name = "Samaritan"
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/snacks/store/bread/plain = 5,
+		/obj/item/reagent_containers/food/snacks/fishmeat/salmon = 2,
+		/obj/item/reagent_containers/glass/beaker/waterbottle = 2,
+		/obj/item/nullrod = 1,
+	)	//Matthew 14:17 RSVCE and KJV - Kitsunemitsu
+
+/datum/outfit/loadout/cleanser
+	name = "Cleanser"
+	backpack_contents = list(
+		/obj/item/grenade/homemade/coffeepotbomb = 2,	//This is funny. I swear guys.
+		/obj/item/gun/ballistic/revolver/m29 = 1,		//Moved here for more *variety*
+		/obj/item/ammo_box/m44 = 2
+	)
+
 
 /datum/job/wasteland/f13preacher/after_spawn(mob/living/H, mob/M)
 	. = ..()
@@ -774,7 +815,7 @@ Raider
 		if("lampism")
 			B.name = "Fluorescent Incandescence"
 		if("lol", "wtf", "gay", "penis", "ass", "poo", "badmin", "shitmin", "deadmin", "cock", "cocks", "meme", "memes")
-			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition","F.A.T.A.L. Rulebook")
+			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition", "F.A.T.A.L. Rulebook")
 			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 100) // starts off dumb as fuck
 		if("monkeyism","apism","gorillism","primatism")
 			B.name = pick("Going Bananas", "Bananas Out For Harambe")
@@ -818,21 +859,17 @@ Raider
 	jobtype = /datum/job/wasteland/f13preacher
 
 	id = null
-	ears = /obj/item/radio/headset
+	ears = 			/obj/item/radio/headset
 	belt = null
-	uniform = /obj/item/clothing/under/f13/chaplain
-	backpack_contents = list(/obj/item/camera/spooky = 1)
-	backpack =		/obj/item/storage/backpack/cultpack
-	satchel = 		/obj/item/storage/backpack/cultpack
-	l_hand = 		/obj/item/nullrod
+	uniform = 		/obj/item/clothing/under/f13/chaplain
 	gloves =		/obj/item/clothing/gloves/fingerless
 	shoes = 		/obj/item/clothing/shoes/jackboots
-	backpack = 		/obj/item/storage/backpack/cultpack
+	r_pocket = 		/obj/item/flashlight/flare
+
+	backpack =		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
-	r_hand = 		/obj/item/gun/ballistic/revolver/m29
-	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
-		/obj/item/ammo_box/m44=2, \
+		/obj/item/camera/spooky = 1, \
 		/obj/item/reagent_containers/food/drinks/flask=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/storage/fancy/candle_box, \
@@ -906,7 +943,7 @@ Raider
 	total_positions = 1
 	spawn_positions = 1
 	description = "The mob rules in Yuma, and you're on top. Keeping the loose association of Khans, outlaws, and other no-goods together you maintain order in The Den by force. Ensure that all inhabitants of the Den obey their rules, and spread your influence over the wasteland. Be careful though - even your own men can't be trusted."
-	supervisors = "Whatever god you pray to. Sky's the limit!"
+	supervisors = "The Overboss, God."
 	selection_color = "#ff4747"
 	exp_requirements = 1000
 	exp_type = EXP_TYPE_OUTLAW
@@ -926,6 +963,10 @@ Raider
 		),
 	)
 
+	loadout_options = list(
+		/datum/outfit/loadout/ncrrdenboss,
+		/datum/outfit/loadout/truedenmob
+		)
 
 /datum/outfit/job/wasteland/f13mobboss
 	name = "Den Mob Boss"
@@ -944,19 +985,11 @@ Raider
 	gloves = /obj/item/clothing/gloves/color/white
 	head = /obj/item/clothing/head/caphat/beret/white
 	mask = /obj/item/clothing/mask/bandana/durathread
-	suit_store = /obj/item/gun/ballistic/automatic/smg/p90
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
-		/obj/item/ammo_box/magazine/m10mm_p90=2, \
 		/obj/item/storage/bag/money/small/raider/mobboss, \
 		/obj/item/book/granter/crafting_recipe/manual/denvr)
-
-/datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-
 
 /datum/outfit/job/wasteland/f13mobboss/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -968,6 +1001,22 @@ Raider
 		GLOB.all_gangs |= DM
 		DM.add_member(H)
 		H.gang = DM
+
+/datum/outfit/loadout/ncrrdenboss
+	name = "Central Cali Den Boss"
+	backpack_contents = list(
+							/obj/item/ammo_box/tube/a357=4, \
+							/obj/item/book/granter/trait/trekking=1, \
+							/obj/item/gun/ballistic/revolver/colt357/brassgun=2, \
+							/obj/item/book/granter/trait/gunslinger=1, \
+							)
+
+/datum/outfit/loadout/truedenmob
+	name = "True Den Boss"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
+	backpack_contents = list(
+							/obj/item/ammo_box/magazine/tommygunm45/stick=3, \
+							)
 
 datum/job/wasteland/f13dendoctor
 	title = "Den Doctor"
@@ -988,7 +1037,7 @@ datum/job/wasteland/f13dendoctor
 	minimal_access = list(ACCESS_DEN)
 
 	loadout_options = list(
-		/datum/outfit/loadout/dencombatmedic,
+		/* /datum/outfit/loadout/dencombatmedic, */
 		/datum/outfit/loadout/denchemist,
 		)
 
@@ -1037,16 +1086,16 @@ datum/job/wasteland/f13dendoctor
 		GLOB.all_gangs |= DM
 		DM.add_member(H)
 		H.gang = DM
-
+/*
 /datum/outfit/loadout/dencombatmedic
 	name = "Combat medic"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/american180
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
 	suit = /obj/item/clothing/suit/toggle/labcoat/chemist
 	backpack_contents = list(
 							/obj/item/clothing/glasses/hud/health/f13=1, \
-							/obj/item/ammo_box/magazine/m22smg=1, \
+							/obj/item/ammo_box/magazine/tommygunm45/stick=2, \
 							)
-
+*/
 /datum/outfit/loadout/denchemist
 	name = "Chemist"
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/type17
