@@ -193,8 +193,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		initiator.current_ticket.Close()
 	initiator.current_ticket = src
 
-	TimeoutVerb()
-
 	statclick = new(null, src)
 	_interactions = list()
 
@@ -224,11 +222,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		heard_by_no_admins = FALSE
 		send2irc(initiator_ckey, "Ticket #[id]: Answered by [key_name(usr)]")
 	_interactions += "[TIME_STAMP("hh:mm:ss", FALSE)]: [formatted_message]"
-
-//Removes the ahelp verb and returns it after 2 minutes
-/datum/admin_help/proc/TimeoutVerb()
-	remove_verb(initiator, /client/verb/adminhelp)
-	initiator.adminhelptimerid = addtimer(CALLBACK(initiator, /client/proc/giveadminhelpverb), 1200, TIMER_STOPPABLE) //2 minute cooldown of admin helps
 
 //private
 /datum/admin_help/proc/FullMonty(ref_src)
@@ -533,7 +526,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		if(alert(usr, "You already have a ticket open. Is this for the same issue?",,"Yes","No") != "No")
 			if(current_ticket)
 				current_ticket.MessageNoRecipient(msg)
-				current_ticket.TimeoutVerb()
 				return
 			else
 				to_chat(usr, "<span class='warning'>Ticket not found, creating new one...</span>")
