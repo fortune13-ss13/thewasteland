@@ -170,7 +170,7 @@
 	desc = "A wall made out of metal, really fucking tough metal. They definitely didn't want everything to give away around the door."
 	icon = 'icons/turf/walls/f13vault_reinforced_wall.dmi'
 	icon_state = "vaultwall"
- /turf/closed/indestructible/rock/snow
+/turf/closed/indestructible/rock/snow
 	name = "mountainside"
 	desc = "An extremely densely-packed rock, sheeted over with centuries worth of ice and snow."
 	icon = 'icons/turf/walls.dmi'
