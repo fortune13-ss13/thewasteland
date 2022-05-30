@@ -45,7 +45,6 @@
 
 /datum/outfit/abductor/scientist
 	name = "Abductor Scientist"
-	uniform = /obj/item/clothing/under/abductor // To give the scientist something cool + keep the abductor jumpsuit in some form
 
 	backpack_contents = list(
 		/obj/item/abductor/gizmo = 1

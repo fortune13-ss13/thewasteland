@@ -12,7 +12,7 @@
 	icon = 'icons/fallout/clothing/suits_utility.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
 	icon_state = "alien_stealth"
-	item_state = "alien"
+	item_state = "alien_stealth"
 	blood_overlay_type = "armor"
 	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 15, "rad" = 15, "fire" = 70, "acid" = 70)
 	actions_types = list(/datum/action/item_action/hands_free/activate)
