@@ -1,6 +1,6 @@
 /datum/outfit/abductor
 	name = "Abductor Basic"
-	uniform = /obj/item/clothing/under/abductor
+	uniform = /obj/item/clothing/under/color/grey // Aliens wore grey or red jumpsits in fallout 3/nv
 	shoes = /obj/item/clothing/shoes/combat
 	back = /obj/item/storage/backpack
 	ears = /obj/item/radio/headset/abductor
@@ -38,8 +38,9 @@
 	belt = /obj/item/storage/belt/military/abductor/full
 
 	backpack_contents = list(
-		/obj/item/gun/energy/alien = 1,
-		/obj/item/abductor/silencer = 1
+		/obj/item/gun/energy/laser/plasma/pistol/alien = 1,
+		/obj/item/abductor/silencer = 1,
+		/obj/item/stock_parts/cell/ammo/alien = 2 // This means they have 12 shots in total
 		)
 
 /datum/outfit/abductor/scientist
