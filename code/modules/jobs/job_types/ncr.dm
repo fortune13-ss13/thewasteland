@@ -605,6 +605,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/c4570 = 3,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
+		/obj/item/book/granter/trait/rifleman = 1,
 		)
 
 /datum/outfit/loadout/vrshotgunner
@@ -1009,7 +1010,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
 
 

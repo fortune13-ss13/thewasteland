@@ -113,6 +113,7 @@
 	taste_description = "oil"
 	nutriment_factor = 5 * REAGENTS_METABOLISM //Not very healthy on its own
 	metabolization_rate = 10 * REAGENTS_METABOLISM
+	thirst_factor = THIRST_FACTOR * 2 // Hilarious, isn't it
 	var/fry_temperature = 450 //Around ~350 F (117 C) which deep fryers operate around in the real world
 	var/boiling //Used in mob life to determine if the oil kills, and only on touch application
 
@@ -196,6 +197,7 @@
 	color = "#792300" // rgb: 121, 35, 0
 	taste_description = "umami"
 	value = REAGENT_VALUE_COMMON
+	thirst_factor = THIRST_FACTOR * 3
 
 /datum/reagent/consumable/ketchup
 	name = "Ketchup"
@@ -203,6 +205,7 @@
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#731008" // rgb: 115, 16, 8
 	taste_description = "ketchup"
+	thirst_factor = THIRST_FACTOR * 2 // Mmmm, ketchup
 
 /datum/reagent/consumable/mustard
 	name = "Mustard"
@@ -210,6 +213,7 @@
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#DDED26" // rgb: 221, 237, 38
 	taste_description = "mustard"
+	thirst_factor = THIRST_FACTOR * 2 // I guess..?
 
 /datum/reagent/consumable/capsaicin
 	name = "Capsaicin Oil"
@@ -217,6 +221,7 @@
 	color = "#B31008" // rgb: 179, 16, 8
 	taste_description = "hot peppers"
 	taste_mult = 1.5
+	thirst_factor = THIRST_FACTOR * 1 // Go ahead, do it
 
 /datum/reagent/consumable/capsaicin/on_mob_life(mob/living/carbon/M)
 	var/heating = 0
@@ -294,6 +299,7 @@
 	color = "#B31008" // rgb: 179, 16, 8
 	taste_description = "scorching agony"
 	pH = 7.4
+	thirst_factor = -THIRST_FACTOR * 5 // Why would you drink this...
 
 /datum/reagent/consumable/condensedcapsaicin/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	if(!ishuman(M) && !ismonkey(M))
@@ -355,6 +361,8 @@
 			victim.damageoverlaytemp = 75
 			victim.DefaultCombatKnockdown(80, override_hardstun = 0.1, override_stamdmg = min(reac_volume * 5, 25))
 		victim.update_damage_hud()
+		return
+	..()
 
 /datum/reagent/consumable/condensedcapsaicin/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
@@ -367,12 +375,14 @@
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255,255,255
 	taste_description = "salt"
+	thirst_factor = -THIRST_FACTOR * 5 // Yuck, salt
 
 /datum/reagent/consumable/sodiumchloride/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	if(!istype(M))
 		return
 	if(M.has_bane(BANE_SALT))
 		M.mind.disrupt_spells(-200)
+	..()
 
 /datum/reagent/consumable/sodiumchloride/reaction_turf(turf/T, reac_volume) //Creates an umbra-blocking salt pile
 	if(!istype(T))
@@ -387,6 +397,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "flowers"
+	thirst_factor = THIRST_FACTOR * 10
 
 /datum/reagent/consumable/brocjuice/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -398,6 +409,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "dirt"
+	thirst_factor = THIRST_FACTOR * 10
 
 /datum/reagent/consumable/xanderjuice/on_mob_life(mob/living/carbon/M)
 	if(M.blood_volume < BLOOD_VOLUME_NORMAL)
@@ -410,6 +422,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#BAE3B4"
 	taste_description = "plants"
+	thirst_factor = THIRST_FACTOR * 10
 
 /datum/reagent/consumable/agavejuice/on_mob_life(mob/living/carbon/M)
 	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -421,6 +434,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#E8E67E"
 	taste_description = "bitter"
+	thirst_factor = THIRST_FACTOR * 10
 
 /datum/reagent/consumable/ferajuice/on_mob_life(mob/living/carbon/M)
 	if(M.health > 20)
@@ -433,6 +447,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#ACDFCE"
 	taste_description = "bitter leaves"
+	thirst_factor = THIRST_FACTOR * 10
 
 /datum/reagent/consumable/daturajuice/on_mob_life(mob/living/carbon/M)
 	M.set_drugginess(5)
@@ -445,6 +460,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#168B64"
 	taste_description = "leaves"
+	thirst_factor = THIRST_FACTOR * 5
 
 /datum/reagent/consumable/coyotejuice/on_mob_life(mob/living/carbon/M)
 	if(prob(10))
@@ -461,6 +477,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#274E13"
 	taste_description = "nuts"
+	thirst_factor = THIRST_FACTOR * 5
 
 /datum/reagent/consumable/cavefungusjuice/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -472,6 +489,7 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#274E13"
 	taste_description = "tato"
+	thirst_factor = THIRST_FACTOR * 10
 
 
 
@@ -481,6 +499,7 @@
 	reagent_state = SOLID
 	// no color (ie, black)
 	taste_description = "pepper"
+	thirst_factor = -THIRST_FACTOR * 5 // Yuck
 
 /datum/reagent/consumable/coco
 	name = "Coco Powder"
@@ -498,6 +517,7 @@
 	glass_icon_state  = "chocolateglass"
 	glass_name = "glass of chocolate"
 	glass_desc = "Tasty."
+	thirst_factor = THIRST_FACTOR * 8
 
 /datum/reagent/consumable/hot_coco/on_mob_life(mob/living/carbon/M)
 	M.adjust_bodytemperature(5 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
@@ -542,6 +562,7 @@
 	taste_description = "garlic"
 	metabolization_rate = 0.15 * REAGENTS_METABOLISM
 	value = REAGENT_VALUE_COMMON
+	thirst_factor = THIRST_FACTOR * 5
 
 /datum/reagent/consumable/garlic/on_mob_life(mob/living/carbon/M)
 	if(isvampire(M)) //incapacitating but not lethal. Unfortunately, vampires cannot vomit.
@@ -607,6 +628,7 @@
 	value = REAGENT_VALUE_UNCOMMON
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "corn"
+	thirst_factor = THIRST_FACTOR * 5
 
 /datum/reagent/consumable/cornoil/reaction_turf(turf/open/T, reac_volume)
 	if (!istype(T))
@@ -632,6 +654,7 @@
 	reagent_state = SOLID
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "dry and cheap noodles"
+	thirst_factor = -THIRST_FACTOR * 3 // Consider not eating dry ramen
 
 /datum/reagent/consumable/hot_ramen
 	name = "Hot Ramen"
@@ -639,6 +662,7 @@
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "wet and cheap noodles"
+	thirst_factor = THIRST_FACTOR * 4 // Thanks for listening to my suggestion
 
 /datum/reagent/consumable/hot_ramen/on_mob_life(mob/living/carbon/M)
 	M.adjust_bodytemperature(10 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
@@ -650,6 +674,7 @@
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "wet and cheap noodles on fire"
+	thirst_factor = THIRST_FACTOR * 5 // FIRE!!
 
 /datum/reagent/consumable/hell_ramen/on_mob_life(mob/living/carbon/M)
 	M.adjust_bodytemperature(10 * TEMPERATURE_DAMAGE_COEFFICIENT)
@@ -661,6 +686,7 @@
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 0, 0, 0
 	taste_description = "chalky wheat"
+	thirst_factor = -THIRST_FACTOR * 4 // You'd certainly want to water your mouth after trying to eat that
 
 /datum/reagent/consumable/flour/reaction_turf(turf/T, reac_volume)
 	if(!isspaceturf(T))
@@ -675,6 +701,7 @@
 	color = "#801E28" // rgb: 128, 30, 40
 	value = REAGENT_VALUE_COMMON
 	taste_description = "cherry"
+	thirst_factor = THIRST_FACTOR * 3 // mMmm, jelly
 
 /datum/reagent/consumable/bluecherryjelly
 	name = "Blue Cherry Jelly"
@@ -682,6 +709,7 @@
 	color = "#00F0FF"
 	value = REAGENT_VALUE_UNCOMMON
 	taste_description = "blue cherry"
+	thirst_factor = THIRST_FACTOR * 3
 
 /datum/reagent/consumable/rice
 	name = "Rice"
@@ -706,6 +734,7 @@
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#FFB500"
 	taste_description = "egg"
+	thirst_factor = THIRST_FACTOR * 2
 
 /datum/reagent/consumable/corn_starch
 	name = "Corn Starch"
@@ -733,6 +762,7 @@
 	nutriment_factor = 10 * REAGENTS_METABOLISM
 	metabolization_rate = 1 * REAGENTS_METABOLISM
 	taste_description = "sweetness"
+	thirst_factor = THIRST_FACTOR * 5
 
 /datum/reagent/consumable/honey/on_mob_life(mob/living/carbon/M)
 	M.reagents.add_reagent(/datum/reagent/consumable/sugar,3)
@@ -758,6 +788,7 @@
 	value = 5
 	taste_description = "mayonnaise"
 	value = REAGENT_VALUE_COMMON
+	thirst_factor = THIRST_FACTOR * 2 // Is mayonnaise a drink?
 
 /datum/reagent/consumable/tearjuice
 	name = "Tear Juice"
@@ -766,6 +797,7 @@
 	taste_description = "bitterness"
 	pH = 5
 	value = REAGENT_VALUE_COMMON
+	thirst_factor = THIRST_FACTOR * 4
 
 /datum/reagent/consumable/tearjuice/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	if(!istype(M))
@@ -927,6 +959,7 @@
 	can_synth = FALSE
 	pH = 6.1
 	value = REAGENT_VALUE_AMAZING
+	thirst_factor = THIRST_FACTOR * 20 // A randomized recipe that's always being reset, I think it's a funny idea
 
 /datum/reagent/consumable/secretsauce/reaction_obj(obj/O, reac_volume)
 	//splashing any amount above or equal to 1u of secret sauce onto a piece of food turns its quality to 100
@@ -948,6 +981,7 @@
 	taste_description = "smoke"
 	overdose_threshold = 25
 	value = REAGENT_VALUE_COMMON
+	thirst_factor = -THIRST_FACTOR * 5
 
 /datum/reagent/consumable/char/overdose_process(mob/living/carbon/M)
 	if(prob(10))
@@ -961,6 +995,7 @@
 	taste_mult = 2.5 //sugar's 1.5, capsacin's 1.5, so a good middle ground.
 	taste_description = "smokey sweetness"
 	value = REAGENT_VALUE_COMMON
+	thirst_factor = THIRST_FACTOR * 2
 
 /datum/reagent/consumable/laughsyrup
 	name = "Laughin' Syrup"
@@ -970,3 +1005,4 @@
 	taste_mult = 2
 	taste_description = "fizzy sweetness"
 	value = REAGENT_VALUE_COMMON
+	thirst_factor = THIRST_FACTOR * 2
