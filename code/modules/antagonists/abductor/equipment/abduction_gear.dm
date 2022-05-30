@@ -725,8 +725,8 @@
 	desc = "Abduct with style - smooth style. Prevents digital tracking."
 	icon = 'icons/fallout/clothing/helmets.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
-	icon_state = "alienhelmet"
-	item_state = "alienhelmet"
+	icon_state = "alien"
+	item_state = "alien"
 	blockTracking = TRUE
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 

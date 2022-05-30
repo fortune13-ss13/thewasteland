@@ -2,7 +2,7 @@
 	name = "Abductor Basic"
 	uniform = /obj/item/clothing/under/color/grey // Aliens wore grey or red jumpsits in fallout 3/nv
 	shoes = /obj/item/clothing/shoes/combat
-	back = /obj/item/storage/backpack
+	back = /obj/item/storage/backpack/satchel // No good, fitting backpacks without coding a new one
 	ears = /obj/item/radio/headset/abductor
 
 /datum/outfit/abductor/proc/link_to_console(mob/living/carbon/human/H, team_number)
@@ -45,6 +45,7 @@
 
 /datum/outfit/abductor/scientist
 	name = "Abductor Scientist"
+	uniform = /obj/item/clothing/under/abductor // To give the scientist something cool + keep the abductor jumpsuit in some form
 
 	backpack_contents = list(
 		/obj/item/abductor/gizmo = 1
