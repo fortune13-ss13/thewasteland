@@ -38,7 +38,7 @@
 	jackpots = rand(1, 4) //false hope
 	plays = rand(75, 200)
 	if(prob(25))
-		balance = rand(5, 100)
+		give_money(rand(5, 100))
 
 	INVOKE_ASYNC(src, .proc/toggle_reel_spin, TRUE)//The reels won't spin unless we activate them
 
@@ -83,7 +83,7 @@
 		if(!user.temporarilyRemoveItemFromInventory(currency))
 			return
 		to_chat(user, "<span class='notice'>You insert [currency] into [src]'s slot!</span>")
-		balance += round(currency.value * currency.amount)
+		give_money(round(currency.value * currency.amount))
 		qdel(currency)
 	else
 		return ..()
@@ -130,7 +130,7 @@
 		drop_caps(balance)
 		updateDialog()
 
-/obj/machinery/computer/slot_machine/proc/drop_caps(var/amt)
+/obj/machinery/computer/slot_machine/proc/drop_caps(amt)
 	// Come back when you're a little bit richer...
 	if(!balance)
 		return FALSE
@@ -251,7 +251,7 @@
 
 	return amountthesame
 
-/obj/machinery/computer/slot_machine/proc/give_money(var/amt)
+/obj/machinery/computer/slot_machine/proc/give_money(amt)
 	balance += amt
 
 #undef SEVEN
