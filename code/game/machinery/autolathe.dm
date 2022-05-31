@@ -522,6 +522,18 @@
 	var/advanced = FALSE
 	tooadvanced = TRUE //technophobes will still need to be able to make ammo	//not anymore they wont
 
+/obj/machinery/autolathe/ammo/examine(mob/user)
+	. = ..()
+
+	if(simple)
+		. += "<span class='notice'>It is upgraded with simple ammuniton schematics."
+	if(basic)
+		. += "<span class='notice'>It is upgraded with basic ammuniton schematics."
+	if(intermediate)
+		. += "<span class='notice'>It is upgraded with intermediate ammuniton schematics."
+	if(advanced)
+		. += "<span class='notice'>It is upgraded with advanced ammuniton schematics."
+
 /obj/machinery/autolathe/ammo/attackby(obj/item/I, mob/user, params)
 	. = ..()
 	if(!panel_open)
