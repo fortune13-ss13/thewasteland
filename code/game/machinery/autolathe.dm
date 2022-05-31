@@ -521,6 +521,7 @@
 	var/intermediate = FALSE
 	var/advanced = FALSE
 	tooadvanced = TRUE //technophobes will still need to be able to make ammo	//not anymore they wont
+
 /obj/machinery/autolathe/ammo/attackby(obj/item/I, mob/user, params)
 	. = ..()
 	if(!panel_open)
@@ -571,7 +572,6 @@
 		new /obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_three(src.loc)
 	if(advanced)
 		new /obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_four(src.loc)
-	return
 
 /obj/machinery/autolathe/ammo/unlocked_basic
 	desc = "A ammo bench where you can make ammo and magazines. Copies of Guns and Ammo, parts one and two, can be found in a drawer."
