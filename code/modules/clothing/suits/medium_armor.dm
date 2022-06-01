@@ -72,7 +72,7 @@
 	item_state = "seva"
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	hoodtype = /obj/item/clothing/head/hooded/explorer/seva
+	hoodtype = /obj/item/clothing/mask/gas/envirosevagasmask
 	armor = list("melee" = 50, "bullet" = 55, "laser" = 65, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 95, "wound" = 35)
 	resistance_flags = FIRE_PROOF 
 

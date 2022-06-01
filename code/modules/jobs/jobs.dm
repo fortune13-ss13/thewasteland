@@ -61,12 +61,10 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Enclave Lieutenant",
 
-	"Institute Researcher"
-
 	//For Alternative maptypes - Kitsunemitsu
 	"Chief",
 
-	"Overseer"
+	"Overseer",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -87,6 +85,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Senior Scribe",
 "Scribe",
 "BoS Off-Duty",
+
 "Legion Centurion",
 "Legion Explorer",
 "Legion Slavemaster",
@@ -98,6 +97,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Scout",
 "Legion Auxilia",
 "Legion Slave",
+
 "Mayor",
 "Chief of Police",
 "Officer",
@@ -106,6 +106,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Prospector",
 "Detective",
 "Shop Assistant",
+
 "Enclave Captain",
 "Enclave Lieutenant",
 "Enclave Gunnery Sergeant",
@@ -115,14 +116,17 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Enclave Scientist",
 "Enclave Private",
 "Enclave Bunker Duty",
+
 "Chief",
 "Shaman",
 "Head Hunter",
 "Druid",
 "Hunter",
+
 "Followers Administrator",
 "Followers Doctor",
 "Followers Guard",
+
 "Cyborg",
 "Overseer",
 "Chief of Security",
@@ -130,9 +134,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Vault-tec Scientist",
 "Vault-tec Security",
 "Vault-tec Engineer",
-"Institute Researcher",
-"Institute Courser",
-"Escaped Synth",
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
@@ -295,7 +296,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#ccffcc"),
-	EXP_TYPE_INSTITUTE = list("jobs" = institute_positions, "color" = "#ce4bda"),
+	EXP_TYPE_INSITUTE = list("jobs" = institute_positions, "color" = "#1f7aa5"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -309,7 +310,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
 
-	EXP_TYPE_FALLOUT = list("titles" = |Institute_positions | brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
+	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
 
 	EXP_TYPE_OUTLAW = list("titles" = list("Outlaw","Den Mob Boss","Den Mob Enforcer","Den Doctor",)),
 	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),
