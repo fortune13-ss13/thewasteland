@@ -62,7 +62,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Enclave Lieutenant",
 
 	//For Alternative maptypes - Kitsunemitsu
-	"Chief",
+	"Chief", //did this always have a ,? - Tzula
 
 	"Overseer",
 	))
@@ -240,7 +240,7 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Wastelander",
 ))
 
-GLOBAL_LIST_INIT(Institute_positions, list(
+GLOBAL_LIST_INIT(institute_positions, list(
 	"Institute Researcher",
 	"Institute Courser",
 	"Escaped Synth",
@@ -296,7 +296,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#ccffcc"),
-	EXP_TYPE_INSITUTE = list("jobs" = institute_positions, "color" = "#1f7aa5"),
+	EXP_TYPE_INSTITUTE = list("jobs" = institute_positions, "color" = "#1f7aa5"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -310,7 +310,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
 
-	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
+	EXP_TYPE_FALLOUT = list("titles" = institute_positions | brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
 
 	EXP_TYPE_OUTLAW = list("titles" = list("Outlaw","Den Mob Boss","Den Mob Enforcer","Den Doctor",)),
 	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),
@@ -322,6 +322,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_TRIBAL = list("titles" = tribal_positions),
 	EXP_TYPE_FOLLOWERS = list("titles" = followers_positions),
 	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
+	EXP_TYPE_INSTITUTE = list("titles" = institute_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
