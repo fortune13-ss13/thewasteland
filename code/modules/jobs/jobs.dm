@@ -61,6 +61,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Enclave Lieutenant",
 
+	"Institute Researcher"
+
 	//For Alternative maptypes - Kitsunemitsu
 	"Chief",
 
@@ -134,6 +136,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Vault-tec Scientist",
 "Vault-tec Security",
 "Vault-tec Engineer",
+"Institute Researcher",
+"Institute Courser",
+"Escaped Synth",
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
@@ -240,6 +245,12 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Wastelander",
 ))
 
+GLOBAL_LIST_INIT(Institute_positions, list(
+	"Institute Researcher",
+	"Institute Courser",
+	"Escaped Synth",
+))
+
 GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Captain",
 	"Enclave Lieutenant",
@@ -290,6 +301,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#ccffcc"),
+	EXP_TYPE_INSTITUTE = list("jobs" = institute_positions, "color" = "#ce4bda"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -303,7 +315,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
 
-	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
+	EXP_TYPE_FALLOUT = list("titles" = |Institute_positions | brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
 
 	EXP_TYPE_OUTLAW = list("titles" = list("Outlaw","Den Mob Boss","Den Mob Enforcer","Den Doctor",)),
 	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),

@@ -922,3 +922,18 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/followersscientist
 	name = "Followers Scientist"
+
+
+//Institute 
+
+/obj/effect/landmark/start/security_officer
+	name = "Institute Courser"
+	icon_state = "Security Officer"
+
+/obj/effect/landmark/start/f13/followersdoctor
+	name = "Institute Researcher"
+	icon_state = "Medical Doctor"
+
+/obj/effect/landmark/start/f13/detective
+	name = "Escaped Synth"
+	icon_state = "Detective"

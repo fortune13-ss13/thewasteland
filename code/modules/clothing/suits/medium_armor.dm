@@ -65,7 +65,7 @@
 //////////////////
 
 //Remind me to resprite - Tzula
-/obj/item/clothing/suit/hooded/explorer/institutesevaarmor
+/obj/item/clothing/suit/armored/medium/institutesevaarmor
 	name = "Institute Enviro Suit Armor"
 	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
@@ -76,7 +76,7 @@
 	armor = list("melee" = 50, "bullet" = 55, "laser" = 65, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 95, "wound" = 35)
 	resistance_flags = FIRE_PROOF 
 
-/obj/item/clothing/head/hooded/explorer/institutesevahood
+/obj/item/clothing/head/armored/medium/institutesevahood
 	name = "Institute Enviro Suit Hood"
 	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
