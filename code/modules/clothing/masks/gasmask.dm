@@ -19,6 +19,14 @@
 	item_state = "gasmask_enclave"
 	flash_protect = 2
 
+/obj/item/clothing/mask/gas/seva
+    name = "SEVA Mask"
+    desc = "A face-covering plate that can be connected to an air supply. Intended for use with the SEVA Suit."
+    icon_state = "seva"
+    item_state = "seva"
+    resistance_flags = FIRE_PROOF
+	flash_protect = 2
+
 /obj/item/clothing/mask/gas/glass
 	name = "glass gas mask"
 	desc = "A face-covering mask that can be connected to an air supply. This one doesn't obscure your face however." //More accurate

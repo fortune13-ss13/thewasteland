@@ -65,33 +65,30 @@
 //////////////////
 
 //Remind me to resprite - Tzula
-/obj/item/clothing/suit/armored/medium/instituteseva
+ /obj/item/clothing/suit/armored/medium/institutesevaarmor
 	name = "SEVA Suit"
-	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
+	desc = "This bodysuit, intended for conducting research in the wasteland, combines a closed-cycle respiratory module and an external isolation coating, resulting in excellent protection from anowasteland dangers. Due to poor protection from physical impact, the suit is not a good defense against bullet and fragmentation damage but the Institute has fixed that."
 	icon_state = "seva"
 	item_state = "seva"
 	w_class = WEIGHT_CLASS_BULKY
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	hoodtype = /obj/item/clothing/suit/armored/medium/institutesevahelmet
-	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
-	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
+	armor = list("melee" = 55, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 15, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100, "wound" = 60)
+	resistance_flags = FIRE_PROOF  
 
-/obj/item/clothing/suit/armored/medium/institutesevahelmet
-	name = "SEVA Hood"
-	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
+/obj/item/clothing/suit/armored/medium/wastelandseva
+	name = "SEVA Suit"
+	desc = "This bodysuit, intended for conducting research in the wasteland, combines a closed-cycle respiratory module and an external isolation coating, resulting in excellent protection from anowasteland dangers. Wasteland technicians have improved on the design yet it's nothing like Institute environmental suits."
 	icon_state = "seva"
 	item_state = "seva"
+	w_class = WEIGHT_CLASS_BULKY
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
-	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 35, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 75, "acid" = 65, "wound" = 45)
+	resistance_flags = FIRE_PROOF  
 
-/obj/item/clothing/mask/gas/seva
-	name = "SEVA Mask"
-	desc = "A face-covering plate that can be connected to an air supply. Intended for use with the SEVA Suit."
-	icon_state = "seva"
-	item_state = "seva"
-	resistance_flags = FIRE_PROOF
+
+///
 
 //recipe any combat armor + duster
 /obj/item/clothing/suit/armored/medium/combat/duster
