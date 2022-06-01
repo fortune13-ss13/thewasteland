@@ -143,7 +143,7 @@
 //institute
 //Remind me to resprite it!
 /obj/item/clothing/head/helmet/f13/institutesevahood
-    name = "SEVA Hood"
+    name = "institute environmental hood"
     desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
     icon_state = "seva"
     item_state = "seva"
@@ -152,7 +152,7 @@
     resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
 /obj/item/clothing/head/helmet/f13/wastelandsevahood
-    name = "SEVA Hood"
+    name = "environmental hood"
     desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
     icon_state = "seva"
     item_state = "seva"

@@ -375,6 +375,18 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
 
+/obj/item/radio/headset/headset_institute
+	name = "anomalous radio headset"
+	desc = "This is used by the Institute.\nTo access the enclave channel, use :x. Protects ears from flashbangs."
+	icon_state = "syndie_headset"
+	linked_faction = FACTION_INSTITUTE
+	factionized = TRUE
+	keyslot = new /obj/item/encryptionkey/headset_enclave
+
+/obj/item/radio/headset/headset_enclave/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
+
 /obj/item/radio/headset/headset_enclave/command
 	command = TRUE
 

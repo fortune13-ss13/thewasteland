@@ -923,9 +923,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/followersscientist
 	name = "Followers Scientist"
 
-
 //institute 
-
 /obj/effect/landmark/start/f13/institutecourser
 	name = "Institute Courser"
 	icon_state = "Security Officer"

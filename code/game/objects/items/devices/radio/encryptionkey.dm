@@ -177,6 +177,12 @@
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_ENCLAVE = 1)
 
+	/obj/item/encryptionkey/headset_institute
+	name = "institute radio encryption key"
+	desc = "An encryption key for a radio headset.  To access the Enclave channel, use :x."
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_INSTITUTE = 1)
+
 /obj/item/encryptionkey/headset_town
 	name = "Town radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the Town channel, use :f."

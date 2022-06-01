@@ -11,6 +11,7 @@
 #define FACTION_TRIBE "Tribe"
 #define FACTION_VAULT "Vault"
 #define FACTION_FOLLOWERS "Followers"
+#define FACTION_INSTITUTE "Institute"
 
 #define ENGSEC			(1<<0)
 
@@ -190,6 +191,11 @@
 #define F13FOLLOWERVOLUNTEER	(1<<3)
 #define F13PROFESSOR	(1<<4)
 
+#define INSTITUTE (0<<5)
+
+#define F13INSTITUTESCIENTIST	(0<<2)
+#define F13INSTITUTECOURSER		(0<<2)
+#define F13INSTITUTEESCAPEDSYNTH	(0<<1)
 
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1
