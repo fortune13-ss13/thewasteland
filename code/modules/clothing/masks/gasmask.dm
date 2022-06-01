@@ -25,7 +25,6 @@
     icon_state = "seva"
     item_state = "seva"
     resistance_flags = FIRE_PROOF
-	flash_protect = 2
 
 /obj/item/clothing/mask/gas/glass
 	name = "glass gas mask"

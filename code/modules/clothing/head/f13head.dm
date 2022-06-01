@@ -151,7 +151,7 @@
     armor = list("melee" = 55, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 15, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100, "wound" = 60)
     resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
-/obj/item/clothing/head/helmet/f13/institutesevahood
+/obj/item/clothing/head/helmet/f13/wastelandsevahood
     name = "SEVA Hood"
     desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
     icon_state = "seva"
