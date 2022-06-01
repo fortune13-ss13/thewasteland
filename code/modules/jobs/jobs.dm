@@ -87,7 +87,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Senior Scribe",
 "Scribe",
 "BoS Off-Duty",
-
 "Legion Centurion",
 "Legion Explorer",
 "Legion Slavemaster",
@@ -99,7 +98,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Scout",
 "Legion Auxilia",
 "Legion Slave",
-
 "Mayor",
 "Chief of Police",
 "Officer",
@@ -108,7 +106,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Prospector",
 "Detective",
 "Shop Assistant",
-
 "Enclave Captain",
 "Enclave Lieutenant",
 "Enclave Gunnery Sergeant",
@@ -118,17 +115,14 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Enclave Scientist",
 "Enclave Private",
 "Enclave Bunker Duty",
-
 "Chief",
 "Shaman",
 "Head Hunter",
 "Druid",
 "Hunter",
-
 "Followers Administrator",
 "Followers Doctor",
 "Followers Guard",
-
 "Cyborg",
 "Overseer",
 "Chief of Security",
