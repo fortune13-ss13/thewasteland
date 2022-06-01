@@ -924,16 +924,16 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Followers Scientist"
 
 
-//Institute 
+//institute 
 
-/obj/effect/landmark/start/security_officer
+/obj/effect/landmark/start/f13/institutecourser
 	name = "Institute Courser"
 	icon_state = "Security Officer"
 
-/obj/effect/landmark/start/f13/followersdoctor
+/obj/effect/landmark/start/f13/instituteresearcher
 	name = "Institute Researcher"
 	icon_state = "Medical Doctor"
 
-/obj/effect/landmark/start/f13/detective
+/obj/effect/landmark/start/f13/escapedsynth
 	name = "Escaped Synth"
 	icon_state = "Detective"

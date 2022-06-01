@@ -60,36 +60,6 @@
 	item_state = "combat_armor"
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
 
-//////////////////
-///// Institute /////
-//////////////////
-
-//Remind me to resprite - Tzula
- /obj/item/clothing/suit/armored/medium/institutesevaarmor
-	name = "SEVA Suit"
-	desc = "This bodysuit, intended for conducting research in the wasteland, combines a closed-cycle respiratory module and an external isolation coating, resulting in excellent protection from anowasteland dangers. Due to poor protection from physical impact, the suit is not a good defense against bullet and fragmentation damage but the Institute has fixed that."
-	icon_state = "seva"
-	item_state = "seva"
-	w_class = WEIGHT_CLASS_BULKY
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list("melee" = 55, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 15, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100, "wound" = 60)
-	resistance_flags = FIRE_PROOF  
-
-/obj/item/clothing/suit/armored/medium/wastelandseva
-	name = "SEVA Suit"
-	desc = "This bodysuit, intended for conducting research in the wasteland, combines a closed-cycle respiratory module and an external isolation coating, resulting in excellent protection from anowasteland dangers. Wasteland technicians have improved on the design yet it's nothing like Institute environmental suits."
-	icon_state = "seva"
-	item_state = "seva"
-	w_class = WEIGHT_CLASS_BULKY
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 35, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 75, "acid" = 65, "wound" = 45)
-	resistance_flags = FIRE_PROOF  
-
-
-///
-
 //recipe any combat armor + duster
 /obj/item/clothing/suit/armored/medium/combat/duster
 	name = "combat duster"

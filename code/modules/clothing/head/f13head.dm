@@ -140,7 +140,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 
-//Insitute
+//institute
 //Remind me to resprite it!
 /obj/item/clothing/head/helmet/f13/institutesevahood
     name = "SEVA Hood"

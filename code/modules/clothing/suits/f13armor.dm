@@ -147,6 +147,28 @@
 	slowdown = 0.06
 	strip_delay = 5
 
+//////////////////
+///// Institute /////
+//////////////////
+
+//Remind me to resprite - Tzula
+/obj/item/clothing/suit/armor/f13/protectivebodysuitseva
+	name = "protective bodysuit"
+	desc = "This bodysuit, intended for conducting research in the wasteland, combines a closed-cycle respiratory module and an external isolation coating, resulting in excellent protection from anowasteland dangers. Wasteland technicians have improved on the design yet it's nothing like Institute environmental suits."
+	icon_state = "seva"
+	item_state = "seva"
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 35, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 75, "acid" = 65, "wound" = 45)
+	resistance_flags = FIRE_PROOF  
+
+/obj/item/clothing/suit/armor/f13/protectivebodysuitseva/institute
+	name = "protective bodysuit"
+	desc = "This bodysuit, intended for conducting research in the wasteland, combines a closed-cycle respiratory module and an external isolation coating, resulting in excellent protection from anowasteland dangers. Wasteland technicians have improved on the design yet it's nothing like Institute environmental suits."
+	icon_state = "seva"
+	item_state = "seva"
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 35, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 75, "acid" = 65, "wound" = 45)
+
 //Combat armor (Faction specific is on f13factionarmor.dm)
 /obj/item/clothing/suit/armor/f13/combat
 	name = "combat armor"
