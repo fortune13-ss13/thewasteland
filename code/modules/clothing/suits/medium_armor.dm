@@ -65,28 +65,29 @@
 //////////////////
 
 //Remind me to resprite - Tzula
-/obj/item/clothing/suit/armored/medium/institutesevaarmor
-	name = "Institute Enviro Suit Armor"
+/obj/item/clothing/suit/armored/medium/instituteseva
+	name = "SEVA Suit"
 	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
 	item_state = "seva"
+	w_class = WEIGHT_CLASS_BULKY
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	hoodtype = /obj/item/clothing/head/hooded/explorer/seva
-	armor = list("melee" = 50, "bullet" = 55, "laser" = 65, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 95, "wound" = 35)
-	resistance_flags = FIRE_PROOF 
+	hoodtype = /obj/item/clothing/suit/armored/medium/institutesevahood
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
-/obj/item/clothing/head/armored/medium/institutesevahood
-	name = "Institute Enviro Suit Hood"
+/obj/item/clothing/suit/armored/medium/institutesevahood
+	name = "SEVA Hood"
 	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
 	item_state = "seva"
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	armor = list("melee" = 50, "bullet" = 55, "laser" = 65, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 95, "wound" = 35)
-	resistance_flags = FIRE_PROOF 
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
-/obj/item/clothing/mask/gas/envirosevagasmask
-	name = "Institute Enviro Gas Mask"
+/obj/item/clothing/mask/gas/seva
+	name = "SEVA Mask"
 	desc = "A face-covering plate that can be connected to an air supply. Intended for use with the SEVA Suit."
 	icon_state = "seva"
 	item_state = "seva"
