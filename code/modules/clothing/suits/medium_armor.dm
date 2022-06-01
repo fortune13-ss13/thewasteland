@@ -73,11 +73,11 @@
 	w_class = WEIGHT_CLASS_BULKY
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	hoodtype = /obj/item/clothing/suit/armored/medium/institutesevahood
+	hoodtype = /obj/item/clothing/suit/armored/medium/institutesevahelmet
 	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
 	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
-/obj/item/clothing/suit/armored/medium/institutesevahood
+/obj/item/clothing/suit/armored/medium/institutesevahelmet
 	name = "SEVA Hood"
 	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
