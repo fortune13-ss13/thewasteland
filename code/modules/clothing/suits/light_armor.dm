@@ -50,13 +50,20 @@
 	item_state = "duster_brahmin"
 	armor = list("melee" = 14, "bullet" = 14, "laser" = 25, "energy" = 20, "bomb" = 10, "bio" = 5, "rad" = 0, "fire" = 25, "acid" = 5)
 
+/obj/item/clothing/suit/armored/light/duster/Courserduster
+	name = "courser duster"
+	desc = "Heavily plated uniform bearing an unknown insignia. Plates used to reinforce combat armor appear to be applied."
+	icon_state = "duster_lawman"
+	item_state = "duster_lawman"
+	armor = list("melee" = 60, "bullet" = 75, "laser" = 60, "energy" = 50, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 0, "wound" = 60)
+
+
 /obj/item/clothing/suit/armored/light/duster/desperado
 	name = "desperado's duster"
 	desc = "A dyed brahmin hide duster, with a thick waxy surface, making it less vulnerable to lasers and energy based weapons."
 	icon_state = "duster_lawman"
 	item_state = "duster_lawman"
 	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
-
 
 
 //////////////////

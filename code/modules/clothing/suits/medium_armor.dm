@@ -60,6 +60,38 @@
 	item_state = "combat_armor"
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
 
+//////////////////
+///// Institute /////
+//////////////////
+
+//Remind me to resprite - Tzula
+/obj/item/clothing/suit/hooded/explorer/institutesevaarmor
+	name = "Institute Enviro Suit Armor"
+	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
+	icon_state = "seva"
+	item_state = "seva"
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	hoodtype = /obj/item/clothing/head/hooded/explorer/seva
+	armor = list("melee" = 50, "bullet" = 55, "laser" = 65, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 95, "wound" = 35)
+	resistance_flags = FIRE_PROOF 
+
+/obj/item/clothing/head/hooded/explorer/institutesevahood
+	name = "Institute Enviro Suit Hood"
+	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
+	icon_state = "seva"
+	item_state = "seva"
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	armor = list("melee" = 50, "bullet" = 55, "laser" = 65, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 95, "wound" = 35)
+	resistance_flags = FIRE_PROOF 
+
+/obj/item/clothing/mask/gas/envirosevagasmask
+	name = "Institute Enviro Gas Mask"
+	desc = "A face-covering plate that can be connected to an air supply. Intended for use with the SEVA Suit."
+	icon_state = "seva"
+	item_state = "seva"
+	resistance_flags = FIRE_PROOF
+
 //recipe any combat armor + duster
 /obj/item/clothing/suit/armored/medium/combat/duster
 	name = "combat duster"
