@@ -179,7 +179,7 @@
 
 	/obj/item/encryptionkey/headset_institute
 	name = "institute radio encryption key"
-	desc = "An encryption key for a radio headset.  To access the Enclave channel, use :x."
+	desc = "An encryption key for a radio headset.  To access the Insitute channel, use :x."
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_INSTITUTE = 1)
 

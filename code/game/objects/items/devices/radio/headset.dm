@@ -20,7 +20,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_DEN = RADIO_TOKEN_DEN,
 	RADIO_CHANNEL_LEGION = RADIO_TOKEN_LEGION,
 	RADIO_CHANNEL_RANGER = RADIO_TOKEN_RANGER,
-	RADIO_CHANNEL_KHANS = RADIO_TOKEN_KHANS
+	RADIO_CHANNEL_KHANS = RADIO_TOKEN_KHANS,
+	RADIO_CHANNEL_INSTITUTE = RADIO_TOKEN_INSTITUTE
 ))
 
 /obj/item/radio/headset
@@ -375,20 +376,20 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
 
-/obj/item/radio/headset/headset_institute
-	name = "anomalous radio headset"
-	desc = "This is used by the Institute.\nTo access the enclave channel, use :x. Protects ears from flashbangs."
-	icon_state = "syndie_headset"
-	linked_faction = FACTION_INSTITUTE
-	factionized = TRUE
-	keyslot = new /obj/item/encryptionkey/headset_enclave
-
 /obj/item/radio/headset/headset_enclave/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
 
 /obj/item/radio/headset/headset_enclave/command
 	command = TRUE
+
+/obj/item/radio/headset/headset_institute
+	name = "anomalous radio headset"
+	desc = "This is used by the Institute.\nTo access the enclave channel, use :x. Protects ears from flashbangs."
+	icon_state = "syndie_headset"
+	linked_faction = FACTION_INSTITUTE
+	factionized = TRUE
+	keyslot = new /obj/item/encryptionkey/headset_institute
 
 /obj/item/radio/headset/headset_khans
 	name = "khan radio headset"

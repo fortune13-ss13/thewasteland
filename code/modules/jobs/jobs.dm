@@ -134,6 +134,10 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Vault-tec Scientist",
 "Vault-tec Security",
 "Vault-tec Engineer",
+
+"Institute Researcher",
+"Institute Courser",
+"Escaped Synth",
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
