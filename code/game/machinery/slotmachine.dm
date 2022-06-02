@@ -105,7 +105,7 @@
 		dat = reeltext
 
 	else
-		dat = {"[SPIN_PRICE] credits to play!<BR>
+		dat = {"[SPIN_PRICE] caps to play!<BR>
 		<B>Prize Money Available:</B> [money] (jackpot payout is ALWAYS 100%!)<BR>
 		<B>Caps Remaining:</B> [balance]<BR>
 		[plays] players have tried their luck today, and [jackpots] have won a jackpot!<BR>
