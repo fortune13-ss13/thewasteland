@@ -565,7 +565,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
 		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
 		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
-		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
+		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15),
+		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
+		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
+		new /datum/data/wasteland_equipment("C4",							/obj/item/grenade/plastic/c4, 										250)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Jet",							/obj/item/reagent_containers/pill/patch/jet,						30),
@@ -586,7 +589,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
 		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
 		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
-		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
+		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15),
+		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
+		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
+		new /datum/data/wasteland_equipment("C4",							/obj/item/grenade/plastic/c4, 										250),
 		)
 
 /obj/machinery/mineral/wasteland_vendor/denvendor
@@ -693,19 +699,19 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							70),
 		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					150),
 		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						170),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmith_one, 				100),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				200),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				300),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				400),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_one, 				100),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_two,				200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_three, 				300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_four, 				400),
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							40),
 		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/beretta,					60),
 		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						70),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmith_one, 				100),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				200),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				300),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				400),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_one, 				100),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_two,				200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_three, 				300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_four, 				400),
 		)
 
 /obj/machinery/mineral/wasteland_vendor/ammo
