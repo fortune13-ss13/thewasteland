@@ -1,5 +1,5 @@
 /datum/job/institute //do NOT use this for anything, it's just to store faction datums.
-	department_flag = Institute
+	department_flag = INSTITUTE
 	selection_color = "#1f7aa5"
 	faction = FACTION_INSTITUTE
 
