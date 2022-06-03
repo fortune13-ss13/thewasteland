@@ -208,6 +208,12 @@
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_KHANS = 1)
 
+/obj/item/encryptionkey/headset_institute
+	name = "anomalous radio encryption key"
+	desc = "An encryption key for an anomalous headset. To access the anomalous headsets channel, use :x"
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_INSTITUTE = 1)
+
 /obj/item/encryptionkey/ai //ported from NT, this goes 'inside' the AI.
 	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_MEDICAL = 1, RADIO_CHANNEL_SUPPLY = 1, RADIO_CHANNEL_SERVICE = 1, RADIO_CHANNEL_AI_PRIVATE = 1)
 

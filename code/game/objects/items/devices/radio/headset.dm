@@ -385,6 +385,13 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_khans
 
+/obj/item/radio/headset/headset_institute
+	name = "anomalous headset."
+	desc = "This is used by a mysterious organization. \nTo access the anomalous headsets channel, use :x"
+	icon_state = "syndie_headset" 
+	item_state = "headset_alt"
+	keyslot = new /obj/item/encryptionkey/headset_institute
+
 /obj/item/radio/headset/headset_town
 	name = "town radio headset"
 	desc = "This is used by the town.\nTo access the town channel, use :f."

@@ -77,6 +77,10 @@
 #define RADIO_KEY_KHANS "a"
 #define RADIO_TOKEN_KHANS ":a"
 
+#define RADIO_CHANNEL_INSTITUTE "Institute"
+#define RADIO_KEY_INSTITUTE "x"
+#define RADIO_TOKEN_INSTITUTE ":x"
+
 #define RADIO_CHANNEL_DEN "Den"
 #define RADIO_KEY_DEN "j"
 #define RADIO_TOKEN_DEN ":j"
@@ -107,6 +111,7 @@
 #define FREQ_RANGER 1373 //Ranger
 #define FREQ_DEN 1375 //Den
 #define FREQ_KHANS 1376 //Khans
+#define FREQ_INSTITUTE 1377 // Insitute
 
 #define FREQ_HOLOGRID_SOLUTION 1433
 #define FREQ_STATUS_DISPLAYS 1435

@@ -134,6 +134,12 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Vault-tec Scientist",
 "Vault-tec Security",
 "Vault-tec Engineer",
+
+"Institute Researcher",
+"Institute Courser",
+"Institute Courser Leader",
+"Institute Soldier",
+"Escaped Synth",
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
@@ -279,6 +285,14 @@ GLOBAL_LIST_INIT(followers_positions, list(
 	"Followers Scientist",
 ))
 
+GLOBAL_LIST_INIT(institute_positions, list(
+	"Institute Researcher",
+	"Institute Courser",
+	"Institute Courser Leader",
+	"Institute Soldier",
+	"Escaped Synth",
+))
+
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
@@ -290,6 +304,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#ccffcc"),
+	EXP_TYPE_INSTITUTE = list("jobs" = institute_positions, "color" = "#ccceecad"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -315,6 +330,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_TRIBAL = list("titles" = tribal_positions),
 	EXP_TYPE_FOLLOWERS = list("titles" = followers_positions),
 	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
+	EXP_TYPE_INSTITUTE = list("titles" = institute_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
