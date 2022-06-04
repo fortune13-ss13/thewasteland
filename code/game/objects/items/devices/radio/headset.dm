@@ -390,6 +390,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "This is used by a mysterious organization. \nTo access the anomalous headsets channel, use :x"
 	icon_state = "syndie_headset" 
 	item_state = "headset_alt"
+	linked_faction = FACTION_INSTITUTE
+	factionized = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_institute
 
 /obj/item/radio/headset/headset_town
