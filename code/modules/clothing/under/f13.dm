@@ -1872,4 +1872,3 @@
 	desc = "A enclave navarro survivors uniform."
 	icon_state = "enclave_exile"
 	item_state = "enclave_exile"
-	

@@ -1340,4 +1340,3 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	desc = "A painted set of T51b power armor."
 	icon_state = "altumt51"
 	item_state = "altumt51"
-	
