@@ -549,7 +549,7 @@
 		/datum/reagent/consumable/coco,
 		/datum/reagent/consumable/lemonade,
 		/datum/reagent/consumable/buzz_fuzz,
-		/datum/reagent/consumable/menthol,
+		/datum/reagent/consumable/menthol
 	)
 	upgrade_reagents3 = list(
 		/datum/reagent/drug/mushroomhallucinogen,
