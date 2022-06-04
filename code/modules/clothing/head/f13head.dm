@@ -906,11 +906,14 @@
 
 /// Wasteland Update
 
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/altumt51helm
+/obj/item/clothing/head/helmet/f13/power_armor/altumt51helm
 	name = "Painted T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood, looks a little Russian."
 	icon_state = "altumt51helm"
 	item_state = "altumt51helm"
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 27, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 70)
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 
 /obj/item/clothing/head/helmet/f13/combat/enclave_sevahead
 	name = "Enclave screen helmet"
