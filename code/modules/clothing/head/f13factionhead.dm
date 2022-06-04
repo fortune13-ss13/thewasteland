@@ -1378,3 +1378,4 @@ obj/item/clothing/head/f13/army/beret
 	desc = "A standard issue drill hat."
 	icon_state = "drillhat"
 	item_state = "drillhat"
+	
