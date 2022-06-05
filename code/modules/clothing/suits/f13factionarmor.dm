@@ -662,7 +662,7 @@
 	slowdown = 0.13
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/outcast
-	name = "brotherhood armor" //unused?
+	name = "brotherhood armor"
 	desc = "A superior combat armor set made by the Brotherhood of Steel, bearing a series of red markings."
 	icon_state = "brotherhood_armor_outcast"
 	item_state = "brotherhood_armor_outcast"
