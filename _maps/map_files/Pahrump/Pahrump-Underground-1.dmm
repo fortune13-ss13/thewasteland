@@ -3348,6 +3348,7 @@
 	dir = 4;
 	pixel_y = -16
 	},
+/obj/structure/rack/shelf_metal,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "neutralrustyfull"
 	},
@@ -4704,11 +4705,11 @@
 	},
 /area/f13/tunnel)
 "cxY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/rack/shelf_metal,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
+/obj/machinery/vending/boozeomat{
+	density = 0;
+	pixel_y = -34
 	},
+/turf/open/floor/carpet/green,
 /area/f13/den)
 "cyb" = (
 /obj/structure/bed/mattress{
@@ -5802,14 +5803,12 @@
 	},
 /area/f13/den)
 "daL" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/obj/structure/sign/departments/medbay{
-	pixel_x = 33
-	},
+/obj/structure/rack/shelf_metal,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	color = "#e4e4e4"
+	icon_state = "neutralrustyfull"
 	},
 /area/f13/den)
 "dba" = (
@@ -11172,12 +11171,11 @@
 /turf/open/floor/wood/f13/oakbroken3,
 /area/f13/building)
 "fOg" = (
-/obj/machinery/vending/boozeomat{
-	density = 0;
-	pixel_y = -34
-	},
 /obj/machinery/light,
-/turf/open/floor/carpet/green,
+/obj/structure/rack/shelf_metal,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
 /area/f13/den)
 "fOp" = (
 /obj/structure/chair/booth{
@@ -12514,7 +12512,15 @@
 /turf/open/floor/carpet/green,
 /area/f13/den)
 "gBM" = (
-/obj/machinery/autolathe/ammo/unlocked_basic,
+/obj/structure/table/reinforced,
+/obj/structure/barricade/bars{
+	max_integrity = 800;
+	name = "strong metal bars";
+	obj_integrity = 800
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "denstoreshutters"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "neutralrustyfull"
 	},
@@ -20946,7 +20952,7 @@
 /area/f13/bunker)
 "lGH" = (
 /obj/structure/table,
-/obj/machinery/chem_dispenser/drinks{
+/obj/machinery/chem_dispenser/drinks/fullupgrade{
 	dir = 1
 	},
 /turf/open/floor/wood/f13/oak,
@@ -24023,12 +24029,12 @@
 	},
 /area/f13/caves)
 "nEK" = (
-/obj/structure/rack/shelf_metal,
-/obj/machinery/light{
-	dir = 8
+/obj/structure/chair/stool/retro/tan,
+/obj/structure/sign/departments/medbay{
+	pixel_x = 33
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
+	color = "#e4e4e4"
 	},
 /area/f13/den)
 "nEP" = (
@@ -26380,6 +26386,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/bunker)
+"paY" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/machinery/autolathe/ammo/unlocked_basic,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/den)
 "pbf" = (
 /obj/structure/disposalpipe/broken{
 	dir = 8
@@ -28093,12 +28108,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker)
 "qfj" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
-/obj/machinery/workbench/bottler,
-/obj/machinery/light,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
+	color = "#e4e4e4"
 	},
 /area/f13/den)
 "qfw" = (
@@ -31463,6 +31477,17 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
+"rTr" = (
+/obj/machinery/button/door{
+	id = "denstoreshutters";
+	name = "den store shutters";
+	pixel_x = -6;
+	pixel_y = -28
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/den)
 "rTv" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -34116,7 +34141,7 @@
 /obj/machinery/chem_master/condimaster{
 	density = 0
 	},
-/turf/open/space/basic,
+/turf/open/floor/carpet/red,
 /area/f13/den)
 "tCZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -36173,6 +36198,12 @@
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
+"uRY" = (
+/obj/machinery/workbench/bottler,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/den)
 "uRZ" = (
 /obj/structure/bed/oldalt,
 /obj/effect/decal/cleanable/dirt,
@@ -37308,11 +37339,11 @@
 /obj/structure/table{
 	pixel_x = 6
 	},
-/obj/machinery/chem_dispenser/drinks/beer{
-	dir = 1;
-	pixel_x = 7
-	},
 /obj/machinery/light/small,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+	dir = 1;
+	pixel_x = 6
+	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "vCe" = (
@@ -74930,7 +74961,7 @@ kUN
 epg
 wjM
 aLA
-gCa
+bMH
 kUN
 aqQ
 bwq
@@ -75187,7 +75218,7 @@ kUN
 kZh
 vsF
 dIq
-gCa
+cxY
 kUN
 aqQ
 aqQ
@@ -75698,10 +75729,10 @@ gCa
 gCa
 eiA
 gCa
-gCa
+dli
 fjS
 gCa
-gCa
+sMl
 kUN
 aqQ
 aqQ
@@ -75953,16 +75984,16 @@ kUN
 fpD
 gCa
 gCa
-eiA
-gCa
-gCa
-gCa
-gCa
-bMH
 kUN
+kUN
+kUN
+ohV
+kUN
+blx
+blx
 aqQ
 aqQ
-eJq
+aqQ
 aqQ
 aqQ
 aqQ
@@ -76210,17 +76241,17 @@ kUN
 gCa
 gCa
 gCa
-eiA
-gCa
-gCa
-gCa
-gCa
-fOg
 kUN
+nEP
+xzj
+uqb
+emK
+fOg
+blx
+qfj
 aqQ
-eJq
-dok
-eJq
+aqQ
+aqQ
 aqQ
 eJq
 dok
@@ -76467,20 +76498,20 @@ kUN
 gCa
 gCa
 gCa
-eiA
-gCa
-dli
-gCa
-gCa
-sMl
 kUN
+wZU
+uqb
+emK
+uqb
+paY
+blx
 aqQ
 aqQ
-daL
+egc
 aqQ
 nyG
 aqQ
-eJq
+nEK
 aqQ
 aqQ
 kUN
@@ -76725,14 +76756,14 @@ vbx
 vbx
 vbx
 kUN
-kUN
-kUN
-fyC
-kUN
-kUN
-kUN
-kUN
-kUN
+eOP
+emK
+emK
+uqb
+cqu
+blx
+gBM
+gBM
 kUN
 fjJ
 nfB
@@ -76983,13 +77014,13 @@ qTe
 qTe
 kUN
 dcd
+emK
+emK
+emK
+emK
 xzj
-emK
-emK
-gBM
-nEK
 uqb
-nEP
+emK
 kUN
 kIf
 lxs
@@ -77246,7 +77277,7 @@ emK
 uqb
 aEe
 uqb
-wZU
+uqb
 kUN
 uhB
 lxs
@@ -77498,12 +77529,12 @@ sVT
 kUN
 qjN
 emK
-emK
 ddI
+uqb
 rLJ
 uqb
-uqb
-eOP
+daL
+rTr
 kUN
 npc
 lxs
@@ -77755,12 +77786,12 @@ acI
 kUN
 hqt
 emK
-emK
 ddI
+emK
 rsi
 lwv
-uqb
-qfj
+daL
+emK
 kUN
 mNi
 lxs
@@ -78012,12 +78043,12 @@ cSN
 ltu
 eGQ
 dQG
-lwv
 tda
+emK
 cqu
 emK
-uqb
-cxY
+daL
+dQG
 kUN
 iVF
 iVF
@@ -78524,12 +78555,12 @@ acI
 uBk
 bXn
 kUN
-cqu
+uRY
 cqu
 wPZ
 cqu
 bNV
-emK
+cqu
 lwv
 uqb
 tMr
