@@ -529,7 +529,6 @@
 		/datum/reagent/consumable/grey_bull,
 		/datum/reagent/consumable/sol_dry,
 		/datum/reagent/consumable/cream_soda
-
 	)
 	upgrade_reagents = list(
 		/datum/reagent/consumable/banana,
@@ -550,7 +549,7 @@
 		/datum/reagent/consumable/coco,
 		/datum/reagent/consumable/lemonade,
 		/datum/reagent/consumable/buzz_fuzz,
-		/datum/reagent/consumable/menthol,
+		/datum/reagent/consumable/menthol
 	)
 	upgrade_reagents3 = list(
 		/datum/reagent/drug/mushroomhallucinogen,
