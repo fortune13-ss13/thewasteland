@@ -4705,11 +4705,18 @@
 	},
 /area/f13/tunnel)
 "cxY" = (
-/obj/machinery/vending/boozeomat{
-	density = 0;
-	pixel_y = -34
+/obj/structure/table/reinforced,
+/obj/structure/barricade/bars{
+	max_integrity = 800;
+	name = "strong metal bars";
+	obj_integrity = 800
 	},
-/turf/open/floor/carpet/green,
+/obj/machinery/door/poddoor/shutters{
+	id = "denstoreshutters"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
 /area/f13/den)
 "cyb" = (
 /obj/structure/bed/mattress{
@@ -5803,12 +5810,11 @@
 	},
 /area/f13/den)
 "daL" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/machinery/light/small{
+	dir = 1
 	},
-/obj/structure/rack/shelf_metal,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
+	color = "#e4e4e4"
 	},
 /area/f13/den)
 "dba" = (
@@ -12512,15 +12518,7 @@
 /turf/open/floor/carpet/green,
 /area/f13/den)
 "gBM" = (
-/obj/structure/table/reinforced,
-/obj/structure/barricade/bars{
-	max_integrity = 800;
-	name = "strong metal bars";
-	obj_integrity = 800
-	},
-/obj/machinery/door/poddoor/shutters{
-	id = "denstoreshutters"
-	},
+/obj/machinery/workbench/bottler,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "neutralrustyfull"
 	},
@@ -14181,6 +14179,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/bunker)
+"hEM" = (
+/obj/structure/chair/stool/retro/tan,
+/obj/structure/sign/departments/medbay{
+	pixel_x = 33
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/den)
 "hFt" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/simple_door/wood,
@@ -24029,13 +24036,11 @@
 	},
 /area/f13/caves)
 "nEK" = (
-/obj/structure/chair/stool/retro/tan,
-/obj/structure/sign/departments/medbay{
-	pixel_x = 33
+/obj/machinery/vending/boozeomat{
+	density = 0;
+	pixel_y = -34
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	color = "#e4e4e4"
-	},
+/turf/open/floor/carpet/green,
 /area/f13/den)
 "nEP" = (
 /obj/structure/table,
@@ -24408,6 +24413,15 @@
 /obj/structure/girder/reinforced,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
+"nPr" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/machinery/autolathe/ammo/unlocked_basic,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/den)
 "nPx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
@@ -26386,15 +26400,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/bunker)
-"paY" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/machinery/autolathe/ammo/unlocked_basic,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
-	},
-/area/f13/den)
 "pbf" = (
 /obj/structure/disposalpipe/broken{
 	dir = 8
@@ -28108,11 +28113,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker)
 "qfj" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/machinery/button/door{
+	id = "denstoreshutters";
+	name = "den store shutters";
+	pixel_x = -6;
+	pixel_y = -28
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	color = "#e4e4e4"
+	icon_state = "neutralrustyfull"
 	},
 /area/f13/den)
 "qfw" = (
@@ -31477,17 +31485,6 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
-"rTr" = (
-/obj/machinery/button/door{
-	id = "denstoreshutters";
-	name = "den store shutters";
-	pixel_x = -6;
-	pixel_y = -28
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
-	},
-/area/f13/den)
 "rTv" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -36198,12 +36195,6 @@
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
-"uRY" = (
-/obj/machinery/workbench/bottler,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
-	},
-/area/f13/den)
 "uRZ" = (
 /obj/structure/bed/oldalt,
 /obj/effect/decal/cleanable/dirt,
@@ -39149,6 +39140,15 @@
 /obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
+"wGH" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/structure/rack/shelf_metal,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/den)
 "wGU" = (
 /obj/structure/bookcase/manuals/engineering,
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
@@ -75218,7 +75218,7 @@ kUN
 kZh
 vsF
 dIq
-cxY
+nEK
 kUN
 aqQ
 aqQ
@@ -76248,7 +76248,7 @@ uqb
 emK
 fOg
 blx
-qfj
+daL
 aqQ
 aqQ
 aqQ
@@ -76503,7 +76503,7 @@ wZU
 uqb
 emK
 uqb
-paY
+nPr
 blx
 aqQ
 aqQ
@@ -76511,7 +76511,7 @@ egc
 aqQ
 nyG
 aqQ
-nEK
+hEM
 aqQ
 aqQ
 kUN
@@ -76762,8 +76762,8 @@ emK
 uqb
 cqu
 blx
-gBM
-gBM
+cxY
+cxY
 kUN
 fjJ
 nfB
@@ -77533,8 +77533,8 @@ ddI
 uqb
 rLJ
 uqb
-daL
-rTr
+wGH
+qfj
 kUN
 npc
 lxs
@@ -77790,7 +77790,7 @@ ddI
 emK
 rsi
 lwv
-daL
+wGH
 emK
 kUN
 mNi
@@ -78047,7 +78047,7 @@ tda
 emK
 cqu
 emK
-daL
+wGH
 dQG
 kUN
 iVF
@@ -78555,7 +78555,7 @@ acI
 uBk
 bXn
 kUN
-uRY
+gBM
 cqu
 wPZ
 cqu
