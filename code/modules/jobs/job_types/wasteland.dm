@@ -360,6 +360,8 @@ Raider
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
+		/obj/item/pda = 1,
+		/obj/item/radio/headset = 1,
 		/obj/item/storage/belt/holster/legholster = 1
 		)
 
