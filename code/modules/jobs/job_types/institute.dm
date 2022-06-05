@@ -33,7 +33,7 @@
 	id = /obj/item/card/id/dogtag/enclave/noncombatant
 	uniform = /obj/item/clothing/under/f13/enclave/science
 
-/datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/institute/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -45,7 +45,7 @@
 ///////////////////////
 
 //Courser - SPAWN THIS FOR EVENT STUFF ONLY!!!
-/datum/job/institute/courser/courserleader
+/datum/job/institute/courserleader
 	title = "Courser Leader"
 	flag = F13COURSERLEADER
 	total_positions = 0
@@ -55,7 +55,7 @@
 	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
 	supervisors = "Enclave Department of the Army."
 	outfit = /datum/outfit/job/institute/courser/courserleader
-	exp_type = EXP_TYPE_ENCLAVE
+	exp_type = EXP_TYPE_INSTITUTE
 	exp_requirements = 3000
 
 /datum/outfit/job/institute/courser/courserleader
@@ -97,7 +97,7 @@
 	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
 	supervisors = "Enclave Department of the Army."
 	outfit = /datum/outfit/job/institute/courser/fieldcourser
-	exp_type = EXP_TYPE_ENCLAVE
+	exp_type = EXP_TYPE_INSTITUTE
 	exp_requirements = 3000
 
 /datum/outfit/job/institute/courser/fieldcourser
@@ -118,7 +118,7 @@
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
-/datum/outfit/job/enclave/peacekeeper/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/institute/courser/fieldcourser/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -173,7 +173,7 @@
 //institute Scientist
 //Courser - SPAWN THIS FOR EVENT STUFF ONLY!!!
 /datum/job/institute/institutesci
-	title = "Institute Courser"
+	title = "Institute Scientist"
 	flag = F13INSTITUTESCI
 	total_positions = 0
 	spawn_positions = 0
@@ -181,13 +181,13 @@
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS, ACCESS_ENCLAVE_COMMAND)
 	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
 	supervisors = "Enclave Department of the Army."
-	outfit = /datum/outfit/job/institute/courser/fieldcourser
-	exp_type = EXP_TYPE_ENCLAVE
+	outfit = /datum/outfit/job/institute/noncombat/institutesci
+	exp_type = EXP_TYPE_INSTITUTE
 	exp_requirements = 3000
 
-/datum/outfit/job/institute/courser/fieldcourser
-	name = "Institute Courser"
-	jobtype = /datum/outfit/job/institute/courser/fieldcourser
+/datum/outfit/job/institute/noncombat/institutesci
+	name = "Institute Scientist"
+	jobtype = /datum/outfit/job/institute/noncombat/institutesci
 	head = /obj/item/clothing/head/helmet/f13/enclave/officer
 	uniform = /obj/item/clothing/under/f13/enclave/officer
 	suit = /obj/item/clothing/suit/armor/f13/enclavetrenchcoat
@@ -203,7 +203,7 @@
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
-/datum/outfit/job/enclave/peacekeeper/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/institute/noncombat/institutesci/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -231,20 +231,20 @@
 
 //Escaped Synth - SPAWN THIS FOR EVENT STUFF ONLY!!!
 /datum/job/institute/escapedsynth
-	title = "Institute Courser"
+	title = "Escaped Synth"
 	flag = F13ESCAPEDSYNTH
 	total_positions = 0
 	spawn_positions = 0
 	req_admin_notify = 1
 	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
 	supervisors = "Enclave Department of the Army."
-	outfit = /datum/outfit/job/institute/courser/fieldcourser
+	outfit = /datum/outfit/job/institute/noncombat/escapedsynth
 	exp_type = EXP_TYPE_ENCLAVE
 	exp_requirements = 3000
 
-/datum/outfit/job/institute/courser/fieldcourser
-	name = "Institute Courser"
-	jobtype = /datum/outfit/job/institute/courser/fieldcourser
+/datum/outfit/job/institute/noncombat/escapedsynth
+	name = "Escaped Synth"
+	jobtype = /datum/outfit/job/institute/noncombat/escapedsynth
 	head = /obj/item/clothing/head/helmet/f13/enclave/officer
 	uniform = /obj/item/clothing/under/f13/enclave/officer
 	suit = /obj/item/clothing/suit/armor/f13/enclavetrenchcoat
@@ -260,7 +260,7 @@
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
-/datum/outfit/job/enclave/peacekeeper/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/institute/noncombat/escapedsynth/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
