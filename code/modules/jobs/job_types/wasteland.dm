@@ -263,9 +263,6 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	backpack_contents = list(
 		/obj/item/kitchen/knife/butcher = 1,
-		/obj/item/grenade/homemade/firebomb = 4,
-		/obj/item/bottlecap_mine = 1,
-		/obj/item/grenade/homemade/coffeepotbomb = 4,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
 		/obj/item/book/granter/trait/explosives = 1
 		)
@@ -362,7 +359,8 @@ Raider
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
-		/obj/item/grenade/f13/frag = 2
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
+		/obj/item/storage/belt/holster/legholster = 1
 		)
 
 /datum/outfit/loadout/raider_sheriff
@@ -401,7 +399,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation = 2
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
 		)
 
 /datum/outfit/loadout/raider_tribal
@@ -417,7 +415,8 @@ Raider
 		/obj/item/clothing/mask/cigarette/pipe = 1,
 		/obj/item/melee/onehanded/knife/bone = 1,
 		/obj/item/radio/tribal = 1,
-		/obj/item/book/granter/trait/bigleagues = 1
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/reagent_containers/pill/patch/bitterdrink = 5
 		)
 
 /datum/outfit/loadout/raider_powder
