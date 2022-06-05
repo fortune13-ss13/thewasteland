@@ -127,7 +127,7 @@ Raider
 	total_positions = -1
 	spawn_positions = -1
 	description = "You are a member of one of the infamous raider gangs of the wastes. Pillaging, robbing, murdering wasters are a recurrent chore for your people. Depending on their affiliation, though, raiders may vary from an illiterate chemhead, to a straight edge tribal, or even a member of a group with strong connections and an unique culture based on raiding, and all of this should be considered when defining your character. Form loose connections with the rest of the underground, but be sure not to step on their toes too much."
-	supervisors = "Your desire to make things interesting and fun. DO NOT UNDER ANY CIRCUMSTANCE play this as wastelander+."
+	supervisors = "your desire to make things interesting and fun. DO NOT UNDER ANY CIRCUMSTANCE play this as wastelander+."
 	selection_color = "#ff4747"
 	exp_requirements = 0
 	exp_type = EXP_TYPE_FALLOUT
