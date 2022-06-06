@@ -18,6 +18,7 @@
 	var/metal = 0
 	var/lifetime = 40
 	var/reagent_divisor = 7
+	var/slippery = TRUE
 	var/static/list/blacklisted_turfs = typecacheof(list(
 	/turf/open/space/transit,
 	/turf/open/chasm,
@@ -28,6 +29,10 @@
 	lifetime = 20 //doesn't last as long as normal foam
 	amount = 0 //no spread
 	var/absorbed_plasma = 0
+
+/obj/effect/particle_effect/foam/clean
+	name = "cleaning foam"
+	slippery = FALSE
 
 /obj/effect/particle_effect/foam/firefighting/MakeSlippery()
 	return
@@ -92,6 +97,8 @@
 
 /obj/effect/particle_effect/foam/Initialize()
 	. = ..()
+	if(slippery)
+		MakeSlippery()
 	create_reagents(1000, NONE, NO_REAGENTS_VALUE) //limited by the size of the reagent holder anyway.
 	START_PROCESSING(SSfastprocess, src)
 	playsound(src, 'sound/effects/bubbles2.ogg', 80, 1, -3)
@@ -206,6 +213,8 @@
 	effect_type = /obj/effect/particle_effect/foam
 	var/metal = 0
 
+/datum/effect_system/foam_spread/clean
+	effect_type = /obj/effect/particle_effect/foam/clean
 
 /datum/effect_system/foam_spread/metal
 	effect_type = /obj/effect/particle_effect/foam/metal
