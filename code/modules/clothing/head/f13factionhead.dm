@@ -206,7 +206,6 @@
 	desc = "A hood with an Enclave marking inside it."
 	icon_state = "enclave_hood"
 	item_color = "enclave_hood"
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
 
 /obj/item/clothing/head/f13/enclave/drillhat
 	name = "enclave drill hat"
@@ -259,7 +258,6 @@
 	desc = "A light helmet with an airtight visor intended for protection from anomalies."
 	icon_state = "enclave_sevahead"
 	item_state = "enclave_sevahead"
-	armor = list("melee" = 35, "bullet" = 40, "laser" = 40,"energy" = 20, "bomb" = 60, "bio" = 100, "rad" = 100, "fire" = 80, "acid" = 50)
 
 /obj/item/clothing/head/helmet/f13/enclave/marine
 	name = "old United States Marine Corp helmet"
