@@ -201,6 +201,17 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+/obj/item/clothing/head/f13/enclave_hood
+	name = "officer hat"
+	desc = "A standard-issue Enclave officer's cap."
+	icon_state = "enclave_hood"
+	item_color = "enclave_hood"
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 90)
+
+/obj/item/clothing/head/helmet/soft/f13/enclave_hood/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)	
+
 /obj/item/clothing/head/f13/enclave/peacekeeper
 	name = "peacekeeper cap"
 	desc = "Reinforced field cap issued to the soldiers of the Enclave."
@@ -1369,3 +1380,12 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+
+
+//Wasteland update
+
+/obj/item/clothing/head/helmet/f13/helmet/enclave/forgecap/drillhat
+	name = "enclave Drill hat"
+	desc = "A standard issue drill hat."
+	icon_state = "drillhat"
+	item_state = "drillhat"
