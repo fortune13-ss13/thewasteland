@@ -148,7 +148,7 @@
 
 /obj/item/projectile/bullet/pellet/trainshot
 	damage = 15 // less pellets, more dam + tiny bit of pen
-	armour_penetration = 0.01 //works on pa, doesnt shred you at all ranges though
+	armour_penetration = 0.4
 
 /obj/item/projectile/bullet/pellet/trainshot/on_hit(atom/target)
 	. = ..()
