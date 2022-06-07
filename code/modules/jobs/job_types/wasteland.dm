@@ -256,7 +256,8 @@ Raider
 		/obj/item/megaphone = 1,
 		/obj/item/radio/headset = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,	
-		/obj/item/storage/pill_bottle/chem_tin/buffout = 1
+		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
+		/obj/item/book/granter/trait/trekking = 1
 		)
 
 /datum/outfit/loadout/raider_blast
@@ -295,6 +296,8 @@ Raider
 		/obj/item/reagent_containers/hypospray/medipen/psycho = 3,
 		/obj/item/reagent_containers/pill/patch/turbo = 2,
 		/obj/item/reagent_containers/hypospray/medipen/medx = 1,
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/book/granter/trait/trekking = 1,
 		/obj/item/radio/headset = 1
 		)
 
@@ -309,6 +312,8 @@ Raider
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/melee/onehanded/club/fryingpan = 1,
 		/obj/item/radio/headset = 1,	
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/book/granter/trait/trekking = 1,
 		/obj/item/grenade/chem_grenade/cleaner = 2
 		)
 
@@ -409,7 +414,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation = 2,
+		/obj/item/reagent_containers/hypospray/medipen_stimpak/super = 2,
 		/obj/item/radio/headset = 1
 		)
 
@@ -426,7 +431,8 @@ Raider
 		/obj/item/clothing/mask/cigarette/pipe = 1,
 		/obj/item/melee/onehanded/knife/bone = 1,
 		/obj/item/radio/tribal = 1,
-		/obj/item/book/granter/trait/bigleagues = 1
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/book/granter/trait/trekking = 1
 		)
 
 /datum/outfit/loadout/raider_powder
@@ -438,7 +444,8 @@ Raider
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
 		/obj/item/ammo_box/magazine/greasegun = 2,
-		/obj/item/grenade/f13/dynamite = 2
+		/obj/item/grenade/f13/dynamite = 2,
+		/obj/item/book/granter/trait/explosives = 1
 		)
 
 /datum/job/wasteland/f13wastelander
