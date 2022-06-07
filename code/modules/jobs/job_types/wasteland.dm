@@ -414,7 +414,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 1,
-		/obj/item/reagent_containers/hypospray/medipen_stimpak/super = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
 		/obj/item/radio/headset = 1
 		)
 
