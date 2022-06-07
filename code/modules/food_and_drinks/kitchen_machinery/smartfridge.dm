@@ -771,7 +771,9 @@
 		/obj/item/reagent_containers/food/drinks/bottle/hcider = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/grappa = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/sake = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/fernet = 1,)
+		/obj/item/reagent_containers/food/drinks/bottle/fernet = 1,		
+		/obj/item/reagent_containers/food/drinks/bottle/amaretto = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/hooch = 1,)
 
 //diy
 
@@ -834,6 +836,6 @@
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/reagent_containers/food/snacks/deadmouse = 1,
 		/obj/item/book/granter/trait/trekking = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,)
+		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_three = 1,)

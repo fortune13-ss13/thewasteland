@@ -399,6 +399,12 @@
 	icon_state = "t51bhelmet[light_on]"
 	item_state = "t51bhelmet[light_on]"
 
+/obj/item/clothing/head/helmet/f13/power_armor/t51b/altum
+	name = "Painted T-51b power helmet"
+	desc = "It's a T-51b power helmet, typically used by the Brotherhood, looks a little Russian."
+	icon_state = "altumt51helm"
+	item_state = "altumt51helm"
+
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
@@ -455,6 +461,12 @@
 	desc = "The advanced MKII power armor helmet. Just looking at this makes you feel self conscious about your DNA."
 	icon_state = "AltumHelm"
 	item_state = "AltumHelm"
+
+/obj/item/clothing/head/helmet/f13/power_armor/x02helmet/sokkxxhelm
+	name =  "experimental X02 power armor helmet"
+	desc = "A modified X02 helmet that has had it's circuitry replaced with parts from an old functional tesla coil. This one seemingly doesn't discharge in the immediate area."
+	icon_state = "pinkhelmet"
+	item_state = "pinkhelmet"
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire
 	name = "hellfire power armor helmet"
@@ -888,18 +900,5 @@
 	desc = "A tactical black helmet, sealed from outside hazards with a plate of glass and not much else."
 	icon_state = "marine_security"
 	item_state = "marine_security"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	can_flashlight = TRUE
-
-/obj/item/clothing/head/helmet/Enclave_combathelmetraider
-	name = "Enclave Combat Armor Helmet"
-	desc = "Standard issue combat helmets used by the Enclave."
-	icon_state = "Enclave_combathelmetraider"
-	item_state = "Enclave_combathelmetraider"
-	armor = list("melee" = 30, "bullet" = 50, "laser" = 30, "energy" = 20, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
-	strip_delay = 50
-	flags_inv = HIDEEARS|HIDEHAIR
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)

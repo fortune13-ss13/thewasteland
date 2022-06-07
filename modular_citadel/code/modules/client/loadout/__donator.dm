@@ -34,15 +34,18 @@
 */
 
 /obj/item/storage/box/large/custom_kit/cayce/PopulateContents()
-	new /obj/item/clothing/suit/armored/medium/steelbib(src)
-	new /obj/item/clothing/head/helmet/armyhelmet/heavy(src)
-	new /obj/item/twohanded/sledgehammer/simple(src)
-	new /obj/item/pda(src)
+    new /obj/item/storage/backpack/security(src)
+    new /obj/item/stack/f13Cash/caps/threefivezero(src)
+    new /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller(src)
+    new /obj/item/ammo_box/shotgun/slug(src)
+    new /obj/item/ammo_box/shotgun/slug(src)
+    new /obj/item/storage/belt/military(src)
+    new /obj/item/pda(src)
 
 /datum/gear/donator/kits/cayce
-	name = "Jett Lowes belongings"
-	path = /obj/item/storage/box/large/custom_kit/cayce
-	ckeywhitelist = list("cayce")
+    name = "Nearly Feral Fred's Junk"
+    path = /obj/item/storage/box/large/custom_kit/cayce
+    ckeywhitelist = list("cayce")
 
 /obj/item/storage/box/large/custom_kit/sugga/PopulateContents()
 	new /obj/item/clothing/suit/armor/f13/combat(src)
@@ -85,7 +88,7 @@
 	name = "Canadian"
 	path = /obj/item/storage/box/large/custom_kit/canadian
 	ckeywhitelist = list("comradesocks")
-
+/*
 /obj/item/storage/box/large/custom_kit/vaktus/PopulateContents()
 	new /obj/item/clothing/suit/armor/f13/combat/riotpolice(src)
 	new /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert(src)
@@ -97,7 +100,7 @@
 	name = "Vaks goods"
 	path = /obj/item/storage/box/large/custom_kit/vaktus
 	ckeywhitelist = list("vaktus4")
-
+*/
 /obj/item/storage/box/large/custom_kit/burningcold/PopulateContents()
 	new /obj/item/clothing/gloves/f13/leather/fingerless(src)
 	new /obj/item/clothing/mask/bandana/blue(src)
@@ -132,7 +135,7 @@
 
 /obj/item/storage/box/large/custom_kit/evosolus/PopulateContents()
 	new /obj/item/melee/powered/ripper(src)
-	new /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced(src)
+	new /obj/item/clothing/suit/armor/f13/harbingermantle(src)
 	new /obj/item/clothing/head/beret/ncr/ncr_recon(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
 
@@ -165,13 +168,9 @@
 	ckeywhitelist = list("erabite")	
 
 /obj/item/storage/box/large/custom_kit/flaka/PopulateContents()
-	new /obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma(src)
-	new /obj/item/clothing/suit/armor/f13/rangercombat/degancustom(src)
-	new /obj/item/storage/belt/holster(src)
-	new /obj/item/gun/ballistic/revolver/m29(src)
-	new /obj/item/ammo_box/m44(src)
-	new /obj/item/ammo_box/m44(src)
-	new /obj/item/melee/onehanded/knife/bowie(src)
+	new /obj/item/clothing/head/f13/enclave/hood(src)
+	new /obj/item/clothing/suit/armor/f13/enclavetrenchcoat/gunny(src)
+	new /obj/item/melee/powered/ripper(src)
 
 /datum/gear/donator/kits/flaka
 	name = "Flaka stuff"
@@ -184,7 +183,29 @@
 /datum/gear/donator/kits/rix
 	name = "Dark stuff"
 	path = /obj/item/storage/box/large/custom_kit/rix
-	ckeywhitelist = list("darkrixd")					
+	ckeywhitelist = list("darkrixd")
+
+/obj/item/storage/box/large/custom_kit/sunny/PopulateContents()
+	new /obj/item/clothing/mask/gas/sechailer(src)
+	new /obj/item/gun/energy/laser/plasma/glock(src)
+	new /obj/item/clothing/shoes/kindleKicks(src)
+	new /obj/item/storage/belt/military/assault(src)
+	new /obj/item/clothing/suit/armor/f13/combat/khan(src)
+	
+/datum/gear/donator/kits/sunny
+	name = "Sunnys stuff"
+	path = /obj/item/storage/box/large/custom_kit/sunny
+	ckeywhitelist = list("nirzak")						
+
+/obj/item/storage/box/large/custom_kit/sokkxx/PopulateContents()
+	new /obj/item/modkit/sokkxxarmor(src)
+	new /obj/item/modkit/sokkxxhelm(src)
+	new /obj/item/gun/energy/laser/plasma(src)
+
+/datum/gear/donator/kits/sokkxx
+	name = "Sokkxx's belongings"
+	path = /obj/item/storage/box/large/custom_kit/sokkxx
+	ckeywhitelist = list("sokkxx")
 
 /obj/item/storage/box/large/custom_kit/pug/PopulateContents()
 	new /obj/item/melee/transforming/cleaving_saw/old_rusty(src)

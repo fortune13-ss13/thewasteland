@@ -589,7 +589,7 @@
 	slowdown = 0.16
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/bos
-	name = "Brotherhood T-45d Power Armour"
+	name = "Brotherhood T-45d power armour"
 	desc = "A suit of T-45d Power Armour adorned with the markings of the Brotherhood of Steel. Commonly used by the Paladins of the Brotherhood."
 	icon_state = "t45dpowerarmor_bos"
 	item_state = "t45dpowerarmor_bos"
@@ -609,6 +609,12 @@
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 72)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
+
+/obj/item/clothing/suit/armor/f13/power_armor/t51b/altumt51
+	name = "Painted T-51b power armor"
+	desc = "A painted set of T51b power armor."
+	icon_state = "altumt51"
+	item_state = "altumt51"
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51green
 	name = "Hardened T-51b power armor"
@@ -678,6 +684,12 @@
 	desc = "An advanced set of power armor utilized by Enclave forces. There is an odd visual distortion around it."
 	icon_state = "AltumFire"
 	item_state = "AltumFire"
+
+/obj/item/clothing/suit/armor/f13/power_armor/x02/sokkxx
+	name =  "experimental X02 power armor"
+	desc = "A modified X02 suit that has had it's circuitry replaced with parts from an old functional tesla coil. This one seemingly doesn't discharge in the immediate area."
+	icon_state = "pinktesla"
+	item_state = "pinktesla"
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/hellfire
 	name = "hellfire power armor"
@@ -1310,3 +1322,11 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	item_state = "legscout"
 	slowdown = 0.05
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4) // Slightly better armor
+
+/obj/item/clothing/suit/armor/f13/combat/mk2/bandit_duster 
+	name = "reinforced duster armor"
+	desc = "A reinforced set of combat armor covered by a black duster."
+	icon_state = "Bandit_duster"
+	item_state = "Bandit_duster"
+	slowdown = 0
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
