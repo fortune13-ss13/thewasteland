@@ -268,7 +268,10 @@ Raider
 		/obj/item/kitchen/knife/butcher = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
 		/obj/item/radio/headset = 1,	
-		/obj/item/book/granter/trait/explosives = 1
+		/obj/item/book/granter/trait/explosives = 1,
+		/obj/item/bottlecap_mine = 1,
+		/obj/item/grenade/homemade/coffeepotbomb = 4,
+		/obj/item/grenade/homemade/firebomb = 4
 		)
 
 /datum/outfit/loadout/raider_sadist
