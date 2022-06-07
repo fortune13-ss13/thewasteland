@@ -381,7 +381,6 @@ Raider
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/ammo_box/m44 = 3,
 		/obj/item/radio/headset = 1,
-		/obj/item/radio/headset = 1,
 		/obj/item/book/granter/trait/gunslinger = 1
 		)
 
