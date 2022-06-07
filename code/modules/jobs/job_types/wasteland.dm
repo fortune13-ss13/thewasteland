@@ -254,7 +254,8 @@ Raider
 		/obj/item/shishkebabpack = 1,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
 		/obj/item/megaphone = 1,
-		/obj/item/radio/headset = 1,	
+		/obj/item/radio/headset = 1,
+		/obj/item/book/granter/trait/bigleagues = 1,	
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1
 		)
 
@@ -352,7 +353,7 @@ Raider
 		/obj/item/storage/backpack/spearquiver = 1,
 		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
 		/obj/item/ammo_box/magazine/greasegun = 1,
-		/obj/item/book/granter/bigleagues = 1,
+		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/book/granter/trait/trekking = 1
 		)
 
