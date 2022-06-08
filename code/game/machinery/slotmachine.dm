@@ -22,11 +22,9 @@
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 50
 	circuit = /obj/item/circuitboard/computer/slot_machine
-	var/datum/weakref/owner
 	var/money = DEFAULT_JACKPOT //How much money it has CONSUMED
 	var/plays = 0
 	var/working = FALSE
-	var/locked = TRUE
 	var/balance = 0 //How much money is in the machine, ready to be CONSUMED.
 	var/jackpots = 0
 	var/list/reels = list(list("", "", "") = 0, list("", "", "") = 0, list("", "", "") = 0, list("", "", "") = 0, list("", "", "") = 0)
@@ -82,21 +80,6 @@
 /obj/machinery/computer/slot_machine/power_change()
 	..()
 	update_icon()
-
-/obj/machinery/computer/slot_machine/AltClick(mob/user)
-	if(!owner)
-		var/choice = alert(user, "The [src] is unclaimed. Would you like to claim it?", "Answer", "Yes", "No")
-		if(choice == "Yes")
-			owner = new /datum/weakref(user)
-			SSslotmachines.register_slotmachine(src, user)
-		return
-	if(REF(user) == owner.reference)
-		if(!locked)
-			locked = TRUE
-			return
-		locked = FALSE
-		return
-	return ..()
 
 /obj/machinery/computer/slot_machine/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/stack/f13Cash))
