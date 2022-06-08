@@ -501,8 +501,6 @@
 				var/mob/living/carbon/human/newmob = M.change_mob_type( /mob/living/carbon/human , null, null, delmob )
 				if(posttransformoutfit && istype(newmob))
 					newmob.equipOutfit(posttransformoutfit)
-			if("slime")
-				M.change_mob_type( /mob/living/simple_animal/slime , null, null, delmob )
 			if("monkey")
 				M.change_mob_type( /mob/living/carbon/monkey , null, null, delmob )
 			if("robot")
@@ -2137,17 +2135,6 @@
 
 		usr.client.cmd_admin_alienize(H)
 
-	else if(href_list["makeslime"])
-		if(!check_rights(R_SPAWN))
-			return
-
-		var/mob/living/carbon/human/H = locate(href_list["makeslime"])
-		if(!istype(H))
-			to_chat(usr, "This can only be used on instances of type /mob/living/carbon/human.")
-			return
-
-		usr.client.cmd_admin_slimeize(H)
-
 	else if(href_list["makeblob"])
 		if(!check_rights(R_SPAWN))
 			return
@@ -3361,7 +3348,7 @@
 			list("ckey" = ckey)
 		)
 		if(!query_remove_mentor.warn_execute())
-			return		
+			return
 		var/datum/db_query/query_add_admin_log = SSdbcore.NewQuery({"
 			INSERT INTO `[format_table_name("admin_log")]` (`datetime`, `round_id`, `adminckey`, `adminip`, `operation`, `target`, `log`)
 			VALUES (:time, :round_id, :adminckey, :addr, 'remove mentor', :mentorkey, CONCAT('Removed mentor ', :mentorkey));"},

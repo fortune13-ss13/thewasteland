@@ -141,9 +141,6 @@
 #define STATUS_EFFECT_INLOVE /datum/status_effect/in_love //Displays you as being in love with someone else, and makes hearts appear around them.
 
 /////////////
-//  SLIME  //
+//   DNA   //
 /////////////
-
-#define STATUS_EFFECT_RAINBOWPROTECTION /datum/status_effect/rainbow_protection //Invulnerable and pacifistic
-#define STATUS_EFFECT_SLIMESKIN /datum/status_effect/slimeskin //Increased armor
 #define STATUS_EFFECT_DNA_MELT /datum/status_effect/dna_melt //usually does something horrible to you when you hit 100 genetic instability

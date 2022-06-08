@@ -42,8 +42,6 @@
 			footstep_sounds = GLOB.heavyfootstep
 		if(FOOTSTEP_MOB_SHOE)
 			footstep_sounds = GLOB.footstep
-		if(FOOTSTEP_MOB_SLIME)
-			footstep_sounds = 'sound/effects/footstep/slime1.ogg'
 		if(FOOTSTEP_MOB_CRAWL)
 			footstep_sounds = 'sound/effects/footstep/crawl1.ogg'
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, .proc/play_simplestep) //Note that this doesn't get called for humans.
@@ -126,9 +124,6 @@
 			if(FOOTSTEP_MOB_SHOE)
 				turf_footstep = T.footstep
 				L = GLOB.footstep
-			if(FOOTSTEP_MOB_SLIME)
-				playsound(T, 'sound/effects/footstep/slime1.ogg', 50 * volume)
-				return
 			if(FOOTSTEP_MOB_CRAWL)
 				playsound(T, 'sound/effects/footstep/crawl1.ogg', 50 * volume)
 				return

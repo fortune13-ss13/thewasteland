@@ -299,18 +299,6 @@ datum/chemical_reaction/rezadone
 	results = list(/datum/reagent/medicine/tricordrazine = 3)
 	required_reagents = list(/datum/reagent/medicine/bicaridine = 1, /datum/reagent/medicine/kelotane = 1, /datum/reagent/medicine/antitoxin = 1)
 
-/datum/chemical_reaction/regen_jelly
-	name = "Regenerative Jelly"
-	id = /datum/reagent/medicine/regen_jelly
-	results = list(/datum/reagent/medicine/regen_jelly = 2)
-	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/celugel = 1)
-
-/datum/chemical_reaction/jelly_convert
-	name = "Blood Jelly Conversion"
-	id = /datum/reagent/toxin/slimejelly
-	results = list(/datum/reagent/toxin/slimejelly = 1)
-	required_reagents = list(/datum/reagent/toxin = 1, /datum/reagent/blood/jellyblood = 1)
-
 /datum/chemical_reaction/corazone
 	name = "Corazone"
 	id = /datum/reagent/medicine/corazone

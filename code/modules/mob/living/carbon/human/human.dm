@@ -865,7 +865,6 @@
 	VV_DROPDOWN_OPTION(VV_HK_MOD_QUIRKS, "Add/Remove Quirks")
 	VV_DROPDOWN_OPTION(VV_HK_MAKE_MONKEY, "Make Monkey")
 	VV_DROPDOWN_OPTION(VV_HK_MAKE_CYBORG, "Make Cyborg")
-	VV_DROPDOWN_OPTION(VV_HK_MAKE_SLIME, "Make Slime")
 	VV_DROPDOWN_OPTION(VV_HK_MAKE_ALIEN, "Make Alien")
 	VV_DROPDOWN_OPTION(VV_HK_SET_SPECIES, "Set Species")
 	VV_DROPDOWN_OPTION(VV_HK_PURRBATION, "Toggle Purrbation")
@@ -915,12 +914,6 @@
 		if(alert("Confirm mob type change?",,"Transform","Cancel") != "Transform")
 			return
 		usr.client.holder.Topic("vv_override", list("makealien"=href_list[VV_HK_TARGET]))
-	if(href_list[VV_HK_MAKE_SLIME])
-		if(!check_rights(R_SPAWN))
-			return
-		if(alert("Confirm mob type change?",,"Transform","Cancel") != "Transform")
-			return
-		usr.client.holder.Topic("vv_override", list("makeslime"=href_list[VV_HK_TARGET]))
 	if(href_list[VV_HK_SET_SPECIES])
 		if(!check_rights(R_SPAWN))
 			return
@@ -1204,18 +1197,6 @@
 /mob/living/carbon/human/species/golem/clockwork/no_scrap
 	race = /datum/species/golem/clockwork/no_scrap
 
-/mob/living/carbon/human/species/jelly
-	race = /datum/species/jelly
-
-/mob/living/carbon/human/species/jelly/slime
-	race = /datum/species/jelly/slime
-
-/mob/living/carbon/human/species/jelly/stargazer
-	race = /datum/species/jelly/stargazer
-
-/mob/living/carbon/human/species/jelly/luminescent
-	race = /datum/species/jelly/luminescent
-
 /mob/living/carbon/human/species/lizard
 	race = /datum/species/lizard
 
@@ -1275,9 +1256,6 @@
 
 /mob/living/carbon/human/species/ipc
 	race = /datum/species/ipc
-
-/mob/living/carbon/human/species/roundstartslime
-	race = /datum/species/jelly/roundstartslime
 
 /mob/living/carbon/human/species/ghoul
 	race = /datum/species/ghoul

@@ -22,19 +22,23 @@
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 50
 	circuit = /obj/item/circuitboard/computer/slot_machine
+	var/datum/weakref/owner
 	var/money = DEFAULT_JACKPOT //How much money it has CONSUMED
 	var/plays = 0
 	var/working = FALSE
+	var/locked = TRUE
 	var/balance = 0 //How much money is in the machine, ready to be CONSUMED.
 	var/jackpots = 0
 	var/list/reels = list(list("", "", "") = 0, list("", "", "") = 0, list("", "", "") = 0, list("", "", "") = 0, list("", "", "") = 0)
 	var/list/symbols = list(SEVEN = 1, "<font color='orange'>&</font>" = 2, "<font color='yellow'>@</font>" = 2, "<font color='green'>$</font>" = 2, "<font color='blue'>?</font>" = 2, "<font color='grey'>#</font>" = 2, "<font color='white'>!</font>" = 2, "<font color='fuchsia'>%</font>" = 2) //if people are winning too much, multiply every number in this list by 2 and see if they are still winning too much.
 	connectable = FALSE
+	var/datum/controller/subsystem/ss
 
 	light_color = LIGHT_COLOR_BROWN
 
 /obj/machinery/computer/slot_machine/Initialize()
 	. = ..()
+	ss = SSslotmachines
 	var/obj/item/circuitboard/computer/slot_machine/crct = circuit
 	jackpots = rand(1, 4) //false hope
 	plays = rand(75, 200)
@@ -78,6 +82,21 @@
 /obj/machinery/computer/slot_machine/power_change()
 	..()
 	update_icon()
+
+/obj/machinery/computer/slot_machine/AltClick(mob/user)
+	if(!owner)
+		var/choice = alert(user, "The [src] is unclaimed. Would you like to claim it?", "Answer", "Yes", "No")
+		if(choice == "Yes")
+			owner = new /datum/weakref(user)
+			SSslotmachines.register_slotmachine(src, user)
+		return
+	if(REF(user) == owner.reference)
+		if(!locked)
+			locked = TRUE
+			return
+		locked = FALSE
+		return
+	return ..()
 
 /obj/machinery/computer/slot_machine/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/stack/f13Cash))
@@ -140,12 +159,11 @@
 	if(isturf(get_turf(src)))
 		var/currentamt = amt
 		// Stop cash stacks from going over their limit.
-		if(currentamt >= MAX_CASH_STACK_AMOUNT)
-			while(currentamt >= MAX_CASH_STACK_AMOUNT)
-				var/obj/item/stack/f13Cash/moneytodrop = new /obj/item/stack/f13Cash/caps(get_turf(src))
-				moneytodrop.amount = MAX_CASH_STACK_AMOUNT
-				moneytodrop.use(0) //Hacky, updates the sprite
-				currentamt -= MAX_CASH_STACK_AMOUNT
+		while(currentamt >= MAX_CASH_STACK_AMOUNT)
+			var/obj/item/stack/f13Cash/moneytodrop = new /obj/item/stack/f13Cash/caps(get_turf(src))
+			moneytodrop.amount = MAX_CASH_STACK_AMOUNT
+			moneytodrop.use(0) //Hacky, updates the sprite
+			currentamt -= MAX_CASH_STACK_AMOUNT
 		if(currentamt)
 			var/obj/item/stack/f13Cash/moneytodrop = new /obj/item/stack/f13Cash/caps(get_turf(src))
 			moneytodrop.amount = currentamt
@@ -176,12 +194,15 @@
 			updateDialog()
 			sleep(2)
 
-	spawn(SPIN_TIME - (REEL_DEACTIVATE_DELAY * reels.len)) //WARNING: no sanity checking for user since it's not needed and would complicate things (machine should still spin even if user is gone), be wary of this if you're changing this code.
-		toggle_reel_spin(0, REEL_DEACTIVATE_DELAY)
-		working = FALSE
-		give_prizes(user)
-		update_icon()
-		updateDialog()
+	//No sanity checking
+	addtimer(CALLBACK(src, .proc/finish_spin, user), SPIN_TIME - (REEL_DEACTIVATE_DELAY * reels.len))
+
+/obj/machinery/computer/slot_machine/proc/finish_spin(mob/user)
+	toggle_reel_spin(0, REEL_DEACTIVATE_DELAY)
+	working = FALSE
+	give_prizes(user)
+	update_icon()
+	updateDialog()
 
 /obj/machinery/computer/slot_machine/proc/can_spin(mob/user)
 	if(stat & NOPOWER)

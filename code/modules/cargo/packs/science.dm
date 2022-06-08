@@ -161,15 +161,6 @@
 	crate_name = "shield generators crate"
 	crate_type = /obj/structure/closet/crate/secure/science
 
-/datum/supply_pack/science/slime
-	name = "Slime Core Crate"
-	desc = "Ran out of slimes? No problem, contains one gray slime core. Requires Xenobio access to open."
-	cost = 1000
-	access = ACCESS_XENOBIOLOGY
-	contains = list(/obj/item/slime_extract/grey)
-	crate_name = "slime core crate"
-	crate_type = /obj/structure/closet/crate/secure/science
-
 /datum/supply_pack/science/tablets
 	name = "Tablet Crate"
 	desc = "What's a computer? Contains five cargo tablets."

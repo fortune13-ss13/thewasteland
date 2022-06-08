@@ -17,7 +17,6 @@
 	var/assemblyattacher
 	var/ignition_temp = 10 // The amount of heat added to the reagents when this grenade goes off.
 	var/threatscale = 1 // Used by advanced grenades to make them slightly more worthy.
-	var/no_splash = FALSE //If the grenade deletes even if it has no reagents to splash with. Used for slime core reactions.
 	var/casedesc = "This basic model accepts both beakers and bottles. It heats contents by 10°K upon ignition." // Appears when examining empty casings.
 
 /obj/item/grenade/chem_grenade/Initialize()
@@ -185,7 +184,7 @@
 
 	var/turf/detonation_turf = get_turf(src)
 
-	if(!chem_splash(detonation_turf, affected_area, reactants, ignition_temp, threatscale) && !no_splash)
+	if(!chem_splash(detonation_turf, affected_area, reactants, ignition_temp, threatscale))
 		playsound(src, 'sound/items/screwdriver2.ogg', 50, 1)
 		if(beakers.len)
 			for(var/obj/O in beakers)
@@ -221,36 +220,11 @@
 /obj/item/grenade/chem_grenade/large/prime(mob/living/lanced_by)
 	if(stage != READY)
 		return FALSE
-
-	for(var/obj/item/slime_extract/S in beakers)
-		if(S.Uses)
-			for(var/obj/item/reagent_containers/glass/G in beakers)
-				G.reagents.trans_to(S, G.reagents.total_volume)
-
-			//If there is still a core (sometimes it's used up)
-			//and there are reagents left, behave normally,
-			//otherwise drop it on the ground for timed reactions like gold.
-
-			if(S)
-				if(S.reagents && S.reagents.total_volume)
-					for(var/obj/item/reagent_containers/glass/G in beakers)
-						S.reagents.trans_to(G, S.reagents.total_volume)
-				else
-					S.forceMove(get_turf(src))
-					no_splash = TRUE
 	return ..()
 
 	//I tried to just put it in the allowed_containers list but
 	//if you do that it must have reagents.  If you're going to
 	//make a special case you might as well do it explicitly. -Sayu
-/obj/item/grenade/chem_grenade/large/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/slime_extract) && stage == WIRED)
-		if(!user.transferItemToLoc(I, src))
-			return
-		to_chat(user, "<span class='notice'>You add [I] to the [initial(name)] assembly.</span>")
-		beakers += I
-	else
-		return ..()
 
 /obj/item/grenade/chem_grenade/cryo // Intended for rare cryogenic mixes. Cools the area moderately upon detonation.
 	name = "cryo grenade"

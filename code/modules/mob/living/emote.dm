@@ -531,32 +531,6 @@
 	else
 		to_chat(user, "<span class='warning'>You're incapable of slapping in your current state.</span>")
 
-/datum/emote/living/audible/blorble
-	key = "blorble"
-	key_third_person = "blorbles"
-	message = "blorbles."
-	message_param = "blorbles at %t."
-
-/datum/emote/living/audible/blorble/run_emote(mob/user, params)
-	. = ..()
-	if(. && iscarbon(user))
-		var/mob/living/carbon/C = user
-		if(isjellyperson(C))
-			pick(playsound(C, 'sound/effects/attackblob.ogg', 50, 1),playsound(C, 'sound/effects/blobattack.ogg', 50, 1))
-
-/datum/emote/living/audible/blurp
-	key = "blurp"
-	key_third_person = "blurps"
-	message = "blurps."
-	message_param = "blurps at %t."
-
-/datum/emote/living/audible/blurp/run_emote(mob/user, params)
-	. = ..()
-	if(. && iscarbon(user))
-		var/mob/living/carbon/C = user
-		if(isjellyperson(C))
-			pick(playsound(C, 'sound/effects/meatslap.ogg', 50, 1),playsound(C, 'sound/effects/gib_step.ogg', 50, 1))
-
 /datum/emote/living/surrender
 	key = "surrender"
 	key_third_person = "surrenders"

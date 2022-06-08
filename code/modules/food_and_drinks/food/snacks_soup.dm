@@ -37,15 +37,6 @@
 	tastes = list("meat" = 1)
 	foodtype = MEAT
 
-/obj/item/reagent_containers/food/snacks/soup/slime
-	name = "slime soup"
-	desc = "If no water is available, you may substitute tears."
-	icon_state = "slimesoup"
-	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/nutriment/vitamin = 5)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/toxin/slimejelly = 5, /datum/reagent/water = 5, /datum/reagent/consumable/nutriment/vitamin = 4)
-	tastes = list("slime" = 1)
-	foodtype = TOXIC | SUGAR
-
 /obj/item/reagent_containers/food/snacks/soup/blood
 	name = "tomato soup"
 	desc = "Smells like copper."
@@ -93,7 +84,7 @@
 	. = ..()
 	extra_reagent = pick(/datum/reagent/consumable/capsaicin, /datum/reagent/consumable/frostoil,
 					/datum/reagent/medicine/omnizine, /datum/reagent/consumable/banana, /datum/reagent/blood,
-					/datum/reagent/toxin/slimejelly, /datum/reagent/toxin, /datum/reagent/carbon, /datum/reagent/medicine/oculine)
+					/datum/reagent/toxin, /datum/reagent/carbon, /datum/reagent/medicine/oculine)
 	bonus_reagents[extra_reagent] = 5
 	reagents.add_reagent(extra_reagent, 5)
 

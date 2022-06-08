@@ -95,8 +95,6 @@ IGNORE_PROC_IF_NOT_TARGET(attack_larva)
 
 IGNORE_PROC_IF_NOT_TARGET(attack_animal)
 
-IGNORE_PROC_IF_NOT_TARGET(attack_slime)
-
 /mob/living/simple_animal/hostile/asteroid/curseblob/bullet_act(obj/item/projectile/Proj)
 	if(Proj.firer != set_target)
 		return BULLET_ACT_FORCE_PIERCE

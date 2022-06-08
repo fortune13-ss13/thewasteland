@@ -65,9 +65,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isplasmaman(A) (is_species(A, /datum/species/plasmaman))
 #define ispodperson(A) (is_species(A, /datum/species/pod))
 #define isflyperson(A) (is_species(A, /datum/species/fly))
-#define isjellyperson(A) (is_species(A, /datum/species/jelly))
-#define isslimeperson(A) (is_species(A, /datum/species/jelly/slime))
-#define isluminescent(A) (is_species(A, /datum/species/jelly/luminescent))
 #define iszombie(A) (is_species(A, /datum/species/zombie))
 #define ishumanbasic(A) (is_species(A, /datum/species/human))
 #define iscatperson(A) (ishumanbasic(A) && istype(A.dna.species, /datum/species/human/felinid))
@@ -76,7 +73,7 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isangel(A) (is_species(A, /datum/species/angel))
 #define isvampire(A) (is_species(A, /datum/species/vampire))
 #define ismush(A) (is_species(A, /datum/species/mush))
-#define isshadow(A) (is_species(A, /datum/species/shadow))	
+#define isshadow(A) (is_species(A, /datum/species/shadow))
 #define isskeleton(A) (is_species(A, /datum/species/skeleton))
 #define isrobotic(A) (is_species(A, /datum/species/ipc) || is_species(A, /datum/species/synthliz))
 #define isethereal(A) (is_species(A, /datum/species/ethereal))
@@ -87,7 +84,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define ismammal(A) (is_species(A, /datum/species/mammal))
 #define isinsect(A) (is_species(A, /datum/species/insect))
 #define isxenoperson(A) (is_species(A, /datum/species/xeno))
-#define isstartjelly(A) (is_species(A, /datum/species/jelly/roundstartslime))
 
 // Fallout specific species
 #define isghoul(A) (is_species(A, /datum/species/ghoul))
@@ -136,8 +132,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define ismouse(A) (istype(A, /mob/living/simple_animal/mouse))
 
 #define iscow(A) (istype(A, /mob/living/simple_animal/cow))
-
-#define isslime(A) (istype(A, /mob/living/simple_animal/slime))
 
 #define isdrone(A) (istype(A, /mob/living/simple_animal/drone))
 

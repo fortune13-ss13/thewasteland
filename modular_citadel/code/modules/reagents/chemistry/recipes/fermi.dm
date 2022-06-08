@@ -126,21 +126,6 @@
 	FermiExplode 		= TRUE		// If the chemical explodes in a special way
 	PurityMin 			= 0.2
 
-/datum/chemical_reaction/fermi/SDGF/FermiExplode(datum/reagents, atom/my_atom, volume, temp, pH)//Spawns an angery teratoma!
-	var/turf/T = get_turf(my_atom)
-	var/amount_to_spawn = round((volume/100), 1)
-	if(amount_to_spawn <= 0)
-		amount_to_spawn = 1
-	for(var/i in 1 to amount_to_spawn)
-		var/mob/living/simple_animal/slime/S = new(T,"pyrite")
-		S.damage_coeff = list(BRUTE = 0.9 , BURN = 2, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1)
-		S.name = "Living teratoma"
-		S.real_name = "Living teratoma"
-		S.rabid = 1//Make them an angery boi
-		S.color = "#810010"
-	my_atom.reagents.clear_reagents()
-	my_atom.visible_message("<span class='warning'>An horrifying tumoural mass forms in [my_atom]!</span>")
-
 /datum/chemical_reaction/fermi/astral
 	name = "Astrogen"
 	id = /datum/reagent/fermi/astral
@@ -190,30 +175,6 @@
 
 /datum/chemical_reaction/fermi/enthrall/FermiFinish(datum/reagents/holder, atom/my_atom)
 	var/datum/reagent/blood/B = locate(/datum/reagent/blood) in my_atom.reagents.reagent_list
-	var/datum/reagent/fermi/enthrall/E = locate(/datum/reagent/fermi/enthrall) in my_atom.reagents.reagent_list
-	if(!B || !E)
-		return
-	if(!B.data)
-		my_atom.visible_message("<span class='warning'>The reaction splutters and fails to react properly.</span>") //Just in case
-		E.purity = 0
-	if (B.data["gender"] == "female")
-		E.data["creatorGender"] = "Mistress"
-		E.creatorGender = "Mistress"
-	else
-		E.data["creatorGender"] = "Master"
-		E.creatorGender = "Master"
-	E.data["creatorName"] = B.data["real_name"]
-	E.creatorName = B.data["real_name"]
-	E.data["creatorID"] = B.data["ckey"]
-	E.creatorID = B.data["ckey"]
-
-//So slimes can play too.
-/datum/chemical_reaction/fermi/enthrall/slime
-	id = "enthrall2"
-	required_catalysts = list(/datum/reagent/blood/jellyblood = 1)
-
-/datum/chemical_reaction/fermi/enthrall/slime/FermiFinish(datum/reagents/holder, atom/my_atom)
-	var/datum/reagent/blood/jellyblood/B = locate(/datum/reagent/blood/jellyblood) in my_atom.reagents.reagent_list//The one line change.
 	var/datum/reagent/fermi/enthrall/E = locate(/datum/reagent/fermi/enthrall) in my_atom.reagents.reagent_list
 	if(!B || !E)
 		return

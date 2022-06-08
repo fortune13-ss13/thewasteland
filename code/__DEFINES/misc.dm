@@ -155,7 +155,6 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define BLOOD_COLOR_XENO			"#94a83c"
 #define BLOOD_COLOR_OIL				"#301d02"
 #define BLOOD_COLOR_SYNTHETIC		"#3f48aa"
-#define BLOOD_COLOR_SLIME			"#00ff90"
 #define BLOOD_COLOR_LIZARD			"#db004D"
 #define BLOOD_COLOR_UNIVERSAL		"#db3300"
 #define BLOOD_COLOR_BUG				"#a37c0f"
@@ -412,12 +411,6 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi'))
 #define NO_SPAWN 0
 #define HOSTILE_SPAWN 1
 #define FRIENDLY_SPAWN 2
-
-//slime core activation type
-#define SLIME_ACTIVATE_MINOR 1
-#define SLIME_ACTIVATE_MAJOR 2
-
-#define LUMINESCENT_DEFAULT_GLOW 2
 
 #define RIDING_OFFSET_ALL "ALL"
 

@@ -149,46 +149,6 @@
 /obj/effect/decal/cleanable/blood/gibs/human/lizard/core
 	random_icon_states = list("gibmid1", "gibmid2", "gibmid3")
 
-// Slime Gibs
-/obj/effect/decal/cleanable/blood/gibs/slime
-	desc = "They look gooey and gruesome."
-	gibs_reagent_id = /datum/reagent/liquidgibs/slime
-	gibs_bloodtype = "GEL"
-
-/obj/effect/decal/cleanable/blood/gibs/slime/Initialize(mapload, list/datum/disease/diseases)
-	. = ..()
-	update_icon()
-
-/obj/effect/decal/cleanable/blood/gibs/slime/update_icon()
-	add_atom_colour(body_colors, FIXED_COLOUR_PRIORITY)
-	cut_overlays()
-	var/mutable_appearance/guts = mutable_appearance(icon, "[icon_state]s_guts")
-	guts.appearance_flags = RESET_COLOR
-	guts.color = body_colors
-	add_overlay(guts)
-	var/mutable_appearance/flesh = mutable_appearance(icon, "[icon_state]_flesh")
-	flesh.appearance_flags = RESET_COLOR
-	flesh.color = body_colors
-	add_overlay(flesh)
-
-/obj/effect/decal/cleanable/blood/gibs/slime/up
-	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6","gibup1","gibup1","gibup1")
-
-/obj/effect/decal/cleanable/blood/gibs/slime/down
-	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6","gibdown1","gibdown1","gibdown1")
-
-/obj/effect/decal/cleanable/blood/gibs/slime/body
-	random_icon_states = list("gibhead", "gibtorso")
-
-/obj/effect/decal/cleanable/blood/gibs/slime/torso
-	random_icon_states = list("gibtorso")
-
-/obj/effect/decal/cleanable/blood/gibs/slime/limb
-	random_icon_states = list("gibleg", "gibarm")
-
-/obj/effect/decal/cleanable/blood/gibs/slime/core
-	random_icon_states = list("gibmid1", "gibmid2", "gibmid3")
-
 /obj/effect/decal/cleanable/blood/gibs/synth
 	desc = "They look sludgy and disgusting."
 	gibs_reagent_id = /datum/reagent/liquidgibs/synth

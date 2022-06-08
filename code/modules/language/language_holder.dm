@@ -260,17 +260,6 @@ Key procs
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/dwarf = list(LANGUAGE_ATOM))
 
-/datum/language_holder/jelly
-	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/slime = list(LANGUAGE_ATOM))
-	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-							/datum/language/slime = list(LANGUAGE_ATOM))
-
-/datum/language_holder/lightbringer
-	understood_languages = list(/datum/language/slime = list(LANGUAGE_ATOM))
-	spoken_languages = list(/datum/language/slime = list(LANGUAGE_ATOM))
-	blocked_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
-
 /datum/language_holder/lizard
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 								/datum/language/draconic = list(LANGUAGE_ATOM))
@@ -292,11 +281,6 @@ Key procs
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/mushroom = list(LANGUAGE_ATOM))
 
-/datum/language_holder/slime
-	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/slime = list(LANGUAGE_ATOM))
-	spoken_languages = list(/datum/language/slime = list(LANGUAGE_ATOM))
-
 /datum/language_holder/swarmer
 	understood_languages = list(/datum/language/swarmer = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/swarmer = list(LANGUAGE_ATOM))
@@ -313,12 +297,10 @@ Key procs
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 								/datum/language/machine = list(LANGUAGE_ATOM),
 								/datum/language/draconic = list(LANGUAGE_ATOM),
-								/datum/language/slime = list(LANGUAGE_ATOM),
 								/datum/language/dwarf = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/machine = list(LANGUAGE_ATOM),
 							/datum/language/draconic = list(LANGUAGE_ATOM),
-							/datum/language/slime = list(LANGUAGE_ATOM),
 							/datum/language/dwarf = list(LANGUAGE_ATOM))
 
 /datum/language_holder/venus

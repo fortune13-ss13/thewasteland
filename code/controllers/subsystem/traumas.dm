@@ -49,7 +49,7 @@ SUBSYSTEM_DEF(traumas)
 		"the supernatural"   = typecacheof(list(/mob/living/simple_animal/hostile/construct,
 		/mob/living/simple_animal/hostile/clockwork, /mob/living/simple_animal/drone/cogscarab,
 		/mob/living/simple_animal/revenant, /mob/living/simple_animal/shade)),
-		"aliens"   = typecacheof(list(/mob/living/carbon/alien, /mob/living/simple_animal/slime)),
+		"aliens"   = typecacheof(/mob/living/carbon/alien),
 		"conspiracies" = typecacheof(list(/mob/living/simple_animal/bot/secbot, /mob/living/simple_animal/bot/ed209, /mob/living/simple_animal/drone,
 		/mob/living/simple_animal/pet/penguin)),
 		"birds" = typecacheof(list(/mob/living/simple_animal/parrot, /mob/living/simple_animal/chick, /mob/living/simple_animal/chicken,
@@ -164,7 +164,7 @@ SUBSYSTEM_DEF(traumas)
 						"conspiracies" = typecacheof(list(/datum/species/abductor, /datum/species/lizard, /datum/species/synth, /datum/species/corporate)),
 						"robots" = typecacheof(list(/datum/species/android, /datum/species/synth)),
 						"the supernatural" = typecacheof(list(/datum/species/golem/clockwork, /datum/species/golem/runic)),
-						"aliens" = typecacheof(list(/datum/species/abductor, /datum/species/jelly, /datum/species/pod, /datum/species/shadow)),
+						"aliens" = typecacheof(list(/datum/species/abductor, /datum/species/pod, /datum/species/shadow)),
 						"anime" = typecacheof(list(/datum/species/human/felinid)),
 						"cats" = typecacheof(list(/datum/species/human/felinid)),
 						)

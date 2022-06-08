@@ -98,7 +98,7 @@
 	departmental_flags =  DEPARTMENTAL_FLAG_SERVICE | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/board/processor
-	name = "Machine Design (Food/Slime Processor Board)"
+	name = "Machine Design (Food Processor Board)"
 	desc = "The circuit board for a processing unit. Screwdriver the circuit to switch between food (default) or slime processing."
 	id = "processor"
 	build_path = /obj/item/circuitboard/machine/processor

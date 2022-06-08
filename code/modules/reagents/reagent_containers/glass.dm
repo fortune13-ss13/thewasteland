@@ -260,9 +260,6 @@
 /obj/item/reagent_containers/glass/beaker/sulphuric
 	list_reagents = list(/datum/reagent/toxin/acid = 50)
 
-/obj/item/reagent_containers/glass/beaker/slime
-	list_reagents = list(/datum/reagent/toxin/slimejelly = 50)
-
 /obj/item/reagent_containers/glass/beaker/large/styptic
 	name = "styptic reserve tank"
 	list_reagents = list(/datum/reagent/medicine/styptic_powder = 50)

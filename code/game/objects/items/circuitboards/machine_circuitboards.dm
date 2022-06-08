@@ -451,23 +451,6 @@
 		/obj/item/stock_parts/manipulator = 1)
 	needs_anchored = FALSE
 
-/obj/item/circuitboard/machine/processor/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/screwdriver))
-		if(build_path == /obj/machinery/processor)
-			name = "Slime Processor (Machine Board)"
-			build_path = /obj/machinery/processor/slime
-			to_chat(user, "<span class='notice'>Name protocols successfully updated.</span>")
-		else
-			name = "Food Processor (Machine Board)"
-			build_path = /obj/machinery/processor
-			to_chat(user, "<span class='notice'>Defaulting name protocols.</span>")
-	else
-		return ..()
-
-/obj/item/circuitboard/machine/processor/slime
-	name = "Slime Processor (Machine Board)"
-	build_path = /obj/machinery/processor/slime
-
 /obj/item/circuitboard/machine/smartfridge
 	name = "Smartfridge (Machine Board)"
 	build_path = /obj/machinery/smartfridge
@@ -475,7 +458,6 @@
 	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge = "plant produce",
 		/obj/machinery/smartfridge/food = "food",
 		/obj/machinery/smartfridge/drinks = "drinks",
-		/obj/machinery/smartfridge/extract = "slimes",
 		/obj/machinery/smartfridge/organ = "organs",
 		/obj/machinery/smartfridge/chemistry = "chems",
 		/obj/machinery/smartfridge/disks = "disks")

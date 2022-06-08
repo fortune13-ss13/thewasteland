@@ -61,7 +61,7 @@
 			if(initial(tempCheck.icon_state) != null) //check it's an actual usable item, in a hacky way
 				valid_items["[I]"] += rand(1,4)
 
-		if(ispath(I, /obj/item/construction/rcd) || ispath(I, /obj/item/grenade) || ispath(I, /obj/item/aicard) || ispath(I, /obj/item/storage/backpack/holding) || ispath(I, /obj/item/slime_extract) || ispath(I, /obj/item/onetankbomb) || ispath(I, /obj/item/transfer_valve))
+		if(ispath(I, /obj/item/construction/rcd) || ispath(I, /obj/item/grenade) || ispath(I, /obj/item/aicard) || ispath(I, /obj/item/storage/backpack/holding) || ispath(I, /obj/item/onetankbomb) || ispath(I, /obj/item/transfer_valve))
 			var/obj/item/tempCheck = I
 			if(initial(tempCheck.icon_state) != null)
 				critical_items += I

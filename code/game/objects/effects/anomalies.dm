@@ -279,32 +279,6 @@
 	if(istype(T))
 		T.atmos_spawn_air("o2=5;plasma=5;TEMP=1000")
 
-/obj/effect/anomaly/pyro/detonate()
-	INVOKE_ASYNC(src, .proc/makepyroslime)
-
-/obj/effect/anomaly/pyro/proc/makepyroslime()
-	var/turf/open/T = get_turf(src)
-	if(istype(T))
-		T.atmos_spawn_air("o2=500;plasma=500;TEMP=1000") //Make it hot and burny for the new slime
-	var/new_colour = pick("red", "orange")
-	var/mob/living/simple_animal/slime/S = new(T, new_colour)
-	S.rabid = TRUE
-	S.amount_grown = SLIME_EVOLUTION_THRESHOLD
-	S.Evolve()
-	var/list/candidates = pollCandidatesForMob("Do you want to play as a pyroclastic anomaly slime?",ROLE_SENTIENCE,null,ROLE_SENTIENCE,100,S,POLL_IGNORE_SENTIENCE_POTION)
-	if(length(candidates))
-		var/mob/C = pick(candidates)
-		message_admins("[key_name_admin(C)] has taken control of ([key_name_admin(S)])")
-		C.transfer_ckey(S, FALSE)
-		var/list/policies = CONFIG_GET(keyed_list/policyconfig)
-		var/policy = policies[POLICYCONFIG_ON_PYROCLASTIC_SENTIENT]
-		if(policy)
-			to_chat(S,policy)
-		return TRUE
-	else
-		message_admins("No ghosts were willing to take control of [ADMIN_LOOKUPFLW(S)])")
-		return FALSE
-
 /////////////////////
 
 /obj/effect/anomaly/bhole

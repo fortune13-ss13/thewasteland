@@ -253,23 +253,6 @@
 	result = /obj/item/reagent_containers/food/snacks/burger/fivealarm
 	subcategory = CAT_BURGER
 
-/datum/crafting_recipe/food/slimeburger
-	name = "Jelly burger"
-	reqs = list(
-		/datum/reagent/toxin/slimejelly = 5,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/jelly/slime
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/jellyburger
-	name = "Jelly burger"
-	reqs = list(
-			/datum/reagent/consumable/cherryjelly = 5,
-			/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/jelly/cherry
-	subcategory = CAT_BURGER
 /*
 /datum/crafting_recipe/food/xenoburger
 	name = "Xeno burger"

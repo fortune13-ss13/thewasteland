@@ -2891,7 +2891,7 @@ Records disabled until a use for them is found
 
 /datum/preferences/proc/post_copy_to(mob/living/carbon/human/character)
 	//if no legs, and not a paraplegic or a slime, give them a free wheelchair
-	if(modified_limbs[BODY_ZONE_L_LEG] == LOADOUT_LIMB_AMPUTATED && modified_limbs[BODY_ZONE_R_LEG] == LOADOUT_LIMB_AMPUTATED && !character.has_quirk(/datum/quirk/paraplegic) && !isjellyperson(character))
+	if(modified_limbs[BODY_ZONE_L_LEG] == LOADOUT_LIMB_AMPUTATED && modified_limbs[BODY_ZONE_R_LEG] == LOADOUT_LIMB_AMPUTATED && !character.has_quirk(/datum/quirk/paraplegic))
 		if(character.buckled)
 			character.buckled.unbuckle_mob(character)
 		var/turf/T = get_turf(character)

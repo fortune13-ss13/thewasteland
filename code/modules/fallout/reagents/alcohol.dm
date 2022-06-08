@@ -711,20 +711,12 @@
 			heating = 5 * TEMPERATURE_DAMAGE_COEFFICIENT
 			if(holder.has_reagent(/datum/reagent/cryostylane))
 				holder.remove_reagent(/datum/reagent/cryostylane, 5)
-			if(isslime(M))
-				heating = rand(5,20)
 		if(15 to 25)
 			heating = 10 * TEMPERATURE_DAMAGE_COEFFICIENT
-			if(isslime(M))
-				heating = rand(10,20)
 		if(25 to 35)
 			heating = 15 * TEMPERATURE_DAMAGE_COEFFICIENT
-			if(isslime(M))
-				heating = rand(15,20)
 		if(35 to INFINITY)
 			heating = 20 * TEMPERATURE_DAMAGE_COEFFICIENT
-			if(isslime(M))
-				heating = rand(20,25)
 	M.adjust_bodytemperature(heating)
 	M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER, 0)
 	if(prob(50))

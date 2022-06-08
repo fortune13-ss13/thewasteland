@@ -240,20 +240,6 @@
 	uses_overlay = FALSE
 	planetary_atmos = TRUE
 
-/turf/open/floor/bluespace
-	slowdown = -1
-	icon_state = "bluespace"
-	desc = "Through a series of micro-teleports these tiles let people move at incredible speeds."
-	floor_tile = /obj/item/stack/tile/bluespace
-
-
-/turf/open/floor/sepia
-	slowdown = 2
-	icon_state = "sepia"
-	desc = "Time seems to flow very slowly around these tiles."
-	floor_tile = /obj/item/stack/tile/sepia
-
-
 /turf/open/floor/bronze
 	name = "bronze floor"
 	desc = "Some heavy bronze tiles."
@@ -278,4 +264,4 @@
 	heavyfootstep = FOOTSTEP_RUST
 
 /turf/open/floor/plating/rust/rust_heretic_act()
-	return 
+	return

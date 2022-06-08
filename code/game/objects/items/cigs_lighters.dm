@@ -691,16 +691,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(get_temperature())
 		. = "<span class='notice'>After some fiddling, [user] manages to light [A] with [src].</span>"
 
-
-/obj/item/lighter/slime
-	name = "slime zippo"
-	desc = "A specialty zippo made from slimes and industry. Has a much hotter flame than normal."
-	icon_state = "slighter"
-	heat = 3000 //Blue flame!
-	light_color = LIGHT_COLOR_CYAN
-	overlay_state = "slime"
-	grind_results = list(/datum/reagent/iron = 1, /datum/reagent/fuel = 5, /datum/reagent/medicine/pyroxadone = 5)
-
 /obj/item/lighter/fusion
 	name = "fusion zippo"
 	desc = "A specialty zippo made from a microfusion cell and dedication. Has a much hotter flame than normal."

@@ -103,6 +103,5 @@ GLOBAL_LIST_INIT(all_types_bloods,list(
 		))
 
 GLOBAL_LIST_INIT(blood_reagent_types, list(
-		/datum/reagent/blood,
-		/datum/reagent/blood/jellyblood
+		/datum/reagent/blood
 		))

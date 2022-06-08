@@ -94,14 +94,6 @@
 		var/damage = .
 		return attack_threshold_check(damage, M.melee_damage_type)
 
-/mob/living/simple_animal/attack_slime(mob/living/simple_animal/slime/M)
-	. = ..()
-	if(.) //successful slime shock
-		var/damage = rand(15, 25)
-		if(M.is_adult)
-			damage = rand(20, 35)
-		return attack_threshold_check(damage)
-
 /mob/living/simple_animal/attack_drone(mob/living/simple_animal/drone/M)
 	if(M.a_intent == INTENT_HARM) //No kicking dogs even as a rogue drone. Use a weapon.
 		return

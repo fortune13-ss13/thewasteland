@@ -97,12 +97,6 @@
 		owner.set_heartattack(TRUE)
 		failed = TRUE
 
-obj/item/organ/heart/slime
-	name = "slime heart"
-	desc = "It seems we've gotten to the slimy core of the matter."
-	icon_state = "heart-s-on"
-	icon_base = "heart-s"
-
 /obj/item/organ/heart/cursed
 	name = "cursed heart"
 	desc = "A heart that, when inserted, will force you to pump it manually."

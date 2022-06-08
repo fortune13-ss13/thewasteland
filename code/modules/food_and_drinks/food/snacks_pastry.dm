@@ -49,6 +49,17 @@
 /obj/item/reagent_containers/food/snacks/donut/plain
 	//Use this donut ingame
 
+/obj/item/reagent_containers/food/snacks/donut/glaze
+	name = "glazed donut"
+	desc = "A sugar glazed donut."
+	icon_state = "donut_glaze"
+	bitesize = 10
+	bonus_reagents = list(/datum/reagent/consumable/sugar = 3)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/sugar = 8)
+	filling_color = "#FFFFFF"
+	tastes = list("donut" = 1, "salt" = 3)
+	foodtype = JUNKFOOD | GRAIN | FRIED | SUGAR
+
 /obj/item/reagent_containers/food/snacks/donut/chaos
 	name = "chaos donut"
 	desc = "Like life, it never quite tastes the same."
@@ -60,7 +71,7 @@
 	. = ..()
 	extra_reagent = pick(/datum/reagent/consumable/nutriment, /datum/reagent/consumable/capsaicin, /datum/reagent/consumable/frostoil,
 					/datum/reagent/drug/krokodil, /datum/reagent/toxin/plasma, /datum/reagent/consumable/coco,
-					/datum/reagent/toxin/slimejelly, /datum/reagent/consumable/banana, /datum/reagent/consumable/berryjuice,
+					/datum/reagent/consumable/banana, /datum/reagent/consumable/berryjuice,
 					/datum/reagent/medicine/omnizine)
 	reagents.add_reagent(extra_reagent, 3)
 
@@ -251,107 +262,6 @@
 	tastes = list("jelly" = 3, "donut" = 1, "fizzy tutti frutti" = 1)
 	is_decorated = TRUE
 	filling_color = "#803280"
-
-//////////////////////////SLIME DONUTS/////////////////////////
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly
-	name = "jelly donut"
-	desc = "You jelly?"
-	icon_state = "jelly"
-	extra_reagent = /datum/reagent/toxin/slimejelly
-	foodtype = JUNKFOOD | GRAIN | FRIED | TOXIC | SUGAR | BREAKFAST
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/plain
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/berry
-	name = "pink jelly donut"
-	desc = "Goes great with a soy latte."
-	icon_state = "jelly_pink"
-	bonus_reagents = list(/datum/reagent/consumable/berryjuice = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1) //Extra sprinkles to reward frosting
-	filling_color = "#E57d9A"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/trumpet
-	name = "spaceman's jelly donut"
-	desc = "Goes great with a cold beaker of malk."
-	icon_state = "jelly_purple"
-	bonus_reagents = list(/datum/reagent/medicine/polypyr = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
-	tastes = list("jelly" = 1, "donut" = 3, "violets" = 1)
-	is_decorated = TRUE
-	filling_color = "#8739BF"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/apple
-	name = "apple jelly donut"
-	desc = "Goes great with a shot of cinnamon schnapps."
-	icon_state = "jelly_green"
-	bonus_reagents = list(/datum/reagent/consumable/applejuice = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
-	tastes = list("jelly" = 1, "donut" = 3, "green apples" = 1)
-	is_decorated = TRUE
-	filling_color = "#6ABE30"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/caramel
-	name = "caramel jelly donut"
-	desc = "Goes great with a mug of hot coco."
-	icon_state = "jelly_beige"
-	bonus_reagents = list(/datum/reagent/consumable/caramel = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
-	tastes = list("jelly" = 1, "donut" = 3, "buttery sweetness" = 1)
-	is_decorated = TRUE
-	filling_color = "#D4AD5B"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/choco
-	name = "chocolate jelly donut"
-	desc = "Goes great with a glass of warm milk."
-	icon_state = "jelly_choc"
-	bonus_reagents = list(/datum/reagent/consumable/hot_coco = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1) //the coco reagent is just bitter.
-	tastes = list("jelly" = 1, "donut" = 4, "bitterness" = 1)
-	decorated_icon = "jelly_choc_sprinkles"
-	filling_color = "#4F230D"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/blumpkin
-	name = "blumpkin jelly donut"
-	desc = "Goes great with a mug of soothing drunken blumpkin."
-	icon_state = "jelly_blue"
-	bonus_reagents = list(/datum/reagent/consumable/blumpkinjuice = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
-	tastes = list("jelly" = 1, "donut" = 2, "blumpkin" = 1)
-	is_decorated = TRUE
-	filling_color = "#2788C4"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/bungo
-	name = "bungo jelly donut"
-	desc = "Goes great with a mason jar of hippie's delight."
-	icon_state = "jelly_yellow"
-	bonus_reagents = list(/datum/reagent/consumable/bungojuice = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
-	tastes = list("jelly" = 1, "donut" = 3, "tropical sweetness" = 1)
-	is_decorated = TRUE
-	filling_color = "#DEC128"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/matcha
-	name = "matcha jelly donut"
-	desc = "Goes great with a cup of tea."
-	icon_state = "jelly_olive"
-	bonus_reagents = list(/datum/reagent/toxin/teapowder = 3, /datum/reagent/consumable/sprinkles = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
-	tastes = list("jelly" = 1, "donut" = 3, "matcha" = 1)
-	is_decorated = TRUE
-	filling_color = "#879630"
-
-/obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly/laugh
-	name = "sweet pea jelly donut"
-	desc = "Goes great with a glass of Bastion Burbon!"
-	icon_state = "jelly_laugh"
-	bonus_reagents = list(/datum/reagent/consumable/laughter = 3)
-	tastes = list("jelly" = 3, "donut" = 1, "fizzy tutti frutti" = 1)
-	is_decorated = TRUE
-	filling_color = "#803280"
-
-/obj/item/reagent_containers/food/snacks/donut/glaze
-	name = "glazed donut"
-	desc = "A sugar glazed donut."
-	icon_state = "donut_glaze"
-	bitesize = 10
-	bonus_reagents = list(/datum/reagent/consumable/sugar = 3)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/sugar = 8)
-	filling_color = "#FFFFFF"
-	tastes = list("donut" = 1, "salt" = 3)
-	foodtype = JUNKFOOD | GRAIN | FRIED | SUGAR
 
 ////////////////////////////////////////////MUFFINS////////////////////////////////////////////
 

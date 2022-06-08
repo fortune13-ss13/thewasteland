@@ -121,14 +121,14 @@
 
 	body += {"
 		<br><br>
-		<a href='?src=[ref];jumpto=[ref_mob]'>Jump to</A> | 
-		<a href='?src=[ref];getmob=[ref_mob]'>Get</A> | 
+		<a href='?src=[ref];jumpto=[ref_mob]'>Jump to</A> |
+		<a href='?src=[ref];getmob=[ref_mob]'>Get</A> |
 		<a href='?src=[ref];sendmob=[ref_mob]'>Send To</A>
 
 		<br><br>
-		<a href='?src=[ref];traitor=[ref_mob]'>Traitor panel</A> | 
-		<a href='?src=[ref];narrateto=[ref_mob]'>Narrate to</A> | 
-		<a href='?src=[ref];subtlemessage=[ref_mob]'>Subtle message</A> | 
+		<a href='?src=[ref];traitor=[ref_mob]'>Traitor panel</A> |
+		<a href='?src=[ref];narrateto=[ref_mob]'>Narrate to</A> |
+		<a href='?src=[ref];subtlemessage=[ref_mob]'>Subtle message</A> |
 		<a href='?src=[ref];languagemenu=[ref_mob]'>Language Menu</A>
 		"}
 
@@ -164,7 +164,6 @@
 					<a href='?src=[ref];makeai=[ref_mob]'>Make AI</A>
 					<a href='?src=[ref];makerobot=[ref_mob]'>Make Robot</A>
 					<a href='?src=[ref];makealien=[ref_mob]'>Make Alien</A>
-					<a href='?src=[ref];makeslime=[ref_mob]'>Make Slime</A>
 					<a href='?src=[ref];makeblob=[ref_mob]'>Make Blob</A>
 					"}
 
@@ -173,32 +172,30 @@
 				transformation_options += "<a href='?src=[ref];makeanimal=[ref_mob]'>Re-Animalize</A>"
 			else
 				transformation_options += "<a href='?src=[ref];makeanimal=[ref_mob]'>Animalize</A>"
-			
+
 			body += transformation_options.Join(" | ")
 
 			body += {"
 				<br><br><b>Rudimentary transformation:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font>
-				<br> Special: <a href='?src=[ref];simplemake=observer;mob=[ref_mob]'>Observer</A> | 
+				<br> Special: <a href='?src=[ref];simplemake=observer;mob=[ref_mob]'>Observer</A> |
 				<a href='?src=[ref];simplemake=robot;mob=[ref_mob]'>Cyborg</A>
-				<br> Humanoid: <a href='?src=[ref];simplemake=human;mob=[ref_mob]'>Human</A> | 
+				<br> Humanoid: <a href='?src=[ref];simplemake=human;mob=[ref_mob]'>Human</A> |
 				<a href='?src=[ref];simplemake=monkey;mob=[ref_mob]'>Monkey</A>
-				<br> Alien: <a href='?src=[ref];simplemake=drone;mob=[ref_mob]'>Drone</A>, 
-				<a href='?src=[ref];simplemake=hunter;mob=[ref_mob]'>Hunter</A> | 
-				<a href='?src=[ref];simplemake=sentinel;mob=[ref_mob]'>Sentinel</A> | 
-				<a href='?src=[ref];simplemake=praetorian;mob=[ref_mob]'>Praetorian</A> | 
-				<a href='?src=[ref];simplemake=queen;mob=[ref_mob]'>Queen</A> | 
+				<br> Alien: <a href='?src=[ref];simplemake=drone;mob=[ref_mob]'>Drone</A>,
+				<a href='?src=[ref];simplemake=hunter;mob=[ref_mob]'>Hunter</A> |
+				<a href='?src=[ref];simplemake=sentinel;mob=[ref_mob]'>Sentinel</A> |
+				<a href='?src=[ref];simplemake=praetorian;mob=[ref_mob]'>Praetorian</A> |
+				<a href='?src=[ref];simplemake=queen;mob=[ref_mob]'>Queen</A> |
 				<a href='?src=[ref];simplemake=larva;mob=[ref_mob]'>Larva</A>
-				<br> Slime: <a href='?src=[ref];simplemake=slime;mob=[ref_mob]'>Baby</A> | 
-				<a href='?src=[ref];simplemake=adultslime;mob=[ref_mob]'>Adult</A>
-				<br> Pet: <a href='?src=[ref];simplemake=cat;mob=[ref_mob]'>Cat</A> | 
-				<a href='?src=[ref];simplemake=runtime;mob=[ref_mob]'>Runtime</A> | 
-				<a href='?src=[ref];simplemake=corgi;mob=[ref_mob]'>Corgi</A> | 
-				<a href='?src=[ref];simplemake=ian;mob=[ref_mob]'>Ian</A> | 
-				<a href='?src=[ref];simplemake=crab;mob=[ref_mob]'>Crab</A> | 
+				<br> Pet: <a href='?src=[ref];simplemake=cat;mob=[ref_mob]'>Cat</A> |
+				<a href='?src=[ref];simplemake=runtime;mob=[ref_mob]'>Runtime</A> |
+				<a href='?src=[ref];simplemake=corgi;mob=[ref_mob]'>Corgi</A> |
+				<a href='?src=[ref];simplemake=ian;mob=[ref_mob]'>Ian</A> |
+				<a href='?src=[ref];simplemake=crab;mob=[ref_mob]'>Crab</A> |
 				<a href='?src=[ref];simplemake=coffee;mob=[ref_mob]'>Coffee</A>
-				<br> Construct: <a href='?src=[ref];simplemake=constructarmored;mob=[ref_mob]'>Juggernaut</A> | 
-				<a href='?src=[ref];simplemake=constructbuilder;mob=[ref_mob]'>Artificer</A> | 
-				<a href='?src=[ref];simplemake=constructwraith;mob=[ref_mob]'>Wraith</A> | 
+				<br> Construct: <a href='?src=[ref];simplemake=constructarmored;mob=[ref_mob]'>Juggernaut</A> |
+				<a href='?src=[ref];simplemake=constructbuilder;mob=[ref_mob]'>Artificer</A> |
+				<a href='?src=[ref];simplemake=constructwraith;mob=[ref_mob]'>Wraith</A> |
 				<a href='?src=[ref];simplemake=shade;mob=[ref_mob]'>Shade</A>
 				"}
 
@@ -206,13 +203,13 @@
 			<br><br>
 			<b>Other actions:</b>
 			<br>
-			<a href='?src=[ref];forcespeech=[ref_mob]'>Forcesay</A> | 
-			<a href='?src=[ref];tdome1=[ref_mob]'>Thunderdome 1</A> | 
-			<a href='?src=[ref];tdome2=[ref_mob]'>Thunderdome 2</A> | 
-			<a href='?src=[ref];tdomeadmin=[ref_mob]'>Thunderdome Admin</A> | 
-			<a href='?src=[ref];tdomeobserve=[ref_mob]'>Thunderdome Observer</A> | 
-			<a href='?src=[ref];makementor=[M.ckey]'>Make mentor</A> | 
-			<a href='?src=[ref];removementor=[M.ckey]'>Remove mentor</A> | 
+			<a href='?src=[ref];forcespeech=[ref_mob]'>Forcesay</A> |
+			<a href='?src=[ref];tdome1=[ref_mob]'>Thunderdome 1</A> |
+			<a href='?src=[ref];tdome2=[ref_mob]'>Thunderdome 2</A> |
+			<a href='?src=[ref];tdomeadmin=[ref_mob]'>Thunderdome Admin</A> |
+			<a href='?src=[ref];tdomeobserve=[ref_mob]'>Thunderdome Observer</A> |
+			<a href='?src=[ref];makementor=[M.ckey]'>Make mentor</A> |
+			<a href='?src=[ref];removementor=[M.ckey]'>Remove mentor</A> |
 			<a href='?src=[ref];makeeligible=[ref_mob]'>Allow reentering round</A>
 			"}
 	body += "<br></body></html>"

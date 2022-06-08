@@ -249,18 +249,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	foodtype = GRAIN | MEAT
 
-/obj/item/reagent_containers/food/snacks/burger/jelly
-	name = "jelly burger"
-	desc = "Culinary delight..?"
-	icon_state = "jellyburger"
-	tastes = list("bun" = 4, "jelly" = 2)
-	foodtype = GRAIN | MEAT
-
-/obj/item/reagent_containers/food/snacks/burger/jelly/slime
-	bonus_reagents = list(/datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/nutriment/vitamin = 5)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/nutriment/vitamin = 1)
-	foodtype = GRAIN | TOXIC
-
 /obj/item/reagent_containers/food/snacks/burger/jelly/cherry
 	bonus_reagents = list(/datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/nutriment/vitamin = 5)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/nutriment/vitamin = 1)

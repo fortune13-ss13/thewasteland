@@ -163,30 +163,6 @@
 			ForceContractDisease(D)
 		return TRUE
 
-/mob/living/carbon/attack_slime(mob/living/simple_animal/slime/M)
-	. = ..()
-	if(!.)
-		return
-	if(M.powerlevel > 0)
-		var/stunprob = M.powerlevel * 7 + 10  // 17 at level 1, 80 at level 10
-		if(prob(stunprob))
-			M.powerlevel -= 3
-			if(M.powerlevel < 0)
-				M.powerlevel = 0
-
-			visible_message("<span class='danger'>The [M.name] has shocked [src]!</span>", \
-			"<span class='userdanger'>The [M.name] has shocked you!</span>", target = M,
-			target_message = "<span class='danger'>You have shocked [src]!</span>")
-
-			do_sparks(5, TRUE, src)
-			var/power = M.powerlevel + rand(0,3)
-			DefaultCombatKnockdown(power*20)
-			if(stuttering < power)
-				stuttering = power
-			if (prob(stunprob) && M.powerlevel >= 8)
-				adjustFireLoss(M.powerlevel * rand(6,10))
-				updatehealth()
-
 /mob/living/carbon/proc/dismembering_strike(mob/living/attacker, dam_zone)
 	if(!attacker.limb_destroyer)
 		return dam_zone

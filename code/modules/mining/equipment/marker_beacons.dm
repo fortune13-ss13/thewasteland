@@ -4,7 +4,6 @@ GLOBAL_LIST_INIT(marker_beacon_colors, list(
 "Burgundy" = LIGHT_COLOR_FLARE,
 "Bronze" = LIGHT_COLOR_ORANGE,
 "Yellow" = LIGHT_COLOR_YELLOW,
-"Lime" = LIGHT_COLOR_SLIME_LAMP,
 "Olive" = LIGHT_COLOR_GREEN,
 "Jade" = LIGHT_COLOR_BLUEGREEN,
 "Teal" = LIGHT_COLOR_LIGHT_CYAN,

@@ -384,23 +384,6 @@
 		return TRUE
 	return FALSE
 
-// -------------------------------------
-// Xenobiology Slime-Extract Smartfridge
-// -------------------------------------
-/obj/machinery/smartfridge/extract
-	name = "smart slime extract storage"
-	desc = "A refrigerated storage unit for slime extracts."
-
-/obj/machinery/smartfridge/extract/accept_check(obj/item/O)
-	if(istype(O, /obj/item/slime_extract))
-		return TRUE
-	if(istype(O, /obj/item/slime_scanner))
-		return TRUE
-	return FALSE
-
-/obj/machinery/smartfridge/extract/preloaded
-	initial_contents = list(/obj/item/slime_scanner = 2)
-
 // -------------------------
 // Organ Surgery Smartfridge
 // -------------------------
@@ -771,7 +754,7 @@
 		/obj/item/reagent_containers/food/drinks/bottle/hcider = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/grappa = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/sake = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/fernet = 1,		
+		/obj/item/reagent_containers/food/drinks/bottle/fernet = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/amaretto = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/hooch = 1,)
 

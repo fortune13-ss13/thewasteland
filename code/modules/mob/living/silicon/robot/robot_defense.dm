@@ -45,23 +45,6 @@
 					"<span class='danger'>You have forced back [src]!</span>")
 			playsound(loc, 'sound/weapons/pierce.ogg', 50, 1, -1)
 
-/mob/living/silicon/robot/attack_slime(mob/living/simple_animal/slime/M)
-	. = ..()
-	if(!.) //unsuccessful slime shock
-		return
-	var/stunprob = M.powerlevel * 7 + 10
-	var/damage = M.powerlevel * rand(6,10)
-	if(prob(stunprob) && M.powerlevel >= 8)
-		flash_act(affect_silicon = TRUE) //my borg eyes!
-	if(M.is_adult)
-		damage += rand(10, 20)
-	else
-		damage += rand(2, 17)
-	adjustBruteLoss(damage)
-	updatehealth()
-
-	return
-
 /mob/living/silicon/robot/on_attack_hand(mob/living/carbon/human/user)
 	add_fingerprint(user)
 	if(opened && !wiresexposed && cell && !issilicon(user))

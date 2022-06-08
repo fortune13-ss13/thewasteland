@@ -19,10 +19,7 @@
 //I'm concerned this is too weak, but I also don't want deathmixes.
 //TODO: liver damage, 100+ heart
 /datum/reagent/impure/fermiTox/on_mob_life(mob/living/carbon/C, method)
-	if(C.dna && istype(C.dna.species, /datum/species/jelly))
-		C.adjustToxLoss(-2)
-	else
-		C.adjustToxLoss(2)
+	C.adjustToxLoss(2)
 	..()
 
 /datum/reagent/impure/impurestimpak

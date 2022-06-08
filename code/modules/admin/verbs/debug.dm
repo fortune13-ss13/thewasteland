@@ -120,21 +120,6 @@
 	else
 		alert("Invalid mob")
 
-/client/proc/cmd_admin_slimeize(mob/M in GLOB.mob_list)
-	set category = "Admin.Fun"
-	set name = "Make slime"
-
-	if(!SSticker.HasRoundStarted())
-		alert("Wait until the game starts")
-		return
-	if(ishuman(M))
-		INVOKE_ASYNC(M, /mob/living/carbon/human/proc/slimeize)
-		SSblackbox.record_feedback("tally", "admin_verb", 1, "Make Slime") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-		log_admin("[key_name(usr)] made [key_name(M)] into a slime at [AREACOORD(M)].")
-		message_admins("<span class='adminnotice'>[key_name_admin(usr)] made [ADMIN_LOOKUPFLW(M)] into a slime.</span>")
-	else
-		alert("Invalid mob")
-
 //TODO: merge the vievars version into this or something maybe mayhaps
 /client/proc/cmd_debug_del_all(object as text)
 	set category = "Debug"

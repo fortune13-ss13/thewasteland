@@ -20,31 +20,6 @@ SUBSYSTEM_DEF(economy)
 	var/monster_bounty = 150
 	var/mood_bounty = 100
 	var/techweb_bounty = 250
-	var/slime_bounty = list("grey" = 10,
-							// tier 1
-							"orange" = 100,
-							"metal" = 100,
-							"blue" = 100,
-							"purple" = 100,
-							// tier 2
-							"dark purple" = 500,
-							"dark blue" = 500,
-							"green" = 500,
-							"silver" = 500,
-							"gold" = 500,
-							"yellow" = 500,
-							"red" = 500,
-							"pink" = 500,
-							// tier 3
-							"cerulean" = 750,
-							"sepia" = 750,
-							"bluespace" = 750,
-							"pyrite" = 750,
-							"light pink" = 750,
-							"oil" = 750,
-							"adamantine" = 750,
-							// tier 4
-							"rainbow" = 1000)
 	var/list/bank_accounts = list() //List of normal accounts (not department accounts)
 	var/list/dep_cards = list()
 
@@ -122,16 +97,6 @@ SUBSYSTEM_DEF(economy)
 	var/datum/bank_account/D = get_dep_account(ACCOUNT_SEC)
 	if(D)
 		D.adjust_money(min(cash_to_grant, MAX_GRANT_SECMEDSRV))
-
-/datum/controller/subsystem/economy/proc/sci_payout()
-	var/science_bounty = 0
-	for(var/mob/living/simple_animal/slime/S in GLOB.mob_list)
-		if(S.stat == DEAD)
-			continue
-		science_bounty += slime_bounty[S.colour]
-	var/datum/bank_account/D = get_dep_account(ACCOUNT_SCI)
-	if(D)
-		D.adjust_money(min(science_bounty, MAX_GRANT_SCI))
 
 /datum/controller/subsystem/economy/proc/civ_payout()
 	var/civ_cash = (rand(1,5) * 500)

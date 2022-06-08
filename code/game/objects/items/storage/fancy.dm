@@ -173,7 +173,7 @@
 		return
 	if(!length(user.get_empty_held_indexes()))
 		to_chat(user, "<span class='warning'>Your hands are full!</span>")
-		return	
+		return
 	var/obj/item/lighter/L = locate() in contents
 	if(L)
 		SEND_SIGNAL(src, COMSIG_TRY_STORAGE_TAKE, L, user)
@@ -278,12 +278,6 @@
 	desc = "Is your weight slowing you down? Having trouble running away from gravitational singularities? Can't stop stuffing your mouth? Smoke Shady Jim's Super Slims and watch all that fat burn away. Guaranteed results!"
 	icon_state = "shadyjim"
 	spawn_type = /obj/item/clothing/mask/cigarette/shadyjims
-
-/obj/item/storage/fancy/cigarettes/cigpack_xeno
-	name = "\improper Xeno Filtered packet"
-	desc = "Loaded with 100% pure slime. And also nicotine."
-	icon_state = "slime"
-	spawn_type = /obj/item/clothing/mask/cigarette/xeno
 
 /obj/item/storage/fancy/cigarettes/cigpack_cannabis
 	name = "\improper Freak Brothers' Special packet"

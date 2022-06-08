@@ -955,7 +955,6 @@ obj/item/storage/box/stingbangs
 							  /obj/item/reagent_containers/food/snacks/meat/rawcrab,
 							  /obj/item/reagent_containers/food/snacks/meat/slab/goliath,
 							  /obj/item/reagent_containers/food/snacks/meat/slab/chicken,
-							  /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime,
 							  /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/golem,
 							  /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
 							  /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/skeleton,
@@ -1437,7 +1436,7 @@ list(/obj/item/stack/sheet/metal = 20,
 /obj/item/storage/box/shopkeeper
 	name = "Shopkeeper's blueprints"
 	desc = "a box of the shopkeeper's blueprints"
-	
+
 
 /obj/item/storage/box/shopkeeper/PopulateContents()
 	for(var/i in 1 to 4)
@@ -1453,6 +1452,6 @@ list(/obj/item/stack/sheet/metal = 20,
 							/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 							)
 		new randomgun(src)
-	
+
 
 

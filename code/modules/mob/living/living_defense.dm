@@ -294,36 +294,6 @@
 		..()
 	return FALSE
 
-/mob/living/attack_slime(mob/living/simple_animal/slime/M)
-	if(!SSticker.HasRoundStarted())
-		to_chat(M, "You cannot attack people before the game has started.")
-		return
-
-	if(M.buckled)
-		if(M in buckled_mobs)
-			M.Feedstop()
-		return // can't attack while eating!
-
-	if(HAS_TRAIT(M, TRAIT_PACIFISM))
-		to_chat(M, "<span class='notice'>You don't want to hurt anyone!</span>")
-		return FALSE
-
-	var/damage = rand(5, 35)
-	if(M.is_adult)
-		damage = rand(20, 40)
-	var/list/block_return = list()
-	if(mob_run_block(M, damage, "the [M.name]", ATTACK_TYPE_MELEE, null, M, check_zone(M.zone_selected), block_return) & BLOCK_SUCCESS)
-		return FALSE
-	damage = block_calculate_resultant_damage(damage, block_return)
-
-	if (stat != DEAD)
-		log_combat(M, src, "attacked")
-		M.do_attack_animation(src)
-		visible_message("<span class='danger'>The [M.name] glomps [src]!</span>", \
-				"<span class='userdanger'>The [M.name] glomps [src]!</span>", null, COMBAT_MESSAGE_RANGE, null,
-				M, "<span class='danger'>You glomp [src]!</span>")
-		return TRUE
-
 /mob/living/attack_animal(mob/living/simple_animal/M)
 	M.face_atom(src)
 	if(!M.CheckActionCooldown(CLICK_CD_MELEE))

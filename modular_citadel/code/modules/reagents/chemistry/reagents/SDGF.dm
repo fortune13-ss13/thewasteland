@@ -127,7 +127,7 @@ IMPORTANT FACTORS TO CONSIDER WHILE BALANCING
 					else
 						to_chat(SM, "<span class='userdanger'>While you find your newfound existence strange, you share the same memories as [M.real_name]. However, You find yourself indifferent to the goals you previously had, and take more interest in your newfound independence, but still have an indescribable care for the safety of your original.</span>")
 					log_reagent("FERMICHEM: [SM] ckey: [SM.key]'s is not bound by [M] ckey [M.key]'s will, and is free to determine their own goals, while respecting and acting as their origin.")
-	
+
 				to_chat(SM, "<span class='warning'>You feel a strange sensation building in your mind as you realise there's two of you. Before you get a chance to think about it, you suddenly split from your old body, and find yourself face to face with your original, a perfect clone of your origin.</span>")
 				SM.client?.change_view(CONFIG_GET(string/default_view))
 				to_chat(M, "<span class='warning'>You feel a strange sensation building in your mind as you realise there's two of you. Before you get a chance to think about it, a mass splits from you, and find yourself face to face with yourself.</span>")
@@ -382,15 +382,8 @@ IMPORTANT FACTORS TO CONSIDER WHILE BALANCING
 			else//easier to deal with
 				to_chat(M, "<span class='notice'>The pentetic acid seems to have stopped the decay for now, clumping up the cells into a horrifying tumour!</span>")
 				M.set_nutrition(startHunger - 500)
-				var/mob/living/simple_animal/slime/S = new(get_turf(M.loc),"grey") //TODO: replace slime as own simplemob/add tumour slime cores for science/chemistry interplay
-				S.damage_coeff = list(BRUTE = ((1 / volume)**0.1) , BURN = 2, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1)
-				S.name = "Living teratoma"
-				S.real_name = "Living teratoma"//horrifying!!
-				S.rabid = 1//Make them an angery boi
-				M.reagents.remove_reagent(type, volume)
 				to_chat(M, "<span class='warning'>A large glob of the tumour suddenly splits itself from your body. You feel grossed out and slimey...</span>")
 				log_reagent("FERMICHEM: [M] ckey: [M.key]'s clone has become a horrifying teratoma instead")
-				SSblackbox.record_feedback("tally", "fermi_chem", 1, "Zombie clones made!")
 
 		if(87 to INFINITY)
 			M.adjustToxLoss(2, 0)

@@ -5,7 +5,6 @@ CONTAINS:
 T-RAY
 HEALTH ANALYZER
 GAS ANALYZER
-SLIME SCANNER
 NANITE SCANNER
 GENETICS SCANNER
 
@@ -628,9 +627,9 @@ GENETICS SCANNER
 	var/turf/location = get_turf(user)
 	if(!istype(location))
 		return
-	
+
 	scan_turf(user, location)
-	
+
 /obj/item/analyzer/AltClick(mob/user) //Barometer output for measuring when the next storm happens
 	. = ..()
 
@@ -802,65 +801,6 @@ GENETICS SCANNER
 	// Tool act didn't scan it, so let's get it's turf.
 	var/turf/location = get_turf(target)
 	scan_turf(user, location)
-
-//slime scanner
-
-/obj/item/slime_scanner
-	name = "slime scanner"
-	desc = "A device that analyzes a slime's internal composition and measures its stats."
-	icon = 'icons/obj/device.dmi'
-	icon_state = "adv_spectrometer"
-	item_state = "analyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	flags_1 = CONDUCT_1
-	throwforce = 0
-	throw_speed = 3
-	throw_range = 7
-	custom_materials = list(/datum/material/iron=30, /datum/material/glass=20)
-
-/obj/item/slime_scanner/attack(mob/living/M, mob/living/user)
-	if(user.stat || user.eye_blind)
-		return
-	if (!isslime(M))
-		to_chat(user, "<span class='warning'>This device can only scan slimes!</span>")
-		return
-	var/mob/living/simple_animal/slime/T = M
-	slime_scan(T, user)
-
-/proc/slime_scan(mob/living/simple_animal/slime/T, mob/living/user)
-	to_chat(user, "========================")
-	to_chat(user, "<b>Slime scan results:</b>")
-	to_chat(user, "<span class='notice'>[T.colour] [T.is_adult ? "adult" : "baby"] slime</span>")
-	to_chat(user, "Nutrition: [T.nutrition]/[T.get_max_nutrition()]")
-	if (T.nutrition < T.get_starve_nutrition())
-		to_chat(user, "<span class='warning'>Warning: slime is starving!</span>")
-	else if (T.nutrition < T.get_hunger_nutrition())
-		to_chat(user, "<span class='warning'>Warning: slime is hungry</span>")
-	to_chat(user, "Electric change strength: [T.powerlevel]")
-	to_chat(user, "Health: [round(T.health/T.maxHealth,0.01)*100]%")
-	if (T.slime_mutation[4] == T.colour)
-		to_chat(user, "This slime does not evolve any further.")
-	else
-		if (T.slime_mutation[3] == T.slime_mutation[4])
-			if (T.slime_mutation[2] == T.slime_mutation[1])
-				to_chat(user, "Possible mutation: [T.slime_mutation[3]]")
-				to_chat(user, "Genetic destability: [T.mutation_chance/2] % chance of mutation on splitting")
-			else
-				to_chat(user, "Possible mutations: [T.slime_mutation[1]], [T.slime_mutation[2]], [T.slime_mutation[3]] (x2)")
-				to_chat(user, "Genetic destability: [T.mutation_chance] % chance of mutation on splitting")
-		else
-			to_chat(user, "Possible mutations: [T.slime_mutation[1]], [T.slime_mutation[2]], [T.slime_mutation[3]], [T.slime_mutation[4]]")
-			to_chat(user, "Genetic destability: [T.mutation_chance] % chance of mutation on splitting")
-	if (T.cores > 1)
-		to_chat(user, "Multiple cores detected")
-	to_chat(user, "Growth progress: [T.amount_grown]/[SLIME_EVOLUTION_THRESHOLD]")
-	if(T.effectmod)
-		to_chat(user, "<span class='notice'>Core mutation in progress: [T.effectmod]</span>")
-		to_chat(user, "<span class = 'notice'>Progress in core mutation: [T.applied] / [SLIME_EXTRACT_CROSSING_REQUIRED]</span>")
-	to_chat(user, "========================")
-
 
 /obj/item/nanite_scanner
 	name = "nanite scanner"

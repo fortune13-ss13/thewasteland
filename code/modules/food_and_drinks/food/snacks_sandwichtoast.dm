@@ -48,11 +48,6 @@
 	tastes = list("bread" = 1, "jelly" = 1)
 	foodtype = GRAIN
 
-/obj/item/reagent_containers/food/snacks/jellysandwich/slime
-	bonus_reagents = list(/datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	foodtype  = GRAIN | TOXIC
-
 /obj/item/reagent_containers/food/snacks/jellysandwich/cherry
 	bonus_reagents = list(/datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -68,11 +63,6 @@
 	bonus_reagents = list(/datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/peanut_butter = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/peanut_butter = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	foodtype = GRAIN | FRUIT
-
-/obj/item/reagent_containers/food/snacks/jellysandwich/pbj/slime
-	bonus_reagents = list(/datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/peanut_butter = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/peanut_butter = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	foodtype  = GRAIN | TOXIC
 
 /obj/item/reagent_containers/food/snacks/peanutbutter_sandwich
 	name = "peanut butter sandwich"
@@ -107,11 +97,6 @@
 	bonus_reagents = list(/datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/cherryjelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	foodtype = GRAIN | FRUIT | SUGAR
-
-/obj/item/reagent_containers/food/snacks/jelliedtoast/slime
-	bonus_reagents = list(/datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/toxin/slimejelly = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	foodtype = GRAIN | TOXIC | SUGAR
 
 /obj/item/reagent_containers/food/snacks/peanut_buttertoast
 	name = "peanut butter toast"

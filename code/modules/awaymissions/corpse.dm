@@ -277,15 +277,6 @@
 	M.death() //call the AI's death proc
 	qdel(src)
 
-/obj/effect/mob_spawn/slime
-	mob_type = 	/mob/living/simple_animal/slime
-	var/mobcolour = "grey"
-	icon = 'icons/mob/slimes.dmi'
-	icon_state = "grey baby slime" //sets the icon in the map editor
-
-/obj/effect/mob_spawn/slime/equip(mob/living/simple_animal/slime/S)
-	S.colour = mobcolour
-
 /obj/effect/mob_spawn/human/facehugger/create(ckey, name) //Creates a squashed facehugger
 	var/obj/item/clothing/mask/facehugger/O = new(src.loc) //variable O is a new facehugger at the location of the landmark
 	O.name = src.name

@@ -140,27 +140,6 @@
 		gibdirections = list(list(NORTH, NORTHEAST, NORTHWEST),list(SOUTH, SOUTHEAST, SOUTHWEST),list(WEST, NORTHWEST, SOUTHWEST),list(EAST, NORTHEAST, SOUTHEAST), GLOB.alldirs, list())
 	return ..()
 
-/obj/effect/gibspawner/slime
-	gibtypes = list(/obj/effect/decal/cleanable/blood/gibs/slime/up, /obj/effect/decal/cleanable/blood/gibs/slime/down, /obj/effect/decal/cleanable/blood/gibs/slime, /obj/effect/decal/cleanable/blood/gibs/slime, /obj/effect/decal/cleanable/blood/gibs/slime/body, /obj/effect/decal/cleanable/blood/gibs/slime/limb, /obj/effect/decal/cleanable/blood/gibs/slime/core)
-	gibamounts = list(1, 1, 1, 1, 1, 1, 1)
-	gib_mob_type = /mob/living/carbon/human/species/roundstartslime
-	gib_mob_species = /datum/species/jelly/roundstartslime
-	sound_vol = 50
-
-/obj/effect/gibspawner/slime/Initialize()
-	if(!gibdirections.len)
-		gibdirections = list(list(NORTH, NORTHEAST, NORTHWEST),list(SOUTH, SOUTHEAST, SOUTHWEST),list(WEST, NORTHWEST, SOUTHWEST),list(EAST, NORTHEAST, SOUTHEAST), GLOB.alldirs, GLOB.alldirs, list())
-	return ..()
-
-/obj/effect/gibspawner/slime/bodypartless //only the gibs that don't look like actual full bodyparts (except torso).
-	gibtypes = list(/obj/effect/decal/cleanable/blood/gibs/slime, /obj/effect/decal/cleanable/blood/gibs/slime/core, /obj/effect/decal/cleanable/blood/gibs/slime, /obj/effect/decal/cleanable/blood/gibs/slime/core, /obj/effect/decal/cleanable/blood/gibs/slime, /obj/effect/decal/cleanable/blood/gibs/slime/torso)
-	gibamounts = list(1, 1, 1, 1, 1, 1)
-
-/obj/effect/gibspawner/slime/bodypartless/Initialize()
-	if(!gibdirections.len)
-		gibdirections = list(list(NORTH, NORTHEAST, NORTHWEST),list(SOUTH, SOUTHEAST, SOUTHWEST),list(WEST, NORTHWEST, SOUTHWEST),list(EAST, NORTHEAST, SOUTHEAST), GLOB.alldirs, list())
-	return ..()
-
 /obj/effect/gibspawner/ipc
 	gibtypes = list(/obj/effect/decal/cleanable/blood/gibs/ipc/up, /obj/effect/decal/cleanable/blood/gibs/ipc/down, /obj/effect/decal/cleanable/blood/gibs/ipc, /obj/effect/decal/cleanable/blood/gibs/ipc, /obj/effect/decal/cleanable/blood/gibs/ipc/body, /obj/effect/decal/cleanable/blood/gibs/ipc/limb, /obj/effect/decal/cleanable/blood/gibs/ipc/core)
 	gibamounts = list(1, 1, 1, 1, 1, 1, 1)

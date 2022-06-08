@@ -379,10 +379,6 @@
 	if(!blockOrCounter(M, M))
 		return ..()
 
-/mob/living/simple_animal/hostile/clockwork/marauder/guardian/attack_slime(mob/living/simple_animal/slime/M)
-	if(!blockOrCounter(M, M))
-		return ..()
-
 /mob/living/simple_animal/hostile/clockwork/marauder/guardian/attack_hand(mob/living/carbon/human/M)
 	if(!blockOrCounter(M, M))
 		return ..()

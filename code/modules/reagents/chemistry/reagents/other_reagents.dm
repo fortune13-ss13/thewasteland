@@ -49,7 +49,7 @@
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
 		var/blood_id = C.get_blood_id()
-		if((HAS_TRAIT(C, TRAIT_NOMARROW) || blood_id == /datum/reagent/blood || blood_id == /datum/reagent/blood/jellyblood) && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
+		if((HAS_TRAIT(C, TRAIT_NOMARROW) || blood_id == /datum/reagent/blood) && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
 			C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM * C.blood_ratio)
 			// we don't care about bloodtype here, we're just refilling the mob
 
@@ -157,15 +157,6 @@
 	value = REAGENT_VALUE_NONE
 	thirst_factor = THIRST_FACTOR * 5 // Not a good water substance
 
-/datum/reagent/blood/jellyblood
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_SLIME, "blood_type"="GEL","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	name = "Slime Jelly Blood"
-	description = "A gooey semi-liquid produced from one of the deadliest lifeforms in existence. SO REAL."
-	color = BLOOD_COLOR_SLIME
-	taste_description = "slime"
-	taste_mult = 1.3
-	pH = 4
-
 /datum/reagent/blood/tomato
 	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_HUMAN, "blood_type"="SY","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
 	name = "Tomato Blood"
@@ -174,17 +165,6 @@
 	pH = 7.45
 	value = REAGENT_VALUE_NONE
 	thirst_factor = THIRST_FACTOR * 12
-
-/datum/reagent/blood/jellyblood/on_mob_life(mob/living/carbon/M)
-	if(prob(10))
-		if(M.dna?.species?.exotic_bloodtype != "GEL")
-			to_chat(M, "<span class='danger'>Your insides are burning!</span>")
-		M.adjustToxLoss(rand(20,60)*REM, 0)
-		. = 1
-	else if(prob(40) && isjellyperson(M))
-		M.heal_bodypart_damage(2*REM)
-		. = 1
-	..()
 
 /datum/reagent/liquidgibs
 	name = "Liquid gibs"
@@ -204,14 +184,6 @@
 	shot_glass_icon_state = "shotglassgreen"
 	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_XENO, "blood_type"="X*","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
 	pH = 2.5
-
-/datum/reagent/liquidgibs/slime
-	name = "Slime sludge"
-	color = BLOOD_COLOR_SLIME
-	taste_description = "slime"
-	shot_glass_icon_state = "shotglassgreen"
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_SLIME, "blood_type"="GEL","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	pH = 4
 
 /datum/reagent/liquidgibs/synth
 	name = "Synthetic sludge"
@@ -276,9 +248,6 @@
 
 	if(reac_volume >= 5)
 		T.MakeSlippery(TURF_WET_WATER, 10 SECONDS, min(reac_volume*1.5 SECONDS, 60 SECONDS))
-
-	for(var/mob/living/simple_animal/slime/M in T)
-		M.apply_water()
 
 	var/obj/effect/hotspot/hotspot = (locate(/obj/effect/hotspot) in T)
 	if(hotspot && !isspaceturf(T))
@@ -753,14 +722,6 @@
 	else
 		to_chat(H, "<span class='danger'>The pain vanishes suddenly. You feel no different.</span>")
 
-
-/datum/reagent/mutationtoxin/classic //The one from plasma on green slimes
-	name = "Mutation Toxin"
-	description = "A corruptive toxin."
-	color = "#13BC5E" // rgb: 19, 188, 94
-	race = /datum/species/jelly/slime
-	mutationtext = "<span class='danger'>The pain subsides. Your whole body feels like slime.</span>"
-
 /datum/reagent/mutationtoxin/lizard
 	name = "Lizard Mutation Toxin"
 	description = "A lizarding toxin."
@@ -788,28 +749,6 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/pod
 	mutationtext = "<span class='danger'>The pain subsides. You feel... plantlike.</span>"
-
-/datum/reagent/mutationtoxin/jelly
-	name = "Imperfect Mutation Toxin"
-	description = "An jellyfying toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/jelly
-	mutationtext = "<span class='danger'>The pain subsides. You feel... wobbly.</span>"
-
-/datum/reagent/mutationtoxin/jelly/on_mob_life(mob/living/carbon/human/H)
-	if(isjellyperson(H))
-		to_chat(H, "<span class='warning'>Your jelly shifts and morphs, turning you into another subspecies!</span>")
-		var/species_type = pick(subtypesof(/datum/species/jelly))
-		H.set_species(species_type)
-		holder.del_reagent(type)
-		return TRUE
-	if(current_cycle >= cycles_to_turn) //overwrite since we want subtypes of jelly
-		var/datum/species/species_type = pick(subtypesof(race))
-		H.set_species(species_type)
-		holder.del_reagent(type)
-		to_chat(H, "<span class='warning'>You've become \a [initial(species_type.name)]!</span>")
-		return TRUE
-	return ..()
 
 /datum/reagent/mutationtoxin/golem
 	name = "Golem Mutation Toxin"
@@ -892,44 +831,6 @@
 	race = /datum/species/plasmaman
 	mutationtext = "<span class='danger'>The pain subsides. You feel... flammable.</span>"
 
-/datum/reagent/slime_toxin
-	name = "Slime Mutation Toxin"
-	description = "A toxin that turns organic material into slime."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	taste_description = "slime"
-	metabolization_rate = 0.2
-	value = REAGENT_VALUE_RARE
-
-/datum/reagent/slime_toxin/on_mob_life(mob/living/carbon/human/H)
-	..()
-	if(!istype(H))
-		return
-	if(!H.dna || !H.dna.species || !(H.mob_biotypes & MOB_ORGANIC))
-		return
-
-	if(isjellyperson(H))
-		to_chat(H, "<span class='warning'>Your jelly shifts and morphs, turning you into another subspecies!</span>")
-		var/species_type = pick(subtypesof(/datum/species/jelly))
-		H.set_species(species_type)
-		H.reagents.del_reagent(type)
-
-	switch(current_cycle)
-		if(1 to 6)
-			if(prob(10))
-				to_chat(H, "<span class='warning'>[pick("You don't feel very well.", "Your skin feels a little slimy.")]</span>")
-		if(7 to 12)
-			if(prob(10))
-				to_chat(H, "<span class='warning'>[pick("Your appendages are melting away.", "Your limbs begin to lose their shape.")]</span>")
-		if(13 to 19)
-			if(prob(10))
-				to_chat(H, "<span class='warning'>[pick("You feel your internal organs turning into slime.", "You feel very slimelike.")]</span>")
-		if(20 to INFINITY)
-			var/species_type = pick(subtypesof(/datum/species/jelly))
-			H.set_species(species_type)
-			H.reagents.del_reagent(type)
-			to_chat(H, "<span class='warning'>You've become \a jellyperson!</span>")
-
-
 /datum/reagent/mulligan
 	name = "Mulligan Toxin"
 	description = "This toxin will rapidly change the DNA of human beings. Commonly used by Syndicate spies and assassins in need of an emergency ID change."
@@ -946,20 +847,6 @@
 	to_chat(H, "<span class='warning'><b>You grit your teeth in pain as your body rapidly mutates!</b></span>")
 	H.visible_message("<b>[H]</b> suddenly transforms!")
 	randomize_human(H)
-
-
-/datum/reagent/aslimetoxin
-	name = "Advanced Mutation Toxin"
-	description = "An advanced corruptive toxin produced by slimes."
-	color = "#13BC5E" // rgb: 19, 188, 94
-	taste_description = "slime"
-	value = REAGENT_VALUE_VERY_RARE
-	ghoulfriendly = TRUE
-
-/datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
-	if(method != TOUCH)
-		L.ForceContractDisease(new /datum/disease/transformation/slime(), FALSE, TRUE)
-
 
 /datum/reagent/gluttonytoxin
 	name = "Gluttony's Blessing"
@@ -1439,9 +1326,6 @@
 		T.clean_blood()
 		for(var/obj/effect/decal/cleanable/C in T)
 			qdel(C)
-
-		for(var/mob/living/simple_animal/slime/M in T)
-			M.adjustToxLoss(rand(5,10))
 
 /datum/reagent/abraxo_cleaner/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	if(method == TOUCH || method == VAPOR)

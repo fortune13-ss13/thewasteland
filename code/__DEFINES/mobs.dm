@@ -15,7 +15,6 @@
 #define BLOOD_VOLUME_MAX_LETHAL		2150
 #define BLOOD_VOLUME_EXCESS			2100
 #define BLOOD_VOLUME_MAXIMUM		2000
-#define BLOOD_VOLUME_SLIME_SPLIT	1120
 #define BLOOD_VOLUME_NORMAL			560
 #define BLOOD_VOLUME_SAFE			475
 #define BLOOD_VOLUME_OKAY			336
@@ -192,21 +191,6 @@
 #define ETHEREAL_CHARGE_FULL 100
 #define ETHEREAL_CHARGE_OVERLOAD 125
 #define ETHEREAL_CHARGE_DANGEROUS 150
-
-//Slime evolution threshold. Controls how fast slimes can split/grow
-#define SLIME_EVOLUTION_THRESHOLD 10
-
-//Slime extract crossing. Controls how many extracts is required to feed to a slime to core-cross.
-#define SLIME_EXTRACT_CROSSING_REQUIRED 10
-
-//Slime commands defines
-#define SLIME_FRIENDSHIP_FOLLOW 			3 //Min friendship to order it to follow
-#define SLIME_FRIENDSHIP_STOPEAT 			5 //Min friendship to order it to stop eating someone
-#define SLIME_FRIENDSHIP_STOPEAT_NOANGRY	7 //Min friendship to order it to stop eating someone without it losing friendship
-#define SLIME_FRIENDSHIP_STOPCHASE			4 //Min friendship to order it to stop chasing someone (their target)
-#define SLIME_FRIENDSHIP_STOPCHASE_NOANGRY	6 //Min friendship to order it to stop chasing someone (their target) without it losing friendship
-#define SLIME_FRIENDSHIP_STAY				3 //Min friendship to order it to stay
-#define SLIME_FRIENDSHIP_ATTACK				8 //Min friendship to order it to attack
 
 //Sentience types, to prevent things like sentience potions from giving bosses sentience
 #define SENTIENCE_ORGANIC 1

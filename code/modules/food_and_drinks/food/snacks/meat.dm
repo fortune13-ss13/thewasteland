@@ -88,14 +88,6 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/meat/rawcutlet/chicken
 	tastes = list("chicken" = 1)
 
-/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime
-	icon_state = "slimemeat"
-	desc = "Because jello wasn't offensive enough to vegans."
-	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/toxin/slimejelly = 3)
-	filling_color = "#00FFFF"
-	tastes = list("slime" = 1, "jelly" = 1)
-	foodtype = MEAT | RAW | TOXIC
-
 /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/golem
 	icon_state = "golemmeat"
 	desc = "Edible rocks, welcome to the future."
