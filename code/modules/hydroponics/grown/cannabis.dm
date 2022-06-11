@@ -25,6 +25,8 @@
 	species = "megacannabis"
 	plantname = "Rainbow Weed"
 	product = /obj/item/reagent_containers/food/snacks/grown/cannabis/rainbow
+	icon_grow = "megacannabis-grow"
+	icon_dead = "megacannabis-dead"
 	mutatelist = list(/obj/item/seeds/cannabis/ultimate)
 	reagents_add = list(/datum/reagent/toxin/mindbreaker = 0.15, /datum/reagent/toxin/lipolicide = 0.35)
 	rarity = 40
@@ -36,6 +38,8 @@
 	species = "blackcannabis"
 	plantname = "Deathweed"
 	product = /obj/item/reagent_containers/food/snacks/grown/cannabis/death
+	icon_grow = "blackcannabis-grow"
+	icon_dead = "blackcannabis-dead"
 	mutatelist = list(/obj/item/seeds/cannabis/white)
 	reagents_add = list(/datum/reagent/toxin/cyanide = 0.35, /datum/reagent/drug/space_drugs = 0.15, /datum/reagent/toxin/lipolicide = 0.15)
 	rarity = 40
@@ -47,6 +51,8 @@
 	species = "whitecannabis"
 	plantname = "Lifeweed"
 	product = /obj/item/reagent_containers/food/snacks/grown/cannabis/white
+	icon_grow = "whitecannabis-grow"
+	icon_dead = "whitecannabis-dead"
 	mutatelist = list()
 	reagents_add = list(/datum/reagent/medicine/omnizine = 0.35, /datum/reagent/drug/space_drugs = 0.15, /datum/reagent/toxin/lipolicide = 0.15)
 	rarity = 40
@@ -58,6 +64,8 @@
 	species = "ocannabis"
 	plantname = "Omega Weed"
 	product = /obj/item/reagent_containers/food/snacks/grown/cannabis/ultimate
+	icon_grow = "ocannabis-grow"
+	icon_dead = "ocannabis-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/glow/green)
 	mutatelist = list()
 	reagents_add = list(/datum/reagent/drug/space_drugs = 0.3,
