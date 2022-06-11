@@ -196,7 +196,7 @@
 		if(ACCESS_CARGO)
 			return "Cargo Bay"
 		if(ACCESS_CARGO_BOT)
-			return "Delivery Chutes"
+			return "Oasis Shop"
 		if(ACCESS_SECURITY)
 			return "Security Equipment"
 		if(ACCESS_BRIG)
