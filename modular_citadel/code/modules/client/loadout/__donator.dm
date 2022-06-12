@@ -83,28 +83,14 @@
 	new /obj/item/ammo_box/magazine/m556/rifle/assault(src)
 	new /obj/item/toy/figure/dsquad(src)
 
-
 /datum/gear/donator/kits/canadian
 	name = "Canadian"
 	path = /obj/item/storage/box/large/custom_kit/canadian
 	ckeywhitelist = list("comradesocks")
-/*
-/obj/item/storage/box/large/custom_kit/vaktus/PopulateContents()
-	new /obj/item/clothing/suit/armor/f13/combat/riotpolice(src)
-	new /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert(src)
-	new /obj/item/storage/belt/military(src)
-	new /obj/item/melee/onehanded/knife/survival(src)
 
-
-/datum/gear/donator/kits/vaktus
-	name = "Vaks goods"
-	path = /obj/item/storage/box/large/custom_kit/vaktus
-	ckeywhitelist = list("vaktus4")
-*/
-/obj/item/storage/box/large/custom_kit/burningcold/PopulateContents()
-	new /obj/item/clothing/gloves/f13/leather/fingerless(src)
-	new /obj/item/clothing/mask/bandana/blue(src)
-	new /obj/item/clothing/suit/armored/light/kit/punk(src)
+/obj/item/storage/box/large/custom_kit/daemon/PopulateContents()
+	new /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon(src)
+	new /obj/item/clothing/suit/armor/f13/legion/heavy/daemon(src)
 
 // DaemonTinadel Custom Vet Decanus
 /datum/gear/donator/kits/daemon
@@ -112,9 +98,10 @@
 	path = /obj/item/storage/box/large/custom_kit/daemon
 	ckeywhitelist = list("DaemonTinadel")
 
-/obj/item/storage/box/large/custom_kit/daemon/PopulateContents()
-	new /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon(src)
-	new /obj/item/clothing/suit/armor/f13/legion/heavy/daemon(src)
+/obj/item/storage/box/large/custom_kit/burningcold/PopulateContents()
+	new /obj/item/clothing/gloves/f13/leather/fingerless(src)
+	new /obj/item/clothing/mask/bandana/blue(src)
+	new /obj/item/clothing/suit/armored/light/kit/punk(src)
 
 /datum/gear/donator/kits/burningcold
 	name = "Burnings Goods"
@@ -124,9 +111,8 @@
 /obj/item/storage/box/large/custom_kit/pineapple/PopulateContents()
 	new /obj/item/clothing/suit/armor/f13/combat/environmental(src)
 	new /obj/item/clothing/head/helmet/f13/combat/environmental(src)
-	new /obj/item/gun/energy/laser/plasma/glock(src)
+	new /obj/item/gun/energy/laser/plasma/pistol/worn(src)
 	new /obj/item/stock_parts/cell/ammo/ec(src)
-
 
 /datum/gear/donator/kits/pineapple
 	name = "Silvers goods"
@@ -134,7 +120,7 @@
 	ckeywhitelist = list("silveredsoul")
 
 /obj/item/storage/box/large/custom_kit/evosolus/PopulateContents()
-	new /obj/item/melee/powered/ripper(src)
+	new /obj/item/melee/onehanded/knife/cosmicheated(src)
 	new /obj/item/clothing/suit/armor/f13/harbingermantle(src)
 	new /obj/item/clothing/head/beret/ncr/ncr_recon(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
@@ -170,7 +156,7 @@
 /obj/item/storage/box/large/custom_kit/flaka/PopulateContents()
 	new /obj/item/clothing/head/f13/enclave/hood(src)
 	new /obj/item/clothing/suit/armor/f13/enclavetrenchcoat/gunny(src)
-	new /obj/item/melee/powered/ripper(src)
+	new /obj/item/melee/onehanded/knife/cosmicheated(src)
 
 /datum/gear/donator/kits/flaka
 	name = "Flaka stuff"
@@ -187,7 +173,7 @@
 
 /obj/item/storage/box/large/custom_kit/sunny/PopulateContents()
 	new /obj/item/clothing/mask/gas/sechailer(src)
-	new /obj/item/gun/energy/laser/plasma/glock(src)
+	new /obj/item/gun/energy/laser/plasma/pistol/worn(src)
 	new /obj/item/clothing/shoes/kindleKicks(src)
 	new /obj/item/storage/belt/military/assault(src)
 	new /obj/item/clothing/suit/armor/f13/combat/khan(src)
@@ -200,7 +186,7 @@
 /obj/item/storage/box/large/custom_kit/sokkxx/PopulateContents()
 	new /obj/item/modkit/sokkxxarmor(src)
 	new /obj/item/modkit/sokkxxhelm(src)
-	new /obj/item/gun/energy/laser/plasma(src)
+	new /obj/item/gun/energy/laser/plasma/pistol/worn(src)
 
 /datum/gear/donator/kits/sokkxx
 	name = "Sokkxx's belongings"
