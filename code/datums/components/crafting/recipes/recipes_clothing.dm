@@ -777,17 +777,17 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/legionsalvaged
 	name = "Legion Salvaged Power Armor"
 	result = /obj/item/clothing/suit/armor/f13/legion/legionsalvaged
-	reqs = list(/obj/item/clothing/suit/armor/f13/power_armor = 1,
+	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_availible = FALSE
 
-/datum/crafting_recipe/legionsalvagedhelmet
+/datum/crafting_recipe/legionsalvagedhelmet_ncr
 	name = "Legion Salvaged Power Armor Helmet"
 	result = /obj/item/clothing/head/helmet/f13/legion/legionsalvagedhelmet
-	reqs = list(/obj/item/clothing/head/helmet/f13/power_armor = 1,
+	reqs = list(obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr= 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
@@ -797,7 +797,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/legionsalvaged_ncr
 	name = "Legion Salvaged Power Armor"
 	result = /obj/item/clothing/suit/armor/f13/legion/legionsalvaged
-	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_NCR = 1,
+	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
@@ -807,27 +807,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/legionsalvaged_salvaged
 	name = "Legion Salvaged Power Armor"
 	result = /obj/item/clothing/suit/armor/f13/legion/legionsalvaged
-	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_t45 = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_availible = FALSE
-
-/datum/crafting_recipe/legionriot_broken
-	name = "Legion Riot Armor"
-	result = /obj/item/clothing/suit/armor/f13/legion/legionriot
-	reqs = list(/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_availible = FALSE
-
-/datum/crafting_recipe/legionriothelmet_broken
-	name = "Legion Riot Helmet"
-	result = /obj/item/clothing/head/helmet/f13/legion/legionriothelmet
-	reqs = list(/obj/item/clothing/head/helmet/f13/rangerbroken = 1,
+	reqs = list(/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
