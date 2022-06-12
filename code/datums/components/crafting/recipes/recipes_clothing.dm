@@ -787,7 +787,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/legionsalvagedhelmet
 	name = "Legion Salvaged Power Armor Helmet"
 	result = /obj/item/clothing/head/helmet/f13/legion/legionsalvagedhelmet
-	reqs = list(obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
+	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
