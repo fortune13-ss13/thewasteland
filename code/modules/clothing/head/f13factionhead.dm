@@ -268,6 +268,10 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 25, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 
+/obj/item/clothing/head/helmet/f13/enclave/marine/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
 	name = "remnant combat helmet"
 	desc = "A dark helmet with yellow lenses, used commonly in espionage or shadow ops."
@@ -744,6 +748,7 @@
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3, /obj/item/clothing/glasses/night/polarizing = 1)
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/Initialize()

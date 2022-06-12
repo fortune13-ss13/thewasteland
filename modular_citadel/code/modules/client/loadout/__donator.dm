@@ -53,7 +53,7 @@
 	new /obj/item/gun/ballistic/automatic/pistol/beretta(src)
 	new /obj/item/ammo_box/magazine/m9mmds(src)
 	new /obj/item/ammo_box/magazine/m9mmds(src)
-	new /obj/item/ammo_box/magazine/m9mmds(src)
+	new /obj/item/twohanded/sledgehammer/simple(src)
 	new /obj/item/melee/rapier(src)
 
 /datum/gear/donator/kits/sugga

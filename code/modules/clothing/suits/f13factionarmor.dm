@@ -577,7 +577,8 @@
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	slowdown = 0.01
-	armor = list("melee" = 40, "bullet" = 50, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 40, "energy" = 25, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/Initialize()
