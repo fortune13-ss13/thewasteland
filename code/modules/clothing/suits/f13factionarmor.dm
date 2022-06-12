@@ -335,7 +335,7 @@
 	
 /obj/item/clothing/suit/armor/f13/legion/legionsalvaged
 	name = "legion heavy armor"
-	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a suit of power armor, still retaining great mobility with added protection."
+	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a suit of power armor, sacrificing speed and bullet protection for greater protection against laser-based weaponary."
 	icon_state = "legion_palacent"
 	item_state = "legion_palacent"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 50)
