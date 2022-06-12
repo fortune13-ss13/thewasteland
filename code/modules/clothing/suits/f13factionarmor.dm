@@ -332,6 +332,23 @@
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
 	icon_state = "legion_combat2"
 	item_state = "legion_combat2"
+	
+/obj/item/clothing/suit/armor/f13/legion/legionsalvaged
+	name = "legion heavy armor"
+	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a suit of power armor, still retaining great mobility with added protection."
+	icon_state = "legion_palacent"
+	item_state = "legion_palacent"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 40, "bomb" = 35, "bio" = 25, "rads" = 20, "fire" = 50, "acid" = 30, "wound" = 65)
+	slowdown = 0.35
+	
+/obj/item/clothing/suit/armor/f13/legion/legionriot
+	name = "legion riot armor"
+	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a set of riot armor, still retaining great mobility with added protection."
+	icon_state = "legion_rangercent"
+	item_state = "legion_rangercent"
+	armor = list("melee" = 30, "bullet" = 45, "laser" = 35, "energy" = 35,  "bomb" = 25, "bio" = 25, "rad" = 20, "fire" = 50, "acid" = 0, "wound" = 60)
+	slowdown = 0.1
 
 /obj/item/clothing/suit/armor/f13/slavelabor
 	name = "old leather strips"
