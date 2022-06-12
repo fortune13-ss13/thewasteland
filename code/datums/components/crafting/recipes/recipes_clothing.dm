@@ -782,7 +782,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legionsalvagedhelmet
 	name = "Legion Salvaged Power Armor Helmet"
@@ -792,7 +792,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legionsalvaged_ncr
 	name = "Legion Salvaged Power Armor"
@@ -802,7 +802,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legionsalvagedhelmet_ncr
 	name = "Legion Salvaged Power Armor Helmet"
@@ -812,7 +812,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legionriot_ncr
 	name = "Legion Riot Armor"
@@ -822,7 +822,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legionriothelmet_ncr
 	name = "Legion Riot Helmet"
@@ -832,7 +832,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	always_availible = FALSE
+	always_available = FALSE
 
 ///////////
 //HELMETS//
