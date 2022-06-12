@@ -477,7 +477,10 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = "A pre-war riot helmet, repurposed and painted in the colors of Caesar's Legion."
 	icon_state = "legion-riot"
 	item_state = "legion-riot"
-	armor = list("melee" = 30, "bullet" = 45, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	
 /obj/item/clothing/head/helmet/f13/legion/legionsalvagedhelmet
 	name = "legion heavy helmet"
