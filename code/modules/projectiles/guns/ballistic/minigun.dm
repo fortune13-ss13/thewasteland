@@ -23,7 +23,7 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/minigunpackbal/process()
+/obj/item/minigunpackbal5mm/process()
 	overheat = max(0, overheat - heat_diffusion)
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
@@ -134,7 +134,7 @@
 	else
 		qdel(src)
 
-/obj/item/gun/ballistic/minigunbal/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
+/obj/item/gun/ballistic/minigunbal5mm/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	if(ammo_pack)
 		if(ammo_pack.overheat < ammo_pack.overheat_max)
 			ammo_pack.overheat += burst_size
