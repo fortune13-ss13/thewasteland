@@ -477,14 +477,14 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = "A pre-war riot helmet, repurposed and painted in the colors of Caesar's Legion."
 	icon_state = "legion-riot"
 	item_state = "legion-riot"
-	armor = list("melee" = 30, "bullet" = 45, "laser" = 35, "energy" = 35,  "bomb" = 25, "bio" = 25, "rad" = 20, "fire" = 50, "acid" = 0, "wound" = 60)
+	armor = list("melee" = 30, "bullet" = 45, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
 	
 /obj/item/clothing/head/helmet/f13/legion/legionsalvagedhelmet
 	name = "legion heavy helmet"
 	desc = "A once-operational power armor helmet, repurposed by the Legion into a symbol of its might, sporting a bronze visor."
 	icon_state = "legion-heavy"
 	item_state = "legion-heavy"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 40, "bomb" = 35, "bio" = 25, "rads" = 20, "fire" = 50, "acid" = 30, "wound" = 65)
+	armor = list("melee" = 60, "bullet" = 45, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 50)
 
 /obj/item/clothing/head/f13/servant
 	name = "servant headwear"
