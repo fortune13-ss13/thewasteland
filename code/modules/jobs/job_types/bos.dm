@@ -113,6 +113,7 @@ Head Paladin
 	/datum/outfit/loadout/sentheavy, //Gauss + Glock 
 	/datum/outfit/loadout/sentgat, // Gatling + aer7
 	/datum/outfit/loadout/sentmini, // Minigun + aer7
+	/datum/outfit/loadout/sentmini, // aer12 + fist
 	)
 
 	outfit = /datum/outfit/job/bos/f13sentinel
@@ -191,6 +192,13 @@ Head Paladin
 		/obj/item/stock_parts/cell/ammo/ec=2,
 	)
 
+/datum/outfit/loadout/senttac
+	name = "Tactical Head Paladin"
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/aer12 = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
+		/obj/item/melee/powerfist/f13 = 1,
+		)
 
 /*
 Head Scribe
