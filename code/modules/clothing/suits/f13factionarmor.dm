@@ -338,8 +338,7 @@
 	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a suit of power armor, still retaining great mobility with added protection."
 	icon_state = "legion_palacent"
 	item_state = "legion_palacent"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 40, "bomb" = 35, "bio" = 25, "rads" = 20, "fire" = 50, "acid" = 30, "wound" = 65)
+	armor = list("melee" = 60, "bullet" = 45, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 50)
 	slowdown = 0.35
 	
 /obj/item/clothing/suit/armor/f13/legion/legionriot
@@ -347,7 +346,7 @@
 	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a set of riot armor, still retaining great mobility with added protection."
 	icon_state = "legion_rangercent"
 	item_state = "legion_rangercent"
-	armor = list("melee" = 30, "bullet" = 45, "laser" = 35, "energy" = 35,  "bomb" = 25, "bio" = 25, "rad" = 20, "fire" = 50, "acid" = 0, "wound" = 60)
+	armor = list("melee" = 30, "bullet" = 45, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
 	slowdown = 0.1
 
 /obj/item/clothing/suit/armor/f13/slavelabor
