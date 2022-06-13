@@ -426,12 +426,6 @@
 	icon_state = "t60helmet[light_on]"
 	item_state = "t60helmet[light_on]"
 
-/obj/item/clothing/head/helmet/f13/power_armor/t60/pineapple
-	name = "degraded T-60a power helmet"
-	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player. This suit is heavily degraded." //reskin of head knight armor
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
-	salvaged_type = null
-
 /obj/item/clothing/head/helmet/f13/power_armor/excavator
 	name = "excavator power helmet"
 	desc = "The helmet of the excavator power armor suit."
@@ -463,7 +457,7 @@
 	item_state = "AltumHelm"
 
 /obj/item/clothing/head/helmet/f13/power_armor/x02helmet/sokkxxhelm
-	name =  "experimental X02 power armor helmet"
+	name = "experimental X02 power armor helmet"
 	desc = "A modified X02 helmet that has had it's circuitry replaced with parts from an old functional tesla coil. This one seemingly doesn't discharge in the immediate area."
 	icon_state = "pinkhelmet"
 	item_state = "pinkhelmet"
