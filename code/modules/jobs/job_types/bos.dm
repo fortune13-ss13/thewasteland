@@ -376,7 +376,7 @@ Star Paladin
 		/datum/outfit/loadout/spaladina, //5mm minigun and aer7
 		/datum/outfit/loadout/spaladinb, //WT-550 and ripper
 		/datum/outfit/loadout/spaladinc,  //Aer12 and ripper
-		/datum/outfit/loadout/spaladind //Sledge and fist
+		/datum/outfit/loadout/spaladind //Sledge, fist and aer7
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
