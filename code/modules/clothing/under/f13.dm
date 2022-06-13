@@ -1864,3 +1864,13 @@
 	desc = "Funny little tracksuit for a funny little man."
 	icon_state = "tracksuit"
 	item_state = "tracksuit"
+
+/// Custom items
+
+/obj/item/clothing/under/f13/blackdress/maus
+	name = "gothic lolita officer dress"
+	desc = "An eccentric dress that resembles a historic officer uniform."
+	icon_state = "mausgothlolidress"
+	item_state = "mausgothlolidress"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE

@@ -84,8 +84,8 @@
 	ckeywhitelist = list("daemontinadel")
 	
 /obj/item/storage/box/large/custom_kit/pineapple/PopulateContents()
-	new /obj/item/clothing/suit/armor/f13/combat/environmental(src)
-	new /obj/item/clothing/head/helmet/f13/combat/environmental(src)
+	new /obj/item/modkit/environmentalarmor(src)
+	new /obj/item/modkit/environmentalhelm(src)
 
 /datum/gear/donator/kits/pineapple
 	name = "Silvers goods"
@@ -158,6 +158,17 @@
 	name = "Sokkxx's belongings"
 	path = /obj/item/storage/box/large/custom_kit/sokkxx
 	ckeywhitelist = list("sokkxx")
+
+/obj/item/storage/box/large/custom_kit/maus/PopulateContents()
+	new /obj/item/clothing/under/f13/blackdress/maus(src)
+	new /obj/item/storage/belt/military/assault/legion/maus(src)
+
+/datum/gear/donator/kits/maus
+	name = "Maus's belongings"
+	path = /obj/item/storage/box/large/custom_kit/maus
+	ckeywhitelist = list("thottierisette")
+
+/// Pug stuff below
 
 /obj/item/storage/box/large/custom_kit/pug/PopulateContents()
 	new /obj/item/melee/transforming/cleaving_saw/old_rusty(src)
