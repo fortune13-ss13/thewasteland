@@ -111,6 +111,30 @@
 	target_items = list(/obj/item/clothing/suit/armor/f13/combat/ncr_patrol)
 	result_item = /obj/item/clothing/suit/armor/f13/modif_r_vest
 
+/// Donator Modkits (You can use these if you are an public donator if you ask)
+
+/obj/item/modkit/khanbat
+	name = "khanbat armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/combat)
+	result_item = /obj/item/clothing/suit/armor/f13/combat/khan
+
+/obj/item/modkit/khanbatreinforced
+	name = "khanbat reinforced armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/combat/mk2)
+	result_item = /obj/item/clothing/suit/armor/f13/combat/mk2/khan
+
+/obj/item/modkit/rangerpatrolhat
+	name = "ranger patrol hat modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/ncr/rangercombat)
+	result_item = /obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma
+
+/obj/item/modkit/degancustomarmor
+	name = "sniper riot gear armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/combat/ncr_patrol)
+	result_item = /obj/item/clothing/suit/armor/f13/rangercombat/degancustom
+
+/// Personal Donator Modkits (dont use unless you are them or have permission)
+
 /obj/item/modkit/sokkxxhelm
 	name = "experimental x02 power armor helmet conversion kit"
 	target_items = list(/obj/item/clothing/head/helmet/f13/power_armor/x02helmet)
@@ -120,3 +144,18 @@
 	name = "experimental x02 power armor suit conversion kit"
 	target_items = list(/obj/item/clothing/suit/armor/f13/power_armor/x02)
 	result_item = /obj/item/clothing/suit/armor/f13/power_armor/x02/sokkxx
+
+/obj/item/modkit/enclavencotrenchcoat
+	name = "enclave nco trenchcoat modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/enclavetrenchcoat)
+	result_item = /obj/item/clothing/suit/armor/f13/enclavetrenchcoat/gunny
+
+/obj/item/modkit/daemonhelm
+	name = "daemon helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/legion/vet/decan)
+	result_item = /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon
+
+/obj/item/modkit/daemonarmor
+	name = "daemon armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/legion/heavy)
+	result_item = /obj/item/clothing/suit/armor/f13/legion/heavy/daemon
