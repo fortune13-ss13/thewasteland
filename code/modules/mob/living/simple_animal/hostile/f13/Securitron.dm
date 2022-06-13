@@ -163,27 +163,12 @@
 	extra_projectiles = 4
 	health = 2000
 	maxHealth = 2000 //CHONK
-	obj_damage = 300
 	retreat_distance = 0
-	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/strong
 	speed = 3
 	rapid_melee = 3
 	color = "#597FEE"
 	aggro_vision_range = 15
-	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 //cannot self-harm with it's explosion spam, emp doesnt 1shot
-
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong/bullet_act(obj/item/projectile/Proj)
-	if(!Proj)
-		CRASH("[src] sentrybot invoked bullet_act() without a projectile")
-	if(prob(10) && health > 1)
-		visible_message(SPAN_DANGER("\The [src] releases a defensive explosive!"))
-		explosion(get_turf(src),-1,-1,2, flame_range = 4) //perish, mortal - explosion size identical to craftable IED
-	if(prob(80) || Proj.damage > 20) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want sentrybots to be
-		return ..()
-	else
-		visible_message(SPAN_DANGER("\The [Proj] bounces off \the [src]'s armor plating!"))
-		return FALSE
 
 /obj/item/projectile/beam/laser/pistol/ultraweak/strong
 	damage = 14
