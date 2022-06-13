@@ -332,6 +332,22 @@
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
 	icon_state = "legion_combat2"
 	item_state = "legion_combat2"
+	
+/obj/item/clothing/suit/armor/f13/legion/legionsalvaged
+	name = "legion heavy armor"
+	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a suit of power armor, sacrificing speed and bullet protection for greater protection against laser-based weaponary."
+	icon_state = "legion_palacent"
+	item_state = "legion_palacent"
+	armor = list("melee" = 60, "bullet" = 45, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 50)
+	slowdown = 1
+	
+/obj/item/clothing/suit/armor/f13/legion/legionriot
+	name = "legion riot armor"
+	desc = "It's a set of standard legion armor strengthened using numerous parts taken from a set of riot armor, still retaining great mobility with added protection."
+	icon_state = "legion_rangercent"
+	item_state = "legion_rangercent"
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	slowdown = 0.1
 
 /obj/item/clothing/suit/armor/f13/slavelabor
 	name = "old leather strips"
@@ -577,7 +593,8 @@
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	slowdown = 0.01
-	armor = list("melee" = 40, "bullet" = 50, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 40, "energy" = 25, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/Initialize()

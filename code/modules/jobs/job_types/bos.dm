@@ -109,10 +109,11 @@ Head Paladin
 	exp_requirements = 1500
 
 	loadout_options = list(
-	/datum/outfit/loadout/sentstand, //Tribeam laser + Hardened T-51
-	/datum/outfit/loadout/sentheavy, //Gauss + Glock + Hardened T-51
-	/datum/outfit/loadout/sentgat, // Gatling + Hardened T-51
-	/datum/outfit/loadout/sentmini, // Minigun + Hardened T-51
+	/datum/outfit/loadout/sentstand, //Tribeam laser 
+	/datum/outfit/loadout/sentheavy, //Gauss + Glock 
+	/datum/outfit/loadout/sentgat, // Gatling 
+	/datum/outfit/loadout/sentmini, // Minigun 
+	/datum/outfit/loadout/sentfront, //aer12 
 	)
 
 	outfit = /datum/outfit/job/bos/f13sentinel
@@ -141,6 +142,8 @@ Head Paladin
 	name = "Head Paladin"
 	jobtype = /datum/job/bos/f13sentinel
 	uniform = 		/obj/item/clothing/under/f13/recon
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51green
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
 	glasses =       /obj/item/clothing/glasses/sunglasses
 	belt =			/obj/item/storage/belt/military/assault
@@ -158,8 +161,6 @@ Head Paladin
 
 /datum/outfit/loadout/sentstand
 	name = "Shock Head Paladin"
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51green
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
@@ -167,8 +168,6 @@ Head Paladin
 
 /datum/outfit/loadout/sentheavy
 	name = "Heavy Head Paladin"
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51green
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m72 = 1,
 		/obj/item/ammo_box/magazine/m2mm = 3,
@@ -178,22 +177,24 @@ Head Paladin
 
 /datum/outfit/loadout/sentgat
 	name = "Gatling Head Paladin"
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51green
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
 	backpack_contents = list(
 		/obj/item/minigunpack=1,
 	)
 
 /datum/outfit/loadout/sentmini
 	name = "Minigun Head Paladin"
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51green
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
 	backpack_contents = list(
 		/obj/item/minigunpackbal5mm=1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 	)
 
+/datum/outfit/loadout/sentfront
+	name = "Frontline Head Paladin"
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/aer12 = 1,
+		/obj/item/stock_parts/cell/ammo/mfc=1,
+		)
 
 /*
 Head Scribe
@@ -285,7 +286,7 @@ Head Knight
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //Wattz 2k
 	/datum/outfit/loadout/capsap, //Marksman
-	/datum/outfit/loadout/capalt //Neostead with buck because they don't know slugs are better
+	/datum/outfit/loadout/capalt //Neostead with buck + pre war ripper
 	)
 
 	outfit = /datum/outfit/job/bos/f13knightcap
@@ -350,6 +351,7 @@ Head Knight
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/melee/powered/ripper/prewar = 1,
 	)
 
 /*
@@ -371,10 +373,10 @@ Star Paladin
 	exp_requirements = 1000 
 
 	loadout_options = list(
-		/datum/outfit/loadout/spaladina, //5mm minigun
-		/datum/outfit/loadout/spaladinb, //WT-550
-		/datum/outfit/loadout/spaladinc,  //Aer9
-		/datum/outfit/loadout/spaladind //Sledge and fist
+		/datum/outfit/loadout/spaladina, //5mm minigun and aer7
+		/datum/outfit/loadout/spaladinb, //WT-550 and ripper
+		/datum/outfit/loadout/spaladinc,  //Aer12 and ripper
+		/datum/outfit/loadout/spaladind //Sledge, fist and aer7
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -430,15 +432,15 @@ Star Paladin
 		/obj/item/ammo_box/magazine/m473/small = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/spaladinc
 	name = "Senior Frontline Paladin"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9 = 1,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/gun/energy/laser/aer12 = 1,
+		/obj/item/stock_parts/cell/ammo/mfc=1,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/spaladind
@@ -469,10 +471,10 @@ Paladin
 	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladina, //Minigun
-	/datum/outfit/loadout/paladinb, //WT-550
-	/datum/outfit/loadout/paladinc, //Aer9
-	/datum/outfit/loadout/paladind //Sledge and fists
+	/datum/outfit/loadout/paladina, //Minigun and aer7
+	/datum/outfit/loadout/paladinb, //WT-550 and ripper
+	/datum/outfit/loadout/paladinc, //Aer12 and ripper
+	/datum/outfit/loadout/paladind //Sledge, aer7 and fist
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -503,8 +505,8 @@ Paladin
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
-	suit =	/obj/item/clothing/suit/armor/f13/power_armor/t51b/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	suit =	/obj/item/clothing/suit/armor/f13/power_armor/t45d/bos
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/assault
@@ -531,15 +533,15 @@ Paladin
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/paladinc
 	name = "Frontline Paladin"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9 = 1,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/gun/energy/laser/aer12 = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 1,
+		/obj/item/melee/powered/ripper = 1,
 		/obj/item/clothing/accessory/bos/paladin=1
 		)
 
@@ -712,7 +714,7 @@ Senior Knight
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Browning Auto-5
 	/datum/outfit/loadout/sknightc, //R93 PDW
-	/datum/outfit/loadout/sknightd,
+	/datum/outfit/loadout/sknightd, //pre war ripper + shield
 	)
 
 	outfit = /datum/outfit/job/bos/f13seniorknight
@@ -794,8 +796,7 @@ Senior Knight
 /datum/outfit/loadout/sknightd
 	name = "Senior Knight-Cavalry"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorknight=1,
-		/obj/item/melee/powered/ripper/prewar=1,
+		/obj/item/melee/powered/ripper/prewar = 1,
 		/obj/item/shield/riot/bullet_proof=1,
 		)
 /*

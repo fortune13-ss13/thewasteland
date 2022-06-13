@@ -9,8 +9,8 @@
 
 //Survival Capsule
 /obj/item/survivalcapsule
-	name = "bluespace shelter capsule"
-	desc = "An emergency shelter stored within a pocket of bluespace."
+	name = "Basic Vault-Tec C.A.M.P."
+	desc = "A basic C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
 	icon_state = "capsule"
 	icon = 'icons/obj/mining.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -66,18 +66,6 @@
 		template.load(deploy_location, centered = TRUE)
 		new /obj/effect/particle_effect/smoke(get_turf(src))
 		qdel(src)
-
-//Non-default pods
-
-/obj/item/survivalcapsule/luxury
-	name = "luxury bluespace shelter capsule"
-	desc = "An exorbitantly expensive luxury suite stored within a pocket of bluespace."
-	template_id = "shelter_beta"
-
-/obj/item/survivalcapsule/luxuryelite
-	name = "luxury elite bar capsule"
-	desc = "A luxury bar in a capsule. Bartender required and not included."
-	template_id = "shelter_charlie"
 
 //Pod objects
 
