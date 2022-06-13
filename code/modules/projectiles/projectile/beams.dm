@@ -506,6 +506,7 @@
 
 /obj/item/projectile/f13plasma/pistol/worn
 	damage = 16
+	wound_bonus = 10
 
 /obj/item/projectile/f13plasma/pistol/glock //Glock (streamlined plasma pistol)
 	damage = 20

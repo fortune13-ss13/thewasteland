@@ -648,11 +648,6 @@
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
 
-/obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple
-	name = "degraded T-60a power armor"
-	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal. This suit is heavily degraded." //reskin of head knight armor
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 60, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
-	salvaged_type = null
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
@@ -686,7 +681,7 @@
 	item_state = "AltumFire"
 
 /obj/item/clothing/suit/armor/f13/power_armor/x02/sokkxx
-	name =  "experimental X02 power armor"
+	name = "experimental X02 power armor"
 	desc = "A modified X02 suit that has had it's circuitry replaced with parts from an old functional tesla coil. This one seemingly doesn't discharge in the immediate area."
 	icon_state = "pinktesla"
 	item_state = "pinktesla"
