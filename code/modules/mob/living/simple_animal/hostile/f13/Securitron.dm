@@ -171,7 +171,7 @@
 	rapid_melee = 3
 	color = "#597FEE"
 	aggro_vision_range = 15
-	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 | EMP_PROTECT_SELF //cannot self-harm with it's explosion spam, emp doesnt 1shot
+	flags_1 = PREVENT_CONTENTS_EXPLOSION_1|EMP_PROTECT_SELF //cannot self-harm with it's explosion spam, emp doesnt 1shot
 
 /mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
