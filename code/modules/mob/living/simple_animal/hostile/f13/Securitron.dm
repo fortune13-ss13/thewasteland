@@ -161,8 +161,8 @@
 	name = "big chew-chew"
 	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick, dark blue armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
 	extra_projectiles = 4
-	health = 1000
-	maxHealth = 1000 //CHONK
+	health = 2000
+	maxHealth = 2000 //CHONK
 	obj_damage = 300
 	retreat_distance = 0
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
@@ -171,7 +171,7 @@
 	rapid_melee = 3
 	color = "#597FEE"
 	aggro_vision_range = 15
-	flags_1 = PREVENT_CONTENTS_EXPLOSION_1|EMP_PROTECT_SELF //cannot self-harm with it's explosion spam, emp doesnt 1shot
+	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 //cannot self-harm with it's explosion spam, emp doesnt 1shot
 
 /mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
