@@ -113,7 +113,7 @@ Head Paladin
 	/datum/outfit/loadout/sentheavy, //Gauss + Glock 
 	/datum/outfit/loadout/sentgat, // Gatling 
 	/datum/outfit/loadout/sentmini, // Minigun 
-	/datum/outfit/loadout/sentfront, //aer12 + fist 
+	/datum/outfit/loadout/sentfront, //aer12 
 	)
 
 	outfit = /datum/outfit/job/bos/f13sentinel
@@ -194,7 +194,6 @@ Head Paladin
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer12 = 1,
 		/obj/item/stock_parts/cell/ammo/mfc=1,
-		/obj/item/melee/powerfist/f13 = 1,
 		)
 
 /*
@@ -287,7 +286,7 @@ Head Knight
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //Wattz 2k
 	/datum/outfit/loadout/capsap, //Marksman
-	/datum/outfit/loadout/capalt //Neostead with buck + ripper
+	/datum/outfit/loadout/capalt //Neostead with buck + pre war ripper
 	)
 
 	outfit = /datum/outfit/job/bos/f13knightcap
@@ -352,7 +351,7 @@ Head Knight
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/melee/powered/ripper=1,
+		/obj/item/melee/powered/ripper/prewar = 1,
 	)
 
 /*
@@ -374,10 +373,10 @@ Star Paladin
 	exp_requirements = 1000 
 
 	loadout_options = list(
-		/datum/outfit/loadout/spaladina, //5mm minigun
-		/datum/outfit/loadout/spaladinb, //WT-550 and fist
-		/datum/outfit/loadout/spaladinc,  //Aer12 and fist
-		/datum/outfit/loadout/spaladind //Sledge and fist
+		/datum/outfit/loadout/spaladina, //5mm minigun and aer7
+		/datum/outfit/loadout/spaladinb, //WT-550 and ripper
+		/datum/outfit/loadout/spaladinc,  //Aer12 and ripper
+		/datum/outfit/loadout/spaladind //Sledge, fist and aer7
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -433,7 +432,7 @@ Star Paladin
 		/obj/item/ammo_box/magazine/m473/small = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/spaladinc
@@ -441,7 +440,7 @@ Star Paladin
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer12 = 1,
 		/obj/item/stock_parts/cell/ammo/mfc=1,
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/spaladind
@@ -472,9 +471,9 @@ Paladin
 	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladina, //Minigun
-	/datum/outfit/loadout/paladinb, //WT-550 and fist
-	/datum/outfit/loadout/paladinc, //Aer12 and fist
+	/datum/outfit/loadout/paladina, //Minigun and aer7
+	/datum/outfit/loadout/paladinb, //WT-550 and ripper
+	/datum/outfit/loadout/paladinc, //Aer12 and ripper
 	/datum/outfit/loadout/paladind //Sledge, aer7 and fist
 	)
 
@@ -534,7 +533,7 @@ Paladin
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1,
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/paladinc
@@ -542,7 +541,7 @@ Paladin
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer12 = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 1,
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/powered/ripper = 1,
 		/obj/item/clothing/accessory/bos/paladin=1
 		)
 
@@ -715,7 +714,7 @@ Senior Knight
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Browning Auto-5
 	/datum/outfit/loadout/sknightc, //R93 PDW
-	/datum/outfit/loadout/sknightd, //ripper + shield
+	/datum/outfit/loadout/sknightd, //pre war ripper + shield
 	)
 
 	outfit = /datum/outfit/job/bos/f13seniorknight
@@ -797,7 +796,7 @@ Senior Knight
 /datum/outfit/loadout/sknightd
 	name = "Senior Knight-Cavalry"
 	backpack_contents = list(
-		/obj/item/melee/powered/ripper=1,
+		/obj/item/melee/powered/ripper/prewar = 1,
 		/obj/item/shield/riot/bullet_proof=1,
 		)
 /*

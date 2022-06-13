@@ -74,24 +74,14 @@
 	ckeywhitelist = list("comradesocks")
 
 /obj/item/storage/box/large/custom_kit/daemon/PopulateContents()
-	new /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon(src)
-	new /obj/item/clothing/suit/armor/f13/legion/heavy/daemon(src)
+	new /obj/item/modkit/daemonarmor(src)
+	new /obj/item/modkit/daemonhelm(src)
 
 // DaemonTinadel Custom Vet Decanus
 /datum/gear/donator/kits/daemon
 	name = "Daemon's small wiener"
 	path = /obj/item/storage/box/large/custom_kit/daemon
-	ckeywhitelist = list("DaemonTinadel")
-
-/obj/item/storage/box/large/custom_kit/burningcold/PopulateContents()
-	new /obj/item/clothing/gloves/f13/leather/fingerless(src)
-	new /obj/item/clothing/mask/bandana/blue(src)
-	new /obj/item/clothing/suit/armored/light/kit/punk(src)
-
-/datum/gear/donator/kits/burningcold
-	name = "Burnings Goods"
-	path = /obj/item/storage/box/large/custom_kit/burningcold
-	ckeywhitelist = list("myguy49")
+	ckeywhitelist = list("daemontinadel")
 	
 /obj/item/storage/box/large/custom_kit/pineapple/PopulateContents()
 	new /obj/item/clothing/suit/armor/f13/combat/environmental(src)
@@ -122,8 +112,8 @@
 	ckeywhitelist = list("snugglytrap")	
 	
 /obj/item/storage/box/large/custom_kit/erabite/PopulateContents()
-	new /obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma(src)
-	new /obj/item/clothing/suit/armor/f13/rangercombat/degancustom(src)
+	new /obj/item/modkit/rangerpatrolhat(src)
+	new /obj/item/modkit/degancustomarmor(src)
 	new /obj/item/storage/belt/holster(src)
 
 /datum/gear/donator/kits/erabite
@@ -133,7 +123,7 @@
 
 /obj/item/storage/box/large/custom_kit/flaka/PopulateContents()
 	new /obj/item/clothing/head/f13/enclave/hood(src)
-	new /obj/item/clothing/suit/armor/f13/enclavetrenchcoat/gunny(src)
+	new /obj/item/modkit/enclavencotrenchcoat(src)
 
 /datum/gear/donator/kits/flaka
 	name = "Flaka stuff"
@@ -144,12 +134,21 @@
 	new /obj/item/clothing/mask/gas/sechailer(src)
 	new /obj/item/clothing/shoes/kindleKicks(src)
 	new /obj/item/storage/belt/military/assault(src)
-	new /obj/item/clothing/suit/armor/f13/combat/khan(src)
+	new /obj/item/modkit/khanbat(src)
+	new /obj/item/bong/coconut(src)
 	
 /datum/gear/donator/kits/sunny
 	name = "Sunnys stuff"
 	path = /obj/item/storage/box/large/custom_kit/sunny
 	ckeywhitelist = list("nirzak")						
+
+/obj/item/storage/box/large/custom_kit/darkrixds/PopulateContents()
+	new /obj/item/modkit/khanbatreinforced(src)
+
+/datum/gear/donator/kits/darkrixds
+	name = "Darkrixds stuff"
+	path = /obj/item/storage/box/large/custom_kit/darkrixds
+	ckeywhitelist = list("darkrixd")
 
 /obj/item/storage/box/large/custom_kit/sokkxx/PopulateContents()
 	new /obj/item/modkit/sokkxxarmor(src)
