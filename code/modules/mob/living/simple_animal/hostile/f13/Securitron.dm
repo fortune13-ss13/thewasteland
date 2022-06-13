@@ -170,6 +170,9 @@
 	color = "#597FEE"
 	aggro_vision_range = 15
 
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong/emp_act()
+	return
+
 /obj/item/projectile/beam/laser/pistol/ultraweak/strong
 	damage = 14
 	icon_state = "gaussstrong"
