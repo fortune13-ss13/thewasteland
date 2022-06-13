@@ -138,7 +138,7 @@
 	health = 1000
 	maxHealth = 1000 //CHONK
 	obj_damage = 300
-	retreat_distance = 0
+	retreat_distance = 1
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
 	color = "#75FFE2"
 	aggro_vision_range = 15
@@ -155,6 +155,31 @@
 	else
 		visible_message(span_danger("\The [Proj] bounces off \the [src]'s armor plating!"))
 		return FALSE
+
+//port of DR's overseer for use in the dustbowl. a god among sentrybots
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong
+	name = "big chew-chew"
+	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick, dark blue armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
+	extra_projectiles = 4
+	health = 2000
+	maxHealth = 2000 //CHONK
+	retreat_distance = 0
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/strong
+	speed = 3
+	rapid_melee = 3
+	color = "#597FEE"
+	aggro_vision_range = 15
+
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong/emp_act()
+	return
+
+/obj/item/projectile/beam/laser/pistol/ultraweak/strong
+	damage = 14
+	icon_state = "gaussstrong"
+	armour_penetration = 0.5
+	movement_type = FLYING | UNSTOPPABLE
+	pixels_per_second = TILES_TO_PIXELS(15)
+	range = 18
 
 //Raider friendly Sentry bot
 /mob/living/simple_animal/hostile/securitron/sentrybot/nsb
