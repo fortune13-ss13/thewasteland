@@ -214,7 +214,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/datum/outfit/loadout/palacent,         // 10mm SMG, Goliath, CQC
 		/datum/outfit/loadout/rangerhunter,	    // Hunting Revolver, AMR, Spatha
 		/datum/outfit/loadout/centurion,	    // M1919, Hunting Revolver
-		/datum/outfit/loadout/tribalcenturion,  // berzerker book, powerfist, legion shield, 2x bitters, 2x reinforced bola, 4x throwing spear, 5x throwing knives and 3x berzerker powder
+		/datum/outfit/loadout/tribalcenturion,  // berzerker book, sapper, legion shield, 2x bitters, 2x reinforced bola, 4x throwing spear, 5x throwing knives and 3x berzerker powder
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -287,7 +287,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Chosen Tribal Centurion"
 	suit = /obj/item/clothing/suit/armor/f13/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/palacent
-	suit_store = /obj/item/melee/powerfist/f13 
+	suit_store = /obj/item/melee/unarmed/sappers
 	backpack_contents = list(
 		/obj/item/shield/riot/legion = 1,
 		/obj/item/book/granter/martial/berserker = 1,
