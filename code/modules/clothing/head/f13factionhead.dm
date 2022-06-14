@@ -873,6 +873,8 @@
 	icon_state = "boscap"
 	item_state = "boscap"
 	strip_delay = 20
+	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/boscap/beret
 	name = "brotherhood beret"
@@ -1150,6 +1152,7 @@
 	item_state = "army_cap"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/army/officer
 	name = "US Army officer's cap"
@@ -1158,7 +1161,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "army_officer"
 	item_state = "army_officer"
-
 
 /obj/item/clothing/head/f13/army/general
 	name = "US Army general's cap"
@@ -1232,6 +1234,8 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "police_officer"
 	item_state = "police_officer"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
+	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/police/sergeant
 	name = "police campaign hat"
@@ -1241,6 +1245,8 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "police_sergeant"
 	item_state = "police_sergeant"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
+	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/police/lieutenant
 	name = "police lieutenant's cap"
