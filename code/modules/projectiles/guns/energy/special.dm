@@ -4,6 +4,8 @@
 	icon_state = "ionrifle"
 	item_state = "ionrifle"	//so the human update icon uses the icon_state instead.
 	can_flashlight = 1
+	supereffective_damage = 40
+	supereffective_faction = list("wastebot")
 	w_class = WEIGHT_CLASS_BULKY
 	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
