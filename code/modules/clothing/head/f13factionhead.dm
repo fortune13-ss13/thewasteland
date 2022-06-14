@@ -503,6 +503,12 @@
 	desc = "An old military grade pre-war combat helmet, sporting modifications and painted in the colours of the Legion."
 	icon_state = "legion_combat"
 	item_state = "legion_combat"
+	
+/obj/item/clothing/head/helmet/f13/combat/mk2/legion
+	name = "Legion combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
+	icon_state = "legion_combat2"
+	item_state = "legion_combat2"
 
 /obj/item/clothing/head/f13/servant
 	name = "servant headwear"
