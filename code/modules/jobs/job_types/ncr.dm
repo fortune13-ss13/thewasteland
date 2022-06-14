@@ -975,10 +975,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 120
 
 	loadout_options = list(				     // Basically, shit gun, good meds, cool gun, not as good meds.
-		/datum/outfit/loadout/medicsaviour,	// berreta pistol only, lots of meds. Medhud. More of a base only loadout
+		/datum/outfit/loadout/medicbackline,	// berreta pistol only, lots of meds. Medhud. More of a base only loadout
 		/datum/outfit/loadout/medicrifleman,	// service rifle, decent meds
 		/datum/outfit/loadout/medicranger,	// dual .357, ranger assister + lightweight meds. Holster
-		/datum/outfit/loadout/medicsupport,	// foldable rifle, frontline oriented meds
+		/datum/outfit/loadout/medicvanguard,	// foldable rifle, frontline oriented meds
 		)
 
 	matchmaking_allowed = list(
@@ -1019,12 +1019,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
-/datum/outfit/loadout/medicsaviour
-	name = "Medical Saviour"
+/datum/outfit/loadout/medicbackline
+	name = "Backline Medical"
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
-	head = /obj/item/clothing/head/f13/ncr/steelpot_bandolier
-	neck = /obj/item/storage/belt/holster/legholster
-	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/beretta = 1,
 		/obj/item/ammo_box/magazine/m9mmds = 2,
@@ -1037,8 +1034,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/medicrifleman		// Standard service rifle taxation enjoyer
 	name = "Medical Rifleman"
-	head = /obj/item/clothing/head/f13/ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	neck = /obj/item/storage/belt/holster
 	suit_store = /obj/item/gun/ballistic/automatic/service
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
@@ -1053,29 +1050,29 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/medicranger		//Medium Irons on their hip. Imagine how US navy has their corpsmen with US Marines. This, but rangers. Gets ranger gas mask and bowie only. 
 	name = "Medical Ranger Support"
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
-	suit_store = /obj/item/gun/ballistic/shotgun/hunting
-	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
+	neck = /obj/item/storage/belt/holster 
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/colt357 = 2,
 		/obj/item/ammo_box/a357= 4,
 		/obj/item/clothing/mask/gas/ranger = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/stack/crafting/armor_plate = 2,
-		/obj/item/storage/belt/holster = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/storage/box/ration/menu_one = 1,
 		)
 
-/datum/outfit/loadout/medicsupport	//Has a fold out gun. Funny roleplay lightweight loadout
-	name = "Medical Support"
+/datum/outfit/loadout/medicvanguard	//Has a fold out gun. Funny roleplay lightweight loadout
+	name = "Medical Vanguard"
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
-	neck = /obj/item/storage/belt/holster/legholster
-	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
+	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
 		/obj/item/ammo_box/magazine/m45 = 1,
 		/obj/item/storage/firstaid/ancient = 1,
+		/obj/item/healthanalyzer = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
 		/obj/item/storage/box/ration/menu_one = 1,
 		)
 
