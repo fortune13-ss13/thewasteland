@@ -71,13 +71,6 @@
 		visible_message(span_danger("\The [Proj] bounces off \the [src]'s armor plating!"))
 		return FALSE
 
-/mob/living/simple_animal/hostile/securitron/emp_act(severity)
-	. = ..()
-	if(. & EMP_PROTECT_SELF)
-		return
-	var/emp_damage = round((maxHealth * 0.1) * (severity * 0.1)) // 10% of max HP * 10% of severity(Usually around 20-40)
-	adjustBruteLoss(emp_damage)
-
 /mob/living/simple_animal/hostile/securitron/proc/do_death_beep()
 	playsound(src, 'sound/machines/triple_beep.ogg', 75, TRUE)
 	visible_message(span_warning("You hear an ominous beep coming from [src]!"), span_warning("You hear an ominous beep!"))
@@ -161,17 +154,14 @@
 	name = "big chew-chew"
 	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick, dark blue armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
 	extra_projectiles = 4
-	health = 2000
-	maxHealth = 2000 //CHONK
+	health = 1500
+	maxHealth = 1500 //CHONK
 	retreat_distance = 0
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/strong
 	speed = 3
 	rapid_melee = 3
 	color = "#597FEE"
 	aggro_vision_range = 15
-
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong/emp_act()
-	return
 
 /obj/item/projectile/beam/laser/pistol/ultraweak/strong
 	damage = 14
