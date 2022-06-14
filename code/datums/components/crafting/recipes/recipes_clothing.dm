@@ -858,7 +858,7 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 	
-/datum/crafting_recipe/legioncombat
+/datum/crafting_recipe/enclavecombat
 	name = "Enclave Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/enclave
 	blacklist = list(/obj/item/clothing/suit/armor/f13/combat/mk2)
@@ -869,7 +869,7 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 	
-/datum/crafting_recipe/legioncombatmk2
+/datum/crafting_recipe/enclavecombatmk2
 	name = "reinforced Enclave Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/mk2/remnant
 	blacklist = list(/obj/item/clothing/suit/armor/f13/combat)
