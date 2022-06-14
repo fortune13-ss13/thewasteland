@@ -497,6 +497,12 @@
 	icon_state = "legion-heavy"
 	item_state = "legion-heavy"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 50)
+	
+/obj/item/clothing/head/helmet/f13/combat/legion
+	name = "Legion combat helmet"
+	desc = "An old military grade pre-war combat helmet, sporting modifications and painted in the colours of the Legion."
+	icon_state = "legion_combat"
+	item_state = "legion_combat"
 
 /obj/item/clothing/head/f13/servant
 	name = "servant headwear"
