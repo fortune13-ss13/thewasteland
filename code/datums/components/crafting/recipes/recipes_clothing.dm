@@ -784,16 +784,6 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 
-/datum/crafting_recipe/legionsalvagedhelmet
-	name = "Legion Salvaged Power Armor Helmet"
-	result = /obj/item/clothing/head/helmet/f13/legion/legionsalvagedhelmet
-	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-
 /datum/crafting_recipe/legionsalvaged_ncr
 	name = "Legion Salvaged Power Armor"
 	result = /obj/item/clothing/suit/armor/f13/legion/legionsalvaged
@@ -1005,6 +995,17 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	
+/datum/crafting_recipe/legionsalvagedhelmet
+	name = "Legion Salvaged Power Armor Helmet"
+	result = /obj/item/clothing/head/helmet/f13/legion/legionsalvagedhelmet
+	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
 	
 /datum/crafting_recipe/legionriothelmet_ncr
 	name = "Legion Riot Helmet"
