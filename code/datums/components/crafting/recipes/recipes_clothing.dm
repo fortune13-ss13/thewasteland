@@ -823,6 +823,27 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	
+/datum/crafting_recipe/legioncombat
+	name = "Legion Combat Armour"
+	result = /obj/item/clothing/suit/armor/f13/combat/legion
+	reqs = list(/obj/item/clothing/suit/armor/f13/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	
+/datum/crafting_recipe/legioncombatmk2
+	name = "reinforced Legion Combat Armour"
+	result = /obj/item/clothing/suit/armor/f13/combat/mk2/legion
+	reqs = list(/obj/item/clothing/suit/armor/f13/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
 
 /datum/crafting_recipe/legionriothelmet_ncr
 	name = "Legion Riot Helmet"
@@ -949,6 +970,26 @@ datum/crafting_recipe/steelbib/heavy
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
+	
+/datum/crafting_recipe/legioncombathelmet
+	name = "Legion Combat Helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/legion
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	
+/datum/crafting_recipe/legioncombathelmetmk2
+	name = "reinforced Legion Combat Helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/mk2/legion
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
 
 //Greaves
 
@@ -961,7 +1002,7 @@ datum/crafting_recipe/steelbib/heavy
 	tools = list(TOOL_FORGE)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-
+	
 //Gauntlets
 
 /datum/crafting_recipe/plateglove
