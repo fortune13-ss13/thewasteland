@@ -362,11 +362,10 @@ commented out pending rework*/
 /datum/outfit/loadout/decvetwolf
 	name = "Mark of the Wolf"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/decan
-	suit_store = /obj/item/twohanded/thermic_lance
+	suit_store = /obj/item/gun/ballistic/automatic/smg/smg14 = 1,
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1,
-		/obj/item/gun/ballistic/automatic/smg/cg45 = 1,
-		/obj/item/ammo_box/magazine/cg45 = 2,
+		/obj/item/ammo_box/magazine/smg14 = 2,
 		/obj/item/reagent_containers/pill/patch/bitterdrink = 2,
 		)
 
