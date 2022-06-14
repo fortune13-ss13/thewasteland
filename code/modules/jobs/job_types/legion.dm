@@ -211,7 +211,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent	         // 10mm SMG, Goliath, CQC
+		/datum/outfit/loadout/palacent,         // 10mm SMG, Goliath, CQC
 		/datum/outfit/loadout/rangerhunter,	    // Hunting Revolver, AMR, Spatha
 		/datum/outfit/loadout/centurion,	    // M1919, Hunting Revolver
 		/datum/outfit/loadout/tribalcenturion,  // berzerker book, powerfist, legion shield, 2x bitters, 2x reinforced bola, 4x throwing spear, 5x throwing knives and 3x berzerker powder
@@ -287,8 +287,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Chosen Tribal Centurion"
 	suit = /obj/item/clothing/suit/armor/f13/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/palacent
-	suit_store = /obj/item/melee/powerfist/f13 = 1,
+	suit_store = /obj/item/melee/powerfist/f13 
 	backpack_contents = list(
+		/obj/item/shield/riot/legion = 1,
 		/obj/item/book/granter/martial/berserker = 1,
 		/obj/item/throwing_star/spear = 4,
 		/obj/item/melee/onehanded/knife/throwing = 5,
