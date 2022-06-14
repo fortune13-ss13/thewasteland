@@ -1073,7 +1073,7 @@ datum/crafting_recipe/steelbib/heavy
 	always_available = FALSE
 	
 /datum/crafting_recipe/enclavecombathelmetmk2
-	name = "reinforced Enclave Combat Helmet
+	name = "reinforced Enclave Combat Helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
 	blacklist = list(/obj/item/clothing/head/helmet/f13/combat)
 	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
