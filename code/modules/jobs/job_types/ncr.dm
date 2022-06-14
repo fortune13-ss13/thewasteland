@@ -1021,7 +1021,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/medicbackline
 	name = "Backline Medical"
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/beretta = 1,
 		/obj/item/ammo_box/magazine/m9mmds = 2,
@@ -1034,7 +1033,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/medicrifleman		// Standard service rifle taxation enjoyer
 	name = "Medical Rifleman"
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	neck = /obj/item/storage/belt/holster
 	suit_store = /obj/item/gun/ballistic/automatic/service
 	backpack_contents = list(
@@ -1049,7 +1047,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/medicranger		//Medium Irons on their hip. Imagine how US navy has their corpsmen with US Marines. This, but rangers. Gets ranger gas mask and bowie only. 
 	name = "Medical Ranger Support"
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	neck = /obj/item/storage/belt/holster 
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/colt357 = 2,
@@ -1063,7 +1060,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/medicvanguard	//Has a fold out gun. Funny roleplay lightweight loadout
 	name = "Medical Vanguard"
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
 	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
