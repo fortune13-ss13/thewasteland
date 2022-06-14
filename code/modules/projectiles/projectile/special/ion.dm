@@ -3,6 +3,8 @@
 	icon_state = "ion"
 	damage = 20
 	armour_penetration = 0.75
+	supereffective_damage = 40
+	supereffective_faction = list("wastebot")
 	damage_type = BURN
 	flag = "energy"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/ion
