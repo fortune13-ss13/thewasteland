@@ -974,6 +974,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	outfit = /datum/outfit/job/ncr/f13combatmedic
 	exp_requirements = 120
 
+	loadout_options = list(
+		/datum/outfit/loadout/medica,	 // Marksman Carbine, 9mm sidearm
+		/datum/outfit/loadout/medicb,				 // R82, Large magazines
+		/datum/outfit/loadout/medicc,					 // Hunting Shotgun
+		/datum/outfit/loadout/medicd,				 // Intel and backline support
+		)
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
@@ -982,6 +989,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 			/datum/job/ncr,
 			),
 		)
+	
 
 /datum/outfit/job/ncr/f13combatmedic		// M1A1 Carbine, Survival knife
 	name = "NCR Combat Medic"
@@ -1003,6 +1011,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/stack/crafting/armor_plate = 4,
 		)
 
+	
+
 /datum/outfit/job/ncr/f13combatmedic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	if(visualsOnly)
@@ -1012,6 +1022,53 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
+/datum/outfit/loadout/medica
+	name = "Squad Ranged Support"
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	head = /obj/item/clothing/head/f13/ncr/steelpot_bandolier
+	neck = /obj/item/storage/belt/holster/legholster
+	suit_store = /obj/item/gun/ballistic/automatic/marksman
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
+		/obj/item/ammo_box/magazine/m9mmds = 1,
+		/obj/item/storage/box/ration/menu_two = 1,
+		)
+
+/datum/outfit/loadout/medicb		//Name changed for better flavor
+	name = "Master Corporal"
+	head = /obj/item/clothing/head/f13/ncr
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	suit_store = /obj/item/gun/ballistic/automatic/service/r82
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		/obj/item/storage/box/ration/menu_one = 1,
+		/obj/item/clothing/accessory/ncr/MCPL = 1 //Same rank, mostly for flavor and RP. - Kitsunemitsu
+		)
+
+/datum/outfit/loadout/medicc		//I think this one sucks, personally.
+	name = "Squad Pointman"
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/storage/box/ration/menu_one = 1,
+		)
+
+/datum/outfit/loadout/medicd	//Has a fold out gun. It serves it's purpose in being a support role but it is primarily for RP.
+	name = "Squad Pathfinder"
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
+	neck = /obj/item/storage/belt/holster/legholster
+	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
+		/obj/item/binoculars = 1,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
+		/obj/item/ammo_box/magazine/m9mmds = 1,
+		/obj/item/storage/box/ration/menu_one = 1,
+		)
 
 
 /////////////////////////
@@ -1053,6 +1110,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+
 
 /datum/outfit/job/ncr/f13corporal
 	name = "NCR Corporal"
