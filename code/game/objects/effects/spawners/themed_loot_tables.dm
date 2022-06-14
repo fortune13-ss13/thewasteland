@@ -313,16 +313,18 @@
 	name = "weaponspawner experimental"
 	loot = list(
 		/obj/item/gun/ballistic/automatic/g11 = 15,
-		/obj/effect/spawner/bundle/f13/needler = 10,
-		/obj/item/gun/energy/laser/rcw = 10,
-		/obj/item/gun/ballistic/automatic/m72 =10,
-		/obj/item/gun/energy/laser/plasma/carbine = 5,
-		/obj/item/gun/energy/laser/plasma/glock = 2,
-		/obj/item/gun/energy/laser/plasma = 2,
-		/obj/item/gun/energy/laser/plasma/scatter =1,
-		/obj/item/melee/powerfist/f13/moleminer = 10,
-		/obj/item/melee/transforming/energy/axe/protonaxe = 10,
-		/obj/item/gun/ballistic/revolver/ballisticfist = 5,
+		/obj/item/gun/ballistic/automatic/wt550 = 10,
+		/obj/item/gun/ballistic/automatic/m72 = 10,
+		/obj/item/gun/energy/laser/plasma/carbine = 1,
+		/obj/item/gun/energy/laser/plasma/glock = 10,
+		/obj/item/gun/energy/laser/plasma = 8,
+		/obj/item/gun/energy/laser/plasma/scatter = 1,
+		/obj/item/gun/energy/minigun = 10,
+		/obj/item/gun/ballistic/automatic/bar = 5,
+		/obj/item/gun/ballistic/automatic/m1919 = 5,
+		/obj/item/gun/ballistic/automatic/xl70e3 = 15,
+		/obj/item/gun/energy/laser/solar = 5,
+		/obj/item/gun/ballistic/automatic/shotgun/pancor = 5
 		)
 
 

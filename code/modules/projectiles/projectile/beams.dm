@@ -435,6 +435,7 @@
 /obj/item/projectile/beam/laser/solar/hitscan
 	name = "solar scorcher beam"
 	damage = 27
+	armour_penetration = 0.2
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
