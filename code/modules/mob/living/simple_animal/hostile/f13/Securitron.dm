@@ -154,12 +154,14 @@
 	name = "big chew-chew"
 	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick, dark blue armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
 	extra_projectiles = 4
-	health = 1500
-	maxHealth = 1500 //CHONK
+	health = 1250
+	maxHealth = 1250 //CHONK
 	retreat_distance = 0
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/strong
-	speed = 3
-	rapid_melee = 3
+	speed = 2
+	rapid_melee = 2
+	melee_damage_lower = 30
+	melee_damage_upper = 50
 	color = "#597FEE"
 	aggro_vision_range = 15
 
@@ -168,7 +170,7 @@
 	icon_state = "gaussstrong"
 	armour_penetration = 0.5
 	movement_type = FLYING | UNSTOPPABLE
-	pixels_per_second = TILES_TO_PIXELS(15)
+	pixels_per_second = TILES_TO_PIXELS(10)
 	range = 18
 
 //Raider friendly Sentry bot
