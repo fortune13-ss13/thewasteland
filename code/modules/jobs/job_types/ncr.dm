@@ -975,10 +975,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 120
 
 	loadout_options = list(
-		/datum/outfit/loadout/medica,	 // Marksman Carbine, 9mm sidearm
-		/datum/outfit/loadout/medicb,				 // R82, Large magazines
-		/datum/outfit/loadout/medicc,					 // Hunting Shotgun
-		/datum/outfit/loadout/medicd,				 // Intel and backline support
+		/datum/outfit/loadout/medica,	//  Sidearm only, lots of meds
+		/datum/outfit/loadout/medicb,	// service rifle, decent meds
+		/datum/outfit/loadout/medicc,	// dual .357, ranger assister? + lightweight meds
+		/datum/outfit/loadout/medicd,	// foldable rifle, frontline oriented meds
 		)
 
 	matchmaking_allowed = list(
@@ -1039,11 +1039,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Master Corporal"
 	head = /obj/item/clothing/head/f13/ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
-	suit_store = /obj/item/gun/ballistic/automatic/service/r82
+	suit_store = /obj/item/gun/ballistic/automatic/service
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/storage/box/ration/menu_one = 1,
-		/obj/item/clothing/accessory/ncr/MCPL = 1 //Same rank, mostly for flavor and RP. - Kitsunemitsu
+		
 		)
 
 /datum/outfit/loadout/medicc		//I think this one sucks, personally.
@@ -1052,7 +1052,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/colt357 = 2,
+		/obj/item/ammo_box/a357=4,
 		/obj/item/storage/box/ration/menu_one = 1,
 		)
 
@@ -1064,7 +1065,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
-		/obj/item/binoculars = 1,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/ammo_box/magazine/m9mmds = 1,
 		/obj/item/storage/box/ration/menu_one = 1,
