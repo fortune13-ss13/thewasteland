@@ -1118,3 +1118,12 @@
 	else
 		to_chat(user, "<span class='notice'>There is nothing left in the quiver.</span>")
 	return TRUE
+
+
+/// Custom Belts
+
+/obj/item/storage/belt/military/assault/legion/maus
+	name = "claimed legion marching belt"
+	desc = "A Legion belt that has been dyed black, with the sash being dyed purple."
+	icon_state = "mausbeltcustom"
+	item_state = "mausbeltcustom"

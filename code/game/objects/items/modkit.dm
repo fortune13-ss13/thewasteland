@@ -133,6 +133,29 @@
 	target_items = list(/obj/item/clothing/suit/armor/f13/combat/ncr_patrol)
 	result_item = /obj/item/clothing/suit/armor/f13/rangercombat/degancustom
 
+/obj/item/modkit/environmentalhelm
+	name = "environmental helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/raider)
+	result_item = /obj/item/clothing/head/helmet/f13/combat/environmental
+
+/obj/item/modkit/environmentalarmor
+	name = "environmental armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/combat/environmental
+
+/obj/item/modkit/daemonhelm
+	name = "daemon helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/legion/vet/decan)
+	result_item = /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon
+
+/obj/item/modkit/daemonarmor
+	name = "daemon armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/legion/heavy)
+	result_item = /obj/item/clothing/suit/armor/f13/legion/heavy/daemon
+// Daemon said anyone can use his armor as long as they are vet decanius plus, but keep it for supporters only same goes with the khanbat ones too, just ask in supporter channel.
+
+
+
 /// Personal Donator Modkits (dont use unless you are them or have permission)
 
 /obj/item/modkit/sokkxxhelm
@@ -149,13 +172,3 @@
 	name = "enclave nco trenchcoat modkit"
 	target_items = list(/obj/item/clothing/suit/armor/f13/enclavetrenchcoat)
 	result_item = /obj/item/clothing/suit/armor/f13/enclavetrenchcoat/gunny
-
-/obj/item/modkit/daemonhelm
-	name = "daemon helmet modkit"
-	target_items = list(/obj/item/clothing/head/helmet/f13/legion/vet/decan)
-	result_item = /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon
-
-/obj/item/modkit/daemonarmor
-	name = "daemon armor modkit"
-	target_items = list(/obj/item/clothing/suit/armor/f13/legion/heavy)
-	result_item = /obj/item/clothing/suit/armor/f13/legion/heavy/daemon
