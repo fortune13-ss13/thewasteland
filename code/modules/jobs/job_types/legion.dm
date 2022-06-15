@@ -219,7 +219,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/datum/outfit/loadout/palacent,         // 10mm SMG, Goliath, CQC
 		/datum/outfit/loadout/rangerhunter,	    // Hunting Revolver, AMR, Spatha
 		/datum/outfit/loadout/centurion,	    // M1919, Hunting Revolver
-		/datum/outfit/loadout/tribalcenturion,  // berzerker book, sapper, legion shield, 2x bitters, 2x reinforced bola, 4x throwing spear, 5x throwing knives and 3x berzerker powder
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
