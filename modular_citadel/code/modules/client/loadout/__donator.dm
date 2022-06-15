@@ -142,14 +142,6 @@
 	path = /obj/item/storage/box/large/custom_kit/sunny
 	ckeywhitelist = list("nirzak")						
 
-/obj/item/storage/box/large/custom_kit/darkrixd/PopulateContents()
-	new /obj/item/modkit/khanbatreinforced(src)
-
-/datum/gear/donator/kits/darkrixd
-	name = "Darkrixd's stuff"
-	path = /obj/item/storage/box/large/custom_kit/darkrixd
-	ckeywhitelist = list("darkrixd")
-
 /obj/item/storage/box/large/custom_kit/sokkxx/PopulateContents()
 	new /obj/item/modkit/sokkxxarmor(src)
 	new /obj/item/modkit/sokkxxhelm(src)
