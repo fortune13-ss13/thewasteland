@@ -497,6 +497,18 @@
 	icon_state = "legion-heavy"
 	item_state = "legion-heavy"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 50)
+	
+/obj/item/clothing/head/helmet/f13/combat/legion
+	name = "Legion combat helmet"
+	desc = "An old military grade pre-war combat helmet, sporting modifications and painted in the colours of the Legion."
+	icon_state = "legion-combat"
+	item_state = "legion-combat"
+	
+/obj/item/clothing/head/helmet/f13/combat/mk2/legion
+	name = "Legion combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
+	icon_state = "legion-combat2"
+	item_state = "legion-combat2"
 
 /obj/item/clothing/head/f13/servant
 	name = "servant headwear"
@@ -873,6 +885,8 @@
 	icon_state = "boscap"
 	item_state = "boscap"
 	strip_delay = 20
+	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/boscap/beret
 	name = "brotherhood beret"
@@ -1150,6 +1164,7 @@
 	item_state = "army_cap"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/army/officer
 	name = "US Army officer's cap"
@@ -1158,7 +1173,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "army_officer"
 	item_state = "army_officer"
-
 
 /obj/item/clothing/head/f13/army/general
 	name = "US Army general's cap"
@@ -1232,6 +1246,8 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "police_officer"
 	item_state = "police_officer"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
+	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/police/sergeant
 	name = "police campaign hat"
@@ -1241,6 +1257,8 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "police_sergeant"
 	item_state = "police_sergeant"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
+	dynamic_hair_suffix = "+generic"
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/f13/police/lieutenant
 	name = "police lieutenant's cap"
@@ -1361,25 +1379,6 @@ obj/item/clothing/head/f13/army/beret
 				while(up)
 					playsound(src.loc, "[active_sound]", 100, 0, 4)
 					sleep(15)
-
-//Legion
-
-/obj/item/clothing/head/helmet/f13/combat/legion
-	name = "Legion combat helmet"
-	desc = "An old military grade pre-war helmet, repainted to the colour scheme of Caesar's Legion."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-combat"
-	item_state = "legion-combat"
-
-/obj/item/clothing/head/helmet/f13/combat/mk2/legion
-	name = "reinforced Legion combat helmet"
-	desc = "A pre-war helmet in good condition, made from advanced materialas and paintend in the colors of Caesar's Legion."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-combat2"
-	item_state = "legion-combat2"
-
 
 //Enclave / Remnant
 
