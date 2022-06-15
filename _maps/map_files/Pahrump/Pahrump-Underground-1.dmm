@@ -2821,7 +2821,6 @@
 /area/f13/bunker)
 "bKN" = (
 /obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess2"
 	},
@@ -5562,8 +5561,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
 "dmC" = (
-/obj/machinery/vending/boozeomat,
-/turf/open/floor/wood/f13/old,
+/obj/structure/chair/stool/retro/black,
+/obj/effect/landmark/start/f13/usspy,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "dmI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8780,7 +8780,7 @@
 	name = "Prison";
 	req_one_access_txt = "134"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
+/turf/open/floor/plasteel/darkred,
 /area/f13/enclave)
 "fcS" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -13841,7 +13841,7 @@
 "iqQ" = (
 /obj/structure/chair/stool/retro/black,
 /obj/effect/landmark/start/f13/uslightduty,
-/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "irB" = (
 /obj/item/pickaxe/drill,
@@ -15533,9 +15533,10 @@
 /area/f13/caves)
 "jxW" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Canteen"
+	name = "Canteen";
+	req_one_access_txt = "134"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "jyM" = (
 /obj/structure/simple_door/wood,
@@ -20080,7 +20081,7 @@
 /area/f13/bunker)
 "mLV" = (
 /obj/structure/chair/stool/retro/black,
-/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "mLW" = (
 /obj/structure/closet/cabinet,
@@ -21288,9 +21289,10 @@
 /turf/open/floor/plating/dirt,
 /area/f13/tunnel)
 "nGx" = (
-/obj/machinery/light,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/computer/arcade/orion_trail,
+/obj/machinery/computer/arcade/battle,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "nGD" = (
@@ -22326,8 +22328,9 @@
 /turf/open/floor/carpet/purple,
 /area/f13/building)
 "oqd" = (
-/obj/structure/bed,
-/obj/item/bedsheet/black,
+/obj/structure/toilet{
+	dir = 8
+	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -26997,10 +27000,12 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "rwC" = (
-/obj/structure/toilet{
-	dir = 4
+/obj/structure/decoration/vent,
+/obj/structure/window/reinforced,
+/obj/machinery/shower{
+	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/dark,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/enclave)
 "rwE" = (
 /obj/structure/cable{
@@ -27676,9 +27681,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/bunker)
 "rLH" = (
-/obj/structure/chair/stool/retro/black,
-/obj/effect/landmark/start/f13/usspy,
-/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/obj/machinery/door/airlock/hatch{
+	name = "Research and Development Lab";
+	req_one_access_txt = "134"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
 "rLJ" = (
 /obj/machinery/light/floor,
@@ -28941,7 +28948,6 @@
 	},
 /area/f13/brotherhood/mining)
 "sDG" = (
-/obj/machinery/door/airlock/wood,
 /obj/machinery/door/unpowered/securedoor,
 /obj/structure/curtain{
 	color = "#5c131b"
@@ -29019,7 +29025,7 @@
 /area/f13/bunker)
 "sGF" = (
 /obj/machinery/smartfridge,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/closed/wall/r_wall,
 /area/f13/enclave)
 "sGL" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -30801,7 +30807,7 @@
 	name = "Armory";
 	req_one_access_txt = "134"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
 "tSA" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -31935,6 +31941,14 @@
 /obj/structure/bed,
 /turf/open/floor/plasteel/f13/vault_floor/neutral,
 /area/f13/building)
+"uJh" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/computer/arcade/orion_trail,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/enclave)
 "uJq" = (
 /obj/structure/reagent_dispensers/barrel/two,
 /obj/effect/decal/waste{
@@ -32272,7 +32286,7 @@
 /obj/machinery/door/airlock/hatch{
 	name = "Intel_Room"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "uWl" = (
 /obj/item/clothing/gloves/boxing/yellow,
@@ -32891,7 +32905,7 @@
 	name = "Bathroom";
 	req_one_access_txt = "134"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "vqb" = (
 /obj/structure/barricade/wooden/strong,
@@ -33511,7 +33525,7 @@
 	name = "Gym";
 	req_one_access_txt = "134"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "vKz" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -36436,8 +36450,11 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "xDt" = (
-/obj/machinery/computer/arcade/battle,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 12
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
 "xEd" = (
 /obj/machinery/door/airlock/survival_pod,
@@ -37135,7 +37152,7 @@
 	name = "Chemical Lab";
 	req_one_access_txt = "134"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
+/turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/enclave)
 "ydc" = (
 /obj/structure/table/wood/junk,
@@ -37280,7 +37297,7 @@
 	name = "No Mans Land";
 	req_one_access_txt = "134"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "ykR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -41186,7 +41203,7 @@ dJF
 qsI
 uxZ
 uxZ
-urN
+rLH
 xPO
 xPO
 aUB
@@ -42975,8 +42992,8 @@ xiW
 xiW
 dDs
 iqQ
-rLH
-iqQ
+mLV
+dmC
 wcj
 wcj
 wcj
@@ -43210,9 +43227,9 @@ vPg
 vPg
 vPg
 wcj
-vNj
-rwC
-xLc
+vQa
+vQa
+vQa
 ikY
 umu
 uxZ
@@ -43724,9 +43741,9 @@ vPg
 vPg
 vPg
 wcj
-vQa
+rwC
 oqd
-vQa
+xDt
 vWb
 xGd
 uCO
@@ -43995,7 +44012,7 @@ rDJ
 xiW
 vJZ
 nbW
-xiW
+bkZ
 xiW
 xiW
 xiW
@@ -44254,7 +44271,7 @@ xiW
 nbW
 xiW
 xiW
-xDt
+xiW
 nbW
 wcj
 wcj
@@ -44509,9 +44526,9 @@ wcj
 wcj
 nbW
 nbW
+bkZ
+bkZ
 xiW
-xiW
-nGx
 wcj
 ldw
 oNi
@@ -44768,7 +44785,7 @@ eeL
 btx
 bkZ
 xiW
-bkZ
+xiW
 nbW
 wUJ
 xjs
@@ -45016,7 +45033,7 @@ lnr
 lnr
 lnr
 wcj
-kNa
+uJh
 kNa
 kNa
 xiW
@@ -45024,7 +45041,7 @@ bkZ
 xiW
 xiW
 eFn
-xiW
+bkZ
 xiW
 wcj
 qwT
@@ -45273,7 +45290,7 @@ vPg
 wvW
 aoj
 wcj
-gtV
+nGx
 gtV
 qzX
 lQf
@@ -45547,7 +45564,7 @@ nbW
 sDG
 nbW
 nbW
-dmC
+kyy
 dES
 tyV
 wcj
