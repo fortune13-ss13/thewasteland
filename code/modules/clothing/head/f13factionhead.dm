@@ -497,6 +497,18 @@
 	icon_state = "legion-heavy"
 	item_state = "legion-heavy"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 50)
+	
+/obj/item/clothing/head/helmet/f13/combat/legion
+	name = "Legion combat helmet"
+	desc = "An old military grade pre-war combat helmet, sporting modifications and painted in the colours of the Legion."
+	icon_state = "legion-combat"
+	item_state = "legion-combat"
+	
+/obj/item/clothing/head/helmet/f13/combat/mk2/legion
+	name = "Legion combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
+	icon_state = "legion-combat2"
+	item_state = "legion-combat2"
 
 /obj/item/clothing/head/f13/servant
 	name = "servant headwear"
@@ -1367,25 +1379,6 @@ obj/item/clothing/head/f13/army/beret
 				while(up)
 					playsound(src.loc, "[active_sound]", 100, 0, 4)
 					sleep(15)
-
-//Legion
-
-/obj/item/clothing/head/helmet/f13/combat/legion
-	name = "Legion combat helmet"
-	desc = "An old military grade pre-war helmet, repainted to the colour scheme of Caesar's Legion."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-combat"
-	item_state = "legion-combat"
-
-/obj/item/clothing/head/helmet/f13/combat/mk2/legion
-	name = "reinforced Legion combat helmet"
-	desc = "A pre-war helmet in good condition, made from advanced materialas and paintend in the colors of Caesar's Legion."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-combat2"
-	item_state = "legion-combat2"
-
 
 //Enclave / Remnant
 
