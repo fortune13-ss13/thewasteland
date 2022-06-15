@@ -287,7 +287,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/melee/powerfist/f13/goliath = 1,
 		/obj/item/ammo_box/magazine/m14mm = 3,
 		)
-
+/*
 /datum/outfit/loadout/tribalcenturion
 	name = "Chosen Tribal Centurion"
 	suit = /obj/item/clothing/suit/armor/f13/legion/centurion
@@ -302,7 +302,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 3,
 		/obj/item/reagent_containers/pill/patch/bitterdrink = 2,
 		)
-
+*/ //TO DO funny cent melee maybe later
 	
 
 // VETERAN DECANUS

@@ -977,11 +977,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	outfit = /datum/outfit/job/ncr/f13combatmedic
 	exp_requirements = 120
 
-	loadout_options = list(				     // Basically, shit gun, good meds, cool gun, not as good meds.
+	loadout_options = list(				     // Basically, shit gun, good meds. cool gun, not as good meds.
 		/datum/outfit/loadout/medicbackline,	// berreta pistol only, lots of meds. Medhud. More of a base only loadout
 		/datum/outfit/loadout/medicrifleman,	// service rifle, decent meds
 		/datum/outfit/loadout/medicranger,	// dual .357, ranger assister + lightweight meds. Holster
-		/datum/outfit/loadout/medicvanguard,	// foldable rifle, frontline oriented meds
+		/datum/outfit/loadout/medicvanguard,	// foldable rifle, frontline oriented meds. no pistol
 		)
 
 	matchmaking_allowed = list(
@@ -1064,11 +1064,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/medicvanguard	//Has a fold out gun. Funny roleplay lightweight loadout
 	name = "Medical Vanguard"
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
-	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
-		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
-		/obj/item/ammo_box/magazine/m45 = 1,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/healthanalyzer = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
