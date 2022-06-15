@@ -821,8 +821,8 @@
 
 /obj/item/clothing/head/helmet/f13/herbertranger
 	name = "weathered desert ranger helmet"
-	icon_state = "modified_usmc_riot"
-	item_state = "modified_usmc_riot"
+	icon_state = "weatherranger"
+	item_state = "weatherranger"
 	desc = "An ancient USMC riot helmet. This paticular piece retains the classic colouration of the legendary Desert Rangers, and looks as if it has been worn for decades; its night vision no longer seems to be functional. Scratched into the helmet is the sentence: 'Death to the Devils that simulate our freedom.'"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH

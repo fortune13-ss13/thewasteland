@@ -1014,8 +1014,8 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	name = "weathered desert ranger armor"
 	desc = "A set of pre-unification desert ranger armor, made using parts of what was once USMC riot armor. It looks as if it has been worn for decades; the coat has become discoloured from years under the Mojave sun and has multiple tears and bullet holes in its leather. The armor plating itself seems to be in relatively good shape, though it could do with some maintenance."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	icon_state = "usmc_riot_gear"
-	item_state = "usmc_riot_gear"
+	icon_state = "weatherranger"
+	item_state = "weatherranger"
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 	strip_delay = 40
 
