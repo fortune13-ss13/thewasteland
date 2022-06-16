@@ -106,6 +106,30 @@
 	cost = 2
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
 
+/datum/gear/backpack/marlowsuit_ike
+	name = "Gunfighters Overcoat modkit"
+	path = /obj/item/modkit/marlowsuit_ike
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
+/datum/gear/backpack/marlowsuit_mason
+	name = "Vagabond Vest modkit"
+	path = /obj/item/modkit/marlowsuit_mason
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
+/datum/gear/backpack/marlowsuit
+	name = "Marlow Overcoat modkit"
+	path = /obj/item/modkit/marlowsuit
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
+/datum/gear/backpack/marlowhat
+	name = "Marlow Hat modkit"
+	path = /obj/item/modkit/marlowhat
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
 /datum/gear/backpack/khanbatkit
 	name = "khanbat armor modkit"
 	path = /obj/item/modkit/khanbat
@@ -126,49 +150,48 @@
 
 /// Backpacks
 
-/datum/gear/backpack/backpack
+/datum/gear/backpack/bbackpack
 	name = "hiking backpack"
 	path = /obj/item/storage/backpack/old
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_BACKPACKS
 	cost = 3
 
-/datum/gear/backpack/backpack/duffel
+/datum/gear/backpack/bbackpack/duffel
 	name = "duffelbag"
 	path = /obj/item/storage/backpack/duffelbag
 
-/datum/gear/backpack/backpack/explorer
+/datum/gear/backpack/bbackpack/explorer
 	name = "explorer backpack"
 	path = /obj/item/storage/backpack/explorer
 
-/datum/gear/backpack/backpack/explorer/satchel
+/datum/gear/backpack/bbackpack/explorer/satchel
 	name = "explorer satchel"
 	path = /obj/item/storage/backpack/satchel/explorer
 
-/datum/gear/backpack/backpack/trekker
+/datum/gear/backpack/bbackpack/trekker
 	name = "trekker backpack"
 	path = /obj/item/storage/backpack/trekker
 
-
-/datum/gear/backpack/backpack/trekker/satchel
+/datum/gear/backpack/bbackpack/trekker/satchel
 	name = "trekker satchel"
 	path = /obj/item/storage/backpack/satchel/trekker
 
-/datum/gear/backpack/backpack/sec
+/datum/gear/backpack/bbackpack/sec
 	name = "security backpack"
 	path = /obj/item/storage/backpack/security
 	cost = 4
 
-/datum/gear/backpack/backpack/sec/satchel
+/datum/gear/backpack/bbackpack/sec/satchel
 	name = "security satchel"
 	path = /obj/item/storage/backpack/satchel/sec
 
-/datum/gear/backpack/backpack/trophy
+/datum/gear/backpack/bbackpack/trophy
 	name = "trophy rack"
 	path = /obj/item/storage/backpack/cultpack
 	cost = 3
 
 
-/datum/gear/backpack/backpack/legionr
+/datum/gear/backpack/bbackpack/legionr
 	name = "legion red cape backpack"
 	path = /obj/item/storage/backpack/legionr
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_BACKPACKS
@@ -183,7 +206,7 @@
 							"Veteran Legionnaire"
 						)
 
-/datum/gear/backpack/backpack/legionb
+/datum/gear/backpack/bbackpack/legionb
 	name = "legion black cape backpack"
 	path = /obj/item/storage/backpack/legionb
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_BACKPACKS
