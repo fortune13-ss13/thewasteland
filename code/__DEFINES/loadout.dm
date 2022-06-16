@@ -17,6 +17,8 @@
 #define LOADOUT_CATEGORY_BACKPACK 				"In backpack"
 #define LOADOUT_SUBCATEGORY_BACKPACK_GENERAL 	"General" //basically anything that there's not enough of to have its own subcategory
 #define LOADOUT_SUBCATEGORY_BACKPACK_TOYS 		"Toys"
+#define LOADOUT_SUBCATEGORY_BACKPACK_MODKITS 	"Modkits"
+#define LOADOUT_SUBCATEGORY_BACKPACK_BACKPACKS 	"Backpacks"
 
 //neck
 #define LOADOUT_CATEGORY_NECK "Neck"
