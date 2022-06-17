@@ -102,6 +102,20 @@
 	path = /obj/item/storage/box/large/custom_kit/evosolus
 	ckeywhitelist = list("evosolus")
 
+/obj/item/storage/box/large/custom_kit/evosolus2/PopulateContents()
+	new /obj/item/storage/backpack/backsheath(src)
+	new /obj/item/clothing/head/beret/ncr/ncr_recon(src)
+	new /obj/item/clothing/mask/gas/explorer(src)
+	new /obj/item/clothing/shoes/roman(src)
+	new /obj/item/clothing/suit/hooded/cloak/goliath/tatteredred(src)
+	new /obj/item/storage/belt/sabre/heavy(src)
+	new /obj/item/clothing/under/dress/wedding(src)
+
+/datum/gear/donator/kits/evosolus2
+	name = "Evos goods2"
+	path = /obj/item/storage/box/large/custom_kit/evosolus2
+	ckeywhitelist = list("evosolus")	
+
 /obj/item/storage/box/large/custom_kit/snugglytrap/PopulateContents()
 	new /obj/item/clothing/neck/mantle/snugglycape(src)
 	new /obj/item/mmi/posibrain(src)
@@ -141,6 +155,14 @@
 	name = "Sunnys stuff"
 	path = /obj/item/storage/box/large/custom_kit/sunny
 	ckeywhitelist = list("nirzak")						
+
+/obj/item/storage/box/large/custom_kit/darkrixd/PopulateContents()
+	new /obj/item/modkit/khanbatreinforced(src)
+
+/datum/gear/donator/kits/darkrixd
+	name = "Darkrixd's stuff"
+	path = /obj/item/storage/box/large/custom_kit/darkrixd
+	ckeywhitelist = list("darkrixd")
 
 /obj/item/storage/box/large/custom_kit/sokkxx/PopulateContents()
 	new /obj/item/modkit/sokkxxarmor(src)
