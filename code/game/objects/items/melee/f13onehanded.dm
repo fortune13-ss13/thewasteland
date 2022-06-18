@@ -802,7 +802,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	item_state = "tiger_claw"
 	force = 40 //Assaultron, so, makes sense.
 
-// Deathclaw Gauntlet	Keywords: Damage 28, AP 1
+// Deathclaw Gauntlet	Keywords: Damage 28, AP 0.6
 /obj/item/melee/unarmed/deathclawgauntlet
 	name = "deathclaw gauntlet"
 	desc = "The severed hand of a mighty Deathclaw, cured, hollowed out, and given a harness to turn it into the deadliest gauntlet the wastes have ever seen."
@@ -811,7 +811,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	slot_flags = ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 28
-	armour_penetration = 1
+	armour_penetration = 0.6
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
