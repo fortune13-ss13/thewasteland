@@ -433,12 +433,16 @@
 	desc = "A nice leather jacket with a fur lined collar."
 	icon_state = "co_bomber"
 	item_state = "co_bomber"
+	armor = list("melee" = 35, "bullet" = 50, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 0, "rad" = 20, "fire" = 60, "acid" = 30)
+	unique_reskin = list("M1" = "co_bomber" ,"M2" = "bomber_open")
+	always_reskinnable = "True"
 
 /obj/item/clothing/suit/bomber_open
 	name = "A fancy bomber jacket."
 	desc = "A nice leather jacket with a fur lined collar that's been unzipped for comfort."
 	icon_state = "bomber_open"
 	item_state = "bomber_open"
+	armor = list("melee" = 35, "bullet" = 50, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 0, "rad" = 20, "fire" = 60, "acid" = 30)
 
 /* uncomment when old system cleaned out
 /obj/item/clothing/suit/cardborg/equipped(mob/living/user, slot)

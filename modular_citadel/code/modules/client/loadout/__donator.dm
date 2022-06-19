@@ -141,12 +141,20 @@
 /obj/item/storage/box/large/custom_kit/flaka/PopulateContents()
 	new /obj/item/clothing/head/f13/enclave/hood(src)
 	new /obj/item/modkit/enclavencotrenchcoat(src)
-	new obj/item/modkit/bomberjacket(src)
 
 /datum/gear/donator/kits/flaka
-	name = "Flaka stuff"
+	name = "Flaka stuff Enclave"
 	path = /obj/item/storage/box/large/custom_kit/flaka
 	ckeywhitelist = list("flaka")					
+
+/obj/item/storage/box/large/custom_kit/flaka2/PopulateContents()
+	new /obj/item/modkit/flakabomber(src)
+	new /obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma(src)
+
+/datum/gear/donator/kits/flaka2
+	name = "Flaka stuff NCR"
+	path = /obj/item/storage/box/large/custom_kit/flaka2
+	ckeywhitelist = list("flaka")	
 
 /obj/item/storage/box/large/custom_kit/darkrixd/PopulateContents()
 	new /obj/item/modkit/khanbatreinforced(src)
