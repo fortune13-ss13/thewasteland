@@ -172,9 +172,11 @@
 	name = "daemon armor modkit"
 	target_items = list(/obj/item/clothing/suit/armor/f13/legion/heavy)
 	result_item = /obj/item/clothing/suit/armor/f13/legion/heavy/daemon
-// Daemon said anyone can use his armor as long as they are vet decanius plus, but keep it for supporters only same goes with the khanbat ones too, just ask in supporter channel.
 
-
+/obj/item/modkit/flakabomber
+	name = "Flaka armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/ncrarmor/captain)
+	result_item = /obj/item/clothing/suit/co_bomber
 
 /// Personal Donator Modkits (dont use unless you are them or have permission)
 
