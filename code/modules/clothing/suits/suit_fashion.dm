@@ -427,6 +427,19 @@
 	item_state = "cardborg"
 	flags_inv = HIDEJUMPSUIT
 	dog_fashion = /datum/dog_fashion/back
+
+/obj/item/clothing/suit/co_bomber
+	name = "A fancy bomber jacket"
+	desc = "A nice leather jacket with a fur lined collar."
+	icon_state = "co_bomber"
+	item_state = "co_bomber"
+
+/obj/item/clothing/suit/bomber_open
+	name = "A fancy bomber jacket."
+	desc = "A nice leather jacket with a fur lined collar that's been unzipped for comfort."
+	icon_state = "bomber_open"
+	item_state = "bomber_open"
+
 /* uncomment when old system cleaned out
 /obj/item/clothing/suit/cardborg/equipped(mob/living/user, slot)
 	..()
