@@ -4092,7 +4092,7 @@
 	icon_state = "storewindowtop"
 	},
 /turf/closed/wall/r_wall,
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "cqI" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -5100,7 +5100,7 @@
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "cWc" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -8398,7 +8398,7 @@
 /turf/open/floor/f13{
 	icon_state = "neutralrustyfull"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "eOP" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -8720,7 +8720,7 @@
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "eYr" = (
 /obj/structure/table{
 	layer = 2.9
@@ -9792,7 +9792,7 @@
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "fFv" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -10398,6 +10398,20 @@
 	icon_state = "dark"
 	},
 /area/f13/building)
+"fWQ" = (
+/obj/machinery/hydroponics/constructable,
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	barefootstep = "water";
+	clawfootstep = "water";
+	desc = "Shallow water.";
+	footstep = "water";
+	heavyfootstep = "water";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "riverwater_motion";
+	name = "water"
+	},
+/area/f13/brotherhood/operating)
 "fWT" = (
 /obj/structure/bed/mattress{
 	icon_state = "mattress2"
@@ -10518,10 +10532,11 @@
 /area/f13/building)
 "gaV" = (
 /obj/structure/closet/crate/freezer/blood,
+/obj/machinery/computer/operating/bos,
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "gbG" = (
 /obj/structure/table,
 /obj/machinery/light/small{
@@ -13627,9 +13642,9 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/enclave)
 "ihW" = (
-/obj/structure/lattice/catwalk,
-/obj/machinery/hydroponics/constructable,
 /obj/machinery/light/small,
+/obj/machinery/hydroponics/constructable,
+/obj/structure/lattice/catwalk,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	barefootstep = "water";
 	clawfootstep = "water";
@@ -14494,6 +14509,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/rnd)
+"iRv" = (
+/obj/machinery/computer/operating/bos{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "freezerfloor"
+	},
+/area/f13/brotherhood/operating)
 "iRH" = (
 /obj/machinery/door/airlock/grunge{
 	id_tag = "floor2elevatordoors";
@@ -14864,7 +14887,7 @@
 /turf/open/floor/f13{
 	icon_state = "neutralrustyfull"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "jau" = (
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -21392,7 +21415,7 @@
 	icon_state = "aesculapius";
 	name = "vault floor"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "nIP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/nest/raider/ranged{
@@ -25456,6 +25479,12 @@
 "qzI" = (
 /turf/closed/wall/r_wall,
 /area/f13/tcoms)
+"qzL" = (
+/obj/machinery/vending/hydroseeds,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/brotherhood/operating)
 "qzS" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -26012,10 +26041,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/den)
 "qSY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/reagent_dispensers/watertank/high,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
+/turf/open/floor/f13{
+	icon_state = "freezerfloor"
 	},
 /area/f13/brotherhood/operating)
 "qTb" = (
@@ -26545,13 +26572,11 @@
 	},
 /area/f13/brotherhood/mining)
 "rhf" = (
-/obj/machinery/computer/operating/bos{
-	dir = 1
-	},
+/obj/machinery/sleeper,
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "rhG" = (
 /obj/structure/barricade/bars,
 /obj/structure/decoration/rag,
@@ -26663,11 +26688,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/enclave)
 "rni" = (
-/obj/structure/table/optable,
-/obj/machinery/iv_drip{
-	pixel_x = 15;
-	pixel_y = -2
-	},
+/obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
@@ -31904,23 +31925,8 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/caves)
 "uHZ" = (
-/obj/structure/flora/rock/jungle{
-	density = 1
-	},
-/obj/structure/flora/grass/jungle/b,
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 4
-	},
-/obj/structure/flora/ausbushes/grassybush{
-	layer = 2.1
-	},
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 1;
-	layer = 3
-	},
-/turf/open/water,
+/obj/machinery/defibrillator_mount/loaded,
+/turf/closed/wall/r_wall,
 /area/f13/brotherhood/operating)
 "uIm" = (
 /obj/effect/decal/remains/human,
@@ -34526,27 +34532,10 @@
 	},
 /area/f13/tunnel)
 "wtx" = (
-/obj/structure/flora/rock/jungle{
-	density = 1
+/obj/machinery/vending/hydronutrients,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "neutralrustyfull"
 	},
-/obj/structure/flora/grass/jungle/b,
-/obj/structure/flora/ausbushes/grassybush{
-	layer = 2.1
-	},
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 1;
-	layer = 3
-	},
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 4
-	},
-/turf/open/water,
 /area/f13/brotherhood/operating)
 "wtE" = (
 /turf/open/indestructible/ground/inside/mountain,
@@ -35689,13 +35678,9 @@
 /turf/open/water,
 /area/f13/den)
 "xhj" = (
-/obj/structure/closet/secure_closet/hydroponics{
-	desc = "A locker that smells of soil.";
-	name = "gardening locker";
-	req_access = list(120)
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	icon_state = "freezerfloor"
 	},
 /area/f13/brotherhood/operating)
 "xhF" = (
@@ -36624,14 +36609,11 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "xJp" = (
-/obj/machinery/sleeper{
-	density = 1;
-	dir = 4
-	},
+/obj/structure/table/optable,
 /turf/open/floor/f13{
 	icon_state = "freezerfloor"
 	},
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/operating)
 "xJE" = (
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /turf/open/floor/f13{
@@ -92386,12 +92368,12 @@ uoc
 uoc
 naX
 naX
-xgN
+uHZ
 xJp
-bjx
-cBa
+qSY
+xhj
 rXz
-xgN
+uHZ
 xgN
 dBk
 dBk
@@ -92643,12 +92625,12 @@ grM
 uoc
 pBU
 bjx
-xgN
+ujt
 gaV
-cBa
-bjx
-rhf
-xgN
+xhj
+qSY
+iRv
+ujt
 lWW
 nYH
 wSc
@@ -92902,10 +92884,10 @@ cBa
 bjx
 eON
 rni
-cBa
-bjx
+xhj
+qSY
 fEz
-xgN
+ujt
 jiP
 dBk
 hMN
@@ -93159,10 +93141,10 @@ szc
 bjx
 eON
 rhf
-cBa
-cBa
+xhj
+xhj
 cVQ
-xgN
+ujt
 ryt
 dBk
 wzH
@@ -93414,12 +93396,12 @@ uoc
 uoc
 dgO
 bjx
-xgN
+ujt
 eYm
-bjx
-cBa
-bjx
-xgN
+qSY
+xhj
+qSY
+ujt
 pPj
 dBk
 tlr
@@ -93646,7 +93628,7 @@ oZG
 tuX
 oZG
 nTG
-uHZ
+nTG
 ujt
 ujt
 khq
@@ -93671,12 +93653,12 @@ pSn
 xgN
 jGF
 bjx
-xgN
+ujt
 jah
 cqG
-xgN
+ujt
 nIu
-xgN
+ujt
 oWB
 dBk
 ckD
@@ -93903,7 +93885,7 @@ tuX
 xJM
 tuX
 tuX
-nTG
+tuX
 ujt
 ujt
 web
@@ -94415,9 +94397,9 @@ ujt
 oZG
 tuX
 mXV
+qzL
 tuX
-tuX
-nTG
+fWQ
 ujt
 ujt
 gEO
@@ -95444,8 +95426,8 @@ oZG
 tuX
 nhH
 lfs
-xhj
-qSY
+tuX
+xJM
 oSB
 syU
 yix
