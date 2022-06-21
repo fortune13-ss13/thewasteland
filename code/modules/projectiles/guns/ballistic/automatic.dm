@@ -1379,12 +1379,12 @@ obj/item/gun/ballistic/automatic/bar
 	item_state = "t60"
 	slowdown = 4
 	mag_type = /obj/item/ammo_box/magazine/t60
-	extra_damage = 12
+	extra_damage = 15
 	fire_delay = 6
 	burst_shot_delay = 2.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 1.8
+	autofire_shot_delay = 1.5
 	spread = 30
 	can_attachments = FALSE
 	var/bipod = FALSE
@@ -1414,12 +1414,12 @@ obj/item/gun/ballistic/automatic/bar
 
 /obj/item/gun/ballistic/automatic/t60/proc/bipod_on()
 	spread = 4
-	autofire_shot_delay = 2.4
+	autofire_shot_delay = 2
 
 
 /obj/item/gun/ballistic/automatic/t60/proc/bipod_off()
 	spread = 30
-	autofire_shot_delay = 1.8
+	autofire_shot_delay = 1.5
 
 
 
