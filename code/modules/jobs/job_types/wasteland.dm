@@ -25,7 +25,7 @@
 	minimal_access = list(ACCESS_KHAN)
 
 	loadout_options = list(
-		/datum/outfit/loadout/enforcer,
+		/datum/outfit/loadout/khanenforcer,
 		/datum/outfit/loadout/khanskirmisher,
 		/datum/outfit/loadout/khandrug,
 		)
@@ -73,7 +73,6 @@
 		GK.add_member(H)
 		H.gang = GK
 
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den,)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
@@ -86,12 +85,12 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 
-/datum/outfit/loadout/enforcer
+/datum/outfit/loadout/khanenforcer
 	name = "Enforcer"
 	r_hand = /obj/item/twohanded/baseball/spiked
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola/tactical=1,
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
 		)
@@ -110,7 +109,7 @@
 	name = "Drug Pusher"
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
-		/obj/item/book/granter/trait/midsurgery = 1,
+		/obj/item/storage/pill_bottle/chem_tin/fixer = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/reagent_containers/pill/patch/turbo = 2
 		)
