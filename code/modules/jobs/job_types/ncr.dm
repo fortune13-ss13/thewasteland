@@ -608,7 +608,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/amr = 2,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
-		/obj/item/ammo_box/c4570box/knockback = 1,
+		/obj/item/ammo_box/c4570box = 1,
 		/obj/item/ammo_box/magazine/amr/penetrator = 1,
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
@@ -629,7 +629,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/shotgun/buck = 3,
 		/obj/item/ammo_box/shotgun/trainshot = 1,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
-		/obj/item/ammo_box/c4570box/knockback = 1,
+		/obj/item/ammo_box/c4570box = 1,
 		)
 
 /datum/outfit/loadout/vrcqc

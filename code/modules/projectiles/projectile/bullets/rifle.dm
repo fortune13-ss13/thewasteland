@@ -21,7 +21,6 @@ Ammo groupings for specialty:
 5mm/22lr: Shock
 Small Pistol calibers (38 357 9mm): Acid/Incin
 Large Pistol Calibers (44 45 10mm): Incin
-Very Large pistol (45-70): Knockback, Acid
 autorifle calibers (5.56 7.62): Micro-Shrapnel (wound/embed)
 heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 */
