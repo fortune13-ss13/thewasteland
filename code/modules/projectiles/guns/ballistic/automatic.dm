@@ -1389,7 +1389,7 @@ obj/item/gun/ballistic/automatic/bar
 	can_attachments = FALSE
 	var/bipod = FALSE
 	actions_types = list(/datum/action/item_action/toggle_firemode, /datum/action/item_action/toggle_bipod)
-	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	fire_sound = 'sound/weapons/gpmg.ogg'
 
 /obj/item/gun/ballistic/automatic/t60/ui_action_click(mob/user, action)
 /*	if(istype(action, /datum/action/item_action/toggle_firemode))
