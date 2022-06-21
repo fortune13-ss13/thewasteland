@@ -21,7 +21,6 @@ Ammo groupings for specialty:
 5mm/22lr: Shock
 Small Pistol calibers (38 357 9mm): Acid/Incin
 Large Pistol Calibers (44 45 10mm): Incin
-Very Large pistol (45-70): Knockback, Acid
 autorifle calibers (5.56 7.62):
 Micro-Shrapnel (wound/embed)
 heavy rifle calibers (12.7, 14mm, 7.62):
@@ -343,39 +342,6 @@ Uranium, Contaminated
 /obj/item/projectile/bullet/c4570/explosive/on_hit(atom/target, blocked = FALSE)
 	..()
 	explosion(target, 0, 0, 1, 1, flame_range = 1)
-
-/obj/item/projectile/bullet/c4570/acid
-	name = ".45-70 acid-tipped bullet"
-	damage = -10
-	wound_bonus = 0
-	sharpness = SHARP_NONE
-	var/acid_type = /datum/reagent/toxin/acid/fluacid
-
-/obj/item/projectile/bullet/c4570/acid/Initialize()
-	. = ..()
-	create_reagents(10, NO_REACT, NO_REAGENTS_VALUE)
-	reagents.add_reagent(acid_type, 10)
-
-/obj/item/projectile/bullet/c4570/acid/on_hit(atom/target, blocked = FALSE)
-	. = ..()
-	if(isliving(target))
-		var/mob/living/M = target
-		reagents.reaction(M, TOUCH)
-		reagents.trans_to(M, reagents.total_volume)
-
-/obj/item/projectile/bullet/c4570/knockback
-	name = ".45-70 ultradense bullet"
-	damage = -15
-	wound_bonus = 0
-	sharpness = SHARP_NONE
-	pixels_per_second = TILES_TO_PIXELS(500)
-
-/obj/item/projectile/bullet/c4570/knockback/on_hit(atom/target, blocked = FALSE)
-	. = ..()
-	if(ismovable(target) && prob(50))
-		var/atom/movable/M = target
-		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
-		M.safe_throw_at(throw_target, 2, 3)
 
 
 ///////////
