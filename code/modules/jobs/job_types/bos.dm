@@ -109,11 +109,11 @@ Head Paladin
 	exp_requirements = 1500
 
 	loadout_options = list(
-	/datum/outfit/loadout/sentstand, //Tribeam laser 
-	/datum/outfit/loadout/sentheavy, //Gauss + Glock 
-	/datum/outfit/loadout/sentgat, // Gatling 
-	/datum/outfit/loadout/sentmini, // Minigun 
-	/datum/outfit/loadout/sentfront, //aer12 
+	/datum/outfit/loadout/sentstand, //Tribeam laser
+	/datum/outfit/loadout/sentheavy, //Gauss + Glock
+	/datum/outfit/loadout/sentgat, // Gatling
+	/datum/outfit/loadout/sentmini, // Minigun
+	/datum/outfit/loadout/sentfront, //aer12
 	)
 
 	outfit = /datum/outfit/job/bos/f13sentinel
@@ -153,7 +153,7 @@ Head Paladin
 	neck = 			/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
@@ -370,7 +370,7 @@ Star Paladin
 	selection_color = "#95a5a6"
 	exp_type = EXP_TYPE_BROTHERHOOD
 
-	exp_requirements = 1000 
+	exp_requirements = 1000
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //5mm minigun and aer7
@@ -446,7 +446,7 @@ Star Paladin
 /datum/outfit/loadout/spaladind
 	name = "Senior Melee Specialist"
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/twohanded/sledgehammer/supersledge =1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
@@ -548,7 +548,7 @@ Paladin
 /datum/outfit/loadout/paladind
 	name = "Melee Specialist"
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/twohanded/sledgehammer/supersledge =1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
