@@ -170,7 +170,7 @@
 
 /obj/item/flag/bos
 	name = "Brotherhood of Steel flag"
-	desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
+	desc = "A navy and black flag with a sword surrounded in gears and wings, in a dazzling gold."
 	icon_state = "bosflag"
 	item_state = "bosflag"
 	faction = FACTION_BROTHERHOOD
