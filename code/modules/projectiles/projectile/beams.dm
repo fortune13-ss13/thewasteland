@@ -325,7 +325,7 @@
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
-	damage = 33
+	damage = 35
 
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
@@ -562,14 +562,14 @@
 
 /obj/item/projectile/beam/laser/aer14 //AER14
 	name = "laser beam"
-	damage = 38
+	damage = 39
 	armour_penetration = 0.6
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
 
 /obj/item/projectile/beam/laser/aer14/hitscan
-	damage = 32
+	damage = 39
 	wound_bonus = 20
 	armour_penetration = 0.05
 	tracer_type = /obj/effect/projectile/tracer/pulse
@@ -588,7 +588,7 @@
 
 /obj/item/projectile/beam/laser/aer12 //AER12
 	name = "laser beam"
-	damage = 34
+	damage = 35
 	armour_penetration = 0.55
 	icon_state = "xray"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
@@ -596,7 +596,7 @@
 
 /obj/item/projectile/beam/laser/aer12/hitscan
 	name = "laser beam"
-	damage = 28
+	damage = 30
 	hitscan = TRUE
 	armour_penetration = 0.02
 	tracer_type = /obj/effect/projectile/tracer/xray

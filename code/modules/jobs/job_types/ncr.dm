@@ -49,7 +49,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombatmk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombathelmet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombathelmetmk2)
-	
+
 ///////////////////////
 /// Colonel - Admin ///
 ///////////////////////
@@ -159,6 +159,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	loadout_options = list(
 		/datum/outfit/loadout/captainbackline,	// Infiltrator, El Capitan
 		/datum/outfit/loadout/captainfrontline, // Pancor Jackhammer, The Court Martial, Desert Eagle
+		/datum/outfit/loadout/heavycaptain,		// Bigass armor and big gun. Slow as holy fuck
 		)
 
 /datum/outfit/job/ncr/f13captain/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -221,6 +222,16 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/box/ration/menu_eight = 1,
 		)
 
+/datum/outfit/loadout/heavycaptain
+	name = "Heavy Trooper Officer"
+	suit_store = /obj/item/gun/ballistic/automatic/t60
+	backpack_contents = list(
+		/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/heavycaptain = 1,	//Not actually Salvaged PA, but it acts like it.
+		/obj/item/clothing/suit/armored/heavy/salvaged_pa/heavycaptain = 1,
+		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
+		/obj/item/ammo_box/magazine/t60 = 1,
+		/obj/item/storage/box/ration/menu_eight = 1,
+		)
 
 // LIEUTENANT
 
@@ -597,7 +608,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/amr = 2,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
-		/obj/item/ammo_box/c4570box/knockback = 1,
+		/obj/item/ammo_box/c4570box = 1,
 		/obj/item/ammo_box/magazine/amr/penetrator = 1,
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
@@ -618,7 +629,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/shotgun/buck = 3,
 		/obj/item/ammo_box/shotgun/trainshot = 1,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
-		/obj/item/ammo_box/c4570box/knockback = 1,
+		/obj/item/ammo_box/c4570box = 1,
 		)
 
 /datum/outfit/loadout/vrcqc
@@ -992,7 +1003,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 			/datum/job/ncr,
 			),
 		)
-	
+
 
 /datum/outfit/job/ncr/f13combatmedic		// Only default weapon is knife
 	name = "NCR Combat Medic"
@@ -1011,7 +1022,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/stack/crafting/armor_plate = 2,
 		)
 
-	
+
 
 /datum/outfit/job/ncr/f13combatmedic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
@@ -1045,12 +1056,12 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
 		/obj/item/storage/box/ration/menu_one = 1,
-		
+
 		)
 
-/datum/outfit/loadout/medicranger		//Medium Irons on their hip. Imagine how US navy has their corpsmen with US Marines. This, but rangers. Gets ranger gas mask and bowie only. 
+/datum/outfit/loadout/medicranger		//Medium Irons on their hip. Imagine how US navy has their corpsmen with US Marines. This, but rangers. Gets ranger gas mask and bowie only.
 	name = "Medical Ranger Support"
-	neck = /obj/item/storage/belt/holster 
+	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/colt357 = 2,
 		/obj/item/ammo_box/a357= 4,
