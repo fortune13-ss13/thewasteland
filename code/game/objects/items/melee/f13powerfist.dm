@@ -94,7 +94,6 @@
 	throwforce = 10
 	throw_range = 7
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
-	hitsound = 'sound/weapons/bladeslice.ogg'
 	tool_behaviour = TOOL_MINING
 	var/digrange = 0
 	toolspeed = 0.4
