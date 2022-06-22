@@ -343,6 +343,18 @@ Uranium, Contaminated
 	..()
 	explosion(target, 0, 0, 1, 1, flame_range = 1)
 
+/obj/item/projectile/bullet/c4570/knockback
+	name = ".45-70 ultradense bullet"
+	damage = -15
+	wound_bonus = 0
+	sharpness = SHARP_NONE
+
+/obj/item/projectile/bullet/c4570/knockback/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if(iscarbon(target) && prob(50))
+		var/mob/living/carbon/M = target
+		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
+		M.safe_throw_at(throw_target, 2, 3)
 
 ///////////
 // 14 MM //
