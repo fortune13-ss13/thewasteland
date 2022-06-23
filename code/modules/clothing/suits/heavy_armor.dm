@@ -63,9 +63,6 @@
 	armor = list("melee" = 55, "bullet" = 20, "laser" = 25, "energy" = 20, "bomb" = 45, "bio" = 5, "rad" = 10, "fire" = 30, "acid" = 10)
 	allowed = list(/obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
 
-
-
-
 //////////////////////////
 // Salvaged Power Armor //
 //////////////////////////
@@ -151,15 +148,6 @@
 	item_state = "advanced_salvaged"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 70, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)
 	slowdown = 0.85
-
-
-//Bigass captain armor. Still slow as shit. Not actually salvaged pa, mostly here for code reasons
-/obj/item/clothing/suit/armored/heavy/salvaged_pa/heavycaptain
-	name = "ncr captain's heavy armor"
-	desc = "A set of heavy armor used by the ncr captain. Very, very big. Made of thick steel and handcrafted by the NCR."
-	icon_state = "heavycaptain"
-	item_state = "heavycaptain"
-	armor = list("melee" = 55, "bullet" = 70, "laser" = 40, "energy" = 10, "bomb" = 40, "bio" = 50, "rad" = 30, "fire" = 80, "acid" = 10, "wound" = 30)
 
 ////////////
 // LEGION //

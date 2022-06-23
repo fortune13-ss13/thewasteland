@@ -80,11 +80,3 @@
 	item_state = "advanced"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 70, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)
 	slowdown = 0.1
-
-// Heavy Captain
-/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/heavycaptain
-	name = "ncr captain's heavy armor"
-	desc = "A set of heavy armor used by the ncr captain. Very, very big. Made of thick steel and handcrafted by the NCR."
-	icon_state = "heavycaptain"
-	item_state = "heavycaptain"
-	armor = list("melee" = 55, "bullet" = 60, "laser" = 40, "energy" = 10, "bomb" = 40, "bio" = 50, "rad" = 30, "fire" = 80, "acid" = 10, "wound" = 30)
