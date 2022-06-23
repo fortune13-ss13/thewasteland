@@ -279,6 +279,23 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
 	always_available = FALSE
+	
+/datum/crafting_recipe/a40mm
+	name = "40mm grenade"
+	result = /obj/item/ammo_casing/a40mm
+	category = CAT_EXPLOSIVE
+	reqs = list(
+				/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/sheet/mineral/titanium = 5,
+				/obj/item/stack/crafting/metalparts = 8,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/crafting/electronicparts = 15,
+				/obj/item/stack/ore/blackpowder = 8,
+				/obj/item/assembly/igniter = 1
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 5
+	always_available = FALSE
 
 /datum/crafting_recipe/rocket_base
 	name = "Empty rocket shell"
