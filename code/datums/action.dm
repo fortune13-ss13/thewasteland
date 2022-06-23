@@ -215,12 +215,6 @@
 /datum/action/item_action/toggle_firemode
 	name = "Toggle Firemode"
 
-/datum/action/item_action/toggle_bipod
-	name = "Toggle Stability "
-
-/datum/action/item_action/toggle_moveshoot
-	name = "Toggle Wielding"
-
 /datum/action/item_action/rcl_col
 	name = "Change Cable Color"
 	icon_icon = 'icons/mob/actions/actions_items.dmi'

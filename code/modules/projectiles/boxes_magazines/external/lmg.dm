@@ -86,13 +86,3 @@
 /obj/item/ammo_box/magazine/mm762/update_icon()
 	..()
 	icon_state = "762belt-[round(ammo_count(),20)]"
-
-
-/obj/item/ammo_box/magazine/t60
-	name = "t60 magazine (5mm)"
-	icon_state = "t60"
-	ammo_type = /obj/item/ammo_casing/m5mm
-	caliber = "m5mm"
-	max_ammo = 240
-	multiple_sprites = 2
-

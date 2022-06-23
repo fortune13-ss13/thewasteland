@@ -1371,59 +1371,6 @@ obj/item/gun/ballistic/automatic/bar
 	actions_types = null
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
-
-//R88 Squad Support Weapon				Keywords: NCR, 5.56mm, Automatic, 60 rounds, Damage decrease (bullethose)
-/obj/item/gun/ballistic/automatic/t60
-	name = "MG-60 Support LMG"
-	desc = "A light machinegun using 250 round belts fed from an ammobox. This is another one of the only heavy weapon deigns the NCR has produced."
-	icon_state = "t60"
-	item_state = "t60"
-	slowdown = 4
-	mag_type = /obj/item/ammo_box/magazine/t60
-	extra_damage = 15
-	fire_delay = 6
-	burst_shot_delay = 2.5
-	is_automatic = TRUE
-	automatic = 1
-	autofire_shot_delay = 1.5
-	spread = 30
-	can_attachments = FALSE
-	var/bipod = FALSE
-	actions_types = list(/datum/action/item_action/toggle_firemode, /datum/action/item_action/toggle_bipod)
-	fire_sound = 'sound/weapons/gpmg.ogg'
-
-/obj/item/gun/ballistic/automatic/t60/ui_action_click(mob/user, action)
-/*	if(istype(action, /datum/action/item_action/toggle_firemode))
-		if(is_automatic == FALSE)
-			burst_select()
-		if(is_automatic == TRUE)
-			auto_select()*/
-
-	if(istype(action, /datum/action/item_action/toggle_bipod))
-		if(bipod == FALSE)
-			bipod_on()
-			to_chat(user, "<span class='notice'>You enable the stability system.</span>")
-			bipod = TRUE
-			return
-		if(bipod == TRUE)
-			bipod_off()
-			to_chat(user, "<span class='notice'>You disable the stability system.</span>")
-			bipod = FALSE
-			return
-	else
-		return ..()
-
-/obj/item/gun/ballistic/automatic/t60/proc/bipod_on()
-	spread = 4
-	autofire_shot_delay = 2
-
-
-/obj/item/gun/ballistic/automatic/t60/proc/bipod_off()
-	spread = 30
-	autofire_shot_delay = 1.5
-
-
-
 //LSW Squad Support Weapon				Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, Scoped, Damage decrease (bullethose)
 /obj/item/gun/ballistic/automatic/lsw
 	name = "Light Support Weapon"
