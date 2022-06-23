@@ -581,6 +581,17 @@
 	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
+	
+/datum/crafting_recipe/armor_plate_deathclaw5
+	name = "Armor Plate (x5)"
+	result = /obj/item/stack/crafting/armor_plate/five
+	reqs = list(/obj/item/stack/sheet/animalhide/deathclaw  = 5,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/stack/crafting/metalparts = 10)
+	tools = list(TOOL_WORKBENCH)
+	time = 50
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/armor_plate_plastit
 	name = "Armor Plate"
@@ -590,6 +601,17 @@
 				/obj/item/stack/crafting/metalparts = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	
+/datum/crafting_recipe/armor_plate_plastit5
+	name = "Armor Plate (x5)"
+	result = /obj/item/stack/crafting/armor_plate/five
+	reqs = list(/obj/item/stack/sheet/plasteel = 10,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/stack/crafting/metalparts = 10)
+	tools = list(TOOL_WORKBENCH)
+	time = 50
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
