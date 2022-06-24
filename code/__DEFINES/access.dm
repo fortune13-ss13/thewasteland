@@ -66,6 +66,7 @@
 #define ACCESS_CLONING 68 //Cloning room and clone pod ejection
 #define ACCESS_ENTER_GENPOP 69
 #define ACCESS_LEAVE_GENPOP 70
+#define ACCESS_SYNAGOGUE 71
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
@@ -86,7 +87,7 @@
 #define ACCESS_NCR			121 //general NCR access
 #define ACCESS_NCR_ARMORY   122 //NCR armory access
 
-#define ACCESS_DEN			87	
+#define ACCESS_DEN			87
 /*general den access. This one has the same number as the line it's on, the rest should
 also be like that but I can't be arsed to go back and change them all*/
 
