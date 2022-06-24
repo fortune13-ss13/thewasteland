@@ -770,12 +770,6 @@
 	name = "gauss rifle blueprint"
 	crafting_recipe_types = list(/datum/crafting_recipe/gaussrifle)
 
-/obj/item/book/granter/crafting_recipe/manual/denvr
-	name = "den vr configuration"
-	icon_state = "book"
-	remarks = list("Never make dreams...", "Don't pick from an empty list...", "Runtimes are not good for cardio...", "Report an issue to a nearby technician, and expect to be told to post it to their terminal...", "Probably don't adjust the default safety settings.", "Clean up any messes left in the pod before the next use.")
-	crafting_recipe_types = list(/datum/crafting_recipe/set_vrboard/den)
-
 /obj/item/book/granter/crafting_recipe/ODF
 	name = "Weapons of Yuma and the Oasis Defense Force"
 	desc = "a book detailing weapons used in the region and by the local town, it has lithiographed pictures of hand-drawn schematics for each weapon type"
