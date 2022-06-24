@@ -598,7 +598,7 @@
 	icon_state = "shrub"
 
 
-/* Feature doesnt work properly at the moment, so it is a useless plant but still cool to see, if someone knows how to fix it please help in fixing it :) 
+/* Feature doesnt work properly at the moment, so it is a useless plant but still cool to see, if someone knows how to fix it please help in fixing it :) Everything works for this, just needs to be looked at and helped with. 
 /obj/item/grown/shrub/attack_self(mob/user)
 //	var/turf/player_turf = get_turf(user)
 //	if(player_turf?.is_blocked_turf(TRUE))
