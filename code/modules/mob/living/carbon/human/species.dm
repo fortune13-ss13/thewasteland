@@ -199,6 +199,18 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/obj/item/organ/liver/liver = C.getorganslot(ORGAN_SLOT_LIVER)
 	var/obj/item/organ/stomach/stomach = C.getorganslot(ORGAN_SLOT_STOMACH)
 	var/obj/item/organ/tail/tail = C.getorganslot(ORGAN_SLOT_TAIL)
+	var/obj/item/organ/foreskin/foreskin = C.getorganslot(ORGAN_SLOT_FORESKIN)
+	var/should_have_foreskin = FALSE
+
+if(C.gender == MALE)
+	should_have_foreskin = TRUE
+
+if(foreskin && (!should_have_foreskin || replace_current))
+	foreskin.Remove(C,1)
+	QDEL_NULL(foreskin)
+if(should_have_foreskin && !foreskin)
+	foreskin = new()
+	foreskin.Insert(C)
 
 	var/should_have_brain = TRUE
 	var/should_have_heart = TRUE
