@@ -92,6 +92,16 @@
 	result = /obj/item/reagent_containers/food/snacks/store/bread/tofu
 	subcategory = CAT_BREAD
 
+/datum/crafting_recipe/food/cornbread
+	name = "Cornbread"
+	reqs = list(
+		/datum/reagent/consumable/flour = 10, 
+		/datum/reagent/consumable/cornoil = 5, 
+		/datum/reagent/consumable/eggyolk = 5
+	)
+	result = /obj/item/reagent_containers/food/snacks/store/bread/corn
+	subcategory = CAT_BREAD
+
 ////////////////////////////////////////////////TOAST////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/butteredtoast
