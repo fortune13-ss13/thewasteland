@@ -114,6 +114,8 @@ GLOBAL_LIST_EMPTY(enclave_radios)
 
 /obj/machinery/radioterminal/legion
 	name = "Legion radio control"
+	icon = 'icons/fallout/machines/64x32.dmi'
+	icon_state = "radio_legion"
 	assigned_faction = FACTION_LEGION
 	req_one_access = list(ACCESS_LEGION_COMMAND)
 
