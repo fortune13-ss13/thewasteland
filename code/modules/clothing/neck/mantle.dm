@@ -49,8 +49,8 @@
 	icon_state = "bosshouldercape_r"
 
 /obj/item/clothing/neck/mantle/bos/paladin
-	name = "Paladin cape"
-	desc = "This stylish deep crimson cape is made to be worn below a power armor pauldron, a shoulder holster is added for utility."
+	name = "Paladin cloak"
+	desc = "This stylish dark navy cloak that is made to be worn below a power armor pauldron, a shoulder holster is added for utility."
 	icon_state = "paladin"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bos/paladin
 

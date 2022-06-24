@@ -253,6 +253,34 @@
 	anchored = FALSE
 	..()
 
+/mob/living/simple_animal/hostile/supermutant/suicider
+	name = "super mutant suicider"
+	desc = "A huge and ugly mutant humanoid. Wait is that a mininuke in it's hand ?"
+	icon_state = "hulk_suicider_s"
+	icon_living = "hulk_suicider_s"
+	icon_dead = null
+	maxHealth = 500
+	health = 500
+	del_on_death = 1
+	loot = list(/obj/effect/decal/cleanable/blood/gibs/core, /obj/effect/decal/cleanable/blood/gibs)
+
+/mob/living/simple_animal/hostile/supermutant/suicider/Aggro()
+	..()
+	visible_message("With anger stares at it's target, pressing down on their nuke as it starts violently beeping.")
+	do_sparks(6, TRUE, src)
+	for(var/i in 1 to 3)
+		addtimer(CALLBACK(src, .proc/do_death_beep), i * 1 SECONDS)
+	addtimer(CALLBACK(src, .proc/self_destruct), 6 SECONDS)
+	return ..()
+
+/mob/living/simple_animal/hostile/supermutant/suicider/proc/do_death_beep()
+	playsound(src, 'sound/machines/triple_beep.ogg', 100, TRUE)
+
+
+/mob/living/simple_animal/hostile/supermutant/suicider/proc/self_destruct()
+	explosion(src,1,1,8,8)
+	qdel(src)
+
 //Cult Of Rain
 /mob/living/simple_animal/hostile/supermutant/meleemutant/rain
 	name = "super mutant rain cultist"

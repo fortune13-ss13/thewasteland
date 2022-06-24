@@ -290,6 +290,10 @@
 	desc = ".45-70 Goverment rounds with explosive tips. Surely an archaic blackpowder cartridge with an explosive payload is completely safe."
 	ammo_type = /obj/item/ammo_casing/c4570/explosive
 
+/obj/item/ammo_box/c4570box/knockback
+	name = "ammo box (.45-70 ultradense)"
+	desc = ".45-70 Goverment rounds with heavy, blunt bullets. Sure to knock even an elephant off their footing."
+	ammo_type = /obj/item/ammo_casing/c4570/knockback
 
 //5mm
 

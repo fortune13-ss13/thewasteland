@@ -3,58 +3,51 @@
 /////////////////		-Uses power (gas currently) for knockback. Heavy AP, specialized for attacking heavy armor
 
 // Power Fist			Throws targets. Max damage 44. Full AP.
-/obj/item/melee/powerfist/f13
+/obj/item/melee/unarmed/powerfist
 	name = "power fist"
 	desc = "A metal gauntlet with a piston-powered ram on top for that extra 'oomph' in your punch."
 	icon_state = "powerfist"
 	item_state = "powerfist"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	hitsound = 'sound/weapons/resonator_blast.ogg'
 	flags_1 = CONDUCT_1
 	attack_verb = list("whacked", "fisted", "power-punched")
 	force = 22
 	throwforce = 10
 	throw_range = 3
+	armour_penetration = 0.5
 	w_class = WEIGHT_CLASS_NORMAL
-	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
-	var/throw_distance = 1
+	var/throw_distance = 1 //multipled by power to give actual throw dist
+	var/power = 1
+	var/knockback_anchored = FALSE
 	attack_speed = CLICK_CD_MELEE
 
-/obj/item/melee/powerfist/f13/attackby(obj/item/W, mob/user, params)
+/obj/item/melee/unarmed/powerfist/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/knockback, throw_distance, FALSE, knockback_anchored)
+
+/obj/item/melee/unarmed/powerfist/attackby(obj/item/W, mob/user, params)
+	if(!power)
+		return
 	if(istype(W, /obj/item/wrench))
-		switch(fisto_setting)
+		switch(power)
 			if(1)
-				fisto_setting = 2
+				power = 2
 			if(2)
-				fisto_setting = 1
+				power = 1
+		if(GetComponent(/datum/component/knockback))
+			var/datum/component/knockback/KB = GetComponent(/datum/component/knockback)
+			KB.throw_distance = initial(throw_distance) * power
 		W.play_tool_sound(src)
-		to_chat(user, "<span class='notice'>You tweak \the [src]'s piston valve to [fisto_setting].</span>")
-		attack_speed = CLICK_CD_MELEE * fisto_setting
+		to_chat(user, "<span class='notice'>You tweak \the [src]'s piston valve to [power].</span>")
+		force = initial(force) * power
+		attack_speed = CLICK_CD_MELEE * power
 
-/obj/item/melee/powerfist/f13/updateTank(obj/item/tank/internals/thetank, removing = 0, mob/living/carbon/human/user)
-	return
-
-/obj/item/melee/powerfist/f13/attack(mob/living/target, mob/living/user, attackchain_flags = NONE)
-	if(HAS_TRAIT(user, TRAIT_PACIFISM))
-		to_chat(user, "<span class='warning'>You don't want to harm other living beings!</span>")
-		return FALSE
-	var/turf/T = get_turf(src)
-	if(!T)
-		return FALSE
-	var/totalitemdamage = target.pre_attacked_by(src, user)
-	target.apply_damage(totalitemdamage * fisto_setting, BRUTE, wound_bonus = -25*fisto_setting**2)
-	target.visible_message("<span class='danger'>[user]'s powerfist lets out a loud hiss as [user.p_they()] punch[user.p_es()] [target.name]!</span>", \
-		"<span class='userdanger'>You cry out in pain as [user]'s punch flings you backwards!</span>")
-	new /obj/effect/temp_visual/kinetic_blast(target.loc)
-	playsound(loc, 'sound/weapons/resonator_blast.ogg', 50, 1)
-	playsound(loc, 'sound/weapons/genhit2.ogg', 50, 1)
-	var/atom/throw_target = get_edge_target_turf(target, get_dir(src, get_step_away(target, src)))
-	target.throw_at(throw_target, 2 * throw_distance, 0.5 + (throw_distance / 2))
-	log_combat(user, target, "power fisted", src)
 
 // Goliath				Throws targets far. Max damage 50.
-/obj/item/melee/powerfist/f13/goliath
+/obj/item/melee/unarmed/powerfist/goliath
 	name = "Goliath"
 	desc = "A massive, experimental metal gauntlet captured by the Legion. The piston-powered ram on top is designed to throw targets very, very far."
 	icon = 'icons/fallout/objects/melee/melee.dmi'
@@ -86,20 +79,21 @@
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 
 
-// Mole Miner				
-/obj/item/melee/powerfist/f13/moleminer
+// Mole Miner
+/obj/item/melee/unarmed/powerfist/moleminer
 	name = "mole miner gauntlet"
 	desc = "A hand-held mining and cutting implement, repurposed into a deadly melee weapon.  Its name origins are a mystery..."
 	icon_state = "mole_miner_g"
 	item_state = "mole_miner_g"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	hitsound = 'sound/weapons/bap.ogg'
 	flags_1 = CONDUCT_1
 	force = 15
+	throw_distance = 5
 	throwforce = 10
 	throw_range = 7
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
-	hitsound = 'sound/weapons/bladeslice.ogg'
 	tool_behaviour = TOOL_MINING
 	var/digrange = 0
 	toolspeed = 0.4
