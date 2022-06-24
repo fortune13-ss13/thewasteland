@@ -903,7 +903,7 @@
 	name = "deathclaw egg omelette"
 	desc = "An omelette made from a pristine deathclaw eggs."
 	icon_state = "deathclaw_egg_omelette"
-	bonus_reagents = list (/datum/reagent/consumable/nutriment/vitamin = 12, /datum/reagent/medicine/omnizine = 40, /datum/reagent/medicine/dexalin = 10) 
+	bonus_reagents = list (/datum/reagent/consumable/nutriment/vitamin = 16, /datum/reagent/medicine/omnizine = 60, /datum/reagent/medicine/dexalin = 20) 
 	list_reagents = list(/datum/reagent/consumable/nutriment = 80)
 	tastes = list("deathclaw eggs" = 2, "deathclaw Meat" = 2, "cheese" = 1)
 	foodtype = MEAT | DAIRY
