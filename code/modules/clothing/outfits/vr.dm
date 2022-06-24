@@ -56,18 +56,11 @@
 /obj/item/radio/headset/headset_followers/virt
 	name = "Followers VR Radio"
 
-/obj/item/radio/headset/headset_den/virt
-	name = "Den VR Radio"
-
 /obj/item/radio/headset/headset_bos/virt/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 
 /obj/item/radio/headset/headset_followers/virt/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
-/obj/item/radio/headset/headset_den/virt/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 
@@ -84,11 +77,6 @@
 /datum/outfit/vr/followers
 	name = "Followers"
 	ears =		/obj/item/radio/headset/headset_followers/virt
-	starting_funds = 0
-
-/datum/outfit/vr/den
-	name = "Den"
-	ears =		/obj/item/radio/headset/headset_den/virt
 	starting_funds = 0
 
 /datum/outfit/vr/bos/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
