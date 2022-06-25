@@ -99,6 +99,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/obj/item/mutanthands
 	var/obj/item/organ/tongue/mutanttongue = /obj/item/organ/tongue
 	var/obj/item/organ/tail/mutanttail = null
+	var/obj/item/organ/foreskin/mutantforeskin = /obj/item/organ/foreskin
 
 	var/obj/item/organ/liver/mutantliver
 	var/obj/item/organ/stomach/mutantstomach
@@ -302,6 +303,18 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	for(var/path in mutant_organs)
 		var/obj/item/organ/I = new path()
 		I.Insert(C)
+
+	var/should_have_foreskin = FALSE
+
+	if(C.gender == MALE)
+		should_have_foreskin = TRUE
+
+	if(foreskin && (!should_have_foreskin || replace_current))
+		foreskin.Remove(C,1)
+		QDEL_NULL(foreskin)
+	if(should_have_foreskin && !foreskin)
+		foreskin = new()
+		foreskin.Insert(C)
 
 /datum/species/proc/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	// Drop the items the new species can't wear

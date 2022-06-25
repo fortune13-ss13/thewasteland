@@ -105,6 +105,10 @@
 	if(ears && !(SLOT_EARS in obscured))
 		. += "[t_He] [t_has] [ears.get_examine_string(user)] on [t_his] ears."
 
+	//foreskin
+	if(!getorgan(/obj/item/organ/foreskin) && gender == "male" && !(w_uniform || wear_suit))
+		msg += "<span class='deadsay'>[t_He] appears to be circumcised...</span>\n"
+
 	//ID
 	if(wear_id)
 		. += "[t_He] [t_is] wearing [wear_id.get_examine_string(user)]."

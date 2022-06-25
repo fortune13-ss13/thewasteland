@@ -23,6 +23,8 @@
 	var/facial_hair_color = "000"
 	var/facial_hair_style = "Shaved"
 
+	var/circumcised = FALSE
+
 	//Eye colour
 	var/left_eye_color = "000"
 	var/right_eye_color = "000"
