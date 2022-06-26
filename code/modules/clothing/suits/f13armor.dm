@@ -591,16 +591,16 @@
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/bos
 	name = "Brotherhood T-45d power armour"
 	desc = "A suit of T-45d Power Armour adorned with the markings of the Brotherhood of Steel. Commonly used by the Paladins of the Brotherhood."
-	icon = 'icons/fallout/clothing/armored_power.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_power.dmi'
-	icon_state = "t45ascoutarmor"
-	item_state = "t45ascoutarmor"
+	icon_state = "t45dpowerarmor_bos"
+	item_state = "t45dpowerarmor_bos"
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/scout
 	name = "Brotherhood T-45d scout power armour"
 	desc = "A suit of T-45d Power Armour adorned with the markings of the Brotherhood of Steel. Commonly used by Scouts ."
-	icon_state = "t45dpowerarmor_bos"
-	item_state = "t45dpowerarmor_bos"
+	icon = 'icons/fallout/clothing/armored_power.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_power.dmi'
+	icon_state = "t45ascoutarmor"
+	item_state = "t45ascoutarmor"
 
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
