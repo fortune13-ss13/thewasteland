@@ -474,7 +474,8 @@ Paladin
 	/datum/outfit/loadout/paladina, //Minigun and aer7
 	/datum/outfit/loadout/paladinb, //WT-550 and ripper
 	/datum/outfit/loadout/paladinc, //Aer12 and ripper
-	/datum/outfit/loadout/paladind //Sledge, aer7 and fist
+	/datum/outfit/loadout/paladind, //Sledge, aer7 and fist
+	/datum/outfit/loadout/paladine	//Powerfist, AER9, trekking and binocs
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
