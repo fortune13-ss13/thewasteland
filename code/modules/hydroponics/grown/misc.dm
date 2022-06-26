@@ -598,15 +598,12 @@
 	icon_state = "shrub"
 
 
-/* Feature doesnt work properly at the moment, so it is a useless plant but still cool to see, if someone knows how to fix it please help in fixing it :) Everything works for this, just needs to be looked at and helped with. 
 /obj/item/grown/shrub/attack_self(mob/user)
 //	var/turf/player_turf = get_turf(user)
 //	if(player_turf?.is_blocked_turf(TRUE))
 //		return FALSE
-	user.visible_message(SPAN_DANGER("[user] begins to plant \the [src]."))
+	user.visible_message("<span class='danger'>[user] begins to plant \the [src].</span>")
 	if(do_after(user, 8 SECONDS, target = user.drop_location(), progress = TRUE))
 		new /obj/structure/fluff/hedge/opaque(user.drop_location())
-		to_chat(user, SPAN_NOTICE("You plant \the [src]."))
+		to_chat(user, "<span class='notice'>You plant \the [src].</span>")
 		qdel(src)
-
-*/ 
