@@ -130,6 +130,22 @@
 	cost = 2
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
 
+/datum/gear/backpack/westernwayfarerlight
+	name = "Western wayfarer light modkit"
+	path = /obj/item/modkit/westernwayfarerlight
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+	restricted_desc = "Tribal"
+	restricted_roles = list("Tribal")
+
+/datum/gear/backpack/westernwayfarerheavy
+	name = "Western wayfarer heavy modkit"
+	path = /obj/item/modkit/westernwayfarerheavy
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+	restricted_desc = "Tribal"
+	restricted_roles = list("Tribal")
+
 /datum/gear/backpack/khanbatkit
 	name = "khanbat armor modkit"
 	path = /obj/item/modkit/khanbat
@@ -137,7 +153,6 @@
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
 	restricted_desc = "KHAN"
 	restricted_roles = list("Great Khan")
-
 
 /datum/gear/backpack/khanbatreinforcedkit
 	name = "khanbat reinforced armor modkit"
