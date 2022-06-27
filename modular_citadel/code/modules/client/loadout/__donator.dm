@@ -165,8 +165,6 @@
 	ckeywhitelist = list("darkrixd")
 
 /obj/item/storage/box/large/custom_kit/malinois/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/m1911/custom(src)
-	new /obj/item/gun/ballistic/automatic/pistol/m1911/custom(src)
 	new /obj/item/clothing/mask/gas/sechailer/swat(src)
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/storage/belt/holster(src)
