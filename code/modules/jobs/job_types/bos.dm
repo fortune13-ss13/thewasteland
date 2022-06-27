@@ -474,7 +474,8 @@ Paladin
 	/datum/outfit/loadout/paladina, //Minigun and aer7
 	/datum/outfit/loadout/paladinb, //WT-550 and ripper
 	/datum/outfit/loadout/paladinc, //Aer12 and ripper
-	/datum/outfit/loadout/paladind //Sledge, aer7 and fist
+	/datum/outfit/loadout/paladind, //Sledge, aer7 and fist
+	/datum/outfit/loadout/paladine	//Powerfist, AER9, trekking and binocs
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -505,8 +506,6 @@ Paladin
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
-	suit =	/obj/item/clothing/suit/armor/f13/power_armor/t45d/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/assault
@@ -523,6 +522,8 @@ Paladin
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1,
+		/obj/item/clothing/suit/armor/f13/power_armor/t45d/bos = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos = 1
 	)
 
 /datum/outfit/loadout/paladinb
@@ -534,6 +535,8 @@ Paladin
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1,
 		/obj/item/melee/powered/ripper = 1,
+		/obj/item/clothing/suit/armor/f13/power_armor/t45d/bos = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos = 1
 		)
 
 /datum/outfit/loadout/paladinc
@@ -542,7 +545,9 @@ Paladin
 		/obj/item/gun/energy/laser/aer12 = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 1,
 		/obj/item/melee/powered/ripper = 1,
-		/obj/item/clothing/accessory/bos/paladin=1
+		/obj/item/clothing/accessory/bos/paladin=1,
+		/obj/item/clothing/suit/armor/f13/power_armor/t45d/bos = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos = 1
 		)
 
 /datum/outfit/loadout/paladind
@@ -552,7 +557,23 @@ Paladin
 		/obj/item/twohanded/sledgehammer/supersledge =1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/clothing/accessory/bos/paladin=1
+		/obj/item/clothing/accessory/bos/paladin=1,
+		/obj/item/clothing/suit/armor/f13/power_armor/t45d/bos = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos = 1
+		)
+
+/datum/outfit/loadout/paladine
+	name = "Scout Paladin"
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/aer9 = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
+		/obj/item/binoculars = 1,
+		/obj/item/book/granter/trait/trekking = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak= 3,
+		/obj/item/clothing/accessory/bos/paladin=1,
+		/obj/item/clothing/suit/armor/f13/power_armor/t45d/scout = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos = 1
 		)
 
 /*
