@@ -289,9 +289,10 @@
 /datum/crafting_recipe/food/cheesy_porridge
 	name = "Cheesy porridge"
 	reqs = list(
-		/obj/item/reagent_containers/food/snacks/soup/cornmeal_porridge = 1,
+		/obj/item/reagent_containers/glass/bowl = 1,
+		/datum/reagent/water = 10,
 		/datum/reagent/consumable/milk = 5,
-		/obj/item/reagent_containers/food/snacks/firm_cheese = 1,
+		/obj/item/reagent_containers/food/snacks/firm_cheese_slice = 1,
 		/obj/item/reagent_containers/food/snacks/curd_cheese = 1,
 		/obj/item/reagent_containers/food/snacks/butter = 1
 	)
@@ -301,9 +302,10 @@
 /datum/crafting_recipe/food/fried_eggplant_polenta
 	name = "Fried eggplant and polenta"
 	reqs = list(
-		/obj/item/reagent_containers/food/snacks/soup/cheesy_porridge = 1,
+		/obj/item/reagent_containers/glass/bowl = 1,
+		/datum/reagent/water = 10,
 		/obj/item/reagent_containers/food/snacks/grown/eggplant = 1,
-		/obj/item/reagent_containers/food/snacks/breadslice/custom = 2,
+		/obj/item/reagent_containers/food/snacks/breadslice/plain = 2,
 		/obj/item/reagent_containers/food/snacks/tomato_sauce = 1,
 		/obj/item/reagent_containers/food/snacks/mozzarella = 1
 	)

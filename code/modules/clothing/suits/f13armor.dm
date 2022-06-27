@@ -594,6 +594,15 @@
 	icon_state = "t45dpowerarmor_bos"
 	item_state = "t45dpowerarmor_bos"
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/scout
+	name = "Brotherhood T-45d scout power armour"
+	desc = "A suit of T-45d Power Armour adorned with the markings of the Brotherhood of Steel. Commonly used by Scouts ."
+	icon = 'icons/fallout/clothing/armored_power.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_power.dmi'
+	icon_state = "t45ascoutarmor"
+	item_state = "t45ascoutarmor"
+
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	name = "Scorched Sierra power armor"
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
