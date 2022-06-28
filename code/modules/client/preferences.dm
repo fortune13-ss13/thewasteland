@@ -48,7 +48,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/max_chat_length = CHAT_MESSAGE_MAX_LENGTH
 	var/see_chat_non_mob = TRUE
 	///Whether emotes will be displayed on runechat. Requires chat_on_map to have effect. Boolean.
-	var/see_rc_emotes = TRUE
+	var/see_rc_emotes = FALSE
 
 	/// Custom Keybindings
 	var/list/key_bindings = list()
