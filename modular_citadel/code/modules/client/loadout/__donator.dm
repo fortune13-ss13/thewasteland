@@ -164,6 +164,21 @@
 	path = /obj/item/storage/box/large/custom_kit/darkrixd
 	ckeywhitelist = list("darkrixd")
 
+/obj/item/storage/box/large/custom_kit/malinois/PopulateContents()
+	new /obj/item/clothing/mask/gas/sechailer/swat(src)
+	new /obj/item/storage/belt/military(src)
+	new /obj/item/storage/belt/holster(src)
+	new /obj/item/clothing/shoes/workboots/mining(src)
+	new /obj/item/clothing/under/pants/jeanripped(src)
+	new /obj/item/clothing/gloves/fingerless(src)
+	new /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert/whiskey(src)
+	new /obj/item/clothing/suit/armor/f13/rangercombat/desert/whiskey(src)
+
+/datum/gear/donator/kits/malinois
+	name = "malinois's stuff"
+	path = /obj/item/storage/box/large/custom_kit/malinois
+	ckeywhitelist = list("malinois.rage")	
+
 /// Pug stuff below
 
 /obj/item/storage/box/large/custom_kit/pug/PopulateContents()
