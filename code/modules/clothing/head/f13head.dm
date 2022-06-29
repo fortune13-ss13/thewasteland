@@ -365,6 +365,7 @@
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 40)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
 
+
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "t's an old pre-War power armor helmet. It's pretty hot inside of it."
@@ -382,9 +383,15 @@
 	name = "Brotherhood T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 
-/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos/update_icon_state()
-	icon_state = "t45dhelmet[light_on]"
-	item_state = "t45dhelmet[light_on]"
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/scout
+	name = "Brotherhood T-45d scout helmet"
+	desc = "A suit of T-45d Power Armour adorned with the markings of the Brotherhood of Steel. Commonly used by Scouts ."
+	icon_state = "t45dscout"
+	item_state = "t45dscout"
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/scout/update_icon_state()
+	icon_state = "t45dscout[light_on]"
+	item_state = "t45dscout[light_on]"
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"

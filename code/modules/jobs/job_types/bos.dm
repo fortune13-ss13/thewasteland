@@ -573,7 +573,7 @@ Paladin
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 3,
 		/obj/item/clothing/accessory/bos/paladin=1,
 		/obj/item/clothing/suit/armor/f13/power_armor/t45d/scout = 1,
-		/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos = 1
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d/scout = 1
 		)
 
 /*
