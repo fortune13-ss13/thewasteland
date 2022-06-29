@@ -33,8 +33,8 @@
 								/obj/item/reagent_containers/hypospray/medipen/psycho = 20,
 								/obj/item/reagent_containers/hypospray/medipen/medx = 75,
 								/obj/item/reagent_containers/pill/patch/healpoultice = 50,
-								/obj/item/reagent_containers/hypospray/medipen/stimpak = 50,
-								/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 100,
+								/obj/item/reagent_containers/hypospray/medipen/stimpak = 25,
+								/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 50,
 								)
 
 /obj/machinery/mineral/wasteland_trader/general
@@ -70,7 +70,7 @@
 	dat += "Cut Diamonds : 20 caps<br>"
 	dat += "Jet/Psycho/MedX : 10/20/75 caps<br>"
 	dat += "Healing Powder/Healing Paultice : 30/50 caps<br>"
-	dat += "Stimpak/Super Stimpak : 50/100 caps<br>"
+	dat += "Stimpak/Super Stimpak : 25/50 caps<br>"
 	dat += ""
 	dat += "</div>"
 
