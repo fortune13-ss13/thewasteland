@@ -128,9 +128,7 @@
 
 /obj/effect/particle_effect/smoke/bad/smoke_mob(mob/living/carbon/M)
 	if(..())
-		M.drop_all_held_items()
 		M.adjustOxyLoss(1)
-		M.emote("cough")
 		return 1
 
 /obj/effect/particle_effect/smoke/bad/CanPass(atom/movable/mover, border_dir)
