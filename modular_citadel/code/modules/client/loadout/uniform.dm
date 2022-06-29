@@ -150,6 +150,18 @@
 	name = "torn rags"
 	path = /obj/item/clothing/under/f13/rag
 
+/datum/gear/uniform/robotics
+	name = "robotics jumpsuit"
+	path = /obj/item/clothing/under/rank/rnd/roboticist
+
+/datum/gear/uniform/robotics/skirt
+	name = "robotics skirt"
+	path = /obj/item/clothing/under/rank/rnd/roboticist/skirt
+
+/datum/gear/uniform/robotics/sleek
+	name = "robotics sleek"
+	path = /obj/item/clothing/under/rank/rnd/roboticist/sleek
+
 //suits 
 
 /datum/gear/uniform/suit

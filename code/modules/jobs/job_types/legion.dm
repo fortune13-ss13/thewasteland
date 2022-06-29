@@ -43,6 +43,11 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvagedhelmet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombat)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatmk2)
+
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/military/assault/legion
@@ -132,7 +137,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
 	r_pocket = /obj/item/storage/bag/money/small/legion
 	l_pocket = /obj/item/flashlight/lantern
-	r_hand = /obj/item/melee/powerfist/f13/goliath
+	r_hand = /obj/item/melee/unarmed/powerfist/goliath
 	l_hand = /obj/item/tank/internals/oxygen
 	backpack = null
 	satchel = null
@@ -211,9 +216,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// 10mm SMG, Goliath, CQC
-		/datum/outfit/loadout/rangerhunter,	// Hunting Revolver, AMR, Spatha
-		/datum/outfit/loadout/centurion,	// M1919, Hunting Revolver
+		/datum/outfit/loadout/palacent,         // 10mm SMG, Goliath, CQC
+		/datum/outfit/loadout/rangerhunter,	    // Hunting Revolver, AMR, Spatha
+		/datum/outfit/loadout/centurion,	    // M1919, Hunting Revolver
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -278,20 +283,25 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13/goliath = 1,
+		/obj/item/melee/unarmed/powerfist/goliath = 1,
 		/obj/item/ammo_box/magazine/m14mm = 3,
 		)
-
-/* /datum/outfit/loadout/berserkercenturion
-	name = 			"Praetorian Candidate"
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
-	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
+/*
+/datum/outfit/loadout/tribalcenturion
+	name = "Chosen Tribal Centurion"
+	suit = /obj/item/clothing/suit/armor/f13/legion/centurion
+	head = /obj/item/clothing/head/helmet/f13/legion/palacent
+	suit_store = /obj/item/melee/unarmed/sappers
 	backpack_contents = list(
-					/obj/item/melee/unarmed/sappers = 1,
-					/obj/item/book/granter/martial/berserker = 1,
-					/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 2
-					)
-commented out pending rework*/
+		/obj/item/shield/riot/legion = 1,
+		/obj/item/book/granter/martial/berserker = 1,
+		/obj/item/throwing_star/spear = 4,
+		/obj/item/melee/onehanded/knife/throwing = 5,
+		/obj/item/restraints/legcuffs/bola/tactical = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 3,
+		/obj/item/reagent_containers/pill/patch/bitterdrink = 2,
+		)
+*/ //TO DO funny cent melee maybe later
 
 
 // VETERAN DECANUS

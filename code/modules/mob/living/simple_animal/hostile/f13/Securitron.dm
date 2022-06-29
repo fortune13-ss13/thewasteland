@@ -71,13 +71,6 @@
 		visible_message(span_danger("\The [Proj] bounces off \the [src]'s armor plating!"))
 		return FALSE
 
-/mob/living/simple_animal/hostile/securitron/emp_act(severity)
-	. = ..()
-	if(. & EMP_PROTECT_SELF)
-		return
-	var/emp_damage = round((maxHealth * 0.1) * (severity * 0.1)) // 10% of max HP * 10% of severity(Usually around 20-40)
-	adjustBruteLoss(emp_damage)
-
 /mob/living/simple_animal/hostile/securitron/proc/do_death_beep()
 	playsound(src, 'sound/machines/triple_beep.ogg', 75, TRUE)
 	visible_message(span_warning("You hear an ominous beep coming from [src]!"), span_warning("You hear an ominous beep!"))
@@ -138,7 +131,7 @@
 	health = 1000
 	maxHealth = 1000 //CHONK
 	obj_damage = 300
-	retreat_distance = 0
+	retreat_distance = 1
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
 	color = "#75FFE2"
 	aggro_vision_range = 15
@@ -155,6 +148,35 @@
 	else
 		visible_message(span_danger("\The [Proj] bounces off \the [src]'s armor plating!"))
 		return FALSE
+
+//port of DR's overseer for use in the dustbowl. a god among sentrybots
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong
+	name = "big chew-chew"
+	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick, dark blue armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
+	extra_projectiles = 5
+	health = 1250
+	maxHealth = 1250 //CHONK
+	retreat_distance = 1
+	ranged_cooldown_time = 10
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/strong
+	speed = 2
+	rapid_melee = 2
+	stat_attack = UNCONSCIOUS
+	melee_damage_lower = 50
+	melee_damage_upper = 50
+	armour_penetration = 0.7
+	wound_bonus = 50 //This might be a TERRIBLE idea, but a funny one
+	bare_wound_bonus = 50
+	color = "#597FEE"
+	aggro_vision_range = 15
+
+/obj/item/projectile/beam/laser/pistol/ultraweak/strong
+	damage = 15
+	icon_state = "gaussstrong"
+	armour_penetration = 0.5
+	movement_type = FLYING | UNSTOPPABLE
+	pixels_per_second = TILES_TO_PIXELS(12)
+	range = 18
 
 //Raider friendly Sentry bot
 /mob/living/simple_animal/hostile/securitron/sentrybot/nsb

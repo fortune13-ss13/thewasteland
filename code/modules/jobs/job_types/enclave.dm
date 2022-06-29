@@ -39,6 +39,10 @@
 		return
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombat)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombatmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombathelmetmk2)
 
 
 ///////////////////////

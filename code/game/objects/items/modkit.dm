@@ -81,16 +81,6 @@
 	target_items = list(/obj/item/clothing/suit/armor/f13/trailranger)
 	result_item = /obj/item/clothing/suit/toggle/armor/f13/cloakranger
 
-/obj/item/modkit/digger_helm
-	name = "salvaged riot armor modkit"
-	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
-	result_item = /obj/item/clothing/suit/armor/f13/herbertranger
-
-/obj/item/modkit/digger_vest
-	name = "salvaged riot helmet modkit"
-	target_items = list(/obj/item/clothing/head/helmet/f13/raider)
-	result_item = /obj/item/clothing/head/helmet/f13/herbertranger
-
 /obj/item/modkit/diohelmet
 	name = "galerum lacertarex"
 	target_items = list(/obj/item/clothing/head/helmet/f13/legion/venator)
@@ -115,13 +105,51 @@
 
 /obj/item/modkit/khanbat
 	name = "khanbat armor modkit"
+	desc = "for combat armor"
 	target_items = list(/obj/item/clothing/suit/armor/f13/combat)
 	result_item = /obj/item/clothing/suit/armor/f13/combat/khan
 
 /obj/item/modkit/khanbatreinforced
 	name = "khanbat reinforced armor modkit"
+	desc = "for reinforced combat armor"
 	target_items = list(/obj/item/clothing/suit/armor/f13/combat/mk2)
 	result_item = /obj/item/clothing/suit/armor/f13/combat/mk2/khan
+
+/obj/item/modkit/digger_helm
+	name = "salvaged riot armor modkit"
+	desc = "for raider armor"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/herbertranger
+
+/obj/item/modkit/digger_vest
+	name = "salvaged riot helmet modkit"
+	desc = "for raider helmet"
+	target_items = list(/obj/item/clothing/head/helmet/f13/raider)
+	result_item = /obj/item/clothing/head/helmet/f13/herbertranger
+
+/obj/item/modkit/marlowhat
+	name = "Marlow Hat modkit"
+	desc = "for raider helmet"
+	target_items = list(/obj/item/clothing/head/helmet/f13/raider)
+	result_item = /obj/item/clothing/head/helmet/f13/marlowhat
+
+/obj/item/modkit/marlowsuit_ike
+	name = "Gunfighters Overcoat modkit"
+	desc = "for raider armor"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/marlowsuit/ikesuit
+
+/obj/item/modkit/marlowsuit_mason
+	name = "Vagabond Vest modkit"
+	desc = "for raider armor"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/marlowsuit/masonsuit
+
+/obj/item/modkit/marlowsuit
+	name = "Marlow Overcoat modkit"
+	desc = "for raider armor"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/marlowsuit
 
 /obj/item/modkit/rangerpatrolhat
 	name = "ranger patrol hat modkit"
@@ -132,6 +160,44 @@
 	name = "sniper riot gear armor modkit"
 	target_items = list(/obj/item/clothing/suit/armor/f13/combat/ncr_patrol)
 	result_item = /obj/item/clothing/suit/armor/f13/rangercombat/degancustom
+
+/obj/item/modkit/environmentalhelm
+	name = "environmental helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/raider)
+	result_item = /obj/item/clothing/head/helmet/f13/combat/environmental
+
+/obj/item/modkit/environmentalarmor
+	name = "environmental armor modkit"
+	desc = "for raider armor"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/combat/environmental
+
+/obj/item/modkit/westernwayfarerlight
+	name = "Western wayfarer light modkit"
+	desc = "for tribal light armor"
+	target_items = list(/obj/item/clothing/suit/f13/tribal/light)
+	result_item = /obj/item/clothing/suit/f13/tribal/light/westernwayfarer
+
+/obj/item/modkit/westernwayfarerheavy
+	name = "Western wayfarer heavy modkit"
+	desc = "for tribal heavy armor"
+	target_items = list(/obj/item/clothing/suit/f13/tribal/heavy)
+	result_item = /obj/item/clothing/suit/f13/tribal/heavy/westernwayfarer
+
+/obj/item/modkit/daemonhelm
+	name = "daemon helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/legion/vet/decan)
+	result_item = /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon
+
+/obj/item/modkit/daemonarmor
+	name = "daemon armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/legion/heavy)
+	result_item = /obj/item/clothing/suit/armor/f13/legion/heavy/daemon
+
+/obj/item/modkit/flakabomber
+	name = "Flaka armor modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/ncrarmor/captain)
+	result_item = /obj/item/clothing/suit/co_bomber
 
 /// Personal Donator Modkits (dont use unless you are them or have permission)
 
@@ -149,13 +215,3 @@
 	name = "enclave nco trenchcoat modkit"
 	target_items = list(/obj/item/clothing/suit/armor/f13/enclavetrenchcoat)
 	result_item = /obj/item/clothing/suit/armor/f13/enclavetrenchcoat/gunny
-
-/obj/item/modkit/daemonhelm
-	name = "daemon helmet modkit"
-	target_items = list(/obj/item/clothing/head/helmet/f13/legion/vet/decan)
-	result_item = /obj/item/clothing/head/helmet/f13/legion/vet/decan/daemon
-
-/obj/item/modkit/daemonarmor
-	name = "daemon armor modkit"
-	target_items = list(/obj/item/clothing/suit/armor/f13/legion/heavy)
-	result_item = /obj/item/clothing/suit/armor/f13/legion/heavy/daemon

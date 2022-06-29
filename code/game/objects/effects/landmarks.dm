@@ -808,17 +808,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Great Khan"
 	icon_state = "Pusher"
 
-/obj/effect/landmark/start/f13/enforcer
-	name = "Den Mob Enforcer"
-	icon_state = "Enforcer"
-
-/obj/effect/landmark/start/f13/dendoctor
-	name = "Den Doctor"
-
-/obj/effect/landmark/start/f13/mobboss
-	name = "Den Mob Boss"
-	icon_state = "Boss"
-
 /obj/effect/landmark/start/f13/preacher
 	name = "Preacher"
 	icon_state = "Preacher"

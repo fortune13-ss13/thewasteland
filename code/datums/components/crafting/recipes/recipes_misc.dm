@@ -178,12 +178,6 @@
 	reqs = list(/obj/item/circuitboard/machine/vr_sleeper = 1)
 	tools = list(/obj/item/multitool)
 
-/datum/crafting_recipe/set_vrboard/den
-	name = "Modify VR Sleeper Board (Den)"
-	result = /obj/item/circuitboard/machine/vr_sleeper/den
-	reqs = list(/obj/item/circuitboard/machine/vr_sleeper = 1)
-	tools = list(/obj/item/multitool)
-
 //////////////////////
 //Burial & Execution//
 //////////////////////

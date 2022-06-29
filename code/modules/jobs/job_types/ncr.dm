@@ -45,8 +45,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrgate)
-
-
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombat)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombatmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombathelmetmk2)
+	
 ///////////////////////
 /// Colonel - Admin ///
 ///////////////////////
@@ -594,7 +597,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/amr = 2,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
-		/obj/item/ammo_box/c4570box/knockback = 1,
+		/obj/item/ammo_box/c4570box = 1,
 		/obj/item/ammo_box/magazine/amr/penetrator = 1,
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
@@ -615,7 +618,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/shotgun/buck = 3,
 		/obj/item/ammo_box/shotgun/trainshot = 1,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
-		/obj/item/ammo_box/c4570box/knockback = 1,
+		/obj/item/ammo_box/c4570box = 1,
 		)
 
 /datum/outfit/loadout/vrcqc
@@ -974,6 +977,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	outfit = /datum/outfit/job/ncr/f13combatmedic
 	exp_requirements = 120
 
+	loadout_options = list(				     // Basically, shit gun, good meds. cool gun, not as good meds.
+		/datum/outfit/loadout/medicbackline,	// berreta pistol only, lots of meds. Medhud. More of a base only loadout
+		/datum/outfit/loadout/medicrifleman,	// service rifle, decent meds
+		/datum/outfit/loadout/medicranger,	// dual .357, ranger assister + lightweight meds. Holster
+		/datum/outfit/loadout/medicvanguard,	// foldable rifle, frontline oriented meds. no pistol
+		)
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
@@ -982,8 +992,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 			/datum/job/ncr,
 			),
 		)
+	
 
-/datum/outfit/job/ncr/f13combatmedic		// M1A1 Carbine, Survival knife
+/datum/outfit/job/ncr/f13combatmedic		// Only default weapon is knife
 	name = "NCR Combat Medic"
 	jobtype = /datum/job/ncr/f13combatmedic
 	id = /obj/item/card/id/dogtag/ncrtrooper
@@ -992,16 +1003,15 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	mask = /obj/item/clothing/mask/surgical
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	accessory = /obj/item/clothing/accessory/armband/med/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/survivalkit_aid_adv = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
-		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/stack/crafting/armor_plate = 4,
+		/obj/item/stack/crafting/armor_plate = 2,
 		)
+
+	
 
 /datum/outfit/job/ncr/f13combatmedic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
@@ -1012,6 +1022,55 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
+/datum/outfit/loadout/medicbackline
+	name = "Backline Medical"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/beretta = 1,
+		/obj/item/ammo_box/magazine/m9mmds = 2,
+		/obj/item/storage/firstaid/ancient = 1,
+		/obj/item/healthanalyzer/advanced = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
+		/obj/item/clothing/glasses/hud/health = 1,
+		/obj/item/storage/box/ration/menu_two = 1,
+		)
+
+/datum/outfit/loadout/medicrifleman		// Standard service rifle taxation enjoyer
+	name = "Medical Rifleman"
+	neck = /obj/item/storage/belt/holster
+	suit_store = /obj/item/gun/ballistic/automatic/service
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
+		/obj/item/ammo_box/magazine/m45 = 1,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
+		/obj/item/storage/box/ration/menu_one = 1,
+		
+		)
+
+/datum/outfit/loadout/medicranger		//Medium Irons on their hip. Imagine how US navy has their corpsmen with US Marines. This, but rangers. Gets ranger gas mask and bowie only. 
+	name = "Medical Ranger Support"
+	neck = /obj/item/storage/belt/holster 
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/colt357 = 2,
+		/obj/item/ammo_box/a357= 4,
+		/obj/item/clothing/mask/gas/ranger = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/stack/crafting/armor_plate = 2,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/storage/box/ration/menu_one = 1,
+		)
+
+/datum/outfit/loadout/medicvanguard	//Has a fold out gun. Funny roleplay lightweight loadout
+	name = "Medical Vanguard"
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
+		/obj/item/storage/firstaid/ancient = 1,
+		/obj/item/healthanalyzer = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
+		/obj/item/storage/box/ration/menu_one = 1,
+		)
 
 
 /////////////////////////
@@ -1053,6 +1112,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+
 
 /datum/outfit/job/ncr/f13corporal
 	name = "NCR Corporal"

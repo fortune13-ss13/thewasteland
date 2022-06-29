@@ -25,7 +25,7 @@
 	minimal_access = list(ACCESS_KHAN)
 
 	loadout_options = list(
-		/datum/outfit/loadout/enforcer,
+		/datum/outfit/loadout/khanenforcer,
 		/datum/outfit/loadout/khanskirmisher,
 		/datum/outfit/loadout/khandrug,
 		)
@@ -73,7 +73,6 @@
 		GK.add_member(H)
 		H.gang = GK
 
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den,)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
@@ -86,12 +85,12 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 
-/datum/outfit/loadout/enforcer
+/datum/outfit/loadout/khanenforcer
 	name = "Enforcer"
 	r_hand = /obj/item/twohanded/baseball/spiked
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola/tactical=1,
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
 		)
@@ -110,7 +109,7 @@
 	name = "Drug Pusher"
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
-		/obj/item/book/granter/trait/midsurgery = 1,
+		/obj/item/storage/pill_bottle/chem_tin/fixer = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/reagent_containers/pill/patch/turbo = 2
 		)
@@ -126,8 +125,8 @@ Raider
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 16
-	spawn_positions = 16
+	total_positions = 24
+	spawn_positions = 24
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
 	supervisors = "Your desire to make things interesting and fun. Don't play this as wastelander+."
 	selection_color = "#ff4747"
@@ -664,232 +663,6 @@ Raider
 		/obj/item/binoculars = 1,
 		/obj/item/radio = 1
 		)
-
-/datum/job/wasteland/f13enforcer
-	title = "Den Mob Enforcer"
-	flag = F13ENFORCER
-	faction = FACTION_WASTELAND
-	social_faction = FACTION_RAIDERS
-	total_positions = 4
-	spawn_positions = 4
-	description = "The mob rules in Yuma. A hitman for the Den's Boss, you are a highly loyal enforcer charged with keeping order among the outlaw groups inhabiting the Den."
-	supervisors = "The Boss."
-	selection_color = "#ff4747"
-	exp_requirements = 600
-	exp_type = EXP_TYPE_WASTELAND
-
-	outfit = /datum/outfit/job/wasteland/f13enforcer
-
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
-
-	loadout_options = list(
-		/datum/outfit/loadout/hitman,
-		/datum/outfit/loadout/bodyguard,
-		)
-
-/datum/outfit/job/wasteland/f13enforcer
-	name = "Den Mob Enforcer"
-	jobtype = /datum/job/wasteland/f13enforcer
-
-	id = /obj/item/card/id/denid
-	belt = /obj/item/storage/belt/military/assault
-	shoes = /obj/item/clothing/shoes/laceup
-	ears = /obj/item/radio/headset/headset_den
-	l_pocket = /obj/item/melee/onehanded/knife/switchblade
-	r_pocket = /obj/item/flashlight/seclite
-	uniform = /obj/item/clothing/under/f13/densuit
-	backpack =	/obj/item/storage/backpack/satchel
-	satchel =  /obj/item/storage/backpack/satchel
-	gloves =  /obj/item/clothing/gloves/color/white
-	head = /obj/item/clothing/head/beret/durathread
-	mask =  /obj/item/clothing/mask/bandana/durathread
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/restraints/handcuffs = 1,
-		/obj/item/storage/bag/money/small/wastelander
-		)
-
-/datum/outfit/job/wasteland/f13enforcer/pre_equip(mob/living/carbon/human/H)
-	..()
-	r_hand = /obj/item/book/granter/trait/selection
-
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
-
-/datum/outfit/loadout/hitman
-	name = "Hitman"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
-	suit = /obj/item/clothing/suit/armor/vest
-	backpack_contents = list(
-						/obj/item/ammo_box/magazine/uzim9mm = 3,
-						/obj/item/suppressor = 1
-						)
-
-/datum/outfit/loadout/bodyguard
-	name = "Bodyguard"
-	r_hand = /obj/item/gun/ballistic/shotgun/police
-	suit = /obj/item/clothing/suit/armor/vest
-	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/melee/onehanded/knife/hunting = 1
-		)
-
-
-
-
-/datum/job/wasteland/f13mobboss
-	title = "Den Mob Boss"
-	flag = F13MOBBOSS
-	faction = FACTION_WASTELAND
-	social_faction = FACTION_RAIDERS
-	total_positions = 1
-	spawn_positions = 1
-	description = "The mob rules in Yuma, and you're on top. Keeping the loose association of Khans, outlaws, and other no-goods together you maintain order in The Den by force. Ensure that all inhabitants of the Den obey their rules, and spread your influence over the wasteland. Be careful though - even your own men can't be trusted."
-	supervisors = "The Overboss, God."
-	selection_color = "#ff4747"
-	exp_requirements = 1000
-	exp_type = EXP_TYPE_OUTLAW
-
-	outfit = /datum/outfit/job/wasteland/f13mobboss
-
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis/f13mayor,
-			/datum/job/oasis/f13sheriff,
-			/datum/job/oasis/f13detective,
-		),
-		/datum/matchmaking_pref/patron = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-	)
-
-	loadout_options = list(
-		/datum/outfit/loadout/ncrrdenboss,
-		/datum/outfit/loadout/truedenmob
-		)
-
-/datum/outfit/job/wasteland/f13mobboss
-	name = "Den Mob Boss"
-	jobtype = /datum/job/wasteland/f13mobboss
-
-	id = /obj/item/card/id/denid
-	belt = /obj/item/storage/belt/military/assault
-	ears = /obj/item/radio/headset/headset_den
-	shoes = /obj/item/clothing/shoes/laceup
-	l_pocket = /obj/item/melee/onehanded/knife/switchblade
-	r_pocket = /obj/item/flashlight/seclite
-	uniform = /obj/item/clothing/under/f13/densuit
-	suit = /obj/item/clothing/suit/armor/f13/combat/mk2/raider
-	backpack =	/obj/item/storage/backpack/satchel
-	satchel = 	/obj/item/storage/backpack/satchel
-	gloves = /obj/item/clothing/gloves/color/white
-	head = /obj/item/clothing/head/caphat/beret/white
-	mask = /obj/item/clothing/mask/bandana/durathread
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/restraints/handcuffs = 1,
-		/obj/item/storage/bag/money/small/raider/mobboss,
-		/obj/item/book/granter/crafting_recipe/manual/denvr
-		)
-
-
-/datum/outfit/loadout/ncrrdenboss
-	name = "Central Cali Den Boss"
-	backpack_contents = list(
-							/obj/item/ammo_box/tube/a357 = 4,
-							/obj/item/book/granter/trait/trekking = 1,
-							/obj/item/gun/ballistic/revolver/colt357/brassgun = 2,
-							/obj/item/book/granter/trait/gunslinger = 1
-							)
-
-/datum/outfit/loadout/truedenmob
-	name = "True Den Boss"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	backpack_contents = list(
-							/obj/item/ammo_box/magazine/tommygunm45/stick = 3
-							)
-
-datum/job/wasteland/f13dendoctor
-	title = "Den Doctor"
-	flag = F13DENDOCTOR
-	faction = FACTION_WASTELAND
-	social_faction = FACTION_RAIDERS
-	total_positions = 4
-	spawn_positions = 4
-	description = "While you prioritize providing medical treatment in emergency situations, you are still trained in combat and have the additional role as a loyal combanteer to the Den."
-	supervisors = "The Boss."
-	selection_color = "#ff4747"
-	exp_requirements = 1000
-	exp_type = EXP_TYPE_OUTLAW
-
-	outfit = /datum/outfit/job/wasteland/f13dendoctor
-
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
-
-	loadout_options = list(
-		/* /datum/outfit/loadout/dencombatmedic, */
-		/datum/outfit/loadout/denchemist,
-		)
-
-/datum/outfit/job/wasteland/f13dendoctor
-	name = "Den Doctor"
-	jobtype = /datum/job/wasteland/f13dendoctor
-
-	id = /obj/item/card/id/denid
-	belt = /obj/item/storage/belt/medical
-	shoes = /obj/item/clothing/shoes/laceup
-	ears = /obj/item/radio/headset/headset_den
-	r_pocket = /obj/item/flashlight/seclite
-	uniform = /obj/item/clothing/under/f13/densuit
-	backpack =	/obj/item/storage/backpack/medic
-	gloves =  /obj/item/clothing/gloves/color/white
-	head = /obj/item/clothing/head/beret/durathread
-	mask =  /obj/item/clothing/mask/bandana/durathread
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
-		/obj/item/healthanalyzer=1, \
-		/obj/item/storage/bag/money/small/wastelander)
-
-/datum/outfit/job/wasteland/f13dendoctor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
-
-
-/*
-/datum/outfit/loadout/dencombatmedic
-	name = "Combat medic"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	suit = /obj/item/clothing/suit/toggle/labcoat/chemist
-	backpack_contents = list(
-							/obj/item/clothing/glasses/hud/health/f13 = 1,
-							/obj/item/ammo_box/magazine/tommygunm45/stick = 2
-							)
-*/
-/datum/outfit/loadout/denchemist
-	name = "Chemist"
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/type17
-	suit = /obj/item/clothing/suit/toggle/labcoat/chemist
-	backpack_contents = list(
-						/obj/item/ammo_box/magazine/m10mm_adv/simple = 1,
-						/obj/item/grenade/chem_grenade = 1,
-						/obj/item/clothing/mask/gas = 1,
-						/obj/item/reagent_containers/glass/beaker/large = 2
-						)
-
 
 
 //vigilante

@@ -71,11 +71,10 @@
 	desc = "A .45-70 explosive bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c4570/explosive
 
-
-
 /obj/item/ammo_casing/c4570/knockback
 	name = ".45-70 ultradense bullet casing"
 	desc = "A .45-70 ultradense bullet casing."
+
 	projectile_type = /obj/item/projectile/bullet/c4570/knockback
 
 //.45 Long Colt bouncing

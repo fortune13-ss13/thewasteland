@@ -275,7 +275,7 @@
 	fire_delay = 3
 	force = 15
 	extra_damage = 38
-	extra_penetration = 0.05
+	extra_penetration = 0.1
 	extra_speed = 300
 	recoil = 0.2
 	can_suppress = FALSE

@@ -334,7 +334,7 @@
 	new /obj/item/restraints/handcuffs(src)
 	new /obj/item/grenade/flashbang(src)
 	new /obj/item/assembly/flash/handheld(src)
-	new /obj/item/melee/baton/loaded(src)
+	new /obj/item/melee/classic_baton/telescopic(src)
 	update_icon()
 
 /obj/item/storage/belt/mining
@@ -1118,3 +1118,12 @@
 	else
 		to_chat(user, "<span class='notice'>There is nothing left in the quiver.</span>")
 	return TRUE
+
+
+/// Custom Belts
+
+/obj/item/storage/belt/military/assault/legion/maus
+	name = "claimed legion marching belt"
+	desc = "A Legion belt that has been dyed black, with the sash being dyed purple."
+	icon_state = "mausbeltcustom"
+	item_state = "mausbeltcustom"

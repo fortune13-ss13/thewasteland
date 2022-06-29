@@ -90,8 +90,8 @@
 	name = "Legendary Raider"
 	desc = "Another murderer churned out by the wastes - this one seems a bit faster than the average..."
 	color = "#FFFF00"
-	maxHealth = 450
-	health = 450
+	maxHealth = 400
+	health = 400
 	speed = 1.2
 	obj_damage = 300
 	aggro_vision_range = 15
@@ -102,8 +102,8 @@
 	name = "Legendary Raider"
 	desc = "Another murderer churned out by the wastes, wielding a decent pistol and looking very strong"
 	color = "#FFFF00"
-	maxHealth = 600
-	health = 600
+	maxHealth = 450
+	health = 450
 	retreat_distance = 1
 	minimum_distance = 2
 	projectiletype = /obj/item/projectile/bullet/m44/simple

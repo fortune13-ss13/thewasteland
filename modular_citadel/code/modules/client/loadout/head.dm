@@ -434,3 +434,22 @@ datum/gear/head/steelpot_bandolier
 							"Secretary",
 							"Shopkeeper",
 						)
+
+/datum/gear/head/bos_beret
+	name = "brotherhood beret"
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	path = /obj/item/clothing/head/f13/boscap/beret
+	restricted_desc = "BoS"
+	restricted_roles = list(
+							"Head Paladin",
+							"Head Captain",
+							"Head Scribe",
+							"Senior Paladin",
+							"Senior Knight",
+							"Senior Scribe",
+							"Paladin",
+							"Knight",
+							"Scribe",
+							"Initiate",
+							"BoS Off-Duty"
+	)
