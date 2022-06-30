@@ -571,7 +571,6 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-
 /obj/item/clothing/head/f13/bandit
 	name = "bandit hat"
 	desc = "A black cowboy hat with a large brim that's curved to the sides.<br>A silver eagle pin is attached to the front."
