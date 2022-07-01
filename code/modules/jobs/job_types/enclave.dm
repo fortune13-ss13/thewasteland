@@ -104,12 +104,6 @@
 	exp_type = EXP_TYPE_ENCLAVE
 	exp_requirements = 3000
 
-	loadout_options = list(
-		/datum/outfit/loadout/lt_ballistics, // FN FAL and Deagle
-		/datum/outfit/loadout/lt_plasma, // Plasma Rifle and Plasma Glock
-		)
-
-
 /datum/outfit/job/enclave/peacekeeper/enclavelt
 	name = "Enclave Lieutenant"
 	jobtype = /datum/job/enclave/enclavelt
@@ -117,6 +111,7 @@
 	head = /obj/item/clothing/head/helmet/f13/enclave/officer
 	uniform = /obj/item/clothing/under/f13/enclave/officer
 	suit = /obj/item/clothing/suit/armor/f13/enclavetrenchcoat
+	suit_store = /obj/item/gun/energy/laser/wattz2k/extended
 	accessory = /obj/item/clothing/accessory/ncr/LT1
 	id = /obj/item/card/id/dogtag/enclave/officer
 	ears = /obj/item/radio/headset/headset_enclave/command
@@ -127,24 +122,7 @@
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		)
-
-/datum/outfit/loadout/lt_ballistics
-	name = "Shiny Bullet"
-	suit_store = /obj/item/gun/ballistic/automatic/fnfal
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762 = 2,
-		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
-		/obj/item/ammo_box/magazine/m44 = 2,
-		)
-
-/datum/outfit/loadout/lt_plasma
-	name = "Never Forgotten"
-	suit_store = /obj/item/gun/energy/laser/plasma
-	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/gun/energy/laser/plasma/glock = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -172,16 +150,12 @@
 	exp_type = EXP_TYPE_ENCLAVE
 	exp_requirements = 2000
 
-	loadout_options = list(
-		/datum/outfit/loadout/gysgt_ballistics, // Assault carbine
-		/datum/outfit/loadout/gysgt_melee, // Prewar ripper
-		)
-
 /datum/outfit/job/enclave/peacekeeper/f13gysergeant
 	name = "Enclave Gunnery Sergeant"
 	jobtype = /datum/job/enclave/f13gysergeant
 	head = /obj/item/clothing/head/helmet/f13/enclave/marine
 	suit = /obj/item/clothing/suit/armor/f13/enclave/marine
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/neostead
 	accessory = /obj/item/clothing/accessory/enclave/master_sergeant
 
 	backpack_contents = list(
@@ -189,23 +163,10 @@
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/flashbang = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		)
-
-/datum/outfit/loadout/gysgt_ballistics
-	name = "Assault Kit"
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m5mm = 2,
-		)
-
-/datum/outfit/loadout/gysgt_melee
-	name = "Mameluke"
-	suit_store = /obj/item/melee/powered/ripper/prewar
-	backpack_contents = list(
-		/obj/item/book/granter/trait/bigleagues = 1,
 		)
 
 /datum/outfit/job/enclave/peacekeeper/f13gysergeant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -231,9 +192,9 @@
 	exp_requirements = 2000
 
 	loadout_options = list(
-		/datum/outfit/loadout/inf_minigun, // minigun
-		/datum/outfit/loadout/inf_gatling, // Laser gatling
-		)
+	/datum/outfit/loadout/troopy,
+	)
+
 
 /datum/outfit/job/enclave/peacekeeper/Armoredinfantry
 	name = "Enclave Armored Infantry"
@@ -250,16 +211,10 @@
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
-/datum/outfit/loadout/inf_minigun
-	name = "CZ53 personal minigun"
+/datum/outfit/loadout/troopy
+	name = "Standard"
 	backpack_contents = list(
-		/obj/item/minigunpackbal5mm = 1,
-		)
-
-/datum/outfit/loadout/inf_gatling
-	name = "Laser Gatling"
-	suit_store = 	/obj/item/minigunpack
-	backpack_contents = list(
+		/obj/item/minigunpack = 1,
 		/obj/item/stock_parts/cell/ammo/ecp = 2,
 		)
 
@@ -269,6 +224,7 @@
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 
 //Sergeant
@@ -283,16 +239,12 @@
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	exp_requirements = 1500
 
-	loadout_options = list(
-		/datum/outfit/loadout/sgt_ballistics,	// R91 Rifle
-		/datum/outfit/loadout/sgt_laser, 	// AER9
-		)
-
 /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/enclavesgt
 	suit = /obj/item/clothing/suit/armor/f13/combat/mk2/remnant
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
+	suit_store = /obj/item/gun/energy/laser/aer9
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 
 	backpack_contents = list(
@@ -302,20 +254,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/clothing/head/f13/enclave/peacekeeper = 1,
-		)
-
-/datum/outfit/loadout/sgt_ballistics
-	name = "Frontline Operator"
-	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 3,
-		)
-
-/datum/outfit/loadout/sgt_laser
-	name = "Laser Support"
-	suit_store = /obj/item/gun/energy/laser/aer9
-	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/mfc = 3,
+		/obj/item/stock_parts/cell/ammo/mfc=2,
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavesgt/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -336,50 +275,26 @@
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13specialist
 	exp_requirements = 800
 
-	loadout_options = list(
-		/datum/outfit/loadout/combatmedic, // Medical Equipment
-		/datum/outfit/loadout/combatengie, // Grenade Launcher
-		)
-
 /datum/outfit/job/enclave/peacekeeper/f13specialist
 	name = "Enclave Specialist"
 	jobtype = /datum/job/enclave/f13specialist
 	suit = /obj/item/clothing/suit/armor/bulletproof
-	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
+	suit_store = /obj/item/gun/ballistic/automatic/r93
 	accessory = /obj/item/clothing/accessory/enclave/specialist
-
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	head = /obj/item/clothing/head/beret/enclave/science
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/ammo_box/magazine/uzim9mm = 2,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		)
-
-/datum/outfit/loadout/combatmedic
-	name = "Combat Medic"
-	mask = /obj/item/clothing/mask/surgical
-	gloves = /obj/item/clothing/gloves/color/latex/nitrile
-	head = /obj/item/clothing/head/beret/enclave/science
-	backpack_contents = list(
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/gun/medbeam = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
-		/obj/item/book/granter/trait/midsurgery = 1
+		/obj/item/book/granter/trait/midsurgery = 1,
+		/obj/item/ammo_box/magazine/m556/rifle = 3,
 		)
-
-/datum/outfit/loadout/combatengie
-	name = "Combat Engineer"
-	mask = /obj/item/clothing/mask/gas/welding
-	gloves = /obj/item/clothing/gloves/color/yellow
-	head = /obj/item/clothing/head/hardhat/orange
-	suit_store = /obj/item/gun/ballistic/revolver/grenadelauncher
-	backpack_contents = list(
-		/obj/item/storage/belt/utility = 1,
-		/obj/item/ammo_box/a40mm = 2,
-		/obj/item/shovel/trench = 1
-	)
-
 
 //Private
 /datum/job/enclave/enclavespy
@@ -393,16 +308,12 @@
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 600
 
-	loadout_options = list(
-		/datum/outfit/loadout/pvtfrontline,
-		/datum/outfit/loadout/pvtguard,
-		)
-
 /datum/outfit/job/enclave/peacekeeper/enclavespy
 	name = "Enclave Private"
 	jobtype = /datum/job/enclave/enclavespy
 	head = /obj/item/clothing/head/helmet/f13/combat/swat/enclave
 	suit = /obj/item/clothing/suit/armor/f13/combat/swat/enclave
+	suit_store = /obj/item/gun/ballistic/automatic/r93
 	accessory = /obj/item/clothing/accessory/enclave
 
 	backpack_contents = list(
@@ -411,21 +322,7 @@
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		)
-
-/datum/outfit/loadout/pvtfrontline
-	name = "Frontliner"
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/assault_carbine/worn = 1,
-		/obj/item/ammo_box/magazine/m5mm = 2,
-		)
-
-/datum/outfit/loadout/pvtguard
-	name = "Hit And Run"
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/smg/smg10mm/worn = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
-		/obj/item/ammo_box/magazine/m10mm_adv/ext = 3,
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		)
 
 //NON-COMBATANTS

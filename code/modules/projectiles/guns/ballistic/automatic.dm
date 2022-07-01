@@ -561,7 +561,7 @@
 	item_state = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	burst_size = 1
-	fire_delay = 3
+	fire_delay = 2.5
 	spread = 2
 	extra_damage = 20
 	extra_penetration = 0.1
@@ -1052,12 +1052,12 @@
 	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	icon_state = "venator_sniper"
 	item_state = "venator_sniper"
-	fire_delay = 6
+	fire_delay = 4
 	slowdown = 0.3
 	zoom_amt = 15
 	zoom_out_amt = 17
-	extra_penetration = 0.4
-	extra_damage = 45
+	extra_penetration = 0.2
+	extra_damage = 35
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
 	name = "compact sniper rifle"
@@ -1148,11 +1148,11 @@
 //R93 PDW		Keywords: 5.56mm, Semi-Automatic, 20 (10-50) round magazine, Pistol grip
 /obj/item/gun/ballistic/automatic/r93
 	name = "R93 PDW"
-	desc = "A lightweight assault rifle manufactured by the Brotherhood of Steel with a folding stock, based on weapons from the R-series platforms. It is generally issued to Brotherhood Knights for scouting missions."
+	desc = "A lightweight assault rifle carried by the enclave remnants with a folding stock, based on weapons from the R-series platforms. It is generally issued to privates for scouting missions."
 	icon_state = "r93"
 	item_state = "r93"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 3.25
+	fire_delay = 1
 	spread = 1
 	extra_damage = 25
 	burst_size = 1

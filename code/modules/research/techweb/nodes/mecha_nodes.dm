@@ -241,14 +241,6 @@
 	design_ids = list("mech_wormhole_gen")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 */
-/datum/techweb_node/mech_taser
-	id = "mech_taser"
-	display_name =  "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"
-	description = "A basic piece of mech weaponry"
-	prereq_ids = list("adv_weaponry")
-	design_ids = list("mech_taser")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
 /datum/techweb_node/mech_diamond_drill
 	id = "mech_diamond_drill"
 	display_name =  "Exosuit Diamond Drill"
