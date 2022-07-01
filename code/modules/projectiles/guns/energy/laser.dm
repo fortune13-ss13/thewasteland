@@ -404,6 +404,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	fire_delay = 1
+	slowdown = 0.2
 	scope_state = "AEP7_scope"
 	scope_x_offset = 12
 	scope_y_offset = 20

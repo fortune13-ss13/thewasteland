@@ -74,8 +74,6 @@ Mayor
 	backpack_contents = list(
 		/obj/item/storage/box/citizenship_permits = 1, \
 		/obj/item/pen/fountain/captain = 1,
-		/obj/item/gun/ballistic/automatic/wt550 = 1,
-		/obj/item/ammo_box/magazine/m473/small = 2,
 		)
 
 
@@ -229,10 +227,6 @@ Mayor
 
 	outfit = /datum/outfit/job/den/f13sheriff
 
-	loadout_options = list(
-	/datum/outfit/loadout/dakka,
-	/datum/outfit/loadout/pew,
-	)
 
 	access = list(ACCESS_BAR, ACCESS_COMMAND, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_BAR, ACCESS_COMMAND, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
@@ -248,7 +242,6 @@ Mayor
 /datum/outfit/job/den/f13sheriff
 	name = "Chief of Police"
 	jobtype = /datum/job/oasis/f13sheriff
-
 	id = /obj/item/card/id/dogtag/sheriff
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
@@ -256,6 +249,7 @@ Mayor
 	ears = /obj/item/radio/headset/headset_town
 	uniform = /obj/item/clothing/under/f13/police/formal
 	suit = /obj/item/clothing/suit/armor/f13/town/chief
+	suit_store = /obj/item/gun/ballistic/revolver/m29/peacekeeper
 	head = /obj/item/clothing/head/f13/town/chief
 	neck = /obj/item/storage/belt/holster/legholster
 	belt = /obj/item/storage/belt/military/army
@@ -265,29 +259,10 @@ Mayor
 	backpack_contents = list(
 		/obj/item/storage/box/deputy_badges = 1,
 		/obj/item/restraints/handcuffs = 2,
+		/obj/item/ammo_box/m44 = 2,
 		/obj/item/melee/classic_baton = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/grenade/flashbang = 1,
-		)
-
-/datum/outfit/loadout/dakka
-	name = "Door kicker"
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m5mm = 2,
-		/obj/item/ammo_box/m44 = 2,
-		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1,
-		)
-
-/datum/outfit/loadout/pew
-	name = "Tactical"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
-	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ecp = 1,
-		/obj/item/ammo_box/shotgun/bean = 1,
-		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/ammo_box/shotgun/trainshot = 1,
-		/obj/item/gun/energy/laser/auto/oasis = 1,
 		)
 
 /datum/outfit/job/den/f13sheriff/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1166,7 +1141,6 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/a180)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
@@ -1174,7 +1148,6 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
