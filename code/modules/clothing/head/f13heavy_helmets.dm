@@ -42,7 +42,6 @@
 	icon_state = "tribal_PA_helmet"
 	item_state = "tribal_PA_helmet"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 30)
-	slowdown = 0.1
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 // T-45D

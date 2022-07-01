@@ -112,7 +112,7 @@
 	item_state = "tribal_power_armor"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 10, "bomb" = 30, "bio" = 40, "rad" = 20, "fire" = 40, "acid" = 0, "wound" = 25)
-	slowdown = 1.75
+
 
 // T-45D
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45d
