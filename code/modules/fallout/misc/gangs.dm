@@ -41,8 +41,6 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 		/datum/gang_item/weapon/switchblade,
 		/datum/gang_item/weapon/slugger,
 		/datum/gang_item/weapon/type17,
-		/datum/gang_item/weapon/uzi,
-		/datum/gang_item/weapon/type93,
 		/datum/gang_item/equipment/stinger,
 		/datum/gang_item/equipment/he,
 
@@ -55,7 +53,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 		/datum/gang_item/clothing/soviet_uniform,
 		/datum/gang_item/clothing/biker_uniform,
 		/datum/gang_item/clothing/chairmen_uniform,
-		
+
 		/datum/gang_item/equipment/bundleelguapo,
 		/datum/gang_item/equipment/bundleanarchist,
 		/datum/gang_item/equipment/bundlegunner,
@@ -70,7 +68,6 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	boss_items = list(
 		/datum/gang_item/weapon/spikedbaseball,
 		/datum/gang_item/weapon/greasegun,
-		/datum/gang_item/weapon/uzi,
 		/datum/gang_item/weapon/brass,
 
 		/datum/gang_item/equipment/emp,
