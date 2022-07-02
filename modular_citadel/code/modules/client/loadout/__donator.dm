@@ -33,6 +33,25 @@
 	ckeywhitelist = list("topbirb")
 */
 
+/obj/item/storage/box/large/custom_kit/burnings/PopulateContents()
+    new /obj/item/warpaint_bowl(src)
+    new /obj/item/clothing/suit/armor/f13/punk(src)
+    new /obj/item/clothing/mask/bandana/blue(src)
+
+/datum/gear/donator/kits/burnings
+    name = "Burnings stuff"
+    path = /obj/item/storage/box/large/custom_kit/burnings
+    ckeywhitelist = list("myguy49")
+
+/obj/item/storage/box/large/custom_kit/starscream/PopulateContents()
+    new /obj/item/clothing/suit/armor/f13/enclavetrenchcoat(src)
+    new /obj/item/clothing/head/beret/enclave/intel(src)
+
+/datum/gear/donator/kits/starscream
+    name = "Star stuff"
+    path = /obj/item/storage/box/large/custom_kit/starscream
+    ckeywhitelist = list("starscream1234")
+
 /obj/item/storage/box/large/custom_kit/cayce/PopulateContents()
     new /obj/item/storage/backpack/security(src)
     new /obj/item/stack/f13Cash/caps/threefivezero(src)
