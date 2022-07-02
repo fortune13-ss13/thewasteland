@@ -128,7 +128,7 @@
 	throwforce = 35
 	armour_penetration = 0.10
 	max_reach = 2
-	embedding = list("pain_mult" = 2, "embed_chance" = 60, "fall_chance" = 20)
+	embedding = list("pain_mult" = 4, "embed_chance" = 60, "fall_chance" = 20)
 	w_class = WEIGHT_CLASS_NORMAL
 
 

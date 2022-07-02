@@ -73,11 +73,8 @@
 		GK.add_member(H)
 		H.gang = GK
 
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
@@ -97,9 +94,9 @@
 
 /datum/outfit/loadout/khanskirmisher
 	name = "Skirmisher"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
+	r_hand = /obj/item/gun/ballistic/automatic/smg/greasegun
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm = 3,
+		/obj/item/ammo_box/magazine/greasegun = 3,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/book/granter/trait/trekking = 1
@@ -254,7 +251,7 @@ Raider
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
 		/obj/item/megaphone = 1,
 		/obj/item/radio/headset = 1,
-		/obj/item/book/granter/trait/bigleagues = 1,	
+		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
 		/obj/item/book/granter/trait/trekking = 1
 		)
@@ -266,7 +263,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/kitchen/knife/butcher = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
-		/obj/item/radio/headset = 1,	
+		/obj/item/radio/headset = 1,
 		/obj/item/book/granter/trait/explosives = 1
 		)
 
@@ -306,11 +303,11 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/raider/painspike
 	head = /obj/item/clothing/head/helmet/f13/raider/psychotic
 	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
+		/obj/item/gun/ballistic/shotgun/hunting = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/melee/onehanded/club/fryingpan = 1,
-		/obj/item/radio/headset = 1,	
+		/obj/item/radio/headset = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/book/granter/trait/trekking = 1,
 		/obj/item/grenade/chem_grenade/cleaner = 2
@@ -411,8 +408,8 @@ Raider
 	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
-		/obj/item/ammo_box/magazine/m10mm_adv/ext = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
 		/obj/item/radio/headset = 1
 		)

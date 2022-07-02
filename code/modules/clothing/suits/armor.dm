@@ -43,7 +43,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "vest_armor"
 	item_state = "vest_armor"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 25, "energy" = 20, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 40)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 20, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 40)
 	slowdown = 0.18
 
 /obj/item/clothing/suit/armor/vest/trench
@@ -59,7 +59,7 @@
 	desc = "A thick armored vest that provides decent protection against most types of damage."
 	icon_state = "armor"
 	item_state = "armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 25, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 30)
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 20, "energy" = 25, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 30)
 	slowdown = 0.1
 
 /obj/item/clothing/suit/armor/vest/old

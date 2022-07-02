@@ -13,7 +13,7 @@
 	desc = "It's a salvaged T-45b power armor helmet."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
-	armor = list("melee" = 65, "bullet" = 65, "laser" = 55, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 30)
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 30)
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider
 	name = "raider T-45b power helmet"
@@ -41,8 +41,7 @@
 	desc = "A salvaged T-45b powered armor, with the servos removed and a feathered headdress. Certain bits of plating have been stripped out to retain more freedom of movement."
 	icon_state = "tribal_PA_helmet"
 	item_state = "tribal_PA_helmet"
-	armor = list("melee" = 65, "bullet" = 55, "laser" = 55, "energy" = 10, "bomb" = 30, "bio" = 40, "rad" = 20, "fire" = 40, "acid" = 0, "wound" = 25)
-	slowdown = 0
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 30)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 // T-45D
@@ -60,7 +59,7 @@
 	desc = "It's a salvaged T-51b power armor helmet."
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 40)
+	armor = list("melee" = 72, "bullet" = 72, "laser" = 72, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 40)
 	slowdown = 0.05
 
 // T-60A
@@ -69,7 +68,7 @@
 	desc = "It's a salvaged T-60a power armor helmet."
 	icon_state = "t60helmet0"
 	item_state = "t60helmet0"
-	armor = list("melee" = 75, "bullet" = 70, "laser" = 65, "energy" = 30, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 45)
+	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 30, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 45)
 	slowdown = 0.05
 
 // X-02
@@ -78,5 +77,5 @@
 	desc = "It's a salvaged X-02 power armor helmet."
 	icon_state = "advanced"
 	item_state = "advanced"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 70, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)
 	slowdown = 0.1
