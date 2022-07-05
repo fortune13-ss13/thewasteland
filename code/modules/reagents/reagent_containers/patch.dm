@@ -55,6 +55,7 @@
 	desc = "A highly addictive meta-amphetamine that produces a fast-acting, intense euphoric high on the user."
 	list_reagents = list(/datum/reagent/drug/jet = 10)
 	icon_state = "patch_jet"
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 
 
 // ---------------------------------
@@ -111,6 +112,7 @@
 	icon_state = "patch_bitterdrink"
 	list_reagents = list(/datum/reagent/medicine/bitter_drink = 15)
 	self_delay = 0
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 
 /*
 // ---------------------------------
