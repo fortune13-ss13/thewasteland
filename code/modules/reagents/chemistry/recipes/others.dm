@@ -480,7 +480,7 @@
 	var/turf/location = get_turf(holder.my_atom)
 	location.visible_message("<span class='danger'>The solution spews out foam!</span>")
 	var/datum/effect_system/foam_spread/s = new()
-	s.set_up(multiplier*0.2, location, holder)
+	s.set_up(multiplier*0.8, location, holder)
 	s.start()
 	holder.clear_reagents()
 	return
@@ -496,7 +496,7 @@
 	var/turf/location = get_turf(holder.my_atom)
 	location.visible_message("<span class='danger'>The solution spews out a metallic foam!</span>")
 	var/datum/effect_system/foam_spread/metal/s = new()
-	s.set_up(multiplier*2, location, holder, 1)
+	s.set_up(multiplier*3.5, location, holder, 1)
 	s.start()
 	holder.clear_reagents()
 

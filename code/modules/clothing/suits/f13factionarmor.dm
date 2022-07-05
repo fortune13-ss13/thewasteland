@@ -402,7 +402,7 @@
 	item_state = "ncr_infantry_vest"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 15, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
-	slowdown = 0.25
+	slowdown = 0.2
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bulletbelt/ncr
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 
@@ -488,7 +488,7 @@
 	desc = "A heavily reinforced set of NCR mantle armour, with large ceramic plating fitted to cover the torso and back, with additional plating on the shoulders and arms. Intended for use by high ranking officers."
 	icon_state = "ncr_captain_armour"
 	item_state = "ncr_captain_armour"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
+	armor = list("melee" = 35, "bullet" = 45, "laser" = 15, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Le captain
 

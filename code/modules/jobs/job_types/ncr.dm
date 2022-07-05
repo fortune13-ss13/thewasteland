@@ -213,7 +213,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Captain's Armor"
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle/elcapitan
 	backpack_contents = list(
-		/obj/item/clothing/suit/armor/f13/ncrarmor/captain/ncr_officer_coat = 1,
+		/obj/item/clothing/suit/armor/f13/ncrarmor/captain = 1,
 		/obj/item/twohanded/sledgehammer/rockethammer/courtmartial = 1,
 		/obj/item/ammo_box/magazine/m14mm = 3,
 		/obj/item/storage/box/ration/menu_eight = 1,
