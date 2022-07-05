@@ -213,7 +213,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Captain's Armor"
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle/elcapitan
 	backpack_contents = list(
-		/obj/item/clothing/suit/armor/f13/ncrarmor/captain/ncr_officer_coat = 1,
+		/obj/item/clothing/suit/armor/f13/ncrarmor/captain = 1,
 		/obj/item/twohanded/sledgehammer/rockethammer/courtmartial = 1,
 		/obj/item/ammo_box/magazine/m14mm = 3,
 		/obj/item/storage/box/ration/menu_eight = 1,
@@ -651,6 +651,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_type = EXP_TYPE_NCR
 	exp_requirements = 750
 
+	loadout_options = list(
+	/datum/outfit/loadout/heavy,
+	)
+
 /datum/outfit/job/ncr/f13heavytrooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	if(visualsOnly)
@@ -669,13 +673,16 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	head = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr
 	neck = /obj/item/storage/belt/holster/legholster
 	suit = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/r84
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
 		/obj/item/ammo_box/magazine/m45exp = 2,
-		/obj/item/ammo_box/magazine/lmg = 1,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
+		)
+
+/datum/outfit/loadout/heavy
+	backpack_contents = list(
+		/obj/item/minigunpackbal5mm=1,
 		)
 
 // COMBAT ENGINEER

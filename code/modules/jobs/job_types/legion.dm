@@ -238,7 +238,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	mask = /obj/item/clothing/mask/bandana/legion/legcenturion
 	ears = /obj/item/radio/headset/headset_legion/cent
 	neck = /obj/item/clothing/neck/mantle/legion
-	gloves = /obj/item/clothing/gloves/legion/plated
+	gloves = /obj/item/melee/unarmed/powerfist/goliath
 	glasses = /obj/item/clothing/glasses/night/polarizing
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/restraints/handcuffs
@@ -251,8 +251,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/ammo_box/a357 = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/binoculars = 1,
-		/obj/item/book/granter/martial/cqc = 1,
-		/obj/item/melee/unarmed/powerfist/goliath = 1,
 		)
 
 /datum/outfit/loadout/palacent

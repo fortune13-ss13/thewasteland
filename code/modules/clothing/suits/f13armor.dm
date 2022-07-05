@@ -558,12 +558,6 @@
 		to_chat(L, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
 		L.update_equipment_speed_mods()
 
-/obj/item/clothing/suit/armor/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
-	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
-		if(prob(70) && (damage < deflect_damage) && (armour_penetration <= 0)) // Weak projectiles like shrapnel get deflected
-			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
-			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
-	return ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "T-45b power armor"
@@ -995,11 +989,6 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	desc = "A customized and well-worn suit of riot gear with parts of the suit reinforced with leather armor and slain Centurion armor pieces by the wearer. A sniper's veil is wrapped around the neck."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
-
-/obj/item/clothing/suit/armor/f13/rangercombat/degancustom/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/rigscustom
 	name = "11th armored calvary armor"
