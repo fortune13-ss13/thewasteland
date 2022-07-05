@@ -567,17 +567,6 @@
 	subcategory = CAT_FARMING
 	category = CAT_MISC
 
-/datum/crafting_recipe/brahminsaddle
-	name = "Brahmin saddle"
-	result = /obj/item/brahminsaddle
-	time = 60
-	reqs = list(/obj/item/stack/sheet/metal = 1,
-				/obj/item/stack/sheet/leather = 4,
-				/obj/item/stack/sheet/cloth = 1)
-	tools = list(TOOL_WORKBENCH)
-	subcategory = CAT_FARMING
-	category = CAT_MISC
-
 /datum/crafting_recipe/brahminbrand
 	name = "Brahmin branding tool"
 	result = /obj/item/brahminbrand
