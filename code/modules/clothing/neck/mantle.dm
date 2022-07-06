@@ -129,3 +129,9 @@
 	name = "Fancy Cape"
 	desc = "A fancy looking cape that has been manufactured for an androgynous person."
 	icon_state = "snugglycape"
+
+/obj/item/clothing/neck/mantle/chieftess
+	name = "chieftess mantle"
+	desc = "A long cloak made to fit the high chieftess of the Wayfarer tribe."
+	icon_state = "chieftess"
+	item_state = "cheiftess"
