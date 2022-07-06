@@ -131,16 +131,20 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit = /obj/item/clothing/suit/armor/f13/legion/legate
 	head = /obj/item/clothing/head/helmet/f13/legion/legate
 	gloves = /obj/item/clothing/gloves/legion/legate
-	glasses = /obj/item/clothing/glasses/sunglasses/big
+	glasses = /obj/item/clothing/glasses/night/polarizing
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
 	r_pocket = /obj/item/storage/bag/money/small/legion
 	l_pocket = /obj/item/flashlight/lantern
 	r_hand = /obj/item/melee/unarmed/powerfist/goliath
 	l_hand = /obj/item/tank/internals/oxygen
-	backpack = null
-	satchel = null
 	ears = /obj/item/radio/headset/headset_legion/cent
 	box = /obj/item/storage/box/legate
+		backpack_contents = list(
+		/obj/item/book/granter/martial/cqc = 1,
+		/obj/item/storage/bag/money/small/legion = 1,
+		/obj/item/warpaint_bowl = 1,
+		/obj/item/binoculars = 1,
+		)
 
 
 // ORATOR
