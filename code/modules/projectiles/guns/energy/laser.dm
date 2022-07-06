@@ -704,7 +704,7 @@
 		if(ammo_pack.overheat < ammo_pack.overheat_max)
 			ammo_pack.overheat += burst_size
 			..()
-        else
+		else
 			to_chat(user, "The gun's heat sensor locked the trigger to prevent lens damage.")
 
 /obj/item/gun/energy/minigun/afterattack(atom/target, mob/living/user, flag, params)
