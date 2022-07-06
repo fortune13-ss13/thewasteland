@@ -135,10 +135,46 @@
 	max_integrity = 30
 	density = FALSE
 	anchored = TRUE
+	buckle_lying = 90
+	buckle_prevents_pull = TRUE
+	can_buckle = TRUE
 
 /obj/structure/punji_sticks/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES)
+
+/obj/structure/punji_sticks/Impale()
+	if(isliving(M))
+		M.visible_message("<span class='danger'>\[M] slams into \the [src] with a sickening squelch, impaling [M.p_their()]!</span>",\
+		"<span class='userdanger'>You are impaled horribly on \the [src]!</span>",\
+		"<span class='hear'>You hear an awful squelch.</span>")
+		buckle_mob(M, force=TRUE)
+		M.apply_damage(40, BRUTE, sharpness = SHARP_POINTY)
+		M.Stun(40)
+			if(ishuman(M))
+				var/mob/living/carbon/human/H = M
+				var/obj/item/bodypart/bodypart = pick(H.bodyparts)
+				var/datum/wound/slash/critical/crit_wound = new
+				crit_wound.apply_wound(bodypart)
+				H.emote("scream")
+	else
+		return
+
+/obj/structure/punji_sticks/unbuckle_mob(mob/living/buckled_mob, force)
+	if(force)
+		return ..()
+	to_chat(buckled_mob, span_warning("You begin climbing out of [src]."))
+	buckled_mob.apply_damage(10, BRUTE, sharpness = SHARP_POINTY)
+	if(!do_after(buckled_mob, 5 SECONDS, target = src))
+		to_chat(buckled_mob, span_userdanger("You fail to detach yourself from [src]."))
+		return
+	return ..()
+
+
+/obj/structure/punji_sticks/intercept_zImpact(atom/movable/AM, levels)
+	. = ..()
+	Impale(AM)
+	. |= FALL_INTERCEPTED | FALL_NO_MESSAGE
 
 /////////BONFIRES//////////
 
