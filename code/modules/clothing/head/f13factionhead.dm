@@ -1114,6 +1114,13 @@
 /obj/item/clothing/head/helmet/f13/wayfarer/chief/attack_self(mob/user)
 	weldingvisortoggle(user)
 
+/obj/item/clothing/head/f13/stalkerpeltreinforced
+	name = "reinforced nightstalker pelt"
+	icon_state = "stalkerpelt"
+	item_state = "stalkerpelt"
+	desc = "A hat made from nightstalker pelt which makes the wearer feel both comfortable and elegant, its been reinforced."
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 25, "energy" = 30, "bomb" = 15, "bio" = 35, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 45)
+
 /obj/item/clothing/head/helmet/f13/wayfarer/chief/red
 	name = "helm of the piercing gaze"
 	desc = "A chief who wears this assaultron helm is known for their prowess in battle, aggressiveness, intimidation and raw power in command. They are bold and strong."

@@ -885,6 +885,16 @@
 	item_state = "bone_dancer_helmet"
 	strip_delay = 100
 
+/obj/item/clothing/head/helmet/f13/combat/riottribal
+	name = "tribal riot helmet"
+	icon_state = "ranger_tribal"
+	desc = "An old riot police helmet, parts of the helmet have been removed and is now covered in tribal paints."
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 45, "energy" = 30, "bomb" = 45, "bio" = 55, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 45)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 /// Midwestern Event stuff
 
 /obj/item/clothing/head/helmet/midwesternhelmet

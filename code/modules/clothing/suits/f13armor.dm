@@ -184,6 +184,13 @@
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 45, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 35, "wound" = 45)
 	slowdown = 0.15
 
+/obj/item/clothing/suit/armor/f13/combat/riottribal
+	name = "tribal riot armor"
+	icon_state = "combat_coat_tribal"
+	item_state = "combat_coat_tribal"
+	desc = "A heavy armor with ballistic inserts, now sleeveless for tempature and hanging an ornamental animal skull from the back."
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 45, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 35, "wound" = 45)
+
 /obj/item/clothing/suit/armor/f13/combat/mk2
 	name = "reinforced combat armor"
 	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design. This one is kitted with additional plates."

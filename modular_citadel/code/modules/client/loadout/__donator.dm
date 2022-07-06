@@ -226,3 +226,11 @@
 	name = "Muties"
 	path = /obj/item/storage/box/large/custom_kit/mutie
 	ckeywhitelist = list("puglord777")
+
+/obj/item/storage/box/large/custom_kit/octus/PopulateContents()
+	new /obj/item/clothing/neck/mantle/chieftess
+
+/datum/gear/donator/kits/octus
+	name = "Tribal stuff"
+	path = /obj/item/storage/box/large/custom_kit/octus
+	ckeywhitelist = list("octus")	
