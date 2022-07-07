@@ -73,7 +73,6 @@ GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 //NCR Assistant and Legion Camp Follower re-added to whitelisting.  BoS Initiate removed from whitelist.
 
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
-"Head Scribe",
 "Elder",
 "Head Paladin",
 "Head Knight",
@@ -215,7 +214,7 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Conscript",
 	"NCR Medical Officer",
 	"NCR Logistics Officer",
-	"NCR Rear Echelon",
+	"NCR Off-Duty",
 ))
 
 GLOBAL_LIST_INIT(vault_positions, list(
