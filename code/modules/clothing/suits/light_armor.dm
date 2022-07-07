@@ -409,7 +409,7 @@
 
 /obj/item/clothing/head/hooded/cloakhood/birdclaw
 	name = "quickclaw hood"
-	icon_state = "hood_bird"
+	icon_state = "birdhood"
 	desc = "A hood made of deathclaw hides, light while also being comfortable to wear, designed for speed."
 	armor = list("melee" = 40, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 10)
 	heat_protection = HEAD
