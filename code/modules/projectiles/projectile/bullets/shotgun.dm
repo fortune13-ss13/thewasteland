@@ -111,7 +111,7 @@
 
 /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 11
+	damage = 9
 	wound_bonus = 5
 	bare_wound_bonus = 5
 	wound_falloff_tile = -2.5 // low damage + additional dropoff will already curb wounding potential anything past point blank
@@ -147,7 +147,7 @@
 	..()
 
 /obj/item/projectile/bullet/pellet/trainshot
-	damage = 15 // less pellets, more dam + tiny bit of pen
+	damage = 11 // less pellets, more dam + tiny bit of pen
 	armour_penetration = 0.4
 	sharpness = SHARP_NONE
 

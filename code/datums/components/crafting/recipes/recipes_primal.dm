@@ -452,6 +452,9 @@
 				/obj/item/stack/sheet/cloth = 5,
 				/obj/item/stack/sheet/sinew = 10,
 				/obj/item/stack/crafting/goodparts= 3)
+	category = CAT_TRIBAL
+	tools = list(TOOL_WORKBENCH)
+	always_available = FALSE
 
 /datum/crafting_recipe/tribalradio
 	name = "Primitive Radio"
@@ -464,6 +467,37 @@
 	tools = list(TOOL_WORKBENCH)
 	always_available = FALSE
 
+/datum/crafting_recipe/tribalwar/riottribal_armor
+	name = "Tribal Riot Armor"
+	result = /obj/item/clothing/suit/armor/f13/combat/riottribal
+	time = 300
+	reqs = list(/obj/item/clothing/suit/armor/f13/combat/riotpolice = 1,
+				/obj/item/stack/sheet/sinew = 2,
+				/obj/item/stack/sheet/animalhide/gecko = 1,
+				/obj/item/stack/sheet/bone = 2)
+	category = CAT_TRIBAL
+	always_available = FALSE
+
+/datum/crafting_recipe/tribalwar/riottribal_helmet
+	name = "Tribal Riot Helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/riottribal
+	time = 200
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/rangerbroken = 1,
+				/obj/item/stack/sheet/sinew = 2,
+				/obj/item/stack/sheet/animalhide/gecko = 1,
+				/obj/item/stack/sheet/bone = 2)
+	category = CAT_TRIBAL
+	always_available = FALSE
+
+/datum/crafting_recipe/tribalwar/reinforcedtribalpelt
+	name = "Reinforced Nightstalker Pelt"
+	result = /obj/item/clothing/head/f13/stalkerpeltreinforced
+	reqs = list(/obj/item/clothing/head/f13/stalkerpelt = 1,
+				/obj/item/stack/sheet/leather = 2,
+				/obj/item/stack/sheet/cloth = 3)
+	category = CAT_TRIBAL
+	tools = list(TOOL_WORKBENCH)
+	always_available = FALSE
 /* tdo
 /datum/crafting_recipe/beartrap
 	name = "Bear Trap"

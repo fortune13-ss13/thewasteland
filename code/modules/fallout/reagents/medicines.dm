@@ -379,14 +379,14 @@
 	..()
 	if(isliving(M))
 		to_chat(M, "<span class='notice'>You feel tougher, able to shrug off pain more easily.</span>")
-		M.maxHealth += 70
-		M.health += 70
+		M.maxHealth += 40
+		M.health += 40
 
 /datum/reagent/medicine/medx/on_mob_delete(mob/living/carbon/human/M)
 	if(isliving(M))
 		to_chat(M, "<span class='notice'>You feel as vulnerable to pain as a normal person.</span>")
-		M.maxHealth -= 70
-		M.health -= 70
+		M.maxHealth -= 40
+		M.health -= 40
 	switch(current_cycle)
 		if(1 to 40)
 			M.confused += 10

@@ -174,14 +174,14 @@
 
 /obj/item/modkit/westernwayfarerlight
 	name = "Western wayfarer light modkit"
-	desc = "for tribal light armor"
-	target_items = list(/obj/item/clothing/suit/f13/tribal/light)
+	desc = "for tribal light armor (go with wayfarer book and make that armor apply on that)"
+	target_items = list(/obj/item/clothing/suit/armor/f13/tribe_armor)
 	result_item = /obj/item/clothing/suit/f13/tribal/light/westernwayfarer
 
 /obj/item/modkit/westernwayfarerheavy
 	name = "Western wayfarer heavy modkit"
-	desc = "for tribal heavy armor"
-	target_items = list(/obj/item/clothing/suit/f13/tribal/heavy)
+	desc = "for tribal heavy armor (go with wayfarer book and make that armor apply on that)"
+	target_items = list(/obj/item/clothing/suit/armor/f13/tribe_heavy_armor)
 	result_item = /obj/item/clothing/suit/f13/tribal/heavy/westernwayfarer
 
 /obj/item/modkit/daemonhelm

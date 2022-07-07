@@ -258,8 +258,8 @@
 	icon_state = "sabre"
 	sharpness = SHARP_EDGED
 	overlay_state = "sabrehilt"
-	armour_penetration = 0.3
-	force = 9
+	armour_penetration = 0.1
+	force = 8
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	obj_flags = UNIQUE_RENAME
@@ -270,9 +270,9 @@
 	icon_state = "rapier"
 	sharpness = SHARP_EDGED
 	overlay_state = "rapierhilt"
-	force = 6 //less force, stronger parry
+	force = 5 //less force, stronger parry
 	sharpness = SHARP_POINTY
-	armour_penetration = 0.6
+	armour_penetration = 0.3
 	obj_flags = UNIQUE_RENAME
 	block_parry_data = /datum/block_parry_data/smithrapier
 

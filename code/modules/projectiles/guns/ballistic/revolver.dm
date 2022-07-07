@@ -12,7 +12,7 @@
 	force = 12 // Pistol whip
 	casing_ejector = FALSE
 	spawnwithmagazine = TRUE
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	var/select = 0
@@ -132,6 +132,7 @@
 	desc = "A small revolver thats easily concealable."
 	icon_state = "detective"
 	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	force = 10
 	extra_damage = 30

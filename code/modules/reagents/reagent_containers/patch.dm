@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/pill/patch
 	name = "chemical patch"
 	desc = "A chemical patch for touch based applications."
-	icon = 'icons/fallout/objects/medicine/drugs.dmi'
+	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bandaid"
 	item_state = "bandaid"
 	possible_transfer_amounts = list()
@@ -55,6 +55,7 @@
 	desc = "A highly addictive meta-amphetamine that produces a fast-acting, intense euphoric high on the user."
 	list_reagents = list(/datum/reagent/drug/jet = 10)
 	icon_state = "patch_jet"
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 
 
 // ---------------------------------
@@ -109,10 +110,11 @@
 	name = "Bitter drink"
 	desc = "A strong herbal healing concoction which enables wounded soldiers and travelers to tend to their wounds without stopping during journeys."
 	icon_state = "patch_bitterdrink"
-	list_reagents = list(/datum/reagent/medicine/bitter_drink = 15) 
+	list_reagents = list(/datum/reagent/medicine/bitter_drink = 15)
 	self_delay = 0
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 
-/* 
+/*
 // ---------------------------------
 // HYDRA - never a thing, make it something. Sprites done.
 

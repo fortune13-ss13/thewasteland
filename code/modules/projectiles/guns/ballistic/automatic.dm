@@ -386,7 +386,7 @@
 	automatic = 1
 	slowdown = 0.3
 	autofire_shot_delay = 2
-	spread = 16
+	spread = 40
 	extra_damage = 17
 	can_suppress = TRUE
 	can_attachments = TRUE
@@ -455,7 +455,7 @@
 	autofire_shot_delay = 2.25
 	burst_shot_delay = 2.75
 	fire_delay = 3.75
-	extra_damage = 25
+	extra_damage = 18
 	spread = 15
 	recoil = 0.5
 
@@ -466,7 +466,7 @@
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
 	fire_delay = 3.75
-	extra_damage = 23
+	extra_damage = 18
 	spread = 19
 
 //P90				Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
@@ -561,7 +561,7 @@
 	item_state = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	burst_size = 1
-	fire_delay = 3
+	fire_delay = 2.5
 	spread = 2
 	extra_damage = 20
 	extra_penetration = 0.1
@@ -778,7 +778,7 @@
 	fire_delay = 1
 	burst_size = 1
 	spread = 1
-	extra_damage = 25
+	extra_damage = 20
 	can_attachments = TRUE
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -1023,7 +1023,7 @@
 	icon_state = "sniper_rifle"
 	item_state = "sniper_rifle"
 	mag_type = /obj/item/ammo_box/magazine/w308
-	fire_delay = 4
+	fire_delay = 6
 	burst_size = 1
 	extra_speed = 800
 	extra_penetration = 0.2
@@ -1056,14 +1056,14 @@
 	slowdown = 0.3
 	zoom_amt = 15
 	zoom_out_amt = 17
-	extra_penetration = 0.4
-	extra_damage = 45
+	extra_penetration = 0.2
+	extra_damage = 35
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
 	name = "compact sniper rifle"
 	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert. This particular model is lighter and faster."
 	slowdown = 0.4
-	fire_delay = 4
+	fire_delay = 6
 
 //////////////////
 //ASSAULT RIFLES//
@@ -1077,10 +1077,10 @@
 	icon_state = "R82"
 	item_state = "R84"
 	icon_prefix = "r82"
-	extra_damage = 28
+	extra_damage = 20
 	fire_delay = 2.5
 	is_automatic = TRUE
-	slowdown = 0.3
+	slowdown = 0.4
 	automatic = 1
 	autofire_shot_delay = 3
 	spread = 10
@@ -1148,13 +1148,13 @@
 //R93 PDW		Keywords: 5.56mm, Semi-Automatic, 20 (10-50) round magazine, Pistol grip
 /obj/item/gun/ballistic/automatic/r93
 	name = "R93 PDW"
-	desc = "A lightweight assault rifle manufactured by the Brotherhood of Steel with a folding stock, based on weapons from the R-series platforms. It is generally issued to Brotherhood Knights for scouting missions."
+	desc = "A lightweight assault rifle carried by the enclave remnants with a folding stock, based on weapons from the R-series platforms. It is generally issued to privates for scouting missions."
 	icon_state = "r93"
 	item_state = "r93"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 3.25
+	fire_delay = 1
 	spread = 1
-	extra_damage = 25
+	extra_damage = 20
 	burst_size = 1
 	can_attachments = FALSE
 	semi_auto = TRUE
@@ -1315,7 +1315,7 @@ obj/item/gun/ballistic/automatic/bar
 	slowdown = 1.5 //really goddamn big
 	autofire_shot_delay = 2.3
 	extra_damage = 30
-	extra_penetration = 0.3
+	extra_penetration = 0.2
 	spread = 10
 	recoil = 0.3
 	actions_types = list(/datum/action/item_action/toggle_firemode)
@@ -1358,7 +1358,7 @@ obj/item/gun/ballistic/automatic/bar
 	desc = "A light machinegun using 60 round belts fed from an ammobox, its one of the few heavy weapons designs NCR has produced."
 	icon_state = "R84"
 	item_state = "R84"
-	slowdown = 1
+	slowdown = 1.5
 	mag_type = /obj/item/ammo_box/magazine/lmg
 	extra_damage = 23
 	fire_delay = 6
@@ -1366,7 +1366,7 @@ obj/item/gun/ballistic/automatic/bar
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 2
-	spread = 8
+	spread = 20
 	can_attachments = FALSE
 	actions_types = null
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'

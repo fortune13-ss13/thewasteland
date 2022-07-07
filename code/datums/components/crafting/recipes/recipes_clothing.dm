@@ -571,44 +571,20 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
-/datum/crafting_recipe/armor_plate_deathclaw
+/datum/crafting_recipe/armor_plate
 	name = "Armor Plate"
 	result = /obj/item/stack/crafting/armor_plate
-	reqs = list(/obj/item/stack/sheet/animalhide/deathclaw  = 1,
-				/obj/item/stack/crafting/goodparts = 1,
+	reqs = list(/obj/item/stack/crafting/goodparts = 1,
 				/obj/item/stack/crafting/metalparts = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	
-/datum/crafting_recipe/armor_plate_deathclaw5
-	name = "Armor Plate (x5)"
-	result = /obj/item/stack/crafting/armor_plate/five
-	reqs = list(/obj/item/stack/sheet/animalhide/deathclaw  = 5,
-				/obj/item/stack/crafting/goodparts = 5,
-				/obj/item/stack/crafting/metalparts = 10)
-	tools = list(TOOL_WORKBENCH)
-	time = 50
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
-/datum/crafting_recipe/armor_plate_plastit
-	name = "Armor Plate"
-	result = /obj/item/stack/crafting/armor_plate
-	reqs = list(/obj/item/stack/sheet/plasteel = 2,
-				/obj/item/stack/crafting/goodparts = 1,
-				/obj/item/stack/crafting/metalparts = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	
-/datum/crafting_recipe/armor_plate_plastit5
+/datum/crafting_recipe/armor_plate
 	name = "Armor Plate (x5)"
 	result = /obj/item/stack/crafting/armor_plate/five
-	reqs = list(/obj/item/stack/sheet/plasteel = 10,
-				/obj/item/stack/crafting/goodparts = 5,
+	reqs = list(/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/stack/crafting/metalparts = 10)
 	tools = list(TOOL_WORKBENCH)
 	time = 50
@@ -795,7 +771,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/legionsalvaged
 	name = "Legion Salvaged Power Armor"
 	result = /obj/item/clothing/suit/armor/f13/legion/legionsalvaged
@@ -816,16 +792,6 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 
-/datum/crafting_recipe/legionriot_ncr
-	name = "Legion Riot Armor"
-	result = /obj/item/clothing/suit/armor/f13/legion/legionriot
-	reqs = list(/obj/item/clothing/suit/armor/f13/rangercombat = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-	
 /datum/crafting_recipe/legioncombat
 	name = "Legion Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/legion
@@ -836,7 +802,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/legioncombatmk2
 	name = "reinforced Legion Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/mk2/legion
@@ -847,7 +813,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/ncrcombat
 	name = "NCR Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/ncr
@@ -858,7 +824,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/ncrcombatmk2
 	name = "reinforced NCR Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/mk2/ncr
@@ -869,7 +835,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/enclavecombat
 	name = "Enclave Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/enclave
@@ -880,7 +846,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/enclavecombatmk2
 	name = "reinforced Enclave Combat Armour"
 	result = /obj/item/clothing/suit/armor/f13/combat/mk2/remnant
@@ -1007,7 +973,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	
+
 /datum/crafting_recipe/legionsalvagedhelmet_ncr
 	name = "Legion Salvaged Power Armor Helmet"
 	result = /obj/item/clothing/suit/armor/f13/legion/legionsalvaged
@@ -1017,7 +983,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/legionsalvagedhelmet
 	name = "Legion Salvaged Power Armor Helmet"
 	result = /obj/item/clothing/head/helmet/f13/legion/legionsalvagedhelmet
@@ -1028,17 +994,6 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 
-	
-/datum/crafting_recipe/legionriothelmet_ncr
-	name = "Legion Riot Helmet"
-	result = /obj/item/clothing/head/helmet/f13/legion/legionriothelmet
-	reqs = list(/obj/item/clothing/head/helmet/f13/ncr/rangercombat = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-	
 /datum/crafting_recipe/legioncombathelmet
 	name = "Legion Combat Helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/legion
@@ -1049,7 +1004,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/legioncombathelmetmk2
 	name = "reinforced Legion Combat Helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/legion
@@ -1060,7 +1015,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/ncrcombathelmet
 	name = "NCR Combat Helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/ncr
@@ -1071,7 +1026,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/ncrcombathelmetmk2
 	name = "reinforced NCR Combat Helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/ncr
@@ -1082,7 +1037,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/enclavecombathelmet
 	name = "Enclave Combat Helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/enclave
@@ -1093,7 +1048,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	
+
 /datum/crafting_recipe/enclavecombathelmetmk2
 	name = "reinforced Enclave Combat Helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
@@ -1116,7 +1071,7 @@ datum/crafting_recipe/steelbib/heavy
 	tools = list(TOOL_FORGE)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	
+
 //Gauntlets
 
 /datum/crafting_recipe/plateglove
