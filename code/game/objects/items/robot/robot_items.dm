@@ -849,6 +849,16 @@
 		/obj/item/reagent_containers/blood
 		)
 
+/obj/item/weapon/gripper/hydroponics
+	name = "botany gripper"
+	desc = "A simple grasping tool for interacting with seeds, seed disks, and bottles. Alt click to drop instead of use."
+	icon_state = "gripper_medical"
+	can_hold = list(
+		/obj/item/reagent_containers/glass,
+		/obj/item/seeds,
+		/obj/item/disk/plantgene
+		)
+
 /obj/item/gun/energy/plasmacutter/cyborg
 	name = "cyborg plasma cutter"
 	desc = "A basic variation of the plasma cutter, compressed into a cyborg chassis. Less effective than normal plasma cutters."

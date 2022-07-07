@@ -543,6 +543,20 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	ammo_x_offset = 3
 
+/obj/item/gun/energy/gammagun/cyborg
+	name = "integrated gamma gun"
+	desc = "An advanced radiation weapon commonly utilized by robots who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
+	icon_state = "ultra_pistol"
+	item_state = "laser-pistol"
+	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	ammo_x_offset = 3
+	selfcharge = EGUN_SELFCHARGE_BORG
+	cell_type = /obj/item/stock_parts/cell/secborg
+	charge_delay = 3
+
+/obj/item/gun/energy/gammagun/cyborg/emp_act()
+	return
 
 //Gatling Laser
 
