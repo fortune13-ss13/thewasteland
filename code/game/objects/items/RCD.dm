@@ -896,7 +896,7 @@ RLD
 
 ///pretty much rcd_create, but named differently to make myself feel less bad for copypasting from a sibling-type
 /obj/item/construction/plumbing/proc/create_machine(atom/A, mob/user)
-	if(!machinery_data || !isopenturf(A))
+	if(!machinery_data)
 		return FALSE
 
 	if(checkResource(machinery_data["cost"][blueprint], user) && blueprint)
@@ -930,6 +930,42 @@ RLD
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, TRUE) //this is just such a great sound effect
 	else
 		create_machine(A, user)
+
+/obj/item/construction/plumbing/cyborg
+	no_ammo_message = "<span class='warning'>Insufficient charge.</span>"
+	desc = "A device used to rapidly cause problems."
+	var/energyfactor = 20
+
+/obj/item/construction/plumbing/cyborg/useResource(amount, mob/user)
+	if(!iscyborg(user))
+		return 0
+	var/mob/living/silicon/robot/borgy = user
+	if(!borgy.cell)
+		if(user)
+			to_chat(user, no_ammo_message)
+		return 0
+	. = borgy.cell.use(amount * energyfactor) //borgs get 1.3x the use of their RCDs
+	if(!. && user)
+		to_chat(user, no_ammo_message)
+	return .
+
+/obj/item/construction/rld/cyborg
+	no_ammo_message = "<span class='warning'>Insufficient charge.</span>"
+	desc = "A device used to rapidly dispense lights."
+	var/energyfactor = 5
+
+/obj/item/construction/rld/cyborg/useResource(amount, mob/user)
+	if(!iscyborg(user))
+		return 0
+	var/mob/living/silicon/robot/borgy = user
+	if(!borgy.cell)
+		if(user)
+			to_chat(user, no_ammo_message)
+		return 0
+	. = borgy.cell.use(amount * energyfactor) //borgs get 1.3x the use of their RCDs
+	if(!. && user)
+		to_chat(user, no_ammo_message)
+	return .
 
 
 #undef GLOW_MODE
