@@ -1032,7 +1032,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 60
 
 /datum/outfit/job/ncr/f13offdutyncr
-	name = "NCR Rear Echelon"
+	name = "NCR Off-Duty"
 	jobtype	= /datum/job/ncr/f13offdutyncr
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	head = /obj/item/clothing/head/beret/ncr_dresscap
