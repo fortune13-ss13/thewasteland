@@ -312,7 +312,7 @@
 		if(ACCESS_TCOMSAT)
 			return "Telecommunications"
 		if(ACCESS_GATEWAY)
-			return "Gateway"
+			return "Oasis Police Department"
 		if(ACCESS_SEC_DOORS)
 			return "Security SubDepartment Doors"
 		if(ACCESS_ENTER_GENPOP)
