@@ -321,7 +321,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/sergeantrifleman
 	name = "Lead Rifleman"
-	suit_store = /obj/item/gun/ballistic/automatic/service/r82
+	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	head = /obj/item/clothing/head/f13/ncr
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 2,
@@ -332,7 +332,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/sergeantcqc
 	name = "Trench Raider"
-	suit_store = /obj/item/gun/ballistic/automatic/service/r82
+	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles/trenchraider
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 2,
@@ -348,6 +348,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 // DRILL SERGEANT
 
@@ -835,6 +836,12 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m9mmds = 1,
 		/obj/item/storage/box/ration/menu_one = 1
 		)
+
+/datum/outfit/job/ncr/f13corporal/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 // TROOPER
 
