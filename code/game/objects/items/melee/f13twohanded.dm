@@ -272,7 +272,7 @@
 	update_icon()
 
 
-// Lance		Keywords: LEGION, Damage 25/40, Reach
+// Lance		Keywords: LEGION, Damage 15/30, Reach
 /obj/item/twohanded/spear/lance
 	name = "legion lance"
 	desc = "A long spear made in the Legions war foundries. Useful for fighting tribals and hunting when ammunition is scarce."
@@ -281,7 +281,7 @@
 
 /obj/item/twohanded/spear/lance/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=40, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=15, force_wielded=30, icon_wielded="[icon_prefix]2")
 
 
 // Scrap spear		Keywords: Damage 17/28, Reach, Throw bonus
