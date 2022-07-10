@@ -153,13 +153,13 @@
 
 /obj/item/modkit/rangerpatrolhat
 	name = "ranger patrol hat modkit"
-	target_items = list(/obj/item/clothing/head/helmet/f13/ncr/rangercombat)
-	result_item = /obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma
+	target_items = list(/obj/item/clothing/head/helmet/f13/combat/ncr_patrol)
+	result_item = /obj/item/clothing/head/helmet/f13/combat/ncr_patrol/rangertrauma
 
 /obj/item/modkit/degancustomarmor
 	name = "sniper riot gear armor modkit"
 	target_items = list(/obj/item/clothing/suit/armor/f13/combat/ncr_patrol)
-	result_item = /obj/item/clothing/suit/armor/f13/rangercombat/degancustom
+	result_item = /obj/item/clothing/suit/armor/f13/combat/ncr_patrol/degancustom
 
 /obj/item/modkit/environmentalhelm
 	name = "environmental helmet modkit"
