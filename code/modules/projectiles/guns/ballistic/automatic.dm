@@ -390,7 +390,6 @@
 	extra_damage = 17
 	can_suppress = TRUE
 	can_attachments = TRUE
-	spread = 10
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 29
 	suppressor_y_offset = 16
