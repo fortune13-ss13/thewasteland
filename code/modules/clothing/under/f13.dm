@@ -1694,6 +1694,19 @@
 	icon_state = "masonduds"
 	item_state = "masonduds"
 
+/obj/item/clothing/under/f13/schlimmsuit
+	name = "foreign gentleman's attire"
+	desc = "A red paisley vest and silk cravat paired with beige slacks. These clothes are strangely antiquated for their time place."
+	icon_state = "schlimmsuit"
+	item_state = "schlimmsuit"
+
+/obj/item/clothing/under/f13/ahp_uniform
+	name = "highway patrol uniform"
+	desc = "An old tan police uniform with tight-fitting breeches and a gold badge with the logo of the 'Arizona State Troopers'."
+	icon_state = "ahp_uniform"
+	item_state = "ahp_uniform"
+	item_color = "ahp_uniform"
+
 //Super Mutants
 
 /obj/item/clothing/under/f13/mutieshorts

@@ -72,6 +72,10 @@
 	name = "russian balaclava"
 	path = /obj/item/clothing/mask/russian_balaclava
 
+/datum/gear/mask/joymask //Love will tear us apart again
+	name = "joy mask"
+	path = /obj/item/clothing/mask/joy
+
 /// Bandanas ///
 
 /datum/gear/mask/bandana/

@@ -821,6 +821,17 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/ahp_helmet
+	name = "highway patrol helmet"
+	desc = "An old police motorcycle helmet with the logo of the 'Arizona Department of Public Safety' emblazoned on the front."
+	icon_state = "ahp_helmet"
+	item_state = "ahp_helmet"
+
+/obj/item/clothing/head/helmet/f13/ahp_helmet/Initialize() //HQ parts reinforcement
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+
 /obj/item/clothing/head/helmet/f13/marlowhat
 	name = "boss of the plains hat"
 	desc = "A thick undyed felt cowboy hat, bleached from excessive sun exposure and creased from heavy usage."
@@ -831,6 +842,51 @@
 /obj/item/clothing/head/helmet/f13/marlowhat/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/head/helmet/f13/marlowhat/schlimmhat
+	name = "foreign Florentine hat"
+	desc = "A simple stiff straw hat with a red ribbon tied around the crown. This example appears to be pre-war, yet emmaculately preserved."
+	icon_state = "schlimmhat"
+	item_state = "schlimmhat"
+
+/obj/item/clothing/head/helmet/f13/marlowhat/schlimmhat/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/head/helmet/f13/bride_veil
+	name = "bridal veil"
+	desc = "A thin, white bridal veil. It seems to have been hand-made using remarkably well preserved and delicate pre-war fabric."
+	icon_state = "bride_veil"
+	item_state = "bride_veil"
+	alt_toggle_message = "You push the veil down "
+	can_toggle = 1
+	flags_inv = HIDEEARS
+	actions_types = list(/datum/action/item_action/toggle)
+	toggle_cooldown = 0
+	flags_cover = HEADCOVERSEYES
+	visor_flags_cover = HEADCOVERSEYES
+	dog_fashion = null
+
+/obj/item/clothing/head/helmet/f13/bride_veil/attack_self(mob/user)
+	if(can_toggle && !user.incapacitated())
+		if(world.time > cooldown + toggle_cooldown)
+			cooldown = world.time
+			up = !up
+			flags_1 ^= visor_flags
+			flags_inv ^= visor_flags_inv
+			flags_cover ^= visor_flags_cover
+			icon_state = "[initial(icon_state)][up ? "up" : ""]"
+			to_chat(user, "[up ? alt_toggle_message : toggle_message] \the [src]")
+
+			user.update_inv_head()
+			if(iscarbon(user))
+				var/mob/living/carbon/C = user
+				C.head_update(src, forced = 1)
+
+			if(active_sound)
+				while(up)
+					playsound(src.loc, "[active_sound]", 100, 0, 4)
+					sleep(15)
 
 /obj/item/clothing/head/f13/ranger_hat
 	name = "grey cowboy hat"

@@ -151,6 +151,30 @@
 	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
 	result_item = /obj/item/clothing/suit/armor/f13/marlowsuit
 
+/obj/item/modkit/schlimmhat
+	name = "foreign florentine hat modkit"
+	desc = "for raider helmet"
+	target_items = list(/obj/item/clothing/head/helmet/f13/raider)
+	result_item = /obj/item/clothing/head/helmet/f13/marlowhat/schlimmhat
+
+/obj/item/modkit/schlimmcoat
+	name = "foreign frock coat modkit"
+	desc = "for raider armor"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/marlowsuit/schlimmcoat
+
+/obj/item/modkit/ahp_suit
+	name = "highway patrol jacket modkit"
+	desc = "for raider armor"
+	target_items = list(/obj/item/clothing/suit/armor/f13/raider)
+	result_item = /obj/item/clothing/suit/armor/f13/ahp_suit
+
+/obj/item/modkit/ahp_helmet
+	name = "highway patrol helmet modkit"
+	desc = "for raider helmet"
+	target_items = list(/obj/item/clothing/head/helmet/f13/raider)
+	result_item = /obj/item/clothing/head/helmet/f13/ahp_helmet
+
 /obj/item/modkit/rangerpatrolhat
 	name = "ranger patrol hat modkit"
 	target_items = list(/obj/item/clothing/head/helmet/f13/combat/ncr_patrol)

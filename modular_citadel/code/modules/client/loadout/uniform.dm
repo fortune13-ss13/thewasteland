@@ -904,6 +904,18 @@
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
+/datum/gear/uniform/wasteland/schlimmsuit
+	name = "Foreign gentleman's attire"
+	path = /obj/item/clothing/under/f13/schlimmsuit
+	cost = 1
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/ahp_uniform
+	name = "Highway patrol uniform"
+	path = /obj/item/clothing/under/f13/ahp_uniform
+	cost = 1
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
 /datum/gear/uniform/wasteland/locust
 	name = "Locust Uniform"
 	path = /obj/item/clothing/under/f13/locust
