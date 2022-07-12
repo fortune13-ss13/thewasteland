@@ -102,8 +102,8 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/whiskey
-	name = "Uncle Git's special reserve"
-	desc = "A premium single-malt whiskey, gently matured inside the tunnels of a nuclear shelter. TUNNEL WHISKEY RULES."
+	name = "Olde Royale Premium Whiskey"
+	desc = "A premium single-malt whiskey, gently matured inside the ruins of a nuclear wasteland."
 	icon_state = "whiskeybottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 100)
 
@@ -236,8 +236,8 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/wine
-	name = "Doublebeard's bearded special wine"
-	desc = "A faint aura of unease and asspainery surrounds the bottle."
+	name = "Atomic Claret"
+	desc = "This used to be considered a poor vintage, but the bordeaux has aged wonderfully with centuries gone past."
 	icon_state = "winebottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/wine = 100)
 	foodtype = FRUIT | ALCOHOL
