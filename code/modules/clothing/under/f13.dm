@@ -663,7 +663,7 @@
 	fitted = NO_FEMALE_UNIFORM
 	var/uniformtoggled = FALSE
 
-/obj/item/clothing/under/f13/khan/shorts
+/obj/item/clothing/under/f13/khan/shorts //Skirt aswell, if you alt click on it, turns into khan skirt.
 	name = "great khan jorts"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants, but jorts is a acceptable alternative."
 	icon = 'icons/fallout/clothing/khans.dmi'
