@@ -543,6 +543,20 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	ammo_x_offset = 3
 
+/obj/item/gun/energy/gammagun/cyborg
+	name = "integrated gamma gun"
+	desc = "An advanced radiation weapon commonly utilized by robots who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
+	icon_state = "ultra_pistol"
+	item_state = "laser-pistol"
+	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	ammo_x_offset = 3
+	selfcharge = EGUN_SELFCHARGE_BORG
+	cell_type = /obj/item/stock_parts/cell/secborg
+	charge_delay = 3
+
+/obj/item/gun/energy/gammagun/cyborg/emp_act()
+	return
 
 //Gatling Laser
 
@@ -561,9 +575,8 @@
 	var/obj/item/gun/energy/minigun/gun
 	var/armed = 0 //whether the gun is attached, 0 is attached, 1 is the gun is wielded.
 	var/overheat = 0
-	var/overheat_max = 70
-	var/heat_stage = 0
-	var/heat_diffusion = 1.5 //How much heat is lost per tick
+	var/overheat_max = 90
+	var/heat_diffusion = 2 //How much heat is lost per tick
 
 /obj/item/minigunpack/Initialize()
 	. = ..()
@@ -598,10 +611,6 @@
 		user.dropItemToGround(gun, TRUE)
 	else
 		..()
-
-/obj/item/minigunpack/examine(mob/user)
-	. = ..()
-	. += "<span class='notice'>Current heat level: [overheat] / [overheat_max]"
 
 /obj/item/minigunpack/dropped(mob/user)
 	. = ..()
@@ -687,20 +696,6 @@
 
 /obj/item/gun/energy/minigun/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	if(ammo_pack)
-		if(ammo_pack.overheat > ammo_pack.overheat_max * (1 / 3) && ammo_pack.heat_stage < 1)
-			to_chat(user, "You feel warmth from the handle of the gun.")
-			ammo_pack.heat_stage += 1
-			..()
-
-		if(ammo_pack.overheat > ammo_pack.overheat_max * (2 / 3) && ammo_pack.heat_stage < 2)
-			to_chat(user, "The gun's heat sensor beeps rapidly as it reaches its limit!")
-			ammo_pack.heat_stage += 1
-			..()
-
-		if(ammo_pack.overheat < ammo_pack.overheat_max)
-			ammo_pack.overheat += burst_size
-			..()
-
 		if(ammo_pack.overheat < ammo_pack.overheat_max)
 			ammo_pack.overheat += burst_size
 			..()

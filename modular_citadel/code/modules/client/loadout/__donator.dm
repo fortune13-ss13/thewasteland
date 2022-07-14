@@ -123,7 +123,7 @@
 /datum/gear/donator/kits/evosolus2
 	name = "Evos goods2"
 	path = /obj/item/storage/box/large/custom_kit/evosolus2
-	ckeywhitelist = list("evosolus")	
+	ckeywhitelist = list("evosolus")
 
 /obj/item/storage/box/large/custom_kit/snugglytrap/PopulateContents()
 	new /obj/item/clothing/neck/mantle/snugglycape(src)
@@ -132,8 +132,8 @@
 /datum/gear/donator/kits/snugglytrap
 	name = "Good boy kit"
 	path = /obj/item/storage/box/large/custom_kit/snugglytrap
-	ckeywhitelist = list("snugglytrap")	
-	
+	ckeywhitelist = list("snugglytrap")
+
 /obj/item/storage/box/large/custom_kit/erabite/PopulateContents()
 	new /obj/item/modkit/rangerpatrolhat(src)
 	new /obj/item/modkit/degancustomarmor(src)
@@ -142,7 +142,7 @@
 /datum/gear/donator/kits/erabite
 	name = "Era stuff"
 	path = /obj/item/storage/box/large/custom_kit/erabite
-	ckeywhitelist = list("erabite")	
+	ckeywhitelist = list("erabite")
 
 /obj/item/storage/box/large/custom_kit/sunny/PopulateContents()
 	new /obj/item/clothing/mask/gas/sechailer(src)
@@ -151,11 +151,11 @@
 	new /obj/item/modkit/khanbat(src)
 	new /obj/item/bong/coconut(src)
 	new /obj/item/clothing/under/f13/chinasuitcosmetic(src)
-	
+
 /datum/gear/donator/kits/sunny
 	name = "Sunnys stuff"
 	path = /obj/item/storage/box/large/custom_kit/sunny
-	ckeywhitelist = list("nirzak")	
+	ckeywhitelist = list("nirzak")
 
 /obj/item/storage/box/large/custom_kit/flaka/PopulateContents()
 	new /obj/item/clothing/head/f13/enclave/hood(src)
@@ -164,16 +164,16 @@
 /datum/gear/donator/kits/flaka
 	name = "Flaka stuff Enclave"
 	path = /obj/item/storage/box/large/custom_kit/flaka
-	ckeywhitelist = list("flaka")					
+	ckeywhitelist = list("flaka")
 
 /obj/item/storage/box/large/custom_kit/flaka2/PopulateContents()
 	new /obj/item/modkit/flakabomber(src)
-	new /obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma(src)
+	new /obj/item/clothing/head/helmet/f13/combat/ncr_patrol/rangertrauma(src)
 
 /datum/gear/donator/kits/flaka2
 	name = "Flaka stuff NCR"
 	path = /obj/item/storage/box/large/custom_kit/flaka2
-	ckeywhitelist = list("flaka")	
+	ckeywhitelist = list("flaka")
 
 /obj/item/storage/box/large/custom_kit/darkrixd/PopulateContents()
 	new /obj/item/modkit/khanbatreinforced(src)
@@ -196,7 +196,7 @@
 /datum/gear/donator/kits/malinois
 	name = "malinois's stuff"
 	path = /obj/item/storage/box/large/custom_kit/malinois
-	ckeywhitelist = list("malinois.rage")	
+	ckeywhitelist = list("malinois.rage")
 
 /// Pug stuff below
 
@@ -221,7 +221,7 @@
 	name = "I die to mobsx2"
 	path = /obj/item/storage/box/large/custom_kit/pug2
 	ckeywhitelist = list("puglord777")
-	
+
 /datum/gear/donator/kits/mutie
 	name = "Muties"
 	path = /obj/item/storage/box/large/custom_kit/mutie
@@ -233,4 +233,4 @@
 /datum/gear/donator/kits/octus
 	name = "Tribal stuff"
 	path = /obj/item/storage/box/large/custom_kit/octus
-	ckeywhitelist = list("octus")	
+	ckeywhitelist = list("octus")

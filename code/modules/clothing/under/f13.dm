@@ -648,6 +648,8 @@
 	item_state = "raiderrags"
 	item_color = "raiderrags"
 
+// Khan Uniforms Below
+
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants."
@@ -657,9 +659,11 @@
 	item_state = "khan_uniform"
 	item_color = "khan_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
+	body_parts_covered = GROIN|LEGS
+	fitted = NO_FEMALE_UNIFORM
 	var/uniformtoggled = FALSE
 
-/obj/item/clothing/under/f13/khan/shorts
+/obj/item/clothing/under/f13/khan/shorts //Skirt aswell, if you alt click on it, turns into khan skirt.
 	name = "great khan jorts"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants, but jorts is a acceptable alternative."
 	icon = 'icons/fallout/clothing/khans.dmi'
@@ -1693,6 +1697,19 @@
 	desc = "A pair of worn buckskin trousers held up by a heavy pistol belt. The attire is synonymous with the colors of the criminal Marlow gang."
 	icon_state = "masonduds"
 	item_state = "masonduds"
+
+/obj/item/clothing/under/f13/schlimmsuit
+	name = "foreign gentleman's attire"
+	desc = "A red paisley vest and silk cravat paired with beige slacks. These clothes are strangely antiquated for their time place."
+	icon_state = "schlimmsuit"
+	item_state = "schlimmsuit"
+
+/obj/item/clothing/under/f13/ahp_uniform
+	name = "highway patrol uniform"
+	desc = "An old tan police uniform with tight-fitting breeches and a gold badge with the logo of the 'Arizona State Troopers'."
+	icon_state = "ahp_uniform"
+	item_state = "ahp_uniform"
+	item_color = "ahp_uniform"
 
 //Super Mutants
 
