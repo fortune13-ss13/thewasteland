@@ -318,7 +318,8 @@
 		/obj/item/borg/lollipop,
 		/obj/item/sensor_device,
 		/obj/item/shockpaddles/cyborg)
-	emag_modules = list(/obj/item/reagent_containers/borghypo/hacked)
+	emag_modules = list(/obj/item/reagent_containers/borghypo/hacked,
+							/obj/item/gun/energy/gammagun/cyborg)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/medical,
 		/obj/item/clockwork/weapon/ratvarian_spear)
@@ -370,6 +371,9 @@
 		/obj/item/stack/sheet/rglass/cyborg,
 		/obj/item/stack/rods/cyborg,
 		/obj/item/stack/tile/plasteel/cyborg,
+		/obj/item/pipe_dispenser,
+		/obj/item/construction/plumbing/cyborg,
+		/obj/item/construction/rld/cyborg,
 		/obj/item/stack/cable_coil/cyborg)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
@@ -544,8 +548,16 @@
 		/obj/item/mop/cyborg,
 		/obj/item/lightreplacer/cyborg,
 		/obj/item/holosign_creator,
+		/obj/item/reagent_containers/glass/bucket/plastic,
+		/obj/item/shovel/spade,
+		/obj/item/cultivator,
+		/obj/item/hatchet,
+		/obj/item/storage/bag/plants/portaseeder,
+		/obj/item/gun/energy/floragun,
+		/obj/item/weapon/gripper/hydroponics,
 		/obj/item/reagent_containers/spray/cyborg_drying)
-	emag_modules = list(/obj/item/reagent_containers/borghypo/borgshaker/hacked)
+	emag_modules = list(/obj/item/reagent_containers/borghypo/borgshaker/hacked,
+						/obj/item/reagent_containers/spray/cyborg_lube)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/service,
 		/obj/item/borg/sight/xray/truesight_lens)
 	moduleselect_icon = "service"

@@ -55,6 +55,12 @@
 		diag_hud.add_to_hud(src)
 	diag_hud_set_status()
 	diag_hud_set_health()
+	ADD_TRAIT(src, TRAIT_MEDICALEXPERT, ROBOT_TRAIT) //must have all traits by default
+	ADD_TRAIT(src, TRAIT_CYBERNETICIST_EXPERT, ROBOT_TRAIT)
+	ADD_TRAIT(src, TRAIT_SURGERY_HIGH, ROBOT_TRAIT)
+	ADD_TRAIT(src, TRAIT_CHEMWHIZ, ROBOT_TRAIT)
+	ADD_TRAIT(src, TRAIT_UNETHICAL_PRACTITIONER, ROBOT_TRAIT)
+	ADD_TRAIT(src, TRAIT_HARD_YARDS, ROBOT_TRAIT)
 
 /mob/living/silicon/ComponentInitialize()
 	. = ..()

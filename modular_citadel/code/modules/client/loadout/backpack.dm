@@ -130,6 +130,30 @@
 	cost = 2
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
 
+/datum/gear/backpack/schlimmhat
+	name = "Foreign Florentine Hat modkit"
+	path = /obj/item/modkit/schlimmhat
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
+/datum/gear/backpack/schlimmcoat
+	name = "Foreign Frock Coat modkit"
+	path = /obj/item/modkit/schlimmcoat
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
+/datum/gear/backpack/ahp_suit
+	name = "Highway Patrol Jacket modkit"
+	path = /obj/item/modkit/ahp_suit
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
+/datum/gear/backpack/ahp_helmet
+	name = "Highway Patrol Helmet modkit"
+	path = /obj/item/modkit/ahp_helmet
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_MODKITS
+
 /datum/gear/backpack/westernwayfarerlight
 	name = "Western wayfarer light modkit"
 	path = /obj/item/modkit/westernwayfarerlight

@@ -328,19 +328,19 @@
 
 /datum/gear/uniform/shorts/jeanbshorts
 	name = "jean booty shorts"
-	path = /obj/item/clothing/under/jeanbshorts
+	path = /obj/item/clothing/under/shorts/jeanbshorts
 
 /datum/gear/uniform/shorts/darkbshorts
 	name = "dark booty shorts"
-	path = /obj/item/clothing/under/darkbshorts
+	path = /obj/item/clothing/under/shorts/darkbshorts
 
 /datum/gear/uniform/shorts/blackbshorts
 	name = "black booty shorts"
-	path = /obj/item/clothing/under/blackbshorts
+	path = /obj/item/clothing/under/shorts/blackbshorts
 
 /datum/gear/uniform/shorts/brownbshorts
 	name = "Cargo booty shorts"
-	path = /obj/item/clothing/under/brownbshorts
+	path = /obj/item/clothing/under/shorts/brownbshorts
 
 /datum/gear/uniform/tealturtle
 	name = "teal turtleneck"
@@ -901,6 +901,18 @@
 /datum/gear/uniform/wasteland/marlowduds
 	name = "Marlow gang attire"
 	path = /obj/item/clothing/under/f13/marlowduds
+	cost = 1
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/schlimmsuit
+	name = "Foreign gentleman's attire"
+	path = /obj/item/clothing/under/f13/schlimmsuit
+	cost = 1
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/ahp_uniform
+	name = "Highway patrol uniform"
+	path = /obj/item/clothing/under/f13/ahp_uniform
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 

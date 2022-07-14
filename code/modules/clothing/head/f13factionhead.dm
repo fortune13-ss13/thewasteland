@@ -811,18 +811,15 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/head/helmet/f13/rangercombat/rangertrauma
-	name = "Ranger Patrol Hat"
+/obj/item/clothing/head/helmet/f13/combat/ncr_patrol/rangertrauma //mfw donator nightvision, removes this.
+	name = "ranger patrol hat"
 	desc = "A refurbished and personalized ranger duty hat with a gas mask to boot."
 	icon_state = "ranger_trauma"
 	item_state = "ranger_trauma"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 40)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	unique_reskin = list("M1" = "trauma_patrol" ,"M2" = "ranger_trauma")
-	always_reskinnable = "True"
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30, "wound" = 40)
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 
-/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/reclaimed/Initialize()
+/obj/item/clothing/head/f13/ranger/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
