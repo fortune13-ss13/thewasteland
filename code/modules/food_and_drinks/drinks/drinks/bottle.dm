@@ -74,7 +74,7 @@
 //Keeping this here for now, I'll ask if I should keep it here.
 /obj/item/broken_bottle
 	name = "broken bottle"
-	desc = "A shattered glass container with sharp edges."
+	desc = "A shattered glass bottle with sharp edges."
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "broken_bottle"
 	force = 9
@@ -93,8 +93,8 @@
 	AddComponent(/datum/component/butchering, 200, 55)
 
 /obj/item/reagent_containers/food/drinks/bottle/gin
-	name = "Griffeater gin"
-	desc = "A bottle of high quality gin, produced in London."
+	name = "Gin"
+	desc = "A bottle of gin, are you sure you want to drink this?"
 	icon_state = "ginbottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/gin = 100)
 
@@ -102,8 +102,8 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/whiskey
-	name = "Uncle Git's special reserve"
-	desc = "A premium single-malt whiskey, gently matured inside the tunnels of a nuclear shelter. TUNNEL WHISKEY RULES."
+	name = "Olde Royale Premium Whiskey"
+	desc = "A premium single-malt whiskey, gently matured inside the ruins of a nuclear wasteland."
 	icon_state = "whiskeybottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 100)
 
@@ -111,8 +111,8 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/vodka
-	name = "Tunguska triple distilled"
-	desc = "Aah, vodka. Prime choice of drink AND fuel by Russians worldwide."
+	name = "Vodka"
+	desc = "The Russian solution to what to drink, how to fuel vehicles, and how to fuel revolution."
 	icon_state = "vodkabottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/vodka = 100)
 
@@ -120,13 +120,13 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka
-	name = "Badminka vodka"
+	name = "Badminka Vodka"
 	desc = "The label's written in Cyrillic. All you can make out is the name and a word that looks vaguely like 'Vodka'."
 	icon_state = "badminka"
 
 /obj/item/reagent_containers/food/drinks/bottle/tequila
-	name = "Caccavo guaranteed quality tequila"
-	desc = "Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!"
+	name = "Wasteland Tequila"
+	desc = "Brewed from agave cactus, the settlers had to find a solution to crippling alcoholism with no modern booze factories."
 	icon_state = "tequilabottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/tequila = 100)
 
@@ -135,7 +135,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola
 	name = "Nuka-Cola"
-	desc = "The most popular flavored soft drink in the United States before the Great War."
+	desc = "The most popular soft drink in the United States before the collapse, afterward too."
 	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "nukacola"
 	list_reagents = list(/datum/reagent/consumable/nuka_cola = 25, /datum/reagent/radium = 5)
@@ -143,7 +143,7 @@
 	isGlass = TRUE
 
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive
-	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
+	desc = "The most popular soft drink in the United States before the collapse, afterward too.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
 	list_reagents = list(/datum/reagent/consumable/nuka_cola = 15, /datum/reagent/radium = 5)
 
 /obj/item/reagent_containers/food/drinks/bottle/sunset
@@ -165,8 +165,8 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/rum
-	name = "Captain Pete's Cuban spiced rum"
-	desc = "This isn't just rum, oh no. It's practically GRIFF in a bottle."
+	name = "Roentgen Rum"
+	desc = "Named after Wilhelm Roentgen, known instead by some as Rotgut Rum."
 	icon_state = "rumbottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/rum = 100)
 
@@ -199,8 +199,8 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/vermouth
-	name = "Goldeneye vermouth"
-	desc = "Sweet, sweet dryness~"
+	name = "Goldeneye Vermouth"
+	desc = "A dry drink, in the desert?"
 	icon_state = "vermouthbottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/vermouth = 100)
 
@@ -236,8 +236,8 @@
 	list_reagents = null
 
 /obj/item/reagent_containers/food/drinks/bottle/wine
-	name = "Doublebeard's bearded special wine"
-	desc = "A faint aura of unease and asspainery surrounds the bottle."
+	name = "Atomic Claret"
+	desc = "This used to be considered a poor vintage, but the bordeaux has aged wonderfully with centuries gone past."
 	icon_state = "winebottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/wine = 100)
 	foodtype = FRUIT | ALCOHOL
@@ -247,7 +247,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe
 	name = "extra-strong absinthe"
-	desc = "An strong alcoholic drink brewed and distributed by"
+	desc = "An strong alcoholic drink brewed and distributed by the worst of humanity."
 	icon_state = "absinthebottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/absinthe = 100)
 

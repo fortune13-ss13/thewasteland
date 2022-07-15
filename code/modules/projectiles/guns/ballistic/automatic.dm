@@ -390,7 +390,6 @@
 	extra_damage = 17
 	can_suppress = TRUE
 	can_attachments = TRUE
-	spread = 10
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 29
 	suppressor_y_offset = 16
@@ -778,7 +777,7 @@
 	fire_delay = 1
 	burst_size = 1
 	spread = 1
-	extra_damage = 20
+	extra_damage = 25
 	can_attachments = TRUE
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
@@ -817,6 +816,7 @@
 	spread = 1.2
 	slowdown = 0.05
 	extra_damage = 25
+	extra_penetration = 0.1
 	can_scope = TRUE
 	scope_state = "scope_short"
 	scope_x_offset = 4
@@ -1154,7 +1154,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	fire_delay = 1
 	spread = 1
-	extra_damage = 20
+	extra_damage = 25
 	burst_size = 1
 	can_attachments = FALSE
 	semi_auto = TRUE

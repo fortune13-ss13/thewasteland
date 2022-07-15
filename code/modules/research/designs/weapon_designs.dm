@@ -294,7 +294,7 @@
 	build_path = /obj/item/gun/energy/beam_rifle
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-*/
+
 
 /datum/design/decloner
 	name = "Decloner"
@@ -306,6 +306,7 @@
 	build_path = /obj/item/gun/energy/decloner
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+*/
 
 /* Commented out for balance reasons, its kinda OP
 /datum/design/rapidsyringe

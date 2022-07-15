@@ -543,6 +543,20 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	ammo_x_offset = 3
 
+/obj/item/gun/energy/gammagun/cyborg
+	name = "integrated gamma gun"
+	desc = "An advanced radiation weapon commonly utilized by robots who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
+	icon_state = "ultra_pistol"
+	item_state = "laser-pistol"
+	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	ammo_x_offset = 3
+	selfcharge = EGUN_SELFCHARGE_BORG
+	cell_type = /obj/item/stock_parts/cell/secborg
+	charge_delay = 3
+
+/obj/item/gun/energy/gammagun/cyborg/emp_act()
+	return
 
 //Gatling Laser
 
@@ -561,8 +575,8 @@
 	var/obj/item/gun/energy/minigun/gun
 	var/armed = 0 //whether the gun is attached, 0 is attached, 1 is the gun is wielded.
 	var/overheat = 0
-	var/overheat_max = 70
-	var/heat_diffusion = 1.5 //How much heat is lost per tick
+	var/overheat_max = 90
+	var/heat_diffusion = 2 //How much heat is lost per tick
 
 /obj/item/minigunpack/Initialize()
 	. = ..()
@@ -686,7 +700,7 @@
 			ammo_pack.overheat += burst_size
 			..()
 		else
-			to_chat(user, "The gun's heat sensor locked the trigger to prevent barrel damage.")
+			to_chat(user, "The gun's heat sensor locked the trigger to prevent lens damage.")
 
 /obj/item/gun/energy/minigun/afterattack(atom/target, mob/living/user, flag, params)
 	if(!ammo_pack || ammo_pack.loc != user)

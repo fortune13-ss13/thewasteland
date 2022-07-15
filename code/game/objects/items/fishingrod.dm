@@ -1,6 +1,9 @@
 GLOBAL_LIST_INIT(fish_rates, list(
-	/obj/item/fishy/carp		=15,
-	/obj/item/fishy/salmon		=15
+	/obj/item/fishy/carp		=9,
+	/obj/item/fishy/salmon		=9,
+	/obj/item/fishy/eel			=2,
+	/obj/item/fishy/lobster		=9,
+	/obj/item/fishy/shrimp		=9
 ))
 //I have tried to have variables be highly influential so that customization can happen
 //customization, maybe some rods are better than others ;)

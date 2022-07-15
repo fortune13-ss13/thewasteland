@@ -253,6 +253,7 @@
 	desc = "A trap used to catch bears and other legged creatures."
 	var/armed = FALSE
 	var/trap_damage = 30
+	breakouttime = 150
 
 /obj/item/restraints/legcuffs/beartrap/Initialize()
 	. = ..()

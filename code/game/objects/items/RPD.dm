@@ -20,6 +20,8 @@ GLOBAL_LIST_INIT(atmos_pipe_recipes, list(
 		new /datum/pipe_info/pipe("Manifold",			/obj/machinery/atmospherics/pipe/manifold),
 		new /datum/pipe_info/pipe("4-Way Manifold",		/obj/machinery/atmospherics/pipe/manifold4w),
 		new /datum/pipe_info/pipe("Layer Manifold",		/obj/machinery/atmospherics/pipe/layer_manifold),
+		new /datum/pipe_info/pipe("Plumbing Duct",				/obj/machinery/duct,),
+		new /datum/pipe_info/pipe("Plumbing Duct Layer-Manifold",/obj/machinery/duct/multilayered,)
 	),
 	"Devices" = list(
 		new /datum/pipe_info/pipe("Connector",			/obj/machinery/atmospherics/components/unary/portables_connector),
@@ -44,7 +46,7 @@ GLOBAL_LIST_INIT(atmos_pipe_recipes, list(
 		new /datum/pipe_info/pipe("4-Way Manifold",		/obj/machinery/atmospherics/pipe/heat_exchanging/manifold4w),
 		new /datum/pipe_info/pipe("Junction",			/obj/machinery/atmospherics/pipe/heat_exchanging/junction),
 		new /datum/pipe_info/pipe("Heat Exchanger",		/obj/machinery/atmospherics/components/unary/heat_exchanger),
-	)
+	),
 ))
 
 GLOBAL_LIST_INIT(disposal_pipe_recipes, list(
@@ -242,6 +244,8 @@ GLOBAL_LIST_INIT(fluid_duct_recipes, list(
 		first_disposal = GLOB.disposal_pipe_recipes[GLOB.disposal_pipe_recipes[1]][1]
 	if(!first_transit)
 		first_transit = GLOB.transit_tube_recipes[GLOB.transit_tube_recipes[1]][1]
+	if(!first_plumbing)
+		first_plumbing = GLOB.fluid_duct_recipes[GLOB.fluid_duct_recipes[1]][1]
 
 	recipe = first_atmos
 
@@ -330,9 +334,9 @@ GLOBAL_LIST_INIT(fluid_duct_recipes, list(
 		if("piping_layer")
 			piping_layer = text2num(params["piping_layer"])
 			playeffect = FALSE
-		// if("ducting_layer")
-		// 	ducting_layer = text2num(params["ducting_layer"])
-		// 	playeffect = FALSE
+		if("ducting_layer")
+			ducting_layer = text2num(params["ducting_layer"])
+			playeffect = FALSE
 		if("pipe_type")
 			var/static/list/recipes
 			if(!recipes)
@@ -500,9 +504,6 @@ GLOBAL_LIST_INIT(fluid_duct_recipes, list(
 				if(!can_make_pipe)
 					return ..()
 				A = get_turf(A)
-				if(isclosedturf(A))
-					to_chat(user, "<span class='warning'>[src]'s error light flickers; there's something in the way!</span>")
-					return
 				to_chat(user, "<span class='notice'>You start building a fluid duct...</span>")
 				playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
 				if(do_after(user, plumbing_build_speed, target = A))
@@ -522,7 +523,7 @@ GLOBAL_LIST_INIT(fluid_duct_recipes, list(
 
 /obj/item/pipe_dispenser/proc/activate()
 	playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, 1)
-/* unneeded, you can craft ducts from plastic
+/*
 /obj/item/pipe_dispenser/plumbing
 	name = "Plumberinator"
 	desc = "A crude device to rapidly plumb things."
@@ -539,7 +540,6 @@ GLOBAL_LIST_INIT(fluid_duct_recipes, list(
 		first_plumbing = GLOB.fluid_duct_recipes[GLOB.fluid_duct_recipes[1]][1]
 
 	recipe = first_plumbing
-
 */
 
 #undef ATMOS_CATEGORY
