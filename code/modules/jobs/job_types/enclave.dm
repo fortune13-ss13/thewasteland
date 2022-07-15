@@ -8,7 +8,7 @@
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 	forbids = "Enclave taboos: Aiding Brotherhood members in any way no matter how small."
-	enforces = "Enclave rules: Stay in uniform. Act mature and respectful. Obey orders and always remember you are fighting for the only true legitimate power in this land of savages. Wearing gasmasks outside the compound is encouraged but not required."
+	enforces = "Enclave rules: Stay in uniform. Act mature and respectful. Obey orders and always remember you are fighting for the only true legitimate power in this land of savages. Wearing gas masks outside the compound is encouraged but not required."
 	objectivesList = list("Department of Defense advisory: Collect resources and produce more Patribots, attrition is depleting our reserves.","Department of Defense advisory: Establish checkpoints to show presence, they must not forget who is the legitimate goverment.", "Science Divison advisory: Capture human subjects for experiments, alive. We have some new neurotoxin grenades we wish to do final tests with before field deployment.")
 
 /datum/outfit/job/enclave
@@ -57,7 +57,7 @@
 	head_announce = list("Security")
 	req_admin_notify = 1
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
-	supervisors = "Enclave Department of the Army."
+	supervisors = "Department of Defense."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavecpt
 
 /datum/outfit/job/enclave/peacekeeper/enclavecpt	// Hellfire Power Armor, Glock 86a
@@ -98,8 +98,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS, ACCESS_ENCLAVE_COMMAND)
-	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
-	supervisors = "Enclave Department of the Army."
+	description = "You are the only commanding officer that escaped the destruction of the last stronghold. Recently arriving in this place, your men look to you for guidance; set the policies and attitude of the Enclave in this region. Just don't betray your core values, lieutenant."
+	supervisors = "Department of Defense."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavelt
 	exp_type = EXP_TYPE_ENCLAVE
 	exp_requirements = 3000
@@ -144,7 +144,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS, ACCESS_ENCLAVE_COMMAND)
-	description = "Second in command after Lieutenant, your role is to direct their orders directly to the sergeants and regular troops."
+	description = "You are the lieutenant's right hand, its your job to relay orders to the common grunts. After the destruction of the last base, ensure this one does not meet the same fate."
 	supervisors = "The Lieutenant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13gysergeant
 	exp_type = EXP_TYPE_ENCLAVE
@@ -185,8 +185,8 @@
 	flag = F13USAI
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are a specialist trained in the use of heavy equipment and X0-2 Power armor. Your job is to be he anchor of your unit."
-	supervisors = "The Lieutenant and the Sergeants"
+	description = "You are a specialist trained in the use of XO-2 Power Armor and heavy equipment. After the last base was destroyed, you fear you may be the last one in existence. You are the anchor of your unit, do not let them down."
+	supervisors = "Sergeants and Above."
 	outfit = /datum/outfit/job/enclave/peacekeeper/Armoredinfantry
 	exp_type = EXP_TYPE_ENCLAVE
 	exp_requirements = 2000
@@ -234,7 +234,7 @@
 	flag = F13USSGT
 	total_positions = 2
 	spawn_positions = 2
-	description = "Entrusted with the command of the squads assigned to the bunker, your job is to assist the Lieutenant alongside the scientists."
+	description = "Entrusted with the command of the survivors in this mothballed fort, your duty is to assist the Lieutenant."
 	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	exp_requirements = 1500
@@ -270,8 +270,8 @@
 	flag = F13USSPECIALIST
 	total_positions = 2
 	spawn_positions = 2
-	description = "You are an operative for the remnants of the Enclave. You, unlike the normal privates, have recieved specialist training in either engineering or medicine."
-	supervisors = "The Lieutenant and the Sergeants."
+	description = "You are an operative who managed to evacuate the last outpost. You are a step above the mosquito wings, having taken training in either engineering or medicine."
+	supervisors = "Sergeants and Above."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13specialist
 	exp_requirements = 800
 
@@ -302,8 +302,8 @@
 	flag = F13USPRIVATE
 	total_positions = 4
 	spawn_positions = 4
-	description = "You are an operative for the remnants of the Enclave. Obey your Lieutenant. He sets the Enclave's policies."
-	supervisors = "The Lieutenant and the Sergeants"
+	description = "You are one of the few who survived the last stronghold's destruction. Listen to the Lieutenant, they are your sole authority."
+	supervisors = "Sergeants and Above."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 600
@@ -334,7 +334,7 @@
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_COMMAND)
 	total_positions = 2
 	spawn_positions = 2
-	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in your field of research, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
+	description = "You're responsible for the maintenance of the facility, it will take considerable effort to restore this mothballed fort. Support your dwindling forces and listen to the Lieutenant."
 	supervisors = "Enclave Research and Development Division."
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
 	exp_requirements = 2000
@@ -383,9 +383,9 @@
 	flag = F13USBDUTY
 	total_positions = 2
 	spawn_positions = 2
-	description = "You were assigned to bunker duty this week, clean up, cook up, preach up or chem up your fellow Americans and remember don't join any raids or battles from your fellow Americans, after all it's none of your concern this week is it."
+	description = "Due to either disciplinary charges or simply rotating duties, you've been assigned to bunker duty; cook, clean, go mining, maintain the base, just don't go on patrol or fight."
 	enforces = "You are not permited to leave the base. You are a non-combatant. You cannot join any raids or battles on the surface."
-	supervisors = "Everyone else."
+	supervisors = "Everyone else in the Enclave."
 	outfit = /datum/outfit/job/enclave/noncombat/f13BDUTY
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 100
