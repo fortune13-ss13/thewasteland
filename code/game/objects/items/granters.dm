@@ -964,7 +964,7 @@
 /obj/item/book/granter/trait/selection/tribal
 	name = "Book of Ancient Knowledge"
 	desc = "A compendium of knowledge passed down from the elders. It looks to be in poor condition."
-	choices = list("Hit Them With Sticks","Technophilia","Pugilist","Padded Feet","Veteran Table Climber","Basic Surgery")
+	choices = list("Hit Them With Sticks","Technophilia","Pugilist","Padded Feet","Veteran Table Climber","Basic Surgery","Desert Affinity")
 
 /obj/item/book/granter/trait/selection/tribal/attack_self(mob/user)
 	if(!granted_trait)
