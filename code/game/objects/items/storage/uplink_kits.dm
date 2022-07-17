@@ -251,7 +251,7 @@
 	new /obj/item/reagent_containers/glass/bottle/venom(src)
 	new /obj/item/reagent_containers/glass/bottle/fentanyl(src)
 	new /obj/item/reagent_containers/glass/bottle/formaldehyde(src)
-	new /obj/item/reagent_containers/glass/bottle/spewium(src)
+/*	new /obj/item/reagent_containers/glass/bottle/spewium(src) */
 	new /obj/item/reagent_containers/glass/bottle/cyanide(src)
 	new /obj/item/reagent_containers/glass/bottle/histamine(src)
 	new /obj/item/reagent_containers/glass/bottle/initropidril(src)
@@ -500,4 +500,3 @@
 	new /obj/item/clothing/under/chameleon(src)
 	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
 	new /obj/item/lighter(src)
-
