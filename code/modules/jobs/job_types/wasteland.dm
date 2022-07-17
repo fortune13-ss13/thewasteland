@@ -341,7 +341,7 @@ Raider
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/box/ration/ranger_breakfast = 1,
 		/obj/item/radio/headset = 1,
-		/obj/item/book/granter/crafting_recipe/blueprint/r82 = 1
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
 		)
 
 /datum/outfit/loadout/raider_legion
