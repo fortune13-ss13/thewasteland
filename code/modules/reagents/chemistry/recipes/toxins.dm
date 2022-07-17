@@ -127,10 +127,11 @@
 	results = list(/datum/reagent/toxin/bonehurtingjuice = 5)
 	required_reagents = list(/datum/reagent/toxin/mutagen = 1, /datum/reagent/toxin/itching_powder = 3, /datum/reagent/consumable/milk = 1)
 	mix_message = "<span class='danger'>The mixture suddenly becomes clear and looks a lot like water. You feel a strong urge to drink it.</span>"
-
+/*
 /datum/chemical_reaction/spewium
 	name = "Spewium"
 	id = /datum/reagent/toxin/spewium
 	results = list(/datum/reagent/toxin/spewium = 5)
 	required_reagents = list (/datum/reagent/toxin/skewium = 1, /datum/reagent/consumable/ethanol/buffalo = 2, /datum/reagent/consumable/ethanol/yellowpulque = 2)
 	mix_message = "<span class='danger'>The mixture gives off a nauseating odor.</span>"
+*/
