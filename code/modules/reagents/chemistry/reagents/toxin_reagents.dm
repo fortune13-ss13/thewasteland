@@ -796,7 +796,7 @@
 /datum/reagent/toxin/coniine/on_mob_life(mob/living/carbon/M)
 	M.losebreath += 5
 	return ..()
-
+/*
 /datum/reagent/toxin/spewium
 	name = "Spewium"
 	description = "A powerful emetic, causes uncontrollable vomiting.  May result in vomiting organs at high doses."
@@ -822,7 +822,7 @@
 		C.spew_organ()
 		C.vomit(0, TRUE, TRUE, 4)
 		to_chat(C, "<span class='userdanger'>You feel something lumpy come up as you vomit.</span>")
-
+*/
 /datum/reagent/toxin/curare
 	name = "Curare"
 	description = "Causes slight toxin damage followed by chain-stunning and oxygen damage."
