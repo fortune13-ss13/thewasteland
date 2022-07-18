@@ -189,6 +189,7 @@
 	desc = "A small flask. It can hold up to 40 units. Unable to withstand reagents of an extreme pH."
 	custom_materials = list(/datum/material/glass = 1000)
 	icon_state = "flasksmall"
+	possible_transfer_amounts = list(5,10,15,20,25,30,40)
 	volume = 40
 
 /obj/item/reagent_containers/glass/beaker/flask/spouty
