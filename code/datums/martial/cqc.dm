@@ -1,5 +1,4 @@
 #define SLAM_COMBO "DH"
-#define KICK_COMBO "HH"
 #define RESTRAIN_COMBO "GG"
 #define PRESSURE_COMBO "DDD"
 #define CONSECUTIVE_COMBO "DDH"
@@ -22,10 +21,6 @@
 	if(findtext(streak,SLAM_COMBO))
 		streak = ""
 		Slam(A,D)
-		return TRUE
-	if(findtext(streak,KICK_COMBO))
-		streak = ""
-		Kick(A,D)
 		return TRUE
 	if(findtext(streak,RESTRAIN_COMBO))
 		streak = ""
