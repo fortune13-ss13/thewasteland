@@ -52,32 +52,8 @@
 		D.DefaultCombatKnockdown(120)
 		log_combat(A, D, "slammed (CQC)")
 	return TRUE
-/*
-/datum/martial_art/cqc/proc/Kick(mob/living/carbon/human/A, mob/living/carbon/human/D)
-	if(!can_use(A))
-		return FALSE
-	var/damage = damage_roll(A,D)
-	if(!CHECK_MOBILITY(D, MOBILITY_STAND) && CHECK_MOBILITY(D, MOBILITY_USE))
-		log_combat(A, D, "knocked out (Head kick)(CQC)")
-		D.visible_message("<span class='warning'>[A] kicks [D]'s head, knocking [D.p_them()] out!</span>", \
-							"<span class='userdanger'>[A] kicks your head, knocking you out!</span>")
-		playsound(get_turf(A), 'sound/weapons/genhit1.ogg', 50, 1, -1)
-		D.SetSleeping(300)
-		D.apply_damage(damage + 5, BRUTE)
-		var/atom/throw_target = get_edge_target_turf(D, A.dir)
-		D.throw_at(throw_target, 1, 14, A)
-		D.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage + 10, 150)
-	else
-		D.visible_message("<span class='warning'>[A] kicks [D]!</span>", \
-							"<span class='userdanger'>[A] kicks you!</span>")
-		playsound(get_turf(A), 'sound/weapons/cqchit1.ogg', 50, 1, -1)
-		D.Dizzy(damage)
-		D.apply_damage(damage + 15, BRUTE)
-		var/atom/throw_target = get_edge_target_turf(D, A.dir)
-		D.throw_at(throw_target, 1, 14, A)
-		log_combat(A, D, "kicked (CQC)")
-	return TRUE
-*/
+
+
 /datum/martial_art/cqc/proc/Pressure(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	if(!can_use(A))
 		return FALSE
