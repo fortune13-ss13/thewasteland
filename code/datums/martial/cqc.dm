@@ -52,7 +52,7 @@
 		D.DefaultCombatKnockdown(120)
 		log_combat(A, D, "slammed (CQC)")
 	return TRUE
-
+/*
 /datum/martial_art/cqc/proc/Kick(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	if(!can_use(A))
 		return FALSE
@@ -77,7 +77,7 @@
 		D.throw_at(throw_target, 1, 14, A)
 		log_combat(A, D, "kicked (CQC)")
 	return TRUE
-
+*/
 /datum/martial_art/cqc/proc/Pressure(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	if(!can_use(A))
 		return FALSE
