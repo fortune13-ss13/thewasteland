@@ -529,7 +529,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	mask = /obj/item/clothing/mask/bandana/legion/legvet
 	neck = /obj/item/storage/belt/holster
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/legion/plated
+	gloves = /obj/item/melee/unarmed/powerfist/goliath
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
@@ -544,7 +544,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Mountain Bear"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
@@ -552,7 +551,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Desert Fox"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
@@ -560,7 +558,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Night Stalker"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
