@@ -673,7 +673,7 @@ GLOBAL_LIST_INIT(brass_recipes, list ( \
 	throw_range = 3
 	turf_type = /turf/open/floor/clockwork
 	novariants = FALSE
-	grind_results = list(/datum/reagent/iron = 5, /datum/reagent/teslium = 15, /datum/reagent/fuel/holyoil = 1)
+	grind_results = list(/datum/reagent/iron = 5, /datum/reagent/fuel/holyoil = 1)
 	merge_type = /obj/item/stack/tile/brass
 	tableVariant = /obj/structure/table/reinforced/brass
 

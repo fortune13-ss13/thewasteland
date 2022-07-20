@@ -36,7 +36,6 @@
 		/datum/reagent/toxin/mindbreaker,
 		/datum/reagent/toxin/rotatium,
 		/datum/reagent/bluespace,
-		/datum/reagent/pax,
 		/datum/reagent/consumable/laughter,
 		/datum/reagent/concentrated_barbers_aid,
 		/datum/reagent/baldium,

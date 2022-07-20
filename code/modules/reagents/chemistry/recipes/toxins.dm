@@ -93,7 +93,7 @@
 	name = "Rotatium"
 	id = /datum/reagent/toxin/rotatium
 	results = list(/datum/reagent/toxin/rotatium = 3)
-	required_reagents = list(/datum/reagent/toxin/mindbreaker = 1, /datum/reagent/teslium = 1, /datum/reagent/toxin/fentanyl = 1)
+	required_reagents = list(/datum/reagent/toxin/mindbreaker = 1, /datum/reagent/toxin/fentanyl = 1)
 	mix_message = "<span class='danger'>After sparks, fire, and the smell of mindbreaker, the mix is constantly spinning with no stop in sight.</span>"
 
 /datum/chemical_reaction/skewium
