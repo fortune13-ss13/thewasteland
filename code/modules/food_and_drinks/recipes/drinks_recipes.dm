@@ -988,7 +988,7 @@
 	name = "Bug Zapper"
 	id = /datum/reagent/consumable/ethanol/bug_zapper
 	results = list(/datum/reagent/consumable/ethanol/bug_zapper = 20) //Harder to make
-	required_reagents = list(/datum/reagent/consumable/lemonjuice = 10, /datum/reagent/copper = 10)
+	required_reagents = list(/datum/reagent/consumable/lemonjuice = 10, /datum/reagent/teslium = 1, /datum/reagent/copper = 10)
 
 /datum/chemical_reaction/mush_crush
 	name = "Mush Crush"

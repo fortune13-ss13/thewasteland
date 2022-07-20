@@ -218,6 +218,57 @@
 		M.adjust_bodytemperature(15)
 	..()
 
+/datum/reagent/teslium //Teslium. Causes periodic shocks, and makes shocks against the target much more effective.
+	name = "Teslium"
+	description = "An unstable, electrically-charged metallic slurry. Periodically electrocutes its victim, and makes electrocutions against them more deadly. Excessively heating teslium results in dangerous destabilization. Do not allow to come into contact with water."
+	reagent_state = LIQUID
+	color = "#20324D" //RGB: 32, 50, 77
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	taste_description = "charged metal"
+	var/shock_timer = 0
+	value = REAGENT_VALUE_VERY_RARE
+	ghoulfriendly = TRUE
+
+/datum/reagent/teslium/on_mob_life(mob/living/carbon/M)
+	shock_timer++
+	if(shock_timer >= rand(5,30)) //Random shocks are wildly unpredictable
+		shock_timer = 0
+		M.electrocute_act(rand(5,20), "Teslium in their body", 1, SHOCK_NOGLOVES) //Override because it's caused from INSIDE of you
+		playsound(M, "sparks", 50, 1)
+	..()
+
+/datum/reagent/teslium/on_mob_metabolize(mob/living/carbon/human/L)
+	. = ..()
+	if(!istype(L))
+		return
+	L.physiology.siemens_coeff *= 2
+
+/datum/reagent/teslium/on_mob_end_metabolize(mob/living/carbon/human/L)
+	. = ..()
+	if(!istype(L))
+		return
+	L.physiology.siemens_coeff *= 0.5
+
+/datum/reagent/teslium/energized_jelly
+	name = "Energized Jelly"
+	description = "Electrically-charged jelly. Boosts jellypeople's nervous system, but only shocks other lifeforms."
+	reagent_state = LIQUID
+	color = "#CAFF43"
+	taste_description = "jelly"
+	ghoulfriendly = TRUE
+
+/datum/reagent/teslium/energized_jelly/on_mob_life(mob/living/carbon/M)
+	if(isjellyperson(M))
+		shock_timer = 0 //immune to shocks
+		M.AdjustAllImmobility(-40, 0)
+		M.AdjustUnconscious(-40, 0)
+		M.adjustStaminaLoss(-2, 0)
+		if(isluminescent(M))
+			var/mob/living/carbon/human/H = M
+			var/datum/species/jelly/luminescent/L = H.dna.species
+			L.extract_cooldown = max(0, L.extract_cooldown - 20)
+	..()
+
 /datum/reagent/firefighting_foam
 	name = "Firefighting Foam"
 	description = "A historical fire suppressant. Originally believed to simply displace oxygen to starve fires, it actually interferes with the combustion reaction itself. Vastly superior to the cheap water-based extinguishers found on NT vessels."

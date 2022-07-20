@@ -383,6 +383,58 @@
 	holder.chem_temp = 20 // also cools the fuck down
 	return
 
+/datum/chemical_reaction/teslium
+	name = "Teslium"
+	id = /datum/reagent/teslium
+	results = list(/datum/reagent/teslium = 3)
+	required_reagents = list(/datum/reagent/stable_plasma = 1, /datum/reagent/silver = 1, /datum/reagent/blackpowder = 1)
+	mix_message = "<span class='danger'>A jet of sparks flies from the mixture as it merges into a flickering slurry.</span>"
+	required_temp = 400
+
+/datum/chemical_reaction/energized_jelly
+	name = "Energized Jelly"
+	id = /datum/reagent/teslium/energized_jelly
+	results = list(/datum/reagent/teslium/energized_jelly = 2)
+	required_reagents = list(/datum/reagent/celugel = 1, /datum/reagent/teslium = 1)
+	mix_message = "<span class='danger'>The cellulose gel starts glowing intermittently.</span>"
+
+/datum/chemical_reaction/reagent_explosion/teslium_lightning
+	name = "Teslium Destabilization"
+	id = "teslium_lightning"
+	required_reagents = list(/datum/reagent/teslium = 1, /datum/reagent/water = 1)
+	strengthdiv = 100
+	modifier = -100
+	noexplosion = TRUE
+	mix_message = "<span class='boldannounce'>The teslium starts to spark as electricity arcs away from it!</span>"
+	mix_sound = 'sound/machines/defib_zap.ogg'
+	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN
+
+/datum/chemical_reaction/reagent_explosion/teslium_lightning/on_reaction(datum/reagents/holder, created_volume)
+	var/T1 = created_volume * 20		//100 units : Zap 3 times, with powers 2000/5000/12000. Tesla revolvers have a power of 10000 for comparison.
+	var/T2 = created_volume * 50
+	var/T3 = created_volume * 120
+	var/added_delay = 0.5 SECONDS
+	if(created_volume >= 75)
+		addtimer(CALLBACK(src, .proc/zappy_zappy, holder, T1), added_delay)
+		added_delay += 1.5 SECONDS
+	if(created_volume >= 40)
+		addtimer(CALLBACK(src, .proc/zappy_zappy, holder, T2), added_delay)
+		added_delay += 1.5 SECONDS
+	if(created_volume >= 10)			//10 units minimum for lightning, 40 units for secondary blast, 75 units for tertiary blast.
+		addtimer(CALLBACK(src, .proc/zappy_zappy, holder, T3), added_delay)
+	..()
+
+/datum/chemical_reaction/reagent_explosion/teslium_lightning/proc/zappy_zappy(datum/reagents/holder, power)
+	if(QDELETED(holder.my_atom))
+		return
+	tesla_zap(holder.my_atom, 7, power, zap_flags)
+	playsound(holder.my_atom, 'sound/machines/defib_zap.ogg', 50, TRUE)
+
+/datum/chemical_reaction/reagent_explosion/teslium_lightning/heat
+	id = "teslium_lightning2"
+	required_temp = 474
+	required_reagents = list(/datum/reagent/teslium = 1)
+
 /datum/chemical_reaction/reagent_explosion/nitrous_oxide
 	name = "N2O explosion"
 	id = "n2o_explosion"
