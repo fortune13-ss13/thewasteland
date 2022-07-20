@@ -853,53 +853,6 @@
 	M.Jitter(2)
 	..()
 
-/datum/reagent/consumable/ethanol/species_drink/sludge
-	name = "Resilient sludge"
-	description = "A vile mixture powerful enough to get even ghouls drunk. Unfit for human consumption."
-	color = "#C8F085"
-	boozepwr = 100
-	taste_description = "toxic waste"
-	glass_icon_state = "sludgeglass"
-	glass_name = "Resilient sludge"
-	glass_desc = "A vile mixture powerful enough to get even ghouls drunk. Unfit for human consumption."
-	ghoulfriendly = TRUE
-
-/datum/reagent/consumable/ethanol/species_drink/sludge/on_mob_life(mob/living/carbon/M)
-	if(isghoul(M))
-		M.adjustFireLoss(-0.25*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustBruteLoss(-0.25*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustToxLoss(-0.25*REAGENTS_EFFECT_MULTIPLIER, 0)
-	else
-		if(ishuman(M))
-			if(prob(80))
-				M.vomit(10)
-				M.adjustToxLoss(4*REAGENTS_EFFECT_MULTIPLIER, 0)
-			..()
-
-/datum/reagent/consumable/ethanol/species_drink/strongsludge
-	name = "Strong sludge"
-	description = "An incredibly vile mixture made by submerging fissile materials in sugar. Good for ghouls. Not so good for people."
-	color = "#027F02"
-	boozepwr = 200
-	taste_description = "toxic waste and death"
-	glass_icon_state = "strongsludgeglass"
-	glass_name = "Strong sludge"
-	glass_desc = "An incredibly vile mixture made by submerging fissile materials in sugar. Good for ghouls. Not so good for people."
-	ghoulfriendly = TRUE
-	species_required = "ghoul"
-
-/datum/reagent/consumable/ethanol/species_drink/strongsludge/on_mob_life(mob/living/carbon/M)
-	if(isghoul(M))
-		M.adjustFireLoss(-0.4*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustBruteLoss(-0.4*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustToxLoss(-0.4*REAGENTS_EFFECT_MULTIPLIER, 0)
-	else
-		if(ishuman(M))
-			if(prob(98))
-				M.vomit(50)
-				M.adjustToxLoss(10*REAGENTS_EFFECT_MULTIPLIER, 0)
-		..()
-
 /datum/reagent/consumable/ethanol/sweetwater
 	name = "Sweet Water"
 	description = "For those hot irradiated days on the ranch."

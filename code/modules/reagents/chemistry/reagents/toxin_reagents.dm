@@ -247,69 +247,6 @@
 	for(var/i in M.all_scars)
 		qdel(i)
 
-/datum/reagent/toxin/zombiepowder
-	name = "Zombie Powder"
-	description = "A strong neurotoxin that puts the subject into a death-like state."
-	reagent_state = SOLID
-	color = "#669900" // rgb: 102, 153, 0
-	toxpwr = 0.5
-	taste_description = "death"
-	var/fakedeath_active = FALSE
-	pH = 13
-	value = REAGENT_VALUE_EXCEPTIONAL
-
-/datum/reagent/toxin/zombiepowder/on_mob_metabolize(mob/living/L)
-	..()
-	ADD_TRAIT(L, TRAIT_FAKEDEATH, type)
-
-/datum/reagent/toxin/zombiepowder/on_mob_end_metabolize(mob/living/L)
-	L.cure_fakedeath(type)
-	..()
-
-/datum/reagent/toxin/zombiepowder/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
-	L.adjustOxyLoss(0.5*REM, 0)
-	if(method == INGEST)
-		fakedeath_active = TRUE
-		L.fakedeath(type)
-
-/datum/reagent/toxin/zombiepowder/on_mob_life(mob/living/M)
-	..()
-	if(fakedeath_active)
-		return TRUE
-	switch(current_cycle)
-		if(1 to 5)
-			M.confused += 1
-			M.drowsyness += 1
-			M.slurring += 3
-		if(5 to 8)
-			M.adjustStaminaLoss(40, 0)
-		if(9 to INFINITY)
-			fakedeath_active = TRUE
-			M.fakedeath(type)
-
-/datum/reagent/toxin/ghoulpowder
-	name = "Ghoul Powder"
-	description = "A strong neurotoxin that slows metabolism to a death-like state, while keeping the patient fully active. Causes toxin buildup if used too long."
-	reagent_state = SOLID
-	color = "#664700" // rgb: 102, 71, 0
-	toxpwr = 0.8
-	taste_description = "death"
-	pH = 14.5
-	value = REAGENT_VALUE_EXCEPTIONAL
-
-/datum/reagent/toxin/ghoulpowder/on_mob_metabolize(mob/living/L)
-	..()
-	ADD_TRAIT(L, TRAIT_FAKEDEATH, type)
-
-/datum/reagent/toxin/ghoulpowder/on_mob_end_metabolize(mob/living/L)
-	REMOVE_TRAIT(L, TRAIT_FAKEDEATH, type)
-	..()
-
-/datum/reagent/toxin/ghoulpowder/on_mob_life(mob/living/carbon/M)
-	M.adjustOxyLoss(1*REM, 0)
-	..()
-	. = 1
-
 /datum/reagent/toxin/mindbreaker
 	name = "Mindbreaker Toxin"
 	description = "A powerful hallucinogen. Not a thing to be messed with. For some mental patients. it counteracts their symptoms and anchors them to reality."

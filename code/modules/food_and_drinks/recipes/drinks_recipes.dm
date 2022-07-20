@@ -1302,7 +1302,7 @@
 	name = "Atom Bomb"
 	id = "atombomb"
 	results = list(/datum/reagent/consumable/ethanol/atombomb = 2)
-	required_reagents = list(/datum/reagent/consumable/ethanol/species_drink/sludge = 1, /datum/reagent/consumable/ethanol/b52 = 1)
+	required_reagents = list(/datum/reagent/consumable/nuka_cola = 1, /datum/reagent/consumable/ethanol/b52 = 1)
 
 /datum/chemical_reaction/henessey
 	name = "Henessey"
