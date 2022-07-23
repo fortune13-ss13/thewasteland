@@ -2383,25 +2383,6 @@
 	color = "#4040FF" //A blueish color
 	glitter_type = /obj/effect/decal/cleanable/glitter/blue
 
-/datum/reagent/pax
-	name = "pax"
-	description = "A colorless liquid that suppresses violence on the subjects."
-	color = "#AAAAAA"
-	alpha = 55
-	taste_description = "water"
-	metabolization_rate = 0.25 * REAGENTS_METABOLISM
-	value = REAGENT_VALUE_RARE
-	pH = 15
-	ghoulfriendly = TRUE
-
-/datum/reagent/pax/on_mob_metabolize(mob/living/L)
-	..()
-	ADD_TRAIT(L, TRAIT_PACIFISM, type)
-
-/datum/reagent/pax/on_mob_end_metabolize(mob/living/L)
-	REMOVE_TRAIT(L, TRAIT_PACIFISM, type)
-	..()
-
 /datum/reagent/bz_metabolites
 	name = "BZ metabolites"
 	description = "A harmless metabolite of BZ gas"
@@ -2425,13 +2406,6 @@
 		if(changeling)
 			changeling.chem_charges = max(changeling.chem_charges-2, 0)
 	return ..()
-
-/datum/reagent/pax/peaceborg
-	name = "synth-pax"
-	description = "A colorless liquid that suppresses violence on the subjects. Cheaper to synthetize, but wears out faster than normal Pax."
-	metabolization_rate = 1.5 * REAGENTS_METABOLISM
-	value = REAGENT_VALUE_COMMON
-	ghoulfriendly = TRUE
 
 /datum/reagent/peaceborg_confuse
 	name = "Dizzying Solution"
@@ -2516,7 +2490,7 @@
 	taste_description = "plant dust"
 	ghoulfriendly = TRUE
 
-/datum/reagent/pax/catnip
+/datum/reagent/drug/methamphetamine/catnip
 	name = "catnip"
 	taste_description = "grass"
 	description = "A colorless liquid that makes people more peaceful and felines more happy."

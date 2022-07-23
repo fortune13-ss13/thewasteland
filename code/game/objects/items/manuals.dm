@@ -264,8 +264,6 @@
 				<b>Hard Lemonade:</b> Lemonade 5u + Vodka 5u + radium for some godforsaken reason<br>
 				<b>Jake Juice:</b> Whiskey 5u + Beer 5u + more fucking radium<br>
 				<b>Wasteland Tequila</b>: Tequila 5u + Mutfruit Juice 5u<br>
-				<b>Resilient Sludge (for ghouls!):</b> 5u radium + 5u sugar + 5u water<br>
-				<b>Strong Sludge (for ghouls!):</b> Uranium 5u + Resilient Sludge 15u<br>
 				<b>Sunset Float:</b>Sunset Sasparilla 5u + Ice 5u + Cream 5u<br>
 				</body>
 				</html>

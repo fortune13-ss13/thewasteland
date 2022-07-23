@@ -866,7 +866,7 @@
 
 /datum/design/surgery/necrotic_revival
 	name = "Necrotic Revival"
-	desc = "An experimental surgical procedure that stimulates the growth of a Romerol tumor inside the patient's brain. Requires zombie powder or rezadone."
+	desc = "An experimental surgical procedure that stimulates the growth of a Romerol tumor inside the patient's brain. Requires rezadone."
 	id = "surgery_zombie"
 	surgery = /datum/surgery/advanced/necrotic_revival
 	research_icon_state = "surgery_head"

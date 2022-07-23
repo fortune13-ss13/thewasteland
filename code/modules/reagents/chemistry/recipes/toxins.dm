@@ -76,18 +76,6 @@
 	results = list(/datum/reagent/toxin/mutetoxin = 2)
 	required_reagents = list(/datum/reagent/uranium = 2, /datum/reagent/water = 1, /datum/reagent/carbon = 1)
 
-/datum/chemical_reaction/zombiepowder
-	name = "Zombie Powder"
-	id = /datum/reagent/toxin/zombiepowder
-	results = list(/datum/reagent/toxin/zombiepowder = 2)
-	required_reagents = list(/datum/reagent/toxin/carpotoxin = 5, /datum/reagent/medicine/morphine = 5, /datum/reagent/copper = 5)
-
-/datum/chemical_reaction/ghoulpowder
-	name = "Ghoul Powder"
-	id = /datum/reagent/toxin/ghoulpowder
-	results = list(/datum/reagent/toxin/ghoulpowder = 2)
-	required_reagents = list(/datum/reagent/toxin/zombiepowder = 1, /datum/reagent/medicine/epinephrine = 1)
-
 /datum/chemical_reaction/mindbreaker
 	name = "Mindbreaker Toxin"
 	id = /datum/reagent/toxin/mindbreaker

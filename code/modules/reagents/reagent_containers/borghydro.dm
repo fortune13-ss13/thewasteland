@@ -240,13 +240,13 @@ Borg Shaker
 /obj/item/reagent_containers/borghypo/peace
 	name = "Peace Hypospray"
 
-	reagent_ids = list(/datum/reagent/peaceborg_confuse, /datum/reagent/peaceborg_tire, /datum/reagent/pax/peaceborg, /datum/reagent/medicine/insulin)
+	reagent_ids = list(/datum/reagent/peaceborg_confuse, /datum/reagent/peaceborg_tire, /datum/reagent/medicine/insulin)
 	accepts_reagent_upgrades = FALSE
 
 /obj/item/reagent_containers/borghypo/peace/hacked
 	desc = "Everything's peaceful in death!"
 	icon_state = "borghypo_s"
-	reagent_ids = list(/datum/reagent/peaceborg_confuse, /datum/reagent/peaceborg_tire, /datum/reagent/pax/peaceborg,
+	reagent_ids = list(/datum/reagent/peaceborg_confuse, /datum/reagent/peaceborg_tire,
 					/datum/reagent/toxin/staminatoxin,/datum/reagent/toxin/sulfonal,/datum/reagent/toxin/sodium_thiopental,
 					/datum/reagent/toxin/cyanide,/datum/reagent/toxin/fentanyl)
 	accepts_reagent_upgrades = FALSE

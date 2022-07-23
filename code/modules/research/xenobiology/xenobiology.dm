@@ -349,7 +349,7 @@
 			user.visible_message("<span class='warning'>[user]'s skin starts flashing hypnotically...</span>", "<span class='notice'>Your skin starts forming odd patterns, pacifying creatures around you.</span>")
 			for(var/mob/living/carbon/C in viewers(user, null))
 				if(C != user)
-					C.reagents.add_reagent(/datum/reagent/pax,2)
+					C.reagents.add_reagent(/datum/reagent/radium,2)
 			return 600
 
 /obj/item/slime_extract/green
