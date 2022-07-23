@@ -112,16 +112,15 @@
 // ENCLAVE NPC //
 /////////////////
 
-// Enclave specialist, basic fighter
+// Enclave Sergeant, basic fighter
 /mob/living/simple_animal/hostile/enclave
-	name = "enclave specialist"
-	desc = "A Enclave soldier with combat armor and a G-11 rifle."
+	name = "enclave sergeant"
+	desc = "A Enclave Sergeant with combat armor and a laser rifle."
 	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
-	icon_state = "enclave_specialist"
-	icon_living = "enclave_specialist"
+	icon_state = "enclave_sergeant"
+	icon_living = "enclave_sergeant"
 	del_on_death = TRUE
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	speak_chance = 0
 	turns_per_move = 5
 	response_help_simple = "pokes"
 	response_disarm_simple = "shoves"
@@ -129,8 +128,7 @@
 	retreat_distance = 6
 	minimum_distance = 6
 	speed = 0
-	ranged_cooldown_time = 22
-	extra_projectiles = 2
+	ranged_cooldown_time = 10
 	stat_attack = 1
 	ranged = TRUE
 	robust_searching = TRUE
@@ -141,9 +139,9 @@
 	melee_damage_upper = 35
 	harm_intent_damage = 8
 
-	projectiletype = /obj/item/projectile/bullet/c46x30mm
-	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-	attack_verb_simple = "pistol-whips"
+	projectiletype = /obj/item/projectile/beam/laser/lasgun/hitscan/focused
+	projectilesound = 'sound/f13weapons/aer9fire.ogg'
+	attack_verb_simple = "punches"
 
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
@@ -175,7 +173,6 @@
 	ranged_cooldown_time = 30
 	projectiletype = /obj/item/projectile/energy/declone
 	projectilesound = 'sound/weapons/wave.ogg'
-	extra_projectiles = null
 	attack_verb_simple = "thrusts"
 
 // Enclave Armored Infantry
