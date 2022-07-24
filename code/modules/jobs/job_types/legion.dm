@@ -241,19 +241,18 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	mask = /obj/item/clothing/mask/bandana/legion/legcenturion
 	ears = /obj/item/radio/headset/headset_legion/cent
 	neck = /obj/item/clothing/neck/mantle/legion
-	gloves = /obj/item/melee/unarmed/powerfist/goliath
+	gloves = /obj/item/clothing/gloves/legion/plated
 	glasses = /obj/item/clothing/glasses/night/polarizing
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/restraints/handcuffs
 	l_pocket = /obj/item/flashlight/lantern
 	box = /obj/item/storage/survivalkit_tribal/chief
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola = 1,
+		/obj/item/restraints/legcuffs/bola = 2,
 		/obj/item/storage/bag/money/small/legion = 1,
 		/obj/item/warpaint_bowl = 1,
-		/obj/item/ammo_box/a357 = 1,
-		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/binoculars = 1,
+		/obj/item/book/granter/martial/cqc = 1,
 		)
 
 /datum/outfit/loadout/palacent
@@ -530,7 +529,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	mask = /obj/item/clothing/mask/bandana/legion/legvet
 	neck = /obj/item/storage/belt/holster
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/legion/plated
+	gloves = /obj/item/melee/unarmed/powerfist/goliath
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
@@ -545,7 +544,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Mountain Bear"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
@@ -553,7 +551,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Desert Fox"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
@@ -561,7 +558,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Night Stalker"
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
