@@ -412,18 +412,18 @@
 			return TRUE
 		*/
 		if(item_type == "stimPak")
-			var/obj/item/reagent_containers/hypospray/medipen/stimpak/custom/P
+			var/obj/item/reagent_containers/hypospray/medipen/stimpak/P
 			for(var/i=0; i <amount; i++)
-				P = new /obj/item/reagent_containers/hypospray/medipen/stimpak/custom(drop_location())
+				P = new /obj/item/reagent_containers/hypospray/medipen/stimpak(drop_location())
 				P.name = trim ("[name] stimpak")
 				adjust_item_drop_location(P)
 				reagents.trans_to(P, vol_each)
 				P.update_icon()
 			return TRUE
 		if(item_type == "superStimpak")
-			var/obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom/P
+			var/obj/item/reagent_containers/hypospray/medipen/stimpak/super/P
 			for(var/i=0; i <amount; i++)
-				P = new /obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom(drop_location())
+				P = new /obj/item/reagent_containers/hypospray/medipen/stimpak/super(drop_location())
 				P.name = trim ("[name] super stimpak")
 				adjust_item_drop_location(P)
 				reagents.trans_to(P, vol_each)
