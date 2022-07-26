@@ -845,7 +845,7 @@
 	back = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/greasegun = 2,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		)
 
 /obj/effect/mob_spawn/human/fallout13/raider/special(mob/living/new_spawn)
