@@ -89,7 +89,7 @@
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 3
 		)
 
 /datum/outfit/loadout/khanskirmisher
@@ -97,7 +97,7 @@
 	r_hand = /obj/item/gun/ballistic/automatic/smg/greasegun
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/greasegun = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 1,
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/book/granter/trait/trekking = 1
 		)
@@ -187,7 +187,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 2,
 		/obj/item/melee/onehanded/club = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 1,
 		/obj/item/storage/bag/money/small/raider = 1
 		)
 
@@ -341,7 +341,7 @@ Raider
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/box/ration/ranger_breakfast = 1,
 		/obj/item/radio/headset = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2
 		)
 
 /datum/outfit/loadout/raider_legion
@@ -410,7 +410,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing = 2,
 		/obj/item/radio/headset = 1
 		)
 
@@ -508,8 +508,8 @@ Raider
 	backpack = /obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing,
 		/obj/item/reagent_containers/pill/radx,
 		)
 
@@ -698,7 +698,7 @@ Raider
 	backpack = /obj/item/storage/backpack/satchel/trekker
 	gloves = /obj/item/clothing/gloves/f13/military
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=4, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing=4, \
 		/obj/item/reagent_containers/pill/radx=1, \
 		/obj/item/restraints/handcuffs=2, \
 		/obj/item/storage/bag/money/small/wastelander)
@@ -762,7 +762,7 @@ Raider
 	suit_store = /obj/item/gun/ballistic/revolver/sequoia/death
 	glasses = /obj/item/clothing/glasses/hud/health/night
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=4, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing=4, \
 		/obj/item/reagent_containers/pill/radx=1, \
 		/obj/item/restraints/handcuffs=2, \
 		/obj/item/ammo_box/c4570/explosive=6)
