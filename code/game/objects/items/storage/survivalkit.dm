@@ -6,7 +6,7 @@
 
 /obj/item/storage/survivalkit/PopulateContents()
 	. = ..()
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/healing(src)
 	new /obj/item/stack/medical/gauze/improvised(src)
 	new /obj/item/stack/medical/mesh/aloe(src)
 	new /obj/item/flashlight/seclite(src)
@@ -21,8 +21,8 @@
 
 /obj/item/storage/survivalkit_khan/PopulateContents()
 	. = ..()
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/healing(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/healing(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/reagent_containers/pill/radx(src)
@@ -50,7 +50,7 @@
 
 /obj/item/storage/survivalkit_outlaw/PopulateContents()
 	. = ..()
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/healing(src)
 	new /obj/item/stack/medical/suture(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/gauze(src)
@@ -75,7 +75,7 @@
 
 /obj/item/storage/survivalkit_adv/PopulateContents()
 	. = ..()
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/healing(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/stack/medical/suture(src)
@@ -97,7 +97,7 @@
 
 /obj/item/storage/survivalkit_aid/PopulateContents()
 	. = ..()
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/healing(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/suture(src)
 	new /obj/item/stack/medical/ointment(src)
@@ -116,7 +116,7 @@
 
 /obj/item/storage/survivalkit_aid_adv/PopulateContents()
 	. = ..()
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak/super(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing(src)
 	new /obj/item/stack/medical/gauze/adv(src)
 	new /obj/item/stack/medical/suture/medicated(src)
 	new /obj/item/stack/medical/mesh/advanced(src)
