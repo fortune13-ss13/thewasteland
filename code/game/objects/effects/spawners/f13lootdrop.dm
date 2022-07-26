@@ -526,7 +526,7 @@
 	lootcount = 1
 
 	loot = list(
-				/obj/item/reagent_containers/hypospray/medipen/stimpak,
+				/obj/item/reagent_containers/hypospray/medipen/stimpak/healing,
 				/obj/item/storage/pill_bottle/chem_tin/radx,
 				/obj/item/reagent_containers/blood/radaway,
 				/obj/item/storage/pill_bottle/chem_tin/mentats
@@ -544,7 +544,7 @@
 				/obj/item/reagent_containers/pill/water_purifier,
 				/obj/item/reagent_containers/blood/radaway,
 				/obj/item/storage/pill_bottle/chem_tin/mentats,
-				/obj/item/reagent_containers/hypospray/medipen/stimpak,
+				/obj/item/reagent_containers/hypospray/medipen/stimpak/healing,
 				/obj/item/reagent_containers/medspray/styptic,
 				/obj/item/reagent_containers/medspray/silver_sulf,
 				/obj/item/reagent_containers/medspray/sterilizine
