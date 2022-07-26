@@ -41,7 +41,7 @@
 	new /obj/item/stack/medical/suture(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/ointment(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak/healing(src)
 	new /obj/item/healthanalyzer(src)
 
 /obj/item/storage/firstaid/emergency
