@@ -116,7 +116,7 @@ Head Paladin
 		/obj/item/melee/powered/ripper = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 3,
 		/obj/item/stock_parts/cell/ammo/ecp = 2
 		)
 
@@ -162,7 +162,7 @@ Head Scribe
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 3,
 		/obj/item/gun/energy/laser/plasma/pistol = 1,
 		/obj/item/gun/medbeam = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
@@ -216,7 +216,7 @@ Head Knight
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/stock_parts/cell/ammo/mfc = 2
 		)
 
@@ -279,7 +279,7 @@ Senior Paladin
 	r_hand = /obj/item/minigunpackbal5mm
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
@@ -338,7 +338,7 @@ Paladin
 	belt =	/obj/item/storage/belt/military/assault
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 3
 	)
 
 /datum/outfit/loadout/paladina
@@ -534,7 +534,7 @@ Senior Knight
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/stock_parts/cell/ammo/mfc=2,
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
 		/obj/item/ammo_box/magazine/m45exp = 2
@@ -600,7 +600,7 @@ Knight
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival  = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2
 		)
 
@@ -688,7 +688,7 @@ Initiate
 	glasses =		/obj/item/clothing/glasses/science
 	gloves =		/obj/item/clothing/gloves/color/latex
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/clothing/accessory/bos/initiateS = 1
 		)
@@ -723,7 +723,7 @@ Off-Duty
 	ears = 			/obj/item/radio/headset
 	belt = 			/obj/item/storage/belt/military/army
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 1,
 		/obj/item/encryptionkey/headset_bos = 1,
 		/obj/item/melee/onehanded/knife/survival = 1
 		)
