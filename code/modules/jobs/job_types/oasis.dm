@@ -533,7 +533,7 @@ Mayor
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 1,
 		/obj/item/ammo_box/magazine/m45 = 3,
 		/obj/item/stack/medical/bruise_pack = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 4)
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 4)
 
 /datum/outfit/loadout/followerdoctor
 	name = "Follower of the Apocalypse"
@@ -744,7 +744,7 @@ Mayor
 	backpack_contents = list(
 		/obj/item/camera/spooky = 1,
 		/obj/item/reagent_containers/food/drinks/flask = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/storage/fancy/candle_box = 1,
 		/obj/item/storage/bag/money/small/settler
 		)
