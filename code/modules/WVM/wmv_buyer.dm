@@ -33,8 +33,8 @@
 								/obj/item/reagent_containers/hypospray/medipen/psycho = 20,
 								/obj/item/reagent_containers/hypospray/medipen/medx = 75,
 								/obj/item/reagent_containers/pill/patch/healpoultice = 50,
-								/obj/item/reagent_containers/hypospray/medipen/stimpak = 25,
-								/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 50,
+								/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 25,
+								/obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing = 50,
 								)
 
 /obj/machinery/mineral/wasteland_trader/general
