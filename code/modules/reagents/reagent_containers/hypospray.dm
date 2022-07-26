@@ -156,12 +156,12 @@
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak
 	name = "stimpak"
-	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body."
+	desc = "A handheld delivery system for medicine, this particular one will deliver a tailored cocktail."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "hypo_stimpak"
 	volume = 10
 	amount_per_transfer_from_this = 10
-	list_reagents = list(/datum/reagent/medicine/stimpak = 10)
+	list_reagents = null
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/on_reagent_change(changetype)
 	update_icon()
@@ -172,9 +172,9 @@
 	if(reagents.total_volume)
 		. += stimpak_overlay
 
-/obj/item/reagent_containers/hypospray/medipen/stimpak/custom
-	desc = "A handheld delivery system for medicine, this particular one will deliver a tailored cocktail."
-	list_reagents = null
+/obj/item/reagent_containers/hypospray/medipen/stimpak/healing
+	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body."
+	list_reagents = list(/datum/reagent/medicine/stimpak = 10)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/imitation
 	name = "imitation stimpak"
@@ -186,16 +186,16 @@
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super
 	name = "super stimpak"
-	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
-	icon_state = "hypo_superstimpak"
-	amount_per_transfer_from_this = 10
-	list_reagents = list(/datum/reagent/medicine/super_stimpak = 10)
-
-/obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom
 	desc = "The super version comes in a hypodermic, but with an additional vial to inject more drugs than the basic model and a leather belt to strap the needle to a limb. This particular one will deliver a tailored cocktail."
+	icon_state = "hypo_superstimpak"
 	volume = 20
 	amount_per_transfer_from_this = 20
 	list_reagents = null
+
+/obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing
+	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
+	amount_per_transfer_from_this = 10
+	list_reagents = list(/datum/reagent/medicine/super_stimpak = 10)
 
 // ---------------------------------
 // MED-X
