@@ -72,7 +72,7 @@
 	ears = /obj/item/radio/headset/headset_enclave/command
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing = 3,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/megaphone = 1,
 		/obj/item/pda = 1,
@@ -117,7 +117,7 @@
 	ears = /obj/item/radio/headset/headset_enclave/command
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing = 3,
 		/obj/item/grenade/flashbang = 1,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
@@ -161,7 +161,7 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m45exp = 2,
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/grenade/flashbang = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/pda = 1,
@@ -204,7 +204,7 @@
 	accessory = /obj/item/clothing/accessory/enclave/specialist
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/grenade/flashbang = 1,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
@@ -248,7 +248,7 @@
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/grenade/frag = 1,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
@@ -284,7 +284,7 @@
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	head = /obj/item/clothing/head/beret/enclave/science
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
@@ -321,7 +321,7 @@
 	accessory = /obj/item/clothing/accessory/enclave
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
@@ -355,7 +355,7 @@
 
 	backpack_contents = list(
 		/obj/item/storage/survivalkit_aid_adv = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
 		/obj/item/pda = 1,
 		/obj/item/gun/energy/gammagun = 1,
@@ -410,7 +410,7 @@
 	uniform = /obj/item/clothing/under/f13/enclave/peacekeeper
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
