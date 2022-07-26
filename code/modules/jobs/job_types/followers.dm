@@ -192,7 +192,7 @@ Practitioner
 	duffelbag =	/obj/item/storage/backpack/duffelbag/med
 	backpack_contents = list(
 		/obj/item/flashlight/pen = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/healing = 2,
 		/obj/item/reagent_containers/medspray/synthflesh = 1,
 		/obj/item/storage/firstaid/ancient = 1,
 	)
