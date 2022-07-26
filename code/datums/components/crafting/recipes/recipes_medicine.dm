@@ -105,7 +105,7 @@
 
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
-	result = /obj/item/reagent_containers/hypospray/medipen/stimpak
+	result = /obj/item/reagent_containers/hypospray/medipen/stimpak/healing
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
 				/obj/item/reagent_containers/syringe = 1)
@@ -125,7 +125,7 @@
 
 /datum/crafting_recipe/superstimpak
 	name = "Super Stimpak"
-	result = /obj/item/reagent_containers/hypospray/medipen/stimpak/super
+	result = /obj/item/reagent_containers/hypospray/medipen/stimpak/super/healing
 	reqs = list(/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 				/obj/item/stack/sheet/leather = 2,
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2)
